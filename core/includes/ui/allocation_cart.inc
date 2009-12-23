@@ -192,8 +192,7 @@ class allocation
 				exchange_variation($this->type, $this->trans_no,
 					$alloc_item->type, $alloc_item->type_no, $this->date_,
 					$alloc_item->current_allocated,
-					$sup ? PT_SUPPLIER 
-						: PT_CUSTOMER);
+					$this->person_type ? PT_SUPPLIER : PT_CUSTOMER);
 				
 
 				//////////////////////////////////////////////////////////////
@@ -342,7 +341,9 @@ function check_allocations()
 	}
 
 	$amount = $_SESSION['alloc']->amount;
-	if ($_SESSION['alloc']->type == 21 || $_SESSION['alloc']->type == 22) 
+	
+
+	if (in_array($_SESSION['alloc']->type, array(ST_BANKPAYMENT, ST_SUPPCREDIT, ST_SUPPAYMENT)))
 		$amount = -$amount;
 
 	if ($total_allocated - ($amount + input_num('discount'))  > $SysPrefs->allocation_settled_allowance())
