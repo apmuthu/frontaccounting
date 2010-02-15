@@ -318,6 +318,7 @@ if ($new_item)
 } 
 else 
 { // Must be modifying an existing item
+	if (!isset($_POST['NewStockID'])) {
 		$_POST['NewStockID'] = $_POST['stock_id'];
 
 		$myrow = get_item($_POST['NewStockID']);
@@ -339,9 +340,10 @@ else
 		$_POST['no_sale']	= $myrow['no_sale'];
 		$_POST['del_image'] = 0;	
 	 	$_POST['inactive'] = $myrow["inactive"];
-		label_row(_("Item Code:"),$_POST['NewStockID']);
-		hidden('NewStockID', $_POST['NewStockID']);
-		set_focus('description');
+	}
+	label_row(_("Item Code:"),$_POST['NewStockID']);
+	hidden('NewStockID', $_POST['NewStockID']);
+	set_focus('description');
 }
 
 text_row(_("Name:"), 'description', null, 52, 50);
@@ -417,7 +419,7 @@ else
 table_section_title(_("Other"));
 
 // Add image upload for New Item  - by Joe
-label_row(_("Image File (.jpg)") . ":", "<input type='file' id='pic' name='pic'>");
+file_row(_("Image File (.jpg)") . ":", 'pic', 'pic');
 // Add Image upload for New Item  - by Joe
 $stock_img_link = "";
 $check_remove_image = false;

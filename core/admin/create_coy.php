@@ -80,7 +80,7 @@ function remove_connection($id) {
 function handle_submit()
 {
 	global $db_connections, $def_coy, $tb_pref_counter, $db,
-	    $comp_path, $comp_subdirs;
+	    $comp_path, $comp_subdirs, $path_to_root;
 
 	$new = false;
 	$error = false;
@@ -346,10 +346,7 @@ function display_company_edit($selected_id)
 		label_row(_("Table Pref"), $_POST['tbpref']);
 	yesno_list_row(_("Default"), 'def', null, "", "", false);
 
-	start_row();
-	label_cell(_("Database Script"));
-	label_cell("<input name='uploadfile' type='file'>");
-	end_row();
+	file_row(_("Database Script"), "uploadfile");
 
 	text_row_ex(_("New script Admin Password"), 'admpassword', 20);
 

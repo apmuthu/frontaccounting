@@ -51,7 +51,9 @@ date_cells(_("To:"), 'ToDate');
 check_cells( _("Show closed:"), 'AlsoClosed', null);
 
 submit_cells('Search', _("Search"), '', '', 'default');
-
+end_row();
+start_row();
+ref_cells(_("Memo:"), 'Memo', '',null, _('Enter memo fragment or leave empty'));
 end_row();
 end_table();
 
@@ -174,6 +176,9 @@ $sql = "SELECT	IF(ISNULL(a.gl_seq),0,a.gl_seq) as gl_seq,
  	AND gl.amount!=0";
 if (isset($_POST['Ref']) && $_POST['Ref'] != "") {
  	$sql .= " AND reference LIKE '%". $_POST['Ref'] . "%'";
+}
+if (isset($_POST['Memo']) && $_POST['Memo'] != "") {
+	$sql .= " AND com.memo_ LIKE '%". $_POST['Memo'] . "%'";
 }
 if (get_post('filterType') != -1) {
  	$sql .= " AND gl.type=".get_post('filterType');
