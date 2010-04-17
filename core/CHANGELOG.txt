@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.396 2010/03/05 11:22:43 frontaccounting Exp $
+* @version $Id: CHANGELOG.txt,v 1.409 2010/04/18 07:13:54 frontaccounting Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -18,6 +18,77 @@ Legend:
 - -> Removed
 ! -> Note
 $ -> Affected files
+
+------------------------------- Release 2.2.8 ----------------------------------
+18-Apr-2010
+! Release 2.2.8
+$ config.default.php
+  update.html
+
+17-Apr-2010 Janusz Dobrowolski
+# Small fix in company creation 
+$ /admin/create_coy.php
+# Checking whether reference is unique before saving transaction.
+$ /sales/sales_order_entry.php
+
+09-Apr-2010 Joe Hunt
+# Creating a new company without a Database script causes unpredictable errors.
+$ /admin/create_coy.php
+
+06-Apr-2010 Joe Hunt/Albin
+# Inactive items should not show in Price List Report. In Item lists they are
+  stamped (Inactive) after the description.
+$ /reporting/rep104.php
+  /reporting/rep301.php
+  /reporting/rep302.php
+  /reporting/rep303.php
+  /reporting/rep304.php
+  /reporting/rep305.php
+  
+03-Apr-2010 Joe Hunt/Chaitanya
+# [0000219] Incorrect behaviors regarding Payment forms
+$ /purchasing/supplier_payment.php
+  /sales/customer_payments.php
+
+20-Mar-2010 Joe Hunt/RodW
+# [0000215} Wrong text in deliver to and not printing it.
+$ /reporting/includes/doctext.inc
+  /reporting/includes/doctext2.inc
+  /reporting/includes/header2.inc
+  
+15-Mar-2010 Janusz Dobrowolski
+# Missing check for customer/branch selected ([0000216])
+$ /sales/sales_order_entry.php
+  /sales/customer_payment.php
+# Missing check for supplier selected ([0000217])
+$ /purchasing/supplier_invoice.php
+  /purchasing/supplier_payment.php
+  /purchasing/po_entry_items.php
+# Fixed db error on no supplier selected
+  /purchasing/includes/db/suppalloc_db.inc
+# Smaller clenaups.
+$ /includes/current_user.inc
+  /includes/session.inc
+
+10-Mar-2010 Joe Hunt
+! Print full Location name on reports
+$ /reporting/rep105.php
+  /reporting/rep301.php
+  /reporting/rep302.php
+  /reporting/rep303.php
+# Print reference on email (PO)
+  /reporting/rep209.php
+  
+07-Mar-2010 Joe Hunt
+# Bug in ui_lists.inc, systypes_list_row, too many parameters in
+  call to systypes_list_cells
+$ /includes/ui/ui_lists.inc
+
+06-Mar-2010 Joe Hunt
+# Bug in Text(Col)WrapLines. Doesn't break on space.
+$ /reporting/includes/pdf_report.inc
+# Missing 'Set Global Supplier' in invoice_ui.inc
+$ /purchasing/includes/ui/invoice_ui.inc
 
 ------------------------------- Release 2.2.7 ----------------------------------
 05-Mar-2010 Joe Hunt
