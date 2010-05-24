@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.409 2010/04/18 07:13:54 frontaccounting Exp $
+* @version $Id: CHANGELOG.txt,v 1.426 2010/05/24 18:51:58 itronics Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -18,6 +18,84 @@ Legend:
 - -> Removed
 ! -> Note
 $ -> Affected files
+
+------------------------------- Release 2.2.9 ----------------------------------
+24-May-2010 Joe hunt
+! Release 2.2.9
+$ config.default.php
+  update.html
+# [0000230] Incorrect 'On order' quantity of raw materials in the 'Stock Check Sheets' report.   
+$ /reporting/rep303.php
+
+24-May-2010 Janusz Dobrowolski
+# Additional fixes in payment/deposit allocations.
+$ /includes/ui/allocation_cart.inc
+  /js/payalloc.js
+
+22-May-2010 Janusz Dobrowolski
+# Fixed html generation for buttons
+$ /includes/ui/ui_input.inc
+
+13-May-2010 Janusz Dobrowolski
+# [0000229] Payment overallocation is now forbidden (addendum)
+$ /js/payalloc.js
+
+12-May-2010 Janusz Dobrowolski
+# [0000226] Fixed diagnostic checks for javascript cached files, improved readability
+$ /admin/system_diagnostics.php
+# [0000227] Fixed cookie name to enable multiply FA instances on the same server.
+$ /includes/session.inc
+# [0000229] Payment overallocation is now forbidden
+$ /includes/ui/allocation_cart.inc
+  /js/allocate.js
+# Fixed email links to use ajax
+$ /purchasing/po_entry_items.php
+  /sales/credit_note_entry.php
+  /sales/customer_delivery.php
+  /sales/customer_invoice.php
+# Fixed shipping tax naming
+$ /taxes/tax_groups.php
+
+12-May-2010 Joe Hunt
+! Changed to allow change of theme in 'allow_demo_mode' during session
+$ /admin/display_prefs.php
+! [0000228] Sales order inquiry using reference number.
+$ /sales/inquiry/sales_orders_view.php
+
+10-May-2010 Joe Hunt/Alvin
+! Changed so Print Statements don't list voided items.
+$ /reporting/rep108.php
+
+04-May-2010 Janusz Dobrowolski/Robert Laussegger
+# Fixed amibiguites and typos in report titles.
+$ /reporting/includes/doctext.inc
+  /reporting/includes/doctext2.inc
+
+04-May-2010 Joe Hunt
+# [0000225] Supplier Payment Report showing paid invoices (rounding problem)
+$ /reporting/rep203.php
+! Minor change to balance sheet/profit and loss drilldown
+  Script is modified to display only direct child types
+/gl/inquiry/balance_sheet.php
+/gl/inquiry/profit_loss.php
+! New empty.po for release 2.2.8
+$ /lang/new_language_template/LC_MESSAGES/empty.po
+
+26-Apr-2010 Joe Hunt
+! Allowing the Tax Report to be printed to Excel/OO Calc
+$ /reporting/rep709.php
+  /reporting/reports_main.php
+  /reporting/includes/excel_report.inc
+  
+21-Apr-2010 Joe Hunt
+# [0000223] Incorrect backup of tables with more than 2 digit prefix
+$ /admin/db/maintenance_db.inc
+
+21-Apr-2010 Joe Hunt
+# [0000222] Deleting a Sales Order with reference to a voided delivery causes SQL error when
+  looking at this delivery. Solution, can't delete, but set the deliveries to 0
+  on the lines.
+$ /sales/includes/db/sales_order_db.inc
 
 ------------------------------- Release 2.2.8 ----------------------------------
 18-Apr-2010
