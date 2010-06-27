@@ -23,6 +23,7 @@ $path_to_root="..";
 include_once($path_to_root . "/includes/session.inc");
 include_once($path_to_root . "/includes/date_functions.inc");
 include_once($path_to_root . "/includes/data_checks.inc");
+include_once($path_to_root . "/includes/db/crm_contacts_db.inc");
 
 //----------------------------------------------------------------------------------------------------
 
@@ -31,9 +32,10 @@ print_po();
 //----------------------------------------------------------------------------------------------------
 function get_po($order_no)
 {
-   	$sql = "SELECT ".TB_PREF."purch_orders.*, ".TB_PREF."suppliers.supp_name,  ".TB_PREF."suppliers.supp_account_no,
+   	$sql = "SELECT ".TB_PREF."purch_orders.*, ".TB_PREF."suppliers.supp_name,  "
+   		.TB_PREF."suppliers.supp_account_no,
    		".TB_PREF."suppliers.curr_code, ".TB_PREF."suppliers.payment_terms, ".TB_PREF."locations.location_name,
-   		".TB_PREF."suppliers.email, ".TB_PREF."suppliers.address, ".TB_PREF."suppliers.contact
+   		".TB_PREF."suppliers.address, ".TB_PREF."suppliers.contact
 		FROM ".TB_PREF."purch_orders, ".TB_PREF."suppliers, ".TB_PREF."locations
 		WHERE ".TB_PREF."purch_orders.supplier_id = ".TB_PREF."suppliers.supplier_id
 		AND ".TB_PREF."locations.loc_code = into_stock_location
@@ -83,6 +85,7 @@ function print_po()
 	if ($email == 0)
 	{
 		$rep = new FrontReport(_('PURCHASE ORDER'), "PurchaseOrderBulk", user_pagesize());
+		$rep->SetHeaderType('Header2');
 		$rep->currency = $cur;
 		$rep->Font();
 		$rep->Info($params, $cols, null, $aligns);
@@ -97,6 +100,7 @@ function print_po()
 		if ($email == 1)
 		{
 			$rep = new FrontReport("", "", user_pagesize());
+			$rep->SetHeaderType('Header2');
 			$rep->currency = $cur;
 			$rep->Font();
 			$rep->title = _('PURCHASE ORDER');
@@ -105,7 +109,9 @@ function print_po()
 		}
 		else
 			$rep->title = _('PURCHASE ORDER');
-		$rep->Header2($myrow, null, $myrow, $baccount, ST_PURCHORDER);
+		$contacts = get_supplier_contacts($myrow['supplier_id'], 'order');
+		$rep->SetCommonData($myrow, null, $myrow, $baccount, ST_PURCHORDER, $contacts);
+		$rep->NewPage();
 
 		$result = get_po_details($i);
 		$SubTotal = 0;
@@ -139,7 +145,7 @@ function print_po()
 			$rep->TextCol(6, 7,	$DisplayNet, -2);
 			$rep->NewLine(1);
 			if ($rep->row < $rep->bottomMargin + (15 * $rep->lineHeight))
-				$rep->Header2($myrow, $branch, $myrow, $baccount, ST_PURCHORDER);
+				$rep->NewPage();
 		}
 		if ($myrow['comments'] != "")
 		{
@@ -151,14 +157,7 @@ function print_po()
 		$rep->row = $rep->bottomMargin + (15 * $rep->lineHeight);
 		$linetype = true;
 		$doctype = ST_PURCHORDER;
-		if ($rep->currency != $myrow['curr_code'])
-		{
-			include($path_to_root . "/reporting/includes/doctext2.inc");
-		}
-		else
-		{
-			include($path_to_root . "/reporting/includes/doctext.inc");
-		}
+		include($path_to_root . "/reporting/includes/doctext.inc");
 
 		$rep->TextCol(3, 6, $doc_Sub_total, -2);
 		$rep->TextCol(6, 7,	$DisplaySubTot, -2);
@@ -176,9 +175,9 @@ function print_po()
 		$rep->Font();
 		if ($email == 1)
 		{
-			$myrow['contact_email'] = $myrow['email'];
+//			$myrow['contact_email'] = $myrow['email'];
 			$myrow['DebtorName'] = $myrow['supp_name'];
-			if ($myrow['contact'] != '') $myrow['DebtorName'] = $myrow['contact'];
+
 			if ($myrow['reference'] == "")
 				$myrow['reference'] = $myrow['order_no'];
 			$rep->End($email, $doc_Order_no . " " . $myrow['reference'], $myrow);

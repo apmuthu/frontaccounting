@@ -43,11 +43,11 @@ $sales_order = get_sales_order_header($myrow["order_"], ST_SALESORDER);
 display_heading(sprintf(_("SALES INVOICE #%d"),$trans_id));
 
 echo "<br>";
-start_table("$table_style2 width=95%");
+start_table(TABLESTYLE2, "width=95%");
 echo "<tr valign=top><td>"; // outer table
 
 /*Now the customer charged to details in a sub table*/
-start_table("$table_style width=100%");
+start_table(TABLESTYLE, "width=100%");
 $th = array(_("Charge To"));
 table_header($th);
 
@@ -61,7 +61,7 @@ echo "</td><td>"; // outer table
 
 /*end of the main table showing the company name and charge to details */
 
-start_table("$table_style width=100%");
+start_table(TABLESTYLE, "width=100%");
 $th = array(_("Charge Branch"));
 table_header($th);
 
@@ -70,7 +70,7 @@ end_table();
 
 echo "</td><td>"; // outer table
 
-start_table("$table_style width=100%");
+start_table(TABLESTYLE, "width=100%");
 $th = array(_("Delivered To"));
 table_header($th);
 
@@ -80,7 +80,7 @@ end_table();
 
 echo "</td><td>"; // outer table
 
-start_table("$table_style width=100%");
+start_table(TABLESTYLE, "width=100%");
 start_row();
 label_cells(_("Reference"), $myrow["reference"], "class='tableheader2'");
 label_cells(_("Currency"), $sales_order["curr_code"], "class='tableheader2'");
@@ -96,7 +96,7 @@ start_row();
 label_cells(_("Invoice Date"), sql2date($myrow["tran_date"]), "class='tableheader2'", "nowrap");
 label_cells(_("Due Date"), sql2date($myrow["due_date"]), "class='tableheader2'", "nowrap");
 label_cells(_("Deliveries"), get_customer_trans_view_str(ST_CUSTDELIVERY, 
-	get_parent_trans(ST_SALESINVOICE,$trans_id)), "class='tableheader2'");
+	get_sales_parent_numbers(ST_SALESINVOICE, $trans_id)), "class='tableheader2'");
 end_row();
 comments_display_row(ST_SALESINVOICE, $trans_id);
 end_table();
@@ -107,7 +107,7 @@ end_table(1); // outer table
 
 $result = get_customer_trans_details(ST_SALESINVOICE, $trans_id);
 
-start_table("$table_style width=95%");
+start_table(TABLESTYLE, "width=95%");
 
 if (db_num_rows($result) > 0)
 {
@@ -168,6 +168,6 @@ end_table(1);
 
 is_voided_display(ST_SALESINVOICE, $trans_id, _("This invoice has been voided."));
 
-end_page(true);
+end_page(true, false, false, ST_SALESINVOICE, $trans_id);
 
 ?>

@@ -85,7 +85,7 @@ function remove_connection($id) {
 function handle_submit()
 {
 	global $db_connections, $def_coy, $tb_pref_counter, $db,
-	    $comp_path, $comp_subdirs, $path_to_root;
+	    $comp_subdirs, $path_to_root;
 
 	$error = false;
 	if (!check_data())
@@ -130,7 +130,7 @@ function handle_submit()
 					$error = true;
 				} else
 				if (isset($_POST['admpassword']) && $_POST['admpassword'] != "")
-					db_query("UPDATE ".$conn['tbpref']."users set password = '".md5($_POST['admpassword']). "' WHERE user_id = 'admin'");
+					update_admin_password($conn, md5($_POST['admpassword']));
 			}
 			else
 			{
@@ -169,7 +169,7 @@ function handle_submit()
 
 	if ($new)
 	{
-		create_comp_dirs("$comp_path/$id", $comp_subdirs);
+		create_comp_dirs(company_path($id), $comp_subdirs);
 	}
 	$exts = get_company_extensions();
 	write_extensions($exts, $id);
@@ -181,14 +181,15 @@ function handle_submit()
 
 function handle_delete()
 {
-	global $comp_path, $def_coy, $db_connections, $comp_subdirs, $path_to_root;
+	global $def_coy, $db_connections, $comp_subdirs, $path_to_root;
 
 	$id = $_GET['id'];
 
 	// First make sure all company directories from the one under removal are writable. 
 	// Without this after operation we end up with changed per-company owners!
 	for($i = $id; $i < count($db_connections); $i++) {
-		if (!is_dir($comp_path.'/'.$i) || !is_writable($comp_path.'/'.$i)) {
+			$comp_path = company_path($i);
+		if (!is_dir($comp_path) || !is_writable($comp_path)) {
 			display_error(_('Broken company subdirectories system. You have to remove this company manually.'));
 			return;
 		}
@@ -202,15 +203,15 @@ function handle_delete()
 	// rename directory to temporary name to ensure all
 	// other subdirectories will have right owners even after
 	// unsuccessfull removal.
-	$cdir = $comp_path.'/'.$id;
-	$tmpname  = $comp_path.'/old_'.$id;
+	$cdir = company_path($id);
+	$tmpname  = company_path('/old_'.$id);
 	if (!@rename($cdir, $tmpname)) {
 		display_error(_('Cannot rename subdirectory to temporary name.'));
 		return;
 	}
 	// 'shift' company directories names
 	for ($i = $id+1; $i < count($db_connections); $i++) {
-		if (!rename($comp_path.'/'.$i, $comp_path.'/'.($i-1))) {
+		if (!rename(company_path($i), company_path($i-1))) {
 			display_error(_("Cannot rename company subdirectory"));
 			return;
 		}
@@ -246,7 +247,7 @@ function handle_delete()
 
 function display_companies()
 {
-	global $table_style, $def_coy, $db_connections;
+	global $def_coy, $db_connections;
 
 	$coyno = $_SESSION["wa_current_user"]->company;
 
@@ -258,7 +259,7 @@ function display_companies()
 			document.location.replace('create_coy.php?c=df&id='+id)
 		}
 		</script>";
-	start_table($table_style);
+	start_table(TABLESTYLE);
 
 	$th = array(_("Company"), _("Database Host"), _("Database User"),
 		_("Database Name"), _("Table Pref"), _("Default"), "", "");
@@ -305,7 +306,7 @@ function display_companies()
 
 function display_company_edit($selected_id)
 {
-	global $def_coy, $db_connections, $tb_pref_counter, $table_style2;
+	global $def_coy, $db_connections, $tb_pref_counter;
 
 	if ($selected_id != -1)
 		$n = $selected_id;
@@ -327,7 +328,7 @@ function display_company_edit($selected_id)
 		}
 		</script>";
 
-	start_table($table_style2);
+	start_table(TABLESTYLE2);
 
 	if ($selected_id != -1)
 	{

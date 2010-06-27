@@ -235,8 +235,12 @@ function copy_to_cart()
 	$cart->Comments =  $_POST['Comments'];
 
 	$cart->document_date = $_POST['OrderDate'];
-	if ($cart->trans_type == ST_SALESINVOICE)
-		$cart->cash = $_POST['cash']; 
+//	if ($cart->trans_type == ST_SALESINVOICE) {
+	if (isset($_POST['payment']) && ($cart->payment != $_POST['payment'])) {
+		$cart->payment = $_POST['payment'];
+		$cart->payment_terms = get_payment_terms($_POST['payment']);
+		$cart->cash = $cart->payment_terms['cash_sale'];
+	}
 	if ($cart->cash) {
 		$cart->due_date = $cart->document_date;
 		$cart->phone = $cart->cust_ref = $cart->delivery_address = '';
@@ -291,8 +295,8 @@ function copy_from_cart()
 	$_POST['branch_id'] = $cart->Branch;
 	$_POST['sales_type'] = $cart->sales_type;
 	// POS 
-	if ($cart->trans_type == ST_SALESINVOICE)
-		$_POST['cash'] = $cart->cash;
+	if ($cart->pos != -1)
+		$_POST['payment'] = $cart->payment;
 	if ($cart->trans_type!=ST_SALESORDER && $cart->trans_type!=ST_SALESQUOTE) { // 2008-11-12 Joe Hunt
 		$_POST['dimension_id'] = $cart->dimension_id;
 		$_POST['dimension2_id'] = $cart->dimension2_id;
@@ -445,8 +449,13 @@ if (isset($_POST['update'])) {
 function check_item_data()
 {
 	global $SysPrefs;
-
-	if (!check_num('qty', 0) || !check_num('Disc', 0, 100)) {
+	
+	if(!get_post('stock_id_text', true)) {
+		display_error( _("Item description cannot be empty."));
+		set_focus('stock_id_edit');
+		return false;
+	}
+	elseif (!check_num('qty', 0) || !check_num('Disc', 0, 100)) {
 		display_error( _("The item could not be updated because you are attempting to set the quantity ordered to less than 0, or the discount percent to more than 100."));
 		set_focus('qty');
 		return false;
@@ -510,9 +519,10 @@ function handle_new_item()
 	if (!check_item_data()) {
 			return;
 	}
-	add_to_order($_SESSION['Items'], $_POST['stock_id'], input_num('qty'),
-		input_num('price'), input_num('Disc') / 100);
-	$_POST['_stock_id_edit'] = $_POST['stock_id']	= "";
+	add_to_order($_SESSION['Items'], get_post('stock_id'), input_num('qty'),
+		input_num('price'), input_num('Disc') / 100, get_post('stock_id_text'));
+
+	unset($_POST['_stock_id_edit'], $_POST['stock_id']);
 	line_start_focus();
 }
 
@@ -565,7 +575,6 @@ function create_cart($type, $trans_no)
 	global $Refs;
 
 	processing_start();
-	$doc_type = $type;
 
 	if (isset($_GET['NewQuoteToSalesOrder']))
 	{
@@ -579,21 +588,20 @@ function create_cart($type, $trans_no)
 		$_SESSION['Items'] = $doc;
 	}	
 	elseif($type != ST_SALESORDER && $type != ST_SALESQUOTE && $trans_no != 0) { // this is template
-		$doc_type = ST_SALESORDER;
 
 		$doc = new Cart(ST_SALESORDER, array($trans_no));
 		$doc->trans_type = $type;
 		$doc->trans_no = 0;
 		$doc->document_date = new_doc_date();
 		if ($type == ST_SALESINVOICE) {
-			$doc->due_date = get_invoice_duedate($doc->customer_id, $doc->document_date);
+			$doc->due_date = get_invoice_duedate($doc->payment, $doc->document_date);
 			$doc->pos = user_pos();
 			$pos = get_sales_point($doc->pos);
-			$doc->cash = $pos['cash_sale'];
-			if (!$pos['cash_sale'] || !$pos['credit_sale']) 
+//			$doc->cash = $pos['cash_sale'];
+			if (!$pos['cash_sale'] && !$pos['credit_sale'])
 				$doc->pos = -1; // mark not editable payment type
-			else
-				$doc->cash = date_diff2($doc->due_date, Today(), 'd')<2;
+//			else
+//				$doc->cash = date_diff2($doc->due_date, Today(), 'd')<2;
 		} else
 			$doc->due_date = $doc->document_date;
 		$doc->reference = $Refs->get_next($doc->trans_type);
@@ -603,7 +611,7 @@ function create_cart($type, $trans_no)
 		}
 		$_SESSION['Items'] = $doc;
 	} else
-		$_SESSION['Items'] = new Cart($type,array($trans_no));
+		$_SESSION['Items'] = new Cart($type, array($trans_no));
 	copy_from_cart();
 }
 
@@ -665,7 +673,7 @@ $customer_error = display_order_header($_SESSION['Items'],
 	($_SESSION['Items']->any_already_delivered() == 0), $idate);
 
 if ($customer_error == "") {
-	start_table("$table_style width=80%", 10);
+	start_table(TABLESTYLE, "width=80%", 10);
 	echo "<tr><td>";
 	display_order_summary($orderitems, $_SESSION['Items'], true);
 	echo "</td></tr>";
@@ -691,5 +699,4 @@ if ($customer_error == "") {
 }
 end_form();
 end_page();
-
 ?>

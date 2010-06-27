@@ -35,7 +35,7 @@ function __date($year, $month, $day)
 		$month = "0".$month;
 	if ($how == 0)
 		return $month.$sep.$day.$sep.$year;
-	else if ($how == 1)
+	elseif ($how == 1)
 		return $day.$sep.$month.$sep.$year;
 	else
 		return $year.$sep.$month.$sep.$day;
@@ -105,7 +105,7 @@ function is_date($date_)
 		global $date_system;
 		if ($date_system == 1)
 			list($year, $month, $day) = jalali_to_gregorian($year, $month, $day);  
-		else if ($date_system == 2)	
+		elseif ($date_system == 2)	
 			list($year, $month, $day) = islamic_to_gregorian($year, $month, $day);  
 		if (checkdate((int)$month, (int)$day, (int)$year))
 		{
@@ -131,7 +131,7 @@ function Today()
 	$day = date("j");
 	if ($date_system == 1)
 		list($year, $month, $day) = gregorian_to_jalali($year, $month, $day);
-	else if ($date_system == 2)	
+	elseif ($date_system == 2)	
 		list($year, $month, $day) = gregorian_to_islamic($year, $month, $day);
 	return __date($year, $month, $day);	
 }
@@ -160,8 +160,10 @@ function new_doc_date($date=null)
 function is_date_in_fiscalyear($date, $convert=false)
 {
 	global $path_to_root;
-	include_once($path_to_root . "/admin/db/company_db.inc");
+	include_once($path_to_root . "/admin/db/fiscalyears_db.inc");
 
+	if ($_SESSION["wa_current_user"]->can_access('SA_MULTIFISCALYEARS')) // allow all open years for this one
+		return is_date_in_fiscalyears($date, false);
 	$myrow = get_current_fiscalyear();
 	if ($myrow['closed'] == 1)
 		return 0;
@@ -181,7 +183,7 @@ function is_date_in_fiscalyear($date, $convert=false)
 function begin_fiscalyear()
 {
 	global $path_to_root;
-	include_once($path_to_root . "/admin/db/company_db.inc");
+	include_once($path_to_root . "/admin/db/fiscalyears_db.inc");
 
 	$myrow = get_current_fiscalyear();
 	return sql2date($myrow['begin']);
@@ -190,7 +192,7 @@ function begin_fiscalyear()
 function end_fiscalyear()
 {
 	global $path_to_root;
-	include_once($path_to_root . "/admin/db/company_db.inc");
+	include_once($path_to_root . "/admin/db/fiscalyears_db.inc");
 
 	$myrow = get_current_fiscalyear();
 	return sql2date($myrow['end']);
@@ -202,7 +204,7 @@ function begin_month($date)
     list($day, $month, $year) = explode_date_to_dmy($date);
     if ($date_system == 1)
     	list($year, $month, $day) = gregorian_to_jalali($year, $month, $day);
-    else if ($date_system == 2)	
+    elseif ($date_system == 2)	
     	list($year, $month, $day) = gregorian_to_islamic($year, $month, $day);
    	return __date($year, $month, 1);
 }
@@ -216,7 +218,7 @@ function end_month($date)
 		list($year, $month, $day) = gregorian_to_jalali($year, $month, $day);
 		$days_in_month = array(31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, ((((((($year - (($year > 0) ? 474 : 473)) % 2820) + 474) + 38) * 682) % 2816) < 682 ? 30 : 29));
 	}
-	else if ($date_system == 2)
+	elseif ($date_system == 2)
 	{
 		list($year, $month, $day) = gregorian_to_islamic($year, $month, $day);
 		$days_in_month = array(30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, (((((11 * $year) + 14) % 30) < 11) ? 30 : 29));
@@ -235,7 +237,7 @@ function add_days($date, $days) // accepts negative values as well
     {
     	if ($date_system == 1)
     		list($year, $month, $day) = gregorian_to_jalali(date("Y", $timet), date("n", $timet), date("j", $timet));
-    	else if ($date_system == 2) 	
+    	elseif ($date_system == 2) 	
     		list($year, $month, $day) = gregorian_to_islamic(date("Y", $timet), date("n", $timet), date("j", $timet));
     	return __date($year, $month, $day);
     }
@@ -251,7 +253,7 @@ function add_months($date, $months) // accepts negative values as well
     {
     	if ($date_system == 1)
     		list($year, $month, $day) = gregorian_to_jalali(date("Y", $timet), date("n", $timet), date("j", $timet));
-    	else if ($date_system == 2) 	
+    	elseif ($date_system == 2) 	
     		list($year, $month, $day) = gregorian_to_islamic(date("Y", $timet), date("n", $timet), date("j", $timet));
     	return __date($year, $month, $day);
     }
@@ -267,7 +269,7 @@ function add_years($date, $years) // accepts negative values as well
     {
     	if ($date_system == 1)
     		list($year, $month, $day) = gregorian_to_jalali(date("Y", $timet), date("n", $timet), date("j", $timet));
-    	else if ($date_system == 2) 	
+    	elseif ($date_system == 2) 	
     		list($year, $month, $day) = gregorian_to_islamic(date("Y", $timet), date("n", $timet), date("j", $timet));
     	return __date($year, $month, $day);
     }
@@ -299,7 +301,7 @@ function sql2date($date_)
 	}
 	if ($date_system == 1)
 		list($year, $month, $day) = gregorian_to_jalali($year, $month, $day);
-	else if ($date_system == 2)
+	elseif ($date_system == 2)
 		list($year, $month, $day) = gregorian_to_islamic($year, $month, $day);
 	return __date($year, $month, $day);	
 } // end function sql2date
@@ -346,7 +348,7 @@ and converts to a yyyy/mm/dd format */
 	}
 	if ($date_system == 1)
 		list($year, $month, $day) = jalali_to_gregorian($year, $month, $day); 
-	else if ($date_system == 2)
+	elseif ($date_system == 2)
 		list($year, $month, $day) = islamic_to_gregorian($year, $month, $day); 
 
    	// Pad with 0s if needed
@@ -365,8 +367,9 @@ function date1_greater_date2 ($date1, $date2)
 
 	$date1 = date2sql($date1);
 	$date2 = date2sql($date2);
-	list($year1, $month1, $day1) = explode("-", $date1);
-	list($year2, $month2, $day2) = explode("-", $date2);
+
+	@list($year1, $month1, $day1) = explode("-", $date1);
+	@list($year2, $month2, $day2) = explode("-", $date2);
 
 	if ($year1 > $year2)
 	{
@@ -430,9 +433,7 @@ function explode_date_to_dmy($date_)
 	$date = date2sql($date_);
 	if ($date == "") 
 	{
-		$disp = user_date_display();
-		echo "<br>Dates must be entered in the format $disp. Sent was $date_<br>";
-		exit;
+		return array(0,0,0);
 	}
 	list($year, $month, $day) = explode("-", $date);
 	return array($day, $month, $year);

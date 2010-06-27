@@ -29,9 +29,9 @@ if (!isset($_GET['type_id']) || !isset($_GET['trans_no']))
 
 function display_gl_heading($myrow)
 {
-	global $table_style, $systypes_array;
+	global $systypes_array;
 	$trans_name = $systypes_array[$_GET['type_id']];
-    start_table("$table_style width=95%");
+    start_table(TABLESTYLE, "width=95%");
     $th = array(_("General Ledger Transaction Details"), _("Reference"),
     	_("Date"), _("Person/Item"));
     table_header($th);	
@@ -47,15 +47,7 @@ function display_gl_heading($myrow)
 
     end_table(1);
 }
-$sql = "SELECT gl.*, cm.account_name, IF(ISNULL(refs.reference), '', refs.reference) AS reference FROM "
-	.TB_PREF."gl_trans as gl
-	LEFT JOIN ".TB_PREF."chart_master as cm ON gl.account = cm.account_code
-	LEFT JOIN ".TB_PREF."refs as refs ON (gl.type=refs.type AND gl.type_no=refs.id)"
-	." WHERE gl.type= ".db_escape($_GET['type_id']) 
-	." AND gl.type_no = ".db_escape($_GET['trans_no'])
-	." ORDER BY counter";
-$result = db_query($sql,"could not get transactions");
-//alert("sql = ".$sql);
+$result = get_gl_trans($_GET['type_id'], $_GET['trans_no']);
 
 if (db_num_rows($result) == 0)
 {
@@ -85,7 +77,7 @@ while ($myrow = db_fetch($result))
 	if (!$heading_shown)
 	{
 		display_gl_heading($myrow);
-		start_table("$table_style width=95%");
+		start_table(TABLESTYLE, "width=95%");
 		table_header($th);
 		$heading_shown = true;
 	}	
@@ -110,6 +102,6 @@ if ($heading_shown)
 
 is_voided_display($_GET['type_id'], $_GET['trans_no'], _("This transaction has been voided."));
 
-end_page(true);
+end_page(true, false, false, $_GET['type_id'], $_GET['trans_no']);
 
 ?>

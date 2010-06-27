@@ -283,13 +283,12 @@ function exchange_rate_display($from_currency, $to_currency, $date_, $edit_rate=
 
 function is_voided_display($type, $id, $label)
 {
-	global $table_style;
 	$void_entry = get_voided_entry($type, $id);
 
 	if ($void_entry == null)
 		return false;
 
-	start_table("width=50% $table_style");
+	start_table(TABLESTYLE, "width=50%");
 	echo "<tr><td align=center><font color=red>$label</font><br>";
 	echo "<font color=red>" . _("Date Voided:") . " " . sql2date($void_entry["date_"]) . "</font><br>";
 	if (strlen($void_entry["memo_"]) > 0)
@@ -375,15 +374,31 @@ function display_debit_or_credit_cells($value)
 
 function display_customer_trans_tax_details($tax_items, $columns)
 {
+	global $alternative_tax_include_on_docs, $suppress_tax_rates;
+	$first = true;
     while ($tax_item = db_fetch($tax_items))
     {
     	$tax = number_format2($tax_item['amount'],user_price_dec());
+		if (isset($suppress_tax_rates) && $suppress_tax_rates == 1)
+			$tax_type_name = $tax_item['tax_type_name'];
+		else
+			$tax_type_name = $tax_item['tax_type_name']." (".$tax_item['rate']."%) ";
     	if ($tax_item['included_in_price'])
-        	label_row(_("Included") . " " . $tax_item['tax_type_name'] . " (" . $tax_item['rate'] . "%) " .
-        		_("Amount") . ": $tax", "", "colspan=$columns align=right", "align=right");
+    	{
+			if (isset($alternative_tax_include_on_docs) && $alternative_tax_include_on_docs == 1)
+  			{
+  				if ($first)
+  					label_row(_("Total Tax Excluded"), number_format2($tax_item['net_amount'], user_price_dec()),
+  						"colspan=$columns align=right", "align=right");
+        		label_row($tax_type_name, $tax, "colspan=$columns align=right", "align=right");
+        		$first = false;
+        	}
+        	else
+        		label_row(_("Included") . " " . $tax_type_name .
+        			_("Amount") . ": $tax", "", "colspan=$columns align=right", "align=right");
+        }			
     	else
-        	label_row($tax_item['tax_type_name'] . " (" . $tax_item['rate'] . "%)",
-        		$tax, "colspan=$columns align=right", "align=right");
+        	label_row($tax_type_name, $tax, "colspan=$columns align=right", "align=right");
     }
 }
 
@@ -440,14 +455,14 @@ function display_footer_exit()
 
 function display_allocations($alloc_result, $total)
 {
-	global $table_style, $systypes_array;
+	global $systypes_array;
 
 	if (!$alloc_result || db_num_rows($alloc_result) == 0)
 		return;
 
     display_heading2(_("Allocations"));
 
-    start_table("$table_style width=80%");
+    start_table(TABLESTYLE, "width=80%");
 
     $th = array( _("Type"), _("Number"), _("Date"), _("Total Amount"),
     	_("Left to Allocate"), _("This Allocation"));
@@ -523,8 +538,27 @@ function display_quick_entries(&$cart, $id, $base, $type, $descr='')
 		if ($type != QE_SUPPINV)	// only one quick entry on journal/bank transaction
 			$cart->clear_items();
 		$qe = get_quick_entry($id);
+		if ($qe['bal_type'] == 1)
+		{
+			if ($qe['base_amount'] == 1.0) // monthly
+				$begin = begin_month($cart->tran_date);
+			else
+			{
+				if (is_account_balancesheet($qe['base_desc'])) // total
+					$begin = "";
+				else
+					$begin = begin_fiscalyear(); // from fiscalyear begin
+			}		
+			$base = get_gl_trans_from_to($begin, $cart->tran_date, $qe['base_desc']);
+				
+		}
 		if ($descr != '') $qe['description'] .= ': '.$descr;
 		$result = get_quick_entry_lines($id);
+		if (db_num_rows($result) == 0)
+		{
+			display_error( _("No Quick Entry lines are defined."));
+			set_focus('totamount');
+		}	
 		$totrate = 0;
 		while ($row = db_fetch($result))
 		{
@@ -780,8 +814,8 @@ function get_js_png_fix()
 
 function get_js_date_picker()
 {
-    global $comp_path, $go_debug;
-    $fpath = $comp_path.'/'.user_company().'/js_cache/'.'date_picker.js';
+    global $go_debug;
+    $fpath = company_path().'/js_cache/'.'date_picker.js';
 
     if (!file_exists($fpath) || $go_debug) {
 
@@ -1247,7 +1281,7 @@ if (!function_exists('_vd'))
     	$str = (!empty($title) ? ($title .':') : '') .'<pre>';
     	$str .= print_r($mixed, true); //var_dump($mixed);
     	$str .= "</pre>\n";
-		display_error('<table><tr><td>'.$str.'</td></tr></table>');
+		display_notification('<table><tr><td>'.$str.'</td></tr></table>');
     	if ($exit)
     		exit;
   	}

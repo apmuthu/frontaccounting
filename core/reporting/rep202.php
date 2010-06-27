@@ -65,16 +65,17 @@ function get_invoices($supplier_id, $to)
 
 function print_aged_supplier_analysis()
 {
-    	global $comp_path, $path_to_root, $systypes_array;
+    global $path_to_root, $systypes_array;
 
-    	$to = $_POST['PARAM_0'];
-    	$fromsupp = $_POST['PARAM_1'];
-    	$currency = $_POST['PARAM_2'];
+    $to = $_POST['PARAM_0'];
+    $fromsupp = $_POST['PARAM_1'];
+    $currency = $_POST['PARAM_2'];
 	$summaryOnly = $_POST['PARAM_3'];
-    	$no_zeros = $_POST['PARAM_4'];
-    	$graphics = $_POST['PARAM_5'];
-    	$comments = $_POST['PARAM_6'];
+    $no_zeros = $_POST['PARAM_4'];
+    $graphics = $_POST['PARAM_5'];
+    $comments = $_POST['PARAM_6'];
 	$destination = $_POST['PARAM_7'];
+
 	if ($destination)
 		include_once($path_to_root . "/reporting/includes/excel_report.inc");
 	else
@@ -130,9 +131,15 @@ function print_aged_supplier_analysis()
 		$headers[2] = _('currency');
     	$rep = new FrontReport(_('Aged Supplier Analysis'), "AgedSupplierAnalysis", user_pagesize());
 
+<<<<<<< rep202.php
+    $rep->Font();
+    $rep->Info($params, $cols, $headers, $aligns);
+    $rep->NewPage();
+=======
     	$rep->Font();
     	$rep->Info($params, $cols, $headers, $aligns);
     	$rep->Header();
+>>>>>>> 1.7
 
 	$total = array();
 	$total[0] = $total[1] = $total[2] = $total[3] = $total[4] = 0.0;
@@ -237,14 +244,14 @@ function print_aged_supplier_analysis()
 		$pg->built_in  = false;
 		$pg->fontfile  = $path_to_root . "/reporting/fonts/Vera.ttf";
 		$pg->latin_notation = ($decseps[$_SESSION["wa_current_user"]->prefs->dec_sep()] != ".");
-		$filename = $comp_path.'/'.user_company(). "/pdf_files/test.png";
+		$filename = company_path(). "/pdf_files/test.png";
 		$pg->display($filename, true);
 		$w = $pg->width / 1.5;
 		$h = $pg->height / 1.5;
 		$x = ($rep->pageWidth - $w) / 2;
 		$rep->NewLine(2);
 		if ($rep->row - $h < $rep->bottomMargin)
-			$rep->Header();
+			$rep->NewPage();
 		$rep->AddImage($filename, $x, $rep->row - $h, $w, $h);
 	}
     $rep->End();

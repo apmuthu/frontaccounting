@@ -64,6 +64,7 @@ function print_sales_orders()
 			$rep = new FrontReport(_("SALES ORDER"), "SalesOrderBulk", user_pagesize());
 		else
 			$rep = new FrontReport(_("QUOTE"), "QuoteBulk", user_pagesize());
+		$rep->SetHeaderType('Header2');
 		$rep->currency = $cur;
 		$rep->Font();
 		$rep->Info($params, $cols, null, $aligns);
@@ -78,6 +79,7 @@ function print_sales_orders()
 		if ($email == 1)
 		{
 			$rep = new FrontReport("", "", user_pagesize());
+			$rep->SetHeaderType('Header2');
 			$rep->currency = $cur;
 			$rep->Font();
 			if ($print_as_quote == 1)
@@ -94,7 +96,10 @@ function print_sales_orders()
 		}
 		else
 			$rep->title = ($print_as_quote==1 ? _("QUOTE") : _("SALES ORDER"));
-		$rep->Header2($myrow, $branch, $myrow, $baccount, ST_SALESORDER);
+
+		$contacts = get_branch_contacts($branch['branch_code'], 'order', $branch['debtor_no']);
+		$rep->SetCommonData($myrow, $branch, $myrow, $baccount, ST_SALESORDER, $contacts);
+		$rep->NewPage();
 
 		$result = get_sales_order_details($i, ST_SALESORDER);
 		$SubTotal = 0;
@@ -123,7 +128,7 @@ function print_sales_orders()
 			$rep->row = $newrow;
 			//$rep->NewLine(1);
 			if ($rep->row < $rep->bottomMargin + (15 * $rep->lineHeight))
-				$rep->Header2($myrow, $branch, $myrow, $baccount, ST_SALESORDER);
+				$rep->NewPage();
 		}
 		if ($myrow['comments'] != "")
 		{
@@ -136,14 +141,7 @@ function print_sales_orders()
 		$rep->row = $rep->bottomMargin + (15 * $rep->lineHeight);
 		$linetype = true;
 		$doctype = ST_SALESORDER;
-		if ($rep->currency != $myrow['curr_code'])
-		{
-			include($path_to_root . "/reporting/includes/doctext2.inc");
-		}
-		else
-		{
-			include($path_to_root . "/reporting/includes/doctext.inc");
-		}
+		include($path_to_root . "/reporting/includes/doctext.inc");
 
 		$rep->TextCol(3, 6, $doc_Sub_total, -2);
 		$rep->TextCol(6, 7,	$DisplaySubTot, -2);
@@ -167,6 +165,7 @@ function print_sales_orders()
 		$rep->Font();
 		if ($email == 1)
 		{
+			$res = get_branch_contacts(branch_code, 'order', customer_id);
 			if ($myrow['contact_email'] == '')
 			{
 				$myrow['contact_email'] = $branch['email'];

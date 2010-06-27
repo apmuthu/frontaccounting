@@ -167,32 +167,14 @@ class current_user
     	return $db;
 	}
 
-	function update_prefs($price_dec, $qty_dec, $exrate_dec, $percent_dec, 
-		$showgl, $showcodes, $date_format, $date_sep, $tho_sep, $dec_sep, 
-		$theme, $pagesize, $show_hints, $profile, $rep_popup, $query_size, 
-		$graphic_links, $lang, $stickydate, $startup_tab)
+	function update_prefs($prefs)
 	{
 		global $allow_demo_mode;
-
-		$user = array(
-			'prices_dec' => $price_dec, 	'qty_dec' => $qty_dec,
-			'rates_dec' => $exrate_dec,		'percent_dec' => $percent_dec,
-			'show_gl' => $showgl,			'show_codes' => $showcodes,
-			'date_format' => $date_format,	'date_sep' => $date_sep,
-			'tho_sep' => $tho_sep,			'dec_sep' => $dec_sep,
-			'theme' => $theme,				'page_size' => $pagesize,
-			'show_hints' => $show_hints,	'print_profile' => $profile,
-			'rep_popup' => $rep_popup,		'query_size' => $query_size,
-			'graphic_links' => $graphic_links,	'language' => $lang,
-			'sticky_doc_date' => $stickydate,	'startup_tab' => $startup_tab
-		);
-
+		
 		if(!$allow_demo_mode) {
-			update_user_display_prefs($this->user, $price_dec, 
-				$qty_dec, $exrate_dec, $percent_dec, $showgl, $showcodes, 
-				$date_format, $date_sep, $tho_sep, $dec_sep, $theme, $pagesize, 
-				$show_hints, $profile, $rep_popup, $query_size, $graphic_links, $lang, $stickydate, $startup_tab);
+			update_user_prefs($this->user, $prefs);
 		}
+
 		$this->prefs = new user_prefs(get_user($this->user));
 	}
 }
@@ -412,14 +394,9 @@ function user_startup_tab()
 	return $_SESSION["wa_current_user"]->prefs->start_up_tab();
 }
 
-function set_user_prefs($price_dec, $qty_dec, $exrate_dec, $percent_dec, $showgl, $showcodes,
-	$date_format, $date_sep, $tho_sep, $dec_sep, $theme, $pagesize, $show_hints,
-	$print_profile, $rep_popup, $query_size, $graphic_links, $lang, $stickydate, $startup_tab)
+function set_user_prefs($prefs)
 {
-
-	$_SESSION["wa_current_user"]->update_prefs($price_dec, $qty_dec, $exrate_dec, $percent_dec, $showgl, $showcodes,
-		$date_format, $date_sep, $tho_sep, $dec_sep, $theme, $pagesize, $show_hints,
-		$print_profile, $rep_popup, $query_size, $graphic_links, $lang, $stickydate, $startup_tab);
+	$_SESSION["wa_current_user"]->update_prefs($prefs);
 }
 
 function add_user_js_data() {
@@ -483,7 +460,10 @@ function array_append(&$array, $elements)
 			$array[$key] = $el;
 	}
 }
-
+//
+//	Search $needle in $haystack or in $haystack[][$valuekey]
+//	returns $needle found or null.
+//
 function array_search_value($needle, $haystack, $valuekey=null)
 {
 	foreach($haystack as $key => $value) {
@@ -494,15 +474,29 @@ function array_search_value($needle, $haystack, $valuekey=null)
 	}
 	return null;
 }
-
+//
+//	Search $needle in $haystack or in $haystack[][$valuekey]
+//	returns array of keys of $haystack elements found
+//
+function array_search_keys($needle, $haystack, $valuekey=null)
+{
+	$keys = array();
+	if($haystack)
+		foreach($haystack as $key => $value) {
+			$val = isset($valuekey) ? $value[$valuekey] : $value;
+			if ($needle == $val){
+				$keys[] = $key;
+			}
+		}
+	return $keys;
+}
+//
+//	Find first (single) $needle in $haystack or in $haystack[][$valuekey]
+//	returns $haystack element found or null
+//
 function array_search_key($needle, $haystack, $valuekey=null)
 {
-	foreach($haystack as $key => $value) {
-		$val = isset($valuekey) ? $value[$valuekey] : $value;
-		if ($needle == $val){
-			return $key;
-		}
-	}
-	return null;
+	$keys = array_search_keys($needle, $haystack, $valuekey);
+	return @$keys[0];
 }
 ?>

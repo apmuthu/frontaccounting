@@ -22,6 +22,7 @@ include_once($path_to_root . "/includes/session.inc");
 include_once($path_to_root . "/includes/date_functions.inc");
 include_once($path_to_root . "/includes/data_checks.inc");
 include_once($path_to_root . "/sales/includes/sales_db.inc");
+include_once($path_to_root . "/includes/db/crm_contacts_db.inc");
 
 //----------------------------------------------------------------------------------------------------
 
@@ -77,12 +78,13 @@ function print_statements()
 	if ($email == 0)
 	{
 		$rep = new FrontReport(_('STATEMENT'), "StatementBulk", user_pagesize());
+		$rep->SetHeaderType('Header2');
 		$rep->currency = $cur;
 		$rep->Font();
 		$rep->Info($params, $cols, null, $aligns);
 	}
 
-	$sql = "SELECT debtor_no, name AS DebtorName, address, tax_id, email, curr_code, curdate() AS tran_date, payment_terms FROM ".TB_PREF."debtors_master";
+	$sql = "SELECT debtor_no, name AS DebtorName, address, tax_id, email, curr_code, curdate() AS tran_date FROM ".TB_PREF."debtors_master";
 	if ($customer != ALL_NUMERIC)
 		$sql .= " WHERE debtor_no = ".db_escape($customer);
 	else
@@ -103,24 +105,21 @@ function print_statements()
 		if ($email == 1)
 		{
 			$rep = new FrontReport("", "", user_pagesize());
+			$rep->SetHeaderType('Header2');
 			$rep->currency = $cur;
 			$rep->Font();
 			$rep->title = _('STATEMENT');
 			$rep->filename = "Statement" . $myrow['debtor_no'] . ".pdf";
 			$rep->Info($params, $cols, null, $aligns);
 		}
-		$rep->Header2($myrow, null, null, $baccount, ST_STATEMENT);
+		$contacts = get_customer_contacts($myrow['debtor_no'], 'invoice');
+		//= get_branch_contacts($branch['branch_code'], 'invoice', $branch['debtor_no']);
+		$rep->SetCommonData($myrow, null, null, $baccount, ST_STATEMENT, $contacts);
+		$rep->NewPage();
 		$rep->NewLine();
 		$linetype = true;
 		$doctype = ST_STATEMENT;
-		if ($rep->currency != $myrow['curr_code'])
-		{
-			include($path_to_root . "/reporting/includes/doctext2.inc");
-		}
-		else
-		{
-			include($path_to_root . "/reporting/includes/doctext.inc");
-		}
+		include($path_to_root . "/reporting/includes/doctext.inc");
 		$rep->fontSize += 2;
 		$rep->TextCol(0, 8, $doc_Outstanding);
 		$rep->fontSize -= 2;
@@ -144,7 +143,7 @@ function print_statements()
 			$rep->TextCol(7, 8,	$DisplayNet, -2);
 			$rep->NewLine();
 			if ($rep->row < $rep->bottomMargin + (10 * $rep->lineHeight))
-				$rep->Header2($myrow, null, null, $baccount, ST_STATEMENT);
+				$rep->NewPage();
 		}
 		$nowdue = "1-" . $PastDueDays1 . " " . $doc_Days;
 		$pastdue1 = $PastDueDays1 + 1 . "-" . $PastDueDays2 . " " . $doc_Days;

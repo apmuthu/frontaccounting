@@ -114,7 +114,7 @@ function tst_debug()
 	$test['type'] = 0;
 	$test['test'] = $go_debug ? _("Yes") : _("No");
 	$test['result'] = $go_debug != 0;
-	$test['comments'] = _('To switch debugging on set $go_debug=1 in config.php file');
+	$test['comments'] = _('To switch debugging on set $go_debug>1 in config.php file');
 
 	return $test;
 }
@@ -146,12 +146,13 @@ function tst_logging()
 //
 function tst_dbversion()
 {
+	global $core_version;
 	$test['descr'] = _('Current database version');
 	$test['type'] = 3;
 	$test['test'] = get_company_pref('version_id');
-	$test['result'] = $test['test'] == '2.2';
+	$test['result'] = $test['test'] == $core_version;
 	$test['comments'] = _('Database structure seems to be not upgraded to current version')
-		.' (2.2)';
+		." ($core_version)";
 
 	return $test;
 }
@@ -159,25 +160,26 @@ function tst_dbversion()
 
 function tst_subdirs()
 {
-	global $db_connections, $comp_path;
+	global $db_connections;
 
 	$comp_subdirs = array('images', 'pdf_files', 'backup','js_cache');
 
 	$test['descr'] = _('Company subdirectories consistency');
 	$test['type'] = 3;
-	$test['test'] = array($comp_path.'/*');
+	$test['test'] = array(company_path().'/*');
 	foreach($comp_subdirs as $sub) {
-		$test['test'][] = $comp_path.'/*/'.$sub;
+		$test['test'][] = company_path().'/*/'.$sub;
 	}
 	$test['result'] = true;
-
+	
+	$comp_path = company_path();
 	if (!is_dir($comp_path) || !is_writable($comp_path) ) {
 		$test['result'] = false;
 		$test['comments'][] = sprintf(_("'%s' is not writeable"), $comp_path);
 		return $test;
 	};
 	foreach ($db_connections as $n => $comp) {
-		$path = "$comp_path/$n";
+		$path = company_path($n);
 		if (!is_dir($path) || !is_writable($path) ) {
 			$test['result'] = false;
 			$test['comments'][] = sprintf(_("'%s' is not writeable"), $path);
@@ -240,7 +242,7 @@ function tst_langs()
 			$test['result'] = false;
 			$test['comments'][] = sprintf( _('Missing %s translation file.'), $file);
 		}
-        if (!setlocale(LC_MESSAGES, $lang['code'].".".$lang['encoding'])) 
+		if (!$_SESSION['get_text']->check_support($lang['code'], $lang['encoding']))
         {
 			$test['result'] = false;
 			$test['comments'][] = sprintf(_('Missing system locale: %s'), $lang['code'].".".$lang['encoding']);
@@ -281,17 +283,17 @@ function tst_dbconfig()
 
 function tst_extconfig()
 {
-	global $path_to_root, $db_connections, $comp_path;
+	global $path_to_root, $db_connections;
 
 	$test['descr'] = _('Extensions configuration files');
 	$test['type'] = 3;
 	$test['test'] = $path_to_root.'/installed_extensions.php';
 	$test['result'] = is_file($test['test']) && is_writable($test['test']);
-	$test['test'] . ','.$comp_path.'/*/installed_extensions.php';
+	$test['test'] . ','.company_path().'/*/installed_extensions.php';
 	$test['comments'][] = sprintf(_("'%s' file should be writeable"), $test['test']);
 
 	foreach ($db_connections as $n => $comp) {
-		$path = "$comp_path/$n";
+		$path = company_path($n);
 		if (!is_dir($path)) continue;
 
 		$path .= "/installed_extensions.php";
@@ -305,7 +307,7 @@ function tst_extconfig()
 }
 //-------------------------------------------------------------------------------------------------
 
-start_table("$table_style width=80%");
+start_table(TABLESTYLE, "width=80%");
 $th = array(_("Test"), _('Test type'), _("Value"), _("Comments"));
 table_header($th);
 

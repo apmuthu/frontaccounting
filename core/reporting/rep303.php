@@ -61,7 +61,7 @@ function getTransactions($category, $location)
 
 function print_stock_check()
 {
-    	global $comp_path, $path_to_root, $pic_height;
+    global $path_to_root, $pic_height;
 
     	$category = $_POST['PARAM_0'];
     	$location = $_POST['PARAM_1'];
@@ -70,7 +70,8 @@ function print_stock_check()
     	$shortage = $_POST['PARAM_4'];
     	$no_zeros = $_POST['PARAM_5'];
     	$comments = $_POST['PARAM_6'];
-	$destination = $_POST['PARAM_7'];
+		$destination = $_POST['PARAM_7'];
+
 	if ($destination)
 		include_once($path_to_root . "/reporting/includes/excel_report.inc");
 	else
@@ -128,9 +129,15 @@ function print_stock_check()
 
     	$rep = new FrontReport(_('Stock Check Sheets'), "StockCheckSheet", user_pagesize());
 
+<<<<<<< rep303.php
+    $rep->Font();
+    $rep->Info($params, $cols, $headers, $aligns);
+    $rep->NewPage();
+=======
     	$rep->Font();
     	$rep->Info($params, $cols, $headers, $aligns);
     	$rep->Header();
+>>>>>>> 1.22
 
 	$res = getTransactions($category, $location);
 	$catt = '';
@@ -182,13 +189,13 @@ function print_stock_check()
 		}
 		if ($pictures)
 		{
-			$image = $comp_path .'/'. $user_comp . '/images/' 
+			$image = company_path() . '/images/' 
 				. item_img_name($trans['stock_id']) . '.jpg';
 			if (file_exists($image))
 			{
 				$rep->NewLine();
 				if ($rep->row - $pic_height < $rep->bottomMargin)
-					$rep->Header();
+					$rep->NewPage();
 				$rep->AddImage($image, $rep->cols[1], $rep->row - $pic_height, 0, $pic_height);
 				$rep->row -= $pic_height;
 				$rep->NewLine();

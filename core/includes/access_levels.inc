@@ -110,6 +110,7 @@ $security_areas =array(
 	'SA_INVENTORYMOVETYPE'  => array(SS_SETUP|11, _("Inventory movement types")),
 	'SA_WORKCENTRES' => array(SS_SETUP|12, _("Manufacture work centres")),
 	'SA_FORMSETUP' => array(SS_SETUP|13, _("Forms setup")),
+	'SA_CRMCATEGORY' => array(SS_SETUP|14, _("Contact categories")),
 //
 // Special and common functions
 //
@@ -226,6 +227,7 @@ $security_areas =array(
 	'SA_FISCALYEARS' => array(SS_GL_C|9, _("Fiscal years maintenance")),
 	'SA_GLSETUP' => array(SS_GL_C|10, _("Company GL setup")),
 	'SA_GLACCOUNTTAGS' => array(SS_GL_C|11, _("GL Account tags")),
+	'SA_MULTIFISCALYEARS' => array(SS_GL_C|13, _("Allow entry on non closed Fiscal years")),
 
 	'SA_BANKTRANSVIEW' => array(SS_GL|1, _("Bank transactions view")),
 	'SA_GLTRANSVIEW' => array(SS_GL|2, _("GL postings view")),
@@ -298,7 +300,7 @@ function get_access_extensions($id) {
 	$security_sections = $security_areas = array();
 	
 	if (isset($ext['acc_file']))
-		include($path_to_root.($ext['type'] == 'plugin' ? '/modules/':'/').$ext['path'].'/'.$ext['acc_file']);
+ 		include($path_to_root.($ext['type'] == 'plugin' ? '/modules/':'/').$ext['path'].'/'.$ext['acc_file']);
 
 	return array($security_areas, $security_sections);
 }

@@ -17,7 +17,7 @@ $before_box = ''; // temporary container for output html data before error box
 //    display in message box.
 
 function error_handler($errno, $errstr, $file, $line) {
-    global $messages, $go_debug;
+    global $messages, $go_debug, $SysPrefs;
 
 	// skip well known warnings we don't care about.
 	// Please use restrainedly to not risk loss of important messages
@@ -33,7 +33,8 @@ function error_handler($errno, $errstr, $file, $line) {
 			$messages[] = array($errno, $errstr, $file, $line);
 	else if($errno&~E_NOTICE)// log all not displayed messages 
 		error_log(user_company() . ':' . $_SESSION["wa_current_user"]->loginname.':'
-			 . basename($file) .":$line: $errstr");
+			 . basename($file) .":$line:" . ( $SysPrefs->db_ok ? '':'[before upgrade]')
+			 . " $errstr");
 	
     return true;
 }
@@ -93,18 +94,21 @@ function error_box() {
 /*
 	Helper to avoid sparse log notices.
 */
-function end_flush () {
-	global $Ajax;
+function end_flush() {
+	global $Ajax, $transaction_level;
 
 	if (isset($Ajax))
 		$Ajax->run();
 	// flush all output buffers (works also with exit inside any div levels)
 	while(ob_get_level()) ob_end_flush();
+
+	// if any transaction was aborted unexpectedly rollback changes
+	cancel_transaction();
 }
 
 function display_db_error($msg, $sql_statement=null, $exit=true)
 {
-	global $db, $debug;
+	global $db, $debug, $go_debug;
 
 	$warning = $msg==null;
 	$db_error = db_error_no();
@@ -124,6 +128,7 @@ function display_db_error($msg, $sql_statement=null, $exit=true)
 	if ($debug == 1) 
 	{
 		$str .= "sql that failed was : " . $sql_statement . "<br>";
+		if ($go_debug > 1) display_backtrace();
 	}
 	
 	$str .= "<br><br>";

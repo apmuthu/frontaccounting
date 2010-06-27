@@ -273,16 +273,18 @@ function button($name, $value, $title=false, $icon=false,  $aspect='')
 	{
 		if ($value == _("Delete")) // Helper during implementation
 			$icon = ICON_DELETE;
-		return "<button type='submit' class='editbutton' name='".
-			htmlentities(strtr($name, array('.'=>'=2E',' '=>'=20','='=>'=3D','['=>'=5B'))).
-			"' value='1'" . ($title ? " title='$title'":" title='$value'")
+		return "<button type='submit' class='editbutton' name='"
+			.htmlentities(strtr($name, array('.'=>'=2E', '='=>'=3D',// ' '=>'=20','['=>'=5B'
+			)))
+			."' value='1'" . ($title ? " title='$title'":" title='$value'")
 			. ($aspect ? " aspect='$aspect'" : '')
 			. $rel
 			." />".set_icon($icon)."</button>\n";
 	}
 	else
 		return "<input type='submit' class='editbutton' name='"
-			.htmlentities(strtr($name, array('.'=>'=2E',' '=>'=20','='=>'=3D','['=>'=5B')))
+			.htmlentities(strtr($name, array('.'=>'=2E', '='=>'=3D',// ' '=>'=20','['=>'=5B'
+			)))
 			."' value='$value'"
 			.($title ? " title='$title'":'')
 			. ($aspect ? " aspect='$aspect'" : '')
@@ -370,7 +372,18 @@ function check_row($label, $name, $value=null, $submit_on_change=false, $title=f
 }
 
 //-----------------------------------------------------------------------------------
+function radio($label, $name, $value, $selected, $submit_on_change=false) {
 
+	if ($submit_on_change === true)
+		$submit_on_change = 
+			"JsHttpRequest.request(\"_{$name}_update\", this.form);";
+
+	return "<input type='radio' name=$name value='$value' ".($selected ? "checked":'')
+	    .($submit_on_change ? " onclick='$submit_on_change'" : '')
+		.">".($label ? $label : '');
+}
+
+//-----------------------------------------------------------------------------------
 function labelheader_cell($label, $params="")
 {
 	echo "<td class='tableheader' $params>$label</td>\n";
@@ -886,4 +899,29 @@ function inactive_control_column(&$th) {
 		$Ajax->activate('_page_body');
 	}
 }
+
+function customer_credit_row($customer, $credit, $parms='')
+{
+	global $path_to_root;
+	
+	label_row( _("Current Credit:"),
+		"<a target='_blank' " . ($credit<0 ? 'class="redfg"' : '')
+		."href='$path_to_root/sales/inquiry/customer_inquiry.php?customer_id=".$customer."'"
+		." onclick=\"javascript:openWindow(this.href,this.target); return false;\" >"
+		. price_format($credit)
+		."</a>", $parms);
+}
+
+function supplier_credit_row($supplier, $credit, $parms='')
+{
+	global $path_to_root;
+	
+	label_row( _("Current Credit:"),
+		"<a target='_blank' " . ($credit<0 ? 'class="redfg"' : '')
+		."href='$path_to_root/purchasing/inquiry/supplier_inquiry.php?supplier_id=".$supplier."'"
+		." onclick=\"javascript:openWindow(this.href,this.target); return false;\" >"
+		. price_format($credit)
+		."</a>", $parms);
+}
+
 ?>

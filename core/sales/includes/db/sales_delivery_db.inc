@@ -42,8 +42,9 @@ function write_sales_delivery(&$delivery,$bo_policy)
 		$delivery->tax_included ? 0 : $tax_total-$freight_tax,
 		$delivery->freight_cost,
 		$delivery->tax_included ? 0 : $freight_tax,
-		$delivery->sales_type, $delivery->order_no, 0,
-		$delivery->ship_via, $delivery->due_date, 0, 0, $delivery->dimension_id, $delivery->dimension2_id);
+		$delivery->sales_type, $delivery->order_no,
+		$delivery->ship_via, $delivery->due_date, 0, 0, $delivery->dimension_id, 
+		$delivery->dimension2_id, $delivery->payment);
 
 	if ($trans_no == 0) {
 		$delivery->trans_no = array($delivery_no=>0);
@@ -71,7 +72,7 @@ function write_sales_delivery(&$delivery,$bo_policy)
 		write_customer_trans_detail_item(ST_CUSTDELIVERY, $delivery_no, $delivery_line->stock_id,
 			$delivery_line->item_description, $delivery_line->qty_dispatched,
 			$delivery_line->line_price(), $line_tax,
-			$delivery_line->discount_percent, $delivery_line->standard_cost,
+			$delivery_line->discount_percent, $delivery_line->standard_cost, $delivery_line->src_id,
 			$trans_no ? $delivery_line->id : 0);
 
 	// Now update sales_order_details for the quantity delivered
@@ -146,9 +147,10 @@ function write_sales_delivery(&$delivery,$bo_policy)
 
 //--------------------------------------------------------------------------------------------------
 
-function void_sales_delivery($type, $type_no)
+function void_sales_delivery($type, $type_no, $transactions=true)
 {
-	begin_transaction();
+	if ($transactions)
+		begin_transaction();
 
 	void_gl_trans($type, $type_no, true);
 
@@ -158,10 +160,11 @@ function void_sales_delivery($type, $type_no)
 	$order = get_customer_trans_order($type, $type_no);
 
 	if ($order) {
+		$auto = (get_reference(ST_SALESORDER, $order) == "auto");
 		$order_items = get_sales_order_details($order, ST_SALESORDER);
 		while ($row = db_fetch($items_result)) {
 			$order_line = db_fetch($order_items);
-			update_parent_line(ST_CUSTDELIVERY, $order_line['id'], -$row['quantity']);
+			update_parent_line(ST_CUSTDELIVERY, $order_line['id'], -$row['quantity'], $auto);
 		}
 	}
 
@@ -176,6 +179,7 @@ function void_sales_delivery($type, $type_no)
 	// DO NOT MOVE THIS ABOVE VOIDING or we can end up with trans with alloc < 0
 	void_customer_trans($type, $type_no);
 
-	commit_transaction();
+	if ($transactions)
+		commit_transaction();
 }
 ?>

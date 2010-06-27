@@ -11,6 +11,7 @@
 ***********************************************************************/
 include_once($path_to_root . "/reporting/includes/Workbook.php");
 include_once($path_to_root . "/admin/db/company_db.inc");
+include_once($path_to_root . "/admin/db/fiscalyears_db.inc");
 include_once($path_to_root . "/config.php");
 // xls version
 class FrontReport extends Spreadsheet_Excel_Writer_Workbook
@@ -57,7 +58,7 @@ class FrontReport extends Spreadsheet_Excel_Writer_Workbook
 
 	function FrontReport($title, $filename, $size = 'A4', $fontsize = 9, $orientation = 'P', $margins = NULL, $excelColWidthFactor = 6.5)
 	{
-		global $comp_path, $dateseps, $page_security;
+		global $dateseps, $page_security;
 		if (!$_SESSION["wa_current_user"]->can_access_page($page_security))
 		{
 			display_error(_("The security settings on your account do not permit you to print this report"));
@@ -77,7 +78,7 @@ class FrontReport extends Spreadsheet_Excel_Writer_Workbook
 		$this->code = strtolower($_SESSION['language']->encoding);
 		$this->filename = $filename.".xls";
 		$this->unique_name = uniqid('').".xls";
-		$this->path = $comp_path.'/'.user_company(). '/pdf_files';
+		$this->path = company_path(). '/pdf_files';
 		$this->Spreadsheet_Excel_Writer_Workbook($this->path."/".$this->unique_name);
 		//$this->setCountry(48);
 		if ($this->code != "iso-8859-1")
@@ -630,7 +631,12 @@ class FrontReport extends Spreadsheet_Excel_Writer_Workbook
 	{
 		$this->y += $l;
 	}
-
+	
+	function NewPage()
+	{
+		return;
+	}
+	
   	function ymd2Date($year, $mon, $day) // XLS internal date representation is a number between 1900-01-01 and 2078-12-31
   	{										// if we need the time part too, we have to add this value after a decimalpoint.
       	$mo = array(0,31,28,31,30,31,30,31,31,30,31,30,31);

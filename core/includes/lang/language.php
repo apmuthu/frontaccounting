@@ -26,8 +26,10 @@ class language
 	
 	function language($name, $code, $encoding, $dir = 'ltr') 
 	{
+		global $dflt_lang;
+		
 		$this->name = $name;
-		$this->code = $code ? $code : 'en_GB';
+		$this->code = $code ? $code : ($dflt_lang ? $dflt_lang : 'en_GB');
 		$this->encoding = $encoding;
 		$this->dir = $dir;
 	}
@@ -45,7 +47,7 @@ class language
 
 	function set_language($code) 
 	{
-	    global $comp_path, $path_to_root, $installed_languages;
+	    global $path_to_root, $installed_languages;
 
 		$changed = $this->code != $code;
 		$lang = array_search_value($code, $installed_languages, 'code');
@@ -53,7 +55,7 @@ class language
 		if ($lang && $changed)
 		{
 		// flush cache as we can use several languages in one account
-			flush_dir($comp_path.'/'.user_company().'/js_cache');
+			flush_dir(company_path().'/js_cache');
 
 			$this->name = $lang['name'];
 			$this->code = $lang['code'];

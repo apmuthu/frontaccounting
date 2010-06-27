@@ -189,13 +189,13 @@ function delete_work_order($woid)
 
 function get_work_order($woid, $allow_null=false)
 {
-    $sql = "SELECT ".TB_PREF."workorders.*, ".TB_PREF."stock_master.description As StockItemName,
-		".TB_PREF."locations.location_name, ".TB_PREF."locations.delivery_address 
-		FROM ".TB_PREF."workorders, ".TB_PREF."stock_master, ".TB_PREF."locations
-		WHERE ".TB_PREF."stock_master.stock_id=".TB_PREF."workorders.stock_id
-		AND	".TB_PREF."locations.loc_code=".TB_PREF."workorders.loc_code
-		AND ".TB_PREF."workorders.id=".db_escape($woid)."
-		GROUP BY ".TB_PREF."workorders.id";
+    $sql = "SELECT wo.*,st.description As StockItemName,l.location_name,
+    		l.delivery_address,l.email, l.contact
+		FROM ".TB_PREF."workorders wo, ".TB_PREF."stock_master st, ".TB_PREF."locations l
+		WHERE st.stock_id=wo.stock_id
+		AND	l.loc_code=wo.loc_code
+		AND wo.id=".db_escape($woid)."
+		GROUP BY wo.id";
 
 	$result = db_query($sql, "The work order issues could not be retrieved");
 
@@ -381,6 +381,78 @@ function void_work_order($woid)
 	commit_transaction();
 }
 
+function get_sql_for_work_orders($outstanding_only, $all_items)
+{
+	$sql = "SELECT
+		workorder.id,
+		workorder.wo_ref,
+		workorder.type,
+		location.location_name,
+		item.description,
+		workorder.units_reqd,
+		workorder.units_issued,
+		workorder.date_,
+		workorder.required_by,
+		workorder.released_date,
+		workorder.closed,
+		workorder.released,
+		workorder.stock_id,
+		unit.decimals
+		FROM ".TB_PREF."workorders as workorder,"
+			.TB_PREF."stock_master as item,"
+			.TB_PREF."item_units as unit,"
+			.TB_PREF."locations as location
+		WHERE workorder.stock_id=item.stock_id 
+			AND workorder.loc_code=location.loc_code
+			AND item.units=unit.abbr";
+
+	if (check_value('OpenOnly') || $outstanding_only != 0)
+	{
+		$sql .= " AND workorder.closed=0";
+	}
+
+	if (isset($_POST['StockLocation']) && $_POST['StockLocation'] != $all_items)
+	{
+		$sql .= " AND workorder.loc_code=".db_escape($_POST['StockLocation']);
+	}
+
+	if (isset($_POST['OrderNumber']) && $_POST['OrderNumber'] != "")
+	{
+		$sql .= " AND workorder.wo_ref LIKE ".db_escape('%'.$_POST['OrderNumber'].'%');
+	}
+
+	if (isset($_POST['SelectedStockItem']) && $_POST['SelectedStockItem'] != $all_items)
+	{
+		$sql .= " AND workorder.stock_id=".db_escape($_POST['SelectedStockItem']);
+	}
+
+	if (check_value('OverdueOnly'))
+	{
+		$Today = date2sql(Today());
+
+		$sql .= " AND workorder.required_by < '$Today' ";
+	}
+	return $sql;
+}
+
+function get_sql_for_where_used()
+{
+	$sql = "SELECT 
+			bom.parent,
+			workcentre.name As WorkCentreName,
+			location.location_name,
+			bom.quantity,
+			parent.description
+			FROM ".TB_PREF."bom as bom, "
+				.TB_PREF."stock_master as parent, "
+				.TB_PREF."workcentres as workcentre, "
+				.TB_PREF."locations as location
+			WHERE bom.parent = parent.stock_id 
+				AND bom.workcentre_added = workcentre.id
+				AND bom.loc_code = location.loc_code
+				AND bom.component=".db_escape($_POST['stock_id']);
+	return $sql;			
+}
 //--------------------------------------------------------------------------------------
 function get_gl_wo_cost($woid, $cost_type)
 {

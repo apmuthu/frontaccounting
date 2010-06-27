@@ -15,18 +15,20 @@
 class purch_order 
 {
 
-	var $supplier_id;
-	
-	var $line_items; /*array of objects of class line_details using the product id as the pointer */
+	var $trans_type; // order/grn/invoice (direct)
+	var $line_items;
 	var $curr_code;
-	var $requisition_no;
+	var $supp_ref;
 	var $delivery_address;
 	var $Comments;
 	var $Location;
+	var $supplier_id;
 	var $supplier_name;
 	var $orig_order_date;
 	var $order_no; /*Only used for modification of existing orders otherwise only established when order committed */
-	var $lines_on_order;
+	var $lines_on_order = 0;
+	var $credit;
+	var $tax_group_id;
 	
 	var $reference;
 	
@@ -41,39 +43,32 @@ class purch_order
 	{
 		if ($qty != 0 && isset($qty))
 		{
-			$this->line_items[$line_no] = new line_details($line_no, $stock_id, $item_descr, $qty, $price, $uom, $req_del_date, $qty_inv, $qty_recd);
+			$this->line_items[$line_no] = new po_line_details($line_no, $stock_id, $item_descr, $qty, $price, $uom, 
+				$req_del_date, $qty_inv, $qty_recd);
 			$this->lines_on_order++;
-			Return 1;
+			return 1;
 		}
-		Return 0;
+		return 0;
 	}
 
-	function update_order_item($line_no, $qty, $price, $req_del_date)
+	function update_order_item($line_no, $qty, $price, $req_del_date, $description="")
 	{
+		if ($description != "")
+			$this->line_items[$line_no]->item_description = $description;
 		$this->line_items[$line_no]->quantity = $qty;
 		$this->line_items[$line_no]->price = $price;
 		$this->line_items[$line_no]->req_del_date = $req_del_date;
-		$this->line_items[$line_no]->price = $price;
+		$this->line_items[$line_no]->item_description = $description;
 	}
 
 	function remove_from_order($line_no)
 	{
-		 $this->line_items[$line_no]->Deleted = true;
+		array_splice($this->line_items, $line_no, 1);
 	}
 	
 	function order_has_items() 
 	{
-		if (count($this->line_items) > 0)
-		{
-		   	foreach ($this->line_items as $ordered_items) 
-		   	{
-				if ($ordered_items->Deleted == false)
-				{
-					return true;
-				}
-		   	}
-		}
-		return false;		
+		return count($this->line_items) != 0;
 	}
 	
 	function clear_items() 
@@ -115,41 +110,77 @@ class purch_order
 		}
 		return 0;
 	}
+	/*
+		Returns order value including all taxes
+	*/
+	function get_trans_total() {
+		
+		$total = 0;
+		$dec = user_price_dec();
+
+		foreach ($this->line_items as $ln_itm) {
+			$items[] = $ln_itm->stock_id;
+			$value = round($ln_itm->quantity * $ln_itm->price, $dec);
+			$prices[] =$value;
+			$total += $value;
+		}
+
+		$taxes = get_tax_for_items($items, $prices, 0, $this->tax_group_id);
+
+		foreach($taxes as $tax)
+			$total += round($tax['Value'], $dec);
+
+		return $total;
+	}
+
 } /* end of class defintion */
 
-class line_details 
+class po_line_details 
 {
 
-	Var $line_no;
-	Var $po_detail_rec;
-	Var $stock_id;
-	Var $item_description;
-	Var $quantity;
-	Var $price;
-	Var $units;
-	Var $req_del_date;
-	Var $qty_inv;
-	Var $qty_received;
-	Var $standard_cost;
-	Var $receive_qty;
-	Var $Deleted;	
-	
-	function line_details($line_no, $stock_item, $item_descr, $qty, $prc, $uom, $req_del_date, $qty_inv, $qty_recd)
+	var $line_no;
+	var $po_detail_rec;
+	var $grn_item_id;
+	var $stock_id;
+	var $item_description;
+	var $price;
+	var $units;
+	var $req_del_date;
+
+	var $quantity;		// current/entry quantity of PO line
+	var $qty_inv;	// quantity already invoiced against this line
+	var $receive_qty;	// current/entry GRN quantity
+	var $qty_received;	// quantity already received against this line
+
+	var $standard_cost;
+	var $descr_editable;
+
+	function po_line_details($line_no, $stock_item, $item_descr, $qty, $prc, $uom, $req_del_date, 
+		$qty_inv, $qty_recd, $grn_item_id=0)
 	{
 
 		/* Constructor function to add a new LineDetail object with passed params */
 		$this->line_no = $line_no;
 		$this->stock_id = $stock_item;
-		$this->item_description = $item_descr;
+		$item_row = get_item($stock_item);
+		if (!$item_row) 
+			return;
+
+		$this->descr_editable = $item_row["editable"];
+		if ($item_descr == null || !$this->descr_editable)
+			$this->item_description = $item_row["description"];
+		else
+			$this->item_description = $item_descr;
 		$this->quantity = $qty;
 		$this->req_del_date = $req_del_date;
 		$this->price = $prc;
-		$this->units = $uom;
+//		$this->units = $uom;
+		$this->units = $item_row["units"];
 		$this->qty_received = $qty_recd;
 		$this->qty_inv = $qty_inv;
 		$this->receive_qty = 0;	/*initialise these last two only */
 		$this->standard_cost =0;
-		$this->Deleted = false;
+		$this->grn_item_id = $grn_item_id;
 	}
 }
 

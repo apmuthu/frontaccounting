@@ -12,7 +12,10 @@
 
 function set_global_connection()
 {
-	global $db;
+	global $db, $transaction_level;
+
+	cancel_transaction(); // cancel all aborted transactions if any
+	$transaction_level = 0;
 
    	$db = $_SESSION["wa_current_user"]->get_db_connection();
 }
@@ -23,16 +26,13 @@ $db_duplicate_error_code = 1062;
 
 function db_query($sql, $err_msg=null)
 {
-	global $db, $show_sql, $sql_trail, $select_trail, $go_debug;
+	global $db, $show_sql, $sql_trail, $select_trail, $go_debug, $sql_queries, $Ajax;
 	
 	if ($show_sql)
 	{
-		echo "<font face=arial size=2 color=000099><b>SQL..</b></font>";
-		echo "<pre>";
-		echo $sql;
-		echo "</pre>\n";
+		$Ajax->activate('footer_debug');
+		$sql_queries .= "<pre>$sql</pre>\n<hr>";
 	}
-	
 
 	$result = mysql_query($sql, $db);
 	if($sql_trail) {

@@ -36,7 +36,7 @@ display_grn_summary($purchase_order);
 
 display_heading2(_("Line Details"));
 
-start_table("colspan=9 $table_style width=90%");
+start_table(TABLESTYLE, "colspan=9 width=90%");
 $th = array(_("Item Code"), _("Item Description"), _("Delivery Date"), _("Quantity"),
 	_("Unit"), _("Price"), _("Line Total"), _("Quantity Invoiced"));
 
@@ -74,6 +74,6 @@ end_table(1);
 
 is_voided_display(ST_SUPPRECEIVE, $_GET['trans_no'], _("This delivery has been voided."));
 
-end_page(true);
+end_page(true, false, false, ST_SUPPRECEIVE, $_GET['trans_no']);
 
 ?>

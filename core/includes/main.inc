@@ -15,7 +15,6 @@ include_once($path_to_root . "/includes/errors.inc");
 include_once($path_to_root . "/includes/types.inc");
 include_once($path_to_root . "/includes/systypes.inc");
 include_once($path_to_root . "/includes/references.inc");
-include_once($path_to_root . "/includes/prefs/sysprefs.inc");
 include_once($path_to_root . "/includes/db/comments_db.inc");
 include_once($path_to_root . "/includes/db/sql_functions.inc");
 include_once($path_to_root . "/includes/db/audit_trail_db.inc");
@@ -48,12 +47,12 @@ function page($title, $no_menu=false, $is_index=false, $onload="", $js="", $scri
 	}
 }
 
-function end_page($no_menu=false, $is_index=false, $hide_back_link=false)
+function end_page($no_menu=false, $is_index=false, $hide_back_link=false, $type_no=0, $trans_no=0)
 {
 	global $path_to_root;
 
 	if (!$is_index && !$hide_back_link && function_exists('hyperlink_back'))
-		hyperlink_back(true, $no_menu);
+		hyperlink_back(true, $no_menu, $type_no, $trans_no);
 	div_end();	// end of _page_body section
 
 	include($path_to_root . "/includes/page/footer.inc");
@@ -262,5 +261,112 @@ function js_compress($sJS)
 	}
 	return $sJS;
 }
+
+/*
+	Check if file can be updated, restoring subdirectories 
+	if needed. Returns 1 when no confilcts, -1 when file exists and is writable
+*/
+function check_write($path)
+{
+	if ($path == ''//|| $path == '.' || $path == '..'
+	) return 0;
+	
+	return is_writable($path) ? (is_dir($path) ? 1 : -1) 
+		: ($path =='.' ? 0 : check_write(dirname($path)));
+}
+
+/*
+	Copies set of files. When $strict is set
+	also removes files from the $to which 
+	does not exists in $from directory but arelisted in $flist.
+*/
+function copy_files($flist, $from, $to, $strict=false)
+{
+	foreach ($flist as $file) {
+		if (file_exists($from.'/'.$file))
+			if (!copy_file($file, $from, $to))
+				return false;
+		if ($strict && !is_file($from.'/'.$file)) // if 
+				unlink($to.'/'.$file);
+	}
+	return true;
+}
+
+/*
+	Copies file from base to target directory, restoring subdirectories 
+	if needed.
+*/
+function copy_file($file, $from, $to)
+{
+
+	if (!is_dir(dirname($file=='.' ? $to : ($to.'/'.$file)))) {
+		if (!copy_file(dirname($file), null, $to))
+			return false;
+	}
+	if (!$from) {
+	//		error_log( 'dodanie katalogu '.$to.'/'.$file);
+		return @mkdir($file=='.' ? $to : ($to.'/'.$file));
+	}
+	else {
+	//		error_log( 'skopiowanie '.$to.'/'.$file);
+		return @copy($from.'/'.$file, $to.'/'.$file);
+	}
+}
+/*
+	Returns current path to company private folder.
+	(Current path can change after chdir).
+*/
+function company_path($comp=null)
+{
+	global $path_to_root, $comp_path;
+
+	if (!isset($comp))
+		$comp = user_company();
+
+	// if path is relative, set current path_to_root
+	return ($comp_path[0]=='.' ? $path_to_root.'/'.basename($comp_path) : $comp_path)
+			. '/'.$comp;
+}
+/*
+	Search for file, looking first for company specific version, then for 
+	version provided by any extension module, finally in main FA directory.
+	Also adds include path for any related files.
+	
+	Returns found file path or null.
+*/
+function find_custom_file($rep)
+{
+	global $installed_extensions, $comp_path, $path_to_root;
+
+	// customized per company version
+	$path = company_path();
+	$file = $path.'/'.$rep;
+	if (file_exists($file)) {
+		// add local include path
+		set_include_path($path.PATH_SEPARATOR.get_include_path());
+		return $file;
+	}
+	// file added by active extension modules
+	if (count($installed_extensions) > 0)
+	{
+		$extensions = $installed_extensions;
+		foreach ($extensions as $ext)
+			if (($ext['active'] && $ext['type'] == 'extension')) {
+				$path = $path_to_root.'/'.$ext['path'];
+				$file = $path.$rep;
+				if (file_exists($file)) {
+					set_include_path($path.PATH_SEPARATOR.get_include_path());
+					return $file;
+				}
+			}
+	}
+	// standard location
+	$file = $path_to_root.$rep;
+	if (file_exists($file))
+		return $file;
+
+	return null;
+}
+
 
 ?>

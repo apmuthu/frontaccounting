@@ -17,7 +17,7 @@ include_once($path_to_root . "/taxes/tax_calc.inc");
 class supp_trans 
 {
 
-	var $grn_items; /*array of objects of class GRNDetails using the GRN No as the pointer */
+	var $grn_items; /*array of objects of class grn_item using the id as the pointer */
 	var $gl_codes; /*array of objects of class gl_codes using a counter as the pointer */
 	var $supplier_id;
 	var $supplier_name;
@@ -27,7 +27,7 @@ class supp_trans
 	var $tax_description;
 	var $tax_group_id;
 	
-	var $is_invoice;
+	var $trans_type;	// invoice or credit
 
 	var $Comments;
 	var $tran_date;
@@ -40,8 +40,9 @@ class supp_trans
 	var $ov_gst;
 	var $gl_codes_counter=0;
 
-	function supp_trans()
+	function supp_trans($trans_type)
 	{
+		$this->trans_type = $trans_type;
 		/*Constructor function initialises a new Supplier Transaction object */
 		$this->grn_items = array();
 		$this->gl_codes = array();
@@ -49,11 +50,11 @@ class supp_trans
 
 	function add_grn_to_trans($grn_item_id, $po_detail_item, $item_code, $item_description, 
 		$qty_recd, $prev_quantity_inv, $this_quantity_inv, $order_price, $chg_price, 
-		$Complete, $std_cost_unit, $gl_code)
+		$std_cost_unit, $gl_code)
 	{
 		$this->grn_items[$grn_item_id] = new grn_item($grn_item_id, $po_detail_item, 
 			$item_code, $item_description, $qty_recd, $prev_quantity_inv, $this_quantity_inv, 
-			$order_price, $chg_price, $Complete, $std_cost_unit, $gl_code);
+			$order_price, $chg_price, $std_cost_unit, $gl_code);
 		return 1;
 	}
 
@@ -65,11 +66,11 @@ class supp_trans
 		return 1;
 	}
 
-	function remove_grn_from_trans(&$grn_item_id)
+	function remove_grn_from_trans($grn_item_id)
 	{
 	    unset($this->grn_items[$grn_item_id]);
 	}
-	function remove_gl_codes_from_trans(&$gl_code_counter)
+	function remove_gl_codes_from_trans($gl_code_counter)
 	{
 	     unset($this->gl_codes[$gl_code_counter]);
 	}
@@ -87,7 +88,7 @@ class supp_trans
 		$this->ov_amount = $this->ov_discount = $this->supplier_id = 0;
 		
 		$this->grn_items = array();
-		$this->gl_codes = array();		
+		$this->gl_codes = array();
 	}
 	
     function get_taxes($tax_group_id=null, $shipping_cost=0, $gl_codes=true)
@@ -169,12 +170,11 @@ all the info to do the necessary entries without looking up ie additional querie
 	var $this_quantity_inv;
 	var $order_price;
 	var $chg_price;
-	var $Complete;
 	var $std_cost_unit;
 	var $gl_code;
 
 	function grn_item ($id, $po_detail_item, $item_code, $item_description, $qty_recd, 
-		$prev_quantity_inv, $this_quantity_inv, $order_price, $chg_price, $Complete, 
+		$prev_quantity_inv, $this_quantity_inv, $order_price, $chg_price,
 		$std_cost_unit, $gl_code)
 	{
 
@@ -187,7 +187,6 @@ all the info to do the necessary entries without looking up ie additional querie
 		$this->this_quantity_inv = $this_quantity_inv;
 		$this->order_price =$order_price;
 		$this->chg_price = $chg_price;
-		$this->Complete = $Complete;
 		$this->std_cost_unit = $std_cost_unit;
 		$this->gl_code = $gl_code;
 	}

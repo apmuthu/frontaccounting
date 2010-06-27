@@ -320,10 +320,10 @@ if (isset($_POST['Update']) || isset($_POST['_Location_update'])) {
 start_form();
 hidden('cart_id');
 
-start_table("$table_style2 width=80%", 5);
+start_table(TABLESTYLE2, "width=80%", 5);
 echo "<tr><td>"; // outer table
 
-start_table("$table_style width=100%");
+start_table(TABLESTYLE, "width=100%");
 start_row();
 label_cells(_("Customer"), $_SESSION['Items']->customer_name, "class='tableheader2'");
 label_cells(_("Branch"), get_branch_name($_SESSION['Items']->Branch), "class='tableheader2'");
@@ -372,11 +372,12 @@ end_table();
 
 echo "</td><td>";// outer table
 
-start_table("$table_style width=90%");
+start_table(TABLESTYLE, "width=90%");
 
 if (!isset($_POST['due_date']) || !is_date($_POST['due_date'])) {
-	$_POST['due_date'] = get_invoice_duedate($_SESSION['Items']->customer_id, $_POST['DispatchDate']);
+	$_POST['due_date'] = get_invoice_duedate($_SESSION['Items']->payment, $_POST['DispatchDate']);
 }
+customer_credit_row($_SESSION['Items']->customer_id, $_SESSION['Items']->credit, "class='tableheader2'");
 start_row();
 date_cells(_("Invoice Dead-line"), 'due_date', '', null, 0, 0, 0, "class='tableheader2'");
 end_row();
@@ -395,7 +396,7 @@ if ($row['dissallow_invoices'] == 1)
 }	
 display_heading(_("Delivery Items"));
 div_start('Items');
-start_table("$table_style width=80%");
+start_table(TABLESTYLE, "width=80%");
 
 $new = $_SESSION['Items']->trans_no==0;
 $th = array(_("Item Code"), _("Item Description"), 
@@ -430,7 +431,11 @@ foreach ($_SESSION['Items']->line_items as $line=>$ln_itm) {
 	}
 	view_stock_status_cell($ln_itm->stock_id);
 
-	text_cells(null, 'Line'.$line.'Desc', $ln_itm->item_description, 30, 50);
+	if ($ln_itm->descr_editable)
+		text_cells(null, 'Line'.$line.'Desc', $ln_itm->item_description, 30, 50);
+	else
+		label_cell($ln_itm->item_description);
+
 	$dec = get_qty_dec($ln_itm->stock_id);
 	qty_cell($ln_itm->quantity, false, $dec);
 	label_cell($ln_itm->units);
@@ -478,7 +483,7 @@ end_table(1);
 if ($has_marked) {
 	display_note(_("Marked items have insufficient quantities in stock as on day of delivery."), 0, 1, "class='red'");
 }
-start_table($table_style2);
+start_table(TABLESTYLE2);
 
 policy_list_row(_("Action For Balance"), "bo_policy", null);
 
