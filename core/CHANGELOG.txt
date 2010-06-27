@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.437 2010/06/11 12:33:08 frontaccounting Exp $
+* @version $Id: CHANGELOG.txt,v 1.443 2010/06/28 09:54:10 frontaccounting Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -18,6 +18,39 @@ Legend:
 - -> Removed
 ! -> Note
 $ -> Affected files
+
+------------------------------- Release 2.2.11 ----------------------------------
+! Release 2.2.11
+$ config.default.php
+  update.html
+
+22-Jun-2010 Joe Hunt
+# Minor select bug in create recurrent invoices
+$ /sales/create_recurrent_invoices.php
+
+18-Jun-2010 Joe Hunt
+- Removed constraint on day values in Payment Terms
+$ /admin/payment_terms.php
+
+18-Jun-2010 Janusz Dobrowolski
+# Small bug on final credit note screen redirection
+$ /sales/customer_credit_invoice.php
+
+17-Jun-2010 Janusz Dobrowolski
+# [0000235],[0000236] db error in sales order view window.
+$ /sales/view/view_sales_order.php
+
+14-Jun-2010 Tom Moulton/Joe Hunt
+# Bug [0000231] Wrong On Order for Advanced Manufacturing.before final production.
+$ /includes/db/manufacturing_db.inc
+! Allow optional non zero values in reports 101,102,201,202,203 and 303.
+$ /reporting/rep101.php
+  /reporting/rep102.php
+  /reporting/rep201.php
+  /reporting/rep202.php
+  /reporting/rep203.php
+  /reporting/rep303.php
+  /reporting/reports_main.php
 
 ------------------------------- Release 2.2.10 ----------------------------------
 11-Jun-2010 Joe Hunt

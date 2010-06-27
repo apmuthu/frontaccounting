@@ -56,7 +56,7 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 	// Main Title
 	$app_title = "FrontAccounting";
 	// application version
-	$version 		= "2.2.10";
+	$version 		= "2.2.11";
 
 	// Build for development purposes
 	$build_version 	= date("d.m.Y", filemtime("$path_to_root/CHANGELOG.txt"));
@@ -120,11 +120,11 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 	$pagesizes 		= array("Letter", "A4"); // default PDF pagesize
 
 	/* Default border and spacing for tables */
-	/* Should be moved to CSS */
-
-	$table_style 	= "class='tablestyle'";
-	$table_style2 	= "class='tablestyle2'";
-
+   	/* Should be moved to CSS */
+ 
+    $table_style    = "class='tablestyle'";
+    $table_style2   = "class='tablestyle2'";
+ 
 	/* Accounts Payable */
 	/* System check to see if quantity charged on purchase invoices exceeds the quantity received.
 	If this parameter is checked the proportion by which the purchase invoice is an overcharge
