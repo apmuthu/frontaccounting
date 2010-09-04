@@ -142,8 +142,8 @@ class cart
 			$this->src_docs = array( $sodata['order_no']=>$sodata['version']);
 		} else {	// get src_data from debtor_trans
 			$srcnum = array();
-			foreach($srcdetails as $line) {
-				$srcnum = $line['debtor_trans_no'];
+			while ($line = db_fetch($srcdetails)) {
+				$srcnum[] = $line['debtor_trans_no'];
 			}
 			$this->src_docs = get_customer_trans_version($src_type, array_values($srcnum));
 		}
@@ -465,7 +465,8 @@ class cart
 
 		foreach ($this->line_items as $ln_itm) {
 			$items[] = $ln_itm->stock_id;
-			$prices[] = round(($ln_itm->qty_dispatched *
+			$prices[] = round(((
+				$this->trans_type==ST_SALESORDER ? 	$ln_itm->quantity : $ln_itm->qty_dispatched) *
 				$ln_itm->line_price()* (1 - $ln_itm->discount_percent)),  user_price_dec());
 		}
 

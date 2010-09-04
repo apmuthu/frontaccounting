@@ -187,14 +187,29 @@ function round2($number, $decimals=0)
 	return round($number+$delta, $decimals);
 }
 
+/*
+	Returns number formatted according to user setup and using $decimals digits after dot 
+	(defualt is 0). When $decimals is set to 'max' maximum available precision is used 
+	(decimals depend on value) and trailing zeros are trimmed.
+*/
 function number_format2($number, $decimals=0)
 {
 	global $thoseps, $decseps;
 	$tsep = $thoseps[$_SESSION["wa_current_user"]->prefs->tho_sep()];
 	$dsep = $decseps[$_SESSION["wa_current_user"]->prefs->dec_sep()];
 	//return number_format($number, $decimals, $dsep,	$tsep);
-	$delta = ($number < 0 ? -.0000000001 : .0000000001);
-	return number_format($number+$delta, $decimals, $dsep,	$tsep);
+	if($decimals==='max')
+		$dec = 15 - floor(log10(abs($number)));
+	else {
+		$delta = ($number < 0 ? -.0000000001 : .0000000001);
+		$number += $delta;
+		$dec = $decimals;
+	}
+
+	$num = number_format($number, $dec, $dsep, $tsep);
+
+	return $decimals==='max' ? rtrim($num, '0') : $num;
+
 }
 //
 //	Current ui mode.
@@ -236,6 +251,7 @@ function qty_format($number, $stock_id=null, &$dec) {
 	$dec = get_qty_dec($stock_id);
     return number_format2($number, $dec);
 }
+
 // and get_qty_dec
 function get_qty_dec($stock_id=null)
 {
@@ -248,6 +264,13 @@ function get_qty_dec($stock_id=null)
 	return $dec;
 }
 //-------------------------------------------------------------------
+//
+//	Maximum precision format. Strips trailing unsignificant digits.
+//
+function maxprec_format($number) {
+    return number_format2($number, 'max');
+}
+
 function exrate_format($number) {
     return number_format2($number,
 	$_SESSION["wa_current_user"]->prefs->exrate_dec());
@@ -281,7 +304,9 @@ function user_numeric($input) {
 
 function user_company()
 {
-	return $_SESSION["wa_current_user"]->company;
+	global $def_coy;
+	
+	return isset($_SESSION["wa_current_user"]) ? $_SESSION["wa_current_user"]->company : $def_coy;
 }
 
 function user_pos()
@@ -351,7 +376,8 @@ function user_dec_sep()
 
 function user_theme()
 {
-	return $_SESSION["wa_current_user"]->prefs->get_theme();
+	return isset($_SESSION["wa_current_user"]) ?
+		$_SESSION["wa_current_user"]->prefs->get_theme() : 'default';
 }
 
 function user_pagesize()
@@ -467,7 +493,7 @@ function array_append(&$array, $elements)
 function array_search_value($needle, $haystack, $valuekey=null)
 {
 	foreach($haystack as $key => $value) {
-		$val = isset($valuekey) ? $value[$valuekey] : $value;
+		$val = isset($valuekey) ? @$value[$valuekey] : $value;
 		if ($needle == $val){
 			return $value;
 		}
@@ -483,7 +509,7 @@ function array_search_keys($needle, $haystack, $valuekey=null)
 	$keys = array();
 	if($haystack)
 		foreach($haystack as $key => $value) {
-			$val = isset($valuekey) ? $value[$valuekey] : $value;
+			$val = isset($valuekey) ? @$value[$valuekey] : $value;
 			if ($needle == $val){
 				$keys[] = $key;
 			}
@@ -499,4 +525,33 @@ function array_search_key($needle, $haystack, $valuekey=null)
 	$keys = array_search_keys($needle, $haystack, $valuekey);
 	return @$keys[0];
 }
+
+function flush_dir($path, $wipe = false) 
+{
+	$dir = opendir($path);
+	while(false !== ($fname = readdir($dir))) {
+		if($fname=='.' || $fname=='..' || $fname=='CVS' || (!$wipe && $fname=='index.php')) continue;
+  		if(is_dir($path.'/'.$fname)) {
+		    flush_dir($path.'/'.$fname, $wipe);
+		    if ($wipe) @rmdir($path.'/'.$fname);
+		} else
+		    @unlink($path.'/'.$fname);
+	}
+}
+/*
+	Returns current path to company private folder.
+	(Current path can change after chdir).
+*/
+function company_path($comp=null)
+{
+	global $path_to_root, $comp_path;
+
+	if (!isset($comp))
+		$comp = user_company();
+
+	// if path is relative, set current path_to_root
+	return ($comp_path[0]=='.' ? $path_to_root.'/'.basename($comp_path) : $comp_path)
+			. '/'.$comp;
+}
+
 ?>

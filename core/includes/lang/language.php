@@ -12,7 +12,7 @@
 // Prevent register_globals vulnerability
 if (isset($_GET['path_to_root']) || isset($_POST['path_to_root']))
 	die("Restricted access");
-include_once($path_to_root . "/lang/installed_languages.inc");
+@include_once($path_to_root . "/lang/installed_languages.inc");
 include_once($path_to_root . "/includes/lang/gettext.php");
 
 class language 
@@ -22,6 +22,7 @@ class language
 	var $encoding;		// eg. UTF-8, CP1256, ISO8859-1
 	var	$dir;			// Currently support for Left-to-Right (ltr) and
 						// Right-To-Left (rtl)
+	var $version; // lang package version
 	var $is_locale_file;
 	
 	function language($name, $code, $encoding, $dir = 'ltr') 
@@ -29,7 +30,7 @@ class language
 		global $dflt_lang;
 		
 		$this->name = $name;
-		$this->code = $code ? $code : ($dflt_lang ? $dflt_lang : 'en_GB');
+		$this->code = $code ? $code : ($dflt_lang ? $dflt_lang : 'C');
 		$this->encoding = $encoding;
 		$this->dir = $dir;
 	}
@@ -49,8 +50,8 @@ class language
 	{
 	    global $path_to_root, $installed_languages;
 
-		$changed = $this->code != $code;
 		$lang = array_search_value($code, $installed_languages, 'code');
+		$changed = $this->code != $code || $this->version != @$lang['version'];
 
 		if ($lang && $changed)
 		{
@@ -60,13 +61,14 @@ class language
 			$this->name = $lang['name'];
 			$this->code = $lang['code'];
 			$this->encoding = $lang['encoding'];
-			$this->dir = isset($lang['rtl']) ? 'rtl' : 'ltr';
+			$this->version = @$lang['version'];
+			$this->dir = (isset($lang['rtl']) && $lang['rtl'] === true) ? 'rtl' : 'ltr';
 			$locale = $path_to_root . "/lang/" . $this->code . "/locale.inc";
 			$this->is_locale_file = file_exists($locale);
 		}
 
 		$_SESSION['get_text']->set_language($this->code, $this->encoding);
-		$_SESSION['get_text']->add_domain($this->code, $path_to_root . "/lang");
+		$_SESSION['get_text']->add_domain($this->code, $path_to_root . "/lang", $this->version);
 
 		// Necessary for ajax calls. Due to bug in php 4.3.10 for this 
 		// version set globally in php.ini

@@ -1165,6 +1165,7 @@ CREATE TABLE IF NOT EXISTS `0_purch_orders` (
   `into_stock_location` varchar(5) NOT NULL default '',
   `delivery_address` tinytext NOT NULL,
   `total` double NOT NULL default '0',
+  `tax_included` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`order_no`),
   KEY `ord_date` (`ord_date`)
 ) TYPE=InnoDB AUTO_INCREMENT=1 ;
@@ -1739,6 +1740,7 @@ CREATE TABLE IF NOT EXISTS `0_supp_trans` (
   `ov_gst` double NOT NULL default '0',
   `rate` double NOT NULL default '1',
   `alloc` double NOT NULL default '0',
+  `tax_included` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`type`,`trans_no`),
   KEY `supplier_id` (`supplier_id`),
   KEY `SupplierID_2` (`supplier_id`,`supp_reference`),
@@ -1820,7 +1822,7 @@ INSERT INTO `0_sys_prefs` VALUES('default_adj_act', 'glsetup.items', 'varchar', 
 INSERT INTO `0_sys_prefs` VALUES('default_inv_sales_act', 'glsetup.items', 'varchar', 15, '4010');
 INSERT INTO `0_sys_prefs` VALUES('default_assembly_act', 'glsetup.items', 'varchar', 15, '1530');
 INSERT INTO `0_sys_prefs` VALUES('default_workorder_required', 'glsetup.manuf', 'int', 11, '20');
-INSERT INTO `0_sys_prefs` VALUES('version_id', 'system', 'varchar', 11, '2.3');
+INSERT INTO `0_sys_prefs` VALUES('version_id', 'system', 'varchar', 11, '2.3rc');
 INSERT INTO `0_sys_prefs` VALUES('auto_curr_reval', 'setup.company', 'smallint', 6, '1');
 
 -- --------------------------------------------------------

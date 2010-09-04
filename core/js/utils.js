@@ -105,7 +105,7 @@ JsHttpRequest._request = function(trigger, form, tout, retry) {
 			// seek element by id if there is no elemnt with given name
 			  objElement = document.getElementsByName(id)[0] || document.getElementById(id);
     		  if(cmd=='as') {
-				  eval("objElement.setAttribute('"+property+"',"+data+");");
+				  eval("objElement.setAttribute('"+property+"','"+data+"');");
 			  } else if(cmd=='up') {
 //				if(!objElement) alert('No element "'+id+'"');
 				if(objElement) {
@@ -212,19 +212,25 @@ function price_format(post, num, dec, label, color) {
 	if(isNaN(num))
 		num = "0";
 	sign = (num == (num = Math.abs(num)));
+	var max = dec=='max';
+	if(max) dec = 15 - Math.floor(Math.log(Math.abs(num)));
 	if(dec<0) dec = 2;
 	decsize = Math.pow(10, dec);
 	num = Math.floor(num*decsize+0.50000000001);
 	cents = num%decsize;
 	num = Math.floor(num/decsize).toString();
-	for( i=cents.toString().length; i<dec; i++){
-		cents = "0" + cents;
-	}
+	if (max) // strip trailing 0
+		cents = cents.toString().replace(/0+$/,'');
+	else
+		for( i=cents.toString().length; i<dec; i++){
+			cents = cents + "0";
+		}
 	for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
 		num = num.substring(0,num.length-(4*i+3))+user.ts+
 			num.substring(num.length-(4*i+3));
 	 num = ((sign)?'':'-') + num;
-	 if(dec!=0) num = num + user.ds + cents;
+	if(dec!=0 && (!max || cents!=0))
+		num = num + user.ds + cents;
 	if(label)
 	    el.innerHTML = num;
 	else

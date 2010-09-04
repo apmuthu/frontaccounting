@@ -71,6 +71,8 @@ class setup_app extends application
 			"admin/inst_module.php?", 'SA_CREATEMODULES');
 		$this->add_rapp_function(2, _("Install/Activate &Themes"),
 			"admin/inst_theme.php?", 'SA_CREATEMODULES');
+		$this->add_rapp_function(2, _("Install/Activate &Chart of Accounts"),
+			"admin/inst_chart.php?", 'SA_CREATEMODULES');
 		$this->add_rapp_function(2, _("Software &Upgrade"),
 			"admin/inst_upgrade.php?", 'SA_SOFTWAREUPGRADE');
 

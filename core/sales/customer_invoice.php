@@ -56,8 +56,8 @@ if (isset($_GET['AddedID'])) {
 
 	display_note(get_customer_trans_view_str($trans_type, $invoice_no, _("&View This Invoice")), 0, 1);
 
-	display_note(print_document_link($invoice_no, _("&Print This Invoice"), true, ST_SALESINVOICE));
-	display_note(print_document_link($invoice_no, _("&Email This Invoice"), true, ST_SALESINVOICE, false, "printlink", "", 1),1);
+	display_note(print_document_link($invoice_no."-".$trans_type, _("&Print This Invoice"), true, ST_SALESINVOICE));
+	display_note(print_document_link($invoice_no."-".$trans_type, _("&Email This Invoice"), true, ST_SALESINVOICE, false, "printlink", "", 1),1);
 
 	display_note(get_gl_view_str($trans_type, $invoice_no, _("View the GL &Journal Entries for this Invoice")),1);
 
@@ -68,12 +68,14 @@ if (isset($_GET['AddedID'])) {
 } elseif (isset($_GET['UpdatedID']))  {
 
 	$invoice_no = $_GET['UpdatedID'];
+	$trans_type = ST_SALESINVOICE;
 
 	display_notification_centered(sprintf(_('Sales Invoice # %d has been updated.'),$invoice_no));
 
 	display_note(get_trans_view_str(ST_SALESINVOICE, $invoice_no, _("&View This Invoice")));
 	echo '<br>';
-	display_note(print_document_link($invoice_no, _("&Print This Invoice"), true, ST_SALESINVOICE));
+	display_note(print_document_link($invoice_no."-".$trans_type, _("&Print This Invoice"), true, ST_SALESINVOICE));
+	display_note(print_document_link($invoice_no."-".$trans_type, _("&Email This Invoice"), true, ST_SALESINVOICE, false, "printlink", "", 1),1);
 
 	hyperlink_no_params($path_to_root . "/sales/inquiry/customer_inquiry.php", _("Select Another &Invoice to Modify"));
 
@@ -360,9 +362,17 @@ hidden('cart_id');
 start_table(TABLESTYLE2, "width=80%", 5);
 
 start_row();
+$colspan = 1;
+$dim = get_company_pref('use_dimension');
+if ($dim > 0) 
+	$colspan = 3;
 label_cells(_("Customer"), $_SESSION['Items']->customer_name, "class='tableheader2'");
 label_cells(_("Branch"), get_branch_name($_SESSION['Items']->Branch), "class='tableheader2'");
-label_cells(_("Currency"), $_SESSION['Items']->customer_currency, "class='tableheader2'");
+if ($_SESSION['Items']->pos != -1) // editable payment type
+	label_cells(_("Payment terms:"), sale_payment_list('payment'), "class='tableheader2'", "colspan=$colspan");
+else
+	label_cells(_('Payment:'), $_SESSION['Items']->payment_terms['terms'], "class='tableheader2'", "colspan=$colspan");
+
 end_row();
 start_row();
 
@@ -377,10 +387,10 @@ if ($_SESSION['Items']->trans_no == 0) {
 
 label_cells(_("Sales Type"), $_SESSION['Items']->sales_type_name, "class='tableheader2'");
 
-if ($_SESSION['Items']->pos != -1) // editable payment type
-	label_cells(_("Payment terms:"), sale_payment_list('payment'), "class='tableheader2'");
-else
-	label_cells(_('Payment:'), $_SESSION['Items']->payment_terms['terms'], "class='tableheader2'");
+label_cells(_("Currency"), $_SESSION['Items']->customer_currency, "class='tableheader2'");
+// 2010-09-03 Joe Hunt
+if ($dim > 0) 
+	label_cells(_("Dimension"), get_dimension_string($_SESSION['Items']->dimension_id), "class='tableheader2'");
 
 end_row();
 start_row();
@@ -406,6 +416,10 @@ if (!isset($_POST['due_date']) || !is_date($_POST['due_date'])) {
 }
 
 date_cells(_("Due Date"), 'due_date', '', null, 0, 0, 0, "class='tableheader2'");
+if ($dim > 1) 
+	label_cells(_("Dimension"). " 2", get_dimension_string($_SESSION['Items']->dimension2_id), "class='tableheader2'");
+else if ($dim > 0)
+	label_cell("&nbsp;", "colspan=2");
 
 end_row();
 end_table();

@@ -520,15 +520,15 @@ CREATE TABLE IF NOT EXISTS `0_crm_persons` (
 -- Dumping data for table `0_crm_persons`
 --
 
-INSERT INTO `0_crm_persons` VALUES(1, 'Beefeater', '', NULL, NULL, NULL, NULL, NULL, '', 'en_GB', '', 0);
+INSERT INTO `0_crm_persons` VALUES(1, 'Beefeater', '', NULL, NULL, NULL, NULL, NULL, '', 'C', '', 0);
 INSERT INTO `0_crm_persons` VALUES(2, 'Ghostbusters', '', NULL, NULL, NULL, NULL, NULL, '', NULL, '', 0);
-INSERT INTO `0_crm_persons` VALUES(3, 'Brezan', '', NULL, NULL, NULL, NULL, NULL, '', 'en_GB', '', 0);
+INSERT INTO `0_crm_persons` VALUES(3, 'Brezan', '', NULL, NULL, NULL, NULL, NULL, '', 'C', '', 0);
 INSERT INTO `0_crm_persons` VALUES(4, 'Beefeater', 'Main Branch', NULL, '', '', '', '', '', NULL, '', 0);
 INSERT INTO `0_crm_persons` VALUES(5, 'Ghostbusters', 'Main Branch', NULL, 'Address 1\nAddress 2\nAddress 3', '', '', '', '', NULL, '', 0);
 INSERT INTO `0_crm_persons` VALUES(6, 'Brezan', 'Main Branch', NULL, 'Address 1\nAddress 2\nAddress 3', '', '', '', '', NULL, '', 0);
-INSERT INTO `0_crm_persons` VALUES(7, 'Junk Beer', 'Contact', NULL, 'Address 1\nAddress 2\nAddress 3', '+45 55667788', '', '', '', 'en_GB', '', 0);
+INSERT INTO `0_crm_persons` VALUES(7, 'Junk Beer', 'Contact', NULL, 'Address 1\nAddress 2\nAddress 3', '+45 55667788', '', '', '', 'C', '', 0);
 INSERT INTO `0_crm_persons` VALUES(8, 'Lucky Luke', 'Luke', NULL, 'Address 1\nAddress 2\nAddress 3', '(111) 222.333.444', '', '', '', NULL, '', 0);
-INSERT INTO `0_crm_persons` VALUES(9, 'Money Makers', 'Makers', NULL, 'Address 1\nAddress 2\nAddress 3', '+44 444 555 666', '', '', '', 'en_GB', '', 0);
+INSERT INTO `0_crm_persons` VALUES(9, 'Money Makers', 'Makers', NULL, 'Address 1\nAddress 2\nAddress 3', '+44 444 555 666', '', '', '', 'C', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1332,6 +1332,7 @@ CREATE TABLE IF NOT EXISTS `0_purch_orders` (
   `into_stock_location` varchar(5) NOT NULL default '',
   `delivery_address` tinytext NOT NULL,
   `total` double NOT NULL default '0',
+  `tax_included` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`order_no`),
   KEY `ord_date` (`ord_date`)
 ) TYPE=InnoDB  AUTO_INCREMENT=3 ;
@@ -1340,8 +1341,8 @@ CREATE TABLE IF NOT EXISTS `0_purch_orders` (
 -- Dumping data for table `0_purch_orders`
 --
 
-INSERT INTO `0_purch_orders` VALUES(1, 2, '', '2009-06-01', '1', '', 'DEF', 'Delivery 1\nDelivery 2\nDelivery 3', 0);
-INSERT INTO `0_purch_orders` VALUES(2, 3, '', '2009-06-21', '2', '', 'DEF', 'Delivery 1\nDelivery 2\nDelivery 3', 0);
+INSERT INTO `0_purch_orders` VALUES(1, 2, '', '2009-06-01', '1', '', 'DEF', 'Delivery 1\nDelivery 2\nDelivery 3', 0, 0);
+INSERT INTO `0_purch_orders` VALUES(2, 3, '', '2009-06-21', '2', '', 'DEF', 'Delivery 1\nDelivery 2\nDelivery 3', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1891,9 +1892,9 @@ CREATE TABLE IF NOT EXISTS `0_suppliers` (
 -- Dumping data for table `0_suppliers`
 --
 
-INSERT INTO `0_suppliers` VALUES(1, 'Junk Beer ApS', 'Junk Beer', 'Mailing 1\nMailing 2\nMailing 3', 'Address 1\nAddress 2\nAddress 3', '123456', 'Contact', '111', '', '', 'DKK', 3, 0, 1, 0, 2, 1000, '5010', '2100', '5060', 'A supplier with junk beers.', 0);
-INSERT INTO `0_suppliers` VALUES(2, 'Lucky Luke Inc.', 'Lucky Luke', 'Mailing 1\nMailing 2\nMailing 3', 'Address 1\nAddress 2\nAddress 3', '654321', 'Luke', '333', '', '', 'USD', 3, 0, 0, 0, 1, 500, '5010', '2100', '5060', '', 0);
-INSERT INTO `0_suppliers` VALUES(3, 'Money Makers Ltd.', 'Money Makers', 'Mailing 1\nMailing 2\nMailing 3', 'Address 1\nAddress 2\nAddress 3', '987654', 'Makers', '222', '', '', 'GBP', 3, 0, 0, 0, 2, 300, '5010', '2100', '5060', '', 0);
+INSERT INTO `0_suppliers` VALUES(1, 'Junk Beer ApS', 'Junk Beer', 'Mailing 1\nMailing 2\nMailing 3', 'Address 1\nAddress 2\nAddress 3', '123456', 'Contact', '111', '', '', 'DKK', 3, 0, 1, 0, 2, 1000, '', '2100', '5060', 'A supplier with junk beers.', 0);
+INSERT INTO `0_suppliers` VALUES(2, 'Lucky Luke Inc.', 'Lucky Luke', 'Mailing 1\nMailing 2\nMailing 3', 'Address 1\nAddress 2\nAddress 3', '654321', 'Luke', '333', '', '', 'USD', 3, 0, 0, 0, 1, 500, '', '2100', '5060', '', 0);
+INSERT INTO `0_suppliers` VALUES(3, 'Money Makers Ltd.', 'Money Makers', 'Mailing 1\nMailing 2\nMailing 3', 'Address 1\nAddress 2\nAddress 3', '987654', 'Makers', '222', '', '', 'GBP', 3, 0, 0, 0, 2, 300, '', '2100', '5060', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1975,6 +1976,7 @@ CREATE TABLE IF NOT EXISTS `0_supp_trans` (
   `ov_gst` double NOT NULL default '0',
   `rate` double NOT NULL default '1',
   `alloc` double NOT NULL default '0',
+  `tax_included` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`type`,`trans_no`),
   KEY `supplier_id` (`supplier_id`),
   KEY `SupplierID_2` (`supplier_id`,`supp_reference`),
@@ -1986,9 +1988,9 @@ CREATE TABLE IF NOT EXISTS `0_supp_trans` (
 -- Dumping data for table `0_supp_trans`
 --
 
-INSERT INTO `0_supp_trans` VALUES(7, 20, 2, '1', '5t', '2009-06-21', '2009-07-01', 3300, 0, 165, 1, 3465);
-INSERT INTO `0_supp_trans` VALUES(8, 20, 2, '2', 'cc', '2009-06-21', '2009-07-01', 20, 0, 0, 1, 0);
-INSERT INTO `0_supp_trans` VALUES(4, 22, 2, '1', '', '2009-06-21', '2009-06-21', -3465, 0, 0, 1, 3465);
+INSERT INTO `0_supp_trans` VALUES(7, 20, 2, '1', '5t', '2009-06-21', '2009-07-01', 3300, 0, 165, 1, 3465, 0);
+INSERT INTO `0_supp_trans` VALUES(8, 20, 2, '2', 'cc', '2009-06-21', '2009-07-01', 20, 0, 0, 1, 0, 0);
+INSERT INTO `0_supp_trans` VALUES(4, 22, 2, '1', '', '2009-06-21', '2009-06-21', -3465, 0, 0, 1, 3465, 0);
 
 -- --------------------------------------------------------
 
@@ -2059,7 +2061,7 @@ INSERT INTO `0_sys_prefs` VALUES('default_adj_act', 'glsetup.items', 'varchar', 
 INSERT INTO `0_sys_prefs` VALUES('default_inv_sales_act', 'glsetup.items', 'varchar', 15, '4010');
 INSERT INTO `0_sys_prefs` VALUES('default_assembly_act', 'glsetup.items', 'varchar', 15, '1530');
 INSERT INTO `0_sys_prefs` VALUES('default_workorder_required', 'glsetup.manuf', 'int', 11, '20');
-INSERT INTO `0_sys_prefs` VALUES('version_id', 'system', 'varchar', 11, '2.3');
+INSERT INTO `0_sys_prefs` VALUES('version_id', 'system', 'varchar', 11, '2.3rc');
 INSERT INTO `0_sys_prefs` VALUES('auto_curr_reval', 'setup.company', 'smallint', 6, '1');
 
 -- --------------------------------------------------------

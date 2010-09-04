@@ -144,7 +144,7 @@ function invoice_totals(&$supp_trans)
    	label_row(_("Sub-total:"), price_format( $supp_trans->ov_amount), "colspan=$colspan align=right", "align=right");
 
     $taxes = $supp_trans->get_taxes($supp_trans->tax_group_id);
-    $tax_total = display_edit_tax_items($taxes, $colspan, 0); // tax_included==0 (we are the company)
+    $tax_total = display_edit_tax_items($taxes, $colspan, $supp_trans->tax_included);
 
     $display_total = price_format($supp_trans->ov_amount + $tax_total);
 
@@ -165,7 +165,8 @@ function invoice_totals(&$supp_trans)
 function display_gl_controls(&$supp_trans, $k)
 {
 	$accs = get_supplier_accounts($supp_trans->supplier_id);
-	$_POST['gl_code'] = $accs['purchase_account'];
+	$_POST['gl_code'] = $accs['purchase_account'] ? 
+		$accs['purchase_account'] : get_company_pref('default_cogs_act');
 
 	alt_table_row_color($k);
 	echo gl_all_accounts_list('gl_code', null, true, true);
@@ -459,7 +460,8 @@ function display_grn_items(&$supp_trans, $mode=0)
 	{
     	$th = array(_("Delivery"), _("Sequence #"), _("P.O."), _("Item"), _("Description"),
     		_("Received On"), _("Quantity Received"), _("Quantity Invoiced"),
-    		_("Qty Yet To Invoice"), _("Order Price"), _("Total"), "");
+    		_("Qty Yet To Invoice"), $supp_trans->tax_included ? _("Price after Tax") : _("Price before Tax"), 
+    		_("Total"), "");
     	if (($supp_trans->trans_type == ST_SUPPINVOICE) && $_SESSION["wa_current_user"]->can_access('SA_GRNDELETE'))	// Added 2008-10-18 by Joe Hunt. Only admins can remove GRNs
     		$th[] = "";
 		if ($supp_trans->trans_type == ST_SUPPCREDIT)

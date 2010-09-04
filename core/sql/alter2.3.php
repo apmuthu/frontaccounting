@@ -14,6 +14,7 @@ class fa2_3 {
 	var $description;
 	var $sql = 'alter2.3.sql';
 	var $preconf = true;
+	var $beta = false; // upgrade from 2.2 or 2.3beta;
 	
 	function fa2_3() {
 		$this->description = _('Upgrade from version 2.2 to 2.3');
@@ -25,83 +26,103 @@ class fa2_3 {
 	//
 	function install($pref, $force) 
 	{
-		$sql = "SELECT debtor_no, payment_terms FROM {$pref}debtors_master";
+		global $db_version, $dflt_lang;
+
+		if (!$this->preconf)
+			return false;
+
+		if (!$this->beta) {
+			// all specials below are already done on 2.3beta
+
+			$sql = "SELECT debtor_no, payment_terms FROM {$pref}debtors_master";
 		
-		$result = db_query($sql);
-		if (!$result) {
-			display_error("Cannot read customers"
-			.':<br>'. db_error_msg($db));
-			return false;
-		}
-		// update all sales orders and transactions with customer std payment terms
-		while($cust = db_fetch($result)) {
-			$sql = "UPDATE {$pref}debtor_trans SET "
-				."payment_terms = '" .$cust['payment_terms']
-				."' WHERE debtor_no='".$cust['debtor_no']."'";
-			if (db_query($sql)==false) {
-				display_error("Cannot update cust trans payment"
+			$result = db_query($sql);
+			if (!$result) {
+				display_error("Cannot read customers"
 				.':<br>'. db_error_msg($db));
 				return false;
 			}
-			$sql = "UPDATE {$pref}sales_orders SET "
-				."payment_terms = '" .$cust['payment_terms']
-				."' WHERE debtor_no='".$cust['debtor_no']."'";
-			if (db_query($sql)==false) {
-				display_error("Cannot update sales order payment"
-				.':<br>'. db_error_msg($db));
+			// update all sales orders and transactions with customer std payment terms
+			while($cust = db_fetch($result)) {
+				$sql = "UPDATE {$pref}debtor_trans SET "
+					."payment_terms = '" .$cust['payment_terms']
+					."' WHERE debtor_no='".$cust['debtor_no']."'";
+				if (db_query($sql)==false) {
+					display_error("Cannot update cust trans payment"
+					.':<br>'. db_error_msg($db));
+					return false;
+				}
+				$sql = "UPDATE {$pref}sales_orders SET "
+					."payment_terms = '" .$cust['payment_terms']
+					."' WHERE debtor_no='".$cust['debtor_no']."'";
+				if (db_query($sql)==false) {
+					display_error("Cannot update sales order payment"
+					.':<br>'. db_error_msg($db));
+					return false;
+				}
+			}
+			if (!$this->update_totals($pref)) {
+				display_error("Cannot update order totals");
 				return false;
 			}
-		}
-		if (!$this->update_totals($pref)) {
-			display_error("Cannot update order totals");
-			return false;
-		}
-		if (!$this->update_line_relations($pref)) {
-			display_error("Cannot update sales document links");
-			return false;
-		}
-		//remove obsolete and temporary columns.
-		// this have to be done here as db_import rearranges alter query order
-		$dropcol = array(
-			'crm_persons' => array('tmp_id','tmp_class'),
-			'debtors_master' => array('email'),
-			'cust_branch' => array('phone', 'phone2', 'fax', 'email'),
-			'suppliers' => array('phone', 'phone2', 'fax', 'email'),
-			'debtor_trans' => array('trans_link')
-		);
-
-		foreach($dropcol as $table => $columns)
-			foreach($columns as $col) {
-			if (db_query("ALTER TABLE `{$pref}{$table}` DROP `$col`")==false) {
-				display_error("Cannot drop {$table}.{$col} column:<br>".db_error_msg($db));
+			if (!$this->update_line_relations($pref)) {
+				display_error("Cannot update sales document links");
 				return false;
 			}
-		}
-		// remove old preferences table after upgrade script has been executed
-		$sql = "DROP TABLE IF EXISTS `{$pref}company`";
+			//remove obsolete and temporary columns.
+			// this have to be done here as db_import rearranges alter query order
+			$dropcol = array(
+				'crm_persons' => array('tmp_id','tmp_class'),
+				'debtors_master' => array('email'),
+				'cust_branch' => array('phone', 'phone2', 'fax', 'email'),
+				'suppliers' => array('phone', 'phone2', 'fax', 'email'),
+				'debtor_trans' => array('trans_link')
+			);
 
-		return db_query($sql) && update_company_prefs(array('version_id'=>'2.3'), $pref);
+			foreach($dropcol as $table => $columns)
+				foreach($columns as $col) {
+					if (db_query("ALTER TABLE `{$pref}{$table}` DROP `$col`")==false) {
+						display_error("Cannot drop {$table}.{$col} column:<br>".db_error_msg($db));
+						return false;
+					}
+				}
+			// remove old preferences table after upgrade script has been executed
+			$sql = "DROP TABLE IF EXISTS `{$pref}company`";
+			if (!db_query($sql))
+				return false;
+		}
+		$this->update_lang_cfg();
+		return  update_company_prefs(array('version_id'=>$db_version), $pref);
 	}
 	//
 	//	Checking before install
 	//
 	function pre_check($pref, $force)
 	{
+
+		if ($this->beta && !$force)
+			$this->sql = 'alter2.3rc.sql';
+
 		return true;
 	}
 	//
 	//	Test if patch was applied before.
 	//
 	function installed($pref) {
-		$n = 3; // number of patches to be installed
+		$this->beta = !check_table($pref, 'suppliers', 'tax_included');
+		$this->preconf = $this->fix_extensions();
+
+		$n = 1; // number of patches to be installed
 		$patchcnt = 0;
 
-		if (!check_table($pref, 'comments', 'type', array('Key'=>'MUL'))) $patchcnt++;
-		if (!check_table($pref, 'sys_prefs')) $patchcnt++;
-		if (!check_table($pref, 'sales_orders', 'payment_terms')) $patchcnt++;
-
-		$n -= $patchcnt;
-		return $n == 0 ? true : $patchcnt;
+		if (!$this->beta) {
+			$n += 3;
+			if (!check_table($pref, 'comments', 'type', array('Key'=>'MUL'))) $patchcnt++;
+			if (!check_table($pref, 'sys_prefs')) $patchcnt++;
+			if (!check_table($pref, 'sales_orders', 'payment_terms')) $patchcnt++;
+		}
+		if (!check_table($pref, 'purch_orders', 'tax_included')) $patchcnt++;
+		return $n == $patchcnt ? true : ($patchcnt ? ($patchcnt.'/'. $n) : 0);
 	}
 	//=========================================================================================
 	//	2.3 specific update functions
@@ -241,6 +262,107 @@ class fa2_3 {
 			}
 		}
 	return true;
+	}
+	
+	function fix_extensions()
+	{
+		global $path_to_root, $next_extension_id, $installed_languages;
+		
+		$lang_chd = false;
+		foreach($installed_languages as $i => $lang) {
+			if (!isset($lang['path'])) {
+				$code = $lang['code'];
+				$installed_languages[$i]['path'] = 'lang/'.$code;
+				$installed_languages[$i]['package'] = $code;
+				$lang_chd = true;
+			}
+		}
+		if ($lang_chd)
+			write_lang();
+
+		$installed_extensions= get_company_extensions();
+		
+		if (!isset($next_extension_id))
+			$next_extension_id = 1;
+		$new_exts = array();
+		
+		foreach($installed_extensions as $i => $ext)
+		{
+			if (isset($ext['title'])) // old type entry
+			{
+				if ($ext['type'] == 'module') {
+					$new['type'] = 'extension';
+					$new['tabs'][] = array(
+						'url' => $ext['filename'],
+						'access' => isset($ext['access']) ? $ext['access'] : 'SA_OPEN',
+						'tab_id' => $ext['tab'],
+						'title' => $ext['title']
+					);
+					$new['path'] = $ext['path'];
+				}
+				else // plugin
+				{
+					$new['type'] = 'extension';
+					$new['tabs'] = array();
+					$new['path'] = 'modules/'.$ext['path'];
+					$new['entries'][] = array(
+						'url' => $ext['filename'],
+						'access' => isset($ext['access']) ? $ext['access'] : 'SA_OPEN',
+						'tab_id' => $ext['tab'],
+						'title' => $ext['title']
+					);
+				}
+				if (isset($ext['acc_file']))
+					$new['acc_file'] = $ext['acc_file'];
+				$new['name'] = $ext['name']; // albo access_string(title)
+				$new['package'] = $new['package'] = '';
+				$new['active'] = 1;
+
+				$new_exts[$i] = $new;
+			}
+		}
+		// Add non-standard themes
+		$path = $path_to_root.'/themes/';
+		$themes = array();
+		$themedir = opendir($path);
+		while (false !== ($fname = readdir($themedir)))
+		{
+			if ($fname!='.' && $fname!='..' && $fname!='CVS' && is_dir($path.$fname)
+				&& !in_array($fname, array('aqua', 'cool', 'default')))
+			{
+				foreach($installed_extensions as $ext)  
+					if ($ext['path'] == 'themes/'.$fname) // skip if theme is already listed
+						continue 2;
+				$new_exts[$next_extension_id++] = array(
+					'name' => 'Theme '. ucwords($fname),
+					'package' => $fname,
+					'type' => 'theme',
+					'active' => true,
+					'path' => 'themes/'.$fname
+				);
+			}
+		}
+		closedir($themedir);
+
+		if (count($new_exts)) {
+			return update_extensions($new_exts);
+		} else
+			return true;
+	}
+	
+	function update_lang_cfg()
+	{
+		global $dflt_lang, $installed_languages;
+
+		foreach($installed_languages as $n => $lang) {
+			if ($lang['code'] == 'en_GB') {
+				$installed_languages[$n] = array('code'=>'C','name'=>'English',
+					'encoding'=>'iso-8859-1', 'path' => '', 'package' => '');
+				if ($dflt_lang == 'en_GB')
+					$dflt_lang = 'C';
+				write_lang();
+			}
+		}
 	}
 }
 

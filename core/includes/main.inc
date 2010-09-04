@@ -24,7 +24,7 @@ include_once($path_to_root . "/admin/db/users_db.inc");
 include_once($path_to_root . "/includes/ui/ui_view.inc");
 include_once($path_to_root . "/includes/ui/ui_controls.inc");
 	
-function page($title, $no_menu=false, $is_index=false, $onload="", $js="", $script_only=false)
+function page($title, $no_menu=false, $is_index=false, $onload="", $js="", $script_only=false, $css='')
 {
 
    	global $path_to_root, $page_security;
@@ -34,7 +34,7 @@ function page($title, $no_menu=false, $is_index=false, $onload="", $js="", $scri
 
    	include($path_to_root . "/includes/page/header.inc");
 
-   	page_header($title, $no_menu, $is_index, $onload, $js);
+   	page_header($title, $no_menu, $is_index, $onload, $js, $css);
 	check_page_security($page_security);
 //	error_box();
 	if($script_only) {		
@@ -57,19 +57,6 @@ function end_page($no_menu=false, $is_index=false, $hide_back_link=false, $type_
 
 	include($path_to_root . "/includes/page/footer.inc");
 	page_footer($no_menu, $is_index, $hide_back_link);
-}
-
-function flush_dir($path, $wipe = false) 
-{
-	$dir = opendir($path);
-	while(false !== ($fname = readdir($dir))) {
-		if($fname=='.' || $fname=='..' || $fname=='CVS' || (!$wipe && $fname=='index.php')) continue;
-  		if(is_dir($path.'/'.$fname)) {
-		    flush_dir($path.'/'.$fname, $wipe);
-		    if ($wipe) @rmdir($path.'/'.$fname);
-		} else
-		    @unlink($path.'/'.$fname);
-	}
 }
 
 function cache_js_file($fpath, $text) 
@@ -272,7 +259,7 @@ function check_write($path)
 	) return 0;
 	
 	return is_writable($path) ? (is_dir($path) ? 1 : -1) 
-		: ($path =='.' ? 0 : check_write(dirname($path)));
+		: (is_file($path) ? 0 : ($path == '.' ? 0 : check_write(dirname($path))));
 }
 
 /*
@@ -311,21 +298,6 @@ function copy_file($file, $from, $to)
 	//		error_log( 'skopiowanie '.$to.'/'.$file);
 		return @copy($from.'/'.$file, $to.'/'.$file);
 	}
-}
-/*
-	Returns current path to company private folder.
-	(Current path can change after chdir).
-*/
-function company_path($comp=null)
-{
-	global $path_to_root, $comp_path;
-
-	if (!isset($comp))
-		$comp = user_company();
-
-	// if path is relative, set current path_to_root
-	return ($comp_path[0]=='.' ? $path_to_root.'/'.basename($comp_path) : $comp_path)
-			. '/'.$comp;
 }
 /*
 	Search for file, looking first for company specific version, then for 

@@ -69,7 +69,7 @@ function get_installers()
 		while(false !== ($fname = readdir($datadir)))
 		{ // check all php files but index.php
 			if (!is_dir($patchdir . $fname) && ($fname != 'index.php')
-				&& stristr($fname, '.php') != false)
+				&& stristr($fname, '.php') != false && $fname[0] != '.')
 			{
 				unset($install);
 				include_once($patchdir . $fname);
@@ -110,7 +110,7 @@ function upgrade_step($index, $conn)
 
 			$ret &= $inst->install($pref, $force);
 
-			error_log(_("Database upgarade finished."));
+			error_log(_("Database upgrade finished."));
 
 		} else
 			if ($state!==true) {
@@ -171,6 +171,7 @@ if (get_post('Upgrade'))
 		display_notification(_('All companies data has been successfully updated'));
 	}	
 	unset($_SESSION['SysPrefs']); // re-read system setup
+	$_SESSION['SysPrefs'] = new sys_prefs();
 	$Ajax->activate('_page_body');
 }
 

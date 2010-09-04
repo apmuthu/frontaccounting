@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.39.2.609 2010/06/28 12:04:04 frontaccounting Exp $
+* @version $Id: CHANGELOG.txt,v 1.39.2.662 2010/09/05 15:59:11 frontaccounting Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -19,6 +19,466 @@ Legend:
 ! -> Note
 $ -> Affected files
 
+------------------------------- Release 2.3 RC --------------------------------
+05-Sep-2010 Joe Hunt
+! Release 2.3 RC
+$ version.php
+# Wrong stock item gl code when processing supplier invoice
+$ /purchasing/includes/db/invoice_db.inc
+! Changed layout of Direct GRN/Invoice form and check for supp ref in invoice.
+$ /purchasing/po_entry_items.php
+
+04-Sep-2010 Joe Hunt
+# Fixed installed_extensions.php creation
+$ /install/index.php
+# Page blocked during FA upgrade
+$ /sales/sales_order_entry.php
+# Fixed languages update
+$ /sql/alter2.3.php
+! Shorter line comments
+$ /install/lang/new_language_template/LC_MESSAGES/empty.po
+
+03-Sep-2010 Joe Hunt
++ Added possibility to put dimensions on Delivery from sales order
+$ /sales/customer_delivery.php
+  /sales/customer_invoice.php
+! Changed update.html to be more readable
+$ update.html
+
+02-Sep-2010 Janusz Dobrowolski
+# Preprinted forms folder moved to /reporting where it should be
+$ /reporting/forms
+  /reporting/forms/index.php
+
+29-Aug-2010 Janusz Dobrowolski
+# Fixed maxprec option in number_format2
+$ /includes/current_user.inc
+# Missing tags parameter in display_type call
+$ /reporting/rep706.php
+  /reporting/rep707.php
+
+25-Aug-2010 Janusz Dobrowolski
++ Added taxes display for sales order/quotation
+$ /sales/includes/cart_class.inc
+  /sales/view/view_sales_order.php
+  /reporting/rep109.php
+
+24-Aug-2010 Joe Hunt
+# Removed old headerfunc in rep111.php (Sales Quotation)
+$ /reporting/rep111.php
+
+23-Aug-2010 Janusz Dobrowolski
++ Added german translation for install wizard (thanks to iscongroup) 
+$ /install/isession.inc
+  /install/lang/de_DE/LC_MESSAGES/de_DE.mo (new)
+  /install/lang/de_DE/LC_MESSAGES/de_DE.po (new)
+# Small fix in layout
+$ /gl/manage/exchange_rates.php
+# Fixed maxprec formatting
+$ /includes/current_user.inc
+  /js/utils.js
+# Fixed cogs account selection
+$ /purchasing/includes/db/invoice_db.inc
+# Fixed tax_included option update.
+$ /purchasing/manage/suppliers.php
+
+23-Aug-2010 Joe Hunt
+# Period bug caused warning on no fiscal year. Had to be reduces by one.
+$ /gl/accruals.php
+
+22-Aug-2010 Janusz Dobrowolski
++ Extended number formatting to allow maximum precision numbers with 'max' specifier. 
+  /includes/current_user.inc
+  /js/utils.js
++ Added purchase account special option for using item's account
+$ /purchasing/manage/suppliers.php
+# Fixed default 'C' locale in listing
+$ /admin/inst_lang.php
+# Fixed mysql extension test
+$ /includes/system_tests.inc
+# Fixed exrate reedition
+$ /gl/manage/exchange_rates.php
+# Maximum precision for factor entry
+$ /inventory/purchasing_data.php
+# Fixed backward compatibility for cogs GL account setup
+$ /purchasing/includes/db/invoice_db.inc
+! Fixed GL account selection on first display
+$ /purchasing/includes/ui/invoice_ui.inc
+# Fixed bug in lang update, changed purchase account for suppliers to default.
+$ /sql/alter2.3rc.sql
+  /sql/en_US-demo.sql
+
+20-Aug-2010 Joe Hunt/Chaitanya
++ Improvements to bank inquiry credit/debit totals as well.
+$ /gl/inquiry/bank_inquiry.php
+
+18-Aug-2010 Joe Hunt
+# View of backup scripts and attachments didn't work
+$ /admin/attachments.php
+  /admin/backups.php
+  /admin/db/attachments_db.inc
+! Added more memo info in advanced manufacture / Chaitanya
+$ /manufacturing/includes/db/work_orders_quick_db.inc
+! Added total debit/credit in gl_trans_view.inc / Chaitanya
+$ /gl/view/gl_trans_view.php
+
+13-Aug-2010 Joe Hunt/infotechaccountant.com
++ Added arabic translation for install wizard (thanks to Hameed, infotechaccountants)
+$ /install/lang/ar_EG/LC_MESSAGES/ar_EG.mo (new)
+  /install/lang/ar_EG/LC_MESSAGES/ar_EG.po (new)
+  /install/isession.inc
+
+13-Aug-2010 Janusz Dobrowolski
+# Updated pt_BR instaler translation
+$ /install/lang/pt_BR/LC_MESSAGES/pt_BR.mo
+  /install/lang/pt_BR/LC_MESSAGES/pt_BR.po
+# Fixed mysql extension test
+$ /includes/system_tests.inc
+
+12-Aug-2010 Janusz Dobrowolski
+# [0000242] Database error during credit note processing.
+$ /sales/includes/db/sales_credit_db.inc
+
+11-Aug-2010 Janusz Dobrowolski
++ Added dutch translation for install wizard (thanks to MorkVonOrk) 
+$ /install/isession.inc
+  /install/lang/nl_BE/LC_MESSAGES/nl_BE.mo (new)
+  /install/lang/nl_BE/LC_MESSAGES/nl_BE.po (new)
++ Added portuguese (Brasil) translation for install wizard (thanks to InterConnect Brasil)
+$ /install/isession.inc
+  /install/lang/pt_BR/LC_MESSAGES/pt_BR.mo (new)
+  /install/lang/pt_BR/LC_MESSAGES/pt_BR.po (new)
+# Fixed two typos in translated messages.
+$ /includes/system_tests.inc
+  /install/lang/da_DK/LC_MESSAGES/da_DK.mo
+  /install/lang/da_DK/LC_MESSAGES/da_DK.po
+  /install/lang/fr_FR/LC_MESSAGES/fr_FR.mo
+  /install/lang/fr_FR/LC_MESSAGES/fr_FR.po
+  /install/lang/id_ID/LC_MESSAGES/id_ID.mo
+  /install/lang/id_ID/LC_MESSAGES/id_ID.po
+  /install/lang/new_language_template/LC_MESSAGES/empty.po
+  /install/lang/pl_PL/LC_MESSAGES/pl_PL.mo
+  /install/lang/pl_PL/LC_MESSAGES/pl_PL.po
+  /install/lang/sv_SE/LC_MESSAGES/sv_SE.mo
+  /install/lang/sv_SE/LC_MESSAGES/sv_SE.po
+  /lang/new_language_template/LC_MESSAGES/empty.po
+
+10-Aug-2010 Janusz Dobrowolski
+# Fixed tests or fresh new install
+$ /includes/system_tests.inc
+! Warning cleanups
+$ /includes/ajax.inc
+  /includes/lang/language.php
+
+09-Aug-2010 Janusz Dobrowolski
++ Added French translation (thanks to Gaston)
+$ /install/isession.inc
+  /install/lang/fr_FR/LC_MESSAGES/fr_FR.mo
+  /install/lang/fr_FR/LC_MESSAGES/fr_FR.po
++ Added Indonesian translation (thanks to Eko Prasetiyo)
+$ /install/isession.inc
+  /install/lang/id_ID/LC_MESSAGES/id_ID.mo
+  /install/lang/id_ID/LC_MESSAGES/id_ID.po
+# Warning in installer cleanup
+$ /includes/ajax.inc
+# Subpage display title update on lang switching
+$ /install/index.php
+
+08-Aug-2010 Janusz Dobrowolski
++ Multilangage support in installer
+$ /install/lang (new)
+  /install/lang/new_language_template/LC_MESSAGES (new)
+  /install/lang/new_language_template/LC_MESSAGES/empty.po (new)
+  /install/index.php
+  /install/isession.inc
++ Added Polish installer translation
+$ /install/lang/pl_PL (new)
+  /install/lang/pl_PL/LC_MESSAGES (new)
+  /install/lang/pl_PL/LC_MESSAGES/pl_PL.po (new)
+  /install/lang/pl_PL/LC_MESSAGES/pl_PL.mo (new)
++ Added Danish/Svedish installer translation (Joe Hunt)
+$ /install/lang/da_DK (new)
+  /install/lang/da_DK/LC_MESSAGES (new)
+  /install/lang/da_DK/LC_MESSAGES/da_DK.po (new)
+  /install/lang/da_DK/LC_MESSAGES/da_DK.mo (new)
+$ /install/lang/sv_SE (new)
+  /install/lang/sv_SE/LC_MESSAGES (new)
+  /install/lang/sv_SE/LC_MESSAGES/sv_SE.po (new)
+  /install/lang/sv_SE/LC_MESSAGES/sv_SE.mo (new)
+  
+! Updated language template
+$ /lang/new_language_template/LC_MESSAGES/empty.po
+
+07-Aug-2010 Janusz Dobrowolski
++ Added langauges selection in installer.
+$ /install/index.php
+! Testing config_db on start
+$ /index.php
+# Side bug fixed.
+$ /applications/setup.php
+! Default language code changed form 'en_GB' to 'C'
+$ /admin/inst_lang.php
+  /includes/system_tests.inc
+  /includes/lang/gettext.php
+  /includes/lang/language.php
+  /sql/alter2.3rc.sql
+  /sql/alter2.3.php
+  /sql/en_US-demo.sql
+! Cleanup.
+$ /includes/archive.inc
+! Additional error messages
+$ /includes/packages.inc
+! Added descriptions for all existing hooks
+$ /lang/new_language_template/locale.inc
+! Changed hook name from TaxFunction to tax_report_done
+$ /reporting/rep709.php
+
+07-Aut-2010 Joe Hunt
+# Stamping the installed_languags.inc file with 'rtl' = false, causes 'rtl'.
+  The value: 'rtl' = false will make the variable as isset.
+$ /includes/lang/languages.php
+  /includes/session.inc
+  /admin/inst_lang.php
+
+06-Aug-2010 Janusz Dobrowolski
+# Fixed page title
+$ /gl/gl_bank.php
+# Fixed memo dupliactaion after bank payment edition.
+$ /gl/includes/db/gl_db_bank_trans.inc
+! Cleanup.
+$ /install/index.php
+! Improved chart list selection.
+$ /includes/ui/ui_lists.inc
++ Added Chart of accounts installation.
+$ /admin/inst_chart.php (new)
+  /applications/setup.php
+# Fixed third-party extension installation
+$ /admin/inst_module.php
+# Fixed theme description popup.
+$ /admin/inst_theme.php
+! Added optional type parameter in get_extensions_list()
+$ /includes/packages.inc
++ Added encoding display for chart packages list
+$ /install/index.php
+# Fixed multiline package property values display.
+$ /includes/ui/view_package.php
+
+06-Aug-2010 Joe Hunt
+# Bank Payment on customer statements shows in credit column, should be debit. Balance ok.
+$ /reporting/rep108.php
+
+04-Aug-2010 Janusz Dobrowolski
++ Rewritten installation wizard, uploading additional COAs form repository during install
+  /install/index.php
+  /install/stylesheet.css
+  /install/isession.inc (new)
+  /install/save.php (removed)
+! COAs selected from previously uploaded charts.
+$ /admin/create_coy.php
+! Diagnostic tests moved to separate file, to be reused during FA install.
+$ /includes/system_tests.inc (new)
+  /admin/system_diagnostics.php
+! user_theme fixed to be used before login, and warning suppressed in array_search_value 
+$ /includes/current_user.inc
+# Fixed bug in check_write() helper
+$ /includes/main.inc
+! Changed core_version to db_version for better readibility
+$ /admin/db/company_db.inc
+  /sql/alter2.3.php
+  /version.php
++ Chart packages support added
+$ /includes/packages.inc
+  /includes/ui/ui_lists.inc
+! Update from beta to RC1
+$ /sql/alter2.3rc.sql (new)
+  /sql/en_US-demo.sql
+  /sql/en_US-new.sql
+# Fixed exit on error in check_db_error()
+$ /includes/errors.inc
+! Added css parameter in page();
+$ /includes/page/header.inc
+  /includes/main.inc
+! Changed repository parameteres format.
+$ /version.php
+! Cleanup
+$ /admin/inst_lang.php
+
+04-Aug-2010 Joe Hunt
++ Added an extra parameter to db_export in maintenance_db.inc for new COAs
+$ /admin/db/maintenance_db.inc
+# Link error in items.php for Pictures
+$ /inventory/manage/items.php
+
+01-Aug-2010 Joe Hunt
++ Added Email link when updating documents.
+$ /sales/credit_note_entry.php
+  /sales/customer_credit_invoice.php
+  /sales/customer_invoice.php
+  
+30-Jul-2010 Janusz Dobrowolski
+! Skipping hidden files in sql folder during upgrade.
+$ /admin/inst_upgrade.php
+# Warning cleanup
+$ /includes/lang/language.php
+# Bug in src document lines retrieval during edition 
+$ /sales/includes/cart_class.inc
+! Fixing extensions configuration moved to installed() method.
+$ /sql/alter2.3.php
+
+26-Jul-2010 Janusz Dobrowolski
+# Fatal typo in upgrade function fixed.
+$ /sql/alter2.3.php
+
+25-Jul-2010 Janusz Dobrowolski
+# Fixed language file switching on package version change
+  /admin/db/company_db.inc
+  /includes/session.inc
+  /includes/lang/language.php
+  /includes/current_user.inc
+! flush_dir() and company_path() moved to current_user.php 
+$  /includes/main.inc
++ Added preprinted forms folder
+$ /reporting/includes/forms (new)
+  /reporting/includes/forms/index.php
+# Fixed multilanguage tests 
+$ /admin/system_diagnostics.php
+  /includes/lang/gettext.php
+# Fixed config comments
+$ /admin/db/maintenance_db.inc
+! Cleanup.
+$ /includes/packages.inc
+# Fixed installed_languages config file upgrade.
+$ /sql/alter2.3.php
+
+24-Jul-2010 Janusz Dobrowolski
+# Upgrade routines for extensions configuration
+  /sql/alter2.3.php
+# Cleanup
+$ /admin/inst_module.php
+  /includes/current_user.inc
+  /includes/packages.inc
+
+24-Jul-2010 Joe Hunt
+! Changed so Purchase Order also print taxes.
+$ /reporting/rep209.php
+  /reporting/doctype.inc
+# Fixed Customer Details Report and Pricelist (UOM)
+$ /reporting/rep103.php
+  /reporting/rep104.php
+  
+23-Jul-2010 Janusz Dobrowolski
++ Added tax information display
+  /purchasing/view/view_grn.php
+  /purchasing/view/view_po.php
++ Added option for tax included prices.
+$ /purchasing/includes/db/suppliers_db.inc
+  /purchasing/manage/suppliers.php
++ Added support for transactions with tax included prices
+$ /purchasing/po_entry_items.php
+  /purchasing/po_receive_items.php
+  /purchasing/includes/po_class.inc
+  /purchasing/includes/supp_trans_class.inc
+  /purchasing/includes/db/grn_db.inc
+  /purchasing/includes/db/invoice_db.inc
+  /purchasing/includes/db/po_db.inc
+  /purchasing/includes/db/supp_trans_db.inc
+  /purchasing/includes/ui/invoice_ui.inc
+  /purchasing/includes/ui/po_ui.inc
++ Added GRNs to supplier transaction inquiry
+  /purchasing/inquiry/supplier_inquiry.php
+! Added upgrade from 2.3beta to 2.3RC
+  /sql/alter2.3.php
+  /sql/alter2.3.sql
+  /sql/en_US-demo.sql
+  /sql/en_US-new.sql
+! Versions information moved to separate file.
+$ /version.php (new) 
+  /config.default.php
+  /includes/session.inc
+! Fixed item list buttons position.
+$ /sales/includes/ui/sales_order_ui.inc
+# Fixed credit links colors
+$ /themes/aqua/default.css
+  /themes/cool/default.css
+  /themes/default/default.css
+# SysPrefs restoration after upgrade.
+$ /admin/inst_upgrade.php
+# Warning clenaup
+$ /includes/packages.inc
++ Supplier transactions list added.
+$ /includes/ui/ui_lists.inc
+# Fixed tax footer descriptions
+$ /includes/ui/ui_view.inc
+
+21-Jul-2010 Joe Hunt
+! Changed Report Statements to accept selector Outstanding Only
+$ /reporting/reports_main.php
+  /reporting/rep108.php
+  
+19-Jul-2010 Joe Hunt
++ Added Revenue / Cost Accruals to be included in core FA
+$ /applications/generalledger.php
+  /gl/accruals.php (new file)
+  /gl/view/accrual_trans.php (new file)
+  /includes/access_levels.inc
+! Changed Std. Cost to show all decimals, and added UOM
+$ /reporting/rep301.php
+  /reporting/rep303.php
+# Wrong link to Inventory Reports
+$ /applications/inventory.php
+
+18-Jul-2010 Janusz Dobrowolski
+! Improved key_in_foreign_table to check multiply tables
+$ /admin/db/company_db.inc
+! New customer/supplier currency can be edited as long as no transaction is entered.
+$ /purchasing/includes/db/suppliers_db.inc
+  /purchasing/manage/suppliers.php
+  /sales/includes/db/customers_db.inc
+  /sales/manage/customers.php
+
+17-Jul-2010 Janusz Dobrowolski
++ New packaged extensions system
+$ /modules/_cache/index.php (new)
+  /FA.pem (new)
+  /includes/archive.inc (new)
+  /includes/packages.inc (new)
+  /includes/ui/view_package.php (new)
+  /config.default.php
+  /frontaccounting.php
+  /admin/inst_lang.php
+  /admin/inst_module.php
+  /includes/access_levels.inc
+  /includes/ui/ui_controls.inc
+  /includes/ui/ui_view.inc
+  /admin/db/maintenance_db.inc
+! Changed language file convention to prevent need for apache restart after *.po file change.
+$ /includes/lang/gettext.php
+  /includes/lang/language.php
+! Small cleanup
+$ /includes/page/header.inc
+! Fixed memo string in adjust_deliveries.
+$ /includes/db/inventory_db.inc
+! Fixed call params check message display
+$ /gl/view/gl_trans_view.php
+! Updated MySQL, php, debugging and extension system checks
+$ /admin/system_diagnostics.php
+# Fixed gettext msg typo
+$ /purchasing/supplier_invoice.php
+# Fixed curr_default check
+$ /gl/manage/currencies.php
+# Message typos
+$ /admin/create_coy.php
+  /admin/inst_upgrade.php
+! Updated translation template
+$ /lang/new_language_template/LC_MESSAGES/empty.po
+
+15-Jul-2010 Chaitanya/Joe Hunt
+! Changed calculating of cost update (average material price) for better sync.
+$ /purchasing/includes/db/grn_db.inc
+  /purchasing/includes/db/invoice_db.inc
+  /manufacturing/includes/db/work_orders_db.inc
+  /includes/db/inventory_db.inc
+  
 ------------------------------- Release 2.3 Beta --------------------------------
 28-Jun-2010 Joe Hunt
 ! Release 2.3 Beta

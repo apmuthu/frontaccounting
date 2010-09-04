@@ -349,13 +349,18 @@ function can_commit()
     	}
 	}
 	
+	if ($_SESSION['PO']->trans_type == ST_SUPPINVOICE && !$Refs->is_valid(get_post('supp_ref'))) 
+	{
+		display_error(_("You must enter a supplier's invoice reference."));
+		set_focus('supp_ref');
+		return false;
+	}
 	if ($_SESSION['PO']->trans_type == ST_PURCHORDER && get_post('delivery_address') == '')
 	{
 		display_error(_("There is no delivery address specified."));
 		set_focus('delivery_address');
 		return false;
 	} 
-	
 	if (get_post('StkLocation') == '')
 	{
 		display_error(_("There is no location specified to move any items into."));
@@ -420,6 +425,7 @@ function handle_commit_order()
 			$inv->tran_date = $cart->orig_order_date;
 			$inv->reference = $ref;
 			$inv->supp_reference = $cart->supp_ref;
+			$inv->tax_included = $cart->tax_included;
 			$supp = get_supplier($cart->supplier_id);
 			$inv->tax_group_id = $supp['tax_group_id'];
 //			$inv->ov_discount 'this isn't used at all'
@@ -491,16 +497,29 @@ textarea_row(_("Memo:"), 'Comments', null, 70, 4);
 end_table(1);
 
 div_start('controls', 'items_table');
+$process_txt = _("Place Order");
+$update_txt = _("Update Order");
+$cancel_txt = _("Cancel Order");
+if ($_SESSION['PO']->trans_type == ST_SUPPRECEIVE) {
+	$process_txt = _("Process GRN");
+	$update_txt = _("Update GRN");
+	$cancel_txt = _("Cancel GRN");
+}	
+elseif ($_SESSION['PO']->trans_type == ST_SUPPINVOICE) {
+	$process_txt = _("Process Invoice");
+	$update_txt = _("Update Invoice");
+	$cancel_txt = _("Cancel Invoice");
+}	
 if ($_SESSION['PO']->order_has_items()) 
 {
 	if ($_SESSION['PO']->order_no)
-		submit_center_first('Commit', _("Update Order"), '', 'default');
+		submit_center_first('Commit', $update_txt, '', 'default');
 	else
-		submit_center_first('Commit', _("Place Order"), '', 'default');
-	submit_center_last('CancelOrder', _("Cancel Order")); 	
+		submit_center_first('Commit', $process_txt, '', 'default');
+	submit_center_last('CancelOrder', $cancel_txt); 	
 }
 else
-	submit_center('CancelOrder', _("Cancel Order"), true, false, 'cancel');
+	submit_center('CancelOrder', $cancel_txt, true, false, 'cancel');
 div_end();
 //---------------------------------------------------------------------------------------------------
 

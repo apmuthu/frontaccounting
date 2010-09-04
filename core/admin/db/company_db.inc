@@ -30,13 +30,16 @@ function update_company_prefs( $params, $pref = TB_PREF )
 	$prefs can be preference name, array of names, or null for all preferences.
 	
 */
-function get_company_pref($prefs = null, $tbpref = TB_PREF)
+function get_company_pref($prefs = null, $tbpref = null)
 {
-	global $SysPrefs, $core_version;
+	global $SysPrefs, $db_version;
 	
 	if (!isset($_SESSION['SysPrefs']->prefs)) { // cached preferences
 
 		$_SESSION['SysPrefs'] = new sys_prefs();
+
+		if (!isset($tbpref))
+			$tbpref = TB_PREF;
 
 		$sql = "SELECT name, value FROM {$tbpref}sys_prefs";
 		$result = @db_query($sql); // supress errors before 2.3 db structure upgrade
@@ -51,7 +54,7 @@ function get_company_pref($prefs = null, $tbpref = TB_PREF)
 		$SysPrefs = &$_SESSION['SysPrefs'];
 
 		// update current db status for info in log file
-		$SysPrefs->db_ok = $SysPrefs->prefs['version_id'] == $core_version;
+		$SysPrefs->db_ok = $SysPrefs->prefs['version_id'] == $db_version;
 	}
 
 	$all = $_SESSION['SysPrefs']->prefs;
@@ -149,15 +152,36 @@ function get_payment_terms_all($show_inactive)
 	if (!$show_inactive) $sql .= " WHERE !inactive";
 	return db_query($sql,"could not get payment terms");
 }
-
-function key_in_foreign_table($id, $table, $key, $escaped=false)
+/*
+	Return number of records in tables, where some foreign key $id is used.
+	$id - searched key value
+	$tables - array of table names (without prefix); when table name is used as a key, then
+		value is name of foreign key field. For numeric keys $stdkey field name is used.
+	$stdkey - standard name of foreign key.
+*/
+function key_in_foreign_table($id, $tables, $stdkey, $escaped=false)
 {
 	if (!$escaped)
 		$id = db_escape($id);
-	$sql= "SELECT COUNT(*) FROM ".TB_PREF."$table WHERE $key = $id";
-	$result = db_query($sql,"check $table relations failed");
-	$myrow = db_fetch_row($result);
-	return ($myrow[0] > 0); 
+
+	if (!is_array($tables))
+		$tables = array($tables);
+
+	$sqls = array();
+	foreach ($tables as $tbl => $key) {
+		if (is_numeric($tbl)) {
+			$tbl = $key;
+			$key = $stdkey;
+		}
+		$sqls[] = "(SELECT COUNT(*) as cnt FROM ".TB_PREF."$tbl WHERE $key=$id)\n";
+	}
+
+	$sql = "SELECT sum(cnt) FROM (". implode(' UNION ', $sqls).") as counts";
+
+	$result = db_query($sql, "check relations for ".implode(',',$tables)." failed");
+	$count =  db_fetch($result);
+
+	return $count[0];
 }
 
 ?>

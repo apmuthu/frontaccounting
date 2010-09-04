@@ -180,6 +180,7 @@ session_start();
 // this is to fix the "back-do-you-want-to-refresh" issue - thanx PHPFreaks
 header("Cache-control: private");
 
+include_once($path_to_root . "/config.php");
 get_text_init();
 
 // Page Initialisation
@@ -187,7 +188,7 @@ if (!isset($_SESSION['language']) || !method_exists($_SESSION['language'], 'set_
 {
 	$l = array_search_value($dflt_lang, $installed_languages,  'code');
 	$_SESSION['language'] = new language($l['name'], $l['code'], $l['encoding'],
-	 isset($l['rtl']) ? 'rtl' : 'ltr');
+	 (isset($l['rtl']) && $l['rtl'] === true) ? 'rtl' : 'ltr');
 }
 
 $_SESSION['language']->set_language($_SESSION['language']->code);
@@ -200,7 +201,7 @@ if (file_exists($path_to_root . "/lang/".$_SESSION['language']->code."/locale.in
 }
 
 include_once($path_to_root . "/includes/access_levels.inc");
-include_once($path_to_root . "/config.php");
+include_once($path_to_root . "/version.php");
 include_once($path_to_root . "/includes/main.inc");
 
 // Ajax communication object

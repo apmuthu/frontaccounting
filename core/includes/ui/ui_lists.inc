@@ -1917,6 +1917,25 @@ function supp_allocations_list_cell($name, $selected=null)
 	echo "</td>\n";
 }
 
+function supp_transactions_list_cell($name, $selected=null)
+{
+	global $all_items;
+
+	echo "<td>\n";
+	$allocs = array( 
+		$all_items=>_("All Types"),
+		'6'=>_("GRNs"),
+		'1'=> _("Invoices"),
+		'2'=> _("Overdue Invoices"),
+		'3' => _("Payments"),
+		'4' => _("Credit Notes"),
+		'5' => _("Overdue Credit Notes")
+	);
+
+	echo array_selector($name, $selected, $allocs);
+	echo "</td>\n";
+}
+
 function policy_list_cells($label, $name, $selected=null)
 {
 	if ($label != null)
@@ -2266,4 +2285,34 @@ function payment_type_list_row($label, $name, $selected_id=null, $submit_on_chan
 	echo "</td></tr>\n";
 }
 
+function coa_list_row($label, $name, $value=null)
+{
+	global $path_to_root, $installed_extensions;
+
+	$path = $path_to_root.'/sql/';
+	$coas = array();
+	$sqldir = opendir($path);
+	while (false !== ($fname = readdir($sqldir)))
+	{
+		if (is_file($path.$fname) && substr($fname,-4)=='.sql' && @($fname[2] == '_'))
+		{
+			$ext = array_search_value($fname, $installed_extensions, 'sql');
+			if ($ext!=null) {
+				$descr = $ext['name'];
+			} elseif ($fname == 'en_US-new.sql') { // two standard COAs
+				$descr = _("Standard new company American COA (4 digit)");
+			} elseif ($fname == 'en_US-demo.sql') {
+				$descr = _("Standard American COA (4 digit) with demo data");
+			} else
+				$descr = $fname;
+
+			$coas[$fname] =  $descr;
+		}
+	}
+	ksort($coas);
+
+	echo "<tr><td class='label'>$label</td>\n<td>";
+	echo array_selector( $name, $value, $coas );
+	echo "</td></tr>\n";
+}
 ?>
