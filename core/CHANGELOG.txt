@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.39.2.662 2010/09/05 15:59:11 frontaccounting Exp $
+* @version $Id: CHANGELOG.txt,v 1.39.2.666 2010/09/07 07:22:41 frontaccounting Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -18,6 +18,24 @@ Legend:
 - -> Removed
 ! -> Note
 $ -> Affected files
+
+------------------------------- Release 2.3 RC1 --------------------------------
+07-Sep-2010 Janusz Dobrowolski
+! Release 2.3 RC1
+$ version.php
+# Ugly bug in formating numbers
+$ /js/utils.js
+
+07-Sep-2010 Joe Hunt/Chaitanya
+! Removed all decimal roundings in cost price calculations
+$ /purchasing/includes/db/grn_db.inc
+  /manufacturing/includes/db/work_orders_db.inc
+
+06-Sep-2010 Janusz Dobrowolski
+# Fixed error on new contact add.
+$ /includes/ui/contacts_view.inc
+# Fixed crud editor mode passing.
+$ /includes/ui/simple_crud_class.inc
 
 ------------------------------- Release 2.3 RC --------------------------------
 05-Sep-2010 Joe Hunt
