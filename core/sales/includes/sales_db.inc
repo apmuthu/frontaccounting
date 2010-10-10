@@ -174,7 +174,7 @@ function get_kit_price($item_code, $currency, $sales_type_id, $factor=null,
 		$kit_price = get_price( $item_code, $currency, $sales_type_id, 
 			$factor, $date);
 
-		if ($kit_price !== false) {
+		if ($kit_price !== 0) {
 			return $kit_price;
 		}
 	}	
@@ -300,7 +300,8 @@ function read_sales_trans($doc_type, $trans_no, &$cart)
 					$myrow["stock_id"],$myrow["quantity"],
 					$myrow["unit_price"], $myrow["discount_percent"],
 					$myrow["qty_done"], $myrow["standard_cost"],
-					$myrow["StockDescription"],$myrow["id"], $myrow["debtor_trans_no"]);
+					$myrow["StockDescription"],$myrow["id"], $myrow["debtor_trans_no"],
+					@$myrow["src_id"]);
 			}
 		}
 	} // !newdoc

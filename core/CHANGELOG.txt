@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.39.2.666 2010/09/07 07:22:41 frontaccounting Exp $
+* @version $Id: CHANGELOG.txt,v 1.39.2.698 2010/10/11 07:49:43 itronics Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -19,6 +19,184 @@ Legend:
 ! -> Note
 $ -> Affected files
 
+------------------------------- Release 2.3 RC2 --------------------------------
+! Release 2.3RC2
+11-Oct-2010 Joe Hunt
+$ version.php
+  update.html
+
+11-Oct-2010 Janusz Dobrowolski
++ Added document reference display in cust/supp payments
+$ /includes/ui/allocation_cart.inc
+! Added payment terms categories
+$ /includes/types.inc
+! Added terms category parameter to sale_payment_list
+$ /includes/ui/ui_lists.inc
+  /sales/customer_invoice.php
+! Allowed full edition of bank account if not used yet
+$ /gl/manage/bank_accounts.php
+# Fixed point of sale handling and terms selection.
+$ /sales/sales_order_entry.php
+  /sales/includes/cart_class.inc
+  /sales/includes/db/sales_invoice_db.inc
+  /sales/includes/ui/sales_order_ui.inc
+! Payment terms in so/si view
+$ /sales/view/view_invoice.php
+  /sales/view/view_sales_order.php
+! Updated po template file
+$ /lang/new_language_template/LC_MESSAGES/empty.po
+# Fixed cash payment terms definition
+$ /sql/en_US-demo.sql
+  /sql/en_US-new.sql
+
+10-Oct-2010 Joe Hunt
+# Master bug in class supp_trans get_items_total. Minor bug in gl_db_trans.inc
+  Wrong tax report and wrong supp trans/gl records with gl item lines.
+  Fixing tax_included in gl_items. Layout improvements.
+$ /purchasing/includes/supp_trans_class.inc
+  /purchasing/includes/db/invoice_db.inc
+  /purchasing/includes/ui/invoice_ui.inc
+  /purchasing/view/view_supp_credit.php
+  /gl/includes/db/gl_db_trans.inc
+
+06-Oct-2010 Jusz Dobrowolski
+# Fixed gettext for extension links.
+$ /reporting/includes/reports_classes.inc
+! Added helper for gettext domain switching
+$ /includes/lang/gettext.php
+  /applications/application.php
+  /frontaccounting.php
+
+06-Oct-2010 Joe Hunt
+! Option for saving report selections ($save_report_selections > 0 in config.php means days to save)
+$ /reporting/includes/reports_classes.inc
+  /reporting/prn_redirect.php
+  config.default.php
+# Excel reports were missing their headers (due to change in report system).
+$ /reporting/includes/excel_report.inc
+# [0000259] Item prices not transferring when using kit codes 
+$ /sales/includes/sales_db.inc
+
+05-Oct-2010 Jusz Dobrowolski
+# [0000258] Broken src_id fields after sales document edition.
+$ /sales/includes/cart_class.inc
+  /sales/includes/sales_db.inc
+
+05-Oct-2010 Joe Hunt
+# [00000257] Bad Layout in sales order inquiry etc. (long item descriptions)
+$ /sales/inquiry/sales_orders_view.php
+  /sales/inquiry/sales_deliveries_view.php
+  /purchasing/inquiry/po_search.php
+  /purchasing/inquiry/po_search_completed.php
+  /inventory/inquiry/stock_movements.php
+  /gl/inquiry/gl_account_inquiry.php
+! Other layour improvements
+  /admin/fiscalyears.php
+  /taxes/tax_groups.php
+  /taxes/tax_types.php
+  
+05-Oct-2010 Janusz Dobrowolski
+# Fixed contact type for language selection
+$ reporting/rep107.php
+# Fixed language file selection
+$ reporting/includes/class.pdf.inc
+
+04-Oct-2010 Janusz Dobrowolski
+# [0000252] Error during credit invoice processing for already allocated sales invoice.
+$ /sales/includes/db/custalloc_db.inc
+
+04-Oct-2010 Joe Hunt
+# Dimension Report doesn't show up with correct references
+$ /reporting/rep501.php
+
+01-Oct-2010 Janusz Dobrowolski/Scott
++ Added chinese simplified installation wizard translation.
+$ /install/isession.inc
+  /install/lang/de_DE/LC_MESSAGES/zh_CN.mo (new)
+  /install/lang/de_DE/LC_MESSAGES/zh_CN.po (new)
+# Added missing GL/sql messages.
+$ /lang/new_language_template/LC_MESSAGES/empty.po
+
+28-Sep-2010 Janusz Dobrowolski
+# Reference should be updated after SO edition
+$ /sales/includes/db/sales_order_db.inc
+# [0000250] Reference update should not change next reference.
+$ /includes/references.inc
+# Division by zero error in graphics (Joe Hunt)
+$ /reporting/includes/class.graphic.inc
+# Fixed missing gettext calls
+$ /gl/inquiry/gl_account_inquiry.php
+  /purchasing/manage/suppliers.php
+  /sales/manage/customer_branches.php
+  /sales/manage/customers.php
+# Fixed warning on multiply extension access file include
+$ /includes/access_levels.inc
+! Updated po tempate 
+$ /lang/new_language_template/LC_MESSAGES/empty.po
+
+27-Sep-2010 Janusz Dobrowolski
+! Alowed optional path for $icon parameter in set_icon helper
+$ /includes/ui/ui_input.inc
+! pageNumber property of TCPDF class made publicly accesible 
+$ /reporting/includes/fpdi/fpdi2tcpdf_bridge.php
+
+23-Sep-2010 Janusz Dobrowolski
+# Fixed focus behaviour
+$ /includes/ajax.inc
++ Additional debug logging helper.
+$ /includes/ui/ui_view.inc
+# Fixed gettext for extension menu options.
+$ /applications/application.php
+
+22-Sep-2010 Janusz Dobrowolski
+# Fixed delivery address printing in pdf documents.
+$ /reporting/includes/header2.inc
+
+20-Sep-2010 Janusz Dobrowolski
+# Fixed third party  module installation.
+$ /admin/inst_module.php
+
+17-Sep-2010 Janusz Dobrowolski
++ [0000248] External url reading made independent of php configuration.
+$ /gl/includes/db/gl_db_rates.inc
+  /includes/packages.inc
+  /includes/remote_url.inc (new)
+# Fixed custom reports includes issue.
+$ /includes/main.inc
+  /reporting/prn_redirect.php
+# Warning fixed
+$ /includes/archive.inc
+
+13-Sep-2010 Joe Hunt/Chaitanya
+! Improved information in Bank Transfers.
+$ /gl/includes/db/gl_db_banking.inc
+
+11-Sep-2010 Janusz Dobrowolski
+# Uniqueness moved from name to debtor_ref key in debtors_master
+$ /sql/en_US-demo.sql
+  /sql/en_US-new.sql
+
+10-Sep-2010 Joe Hunt
+! Layout improvements
+$ /gl/inquiry/gl_account_inquiry.php
+  /includes/ui/contacts_view.inc
+  /includes/ui/ui_view.inc
+  /manufacturing/manage/bom_edit.php
+
+09-Sep-2010 Janusz Dobrowolski
+# Missing focus on sales entry page
+$ /sales/includes/ui/sales_order_ui.inc
+# Invalid user table name 
+$ /sql/alter2.3rc.sql
+
+08-Sep-2010 Joe Hunt
+# Material cost updated when buying service items. Resulted in double COGS booking.
+$ /purchasing/includes/db/grn_db.inc
+  /purchasing/includes/db/invoice_db.inc
+  /sales/includes/db/sales_delivery_db.inc
+! Layout improvements in accruals.php
+$ /gl/accruals.php
+
 ------------------------------- Release 2.3 RC1 --------------------------------
 07-Sep-2010 Janusz Dobrowolski
 ! Release 2.3 RC1
@@ -32,7 +210,7 @@ $ /purchasing/includes/db/grn_db.inc
   /manufacturing/includes/db/work_orders_db.inc
 
 06-Sep-2010 Janusz Dobrowolski
-# Fixed error on new contact add.
+# [0000247] Fixed error on new contact add.
 $ /includes/ui/contacts_view.inc
 # Fixed crud editor mode passing.
 $ /includes/ui/simple_crud_class.inc

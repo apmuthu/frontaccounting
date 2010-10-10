@@ -368,18 +368,18 @@ function view_stock_status_cell($stock_id, $description=null)
 
 //--------------------------------------------------------------------------------------
 
-function display_debit_or_credit_cells($value)
+function display_debit_or_credit_cells($value, $bold=false)
 {
 	$value = round2($value, user_price_dec());
 	if ($value >= 0)
 	{
-		amount_cell($value);
+		amount_cell($value, $bold);
 		label_cell("");
 	}
 	elseif ($value < 0)
 	{
 		label_cell("");
-		amount_cell(abs($value));
+		amount_cell(abs($value), $bold);
 	}
 }
 
@@ -1290,7 +1290,6 @@ if (!function_exists('_vd'))
 {
   	function _vd($mixed, $title = '', $exit = false)
   	{
-    	// Only the site admin is able to proceed here.
     	$str = (!empty($title) ? ($title .':') : '') .'<pre>';
     	$str .= print_r($mixed, true); //var_dump($mixed);
     	$str .= "</pre>\n";
@@ -1298,6 +1297,13 @@ if (!function_exists('_vd'))
     	if ($exit)
     		exit;
   	}
+}
+
+function _vl($mixed, $title = '', $exit = false)
+{
+	error_log((!empty($title) ? ($title .':') : '') . var_export($mixed, true));
+	if ($exit)
+		exit;
 }
 
 function display_backtrace($cond=true, $msg='') {
