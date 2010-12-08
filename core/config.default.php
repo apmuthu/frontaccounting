@@ -39,7 +39,7 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 	$select_trail 	= 0; // track also SELECT queries
 	if ($go_debug > 0)
 	{
-		error_reporting(E_ALL);
+		error_reporting(-1);
 		ini_set("display_errors", "On");
 	}
 	else

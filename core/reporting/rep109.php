@@ -203,9 +203,6 @@ function print_sales_orders()
 
 		$DisplayTotal = number_format2($myrow["freight_cost"] + $SubTotal, $dec);
 		$rep->Font('bold');
-//		if ($myrow['tax_included'] == 0)
-//			$rep->TextCol(3, 6, $doc_TOTAL_ORDER, - 2);
-//		else	
 		$rep->TextCol(3, 6, $doc_TOTAL_ORDER2, - 2);
 		$rep->TextCol(6, 7,	$DisplayTotal, -2);
 		$words = price_in_words($myrow["freight_cost"] + $SubTotal, ST_SALESORDER);
@@ -217,15 +214,6 @@ function print_sales_orders()
 		$rep->Font();
 		if ($email == 1)
 		{
-			$res = get_branch_contacts(branch_code, 'order', customer_id);
-			if ($myrow['contact_email'] == '')
-			{
-				$myrow['contact_email'] = $branch['email'];
-				if ($myrow['contact_email'] == '')
-					$myrow['contact_email'] = $myrow['master_email'];
-				$myrow['DebtorName'] = $branch['br_name'];
-			}
-			//$myrow['reference'] = $i;
 			$rep->End($email, $doc_Invoice_no . " " . $i, $myrow);
 		}
 	}

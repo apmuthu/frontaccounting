@@ -15,6 +15,12 @@ var _hotkeys = {
 	'focus': -1		// currently selected list element
 };
 
+function validate(e) {
+	if (e.name && (typeof _validate[e.name] == 'function'))
+		return _validate[e.name](e);
+	return true;
+}
+
 function save_focus(e) {
   _focus = e.name||e.id;
   var h = document.getElementById('hints');
@@ -222,36 +228,24 @@ var inserts = {
   	    // this shows divs for js enabled browsers only
 	    e.style.display = 'block';
 	},
+
+	'button': function(e) {
+		e.onclick = function(){ return validate(e); }
+	},
 //	'.ajaxsubmit,.editbutton,.navibutton': // much slower on IE7
 	'button.ajaxsubmit,input.ajaxsubmit,input.editbutton,button.editbutton,button.navibutton': 
 	function(e) {
-		    e.onclick = function() {
-			    save_focus(e);
-			    var asp = e.getAttribute('aspect')
-				if (asp && asp.indexOf('process') !== -1)
-					JsHttpRequest.request(this, null, 60000);
-				else
-					JsHttpRequest.request(this);
-				return false;
-		    }
-	},
-	'button': function(e) {
-		if (e.name) {
-			var func = _validate[e.name];
-			var old = e.onclick;
-			if(func) { 
-				if (typeof old != 'function' || old == func) { // prevent multiply binding on ajax update
-					e.onclick = func;
-				} else {
-					e.onclick = function() {
-						if(func()) 
-							{ old(); return true;}
-						else
-							return false;
-					}
+			e.onclick = function() {
+				if (validate(e)) {
+					save_focus(e);
+					var asp = e.getAttribute('aspect')
+					if (asp && asp.indexOf('process') !== -1)
+						JsHttpRequest.request(this, null, 60000);
+					else
+						JsHttpRequest.request(this);
 				}
+				return false;
 			}
-		}
 	},
     '.amount': function(e) {
 		if(e.onblur==undefined) {
@@ -280,11 +274,7 @@ var inserts = {
 		}
 	},
 	'button[aspect=popup]': function(e) {
-						var old = e.onclick
 		e.onclick = function() {
-//			this.form.target = '_blank';
-//				old();
-//			return true;
 			if(_w) _w.close(); // this is really necessary to have window on top in FF2 :/
 			  _w = open(document.location+'popup=1',
 				  "edit","Scrollbars=0,resizable=0,width=800,height=600, top=50,left=50");
@@ -313,6 +303,16 @@ var inserts = {
 			return false;
 		}
 	},
+	'a.repopts_link': 	function(l) {
+		l.onclick = function() {
+		    save_focus(this);
+		    var replinks = document.getElementsBySelector('a.repopts_link');
+				for(var i in replinks)
+					replinks[i].style.fontWeight = replinks[i]==this ? 'bold' : 'normal';
+			JsHttpRequest.request(this, null);
+			return false;
+		}
+	},
 	'a': function(e) { // traverse menu
   		e.onkeydown = function(ev) { 
 			ev = ev||window.event;
@@ -323,12 +323,26 @@ var inserts = {
 					return false;
 			}
 		}
+		// prevent unneeded transaction entry abortion
+		if (e.className == 'shortcut' 
+		 || e.className == 'menu_option' 
+		 || e.className == 'menu_tab'
+ 		 || e.className == 'selected')
+			e.onclick = function(ev) {
+				if (_validate._processing 
+				 && _validate._modified
+				 && !confirm(_validate._processing)) {
+					ev.returnValue = false;
+					return false;
+				}
+				window.location = e.href;
+			}
 	},
 	'ul.ajaxtabs':	function(ul) {
 	    var ulist=ul.getElementsByTagName("li");
 	    for (var x=0; x<ulist.length; x++){ //loop through each LI e
 		var tab=ulist[x].getElementsByTagName("button")[0];
-		if(tab.onclick==undefined) {
+//		if(tab.onclick==undefined) {
 // ?  var modifiedurl=ulistlink.getAttribute("href").replace(/^http:\/\/[^\/]+\//i, "http://"+window.location.hostname+"/")
 		    var url = tab.form.action
 		    tab.onclick=function(){
@@ -336,8 +350,9 @@ var inserts = {
 			return false;
 		    }
 		}
-	    }
+//	    }
 	}
+
 /*	'tr.editrow': function(e) {
 		  	e.onkeydown = function(ev) { 
 	  		ev = ev||window.event;
@@ -427,11 +442,12 @@ function setHotKeys() {
 						return false;
 					}
 					if (((asp && asp.indexOf('default') !== -1) && key==13)||((asp && asp.indexOf('cancel') !== -1) && key==27)) {
-
-						if (asp.indexOf('process') !== -1)
-							JsHttpRequest.request(el, null, 60000);
-						else
-							JsHttpRequest.request(el);
+						if (validate(el)) {
+							if (asp.indexOf('process') !== -1)
+								JsHttpRequest.request(el, null, 60000);
+							else
+								JsHttpRequest.request(el);
+						}
 						ev.returnValue = false;
 						return false;
 					}
@@ -453,7 +469,7 @@ function setHotKeys() {
 		if (_hotkeys.alt==true) {
 			if (key == 18) {
 				_hotkeys.alt = false;
-				if (_hotkeys.focus>=0) {
+				if (_hotkeys.focus >= 0) {
 					var link = _hotkeys.list[_hotkeys.focus];
 					if(link.onclick) 
 						link.onclick();

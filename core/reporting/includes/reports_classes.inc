@@ -55,24 +55,37 @@ class BoxReports
 		$st_reports = "";
 		$st_params = "";
 		$st_classes = "<b>" . _("Report Classes:") . "</b><br>";
+
+		if (isset($_GET['Class']))
+			set_focus('class'.$_GET['Class']);
+
 		foreach($this->ar_classes as $class_id => $name)
 		{
-			$style = $class_id==$_REQUEST['Class'] ? '' : "style='display:none'";
-//			$cname = access_string($key, true);
-//			$style = $_REQUEST['Class']==$cname ? '' : "style='display:none'";
+			if (!isset($this->ar_reports[$class_id]))
+				continue; // e.g. no dimensions
+
 			$acc = access_string($name);
 			$st_classes .= "<a href='"
 				.$_SERVER['PHP_SELF']."?Class=$class_id'"
-				." class='menu_option' id='".default_focus()."'"
-				." onclick='return showClass(\"$class_id\");'$acc[1]>$acc[0]</a> <br>";
+				." style='font-weight:". ($_REQUEST['Class'] == $class_id ? 'bold' : 'normal')."'"
+				." class='repclass_link' id='".'class'.$class_id."'"
+				."$acc[1]>$acc[0]</a> <br>";
+
+			$style = $class_id==$_REQUEST['Class'] ? '' : "style='display:none'";
 			$st_reports .= "<table class='repclass' id='TAB_" . $class_id ."' $style cellpadding=0 cellspacing=0 border=0 width='100%'><tr><td><b>" . _("Reports For Class: ") . "&nbsp;$name</b></td></tr>\n";
 			foreach($this->ar_reports[$class_id] as $rep_id => $report)
 			{
 				$acc = access_string($report->name);
-				$st_reports .= "<tr><td><a class='printlink' href='"
-					.$_SERVER['PHP_SELF']."?Class=$class_id&rep_id=$report->id'"
-					." id='".default_focus()."'"
+				$st_reports .= "<tr><td><a class='repopts_link'"
+					." href='".$_SERVER['PHP_SELF']."?Class=$class_id&rep_id=$report->id'"
+					." style='font-weight:". (@$_GET['rep_id'] == $report->id ? 'bold' : 'normal')."'"
+					." id='".$id = default_focus()."'"
 					."$acc[1]>$acc[0]</a><tr><td>\n";
+
+				if (@$_REQUEST['rep_id'] == $report->id) {
+					$Ajax->activate($id);
+				}
+
 				if (isset($_REQUEST['rep_id']) && $_REQUEST['rep_id']==$report->id) {
 
 					$action = $path_to_root.'/reporting/prn_redirect.php';
@@ -94,28 +107,7 @@ class BoxReports
 		$st_params = "<div id='rep_form'>".
 			"$st_params</div>";
 		
-
-		$st = 	"<script language='javascript'>
-					function showClass(pClass) {
-						var classes = document.getElementsBySelector('.repclass');
-						for(var i in  classes) {
-							cl = classes[i];
-							cl.style.display=
-							(cl.id==('TAB_'+pClass)) ? \"block\" : \"none\";
-						}
-						document.getElementById('rep_form').innerHTML = '';
-//						document.getElementById('rep_form').style.display = 'none';
-						return false;
-					}
-					function checkDate(pObj) {
-						var re = /^(3[01]|0[1-9]|[12]\d)\/(0[1-9]|1[012])\/\d{4}/;
-						if (re.test(pObj.value)==false) {
-							alert('" . _("Invalid date format") . "')
-						}
-					}
-				</script>
-				";
-		$st .= "<table align='center' width='80%' style='border:1px solid #cccccc;'><tr valign='top'>";
+		$st = "<table align='center' width='80%' style='border:1px solid #cccccc;'><tr valign='top'>";
 		$st .= "<td width='30%'>$st_classes</td>";
 		$st .= "<td width='35%' style='border-left:1px solid #cccccc;border-right:1px solid #cccccc;padding-left:3px;'>$st_reports</td>";
 		$st .= "<td width='35%'>$st_params</td>";
@@ -166,7 +158,8 @@ class BoxReports
 	//
 	function get_ctrl($name, $type)
 	{
-		global $path_to_root, $use_date_picker, $pdf_debug, $print_invoice_no, $def_print_destination;
+		global $path_to_root, $use_date_picker, $pdf_debug, $print_invoice_no,
+			$def_print_destination, $type_shortcuts;
 
 		$st = '';
 			switch ($type)
@@ -307,8 +300,8 @@ class BoxReports
 //						return supplier_list($name);
 
 				case 'INVOICE':
-					$IV = _("IV");
-					$CN = _("CN");
+					$IV = $type_shortcuts[ST_SALESINVOICE];
+					$CN = $type_shortcuts[ST_CUSTCREDIT];
 					$ref = ($print_invoice_no == 1 ? "trans_no" : "reference");
 					$sql = "SELECT concat(".TB_PREF."debtor_trans.trans_no, '-',
 						".TB_PREF."debtor_trans.type) AS TNO, concat(".TB_PREF."debtor_trans.$ref, if (type=".ST_SALESINVOICE.", ' $IV ', ' $CN '), ".TB_PREF."debtors_master.name) as IName
@@ -316,7 +309,7 @@ class BoxReports
 					return combo_input($name, '', $sql, 'TNO', 'IName',array('order'=>false));
 
 				case 'DELIVERY':
-					$DN = _("DN");
+					$DN = $type_shortcuts[ST_CUSTDELIVERY];
 					$sql = "SELECT
 					concat(".TB_PREF."debtor_trans.trans_no, '-', ".TB_PREF."debtor_trans.type) AS TNO, concat(".TB_PREF."debtor_trans.trans_no, ' $DN ',
 					 ".TB_PREF."debtors_master.name) as IName
@@ -349,9 +342,9 @@ class BoxReports
 					return combo_input($name, '', $sql, 'order_no', 'IName',array('order'=>false));
 
 				case 'REMITTANCE':
-					$BP = _("BP");
-					$SP = _("SP");
-					$CN = _("CN");
+					$BP = $type_shortcuts[ST_BANKPAYMENT];
+					$SP = $type_shortcuts[ST_SUPPAYMENT];
+					$CN = $type_shortcuts[ST_SUPPCREDIT];
 					$ref = ($print_invoice_no == 1 ? "trans_no" : "reference");
 					$sql = "SELECT concat(".TB_PREF."supp_trans.trans_no, '-',
 						".TB_PREF."supp_trans.type) AS TNO, concat(".TB_PREF."supp_trans.$ref, if (type=".ST_BANKPAYMENT.", ' $BP ', if (type=".ST_SUPPAYMENT.", ' $SP ', ' $CN ')), ".TB_PREF."suppliers.supp_name) as IName
@@ -359,9 +352,9 @@ class BoxReports
 					return combo_input($name, '', $sql, 'TNO', 'IName',array('order'=>false));
 
 				case 'RECEIPT':
-					$BD = _("BD");
-					$CP = _("CP");
-					$CN = _("CN");
+					$BD = $type_shortcuts[ST_BANKDEPOSIT];
+					$CP = $type_shortcuts[ST_CUSTPAYMENT];
+					$CN = $type_shortcuts[ST_CUSTCREDIT];
 					$ref = ($print_invoice_no == 1 ? "trans_no" : "reference");
 					$sql = "SELECT concat(".TB_PREF."debtor_trans.trans_no, '-',
 						".TB_PREF."debtor_trans.type) AS TNO, concat(".TB_PREF."debtor_trans.$ref, if (type=".ST_BANKDEPOSIT.", ' $BD ', if (type=".ST_CUSTPAYMENT.", ' $CP ', ' $CN ')), ".TB_PREF."debtors_master.name) as IName

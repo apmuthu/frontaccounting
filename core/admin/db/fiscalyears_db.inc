@@ -81,17 +81,26 @@ function is_date_in_fiscalyears($date, $closed=true)
 	return db_fetch($result) !== false;
 }
 
-function is_bad_begin_date($date)
+function check_begin_end_date($date1, $date2)
 {
-	$bdate = date2sql($date);
-	$sql = "SELECT MAX(end) FROM ".TB_PREF."fiscal_year WHERE begin < '$bdate'";
+	$sql = "SELECT MAX(end), MIN(begin) FROM ".TB_PREF."fiscal_year";
+	$result = db_query($sql, "could not retrieve last fiscal years");
+	$row = db_fetch_row($result);
+	if ($row[0] === null)
+		return true;
+	$max = add_days(sql2date($row[0]), 1);
+	$min = add_days(sql2date($row[1]), -1);
+	return ($max === $date1 || $min === $date2);
+}
 
+function next_begin_date()
+{
+	$sql = "SELECT MAX(end) FROM ".TB_PREF."fiscal_year";
 	$result = db_query($sql, "could not retrieve last fiscal years");
 	$row = db_fetch_row($result);
 	if ($row[0] === null)
 		return false;
-	$max = add_days(sql2date($row[0]), 1);
-	return ($max !== $date);
+	return add_days(sql2date($row[0]), 1);
 }
 
 function check_years_before($date, $closed=false)
@@ -115,6 +124,12 @@ function close_year($year)
 		display_error(_("The Retained Earnings Account or the Profit and Loss Year Account has not been set in System and General GL Setup"));
 		return false;
 	}
+	if (!is_account_balancesheet($co['retained_earnings_act']) || is_account_balancesheet($co['profit_loss_year_act']))
+	{
+		display_error(_("The Retained Earnings Account should be a Balance Account or the Profit and Loss Year Account should be an Expense Account (preferred the last one in the Expense Class)"));
+		return false;
+	}
+
 	begin_transaction();
 
 	$myrow = get_fiscalyear($year);
@@ -313,13 +328,13 @@ function delete_this_fiscalyear($selected_id)
 	
 	$sql = "SELECT account, SUM(amount) AS amount FROM ".TB_PREF."gl_trans WHERE tran_date <= '$to' GROUP by account";
 	$result = db_query($sql, "Could not retrieve gl trans");
+	$trans_no = get_next_trans_no(ST_JOURNAL);
 	while ($row = db_fetch($result))
 	{
 		$sql = "DELETE FROM ".TB_PREF."gl_trans WHERE tran_date <= '$to' AND account = '{$row['account']}'";
 		db_query($sql, "Could not delete gl trans");
 		if (is_account_balancesheet($row['account']))
 		{
-			$trans_no = get_next_trans_no(ST_JOURNAL);
 			$sql = "INSERT INTO ".TB_PREF."gl_trans (type, type_no, tran_date, account, memo_, amount) VALUES
 				(".ST_JOURNAL.", $trans_no, '$to', '{$row['account']}', '$ref', {$row['amount']})";
 			db_query($sql, "Could not insert gl trans");

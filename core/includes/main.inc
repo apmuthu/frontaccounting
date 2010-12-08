@@ -11,7 +11,6 @@
 ***********************************************************************/
 include_once($path_to_root . "/includes/db/connect_db.inc");
 
-include_once($path_to_root . "/includes/errors.inc");
 include_once($path_to_root . "/includes/types.inc");
 include_once($path_to_root . "/includes/systypes.inc");
 include_once($path_to_root . "/includes/references.inc");
@@ -270,11 +269,12 @@ function check_write($path)
 function copy_files($flist, $from, $to, $strict=false)
 {
 	foreach ($flist as $file) {
-		if (file_exists($from.'/'.$file))
+		if (file_exists($from.'/'.$file)) {
 			if (!copy_file($file, $from, $to))
 				return false;
-		if ($strict && !is_file($from.'/'.$file)) // if 
+		} else if ($strict) {
 				unlink($to.'/'.$file);
+		}
 	}
 	return true;
 }
@@ -302,19 +302,21 @@ function copy_file($file, $from, $to)
 /*
 	Search for file, looking first for company specific version, then for 
 	version provided by any extension module, finally in main FA directory.
-	Also adds include path for any related files.
+	Also adds include path for any related files, and sets $local_path_to_root 
+	to enable local translation domains.
 	
 	Returns found file path or null.
 */
 function find_custom_file($rep)
 {
-	global $installed_extensions, $path_to_root;
+	global $installed_extensions, $path_to_root, $local_path_to_root;
 
 	// customized per company version
 	$path = company_path();
 	$file = $path.$rep;
 	if (file_exists($file)) {
 		// add local include path
+		$local_path_to_root = $path;
 		set_include_path(dirname($file).PATH_SEPARATOR.get_include_path());
 		return $file;
 	}
@@ -328,6 +330,7 @@ function find_custom_file($rep)
 				$file = $path.$rep;
 				if (file_exists($file)) {
 					set_include_path($path.PATH_SEPARATOR.get_include_path());
+					$local_path_to_root = $path;
 					return $file;
 				}
 			}
@@ -338,6 +341,14 @@ function find_custom_file($rep)
 		return $file;
 
 	return null;
+}
+/*
+	
+	Protect against directory traversal.
+	Changes all not POSIX compatible chars to underscore.
+*/
+function clean_file_name($filename) {
+    return preg_replace('/[^a-zA-Z0-9.\-_]/', '_', $filename);
 }
 
 ?>

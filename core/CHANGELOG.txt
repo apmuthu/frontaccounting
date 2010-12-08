@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.39.2.716 2010/10/26 23:52:37 frontaccounting Exp $
+* @version $Id: CHANGELOG.txt,v 1.39.2.766 2010/12/09 12:53:08 itronics Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -18,6 +18,369 @@ Legend:
 - -> Removed
 ! -> Note
 $ -> Affected files
+
+------------------------------- Release 2.3 ------------------------------------
+09-Dec-2010 Joe Hunt
+! Release 2.3.0
+$ version.php
+
+08-Dec-2010 Janusz Dobrowolski
++ Debug backtace on all errors when go_debug is set to 2
+$ /includes/errors.inc
+  /includes/ui/ui_msgs.inc
+  /includes/ui/ui_view.inc
++ Added SetFontSize method
+$ /reporting/includes/excel_report.inc
+# Fixedsql assembly in gl_account_types.
+  /gl/includes/db/gl_db_account_types.inc
+# [0000312] Prevented directory traversal (by Mithy)
+$ /admin/display_prefs.php
+  /admin/attachments.php
+  /admin/company_preferences.php
+# [0000314] Fixed session fixation vulnerabilities
+  /includes/session.inc
+# [0000313] Fixed SQL injection vulerabilities (by Mithy)
+$ /dimensions/includes/dimensions_db.inc
+  /includes/banking.inc
+  /includes/data_checks.inc
+  /includes/systypes.inc
+  /purchasing/includes/ui/po_ui.inc
+  /reporting/includes/header2.inc
+  /sales/includes/sales_db.inc
+  /sales/includes/ui/sales_order_ui.inc
+! Updated gettext template
+$ /lang/new_language_template/LC_MESSAGES/empty.po
+
+08-Dec-2010 Janusz Dobrowolski
+# Added errors.inc inclusion
+$ /install/isession.inc
+
+07-Dec-2010 Janusz Dobrowolski
+# Missing tags argument in display_type call
+$ /reporting/rep705.php
+# [0000301] Voided transactions should no be presented in gl inquiry
+$ /gl/includes/db/gl_db_trans.inc
+# [0000306] Fixed upload file name test by Mithy
+$ /admin/backups.php
+# Fixed multiply warnings and error handling on PHP 5.3
+  /config.default.php
+  /reporting/includes/class.pdf.inc
+  /reporting/includes/pdf_report.inc
+  /reporting/includes/tcpdf.php
+# Added missing hooks class methods placeholders
+$ /includes/hooks.inc
+# Improved error handling
+$ /admin/inst_module.php
+  /includes/main.inc
+  /includes/session.inc
+  /includes/errors.inc
+
+03-Dec-2010 Janusz Dobrowolski
+# Fixed company prefs refresh after upgrade/restore
+$ /admin/inst_upgrade.php
+  /admin/backups.php
+  /admin/db/company_db.inc
+! Improved readibility in COA report.
+$ /reporting/rep701.php
+! Added core translation support for modules
+$ /includes/hooks.inc
+  /includes/lang/gettext.php
+! Cleanup.
+$ /includes/ui/ui_lists.inc
+  /sales/includes/ui/sales_order_ui.inc
+
+03-Dec-2010 Joe Hunt
++ Creating a warning when opening balance in trial balance is not in balance,
+  and a probably cause of that.
+$ /gl/inquiry/gl_trial_balance.php
+  /reporting/rep708.php
+! Fixing year closure for earlier fiscal years. en_US-demo.sql
+$ /sql/en_US-demo.sql
+  
+02-Dec-2010 Joe Hunt
+# When deleting a fiscal year, the open balances should share the same trans no.
+$ /admin/db/fiscalyear_db.inc
+! Changed so it is not possible to select a from date bigger than fiscal year end in trial balance.
+$ /gl/inquiry/gl_trial_balance.php
+
+01-Dec-2010 Joe Hunt
+! Better test for correct balance accounts when closing fiscal year.
+$ /admin/db/fiscalyear_db.inc
+
+29-Nov-2010 Janusz Dobrowolski
+# [0000290] Fixed side bug after last changes (can't upload file).
+$ /admin/backups.php
+# [0000289] Duplicated records in void/view/print transaction pager
+$ /admin/db/transactions_db.inc
+
+28-Nov-2010 Janusz Dobrowolski
++ Transaction name shortcuts added
+$ /includes/sysnames.inc
+  /reporting/includes/reports_classes.inc
++ Added Italian installer wizard translation by Paolo Ardoino
+$ /install/isession.inc
+  /install/lang/it_IT/LC_MESSAGES/it_IT.mo (new)
+  /install/lang/it_IT/LC_MESSAGES/it_IT.po (new)
+
+28-Nov-2010 Joe Hunt
+- Removed possibility to use bank account in Direct Invoice. This
+  was an old method for handling Cash Payment. We now have better options.
+$ /sales/includes/db/sales_invoice_db.inc
+  /sales/manage/customer_branches.php
+
+26-Nov-2010 Janusz Dobrowolski
+! [0000282] Improved reports menu display.
+$ /js/inserts.js
+  /js/utils.js
+  /js/reports.js (new)
+  /reporting/reports_main.php
+  /reporting/includes/reports_classes.inc
+# [0000283] Fixed potential vulnerability (Mithy)
+$ /admin/db/security_db.inc
+# Fixed hotkeys support.
+$ /js/inserts.js
+# [0000285] Errors/warning due to obsolete code
+$ /reporting/rep109.php
+# Fixed tabs switching
+$ /sales/manage/customer_branches.php
+
+23-Nov-2010 Janusz Dobrowolski
+# [0000281] Filename input sanitization (Mithy)
+$ /admin/attachments.php
+  /includes/main.inc
+  /admin/db/maintenance_db.inc
+# Fixed sql file view, sanitization.
+$ /admin/backups.php
+# Fixed period type display.
+$ /gl/manage/gl_quick_entries.php
+# Fixed errors disay in included files
+$ /includes/hooks.inc
+
+22-Nov-2010 Janusz Dobrowolski
++ Rewritten third party module installation according to extended hooks system.
+$ /admin/inst_module.php
+! Tabs/menu/roles extensions moved to module hooks file, added install/uninstall hooks.
+$ /includes/packages.inc
+  /includes/access_levels.inc
+  /sql/alter2.3.php
+! check_table() helper moved.
+$ /admin/inst_upgrade.php
+  /admin/db/maintenance_db.inc
+! Integration of hooks provided by extensions.
+$ /includes/hooks.inc
+  /includes/session.inc
+! Hooks for tabs/menu options added.
+  /frontaccounting.php
+  /applications/application.php
+! Small cleanup.
+$ /includes/main.inc
+! Fixed long timeout on localhost repo.
+$ /includes/remote_url.inc
+! [0000279] Fixed input sanitization by Mithy.
+$ /reporting/prn_redirect.php
+  /.htaccess
+# [0000280] Fixed parameter sanitization in get_company_extensions() by Mithy.
+$ /admin/db/company_db.inc
+# Fixed db_close() helper.
+$ /includes/db/connect_db.inc
+# Fixed bug in update_person_contact()
+$ /includes/db/crm_contacts_db.inc
+# Fixed bug in exrate return
+$ /gl/includes/db/gl_db_rates.inc
+# Item type display incorrect after change saving
+$ /inventory/manage/items.php
+
+18-Nov-2010 Janusz Dobrowolski
+! Updated including exclusive theme messages
+$ /lang/new_language_template/LC_MESSAGES/empty.po
++ Added Spanish (Mexican) installer wizard translation by Julio C. Perea Pastrana
+$ /install/isession.inc
+  /install/lang/es_MX/LC_MESSAGES/es_MX.po (new)
+  /install/lang/es_MX/LC_MESSAGES/es_MX.mo (new)
+
+18-Nov-2010 Joe Hunt
+# Could not enter a year before other years (removed readonly begin)
+  and better check for first end year.
+$ /adminfiscalyears.php
+  /admin/db/fiscalyears_db.inc
+  
+! Scrambled graphic images to avoid unwanted downloads.
+$ /reporting/rep102.php
+  /reporting/rep202.php
+  /reporting/rep706.php
+  /reporting/rep707.php
+  
+16-Nov-2010 Joe Hunt
+# Minor change in class.graphic.inc
+$ /reporting/includes/class.graphic.inc
+! Added Work Order Entry menu link after Sales Order issue.
+$ /sales/sales_order_entry.php
+
+15-Nov-2010 Janusz Dobrowolski
+# Fixed date legend on po/grn/invoice
+$ /purchasing/includes/ui/po_ui.inc
+# Fixed text encoding in graphics
+$ /reporting/includes/class.graphic.inc
+! Default font for graphics changed from Vera to LiberationSans-Regular
+$ /reporting/fonts/LiberationSans-Regular.ttf (new)
+  /reporting/fonts/Vera.ttf (removed)
+  /reporting/includes/class.graphic.inc
+  /reporting/rep102.php
+  /reporting/rep202.php
+  /reporting/rep706.php
+  /reporting/rep707.php
+
+13-Nov-2010 Janusz Dobrowolski
++ New hooks system added
+$ /includes/hooks.inc (new)
+  /includes/session.inc
+  /lang/new_language_template/locale.inc
+! Old hooks converted to new hooks API
+$ /gl/includes/db/gl_db_rates.inc
+  /includes/ui/ui_view.inc
+  /reporting/rep709.php
++ Added transaction db_write/db_void hooks
+$ /gl/includes/db/gl_db_banking.inc
+  /inventory/includes/db/items_adjust_db.inc
+  /inventory/includes/db/items_transfer_db.inc
+  /manufacturing/includes/db/work_order_issues_db.inc
+  /manufacturing/includes/db/work_order_produce_items_db.inc
+  /manufacturing/includes/db/work_orders_db.inc
+  /manufacturing/includes/db/work_orders_quick_db.inc
+  /purchasing/po_entry_items.php
+  /purchasing/includes/db/grn_db.inc
+  /purchasing/includes/db/invoice_db.inc
+  /purchasing/includes/db/po_db.inc
+  /purchasing/includes/db/supp_payment_db.inc
+  /sales/includes/db/payment_db.inc
+  /sales/includes/db/sales_credit_db.inc
+  /sales/includes/db/sales_delivery_db.inc
+  /sales/includes/db/sales_invoice_db.inc
+  /sales/includes/db/sales_order_db.inc
+
+12-Nov-2010 Janusz Dobrowolski
+# Added missing due date on direct purchase invoice.
+$ /purchasing/po_entry_items.php
+  /purchasing/includes/po_class.inc
+  /purchasing/includes/supp_trans_class.inc
+  /purchasing/includes/db/invoice_db.inc
+  /purchasing/includes/ui/invoice_ui.inc
+  /purchasing/includes/ui/po_ui.inc
+# Fixed maximum name length
+$ /inventory/manage/items.php
+# Fixed a couple of edition ui bugs
+$ /gl/manage/gl_quick_entries.php
++ Added db_close() for optional  use
+$ /includes/db/connect_db.inc
+
+11-Nov-2010 Janusz Dobrowolski
+# Fixed sql_gen for multiply extra where clauses
+$ /includes/db_pager.inc
+# Fixed implode injection vulnerabilities.
+$ /includes/db/crm_contacts_db.inc
+  /sales/includes/db/cust_trans_details_db.inc
+
+10-Nov-2010 Janusz Dobrowolski
+# Additional fix for setting local_path_to_root in find_custom_file()
+$ /includes/main.inc
+# Removed related report class when company does not use dimensions
+$ /reporting/includes/report_classes.inc
+
+09-Nov-2010 Joe Hunt
+! [0000277] Changed so FA suggest the next begin day in new Fiscal Year (read only).
+  But only if there are any fiscal years before. Otherwise it is normal.
+$ /admin/db/fiscalyears_db.inc
+  /admin/fiscalyears.php
+
+09-Nov-2010 Janusz Dobrowolski
+# Session destroy added on install finish, fixed pasword/admin login update, also [0000273].
+$ /install/index.php
+
+08-Nov-2010 Janusz Dobrowolski
+# Fixed support for report translations in extension modules
+$ /includes/main.inc
+  /reporting/includes/class.pdf.inc
+
+07-Nov-2010 Janusz Dobrowolski
+! Separate class for view and print/email links (also fixes conflict with confirmation dialog)
+$ /includes/ui/ui_controls.inc
+! Cleanup
+  /reporting/rep107.php
+  /reporting/rep109.php
+  /reporting/rep110.php
+  /reporting/rep111.php
+  /reporting/rep209.php
+  /reporting/rep210.php
+  /reporting/rep409.php
+  /reporting/includes/pdf_report.inc
+# Fixed multipart mail structure
+$ /reporting/includes/class.mail.inc
+# Enabled javascript updates on ajax _page_body refresh
+$ /includes/ajax.inc
+! Added validation hook on buttons
+$ /js/inserts.js
+
+06-Nov-2010 Janusz Dobrowolski
+# [0000274] Contact edition failed after last security fixes in RC2
+$ /includes/session.inc
+! Rearanged contacts edition
+$ /includes/db/crm_contacts_db.inc
+  /includes/ui/contacts_view.inc
+  /sales/includes/db/branches_db.inc
++ Helpers for js confirmation dialog before data entry is abandoned
+$ /includes/ui/ui_controls.inc
+  /js/inserts.js
+  /themes/aqua/renderer.php
+  /themes/cool/renderer.php
+  /themes/default/renderer.php
+# Confirmation dialog added before transaction entry is abandoned.
+$ /sales/sales_order_entry.php
+  /sales/includes/sales_ui.inc
+
+05-Nov-2010 Janusz Dobrowolski
+# [0000276] Fixed admin username update and error when no prefix is selected in installer.
+$ /install/index.php
+
+04-Nov-2010 Janusz Dobrowolski
+# Fixed broken excel reports for non-latin encodings.
+$ /reporting/includes/Workbook.php
+
+03-Nov-2010 Janusz Dobrowolski
+# More corrections in cleanup for input
+$ /includes/session.inc
+
+02-Nov-2010 Joe Hunt
+# Report Customer Details didn't show up correctly in Excel
+$ /reporting/rep103.php
+
+30-Oct-2010 Janusz Dobrowolski
+! Added group code in account groups list selector.
+$ /includes/ui/ui_lists.inc
+! Normalized add_domain() parameters in native/ohpgettext classes
+$ /includes/lang/gettext.php
+! submit_js_confirm() fixed to be used also on buttons uploaded with ajax.
+$ /includes/ui/ui_input.inc
+# Validation code was skipped when Esc/ctrlEnter hotkeys used
+$ /js/inserts.js
+# Fixed reference display in credit note edition.
+$ /sales/includes/ui/sales_credit_ui.inc
+
+29-Oct-2010 Janusz Dobrowolski
+# [0000275] Fixed cleanup for input arrays 
+$ /includes/session.inc
+
+28-Oct-2010 Janusz Dobrowolski
+! All mysql specific functions moved to connect_db.inc
+$ /admin/inst_theme.php
+  /admin/db/maintenance_db.inc
+  /includes/current_user.inc
+  /includes/db_pager.inc
+  /includes/db/connect_db.inc
+  /install/index.php
+# Fixed mailing problems under PHP with Suhoshin patch (Michael Hahn)
+$ /reporting/includes/class.mail.inc
+# Fixed db error on freehand credit invoice reedition.
+$ /sales/includes/cart_class.inc
 
 ------------------------------- Release 2.3 RC3 --------------------------------
 26-Oct-2010 Janusz Dobrowolski
@@ -171,7 +534,7 @@ $ /purchasing/includes/supp_trans_class.inc
   /purchasing/view/view_supp_credit.php
   /gl/includes/db/gl_db_trans.inc
 
-06-Oct-2010 Jusz Dobrowolski
+06-Oct-2010 Janusz Dobrowolski
 # Fixed gettext for extension links.
 $ /reporting/includes/reports_classes.inc
 ! Added helper for gettext domain switching

@@ -251,45 +251,6 @@ function write_lang()
 	return true;
 }
 
-function db_create_db($connection)
-{
-	$db = mysql_connect($connection["host"] ,
-		$connection["dbuser"], $connection["dbpassword"]);
-	if (!mysql_select_db($connection["dbname"], $db))
-	{
-		$sql = "CREATE DATABASE " . $connection["dbname"] . "";
-		if (!mysql_query($sql))
-			return 0;
-		mysql_select_db($connection["dbname"], $db);
-	}
-	return $db;
-}
-
-function db_drop_db($connection)
-{
-
-	if ($connection["tbpref"] == "")
-	{
-		$sql = "DROP DATABASE " . $connection["dbname"] . "";
-		return mysql_query($sql);
-	}
-	else
-	{
-    	$res = db_query("show table status");
-    	$all_tables = array();
-    	while($row = db_fetch($res))
-    		$all_tables[] = $row;
-        // get table structures
-		foreach ($all_tables as $table)
-		{
-			if (strpos($table['Name'], $connection["tbpref"]) === 0)
-				db_query("DROP TABLE `".$table['Name'] . "`");
-		}
-		//deleting the tables, how??
-		return true;
-	}
-}
-
 function db_import($filename, $connection, $force=true)
 {
 	global $db, $go_debug;
@@ -477,7 +438,7 @@ function db_backup($conn, $ext='no', $comm='', $tbpref = TB_PREF)
 	else
 		$filename = $conn['dbname'] . "_" . date("Ymd_Hi") . ".sql";
 
-	return db_export($conn, $filename, $ext, $comm, $tbpref);
+	return db_export($conn, clean_file_name($filename), $ext, $comm, $tbpref);
 }
 
 // generates a dump of $db database
@@ -647,9 +608,6 @@ function db_export($conn, $filename, $zip='no', $comment='', $tbpref = TB_PREF, 
 		@unlink(BACKUP_PATH . $backupfile);
 		return false;
 	}
-
-	// if (mysql_error()) return "DB_ERROR";
-	//@mysql_close($con);
 
 	//if ($zip == "zip")
 	//	$zip = $time;
@@ -844,4 +802,39 @@ function create_comp_dirs($comp_path, $comp_subdirs)
 			@fclose($f);
 	    }
 }
+
+//
+//	Checks $field existence in $table with given field $properties
+//	$table - table name without prefix
+//  $field -  optional field name
+//  $properties - optional properties of field defined by MySQL:
+//		'Type', 'Null', 'Key', 'Default', 'Extra'
+//
+function check_table($pref, $table, $field=null, $properties=null)
+{
+	$tables = @db_query("SHOW TABLES LIKE '".$pref.$table."'");
+	if (!db_num_rows($tables))
+		return 1;		// no such table or error
+
+	$fields = @db_query("SHOW COLUMNS FROM ".$pref.$table);
+	if (!isset($field)) 
+		return 0;		// table exists
+
+	while( $row = db_fetch_assoc($fields)) 
+	{
+		if ($row['Field'] == $field) 
+		{
+			if (!isset($properties)) 
+				return 0;
+			foreach($properties as $property => $value) 
+			{
+				if ($row[$property] != $value) 
+					return 3;	// failed type/length check
+			}
+			return 0; // property check ok.
+		}
+	}
+	return 2; // field not found
+}
+
 ?>

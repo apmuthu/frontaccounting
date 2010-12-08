@@ -177,8 +177,7 @@ function branch_settings($selected_id) {
 	$_POST['email'] = "";
 	if ($selected_id != -1)
 	{
-	 	if ($Mode == 'Edit') {
-
+	 	if ($Mode == 'Edit' || !isset($_POST['br_name'])) {
 			//editing an existing branch
 			$myrow = get_cust_branch($_POST['customer_id'], $_POST['branch_code']);
 			set_focus('br_name');
@@ -250,7 +249,7 @@ function branch_settings($selected_id) {
 	// 2006-06-14. Changed gl_al_accounts_list to have an optional all_option 'Use Item Sales Accounts'
 	gl_all_accounts_list_row(_("Sales Account:"), 'sales_account', null, false, false, true);
 	gl_all_accounts_list_row(_("Sales Discount Account:"), 'sales_discount_account');
-	gl_all_accounts_list_row(_("Accounts Receivable Account:"), 'receivables_account');
+	gl_all_accounts_list_row(_("Accounts Receivable Account:"), 'receivables_account', null, true);
 	gl_all_accounts_list_row(_("Prompt Payment Discount Account:"), 'payment_discount_account');
 
 	table_section(2);

@@ -1411,7 +1411,7 @@ function cash_accounts_list_row($label, $name, $selected_id=null, $submit_on_cha
 {
 	$sql = "SELECT ".TB_PREF."bank_accounts.id, bank_account_name, bank_curr_code, inactive
 		FROM ".TB_PREF."bank_accounts
-		WHERE ".TB_PREF."bank_accounts.account_type=3";
+		WHERE ".TB_PREF."bank_accounts.account_type=".BT_CASH;
 
 	if ($label != null)
 		echo "<tr><td class='label'>$label</td>\n";
@@ -1546,6 +1546,7 @@ function gl_account_types_list($name, $selected_id=null, $all_option=false, $all
 
 	return combo_input($name, $selected_id, $sql, 'id', 'name',
 	array(
+		'format' => '_format_account',
 		'order' => array('class_id', 'id', 'parent'),
 		'spec_option' =>$all_option,
 		'spec_id' => $all_items

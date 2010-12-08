@@ -52,6 +52,10 @@ if (!isset($path_to_root))
 if (isset($_GET['path_to_root']) || isset($_POST['path_to_root']))
 	die("Restricted access");
 
+include_once($path_to_root . "/includes/errors.inc");
+// collect all error msgs
+set_error_handler('error_handler' /*, errtypes */);
+
 include_once($path_to_root . "/includes/current_user.inc");
 include_once($path_to_root . "/includes/lang/language.php");
 include_once($path_to_root . "/includes/ajax.inc");
@@ -72,8 +76,10 @@ $inst_langs = array(
   'da_DK' => array ( 'name' => 'Dansk',	'code' => 'da_DK',	'encoding' => 'iso-8859-1'),
   'de_DE' => array ( 'name' => 'Deutsch',	'code' => 'de_DE',	'encoding' => 'iso-8859-1'),
   'el_GR' => array ( 'name' => 'Greek',	'code' => 'el_GR',	'encoding' => 'utf-8'),
+  'es_MX' => array ( 'name' => 'Spanish',	'code' => 'es_MX',	'encoding' => 'iso-8859-1'),
   'fr_FR' => array ( 'name' => 'Français',	'code' => 'fr_FR',	'encoding' => 'iso-8859-1'),
   'id_ID' => array ( 'name' => 'Indonesian','code' => 'id_ID',	'encoding' => 'iso-8859-1'),
+  'it_IT' => array ( 'name' => 'Italian','code' => 'it_IT',	'encoding' => 'iso-8859-1'),
   'nl_BE' => array ( 'name' => 'Nederlands','code' => 'nl_BE',	'encoding' => 'iso-8859-1'),
   'pl_PL' => array ( 'name' => 'Polski',	'code' => 'pl_PL',	'encoding' => 'iso-8859-2'),
   'pt_BR' => array ( 'name' => 'Português','code' => 'pt_BR',	'encoding' => 'iso-8859-1'),
@@ -115,9 +121,6 @@ $Pagehelp = array();
 // intercept all output to destroy it in case of ajax call
 register_shutdown_function('end_flush');
 ob_start('output_html',0);
-
-// colect all error msgs
-set_error_handler('error_handler' /*, errtypes */);
 
 if (!isset($_SESSION["wa_current_user"]))
 	$_SESSION["wa_current_user"] = new current_user();

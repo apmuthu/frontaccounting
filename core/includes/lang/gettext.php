@@ -60,6 +60,7 @@ function is_error($err) {
 class gettext_native_support 
 {
     var $_interpolation_vars = array();
+    var $domain_path;
 
     /**
      * Set gettext language code.
@@ -125,6 +126,8 @@ class gettext_native_support
      */
     function add_domain($domain, $path=false, $version='')
     {
+        if ($path === false) 
+	        $path = $this->domain_path;
         if ($path === false) 
 	        $path = "./locale";
 	    if ($domain == "")
@@ -293,8 +296,13 @@ class gettext_php_support extends gettext_native_support
      * @param string $path optional -- Repository path
      * @throws GetText_Error
      */
-    function add_domain($domain, $path = "./locale/", $version ='')
+    function add_domain($domain, $path = false, $version ='')
     {   
+        if ($path === false) 
+	      $path = $this->domain_path;
+        if ($path === false) 
+	        $path = "./locale";
+
     	if ($version) {
 			$domain .= '-'.$version;
 		}
@@ -540,8 +548,10 @@ class gettext_php_support_compiler
 function set_ext_domain($path='') {
 	global $path_to_root;
 
-	$_SESSION['get_text']->add_domain($_SESSION['language']->code,
-		$path_to_root . ($path ? '/' : '') .$path.'/lang',
-		$path ? '' : $_SESSION['language']->version);
+	$lang_path = $path_to_root . ($path ? '/' : '') .$path.'/lang';
+	// ignore change when extension does not provide translation structure
+	if (file_exists($lang_path))
+		$_SESSION['get_text']->add_domain($_SESSION['language']->code,
+			$lang_path, $path ? '' : $_SESSION['language']->version);
 }
 ?>

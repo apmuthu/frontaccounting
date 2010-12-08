@@ -76,6 +76,13 @@ function get_company_prefs($tbpref = TB_PREF)
 	return get_company_pref(null, $tbpref);
 }
 
+function refresh_sys_prefs()
+{
+	flush_dir(company_path().'/js_cache'); // clear cache
+	unset($_SESSION['SysPrefs']);
+	get_company_prefs();
+}
+
 function get_base_sales_type()
 {
 	return get_company_pref('base_sales');
@@ -84,7 +91,7 @@ function get_base_sales_type()
 function get_company_extensions($id = -1) {
 	global $path_to_root;
 
-	$file = $path_to_root.($id == -1 ? '' : '/company/'.$id).'/installed_extensions.php';
+	$file = $path_to_root.($id == -1 ? '' : '/company/'.(int)$id).'/installed_extensions.php';
 	$installed_extensions = array();
 	if (is_file($file)) {
 		include($file);

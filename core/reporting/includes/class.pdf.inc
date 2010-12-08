@@ -79,15 +79,21 @@ class Cpdf extends FPDI {
 	*/
 	function SetLang($code=null) 
 	{
-		global $installed_languages, $dflt_lang, $path_to_root;
+		global $installed_languages, $dflt_lang, $path_to_root, $local_path_to_root;
 
 		if (!$code)
 			$code = $dflt_lang;
 
 		$lang = array_search_value($code, $installed_languages, 'code');
 		$_SESSION['get_text']->set_language($lang['code'], strtoupper($lang['encoding']));
-		$_SESSION['get_text']->add_domain($lang['code'], $path_to_root . "/lang", @$lang['version']);
 
+		// $local_path_to_root is  set inside find_custom_file.
+		// Select extension domain if po file is provided
+		// otherwise use global translation.
+		if (file_exists($local_path_to_root.'/lang/'.$lang['code'].'/LC_MESSAGES/'.$lang['code'].'.po'))
+			$_SESSION['get_text']->add_domain($lang['code'], $local_path_to_root . "/lang");
+		else
+			$_SESSION['get_text']->add_domain($lang['code'], $path_to_root . "/lang", @$lang['version']);
 		// re-read translated sys names.
 		include($path_to_root.'/includes/sysnames.inc');
 
@@ -245,7 +251,7 @@ class Cpdf extends FPDI {
 	* nSeg is not allowed to be less than 2, as this will simply draw a line (and will even draw a
 	* pretty crappy shape at 2, as we are approximating with bezier curves.
 	*/
-	function ellipse($x0,$y0,$r1,$r2=0,$angle=0,$nSeg=8,$astart=0,$afinish=360,$close=1,$fill=0)
+	function ellipse($x0,$y0,$r1,$r2=0,$angle=0,$nSeg=8,$astart=0,$afinish=360,$close=1,$fill=0, $dummy=null)
 	{
 		parent::Ellipse($x0, $y0, $r1, $r2, $angle, $astart. $afinish, ($close?'C':''), "", "", $nSeg);
 	}

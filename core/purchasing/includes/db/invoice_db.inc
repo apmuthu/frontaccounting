@@ -32,17 +32,13 @@ function read_supplier_details_to_trans(&$supp_trans, $supplier_id)
     $supp_trans->supplier_id = $supplier_id;
     $supp_trans->tax_included = $myrow['tax_included'];
     $supp_trans->supplier_name = $myrow['supp_name'];
-	$supp_trans->terms_description = $myrow['terms'];
+	$supp_trans->terms = array( 
+		'description' => $myrow['terms'],
+		'days_before_due' => $myrow['days_before_due'], 
+		'day_in_following_month' => $myrow['day_in_following_month'] );
+		
 	$supp_trans->credit = $myrow['cur_credit'];
 
-	if ($myrow['days_before_due'] == 0)
-	{
-		$supp_trans->terms = "1" . $myrow['day_in_following_month'];
-	}
-	else
-	{
-		$supp_trans->terms = "0" . $myrow['days_before_due'];
-	}
 	$supp_trans->tax_description = $myrow['tax_group_name'];
 	$supp_trans->tax_group_id = $myrow['tax_group_id'];
 
@@ -123,7 +119,7 @@ function add_supp_invoice($supp_trans, $invoice_no=0) // do not receive as ref b
 	//$company_currency = get_company_currency();
 	/*Start an sql transaction */
 	begin_transaction();
-
+	hook_db_prewrite($supp_trans, $supp_trans->trans_type);
 	$tax_total = 0;
     $taxes = $supp_trans->get_taxes($supp_trans->tax_group_id);
 
@@ -349,8 +345,9 @@ function add_supp_invoice($supp_trans, $invoice_no=0) // do not receive as ref b
 			}
 		}
 	}
-	
 
+	$supp_trans->trans_no = $invoice_id;
+	hook_db_postwrite($supp_trans, $supp_trans->trans_type);
     commit_transaction();
 
     return $invoice_id;
@@ -452,6 +449,7 @@ function void_supp_invoice($type, $type_no)
 {
 	begin_transaction();
 
+	hook_db_prevoid($type, $type_no);
 	$trans = get_supp_trans($type_no, $type);
 
 	void_bank_trans($type, $type_no, true);

@@ -117,29 +117,17 @@ function install_connect_db() {
 	global $db;
 
 	$conn = $_SESSION['inst_set'];
-	
-	$db = mysql_connect($conn["host"] , $conn["dbuser"], $conn["dbpassword"]);
-	if(!$db) {
-		display_error('Cannot connect to database server. Host name, username and/or password incorrect.');
-		return false;
-	}
-	if (!defined('TB_PREF'))
-		define('TB_PREF', '&TB_PREF&');
 
-	if (!mysql_select_db($conn["dbname"], $db)) {
-		$sql = "CREATE DATABASE " . $conn["dbname"];
-		if (!mysql_query($sql)) {
-			display_error('Cannot create database. Check your permissions to database creation or selct already created database.');
-			return false;
-		}
-		return mysql_select_db($conn["dbname"], $db);
+	$db = db_create_db($conn);
+	if (!$db) {
+		display_error(_("Cannot connect to database. User or password is invalid or you have no permittions to create database."));
 	}
-	return true;
+	return $db;
 }
 
 function do_install() {
 
-	global $path_to_root, $db_connections, $def_coy, $installed_extensions, 
+	global $path_to_root, $db_connections, $def_coy, $installed_extensions, $tb_pref_counter,
 		$dflt_lang, $installed_languages;
 
 	$coa = $_SESSION['inst_set']['coa'];
@@ -162,9 +150,10 @@ function do_install() {
 		
 		update_company_prefs(array('coy_name'=>$con['name']));
 		$admin = get_user_by_login('admin');
-//		update_admin_password($con, md5($con['pass']));
-		update_user_prefs($admin['id'], array('language' => $_POST['lang'], 
-			'password' => md5($con['pass'])));
+		update_user_prefs($admin['id'], array(
+			'language' => $con['lang'], 
+			'password' => md5($con['pass']),
+			'user_id' => $con['admin']));
 
 		if (!copy($path_to_root. "/config.default.php", $path_to_root. "/config.php")) {
 			display_error(_("Cannot save system configuration file 'config.php'."));
@@ -188,7 +177,7 @@ function do_install() {
 		$dflt_lang = $_POST['lang'];
 		write_lang();
 		if (!isset($installed_extensions))
-			write_extensions(array());
+			update_extensions(array());
 		return true;
 	}
 	return false;
@@ -398,7 +387,8 @@ start_form();
 		case '6': // final screen
 			subpage_title(_('FrontAccounting ERP has been installed successsfully.'));
 			display_note(_('Please do not forget to remove install wizard folder.'));
-			$install_done = true;
+			session_unset();
+			session_destroy();
 			hyperlink_no_params($path_to_root.'/index.php', _('Click here to start.'));
 			break;
 
