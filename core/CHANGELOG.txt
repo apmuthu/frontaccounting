@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.39.2.766 2010/12/09 12:53:08 itronics Exp $
+* @version $Id: CHANGELOG.txt,v 1.448 2010/12/13 22:32:43 frontaccounting Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -18,6 +18,20 @@ Legend:
 - -> Removed
 ! -> Note
 $ -> Affected files
+
+13-Dec-2010 Joe Hunt
+! Dispaly group no in Balance Sheet/Profit Loss Drilldown.
+$ /gl/inquiry/balance_sheep.php
+  /gl/inquiry/profit_loss.php
+  
+12-Dec-2010 Joe Hunt
+# Removed Timezone warnings
+$ config.default.php
+  /includes/date_functions.inc
+  
+12-Dec-2010 Janusz Dobrowolski
+# [0000318] Database error after last changes related to bu 313
+$ /purchasing/includes/ui/po_ui.inc
 
 ------------------------------- Release 2.3 ------------------------------------
 09-Dec-2010 Joe Hunt
