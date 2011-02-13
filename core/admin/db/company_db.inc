@@ -34,7 +34,10 @@ function get_company_pref($prefs = null, $tbpref = null)
 {
 	global $SysPrefs, $db_version;
 	
-	if (!isset($_SESSION['SysPrefs']->prefs)) { // cached preferences
+	static $cached; // retrieve values from db once a request. Some values can't be cached between requests
+					// to ensure prefs integrity for all usrs (e.g. gl_close_date).
+	
+	if (!$cached) { // cached preferences
 
 		$_SESSION['SysPrefs'] = new sys_prefs();
 
@@ -55,6 +58,7 @@ function get_company_pref($prefs = null, $tbpref = null)
 
 		// update current db status for info in log file
 		$SysPrefs->db_ok = $SysPrefs->prefs['version_id'] == $db_version;
+		$cached = true;
 	}
 
 	$all = $_SESSION['SysPrefs']->prefs;
@@ -78,8 +82,8 @@ function get_company_prefs($tbpref = TB_PREF)
 
 function set_company_pref($pref, $category, $type, $length, $value)
 {
-	$sql = "REPLACE `0_sys_prefs` SET `name`=".db_escape($pref).", `category`=".db_escape($category)
-		.", `type`=".db_escape($type).", `length`=".db_escape($length).", `value`=".db_escape($value);
+	$sql = "REPLACE ".TB_PREF."sys_prefs SET name=".db_escape($pref).", category=".db_escape($category)
+		.", type=".db_escape($type).", length=".db_escape($length).", value=".db_escape($value);
 	return db_query($sql, "cannot set company pref");
 }
 

@@ -1,5 +1,5 @@
 /**
-* @version $Id: CHANGELOG.txt,v 1.468 2011/01/04 16:08:29 frontaccounting Exp $
+* @version $Id: CHANGELOG.txt,v 1.479 2011/02/14 09:05:16 itronics Exp $
 * @package FrontAccounting
 * @copyright (C) 2005 - 2009 FrontAccounting, LLC
 * @license http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
@@ -18,6 +18,113 @@ Legend:
 - -> Removed
 ! -> Note
 $ -> Affected files
+
+------------------------------- Release 2.3.2 ------------------------------------
+14-Feb-2011 Joe Hunt
+! Release 2.3.2
+$ version.php
+! A global variable in config.php, $show_voided_gl_trans = 1 shows 0 amount 
+  transactions in gl inquiry and reports.
+$ /config.default.php
+  /gl/includes/db/gl_db_trans.inc
+
+14-Feb-2011 Janusz Dobrowolski
+# Fixed gettextized messages
+$ /gl/gl_bank.php
+
+13-Feb-2011 Janusz Dobrowolski
+! Updated gettext template
+$ /lang/new_language_template/LC_MESSAGES/empty.po
+# Fixed invalid gettextized strings
+$ /includes/packages.inc
+  /gl/includes/db/gl_db_rates.inc
+# Typo
+$ /includes/access_levels.inc
+  /admin/create_coy.php
+# Fixed bug resulting in invalid postings when cash payment was selected for invoice against sales delivery.
+$ /sales/customer_invoice.php
+  /sales/includes/cart_class.inc
+  /sales/includes/db/sales_invoice_db.inc
+  /sales/includes/ui/sales_order_ui.inc
+# System settings are cached once a request.
+$ /admin/db/company_db.inc
+# Fixed inventory status display for items without reorder level set.
+$ /inventory/includes/db/items_locations_db.inc
+# Fixed error reporting in mail send method.
+$ /reporting/includes/class.mail.inc
+# Improved mail error handling.
+$ /reporting/includes/pdf_report.inc
+# Updated string handling in excel generator (reports were sometimes broken)
+$ /reporting/includes/Workbook.php
+# Fixed credit processing errors handling
+$ /sales/customer_credit_invoice.php
+! Fixed hook_invoke_all
+$ /includes/hooks.inc
+# [0000536] Fixed phone/email branch contact retrieval
+$ /sales/includes/ui/sales_order_ui.inc
+! Removed obsolete date selectors in Delivery against Order inquiry, fixed order selection.
+$ /sales/inquiry/sales_orders_view.php
+  /sales/includes/db/sales_order_db.inc
+# Fixed bad SO reference display
+$ /sales/view/view_sales_order.php
+
+21-Jan-2011 Janusz Dobrowolski
+# Sales quotations were presented in inquiry even when realized [0000498]
+$ /sales/includes/sales_db.inc
+  /sales/includes/db/sales_order_db.inc
+! Child document preparation moved to cart class.
+$ /sales/customer_credit_invoice.php
+  /sales/customer_delivery.php
+  /sales/customer_invoice.php
+  /sales/sales_order_entry.php
+  /sales/includes/cart_class.inc
+
+19-Jan-2011 Janusz Dobrowolski
+# Fixed help link
+$ /gl/accruals.php
+# Cleanup
+$ /includes/ui/ui_view.inc
+
+18-Jan-2011 Janusz Dobrowolski
+# Fixed accruals postings date calculation.
+$ /gl/accruals.php
+# Fixed add_months() result for dates near end of month.
+$ /includes/date_functions.inc
+
+18-Jan-2011 Joe Hunt
+# Wrong linked credit data on invoices/credits table when view PO
+$ /purchasing/includes/db/grn_db.inc
+  /purchasing/includes/db/invoice_db.inc
+  
+17-Jan-2011 Janusz Dobrowolski
+# Removed sparse Add button
+$ /admin/inst_module.php
+# Check for qoh for supplier credit was missing.
+$ /purchasing/supplier_credit.php
+# Screen refresh on Update button fixed
+$ /sales/customer_credit_invoice.php
+# Fixed theme images location
+$ /themes/aqua/renderer.php
+  /themes/cool/renderer.php
+  /themes/default/renderer.php
+# Fixed slow sql for po related invoices/credits
+$ /purchasing/includes/db/invoice_db.inc
+
+17-Jan-2011 Joe Hunt
+# [0000494] Cannot set second company pref when setup System and General GL 
+$ /admin/db/company_db.inc
+# {0000481] No warning when user does not supply db credentials in create_coy 
+$ /admin/create_coy.php
+
+12-Jan-2011 Janusz Dobrowolski
++ Added access extensions hook method, cleanup
+$ /includes/hooks.inc
+# Fixed suplier reference allowed length.
+$ /purchasing/includes/ui/invoice_ui.inc
+# Sparse dot.
+$ /sql/alter2.3.sql
+# Backward compatiblity fix in bank account limit check.
+$ /gl/includes/db/gl_db_bank_accounts.inc
 
 ------------------------------- Release 2.3.1 ------------------------------------
 04-Jan-2011 Joe Hunt
