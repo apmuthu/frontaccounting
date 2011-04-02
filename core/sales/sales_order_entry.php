@@ -238,16 +238,22 @@ function copy_to_cart()
 
 	$cart->document_date = $_POST['OrderDate'];
 
+	$newpayment = false;
 	if (isset($_POST['payment']) && ($cart->payment != $_POST['payment'])) {
 		$cart->payment = $_POST['payment'];
 		$cart->payment_terms = get_payment_terms($_POST['payment']);
+		$newpayment = true;
 	}
 	if ($cart->payment_terms['cash_sale']) {
-		$cart->due_date = $cart->document_date;
-		$cart->phone = $cart->cust_ref = $cart->delivery_address = '';
-		$cart->freight_cost = input_num('freight_cost');
-		$cart->ship_via = 1;
-		$cart->deliver_to = '';
+		if ($newpayment) {
+			$cart->due_date = $cart->document_date;
+			$cart->phone = $cart->cust_ref = $cart->delivery_address = '';
+			$cart->freight_cost = input_num('freight_cost');
+			$cart->ship_via = 1;
+			$cart->deliver_to = '';
+			$cart->Location = $cart->pos['pos_location'];
+			$cart->location_name = $cart->pos['location_name'];
+		}
 	} else {
 		$cart->due_date = $_POST['delivery_date'];
 		$cart->cust_ref = $_POST['cust_ref'];
@@ -255,8 +261,8 @@ function copy_to_cart()
 		$cart->deliver_to = $_POST['deliver_to'];
 		$cart->delivery_address = $_POST['delivery_address'];
 		$cart->phone = $_POST['phone'];
-		$cart->Location = $_POST['Location'];
 		$cart->ship_via = $_POST['ship_via'];
+		$cart->Location = $_POST['Location'];
 	}
 	if (isset($_POST['email']))
 		$cart->email =$_POST['email'];
@@ -269,7 +275,7 @@ function copy_to_cart()
 	if ($cart->trans_type!=ST_SALESORDER && $cart->trans_type!=ST_SALESQUOTE) { // 2008-11-12 Joe Hunt
 		$cart->dimension_id = $_POST['dimension_id'];
 		$cart->dimension2_id = $_POST['dimension2_id'];
-	}	
+	}
 }
 
 //-----------------------------------------------------------------------------
@@ -487,6 +493,22 @@ function check_item_data()
 		}
 		return true;
 	}
+	$cost_home = get_standard_cost(get_post('stock_id')); // Added 2011-03-27 Joe Hunt
+	$cost = $cost_home / get_exchange_rate_from_home_currency($_SESSION['Items']->customer_currency, $_SESSION['Items']->document_date);
+	if (input_num('price') < $cost)
+	{
+		$dec = user_price_dec();
+		$curr = $_SESSION['Items']->customer_currency;
+		$price = number_format2(input_num('price'), $dec);
+		if ($cost_home == $cost)
+			$std_cost = number_format2($cost_home, $dec);
+		else
+		{
+			$price = $curr . " " . $price;
+			$std_cost = $curr . " " . number_format2($cost, $dec);
+		}
+		display_warning(sprintf(_("Price %s is below Standard Cost %s"), $price, $std_cost));
+	}	
 	return true;
 }
 
