@@ -153,7 +153,6 @@ class cart
 				$line->quantity += $srcline['quantity'] - 
 					($src_type==ST_SALESORDER ? $srcline['qty_sent'] : $srcline['qty_done']); // add free qty on src doc
 				$line_no++;
-				break;
 			}
 		}
 
@@ -486,7 +485,7 @@ class cart
 		if ($tax_items != null) {
 			foreach ($tax_items as $item_tax) {
 				$index = $item_tax['tax_type_id'];
-				if (isset($this->tax_group_array[$index])) {
+				if (isset($this->tax_group_array[$index]['rate'])) {
 					$tax_rate += $item_tax['rate'];
 				}
 			}
