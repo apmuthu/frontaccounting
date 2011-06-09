@@ -77,7 +77,7 @@ function delete_supplier($supplier_id)
 	db_query($sql,"check failed");
 }
 
-function get_supplier_details($supplier_id, $to=null)
+function get_supplier_details($supplier_id, $to=null, $all=true)
 {
 
 	if ($to == null)
@@ -88,7 +88,12 @@ function get_supplier_details($supplier_id, $to=null)
 	$past2 = 2 * $past1;
 	// removed - supp_trans.alloc from all summations
 
-    $value = "(trans.ov_amount + trans.ov_gst + trans.ov_discount)";
+	if ($all)
+    	$value = "(trans.ov_amount + trans.ov_gst + trans.ov_discount)";
+    else	
+    	$value = "IF (trans.type=".ST_SUPPINVOICE." OR trans.type=".ST_BANKDEPOSIT.",
+    		(trans.ov_amount + trans.ov_gst + trans.ov_discount - trans.alloc),
+    		(trans.ov_amount + trans.ov_gst + trans.ov_discount + trans.alloc))";
 	$due = "IF (trans.type=".ST_SUPPINVOICE." OR trans.type=".ST_SUPPCREDIT.",trans.due_date,trans.tran_date)";
     $sql = "SELECT supp.supp_name, supp.curr_code, ".TB_PREF."payment_terms.terms,
 
@@ -107,9 +112,10 @@ function get_supplier_details($supplier_id, $to=null)
 
 		WHERE
 			 supp.payment_terms = ".TB_PREF."payment_terms.terms_indicator
-			 AND supp.supplier_id = $supplier_id
-
-		GROUP BY
+			 AND supp.supplier_id = $supplier_id ";
+	if (!$all)
+		$sql .= "AND ABS(trans.ov_amount + trans.ov_gst + trans.ov_discount) - trans.alloc > 0.004 ";  
+	$sql .= "GROUP BY
 			  supp.supp_name,
 			  ".TB_PREF."payment_terms.terms,
 			  ".TB_PREF."payment_terms.days_before_due,

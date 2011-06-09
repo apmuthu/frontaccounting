@@ -77,6 +77,8 @@ if (isset($_GET['AddedID']))
 
 	hyperlink_params($_SERVER['PHP_SELF'], _("Enter A &Deposit"), "NewDeposit=yes");
 
+	hyperlink_params("$path_to_root/admin/attachments.php", _("Add an Attachment"), "filterType=$trans_type&trans_no=$trans_no");
+
 	display_footer_exit();
 }
 
@@ -140,7 +142,7 @@ function create_cart($type, $trans_no)
 	{
 		unset ($_SESSION['pay_items']);
 	}
-	
+
 	$cart = new items_cart($type);
     $cart->order_id = $trans_no;
 
@@ -226,13 +228,21 @@ if (isset($_POST['Process']))
 
 	$limit = get_bank_account_limit($_POST['bank_account'], $_POST['date_']);
 
-	if ($limit != null && (($limit - $_SESSION['pay_items']->original_amount) < $_SESSION['pay_items']->gl_items_total()))
+	$amnt_chg = -$_SESSION['pay_items']->gl_items_total()-$_SESSION['pay_items']->original_amount;
+
+	if ($limit != null && ($limit + $amnt_chg < 0))
 	{
 		display_error(sprintf(_("The total bank amount exceeds allowed limit (%s)."), price_format($limit-$_SESSION['pay_items']->original_amount)));
 		set_focus('code_id');
 		$input_error = 1;
 	}
+	if ($trans = check_bank_account_history($amnt_chg, $_POST['bank_account'], $_POST['date_'])) {
 
+		display_error(sprintf(_("The bank transaction would result in exceed of authorized overdraft limit for transaction: %s #%s on %s."),
+			$systypes_array[$trans['type']], $trans['trans_no'], sql2date($trans['trans_date'])));
+		set_focus('amount');
+		$input_error = 1;
+	}
 	if (!$Refs->is_valid($_POST['ref']))
 	{
 		display_error( _("You must enter a reference."));
@@ -283,7 +293,7 @@ if (isset($_POST['Process']))
 		$_SESSION['pay_items']->trans_type, $_SESSION['pay_items']->order_id, $_POST['bank_account'],
 		$_SESSION['pay_items'], $_POST['date_'],
 		$_POST['PayType'], $_POST['person_id'], get_post('PersonDetailID'),
-		$_POST['ref'], $_POST['memo_'], false);
+		$_POST['ref'], $_POST['memo_'], true);
 
 	$trans_type = $trans[0];
    	$trans_no = $trans[1];

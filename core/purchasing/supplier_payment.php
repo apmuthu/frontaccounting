@@ -58,7 +58,6 @@ if (isset($_POST['_DatePaid_changed'])) {
 }
 
 if (list_updated('supplier_id') || list_updated('bank_account')) {
-  $_SESSION['alloc']->read();
   $Ajax->activate('alloc_tbl');
 }
 //----------------------------------------------------------------------------------------
@@ -274,6 +273,9 @@ start_form();
 
 	set_global_supplier($_POST['supplier_id']);
 	
+	if (!list_updated('bank_account'))
+		$_POST['bank_account'] = get_default_supplier_bank_account($_POST['supplier_id']);		
+	
     bank_accounts_list_row(_("From Bank Account:"), 'bank_account', null, true);
 	
 	bank_balance_row($_POST['bank_account']);
@@ -299,9 +301,10 @@ start_form();
 	end_outer_table(1); // outer table
 
 	if ($bank_currency == $supplier_currency) {
-  	div_start('alloc_tbl');
+  		div_start('alloc_tbl');
+  		$_SESSION['alloc']->read();
 		show_allocatable(false);
-	div_end();
+		div_end();
 	}
 
 	start_table(TABLESTYLE, "width=60%");

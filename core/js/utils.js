@@ -35,7 +35,7 @@ function disp_msg(msg, cl) {
 // 
 JsHttpRequest.request= function(trigger, form, tout) {
 //	if (trigger.type=='submit' && !validate(trigger)) return false;
-	tout = tout | 6000;	// default timeout value
+	tout = tout || 6000;	// default timeout value
 	document.getElementById('msgbox').innerHTML='';
 	set_mark(tout>10000 ? 'progressbar.gif' : 'ajax-loader.gif');
 	JsHttpRequest._request(trigger, form, tout, 0);
@@ -213,12 +213,12 @@ function price_format(post, num, dec, label, color) {
 		num = "0";
 	sign = (num == (num = Math.abs(num)));
 	var max = dec=='max';
-	if(max) dec = 15 - Math.floor(Math.log(Math.abs(num)));
+	if(max) dec = num==0 ? 2 : 15 - Math.floor(Math.log(Math.abs(num)));
 	if(dec<0) dec = 2;
 	decsize = Math.pow(10, dec);
 	num = Math.floor(num*decsize+0.50000000001);
 	cents = num%decsize;
-	num = Math.floor(num/decsize).toString();
+	num = Math.floor(num/decsize).toString(); 
 	for( i=cents.toString().length; i<dec; i++){
 		cents = "0"+cents;
 	}

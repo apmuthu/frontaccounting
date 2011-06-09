@@ -184,7 +184,6 @@ if (isset($_POST['_DateBanked_changed'])) {
   $Ajax->activate('_ex_rate');
 }
 if (list_updated('customer_id') || list_updated('bank_account')) {
-  $_SESSION['alloc']->read();
   $Ajax->activate('alloc_tbl');
 }
 //----------------------------------------------------------------------------------------------
@@ -251,7 +250,8 @@ start_form();
 		$display_discount_percent = percent_format($_POST['pymt_discount']*100) . "%";
 
 		table_section(2);
-
+		if (!list_updated('bank_account'))
+			$_POST['bank_account'] = get_default_customer_bank_account($_POST['customer_id']);		
 		bank_accounts_list_row(_("Into Bank Account:"), 'bank_account', null, true);
 
 
@@ -277,6 +277,7 @@ start_form();
 
 		if ($cust_currency == $bank_currency) {
 	  		div_start('alloc_tbl');
+ 	 		$_SESSION['alloc']->read();
 			show_allocatable(false);
 			div_end();
 		}
