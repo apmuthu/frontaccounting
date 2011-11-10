@@ -11,20 +11,22 @@
 ***********************************************************************/
 $page_security = 'SA_SALESTRANSVIEW';
 $path_to_root = "../..";
-include($path_to_root . "/includes/db_pager.inc");
+include_once($path_to_root . "/includes/db_pager.inc");
 include_once($path_to_root . "/includes/session.inc");
 
 include_once($path_to_root . "/sales/includes/sales_ui.inc");
 include_once($path_to_root . "/sales/includes/sales_db.inc");
 include_once($path_to_root . "/reporting/includes/reporting.inc");
 
-$js = "";
-if ($use_popup_windows)
-	$js .= get_js_open_window(900, 500);
-if ($use_date_picker)
-	$js .= get_js_date_picker();
-page(_($help_context = "Customer Transactions"), isset($_GET['customer_id']), false, "", $js);
-
+if (!@$_GET['popup'])
+{
+	$js = "";
+	if ($use_popup_windows)
+		$js .= get_js_open_window(900, 500);
+	if ($use_date_picker)
+		$js .= get_js_date_picker();
+	page(_($help_context = "Customer Transactions"), isset($_GET['customer_id']), false, "", $js);
+}
 
 if (isset($_GET['customer_id']))
 {
@@ -33,7 +35,8 @@ if (isset($_GET['customer_id']))
 
 //------------------------------------------------------------------------------------------------
 
-start_form();
+if (!@$_GET['popup'])
+	start_form();
 
 if (!isset($_POST['customer_id']))
 	$_POST['customer_id'] = get_global_customer();
@@ -41,7 +44,8 @@ if (!isset($_POST['customer_id']))
 start_table(TABLESTYLE_NOBORDER);
 start_row();
 
-customer_list_cells(_("Select a customer: "), 'customer_id', null, true);
+if (!@$_GET['popup'])
+	customer_list_cells(_("Select a customer: "), 'customer_id', null, true, false, false, !@$_GET['popup']);
 
 date_cells(_("From:"), 'TransAfterDate', '', null, -30);
 date_cells(_("To:"), 'TransToDate', '', null, 1);
@@ -154,6 +158,8 @@ function fmt_credit($row)
 
 function credit_link($row)
 {
+	if (@$_GET['popup'])
+		return '';
 	return $row['type'] == ST_SALESINVOICE && $row["Outstanding"] > 0 ?
 		pager_link(_("Credit This") ,
 			"/sales/customer_credit_invoice.php?InvoiceNumber=". $row['trans_no'], ICON_CREDIT):'';
@@ -163,6 +169,8 @@ function edit_link($row)
 {
 	$str = '';
 
+	if (@$_GET['popup'])
+		return '';
 	switch($row['type']) {
 	case ST_SALESINVOICE:
 		if (get_voided_entry(ST_SALESINVOICE, $row["trans_no"]) === false && $row['Allocated'] == 0)
@@ -177,11 +185,15 @@ function edit_link($row)
 			    $str = "/sales/customer_credit_invoice.php?ModifyCredit=".$row['trans_no'];
 		}	    
 		break;
-	 case ST_CUSTDELIVERY:
+	case ST_CUSTDELIVERY:
   		if (get_voided_entry(ST_CUSTDELIVERY, $row["trans_no"]) === false)
    			$str = "/sales/customer_delivery.php?ModifyDelivery=".$row['trans_no'];
 		break;
-	}
+	case ST_CUSTPAYMENT:
+  		if (get_voided_entry(ST_CUSTPAYMENT, $row["trans_no"]) === false)
+   			$str = "/sales/customer_payments.php?trans_no=".$row['trans_no'];
+		break;
+	}		
 	if ($str != "" && !is_closed_trans($row['type'], $row["trans_no"]))
 		return pager_link(_('Edit'), $str, ICON_EDIT);
 	return '';	
@@ -242,7 +254,9 @@ $table->width = "85%";
 
 display_db_pager($table);
 
-end_form();
-end_page();
-
+if (!@$_GET['popup'])
+{
+	end_form();
+	end_page(@$_GET['popup'], false, false);
+}
 ?>

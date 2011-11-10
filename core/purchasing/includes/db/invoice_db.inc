@@ -20,7 +20,9 @@ function read_supplier_details_to_trans(&$supp_trans, $supplier_id)
 		supp.tax_group_id, tax_group.name AS tax_group_name,
 		supp.credit_limit - Sum(IFNULL(IF(trans.type=".ST_SUPPCREDIT.", -1, 1) 
 			* (ov_amount + ov_gst + ov_discount),0)) as cur_credit
-		FROM ".TB_PREF."suppliers supp LEFT JOIN ".TB_PREF."supp_trans trans ON supp.supplier_id = trans.supplier_id, ".TB_PREF."payment_terms terms, ".TB_PREF."tax_groups tax_group
+		FROM ".TB_PREF."suppliers supp 
+			LEFT JOIN ".TB_PREF."supp_trans trans ON supp.supplier_id = trans.supplier_id, "
+			.TB_PREF."payment_terms terms, ".TB_PREF."tax_groups tax_group
 		WHERE supp.tax_group_id = tax_group.id
 		AND supp.payment_terms=terms.terms_indicator
 		AND supp.supplier_id = ".db_escape($supplier_id)." GROUP BY supp.supp_name";
@@ -456,7 +458,6 @@ function read_supp_invoice($trans_no, $trans_type, &$supp_trans)
 		$supp_trans->supplier_name = $trans_row["supp_name"];
 		$supp_trans->tran_date = sql2date($trans_row["tran_date"]);
 		$supp_trans->due_date = sql2date($trans_row["due_date"]);
-		//$supp_trans->Comments = $trans_row["TransText"];
 		$supp_trans->Comments = get_comments_string($trans_type, $trans_no);
 		$supp_trans->reference = $trans_row["reference"];
 		$supp_trans->supp_reference = $trans_row["supp_reference"];
@@ -635,17 +636,18 @@ function get_gl_account_info($acc)
 	return db_query($sql,"get account information");
 }
 
-function is_reference_already_there($supplier_id, $supp_reference)
+function is_reference_already_there($supplier_id, $supp_reference, $trans_no=0)
 {
-	$sql = "SELECT Count(*) FROM ".TB_PREF."supp_trans WHERE supplier_id="
+	$sql = "SELECT COUNT(*) FROM ".TB_PREF."supp_trans WHERE supplier_id="
 		.db_escape($supplier_id) . " AND supp_reference=" 
 		.db_escape($supp_reference) 
 		. " AND ov_amount!=0"; // ignore voided invoice references
-
+	if ($trans_no)
+		$sql .= " AND trans_no!=$trans_no";
 	$result=db_query($sql,"The sql to check for the previous entry of the same invoice failed");
 
 	$myrow = db_fetch_row($result);
-	return ($myrow[0] == 1);
+	return $myrow[0] > 0;
 }
 
 function remove_not_invoice_item($id)
