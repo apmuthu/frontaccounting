@@ -980,6 +980,7 @@ class FrontReport extends Cpdf
 					display_error(_("You have no email contact defined for this type of document"));
 				} else {
 					$sent = $try = 0;
+					$emails = "";
 					if(!$subject)
 						$subject = $this->formData['document_name'] . ' '. $this->formData['document_number'];
 					foreach($this->contactData as $contact) {
@@ -1018,6 +1019,7 @@ class FrontReport extends Cpdf
     					$mail->subject($subject);
     					$mail->text($msg . $sender);
     					$mail->attachment($fname);
+    					$emails .= " " . $contact['email'];
     					if ($mail->send()) $sent++;
 					} // foreach contact
 					unlink($fname);
@@ -1025,10 +1027,11 @@ class FrontReport extends Cpdf
 					if (!$try) {
 						display_error(_("There is no contact email set for this document type."));
 					} elseif (!$sent)
-						display_error(_("Sending document by email failed"));
+						display_error($this->title . " " . $this->formData['document_number'] . ". "
+							. _("Sending document by email failed") . ". " . _("Email:") . $emails);
 					else
 						display_notification($this->title . " " . $this->formData['document_number'] . " " 
-							. _("has been sent by email to destination."));
+							. _("has been sent by email to destination.") . " " . _("Email:") . $emails);
 				}
 			}
 			else

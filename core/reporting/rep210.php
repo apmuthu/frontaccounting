@@ -109,8 +109,9 @@ function print_remittances()
 			$myrow = get_remittance($j, $i);
 			if (!$myrow)
 				continue;			
-			$baccount = get_default_bank_account($myrow['curr_code']);
-			$params['bankaccount'] = $baccount['id'];
+			$res = get_bank_trans($j, $i);
+			$baccount = db_fetch($res);
+			$params['bankaccount'] = $baccount['bank_act'];
 
 			if ($email == 1)
 			{
@@ -151,6 +152,12 @@ function print_remittances()
 					$rep->NewPage();
 			}
 
+			$memo = get_comments_string($j, $i);
+			if ($memo != "")
+			{
+				$rep->NewLine();
+				$rep->TextColLines(1, 5, $memo, -2);
+			}
 			$rep->row = $rep->bottomMargin + (15 * $rep->lineHeight);
 
 			$rep->TextCol(3, 6, _("Total Allocated"), -2);

@@ -76,16 +76,16 @@ class SessionManager
 		$_SESSION['EXPIRES'] = time() + 10;
 
 		// Create new session without destroying the old one
-		session_regenerate_id(false);
-
+		session_regenerate_id();
+ 
 		// Grab current session ID and close both sessions to allow other scripts to use them
 		$newSession = session_id();
 		session_write_close();
-
 		// Set session ID to the new one, and start it back up again
+
 		session_id($newSession);
 		session_start();
-
+		
 		// Now we unset the obsolete and expiration values for the session we want to keep
 		unset($_SESSION['OBSOLETE']);
 		unset($_SESSION['EXPIRES']);
@@ -162,7 +162,7 @@ function check_page_security($page_security)
 	
 	if ($msg){
 		display_error($msg);
-		end_page();
+		end_page(@$_REQUEST['popup']);
 		kill_login();
 		exit;
 	}
@@ -174,7 +174,7 @@ function check_page_security($page_security)
 		echo _("The security settings on your account do not permit you to access this function");
 		echo "</b>";
 		echo "<br><br><br><br></center>";
-		end_page();
+		end_page(@$_REQUEST['popup']);
 		exit;
 	}
 	if (!$_SESSION['SysPrefs']->db_ok 

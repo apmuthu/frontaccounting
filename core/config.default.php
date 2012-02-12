@@ -68,6 +68,12 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 	$power_by 		= "FrontAccounting";
 	$power_url 		= "http://frontaccounting.com";
 
+	/* Do not print zero lines amount of 0.00 in Sales Documents if service item. 1 = do not */
+	$no_zero_lines_amount = 1;
+
+	/* Use icon for editkey (=true) righ of combobox. 1 = use, 0 = do not use */
+	$use_icon_for_editkey = 0;
+
 	/* Creates automatic a default branch with contact. Value 0 do not create auto branch */
 	$auto_create_branch = 1;
 
