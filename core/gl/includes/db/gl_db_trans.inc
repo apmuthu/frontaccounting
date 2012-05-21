@@ -443,12 +443,12 @@ function get_tax_summary($from, $to)
 					." || (trans_type=".ST_JOURNAL ." AND amount<0)"
 					." || trans_type=".ST_CUSTCREDIT.", amount*ex_rate,0)) payable,
 
-				SUM(IF(trans_type=".ST_CUSTCREDIT." || trans_type=".ST_SUPPINVOICE.",-1,1)*
+				SUM(IF(trans_type=".ST_CUSTCREDIT." || trans_type=".ST_SUPPINVOICE." || trans_type=".ST_JOURNAL.",-1,1)*
 				IF(trans_type=".ST_BANKDEPOSIT." || trans_type=".ST_SALESINVOICE
 					." || (trans_type=".ST_JOURNAL ." AND amount<0)"
 					." || trans_type=".ST_CUSTCREDIT.", 0, net_amount*ex_rate)) net_input,
 
-				SUM(IF(trans_type=".ST_CUSTCREDIT." || trans_type=".ST_SUPPINVOICE.",-1,1)*
+				SUM(IF(trans_type=".ST_CUSTCREDIT." || trans_type=".ST_SUPPINVOICE." || trans_type=".ST_JOURNAL.",-1,1)*
 				IF(trans_type=".ST_BANKDEPOSIT." || trans_type=".ST_SALESINVOICE
 					." || (trans_type=".ST_JOURNAL ." AND amount<0)"
 					." || trans_type=".ST_CUSTCREDIT.", 0, amount*ex_rate)) collectible,
@@ -634,7 +634,7 @@ function get_sql_for_journal_inquiry($filter, $from, $to, $ref='', $memo='', $al
 	if (!$alsoclosed) {
 		$sql .= " AND gl_seq=0";
 	}
-	$sql .= " GROUP BY gl.type, gl.type_no";
+	$sql .= " GROUP BY gl.tran_date, a.gl_seq, gl.type, gl.type_no";
 	return $sql;
 }
 ?>

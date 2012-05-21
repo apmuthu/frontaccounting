@@ -228,7 +228,7 @@ function tst_tmpdir()
 
 function tst_langs($install)
 {
-	global $installed_languages, $path_to_root;
+	global $installed_languages, $path_to_root, $GetText;
 	
 	$test['descr'] = _('Language configuration consistency');
 	$test['type'] = 3;
@@ -269,7 +269,7 @@ function tst_langs($install)
 			$test['result'] = false;
 			$test['comments'][] = sprintf( _('Missing %s translation file.'), $file);
 		}
-		if (!$_SESSION['get_text']->check_support($lang['code'], $lang['encoding']))
+		if (!$GetText->check_support($lang['code'], $lang['encoding']))
 		{
 			$test['result'] = false;
 			$test['comments'][] = sprintf(_('Missing system locale: %s'), $lang['code'].".".$lang['encoding']);
@@ -359,9 +359,18 @@ function tst_extconfig($install)
 		$test['result'] &= $t;
 	}
 
+	foreach(array('Release', 'Themes', 'Languages', 'Extensions', 'Charts') as $file) {
+		$fname = $path_to_root."/modules/_cache/".$file.".gz";
+		$t = !file_exists($fname) || is_writable($fname);
+		if (!$t)
+			$test['comments'][] = sprintf(_("'%s' is not writeable"), $fname);
+		$test['result'] &= $t;
+	}
+
 	if(!$test['result'])
 		$test['comments'][] = _("Extensions configuration files and directories should be writeable");
 
+	$fname = $path_to_root."/themes";
 	$themedir = opendir($fname);
 	while (false !== ($fname = readdir($themedir)))
 	{
