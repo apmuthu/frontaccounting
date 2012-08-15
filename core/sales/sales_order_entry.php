@@ -34,11 +34,19 @@ set_page_security( @$_SESSION['Items']->trans_type,
 			ST_CUSTDELIVERY => 'SA_SALESDELIVERY',
 			ST_SALESINVOICE => 'SA_SALESINVOICE'),
 	array(	'NewOrder' => 'SA_SALESORDER',
-			'ModifySalesOrder' => 'SA_SALESORDER',
+			'ModifyOrderNumber' => 'SA_SALESORDER',
+			'AddedID' => 'SA_SALESORDER',
+			'UpdatedID' => 'SA_SALESORDER',
 			'NewQuotation' => 'SA_SALESQUOTE',
 			'ModifyQuotationNumber' => 'SA_SALESQUOTE',
+			'NewQuoteToSalesOrder' => 'SA_SALESQUOTE',
+			'AddedQU' => 'SA_SALESQUOTE',
+			'UpdatedQU' => 'SA_SALESQUOTE',
 			'NewDelivery' => 'SA_SALESDELIVERY',
-			'NewInvoice' => 'SA_SALESINVOICE')
+			'AddedDN' => 'SA_SALESDELIVERY', 
+			'NewInvoice' => 'SA_SALESINVOICE',
+			'AddedDI' => 'SA_SALESINVOICE'
+			)
 );
 
 $js = '';
@@ -54,12 +62,12 @@ if ($use_date_picker) {
 if (isset($_GET['NewDelivery']) && is_numeric($_GET['NewDelivery'])) {
 
 	$_SESSION['page_title'] = _($help_context = "Direct Sales Delivery");
-	create_cart(ST_CUSTDELIVERY, $_GET['NewDelivery']);
+	create_cart(ST_CUSTDELIVERY, 0);
 
 } elseif (isset($_GET['NewInvoice']) && is_numeric($_GET['NewInvoice'])) {
 
 	$_SESSION['page_title'] = _($help_context = "Direct Sales Invoice");
-	create_cart(ST_SALESINVOICE, $_GET['NewInvoice']);
+	create_cart(ST_SALESINVOICE, 0);
 
 } elseif (isset($_GET['ModifyOrderNumber']) && is_numeric($_GET['ModifyOrderNumber'])) {
 
@@ -241,6 +249,7 @@ function copy_to_cart()
 	$cart->document_date = $_POST['OrderDate'];
 
 	$newpayment = false;
+
 	if (isset($_POST['payment']) && ($cart->payment != $_POST['payment'])) {
 		$cart->payment = $_POST['payment'];
 		$cart->payment_terms = get_payment_terms($_POST['payment']);
@@ -250,7 +259,7 @@ function copy_to_cart()
 		if ($newpayment) {
 			$cart->due_date = $cart->document_date;
 			$cart->phone = $cart->cust_ref = $cart->delivery_address = '';
-			$cart->ship_via = 1;
+			$cart->ship_via = 0;
 			$cart->deliver_to = '';
 		}
 	} else {
@@ -404,6 +413,8 @@ function can_process() {
 		set_focus('ref');
 		return false;
 	}
+	if (!db_has_currency_rates($_SESSION['Items']->customer_currency, $_POST['OrderDate']))
+		return false;
 	
    	if ($_SESSION['Items']->get_items_total() < 0) {
 		display_error("Invoice total amount cannot be less than zero.");
@@ -722,6 +733,7 @@ if ($customer_error == "") {
 } else {
 	display_error($customer_error);
 }
+
 end_form();
 end_page();
 ?>
