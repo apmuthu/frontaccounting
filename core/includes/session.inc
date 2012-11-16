@@ -77,7 +77,6 @@ class SessionManager
 
 		// Create new session without destroying the old one
 		session_regenerate_id();
- 
 		// Grab current session ID and close both sessions to allow other scripts to use them
 		$newSession = session_id();
 		session_write_close();
@@ -140,14 +139,6 @@ function login_fail()
 	kill_login();
 	die();
 }
-//----------------------------------------------------------------------------------------
-// set to reasonable values if not set in config file (pre-2.3.12 installations)
-
-if (!isset($login_delay))
-{
-	$login_delay = 10;
-	$login_max_attempts = 3;
-}
 
 function check_faillog()
 {
@@ -155,7 +146,7 @@ function check_faillog()
 
 	$user = $_SESSION["wa_current_user"]->user;
 
-	if (@$login_delay && ($login_faillog[$user][$_SERVER['REMOTE_ADDR']] >= @$login_max_attempts) && (time() < $login_faillog[$user]['last'] + $login_delay))
+	if (@$login_delay && (@$login_faillog[$user][$_SERVER['REMOTE_ADDR']] >= @$login_max_attempts) && (time() < $login_faillog[$user]['last'] + $login_delay))
 		return true;
 
 	return false;
@@ -318,6 +309,16 @@ if (!isset($path_to_root))
 	$path_to_root = ".";
 }
 
+//----------------------------------------------------------------------------------------
+// set to reasonable values if not set in config file (pre-2.3.12 installations)
+
+if ((!isset($login_delay)) || ($login_delay < 0))
+    $login_delay = 10;
+
+if ((!isset($login_max_attempts)) || ($login_max_attempts < 0))
+    $login_max_attempts = 3; 
+
+
 // Prevent register_globals vulnerability
 if (isset($_GET['path_to_root']) || isset($_POST['path_to_root']))
 	die("Restricted access");
@@ -331,7 +332,6 @@ include_once($path_to_root . "/frontaccounting.php");
 include_once($path_to_root . "/admin/db/security_db.inc");
 include_once($path_to_root . "/includes/lang/language.php");
 include_once($path_to_root . "/config_db.php");
-@include_once($path_to_root . "/faillog.php");
 include_once($path_to_root . "/includes/ajax.inc");
 include_once($path_to_root . "/includes/ui/ui_msgs.inc");
 include_once($path_to_root . "/includes/prefs/sysprefs.inc");
@@ -354,6 +354,7 @@ foreach ($installed_extensions as $ext)
 // ini_set('session.save_path', dirname(__FILE__).'/../tmp/');
 
 ini_set('session.gc_maxlifetime', 36000); // 10hrs
+ini_set('session.cache_limiter', 'private'); // prevent 'page expired' errors
 
 $Session_manager = new SessionManager();
 $Session_manager->sessionStart('FA'.md5(dirname(__FILE__)));
@@ -363,6 +364,9 @@ header("Cache-control: private");
 
 include_once($path_to_root . "/config.php");
 get_text_init();
+
+if ($login_delay > 0)
+	@include_once($path_to_root . "/faillog.php");
 
 // Page Initialisation
 if (!isset($_SESSION['language']) || !method_exists($_SESSION['language'], 'set_language')) 

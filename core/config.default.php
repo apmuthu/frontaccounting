@@ -68,6 +68,9 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 	$power_by 		= "FrontAccounting";
 	$power_url 		= "http://frontaccounting.com";
 
+	/* No check on edit conflicts. Maybe needed to be set to 1 in certains Windows Servers */
+	$no_check_edit_conflicts = 0;
+	
 	/* Do not print zero lines amount of 0.00 in Sales Documents if service item. 1 = do not */
 	$no_zero_lines_amount = 1;
 
@@ -136,7 +139,7 @@ if (!isset($path_to_root) || isset($_GET['path_to_root']) || isset($_POST['path_
 	/* suppress tax rates on documents. 0 = no, 1 = yes. */
 	$suppress_tax_rates = 0;
 	
-	$dateformats 	= array("MMDDYYYY", "DDMMYYYY", "YYYYMMDD");
+	$dateformats 	= array("MMDDYYYY", "DDMMYYYY", "YYYYMMDD","MmmDDYYYY", "DDMmmYYYY", "YYYYMmmDD");
 	$dateseps 		= array("/", ".", "-", " ");
 	$thoseps 		= array(",", ".", " ");
 	$decseps 		= array(".", ",");
@@ -260,3 +263,12 @@ $text_company_selection  = false;
 */
 $login_delay = 30;
 $login_max_attempts = 10;
+
+/*
+	Choose Exchange Rate Provider
+	Default is ECB for backwards compatibility
+*/
+$xr_providers = array("ECB", "YAHOO", "GOOGLE", "BLOOMBERG");
+$dflt_xr_provider = 0;
+
+?>
