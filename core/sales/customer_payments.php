@@ -76,8 +76,10 @@ if (list_updated('BranchID')) {
 	$Ajax->activate('customer_id');
 }
 
-if (!isset($_POST['customer_id']))
-	$_POST['customer_id'] = get_global_customer(false);
+if (!isset($_POST['customer_id'])) {
+	$_SESSION['alloc']->person_id = $_POST['customer_id'] = get_global_customer(false);
+	$_SESSION['alloc']->read();
+}
 if (!isset($_POST['DateBanked'])) {
 	$_POST['DateBanked'] = new_doc_date();
 	if (!is_date_in_fiscalyear($_POST['DateBanked'])) {
@@ -250,6 +252,7 @@ if (get_post('AddPaymentItem') && can_process()) {
 
 	new_doc_date($_POST['DateBanked']);
 
+	$new_pmt = !$_SESSION['alloc']->trans_no;
 	//Chaitanya : 13-OCT-2011 - To support Edit feature
 	$payment_no = write_customer_payment($_SESSION['alloc']->trans_no, $_POST['customer_id'], $_POST['BranchID'],
 		$_POST['bank_account'], $_POST['DateBanked'], $_POST['ref'],
@@ -257,13 +260,11 @@ if (get_post('AddPaymentItem') && can_process()) {
 
 	$_SESSION['alloc']->trans_no = $payment_no;
 	$_SESSION['alloc']->write();
-	
-	unset($_POST);
-	unset($_SESSION);
 
+	unset($_SESSION['alloc']);
 	//Chaitanya : 13-OCT-2011 - To support Edit feature
 	//meta_forward($_SERVER['PHP_SELF'], "AddedID=$payment_no");
-	meta_forward($_SERVER['PHP_SELF'], !$_SESSION['alloc']->trans_no ? "AddedID=$payment_no" : "UpdatedID=$payment_no");
+	meta_forward($_SERVER['PHP_SELF'], $new_pmt ? "AddedID=$payment_no" : "UpdatedID=$payment_no");
 }
 
 //----------------------------------------------------------------------------------------------
