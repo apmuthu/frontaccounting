@@ -1,0 +1,13 @@
+Package: exclusive_db
+Version: 2.3.10-1
+Name: Theme Exclusive for Dashboard
+Description: Optional theme with tab submenus in left column. Main area displays widgets defined in Dasboard module.
+Filename: exclusive_db-2.3.10-1
+Author: Joe Hunt
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Depends: 
+Type: theme
+Path: exclusive
+InstallPath: themes/exclusive_db
+

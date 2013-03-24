@@ -1,0 +1,15 @@
+Package: es_MX
+Version: 2.3.0-2
+Description: Spanish (Mexico) translation Version merged from FA 2.2
+Author: 
+Maintenance: 
+Homepage: frontaccounting.net
+Language: es_MX
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Spanish (Mexico)
+InstallPath: lang/es_MX
+Filename: es_MX-2.3.0-2
+

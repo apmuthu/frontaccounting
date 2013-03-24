@@ -1,0 +1,11 @@
+Package: rep_cheque_print
+Version: 2.3.0-1
+Description: Cheque Printing based on Tu Nguyen, Canada
+Name: Check Printing based on Tu Nguyen, Canada
+Filename: rep_cheque_print-2.3.0-1
+Author: Joe Hunt <joe.hunt.consulting@gmail.com>
+Maintenance: Joe Hunt <joe.hunt.consulting@gmail.com>
+Homepage: frontaccounting.com
+Type: extension
+InstallPath: modules/rep_cheque_print
+

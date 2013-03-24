@@ -1,0 +1,11 @@
+Package: rep_inventory_history
+Version: 2.3.2-1
+Description: Inventory Period History Report, Adjustments, Productions, GRNs, Supp credits, Deliveries, Credits, QOH
+Name: Inventory History
+Filename: rep_inventory_history-2.3.2-1
+Author: Jujuk-Indonesia <siji.tux@gmail.com>
+Maintenance: Joe Hunt <joe.hunt.consulting@gmail.com>
+Homepage: frontaccounting.com
+Type: extension
+InstallPath: modules/rep_inventory_history
+

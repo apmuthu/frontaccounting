@@ -1,0 +1,15 @@
+Package: nl_BE
+Version: 2.3.0-2
+Description: Dutch (Belgium) translation Version merged from FA 2.2
+Author: MorkvonOrk <mark@nadorst.be>
+Maintenance: MorkvonOrk <mark@nadorst.be>
+Homepage: frontaccounting.net
+Language: nl_BE
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Dutch (Belgium)
+InstallPath: lang/nl_BE
+Filename: nl_BE-2.3.0-2
+

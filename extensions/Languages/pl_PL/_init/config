@@ -1,0 +1,16 @@
+Package: pl_PL
+Version: 2.3.1-1
+Description: Polish translation files.
+Author: Janusz Dobrowolski <janusz@frontaccounting.eu>
+Maintenance: Janusz Dobrowolski <janusz@frontaccounting.eu>
+Homepage: frontaccounting.com
+Language: pl_PL
+Encoding: iso-8859-2
+RTLDir: no
+Depends: 
+Type: language
+Name: Polish
+Name-pl: Polski
+InstallPath: lang/pl_PL
+Filename: pl_PL-2.3.1-1
+

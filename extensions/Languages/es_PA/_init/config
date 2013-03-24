@@ -1,0 +1,15 @@
+Package: es_PA
+Version: 2.3.0-2
+Description: Spanish (Panama) translation Version merged from FA 2.2
+Author: 
+Maintenance: 
+Homepage: frontaccounting.net
+Language: es_PA
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Spanish (Panama)
+InstallPath: lang/es_PA
+Filename: es_PA-2.3.0-2
+

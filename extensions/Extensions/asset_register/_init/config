@@ -1,0 +1,15 @@
+Package: asset_register
+Version: 2.3.3-9
+Name: Asset register
+DefaultStatus: inactive
+Description: Asset register
+ Warning: This module make use of stored procedues available in MySQL since 5.0.2. Check your
+ MySQL version and eventually upgrade. The database user as defined in config_db.php file
+ have to have CREATE/ALTER ROUTINE, EXECUTE, TRIGGER and EVENT permissions.
+Author: Dennis Gichangi <dennis@dennis.me.ke>
+Maintenance: Dennis Gichangi <dennis@dennis.me.ke>
+Homepage: http://www.dennis.me.ke/press
+Type: extension
+InstallPath: modules/asset_register
+Filename: asset_register-2.3.3-9
+

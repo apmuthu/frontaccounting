@@ -1,0 +1,15 @@
+Package: hu_HU
+Version: 2.3.0-2
+Description: Hungarian translation Version merged from FA 2.2
+Author: StartIT Kft. <pongracz.istvan@startit.hu>
+Maintenance: StartIT Kft. <pongracz.istvan@startit.hu>
+Homepage: frontaccounting.net
+Language: hu_HU
+Encoding: iso-8859-2
+RTLDir: no
+Depends: 
+Type: language
+Name: Hungarian
+InstallPath: lang/hu_HU
+Filename: hu_HU-2.3.0-2
+

@@ -1,0 +1,14 @@
+Package: nl_NL
+Version: 2.3.14-1
+Description: Dutch translation
+Author: Erwin de Bruin <erwin@mpe-solutions.nl>
+Maintenance: Erwin de Bruin <erwin@mpe-solutions.nl>
+Homepage: www.mpe-solutions.nl
+Language: nl_NL
+Encoding: iso-8859-1
+RTLDir: no
+Type: language
+Name: Dutch
+InstallPath: lang/nl_NL
+Filename: nl_NL-2.3.14-1
+

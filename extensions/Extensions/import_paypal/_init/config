@@ -1,0 +1,11 @@
+Package: import_paypal
+Version: 2.3.10-1
+Name: Import Paypal transactions
+Description: This module provides reads a CSV file of transaction history downloaded from a PayPal account and imports them into FrontAccounting.
+Author: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Maintenance: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Homepage: n/a
+Type: extension
+InstallPath: modules/import_paypal
+Filename: import_paypal-2.3.10-1
+

@@ -1,0 +1,15 @@
+Package: en_AU
+Version: 2.3.2-1
+Description: Australian English translation for FA 2.3.2
+Author: Rod Webster <rodw@vehiclemos.net.au>
+Maintenance: Rod Webster <rodw@vehiclemos.net.au>
+Homepage: vehiclemos.net.au
+Language: en_AU
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Australian English
+InstallPath: lang/en_AU
+Filename: en_AU-2.3.2-1
+

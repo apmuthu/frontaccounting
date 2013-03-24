@@ -1,0 +1,15 @@
+Package: de_DE
+Version: 2.3.0-2
+Description: German translation Version merged from FA 2.2
+Author: Robert Laussegger <rlaussegger@iscongroup.net>
+Maintenance: Robert Laussegger <rlaussegger@iscongroup.net>
+Homepage: iscongroup.net
+Language: de_DE
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: German
+InstallPath: lang/de_DE
+Filename: de_DE-2.3.0-2
+

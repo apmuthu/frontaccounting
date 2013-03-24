@@ -1,0 +1,15 @@
+Package: en_US
+Version: 2.3.12-1
+Description: American english translation Version merged from FA 2.2
+Author: Joe Hunt Consulting <joe@frontaccounting.com>
+Maintenance: <info@frontaccounting.com>
+Homepage: frontaccounting.net
+Language: en_US
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: English (US)
+InstallPath: lang/en_US
+Filename: en_US-2.3.12-1
+

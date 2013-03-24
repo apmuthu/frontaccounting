@@ -1,0 +1,136 @@
+/*--------------------------------------------------\
+|               |               | login.css         |
+|---------------------------------------------------|
+| For use with:                                     |
+| FrontAccounting 									|
+| http://frontaccounting.net/           			|
+| by FrontAccount, LLC                              |
+|---------------------------------------------------|
+| Developer:                                        |
+| Joe Hunt                                          |
+|                                                   |
+|---------------------------------------------------|
+| Note:                                             |
+| Changes can be made to this CSS that will be      |
+| reflected on the login screen.                    |
+|                                                   |
+|                                                   |
+\--------------------------------------------------*/
+
+/**********************************************************************************************************
+* Edited By: Lim Tee Chert
+* Company: ANTERP SOLUTIONS
+* Email: teechert@gmail.com
+* URL: http://www.anterp.com
+*
+* Paypal Donation Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FE2EQ2S4LAVEQ
+*
+***********************************************************************************************************/
+
+body {
+  margin: 5px 0 0 5px;
+  padding: 0;
+  background: #4e618c none repeat scroll 0% 50%;
+  font-weight: normal;
+  font-family: Trebuchet MS,Arial,Helvetica,Sans-Serif;
+  font-stretch: normal;
+  font-size: 10px;
+}
+
+tr, td, th {
+  font-size: 11px;
+  line-height: 19px;
+  color: #3b3b3b;
+}
+table {
+	text-align: left;
+}
+
+input, select {
+	font-size: 11px;
+	padding: 1px;
+}
+
+select {
+    max-width: 200px;
+}
+
+a {
+	color: #0000bb;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+a:link {
+	color: #0000bb;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #2d8628;
+	text-decoration: underline;
+}
+
+.tableheader {
+  color: #555555;
+  background-color: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: #ffffff 0px 1px ;
+}
+
+.bottomBarCell {
+  font-size: 10px;
+  line-height: 12px;
+}
+.bottomBar {
+	padding-right: 1em;
+	background-color: #d1dfec;
+	color: black;
+	border-bottom: 1px solid #8cacbb;
+	width: 100%;
+}
+
+.inputsubmit {
+  border: 1px solid #9b9b9b;
+  padding: 4px;
+  text-shadow: #ffffff 0px 1px ;
+  background-color: #d7d6d6;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: inherit;
+  color: #303030;
+}
+
+.footer {
+	text-align: center;
+	margin-top: 5px;
+	width: 100%;
+}
+
+.footer td a {
+	color: #666666;
+	font-size: 9px;
+}
+
+.titletext {
+  border-bottom: 1px solid #efefef;
+  padding: 5px;
+  font-size: 13px;
+  text-shadow: #ffffff 0px 1px ;
+  color: #303030;
+  font-weight: bold;
+  width: 100%;
+}
+
+.tablestyle2 {
+	width: 350px;
+	border-left: 12px solid #367cb5;
+	border-collapse: collapse;
+	background-color: #eeeeee;
+}

@@ -1,0 +1,15 @@
+Package: pt_BR
+Version: 2.3.0-2
+Description: Portuguese (Brazil) translation Version merged from FA 2.2
+Author: LMN - InterConnect <info@inter.bz>
+Maintenance: InterConnect <info@inter.bz>
+Homepage: frontaccounting.net
+Language: pt_BR
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Portuguese (Brazil)
+InstallPath: lang/pt_BR
+Filename: pt_BR-2.3.0-2
+

@@ -1,0 +1,16 @@
+Package: repgen
+Version: 2.3.9-3
+Name: Report Generator
+Description: This module contains tools to create new reports
+ This is report generator written by Werner Bauer and adopted as FrontAccounting module.
+ WARNING: While it is quite handy tool which make reports generation easier, it still
+ contains serious vulnerabilities in design, and is not suitable to be used in open
+ evironment like demo servers. Please use on your own risk only in fully trusted environment.
+Author: Werner Bauer <werner_bauer@kstp.at>
+Maintenance: Joe Hunt <joe.hunt.consulting@gmail.com>
+Homepage: frontaccounting.com
+Depends: 
+Type: extension
+InstallPath: modules/repgen
+Filename: repgen-2.3.9-3
+

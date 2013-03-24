@@ -1,0 +1,11 @@
+Package: rep_dated_stock
+Version: 2.3.3-1
+Description: Date Stock Check Sheed Report
+Name: Dated Stock Sheep
+Filename: rep_dated_stock-2.3.3-1
+Author: Chaitanya-India <3chaitanya@gmail.com>
+Maintenance: Joe Hunt <joe.hunt.consulting@gmail.com>
+Homepage: frontaccounting.com
+Type: extension
+InstallPath: modules/rep_dated_stock
+

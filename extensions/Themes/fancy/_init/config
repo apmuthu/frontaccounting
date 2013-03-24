@@ -1,0 +1,12 @@
+Package: fancy
+Version: 2.3.0-4
+Name: Theme Fancy
+Description: Div based optional theme
+Filename: fancy-2.3.0-4
+Author: Joe Hunt
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Depends: 
+Type: theme
+InstallPath: themes/fancy
+

@@ -1,0 +1,15 @@
+Package: es_CO
+Version: 2.3.0-2
+Description: Spanish translation for Colombia Version merged from FA 2.2
+Author: 
+Maintenance: 
+Homepage: frontaccounting.net
+Language: es_CO
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Spanish (Colombia)
+InstallPath: lang/es_CO
+Filename: es_CO-2.3.0-2
+

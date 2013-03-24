@@ -1,0 +1,14 @@
+Package: chart_de_CH-5digit
+Version: 2.3.0-1
+Name: German Switzerland COA (5 digits accounts)
+Description: This is a German Switzerland chart of accounts for a starting company.
+Encoding: iso-8859-1
+Author: ??
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: de_CH-5digit.sql
+Filename: chart_de_CH-5digit-2.3.0-1
+

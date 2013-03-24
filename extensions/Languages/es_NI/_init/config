@@ -1,0 +1,16 @@
+Package: es_NI
+Version: 2.3.10-1
+Description: Spanish (Nicaragua)
+Author: Thorbjorn Waagstein <thor@waagstein.com>
+Maintenance: Thorbjorn Waagstein
+Homepage: frontaccounting.com
+Language: es_NI
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Spanish (Nicaragua)
+Name-es_AR: Español (Nicaragua)
+InstallPath: lang/es_NI
+Filename: es_NI-2.3.10-1
+

@@ -1,0 +1,15 @@
+Package: chart_en_AU-service
+Version: 2.3.0-3
+Name: Australian COA for a service company (version 2).
+Description: This is an Australian chart of accounts for a new service company.
+ Many quick entries prepared by Pete.
+Encoding: iso-8859-1
+Author: Pete, Melbourne, Australia (minor changes by Rod, Australia)
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_AU-service-v2.sql
+Filename: chart_en_AU-service-2.3.0-3
+

@@ -1,0 +1,515 @@
+# Front Accounting internationalization file.
+# Copyright (C) 2007-2008 Front Accounting Team
+# This file is distributed under the same license as the Front Accounting package.
+# Janusz Dobrowolski <janusz@iron.from.pl>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.0 beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-26 22:15+0200\n"
+"Last-Translator: Werner Bauer\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../repgen_select.php:301
+msgid "Run"
+msgstr "Drucken"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../../../themes/default/renderer.php:17
+msgid "Main Menu"
+msgstr "Hauptmenü"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../../../themes/default/renderer.php:42
+#: /var/www/fa2.3/modules/repgen/_devel/../../../themes/default/renderer.php:69
+msgid "Logout"
+msgstr "Beenden"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../../../themes/default/renderer.php:43
+#: /var/www/fa2.3/modules/repgen/_devel/../../../themes/default/renderer.php:67
+msgid "Help"
+msgstr "Hilfe"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../../../themes/default/renderer.php:62
+msgid "Preferences"
+msgstr "Persönliche Einstellungen"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../../../themes/default/renderer.php:63
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../../../themes/default/renderer.php:114
+msgid "Theme:"
+msgstr "Design:"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/acc_levels.php:3
+msgid "Report Generator"
+msgstr "Berichtgenerator"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:12
+msgid "Create a Report"
+msgstr "       Erzeuge neue Liste           "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:13
+msgid "Select a report for work"
+msgstr "Wähle eine Liste zur Bearbeitung aus"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:14
+msgid "we need some data, please insert:"
+msgstr "wir benötigen noch einige Daten, bitte geben Sie diese an:"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:17
+msgid "Edit"
+msgstr "Ändern"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:18
+msgid "Delete"
+msgstr "Löschen"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:19
+msgid "Copy"
+msgstr "Kopieren"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:20
+msgid "Cp of"
+msgstr "Kp von"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:21
+msgid ""
+"If you want to change or delete a stored report, then\n"
+"choose beneath."
+msgstr ""
+"Wenn sie eine gespeicherte Liste bearbeiten oder löschen wollen, dann wählen "
+"sie bitte unten aus."
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:23
+msgid ""
+"(Green are the Blocks, orange the Functions and gray the reports shown.)"
+msgstr ""
+"(Grün werden die Blöcke, orange die Funktionen und grau die Listen "
+"angezeigt.)"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:25
+msgid "Shortname"
+msgstr "Kurzbezeichnung"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:26
+msgid "Long name"
+msgstr "Langbezeichnung"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:27
+msgid "Author"
+msgstr "Autor"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:28
+msgid "Creation date"
+msgstr "Datum der letzten Bearbeitung"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:29
+msgid "Selection of the Reports"
+msgstr "Auswahl der Listen"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:30
+msgid "Exit the program"
+msgstr "Beenden des Programms"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:31
+msgid "Create a new report"
+msgstr "Erzeugen einer neuen Liste"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:32
+msgid "Create a new Block"
+msgstr "Erzeugen eines neuen Blocks"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:33
+msgid "Create a new Function"
+msgstr "Erzeugen einer neuen Funktion"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:36
+msgid "Common Data of a Block"
+msgstr "Allgemeine Daten für einen Block"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:37
+msgid "Common Data of the Block "
+msgstr "Allgemeine Daten für den Block "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:38
+msgid "ID-Number of the Block"
+msgstr "ID-Nummer der Funktion"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:39
+msgid "Common Data of a Function "
+msgstr "Allgemeine Daten für eine Funktion"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:40
+msgid "Common Data of the Function "
+msgstr "Allgemeine Daten für die Funktion "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:41
+msgid "ID-Number of the Function"
+msgstr "ID-Nummer der Funktion"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:43
+msgid "Common data of the report"
+msgstr "Allgemeine Daten für eine Liste"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:44
+msgid "Common data of the old report "
+msgstr "Allgemeine Daten für die Liste "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:45
+msgid "ID-Number of the report"
+msgstr "ID-Nummer der Liste"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:46
+msgid "Creation Date"
+msgstr "Creation Date"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:47
+msgid "Printer Orientation"
+msgstr "Format des Druckers"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:48
+msgid "Report type"
+msgstr "Typ der Liste"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:49
+msgid "SQL-Statement for record selection"
+msgstr "SQL-Statement zur Satzauswahl"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:50
+msgid "Name of the group field"
+msgstr "Feldname des Feldes für Gruppenwechsel"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:51
+msgid "Group type"
+msgstr "Typ der Gruppe"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:52
+msgid "Error: Group type = 'New Page on group change' and no field!"
+msgstr ""
+"Fehler: Gruppentyp = 'Neue Seite bei Gruppenwechsel' und kein Gruppenfeld "
+"angegeben!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:53
+msgid "No new page when group changes"
+msgstr "Keine neue Seite bei Gruppenwechsel"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:54
+msgid "New Page on group change"
+msgstr "Neue Seite bei Gruppenwechsel"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:55
+msgid "Test the SQL-Statement"
+msgstr "Testen des SQL-Statements"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:56
+msgid "Page per record"
+msgstr "Seite pro Satz"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:57
+msgid "Line per record"
+msgstr "Zeile pro Satz"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:58
+msgid "Line per record with grid"
+msgstr "Zeile pro Satz mit Rahmen"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:59
+msgid "Line per record with bar"
+msgstr "Zeile pro Satz mit Balken"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:60
+msgid "Line per record with bar and grid"
+msgstr "Zeile pro Satz mit Balken und Rahmen"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:61
+msgid "Back to Report Selection(without storage)"
+msgstr "Zurück zur Listenauswahl ohne speichern"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:62
+msgid "Store and back to Report Selection"
+msgstr "Speichern und zurück zur Listenauswahl"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:63
+msgid "Test of the Function"
+msgstr "Testen der Funktion"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:64
+msgid "Page Definition for Strings"
+msgstr "Weiter zur Seitendefinition String"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:65
+msgid "Page Definition for Graphics"
+msgstr "Weiter zur Seitendefinition Graphic"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:66
+msgid "PHP-Error in Function: "
+msgstr "PHP-Fehler in Funktion: "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:67
+msgid "PHP: Function is OK. The result is: "
+msgstr "PHP: Funktion ist fehlerfrei. Das Ergebnis lautet: "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:68
+msgid "The field $field is not part of the function."
+msgstr "Das Feld $field kommt in der Funktion nicht vor."
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:69
+msgid "Paper Format"
+msgstr "Papiergröße bestimmen"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:70
+msgid ""
+"ID-Number and SQL-statement must not be empty, or the short-name has been "
+"used before !!!!"
+msgstr ""
+"Die Listen-Kurzbezeichnung und die SQL-Select Anweisung dürfen nicht leer "
+"sein oder die Kurzbezeichnung wird schon verwendet!!!!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:71
+msgid "The Short-Name of the Block  has been used before!!!!"
+msgstr "Die Block-Kurzbezeichnung schon verwendet!!!!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:72
+msgid "The name of the Function must be equal to the short-name:"
+msgstr "Der Funktionsname muß gleich dem Kurznamen sein:"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:73
+msgid ""
+"A Function has to be declared, which gives a String as <BR> as a result. The "
+"Function name has to be equal to the short-name!<BR>Please Test the function!"
+"<BR> If there is a fatal run-time error (e.g. redeclaration of a function) "
+"the system may die!!"
+msgstr ""
+"Es muß eine Funktion angegeben werden, welche einen String als<BR>Ergebnis "
+"liefert. Der Funktionsname muß dem Kurznamen gleichen!<BR>Bitte testen Sie "
+"die Funktion!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:74
+msgid " The values have NOT been stored!"
+msgstr " Die Angaben wurden NICHT gespeichert!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:75
+msgid " has an Error"
+msgstr " ist fehlerhaft"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:76
+msgid " SQL Error: SQL Statement is empty!"
+msgstr " SQL Fehler: Der Befehl ist leer!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:78
+msgid "You have written this SQL-Statement: "
+msgstr "Sie haben das folgende SQL-Statement eingegeben: "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:79
+msgid "The first 10 records of the result set are: "
+msgstr "Die ersten 10 Ergebnis-Sätze sind: "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:82
+msgid "Definition of a new Item of the report "
+msgstr "Definition eines neuen Items der Liste "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:83
+msgid "for Characters "
+msgstr "für Zeichen "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:84
+msgid "for Graphics "
+msgstr "für Graphic "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:85
+msgid " Or as Alternative in Mode Detail "
+msgstr " oder alternativ "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:86
+msgid " Order"
+msgstr "Reihenfolge"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:87
+msgid "Number of Char"
+msgstr "Zeichenzahl"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:88
+msgid "AND"
+msgstr "und"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:89
+msgid "Alignment"
+msgstr "Zentrierung"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:90
+msgid "Elementtype"
+msgstr "Elementtyp"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:91
+msgid "Value"
+msgstr "Wert"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:92
+msgid "Width in points"
+msgstr "Breite in points"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:93
+msgid "DB-Field"
+msgstr "DB-Feld"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:94
+msgid "Table of stored Items "
+msgstr "Tabelle der schon gespeicherten Items "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:95
+msgid "Optional"
+msgstr "Optional"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:96
+msgid "Substring"
+msgstr "Teilstring"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:97
+msgid "from"
+msgstr "von"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:98
+msgid "to"
+msgstr "bis"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:99
+msgid "Use only, if DB-Field is numeric"
+msgstr "Nur benutzen,wenn Feld numerisch ist"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:102
+msgid "Type "
+msgstr "Typ "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:103
+msgid "Mode "
+msgstr "Art "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:104
+msgid "Font "
+msgstr "Font "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:105
+msgid "FontSize "
+msgstr "FontSize "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:106
+msgid "Order"
+msgstr "Auftrag"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:107
+msgid "Number of Ch. "
+msgstr "Zeichenzahl "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:108
+msgid "X "
+msgstr "X "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:109
+msgid "X2/Width "
+msgstr "X2/Breite "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:110
+msgid "Y "
+msgstr "Y "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:111
+msgid "Y2/Height "
+msgstr "Y2/Höhe "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:112
+msgid "Line-width"
+msgstr "Strichdicke"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:113
+msgid "String/Fieldname "
+msgstr "String/Feldname "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:114
+msgid "Line-width "
+msgstr "Liniendicke "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:115
+msgid "                 Store Item                   "
+msgstr "                 Item speichern                   "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:116
+msgid "         Back to select a report             "
+msgstr "         Zurück zur Listenauswahl           "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:117
+msgid "Show the report"
+msgstr "Anzeigen des Drucks"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:118
+msgid ""
+"X1/Y1 and X2/Y2 are the ends of a line. <BR> X1/Y1 and width/height give the "
+"dimensions of a rectangle."
+msgstr ""
+"X1/Y1 und X2/Y2 bilden die Enden einer Linie. <BR> X1/Y1 und Breite/Höhe "
+"sind die Abmessungen eines Rechtecks."
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:119
+msgid "Please insert a value in X or the Number of Ch. and Type !"
+msgstr "Geben Sie bitte einen Wert in X oder Zeichenzahl und Elementtyp ein!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:120
+msgid "Insert please values for X1/Y1 and X2/Y2 and line-width!"
+msgstr "Geben Sie bitte Werte für X1/Y1 und X2/Y2 und Strichdicke an!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:121
+msgid ""
+"A value for Order etc. must only be inserted, if Mode=Detail and no value "
+"for Y has been given!"
+msgstr ""
+"Reihenfolge etc. darf nur bei Art = Detail und keinem Y-Wert eingegeben "
+"werden!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:122
+msgid "Please insert a value for X and Y!"
+msgstr "Geben Sie bitte für X und Y einen Wert ein!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:123
+msgid ""
+"In lines of mode 'Detail' the items with X/Y-values and Orders must not be "
+"mixed!"
+msgstr ""
+"In Zeilen des Abschnitts Detail können Elemente mit X/Y - Werten und "
+"Reihenfolgenummern nicht gemischt werden!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:124
+msgid "No Value for Item-type 'String' has been declared!"
+msgstr "Kein Wert für Elementtyp 'String' angegeben!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:125
+msgid "Error in Substring: To-Value is lower than From-Value!"
+msgstr "Fehler in Substring: Wert von Bis ist kleiner als Wert von Von:!"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:126
+msgid "Error in Total: Total can only be used with mode 'DE'!"
+msgstr "Fehler bei Total: Total darf nur bei der Art 'DE' verwendet werden"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:133
+msgid "Back to report selection(without deletion)"
+msgstr "Zurück zur Listenauswahl(ohne Löschen)"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:134
+msgid "D E L E T E"
+msgstr "            L Ö S C H E N           "
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:136
+#, php-format
+msgid "Do you really want to delete the report %s ?"
+msgstr "Wollen Sie wirklich die Liste %s löschen ?"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:137
+#, php-format
+msgid "Do you really want to delete the block %s ?"
+msgstr "Wollen Sie wirklich den Block %s löschen ?"
+
+#: /var/www/fa2.3/modules/repgen/_devel/../includes/repgen_const.inc:138
+#, php-format
+msgid "Do you really want to delete the function %s ?"
+msgstr "Wollen Sie wirklich die Funktion %s löschen ?"

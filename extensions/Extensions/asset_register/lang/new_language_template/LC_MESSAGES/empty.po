@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-11 12:06+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:17
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:17
+msgid "Amortisation Schedule"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:37
+msgid "The valuation year cannot be empty."
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:43
+msgid "The asset value cannot be empty."
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:52
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:55
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:50
+msgid "Selected asset type has been updated"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:57
+msgid "New Asset value has been added"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:70
+msgid "Selected asset valuation has been deleted"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Asset Type"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "Asset Name"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Serial Number"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Purchase Date"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Purchase Price"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+msgid "Amortise"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+msgid "Valuation Year"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Asset Value"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+msgid "Value Change"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:126
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:126
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:117
+msgid "Delete"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:147
+msgid "Year of Valuation :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:148
+msgid "Asset Value :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Year"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Depreciation"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Disposal Date"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Disposal Amount"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Name"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:20
+msgid "Assets"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:39
+msgid "The asset name cannot be empty."
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:45
+msgid "The purchase value cannot be empty."
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:61
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:58
+msgid "New Asset type has been added"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:74
+msgid ""
+"Cannot delete this asset because amortisation transactions have been created "
+"referring to it."
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:89
+msgid "Selected asset has been deleted"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Purchase Value"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "Current Value"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "A"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:124
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:116
+msgid "Edit"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:165
+msgid "Asset Type :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:166
+msgid "Asset Name :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:167
+msgid "Serial Number :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:168
+msgid "Tag Number :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:169
+msgid "Purchase Date :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:170
+msgid "Purchase Value :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:171
+msgid "Location :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:172
+msgid "Condition :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:173
+msgid "Acquisition :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:177
+msgid "Disposal Amount :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:178
+msgid "Disposal Date :"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:17
+msgid "Asset Types"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:34
+msgid "The asset type name cannot be empty."
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:40
+msgid "The depreciation rate cannot be empty."
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:71
+msgid ""
+"Cannot delete this asset type because assets transactions have been created "
+"referring to it."
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:86
+msgid "Selected asset type has been deleted"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:105
+msgid "Asset Type Name"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:105
+msgid "Depreciation Rate"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:146
+msgid "Asset Type:"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:147
+msgid "Depreciation Rate:"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:149
+msgid "Asset Account:"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:150
+msgid "Depreciation Account:"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:151
+msgid "Accumulated Depreciation:"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:152
+msgid "Asset Revaluation Account:"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:153
+msgid "Disposal Account:"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:16
+msgid "&Asset Type Entries"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:17
+msgid "&Assets Entries"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:18
+msgid "&Amortisation Posting"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:25
+msgid "Asset Register"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:27
+msgid "Asset Type Entries"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:28
+msgid "Assets Entries"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:29
+msgid "Amortisation Posting"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:27
+msgid "Main Menu"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:52
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:78
+msgid "Logout"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:53
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:76
+msgid "Help"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:71
+msgid "Preferences"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:72
+msgid "Change password"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:123
+msgid "Theme:"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Asset name"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:69
+msgid "Component"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:71
+msgid "Assets Listing"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:5
+msgid "Assets List"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:6
+msgid "Comments"
+msgstr ""
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:6
+msgid "Destination"
+msgstr ""

@@ -1,0 +1,11 @@
+Package: rep_tax_cash_basis
+Version: 2.3.7-1
+Name: Tax inquiry and detailed report on cash basis
+Description: It reports payments and receipts that include a tax component when the transaction was recorded in the bank account, rather than when the sale or purchase was invoiced. For New Zealand the default reporting is on a gross basis, rather than net so the inquiry screen and detail report have the option of reporting on a gross (before tax is deducted), or net (after tax is deducted) and defaults to gross basis.
+Author: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Maintenance: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Homepage: n/a
+Type: extension
+InstallPath: modules/rep_tax_cash_basis
+Filename: rep_tax_cash_basis-2.3.7-1
+

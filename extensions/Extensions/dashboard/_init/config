@@ -1,0 +1,17 @@
+Package: dashboard
+Version: 2.3.15-4
+Name: Company Dashboard
+Description: This module provides setup and support functions for the Dashboard theme. Both require each other to work.
+ You need to install both the Dashboard module and Dashboard theme. The Dashboard theme changes each application main
+ page into a dashboard displaying a number of widgets.
+ Each widget can be configured separately for each user of the system. All users should be given 'Dashboard Setup'
+ access so they can select which widgets are displayed on each page, and the information the widget contains.
+ More info: see /modules/dashboard/readme.txt file.
+Author: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Maintenance: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Homepage: frontaccounting.com
+Depends: dashboard_theme
+InstallPath: modules/dashboard
+Type: extension
+Filename: dashboard-2.3.15-4
+

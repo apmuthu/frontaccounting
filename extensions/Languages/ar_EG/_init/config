@@ -1,0 +1,15 @@
+Package: ar_EG
+Version: 2.3.12-1
+Description: Arabic translation file.
+Author: www.infotechaccountants.com/forums <admin@infotechaccountants.com>
+Maintenance: www.infotechaccountants.com/forums <admin@infotechaccountants.com>
+Homepage: frontaccounting.net
+Language: ar_EG
+Encoding: utf-8
+RTLDir: yes
+Depends: 
+Type: language
+Name: Arabic
+InstallPath: lang/ar_EG
+Filename: ar_EG-2.3.12-1
+

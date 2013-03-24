@@ -1,0 +1,15 @@
+Package: chart_en_US-demo2
+Version: 2.3.0-3
+Name: 5 digit American coa wit educational data
+Description: This is a 5 digit American chart of accounts. It has very good educational
+ data and this company is called Modern Factory Co.
+Encoding: iso-8859-1
+Author: infotechaccountants.com
+Maintenance: Joe Hunt
+Homepage: infotechaccountants.com
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_US-demo2.sql
+Filename: chart_en_US-demo2-2.3.0-3
+

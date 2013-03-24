@@ -1,0 +1,15 @@
+Package: ur_PK
+Version: 2.3.14-1
+Description: Urdu translation file (61%)
+Author: Riyaz Ahmed <rahmed@best-bf.com>
+Maintenance: Riyaz Ahmed <rahmed@best-bf.com>
+Homepage: frontaccounting.com
+Language: ur_PK
+Encoding: utf-8
+RTLDir: yes
+Depends: 
+Type: language
+Name: Urdu
+InstallPath: lang/ur_PK
+Filename: ur_PK-2.3.14-1
+

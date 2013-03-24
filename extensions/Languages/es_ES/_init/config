@@ -1,0 +1,16 @@
+Package: es_ES
+Version: 2.3.12-1
+Description: Chile spanish translation
+Author: Victor Rodrigez <caribe95@gmail.com>, Victor van Herpt Valdivia <victor@teidis.com>
+Maintenance: Victor van Herpt Valdivia <victor@teidis.com>
+Homepage: frontaccounting.net
+Language: es_ES
+Encoding: utf-8
+RTLDir: no
+Depends: 
+Type: language
+Name: Spanish (Spain)
+Name-es_CL: Español (España)
+InstallPath: lang/es_ES
+Filename: es_ES-2.3.12-1
+

@@ -1,0 +1,11 @@
+Package: rep_sales_summary
+Version: 2.3.3-2
+Description: Sales Summary Report
+Name: Sales Summary Report
+Filename: rep_sales_summary-2.3.3-2
+Author: Chaitanya-India <3chaitanya@gmail.com>
+Maintenance: Joe Hunt <joe.hunt.consulting@gmail.com>
+Homepage: frontaccounting.com
+Type: extension
+InstallPath: modules/rep_sales_summary
+

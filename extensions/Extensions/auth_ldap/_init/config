@@ -1,0 +1,15 @@
+Package: auth_ldap
+Version: 2.3.5-1
+Description: FrontAccounting OpenLDAP Connector.
+ The purpose of this OpenLDAP Connector is to allow OpenLDAP users seamlessly access to
+ FrontAccounting with Single Sign On (SSO).
+Author: Lim Tee Chert <teechert@gmail.com>
+License: http://www.gnu.org/copyleft/gpl-3.0.html GNU/GPL
+Maintenance: Lim Tee Chert <teechert@gmail.com>
+Homepage: http://www.anterp.com
+Depends: 
+Type: extension
+Name: Auth_LDAP
+InstallPath: modules/auth_ldap
+Filename: auth_ldap-2.3.5-1
+

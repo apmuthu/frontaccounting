@@ -1,0 +1,14 @@
+Package: chart_fr_FR-general
+Version: 2.3.0-5
+Name: French COA - General
+Description: This is a French chart of accounts for a starting company.
+Encoding: iso-8859-1
+Author: David Elvira
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: fr_FR-general.sql
+Filename: chart_fr_FR-general-2.3.0-5
+

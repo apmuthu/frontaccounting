@@ -1,0 +1,11 @@
+Package: rep_statement_reconcile
+Version: 2.3.3-2
+Description: Bank Statement w/ Reconcile like the normal Bank Statement but with reconcile columns
+Name: Bank Statement w/ Reconcile
+Filename: rep_statement_reconcile-2.3.3-2
+Author: Chaitanya-India <3chaitanya@gmail.com>
+Maintenance: Joe Hunt <joe.hunt.consulting@gmail.com>
+Homepage: frontaccounting.com
+Type: extension
+InstallPath: modules/rep_statement_reconcile
+

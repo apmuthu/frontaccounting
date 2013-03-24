@@ -1,0 +1,16 @@
+Package: es_AR
+Version: 2.3.0-2
+Description: Spanish (Argentina) translation Version merged from FA 2.2
+Author: 
+Maintenance: 
+Homepage: frontaccounting.net
+Language: es_AR
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Spanish (Argentina)
+Name-es_AR: Español (Chile)
+InstallPath: lang/es_AR
+Filename: es_AR-2.3.0-2
+

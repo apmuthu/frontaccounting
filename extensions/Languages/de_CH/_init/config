@@ -1,0 +1,15 @@
+Package: de_CH
+Version: 2.3.0-2
+Description: Swiss german translation Version merged from FA 2.2
+Author: Urs Pfister <webmaster@archivista.ch>
+Maintenance: Urs Pfister <webmaster@archivista.ch>
+Homepage: archivista.ch
+Language: de_CH
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Swiss German
+InstallPath: lang/de_CH
+Filename: de_CH-2.3.0-2
+

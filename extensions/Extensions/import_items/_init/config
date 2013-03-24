@@ -1,0 +1,16 @@
+Package: import_items
+Version: 2.3.0-1
+Name: Inventory Items CSV Import
+Description: This version supports importing Items, Sales Kits and BOM
+ The fields used will be different depending upon what is being imported.
+ It will still be a good idea to have a fixed number of (empty) fields to keep parsing simple.
+ The first field is the record type and that will decide what the rest of the line means.
+ More info you will find in readme.txt file found in extension install directory.
+Author: Tom Hallman
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Depends: 
+InstallPath: modules/import_items
+Type: extension
+Filename: import_items-2.3.0-1
+

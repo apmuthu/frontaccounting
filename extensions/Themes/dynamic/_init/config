@@ -1,0 +1,13 @@
+Package: dynamic
+Version: 2.3.10-3
+Name: Theme Dynamic
+Description: Optional theme with dynamic scrolling submenus on top. Main area is used for
+ various information depending on the module.
+Author: Joe Hunt
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Type: theme
+Path: dynamic
+InstallPath: themes/dynamic
+Filename: dynamic-2.3.10-3
+

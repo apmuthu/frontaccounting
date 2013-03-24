@@ -1,0 +1,18 @@
+Package: requisitions
+Version: 2.3.13-2
+Name: Requisitions
+DefaultStatus: inactive
+Description: Requisitions module provide additional level of purchase order integration inside company.
+ Before doing an Purchase order a request list of what they need is made in requisitions.
+ After the list of what they need is completed then it is allocated to the supplier.
+ This is now converted in to a purchase order that can be amended and process.
+ Warnings:
+ 1. this extension requires CREATE ROUTINE privileges for site admin db user to be successfully activated.
+ 2. Purchase Order reference template as set in Forms Setup screen have to be simple integer number.
+Author: Dennis Gichangi <dennis@dennis.me.ke>
+Maintenance: Dennis Gichangi <dennis@dennis.me.ke>
+Homepage: www.dennis.me.ke/press
+Type: extension
+InstallPath: modules/requisitions
+Filename: requisitions-2.3.13-2
+

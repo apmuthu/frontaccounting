@@ -1,0 +1,25 @@
+/doc/rep_select.jpg: e318f7ad902ae81ba56419d47a44031df4550273
+/doc/readme.txt: 5a1df0fc9093d42fd09f094761ca6fcf6714cc2a
+/doc/rep_create.jpg: 30f09976643a5d9c39338be3e14a98f61636cd30
+/doc/rep_strings.jpg: a9935b6fb54e038aa31bc4cf1489ce53ccc2930c
+/doc/manual.html: 61c728716957099a626575f19d932a1500743a81
+/repgen_del.php: a1b447b46fd8062af1ba7da76eb1381562af58b2
+/repgen_strings.php: 65146fd95593c960c059b04aa5e10ce6e3323db6
+/lang/new_language_template/LC_MESSAGES/empty.po: 21b258a549737ec66b53ca65ce687c3d1f6ae319
+/lang/de_DE/LC_MESSAGES/de_DE.mo: e9247c71072c7845b5e13eb84448df94836f1fae
+/lang/de_DE/LC_MESSAGES/de_DE.po: b017f78550a7e209f5e0a03af83500e22ec86b48
+/repgen_select.php: cafb13ebd65637dd611030c71599b92d44991c87
+/repgen_createblock.php: f5161c88eb3abe9b5b14af09fc0308c256b6470a
+/hooks.php: 72b5fa325f575a045ac5a61a3026b053167100b5
+/sql/reports.sql: 19a552eb5c9cc06ce79ee04dd26e72d6f0c31a06
+/repgen_graphics.php: ec975218159f3c8ffc2ab6878f0f9c8fe16d86b9
+/repgen_create.php: 4cf3a1f3d99e15f6564930d647b84036c6936571
+/repgen_print.php: 3a18df2e14df2f68ece57426cb6280e261435564
+/repgen_test_sel.php: c9246e45aaec8ea0d3b79efed03bdb765b067fc6
+/includes/acc_levels.php: b77eaf3f5745bd28adf8ff973ac3996a60b61fb3
+/includes/repgen_def.inc: a0f93c26346fcc4456c18e1664f059fbad4c12c9
+/includes/repgen_const.inc: 812035105832df31434b42ede45a221d2ede6796
+/includes/repgen.inc: 2475dca049f9309ae9512ea1b6ec4c0e0a0623ab
+/repgen_createfunct.php: bd893acac776d91839832f74e2576588667587b3
+/_init/config: 04d1451964d11aef8371f27f9a2c256376a0f012
+

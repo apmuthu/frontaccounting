@@ -1,0 +1,232 @@
+# Front Accounting internationalization file.
+# Copyright (C) 2007-2011 Front Accounting Team
+# This file is distributed under the same license as the Front Accounting package.
+# Janusz Dobrowolski <janusz@frontaccounting.eu>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.3.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-29 11:39+0100\n"
+"Last-Translator: Janusz Dobrowolski <janusz@frontaccounting.eu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../hooks.php:15
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../hooks.php:22
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../hooks.php:24
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:542
+msgid "Import Zen Cart Orders"
+msgstr "Import zamówieñ z Zen Cart"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:62
+msgid "You must first define at least one Sales Area"
+msgstr "Musisz wprowadziæ co najmniej jeden Rejon Sprzeda¿y."
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:87
+msgid "Failed to connect to Zen Cart Database"
+msgstr "Nie mo¿na siê po³±czyæ z baz± danych Zen Cart"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:173
+#, php-format
+msgid "Found %d new customers"
+msgstr "Znaleziono %d nowych klientów"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:238
+#, php-format
+msgid "%d customer posts created, %d customer posts updated."
+msgstr "Utworzono %d nowych klientów, zmieniono %d danych klientów."
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:251
+#, php-format
+msgid "Found %d New Orders"
+msgstr "Znaleziono %d nowych zamówieñ"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:274
+#, php-format
+msgid "Customer '%s' not found"
+msgstr "Klient '%s' nie zosta³ znaleziony."
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:334
+#, php-format
+msgid "Added Order Number %d"
+msgstr "Dodano zamówienie %d"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:355
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:374
+#, php-format
+msgid "'%s' price not found in FA"
+msgstr "Nie znaleziono ceny dla '%s' w bazie FrontAccounting"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:357
+#, php-format
+msgid "'%s' Prices do not match - FA: %s zen: %s"
+msgstr "Niezgodno¶æ cen dla '%s'- FA: %s zen: %s"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:376
+#, php-format
+msgid "Updating '%s' from %s to %s"
+msgstr "Aktualizacja dla '%s' z %s na %s"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:409
+msgid "Zen Cart Interface"
+msgstr "Interfejs Zen Cart"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:414
+msgid "Configuration"
+msgstr "Konfiguracja"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:417
+msgid "&Customer Import"
+msgstr "Import &Klientów"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:420
+msgid "&Order Import"
+msgstr "Import &Zamówieñ"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:436
+msgid "Function"
+msgstr "Funkcja"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:436
+msgid "Description"
+msgstr "Opis"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:443
+msgid "Table Status"
+msgstr "Interfejs"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:444
+msgid "Found"
+msgstr "Znaleziony"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:445
+msgid "Not Found"
+msgstr "Nie znaleziony"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:449
+msgid "Mysql Host"
+msgstr "Host MySQL"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:451
+msgid "User"
+msgstr "U¿ytkownik"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:453
+msgid "Password"
+msgstr "Has³o"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:455
+msgid "ZenCart DB Name"
+msgstr "Nazwa bazy"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:456
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:507
+msgid "Default Tax Group:"
+msgstr "Domy¶³na Grupa Podatkowa:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:478
+msgid "Default GL Accounts"
+msgstr "Domy¶³ne Konta KG"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:494
+msgid "Sales Account:"
+msgstr "Konto Sprzeda¿y:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:495
+msgid "Sales Discount Account:"
+msgstr "Konto Upustów:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:496
+msgid "Receivables Account:"
+msgstr "Konto Nale¿no¶ci:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:497
+msgid "Payment Discount Account:"
+msgstr "Konto Upustów z Tytu³u Przedp³aty:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:505
+msgid "Location, Tax Type, Sales Type, Sales Person and Payment Terms"
+msgstr "Inne Ustawienia Sprzeda¿y"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:506
+msgid "Location:"
+msgstr "Magazyn:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:508
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:558
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:582
+msgid "Sales Type:"
+msgstr "Typ Sprzeda¿y:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:509
+msgid "Sales Person:"
+msgstr "Sprzedawca:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:510
+msgid "Sales Area:"
+msgstr "Rejon Sprzeda¿y:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:511
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:557
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:581
+msgid "Customer Currency:"
+msgstr "Waluta Klienta:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:512
+msgid "Payment Terms:"
+msgstr "Warunki P³atno¶ci:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:514
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:516
+msgid "Dimension"
+msgstr "Przekrój"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:517
+msgid "Starting Zen Cart Customer ID:"
+msgstr "Pierwszy ID klienta Zen Cart"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:518
+msgid "Ending Zen Cart Customer ID:"
+msgstr "Ostatni ID klienta Zen Cart"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:523
+msgid "Import Zen Cart Customers"
+msgstr "Importuj Klientów"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:534
+msgid "Order Import Options"
+msgstr "Ustawienia Importu Zamówieñ"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:536
+msgid "Starting Order Number:"
+msgstr "Pierwszy Numer Zamówienia:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:537
+msgid "Last Order Number:"
+msgstr "Ostatni Numer Zamówienia:"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:553
+msgid "Price Check Options"
+msgstr "Opcje Sprawdzania Cen"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:563
+msgid "Check Zen Cart Prices"
+msgstr "Sprawd¼ Ceny Zen Cart"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:564
+msgid "No Pricing Errors Found"
+msgstr "Nie stwierdzono ró¿nic w cennikach"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:568
+msgid "Refresh"
+msgstr "Od¶wie¿"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:577
+msgid "Update Price Options"
+msgstr "Opcje Aktualizacji Cen"
+
+#: /home/janusz/FA/fa_stable/Repo/srcs/2.3/zen_import/_devel/../zencart.php:587
+msgid "Update Zen Cart Prices"
+msgstr "Aktualizuj Ceny Zen Cat"

@@ -1,0 +1,9509 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-22 12:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Restricted access"
+msgstr "Access restrictionat"
+
+msgid "Login as user: demouser and password: password"
+msgstr "login cu utilizator: demouser, parola: password"
+
+msgid "Please login here"
+msgstr "Login aici"
+
+msgid "Authorization timeout"
+msgstr "Sesiune expirata"
+
+msgid "Login"
+msgstr "login"
+
+msgid "Version"
+msgstr "Versiune"
+
+msgid "User name"
+msgstr "Utilizator"
+
+msgid "Password:"
+msgstr "Parola:"
+
+msgid "Company"
+msgstr "Firma"
+
+msgid "Login -->"
+msgstr "Login -->"
+
+msgid "Theme:"
+msgstr "Tema:"
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Thank you for using"
+msgstr "Ati iesit din"
+
+msgid "Click here to Login Again."
+msgstr "Click aici pentru login"
+
+msgid "Upgrade from version 2.2 to 2.3"
+msgstr "Actualizare de la versiunea 2.2 la 2.3"
+
+msgid "Upgrade from version 2.1/2.2beta to 2.2"
+msgstr "Actualizare de la versiunea 2.1/2.2beta la 2.2"
+
+msgid "Cannot query max rsales order number."
+msgstr ""
+
+msgid "Cannot store next sales order reference."
+msgstr ""
+
+msgid ""
+"Cannot upgrade extensions system: file /modules/installed_modules.php is not "
+"writeable"
+msgstr ""
+
+msgid "Upgrade from version 2.0 to 2.1"
+msgstr "Actualizare de la versiune a 2.0 la 2.1"
+
+msgid "Cannot retrieve bank accounts codes"
+msgstr ""
+
+msgid "Cannot update bank transactions"
+msgstr ""
+
+msgid "Cannot select stock identificators"
+msgstr ""
+
+msgid "Cannot insert stock id into item_codes"
+msgstr ""
+
+msgid ""
+"Seems that system upgrade to version 2.1 has \n"
+"\t\t\tbeen performed for this company already.<br> If something has gone \n"
+"\t\t\twrong and you want to retry upgrade process you MUST perform \n"
+"\t\t\tdatabase restore from last backup file first."
+msgstr ""
+
+msgid "Main Menu"
+msgstr "Meniu Principal"
+
+msgid "Help"
+msgstr "Ajutor"
+
+msgid "Preferences"
+msgstr "Preferinte"
+
+msgid "Change password"
+msgstr "Schimba parola"
+
+msgid "Customer Payment Entry"
+msgstr "Introducere incasari clienti (cash)"
+
+msgid "There are no customers defined in the system."
+msgstr "Nu exista clienti definiti in sistem."
+
+msgid "There are no bank accounts defined in the system."
+msgstr "Nu exista conturi bancare definite in sistem."
+
+msgid "Invalid sales invoice number."
+msgstr "Numarul facturii este invalid."
+
+msgid "The customer payment has been successfully entered."
+msgstr "Plata de la client a fost introdusa."
+
+msgid "&Print This Receipt"
+msgstr "&Tipareste chitanta"
+
+msgid "&View the GL Journal Entries for this Customer Payment"
+msgstr ""
+
+msgid "Enter Another &Customer Payment"
+msgstr "Introduceti o alta plata &client"
+
+msgid "The customer payment has been successfully updated."
+msgstr "Plata clientului a fost modificata."
+
+msgid "There is no customer selected."
+msgstr "Alegeti un client."
+
+msgid "This customer has no branch defined."
+msgstr "Acest client nu are nici un sediu definit."
+
+msgid "The entered date is invalid. Please enter a valid date for the payment."
+msgstr ""
+"Data introdusa este incorecta. Introduceti o data corecta pentru aceasta "
+"plata."
+
+msgid "The entered date is not in fiscal year."
+msgstr "Data introdusa nu este in anul fiscal."
+
+msgid "You must enter a reference."
+msgstr "Trebuie sa introduceti o referinta."
+
+msgid "The entered reference is already in use."
+msgstr "Referinta introdusa este deja folosita."
+
+msgid "The entered amount is invalid or negative and cannot be processed."
+msgstr "Suma introdusa este incorecta sau negativa si nu poate fi procesata."
+
+msgid ""
+"The Bank Charge Account has not been set in System and General GL Setup."
+msgstr ""
+"Contul pentru comisioane bancare nu a fost setat (in Parametri sistem si "
+"contabilitate)."
+
+msgid "The exchange rate must be numeric and greater than zero."
+msgstr "Cursul de schimb trebuie sa fie numeric si mai mare ca zero."
+
+msgid "The entered discount is not a valid number."
+msgstr "Discount-ul introdus nu este un numar valid."
+
+msgid ""
+"The balance of the amount and discout is zero or negative. Please enter "
+"valid amounts."
+msgstr ""
+"Diferenta intre suma si discount este zero sau negativa. Introduceti valori "
+"valide."
+
+msgid "From Customer:"
+msgstr "De la clientul:"
+
+msgid "Branch:"
+msgstr "Sediu:"
+
+msgid "This customer account is on hold."
+msgstr "Acest client este blocat."
+
+msgid "Into Bank Account:"
+msgstr "In contul bancar:"
+
+msgid "Reference:"
+msgstr "Referinta:"
+
+msgid "Date of Deposit:"
+msgstr "Data incasarii:"
+
+msgid "Bank Charge:"
+msgstr "Comision bancar:"
+
+msgid "Customer prompt payment discount :"
+msgstr "Discount pentru plata anticipata:"
+
+msgid "Amount of Discount:"
+msgstr "Valoare discount:"
+
+msgid "Amount:"
+msgstr "Valoare:"
+
+msgid "Memo:"
+msgstr "Note:"
+
+msgid "Amount and discount are in customer's currency."
+msgstr "Sumele si discount-urile sunt in moneda clientului."
+
+msgid "Update Payment"
+msgstr "Actualizeaza plata"
+
+msgid "Add Payment"
+msgstr "Adauga plata"
+
+msgid "Customer Allocation Inquiry"
+msgstr ""
+
+msgid "Select a customer: "
+msgstr "Selectati un client:"
+
+msgid "from:"
+msgstr "de la:"
+
+msgid "to:"
+msgstr "la:"
+
+msgid "Type:"
+msgstr "Tip:"
+
+msgid "show settled:"
+msgstr ""
+
+msgid "Search"
+msgstr "Cauta"
+
+msgid "Refresh Inquiry"
+msgstr ""
+
+msgid "Allocation"
+msgstr ""
+
+msgid "Payment"
+msgstr "Plata"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "#"
+msgstr "#"
+
+msgid "Reference"
+msgstr "Referinta"
+
+msgid "Order"
+msgstr "Comanda"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Due Date"
+msgstr "Scadenta"
+
+msgid "Customer"
+msgstr "Client"
+
+msgid "Currency"
+msgstr "Moneda"
+
+msgid "Debit"
+msgstr ""
+
+msgid "Credit"
+msgstr ""
+
+msgid "Allocated"
+msgstr ""
+
+msgid "Balance"
+msgstr "Sold"
+
+msgid "Marked items are overdue."
+msgstr "Articolele evidentiate au termen depasit."
+
+msgid "Customer Transactions"
+msgstr "Tranzactii client"
+
+msgid "From:"
+msgstr "De la:"
+
+msgid "To:"
+msgstr "La:"
+
+msgid "CUSTOMER ACCOUNT IS ON HOLD"
+msgstr "CLIENTUL ESTE BLOCAT"
+
+msgid "Days"
+msgstr "Zile"
+
+msgid "Over"
+msgstr "Peste"
+
+msgid "Terms"
+msgstr "Termeni"
+
+msgid "Current"
+msgstr "Curent"
+
+msgid "Total Balance"
+msgstr "Sold total"
+
+msgid "Credit This"
+msgstr "Storneaza"
+
+msgid "Edit"
+msgstr "Modifica"
+
+msgid "Print Receipt"
+msgstr "Tipareste chitanta"
+
+msgid "Print"
+msgstr "Tipareste"
+
+msgid "Branch"
+msgstr "Sediu"
+
+msgid "RB"
+msgstr "RB"
+
+msgid "Search Outstanding Sales Orders"
+msgstr "Cauta comenzi nelivrate"
+
+msgid "Search Template for Invoicing"
+msgstr "Cauta model pentru facturare"
+
+msgid "Select Template for Delivery"
+msgstr ""
+
+msgid "Search All Sales Orders"
+msgstr "Cauta toate comenzile"
+
+msgid "Search All Sales Quotations"
+msgstr "Cauta toate proformele"
+
+msgid "Dispatch"
+msgstr ""
+
+msgid "Sales Order"
+msgstr "Comanda"
+
+msgid "Invoice"
+msgstr "Factura"
+
+msgid "Delivery"
+msgstr "Aviz de livrare"
+
+msgid "Set this order as a template for direct deliveries/invoices"
+msgstr "Seteaza aceasta comanda ca model pentru facturi/avize de expeditie"
+
+msgid "#:"
+msgstr "#:"
+
+msgid "Ref"
+msgstr "Ref"
+
+msgid "Location:"
+msgstr "Gestiunea:"
+
+msgid "Item:"
+msgstr "Articol:"
+
+msgid "Show All:"
+msgstr "Afiseaza toate:"
+
+msgid "Select documents"
+msgstr "Selecteaza documente"
+
+msgid "Order #"
+msgstr "Comanda #"
+
+msgid "Cust Order Ref"
+msgstr "Referinta client"
+
+msgid "Order Date"
+msgstr "Data comenzii"
+
+msgid "Required By"
+msgstr ""
+
+msgid "Delivery To"
+msgstr "Livrare la"
+
+msgid "Order Total"
+msgstr "Total comanda"
+
+msgid "Quote #"
+msgstr "Proforma #"
+
+msgid "Quote Date"
+msgstr "Data proforma"
+
+msgid "Valid until"
+msgstr "Valabil pina la"
+
+msgid "Quote Total"
+msgstr "Total proforma"
+
+msgid "Description"
+msgstr "Descriere"
+
+msgid "Tmpl"
+msgstr ""
+
+msgid "Update"
+msgstr "Actualizeaza"
+
+msgid "Search Not Invoiced Deliveries"
+msgstr "Cauta livrarile nefacturate"
+
+msgid "Search All Deliveries"
+msgstr "Cauta toate avizele de expeditie"
+
+msgid ""
+"For batch invoicing you should\n"
+"\t\t    select at least one delivery. All items must be dispatched to\n"
+"\t\t    the same customer branch."
+msgstr ""
+
+msgid "Delivery #"
+msgstr "Aviz de expeditie #"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Cust Ref"
+msgstr "Referinta client"
+
+msgid "Delivery Date"
+msgstr "Data livrarii"
+
+msgid "Due By"
+msgstr ""
+
+msgid "Delivery Total"
+msgstr "Total livrare"
+
+msgid "Batch"
+msgstr ""
+
+msgid "Batch Invoicing"
+msgstr ""
+
+msgid "Customer Allocations"
+msgstr ""
+
+msgid "Show Settled Items:"
+msgstr ""
+
+msgid "Allocate"
+msgstr ""
+
+msgid "Transaction Type"
+msgstr "Tip tranzactie"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Left to Allocate"
+msgstr ""
+
+msgid "Marked items are settled."
+msgstr ""
+
+msgid "Allocate Customer Payment or Credit Note"
+msgstr ""
+
+#, php-format
+msgid "Allocation of %s # %d"
+msgstr ""
+
+msgid "Date:"
+msgstr "Data:"
+
+msgid "Total:"
+msgstr "Total:"
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Start again allocation of selected amount"
+msgstr ""
+
+msgid "Process"
+msgstr "Proceseaza"
+
+msgid "Process allocations"
+msgstr ""
+
+msgid "Back to Allocations"
+msgstr ""
+
+msgid "Abandon allocations and return to selection of allocatable amounts"
+msgstr ""
+
+msgid "There are no unsettled transactions to allocate."
+msgstr ""
+
+msgid "Sales Persons"
+msgstr "Reprezentanti vanzari"
+
+msgid "The sales person name cannot be empty."
+msgstr "Numele reprezentantului de vanzari nu poate fi vid."
+
+msgid "Salesman provision cannot be less than 0 or more than 100%."
+msgstr ""
+"Comisionul reprezentantului de vanzari nu poate fi mai mic ca zero sau mai "
+"mare de 100%"
+
+msgid "Salesman provision breakpoint must be numeric and not less than 0."
+msgstr ""
+"Comisionul reprezentantului de vanzari trebuie sa fie un numar pozitiv."
+
+msgid "Selected sales person data have been updated"
+msgstr "Datele reprezentantului de vanzari au fost actualizate"
+
+msgid "New sales person data have been added"
+msgstr "Un nou reprezentant de vanzari a fost adaugat"
+
+msgid "Selected sales person data have been deleted"
+msgstr "Reprezentantul de vanzari a fost sters"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Provision"
+msgstr "Comision"
+
+msgid "Break Pt."
+msgstr "Plan de vanzari (target)"
+
+msgid "Delete"
+msgstr "Sterge"
+
+msgid "Sales person name:"
+msgstr "Numele reprezentantului de vanzari:"
+
+msgid "Telephone number:"
+msgstr "Numar telefon:"
+
+msgid "Fax number:"
+msgstr "Numar fax:"
+
+msgid "E-mail:"
+msgstr "E-mail:"
+
+msgid "Break Pt.:"
+msgstr "Plan de vanzari(target):"
+
+msgid "Sales Groups"
+msgstr "Grupe de clienti"
+
+msgid "The area description cannot be empty."
+msgstr "Descrierea zonei nu poate fi vida."
+
+msgid "Selected sales group has been updated"
+msgstr "Grupul selectat a fost actualizat"
+
+msgid "New sales group has been added"
+msgstr "Un nou grup a fost adaugat"
+
+msgid ""
+"Cannot delete this group because customers have been created using this "
+"group."
+msgstr "Acest grup nu se poate sterge deoarece este folosit la clienti."
+
+msgid "Selected sales group has been deleted"
+msgstr "Grupul selectat a fost sters"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Group Name"
+msgstr "Nume grup"
+
+msgid "Group Name:"
+msgstr "Nume grup:"
+
+msgid "POS settings"
+msgstr "Parametri POS"
+
+msgid "The POS name cannot be empty."
+msgstr "Numele POS nu poate fi gol."
+
+msgid "New point of sale has been added"
+msgstr "Un nou POS a fost adaugat"
+
+msgid "Selected point of sale has been updated"
+msgstr "POS-ul selectat a fost actualizat"
+
+msgid "Cannot delete this POS because it is used in users setup."
+msgstr "Nu se poate sterge acest POS deoarece este folosit de utilizatori."
+
+msgid "Selected point of sale has been deleted"
+msgstr "POS-ul selectat a fost sters"
+
+msgid "POS Name"
+msgstr "Nume POS"
+
+msgid "Credit sale"
+msgstr "Vanzari cu factura"
+
+msgid "Cash sale"
+msgstr "Vanzari cu cash"
+
+msgid "Location"
+msgstr "Gestiune"
+
+msgid "Default account"
+msgstr "Contul implicit"
+
+msgid "Yes"
+msgstr "Da"
+
+msgid "No"
+msgstr "Nu"
+
+msgid "To have cash POS first define at least one cash bank account."
+msgstr ""
+"Pentru a definit POS cu cash, definiti cel putin un cont bancar de cash."
+
+msgid "Point of Sale Name"
+msgstr "Numele POS-ului"
+
+msgid "Allowed credit sale terms selection:"
+msgstr "Vanzari cu factura:"
+
+msgid "Allowed cash sale terms selection:"
+msgstr "Vanzari cu cash:"
+
+msgid "Default cash account"
+msgstr "Contul de cash implicit"
+
+msgid "POS location"
+msgstr "Locatia POS-ului"
+
+msgid "Recurrent Invoices"
+msgstr "Facturi recurente"
+
+msgid "The entered date is invalid."
+msgstr "Data introdusa este incorecta"
+
+msgid "Selected recurrent invoice has been updated"
+msgstr "Factura recurenta selectata a fost actualizata"
+
+msgid "New recurrent invoice has been added"
+msgstr "O noua factura recurenta a fost adaugata"
+
+msgid "Selected recurrent invoice has been deleted"
+msgstr "Factura recurenta selectata a fost stearsa"
+
+msgid "Template No"
+msgstr "Model nr."
+
+msgid "Group"
+msgstr "Grup"
+
+msgid "Monthly"
+msgstr "Lunar"
+
+msgid "Begin"
+msgstr "Inceput"
+
+msgid "End"
+msgstr "Sfarsit"
+
+msgid "Last Created"
+msgstr ""
+
+msgid "Description:"
+msgstr "Descriere:"
+
+msgid "Template:"
+msgstr "Model:"
+
+msgid "Customer:"
+msgstr "Client:"
+
+msgid "Sales Group:"
+msgstr "Grup clienti:"
+
+msgid "Days:"
+msgstr "Zile:"
+
+msgid "Monthly:"
+msgstr "Lunar:"
+
+msgid "Begin:"
+msgstr "Inceput:"
+
+msgid "End:"
+msgstr "Sfarsit:"
+
+msgid "Sales Types"
+msgstr "Liste de preturi"
+
+msgid "The sales type description cannot be empty."
+msgstr "Descrierea listei de preturi nu poate fi vida."
+
+msgid "Calculation factor must be valid positive number."
+msgstr "Factor-ul trebuie sa fie un numar pozitiv."
+
+msgid "New sales type has been added"
+msgstr "O noua lista de preturi a fost adaugata"
+
+msgid "Selected sales type has been updated"
+msgstr "Lista de preturi a fost actualizata"
+
+msgid ""
+"Cannot delete this sale type because customer transactions have been created "
+"using this sales type."
+msgstr ""
+"Aceasta lista de preturi nu se poate sterge deoarece este folosita in "
+"tranzactii client."
+
+msgid ""
+"Cannot delete this sale type because customers are currently set up to use "
+"this sales type."
+msgstr ""
+"Aceasta lista de preturi nu se poate sterge deoarece este folosita la "
+"clienti."
+
+msgid "Selected sales type has been deleted"
+msgstr "Lista de preturi selectata a fost stearsa"
+
+msgid "Type Name"
+msgstr "Numele listei"
+
+msgid "Factor"
+msgstr "Factor"
+
+msgid "Tax Incl"
+msgstr "cu TVA"
+
+msgid "Base"
+msgstr "Baza"
+
+msgid ""
+"Marked sales type is the company base pricelist for prices calculations."
+msgstr "Lista de preturi evidentiata este lista de preturi de referinta"
+
+msgid "Sales Type Name"
+msgstr "Nume lista pret"
+
+msgid "Calculation factor"
+msgstr "Factor de calcul"
+
+msgid "Tax included"
+msgstr "Cu TVA"
+
+msgid "Customer Branches"
+msgstr "Sedii client"
+
+msgid ""
+"There are no customers defined in the system. Please define a customer to "
+"add customer branches."
+msgstr ""
+"Nu exista clienti definiti in sistem. Definiti un client pentru a adauga "
+"sedii client."
+
+msgid ""
+"There are no sales people defined in the system. At least one sales person "
+"is required before proceeding."
+msgstr ""
+"Nu exista reprezentanti de vanzari definiti in sistem. Definiti cel putin un "
+"reprezentant inainte de a continua."
+
+msgid ""
+"There are no sales areas defined in the system. At least one sales area is "
+"required before proceeding."
+msgstr ""
+"Nu exista zone definite in sistem. Este necesara cel putin o zona inainte de "
+"a continua."
+
+msgid ""
+"There are no shipping companies defined in the system. At least one shipping "
+"company is required before proceeding."
+msgstr ""
+"Nu exista firme de transport definite in sistem. Trebuie definita cel putin "
+"o firma de transport inainte de a continua."
+
+msgid ""
+"There are no tax groups defined in the system. At least one tax group is "
+"required before proceeding."
+msgstr ""
+
+msgid "The Branch name cannot be empty."
+msgstr "Numele sediului nu poate fi gol."
+
+msgid "The Branch short name cannot be empty."
+msgstr "Codul sediului nu poate fi vid."
+
+msgid "Selected customer branch has been updated"
+msgstr "Sediul client a fost modificat"
+
+msgid "New customer branch has been added"
+msgstr "Un nou sediu client a fost adaugat"
+
+msgid ""
+"Cannot delete this branch because customer transactions have been created to "
+"this branch."
+msgstr ""
+"Acest sediu nu se poate sterge deoarece exista tranzactii client pe acest "
+"sediu."
+
+msgid ""
+"Cannot delete this branch because sales orders exist for it. Purge old sales "
+"orders first."
+msgstr ""
+"Acest sediu nu se poate sterge deoarece exista comenzi pe acesta. Stergeti "
+"comenzile vechi mai intai."
+
+msgid "Selected customer branch has been deleted"
+msgstr "Sediul client a fost sters"
+
+msgid "Main Branch"
+msgstr "Sediu principal"
+
+msgid "Name and Contact"
+msgstr "Nume si contacte"
+
+msgid "Branch Name:"
+msgstr "Numele sediului:"
+
+msgid "Branch Short Name:"
+msgstr "Cod sediu:"
+
+msgid "Sales"
+msgstr "Vanzari"
+
+msgid "Sales Person:"
+msgstr "Reprezentant vanzari:"
+
+msgid "Sales Area:"
+msgstr "Zona:"
+
+msgid "Default Inventory Location:"
+msgstr "Gestiunea implicita:"
+
+msgid "Default Shipping Company:"
+msgstr "Firma de transport implicita:"
+
+msgid "Tax Group:"
+msgstr "Grup de taxe:"
+
+msgid "GL Accounts"
+msgstr "Conturi contabile"
+
+msgid "Sales Account:"
+msgstr ""
+
+msgid "Sales Discount Account:"
+msgstr ""
+
+msgid "Accounts Receivable Account:"
+msgstr ""
+
+msgid "Prompt Payment Discount Account:"
+msgstr ""
+
+msgid "General contact data"
+msgstr "Date generale de contact"
+
+msgid "Contact Person:"
+msgstr "Persoana de contact:"
+
+msgid "Phone Number:"
+msgstr "Numar de telefon:"
+
+msgid "Secondary Phone Number:"
+msgstr "Numar de telefon alternativ:"
+
+msgid "Fax Number:"
+msgstr "Numar fax:"
+
+msgid "Document Language:"
+msgstr "Limba document:"
+
+msgid "Customer default"
+msgstr ""
+
+msgid "Addresses"
+msgstr "Adrese"
+
+msgid "Mailing Address:"
+msgstr "Adresa de corespondenta:"
+
+msgid "Billing Address:"
+msgstr "Adresa de facturare:"
+
+msgid "General Notes:"
+msgstr "Note generale:"
+
+msgid "Disable this Branch:"
+msgstr "Dezactiveaza acest sediu:"
+
+msgid "Short Name"
+msgstr "Cod"
+
+msgid "Sales Person"
+msgstr "Reprezentant vanzari"
+
+msgid "Area"
+msgstr "Zona"
+
+msgid "Phone No"
+msgstr "Numar telefon"
+
+msgid "Fax No"
+msgstr "Numar fax"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Tax Group"
+msgstr "Grup taxe"
+
+msgid "Inactive"
+msgstr "Inactiv"
+
+msgid ""
+"The selected customer does not have any branches. Please create at least one "
+"branch."
+msgstr "Clientul selectat nu are nici un sediu. Creati cel putin un sediu."
+
+msgid "&General settings"
+msgstr "Parametri generali"
+
+msgid "&Contacts"
+msgstr "Contacte"
+
+msgid "Credit Status"
+msgstr "Stari bonitate client"
+
+msgid "The credit status description cannot be empty."
+msgstr "Descrierea bonitatii nu poate fi vida."
+
+msgid "New credit status has been added"
+msgstr "Un nou tip de bonitate client a fost adaugat"
+
+msgid "Selected credit status has been updated"
+msgstr "Tipul de bonitate client a fost actualizat"
+
+msgid ""
+"Cannot delete this credit status because customer accounts have been created "
+"referring to it."
+msgstr ""
+"Acest tip de bonitate client nu poate fi sters deoarece este folosit la "
+"conturi client"
+
+msgid "Selected credit status has been deleted"
+msgstr "Tipul de bonitate selectat a fost sters."
+
+msgid "Dissallow Invoices"
+msgstr "Facturare"
+
+msgid "Invoice OK"
+msgstr "Da"
+
+msgid "NO INVOICING"
+msgstr "NU SE EMIT FACTURI"
+
+msgid "Dissallow invoicing ?"
+msgstr "Blocat la facturare ?"
+
+msgid "Sales Areas"
+msgstr "Zone"
+
+msgid "Selected sales area has been updated"
+msgstr "Zona selectata a fost actualizata"
+
+msgid "New sales area has been added"
+msgstr "O noua zona a fost adaugata"
+
+msgid ""
+"Cannot delete this area because customer branches have been created using "
+"this area."
+msgstr ""
+"Nu se poate sterge aceasta zona deoarece exista sedii client definite in "
+"aceasta zona."
+
+msgid "Selected sales area has been deleted"
+msgstr "Zona selectata a fost stearsa"
+
+msgid "Area Name"
+msgstr "Nume zona"
+
+msgid "Area Name:"
+msgstr "Nume zona:"
+
+msgid "Customers"
+msgstr "Clienti"
+
+msgid "The customer name cannot be empty."
+msgstr "Numele clientului nu poate fi vid."
+
+msgid "The customer short name cannot be empty."
+msgstr "Codul clientului nu poate fi vid."
+
+msgid "The credit limit must be numeric and not less than zero."
+msgstr "Limita de credit trebuie sa fie un numar mai mare ca zero."
+
+msgid ""
+"The payment discount must be numeric and is expected to be less than 100% "
+"and greater than or equal to 0."
+msgstr ""
+"Discount-ul de plata trebuie sa fie un numar, mai mic ca 100% si mai mare ca "
+"zero."
+
+msgid ""
+"The discount percentage must be numeric and is expected to be less than 100% "
+"and greater than or equal to 0."
+msgstr ""
+"Discount-ul (%) trebuie sa fie un numar, mai mic ca 100% si mai mare ca zero."
+
+msgid "Customer has been updated."
+msgstr "Clientul a fost actualizat."
+
+msgid "A new customer has been added."
+msgstr "Un client nou a fost adaugat."
+
+msgid ""
+"A default Branch has been automatically created, please check default Branch "
+"values by using link below."
+msgstr ""
+"Un sediu implicit a fost creat, verificati sediul implicit folosind link-ul "
+"de mai jos."
+
+msgid ""
+"This customer cannot be deleted because there are transactions that refer to "
+"it."
+msgstr ""
+"Acest client nu se poate sterge deoarece au fost realizate tranzatii pe "
+"acest client."
+
+msgid ""
+"Cannot delete the customer record because orders have been created against "
+"it."
+msgstr "Acest client nu se poate sterge deoarece are comenzi introduse."
+
+msgid ""
+"Cannot delete this customer because there are branch records set up against "
+"it."
+msgstr "Acest client nu se poate sterge deoarece are sedii definite."
+
+msgid "Selected customer has been deleted."
+msgstr "Clientul selectat a fost sters."
+
+msgid "Name and Address"
+msgstr "Nume si adresa"
+
+msgid "Customer Name:"
+msgstr "Nume client:"
+
+msgid "Customer Short Name:"
+msgstr "Cod client:"
+
+msgid "Address:"
+msgstr "Adresa:"
+
+msgid "GSTNo:"
+msgstr "C.I.F.:"
+
+msgid "Customer's Currency:"
+msgstr "Moneda client:"
+
+msgid "Sales Type/Price List:"
+msgstr "Lista de preturi:"
+
+msgid "Customer status:"
+msgstr "Stare client:"
+
+msgid "Phone:"
+msgstr "Telefon:"
+
+msgid "Discount Percent:"
+msgstr "Discount (procent)"
+
+msgid "Prompt Payment Discount Percent:"
+msgstr "Discount la plata anticipata (procent):"
+
+msgid "Credit Limit:"
+msgstr "Limita de credit:"
+
+msgid "Payment Terms:"
+msgstr "Conditii de plata:"
+
+msgid "Credit Status:"
+msgstr "Status bonitate:"
+
+msgid "Dimension"
+msgstr ""
+
+msgid "Customer branches"
+msgstr "Sedii client"
+
+msgid "Select or &Add"
+msgstr "Alege sau &adauga"
+
+msgid "&Add or Edit "
+msgstr "&Adauga sau modifica"
+
+msgid "Add New Customer"
+msgstr "Adauga client nou"
+
+msgid "Update Customer"
+msgstr "Modifica client"
+
+msgid "Update customer data"
+msgstr "Modifica date client"
+
+msgid "Select this customer and return to document entry."
+msgstr "Alege acest client si intoarce-te la introducere document."
+
+msgid "Delete Customer"
+msgstr "Sterge client"
+
+msgid "Delete customer data if have been never used"
+msgstr "Sterge date client daca nu au fost utilizate niciodata"
+
+msgid ""
+"There are no sales types defined. Please define at least one sales type "
+"before adding a customer."
+msgstr ""
+"Nu exista liste de pret definite in sistem. Definiti cel putin o lista de "
+"pret inainte de a adauga un client."
+
+msgid "New customer"
+msgstr "Client nou"
+
+msgid "Show inactive:"
+msgstr "Afiseaza si inactivi:"
+
+msgid "&Transactions"
+msgstr "&Tranzactii"
+
+msgid "Sales &Orders"
+msgstr "&Comenzi"
+
+#, php-format
+msgid "Modifying Credit Invoice # %d."
+msgstr "Modificati factura storno # %d."
+
+msgid "Credit all or part of an Invoice"
+msgstr "Storneaza o parte din sau toata factura"
+
+msgid "Credit Note has been processed"
+msgstr "Factura storno a fost procesata"
+
+msgid "&View This Credit Note"
+msgstr "Afiseaza aceasta factura storno"
+
+msgid "&Print This Credit Note"
+msgstr "Tipareste aceasta factura storno"
+
+msgid "&Email This Credit Note"
+msgstr "Trimite aceasta factura storno prin e-mail"
+
+msgid "View the GL &Journal Entries for this Credit Note"
+msgstr ""
+
+msgid "Add an Attachment"
+msgstr "Adauga un atasament"
+
+msgid "Credit Note has been updated"
+msgstr "Factura storno a fost modificata"
+
+msgid "The entered shipping cost is invalid or less than zero."
+msgstr "Costul de transport introdus este incorect sau mai mic ca zero."
+
+msgid ""
+"Selected quantity cannot be less than zero nor more than quantity not "
+"credited yet."
+msgstr ""
+
+msgid ""
+"This page can only be opened if an invoice has been selected for crediting."
+msgstr ""
+
+msgid "Crediting Invoice"
+msgstr "Stornare factura"
+
+msgid "Shipping Company"
+msgstr "Firma de transport"
+
+msgid "Invoice Date"
+msgstr "Data facturii"
+
+msgid "Credit Note Date"
+msgstr "Data facturii storno"
+
+msgid "Item Code"
+msgstr "Cod Articol"
+
+msgid "Item Description"
+msgstr "Descriere"
+
+msgid "Invoiced Quantity"
+msgstr "Canitate facturata"
+
+msgid "Units"
+msgstr "Unitati"
+
+msgid "Credit Quantity"
+msgstr "Cantitatea stornata"
+
+msgid "Price"
+msgstr "Pret"
+
+msgid "Discount %"
+msgstr "Discount %"
+
+msgid "Credit Shipping Cost"
+msgstr ""
+
+msgid "Sub-total"
+msgstr "Subtotal"
+
+msgid "Credit Note Total"
+msgstr "Total storno"
+
+msgid "Credit Note Type"
+msgstr "Tip Storno"
+
+msgid "Items Returned to Location"
+msgstr "Articolele returnate in gestiune"
+
+msgid "Write off the cost of the items to"
+msgstr ""
+
+msgid "Memo"
+msgstr "Note"
+
+msgid "Update credit value for quantities entered"
+msgstr ""
+
+msgid "Process Credit Note"
+msgstr "Proceseaza storno"
+
+msgid "Direct Sales Delivery"
+msgstr "Introducere aviz de expeditie nou"
+
+msgid "Direct Sales Invoice"
+msgstr "Factura de vanzare noua"
+
+#, php-format
+msgid "Modifying Sales Order # %d"
+msgstr "Modificare comanda # %d"
+
+#, php-format
+msgid "Modifying Sales Quotation # %d"
+msgstr "Modificare proforma # %d"
+
+msgid "New Sales Order Entry"
+msgstr "Introducere comanda noua"
+
+msgid "New Sales Quotation Entry"
+msgstr "Introducere proforma noua"
+
+msgid "Sales Order Entry"
+msgstr "Introducere comanda"
+
+#, php-format
+msgid "Order # %d has been entered."
+msgstr "Comanda # %d a fost introdusa."
+
+msgid "&View This Order"
+msgstr "&Afiseaza aceasta comanda"
+
+msgid "&Print This Order"
+msgstr "&Tipareste aceasta comanda"
+
+msgid "&Email This Order"
+msgstr "Trimiteti aceasta comanda prin &e-mail"
+
+msgid "Make &Delivery Against This Order"
+msgstr "Realizati livrarea la aceasta comanda"
+
+msgid "Work &Order Entry"
+msgstr ""
+
+msgid "Enter a &New Order"
+msgstr "Introduceti o &noua comanda"
+
+#, php-format
+msgid "Order # %d has been updated."
+msgstr "Comanda # %d a fost modificata."
+
+msgid "Confirm Order Quantities and Make &Delivery"
+msgstr "Confirmati cantitatile din comanda si realizati lirarea"
+
+msgid "Select A Different &Order"
+msgstr "Alegeti o &comanda diferita"
+
+#, php-format
+msgid "Quotation # %d has been entered."
+msgstr "Proforma # %d a fost introdusa."
+
+msgid "&View This Quotation"
+msgstr "Afiseaza aceasta proforma"
+
+msgid "&Print This Quotation"
+msgstr "Tipareste aceasta proforma"
+
+msgid "&Email This Quotation"
+msgstr "Trimite proforma prin &e-mail"
+
+msgid "Make &Sales Order Against This Quotation"
+msgstr "Realizati comanda din aceasta proforma"
+
+msgid "Enter a New &Quotation"
+msgstr "Introduceti o noua proforma"
+
+#, php-format
+msgid "Quotation # %d has been updated."
+msgstr "proforma # %d a fost modificata."
+
+msgid "Select A Different &Quotation"
+msgstr "Alegeti o alta proforma"
+
+#, php-format
+msgid "Delivery # %d has been entered."
+msgstr "Avizul de expeditie # %d a fost introdus."
+
+msgid "&View This Delivery"
+msgstr "Afisati acest aviz de expeditie"
+
+msgid "&Print Delivery Note"
+msgstr "Tipareste aviz de expeditie"
+
+msgid "&Email Delivery Note"
+msgstr "Trimite prin e-mail aviz de expeditie"
+
+msgid "P&rint as Packing Slip"
+msgstr ""
+
+msgid "E&mail as Packing Slip"
+msgstr ""
+
+msgid "View the GL Journal Entries for this Dispatch"
+msgstr ""
+
+msgid "Make &Invoice Against This Delivery"
+msgstr ""
+
+msgid "Enter a New Template &Delivery"
+msgstr ""
+
+msgid "Enter a &New Delivery"
+msgstr ""
+
+#, php-format
+msgid "Invoice # %d has been entered."
+msgstr "Factura # %d a fost introdusa."
+
+msgid "&View This Invoice"
+msgstr "Afisati aceasta factura"
+
+msgid "&Print Sales Invoice"
+msgstr "Tipariti aceasta factura"
+
+msgid "&Email Sales Invoice"
+msgstr "Trimiteti prin e-mail aceasta factura"
+
+msgid "Print &Receipt"
+msgstr "Tipareste chitanta"
+
+msgid "View the GL &Journal Entries for this Invoice"
+msgstr ""
+
+msgid "Enter a &New Template Invoice"
+msgstr ""
+
+msgid "Enter a &New Direct Invoice"
+msgstr "Introduceti o noua factura"
+
+msgid "The entered date is not in fiscal year"
+msgstr "Data introdusa nu este in anul fiscal"
+
+msgid "You must enter at least one non empty item line."
+msgstr "Trebuie sa introduceti cel putin o linie de articol."
+
+msgid ""
+"You must enter the person or company to whom delivery should be made to."
+msgstr ""
+"Trebuie sa introduceti numele persoanei sau firma catre care se va face "
+"livrarea."
+
+msgid ""
+"You should enter the street address in the box provided. Orders cannot be "
+"accepted without a valid street address."
+msgstr ""
+"Trebuie sa introduceti adresa in campul specific. Comenzile nu pot fi "
+"introduse fara o adresa valida."
+
+msgid "The shipping cost entered is expected to be numeric."
+msgstr "Costul de transport trebuie sa fie numeric."
+
+msgid "The Valid date is invalid."
+msgstr ""
+
+msgid "The delivery date is invalid."
+msgstr "Data livrarii este incorecta."
+
+msgid "The requested valid date is before the date of the quotation."
+msgstr ""
+
+msgid "The requested delivery date is before the date of the order."
+msgstr ""
+
+msgid "You need to define a cash account for your Sales Point."
+msgstr "Trebuie sa definiti un cont de cash pentru acest POS."
+
+msgid "Item description cannot be empty."
+msgstr "Descrierea articolului nu poate fi vida."
+
+msgid ""
+"The item could not be updated because you are attempting to set the quantity "
+"ordered to less than 0, or the discount percent to more than 100."
+msgstr ""
+
+msgid "Price for inventory item must be entered and can not be less than 0"
+msgstr ""
+"Pretul pentru articol stocabil trebuie introdus si trebuie sa fie mai mare "
+"ca zero"
+
+msgid ""
+"You attempting to make the quantity ordered a quantity less than has already "
+"been delivered. The quantity delivered cannot be modified retrospectively."
+msgstr ""
+
+msgid ""
+"The delivery cannot be processed because there is an insufficient quantity "
+"for item:"
+msgstr ""
+"Aceasta livrare nu poate fi procesata deoarece nu exista cantitate "
+"suficienta pentru articolul:"
+
+msgid "Quantity On Hand"
+msgstr "Cantitate disponibila"
+
+#, php-format
+msgid "Price %s is below Standard Cost %s"
+msgstr "Pretul %s este mai mic decat costul standard %s"
+
+msgid ""
+"This item cannot be deleted because some of it has already been delivered."
+msgstr "Acest articol nu poate fi sters deoarece o parte a fost deja livrata."
+
+msgid "Direct delivery entry has been cancelled as requested."
+msgstr "Introducerea avizului de expeditie a fost anulata."
+
+msgid "Enter a New Sales Delivery"
+msgstr "Introduceti un aviz de expeditie nou"
+
+msgid "Direct invoice entry has been cancelled as requested."
+msgstr "Introducerea facturii a fost anulata."
+
+msgid "Enter a New Sales Invoice"
+msgstr "Introduceti o noua factura"
+
+msgid ""
+"This order cannot be cancelled because some of it has already been invoiced "
+"or dispatched. However, the line item quantities may be modified."
+msgstr ""
+"Aceasta comanda nu poate fi anulata deoarece o parte a fost deja facturata "
+"sau livrata. Totusi, cantitatile pot fi modificate."
+
+msgid "This sales quotation has been cancelled as requested."
+msgstr "Aceasta proforma a fost anulata, cf. cererii."
+
+msgid "Enter a New Sales Quotation"
+msgstr "Introduceti o noua proforma"
+
+msgid "This sales order has been cancelled as requested."
+msgstr "Aceasta comanda a fost anulata conform cererii."
+
+msgid "Enter a New Sales Order"
+msgstr "Introduceti o noua comanda"
+
+msgid "Sales Quotation"
+msgstr "Proforma"
+
+msgid "There are no inventory items defined in the system."
+msgstr "Nu exista articole definite in sistem."
+
+msgid ""
+"There are no customers, or there are no customers with branches. Please "
+"define customers and customer branches."
+msgstr ""
+"Nu exista clienti, sau nu exista sedii client definite. Definiti clienti si "
+"sedii client."
+
+msgid "Invoice Date:"
+msgstr "Data facturii:"
+
+msgid "Sales Invoice Items"
+msgstr "Articole in factura"
+
+msgid "Enter Delivery Details and Confirm Invoice"
+msgstr "Introduceti detaliile de livrare si confirmati factura"
+
+msgid "Cancel Invoice"
+msgstr "Anuleaza factura"
+
+msgid "Place Invoice"
+msgstr "Proceseaza factura"
+
+msgid "Delivery Date:"
+msgstr "Data livrarii:"
+
+msgid "Delivery Note Items"
+msgstr "Articole in aviz de expeditie"
+
+msgid "Enter Delivery Details and Confirm Dispatch"
+msgstr ""
+
+msgid "Cancel Delivery"
+msgstr "Anuleaza aviz de expeditie"
+
+msgid "Place Delivery"
+msgstr "Proceseaza aviz de expeditie"
+
+msgid "Quotation Date:"
+msgstr "Data proforma:"
+
+msgid "Sales Quotation Items"
+msgstr "Articole in proforma"
+
+msgid "Enter Delivery Details and Confirm Quotation"
+msgstr "Introduceti detaliile de livrare si confirmati proforma"
+
+msgid "Cancel Quotation"
+msgstr "Anuleaza proforma"
+
+msgid "Place Quotation"
+msgstr "Proceseaza proforma"
+
+msgid "Commit Quotations Changes"
+msgstr "Inregistrati modificarile proformei"
+
+msgid "Order Date:"
+msgstr "Data comanda:"
+
+msgid "Sales Order Items"
+msgstr "Articole in comanda"
+
+msgid "Enter Delivery Details and Confirm Order"
+msgstr "Introduceti detaliile de livrare si confirmati comanda"
+
+msgid "Cancel Order"
+msgstr "Anuleaza comanda"
+
+msgid "Place Order"
+msgstr "Proceseaza comanda"
+
+msgid "Commit Order Changes"
+msgstr "Inregistrati modificarile comenzii"
+
+msgid "Check entered data and save document"
+msgstr "Verificati informatiile introduse si salvati documentul"
+
+msgid "You are about to void this Document.\\nDo you want to continue?"
+msgstr "Veti anula acest document.\\nContinuati?"
+
+msgid "Validate changes and update document"
+msgstr "Validati modificarile si actualizati documentul"
+
+msgid ""
+"Cancels document entry or removes sales order when editing an old document"
+msgstr ""
+
+#, php-format
+msgid "Modifying Sales Invoice # %d."
+msgstr "Modificare factura # %d."
+
+msgid "Issue an Invoice for Delivery Note"
+msgstr "Emiteti o factura aferenta acestui aviz de expeditie"
+
+msgid "Issue Batch Invoice for Delivery Notes"
+msgstr ""
+
+msgid "Selected deliveries has been processed"
+msgstr "Livrarile selectate au fost procesate"
+
+msgid "&Print This Invoice"
+msgstr "&Tipareste aceasta factura"
+
+msgid "&Email This Invoice"
+msgstr "Trimite aceasta factura prin &e-mail"
+
+msgid "Select Another &Delivery For Invoicing"
+msgstr "Selectati o alta livrare pentru facturare"
+
+#, php-format
+msgid "Sales Invoice # %d has been updated."
+msgstr "Factura # %d a fost actualizata."
+
+msgid "Select Another &Invoice to Modify"
+msgstr "Alegeti o alta factura pentru modificare"
+
+msgid "Select a different delivery to invoice"
+msgstr "Alegeti o alta livrare pentru facturare"
+
+msgid ""
+"There are no delivered items with a quantity left to invoice. There is "
+"nothing left to invoice."
+msgstr ""
+"Nu exista articole livrate cu cantitate de facturat. Nu mai este nimic de "
+"facturat."
+
+msgid ""
+"There are no delivery notes for this invoice.<br>\n"
+"\t\tMost likely this invoice was created in Front Accounting version prior "
+"to 2.0\n"
+"\t\tand therefore can not be modified."
+msgstr ""
+
+msgid ""
+"All quantities on this invoice has been credited. There is nothing to modify "
+"on this invoice"
+msgstr ""
+"Toate cantitatile de pe aceasta factura au fost stornate. Nu mai este nimic "
+"de modificat pe aceasta factura"
+
+msgid ""
+"This page can only be opened after delivery selection. Please select "
+"delivery to invoicing first."
+msgstr ""
+
+msgid "Select Delivery to Invoice"
+msgstr "Selectati livrarea pe care doriti sa o facturati"
+
+msgid ""
+"Selected quantity cannot be less than quantity credited nor more than "
+"quantity not invoiced yet."
+msgstr ""
+
+msgid "The entered invoice date is invalid."
+msgstr "Data facturii este incorecta."
+
+msgid "The entered invoice date is not in fiscal year."
+msgstr "Data facturii nu este in anul fiscal."
+
+msgid "The entered invoice due date is invalid."
+msgstr "Data scadentei facturii este incorecta."
+
+msgid "The entered shipping value is not numeric."
+msgstr ""
+
+msgid "There are no item quantities on this invoice."
+msgstr "Nu exista cantitati in aceasta factura."
+
+msgid "Payment terms:"
+msgstr "Conditii de plata:"
+
+msgid "Payment:"
+msgstr "Plata:"
+
+msgid "Sales Type"
+msgstr "Lista preturi"
+
+msgid ""
+"The selected customer account is currently on hold. Please contact the "
+"credit control personnel to discuss."
+msgstr ""
+"Contul client selectat este blocat. Contactati persoanele responsabile "
+"pentru modificare"
+
+msgid "Invoice Items"
+msgstr "Articole in factura"
+
+msgid "Delivered"
+msgstr "Livrat"
+
+msgid "Invoiced"
+msgstr "Facturat"
+
+msgid "This Invoice"
+msgstr "Aceasta factura"
+
+msgid "Tax Type"
+msgstr "Tip taxa"
+
+msgid "Discount"
+msgstr "Discount"
+
+msgid "DN"
+msgstr "DN"
+
+msgid "Credited"
+msgstr "Stornat"
+
+msgid "Remove"
+msgstr "Sters"
+
+msgid "Shipping Cost"
+msgstr "Costuri de transport"
+
+msgid "Invoice Total"
+msgstr "Total factura"
+
+msgid "Refresh document page"
+msgstr ""
+
+msgid "Process Invoice"
+msgstr "Procesati factura"
+
+#, php-format
+msgid "Modifying Delivery Note # %d."
+msgstr "Modificati aviz de expeditie # %d."
+
+msgid "Deliver Items for a Sales Order"
+msgstr "Livrati articole aferente comenzii"
+
+msgid "Invoice This Delivery"
+msgstr "Facturati aceasta livrare"
+
+msgid "Select Another Order For Dispatch"
+msgstr ""
+
+#, php-format
+msgid "Delivery Note # %d has been updated."
+msgstr "Avizul de expeditie # %d a fost modificat."
+
+msgid "View this delivery"
+msgstr "Afisati aceasta livrare"
+
+msgid "Confirm Delivery and Invoice"
+msgstr "Confirmati livrarea si factura"
+
+msgid "Select A Different Delivery"
+msgstr "Selectati o alta livrare"
+
+msgid "Select a different sales order to delivery"
+msgstr ""
+
+msgid "This order has no items. There is nothing to delivery."
+msgstr "Aceasta comanda nu contine articole. Nu e nimic de livrat."
+
+msgid "Select a different delivery"
+msgstr "Alegeti un alt aviz de expeditie"
+
+msgid "This delivery has all items invoiced. There is nothing to modify."
+msgstr ""
+"Acest aviz de expeditie are toate articolele facturate. Nu mai este nimic de "
+"modificat."
+
+msgid ""
+"This page can only be opened if an order or delivery note has been selected. "
+"Please select it first."
+msgstr ""
+
+msgid "Select a Sales Order to Delivery"
+msgstr ""
+
+msgid ""
+"Selected quantity cannot be less than quantity invoiced nor more than "
+"quantity\tnot dispatched on sales order."
+msgstr ""
+
+msgid "Freight cost cannot be less than zero"
+msgstr ""
+
+msgid "The entered date of delivery is invalid."
+msgstr "Data de livrare introdusa este incorecta."
+
+msgid "The entered date of delivery is not in fiscal year."
+msgstr "Data livrarii nu este in anul fiscal."
+
+msgid "The entered dead-line for invoice is invalid."
+msgstr ""
+
+msgid "There are no item quantities on this delivery note."
+msgstr ""
+
+msgid "For Sales Order"
+msgstr "Pentru comanda"
+
+msgid "Delivery From"
+msgstr "Livrare din"
+
+msgid "Invoice Dead-line"
+msgstr ""
+
+msgid "Delivery Items"
+msgstr ""
+
+msgid "Ordered"
+msgstr "Comandat"
+
+msgid "Max. delivery"
+msgstr ""
+
+msgid "This Delivery"
+msgstr "Aceasta livrare"
+
+msgid "Amount Total"
+msgstr "Total suma"
+
+msgid ""
+"Marked items have insufficient quantities in stock as on day of delivery."
+msgstr "Articolele evidentiate au stoc insuficient la data livrarii."
+
+msgid "Action For Balance"
+msgstr ""
+
+msgid "Process Dispatch"
+msgstr ""
+
+msgid "Create and Print Recurrent Invoices"
+msgstr "Creeaza/Tipareste facturi recurente"
+
+#, php-format
+msgid "Recurrent Invoice covers period %s - %s."
+msgstr "Facturile recurente acopera perioada %s - %s."
+
+#, php-format
+msgid "%s recurrent invoice(s) created, # %s - # %s."
+msgstr "%s facturi recurente au fost create, # %s - # %s."
+
+#, php-format
+msgid "&Print Recurrent Invoices # %s - # %s"
+msgstr "Tipareste facturile recurente # %S - # %s"
+
+#, php-format
+msgid "&Email Recurrent Invoices # %s - # %s"
+msgstr "Trimite prin e-mail facturile recurente # %s - # %s"
+
+msgid "Create Invoices"
+msgstr "Creeaza facturi"
+
+msgid "Marked items are due."
+msgstr "Articolele evidentiate au termene depasite"
+
+msgid "No recurrent invoices are due."
+msgstr ""
+
+msgid "View Sales Invoice"
+msgstr "Afiseaza factura"
+
+#, php-format
+msgid "SALES INVOICE #%d"
+msgstr "FACTURA #%d"
+
+msgid "Charge To"
+msgstr "Cumparator"
+
+msgid "Charge Branch"
+msgstr "Sediu"
+
+msgid "Payment Terms"
+msgstr "Conditii de plata"
+
+msgid "Our Order No"
+msgstr "Nr. comanda intern"
+
+msgid "Customer Order Ref."
+msgstr "Nr. comanda client"
+
+msgid "Deliveries"
+msgstr "Livrari"
+
+msgid "Quantity"
+msgstr "Cantitate"
+
+msgid "Unit"
+msgstr "U.M."
+
+msgid "There are no line items on this invoice."
+msgstr "Nu exista articole in aceasta factura."
+
+msgid "Shipping"
+msgstr "Transport"
+
+msgid "TOTAL INVOICE"
+msgstr "TOTAL FACTURA"
+
+msgid "This invoice has been voided."
+msgstr "Aceasta factura a fost anulata."
+
+msgid "View Sales Quotation"
+msgstr "Afiseaza proforma"
+
+#, php-format
+msgid "Sales Quotation #%d"
+msgstr "Proforma #%d"
+
+msgid "View Sales Order"
+msgstr "Afiseaza comanda"
+
+#, php-format
+msgid "Sales Order #%d"
+msgstr "Comanda #%d"
+
+msgid "Order Information"
+msgstr "Informatii comanda"
+
+msgid "Invoices/Credits"
+msgstr "Facturi/Storno"
+
+msgid "Customer Name"
+msgstr "Nume client"
+
+msgid "Deliver To Branch"
+msgstr "Livrare la sediul"
+
+msgid "Ordered On"
+msgstr "Comandat pe"
+
+msgid "Requested Delivery"
+msgstr ""
+
+msgid "Order Currency"
+msgstr "Moneda comenzii"
+
+msgid "Deliver From Location"
+msgstr "Livrare din gestiunea"
+
+msgid "Delivery Address"
+msgstr "Adresa de livrare"
+
+msgid "Telephone"
+msgstr "Telefon"
+
+msgid "Comments"
+msgstr "Comentarii"
+
+msgid "Delivery Notes"
+msgstr "Note livrare"
+
+msgid "Sales Invoices"
+msgstr "Facturi"
+
+msgid "Credit Notes"
+msgstr "Facturi storno"
+
+msgid "This Sales Order is used as a Template."
+msgstr "Aceasta comanda este folosita ca model"
+
+msgid "Line Details"
+msgstr "Detalii linie"
+
+msgid "Quantity Delivered"
+msgstr "Cantitate livrata"
+
+msgid "Sub Total"
+msgstr "Sub-total"
+
+msgid "View Sales Dispatch"
+msgstr ""
+
+#, php-format
+msgid "DISPATCH NOTE #%d"
+msgstr ""
+
+msgid "Delivered To"
+msgstr "Destinatar"
+
+msgid "Dispatch Date"
+msgstr ""
+
+msgid "There are no line items on this dispatch."
+msgstr ""
+
+msgid "TOTAL VALUE"
+msgstr ""
+
+msgid "This dispatch has been voided."
+msgstr ""
+
+msgid "View Customer Payment"
+msgstr "Afiseaza plata client"
+
+#, php-format
+msgid "Customer Payment #%d"
+msgstr "Plata client #%d"
+
+msgid "From Customer"
+msgstr "De la clientul"
+
+msgid "Into Bank Account"
+msgstr "In contul"
+
+msgid "Date of Deposit"
+msgstr "Data incasarii"
+
+msgid "Payment Currency"
+msgstr "Mondeda platii"
+
+msgid "Amount"
+msgstr "Suma"
+
+msgid "Payment Type"
+msgstr "Tip plata"
+
+msgid "This customer payment has been voided."
+msgstr "Aceasta plata de la client a fost anulata."
+
+msgid "View Credit Note"
+msgstr "Afiseaza factura storno"
+
+#, php-format
+msgid "CREDIT NOTE #%d"
+msgstr "FACTURA STORNO #%d"
+
+msgid "There are no line items on this credit note."
+msgstr "Nu exista articole in aceasta factura storno."
+
+msgid "TOTAL CREDIT"
+msgstr "TOTAL FACTURA"
+
+msgid "This credit note has been voided."
+msgstr "Aceasta factura storno a fost anulata."
+
+msgid "Customer Credit Note"
+msgstr "Factura storno client"
+
+#, php-format
+msgid "Modifying Customer Credit Note #%d"
+msgstr "Modificare factura storno # %d"
+
+msgid "There are no items defined in the system."
+msgstr "Nu exista articole definite in sistem"
+
+#, php-format
+msgid "Credit Note # %d has been processed"
+msgstr "Factura storno # %d a fost procesata"
+
+msgid "&View this credit note"
+msgstr "Afiseaza aceasta factura storno"
+
+msgid "&Print This Credit Invoice"
+msgstr "Tipareste aceasta factura storno"
+
+msgid "&Email This Credit Invoice"
+msgstr "Trimite aceasta factura storno prin e-mail"
+
+msgid "Enter Another &Credit Note"
+msgstr "Introduceti o noua factura storno"
+
+msgid "The entered date for the credit note is invalid."
+msgstr "Data introdusa pentru factura storno este incorecta."
+
+msgid ""
+"For credit notes created to write off the stock, a general ledger account is "
+"required to be selected."
+msgstr ""
+
+msgid ""
+"Please select an account to write the cost of the stock off to, then click "
+"on Process again."
+msgstr ""
+
+msgid "The quantity must be greater than zero."
+msgstr "Cantitatea trebuie sa fie mai mare ca zero."
+
+msgid "The entered price is negative or invalid."
+msgstr "Pretul introdus este negativ sau incorect."
+
+msgid "The entered discount percent is negative, greater than 100 or invalid."
+msgstr "Discount-ul introdus este negativ, mai mare ca 100% sau incorect."
+
+msgid "Credit Note Items"
+msgstr "Articole in storno"
+
+msgid "Account"
+msgstr "Cont"
+
+msgid "Account Name"
+msgstr "Nume cont"
+
+msgid "Account Code"
+msgstr "Cod cont"
+
+msgid "Chart of Accounts"
+msgstr "Plan de conturi"
+
+msgid "REMITTANCE"
+msgstr ""
+
+msgid "As advance / full / part / payment towards:"
+msgstr ""
+
+msgid "Total Allocated"
+msgstr ""
+
+msgid "TOTAL REMITTANCE"
+msgstr ""
+
+msgid "All"
+msgstr "Toate"
+
+msgid "GRN"
+msgstr "NIR"
+
+msgid "Item"
+msgstr "Articol"
+
+msgid "Qty Recd"
+msgstr "Cant. rec."
+
+msgid "qty Inv"
+msgstr "Cant. fact."
+
+msgid "Act Price"
+msgstr ""
+
+msgid "Value"
+msgstr "Valoare"
+
+msgid "Supplier"
+msgstr "Furnizor"
+
+msgid "Outstanding GRNs Report"
+msgstr ""
+
+msgid "Grand Total"
+msgstr "TOTAL GENERAL"
+
+msgid "Balances in Home currency"
+msgstr "Solduri in moneda de baza"
+
+msgid "Trans Type"
+msgstr "Tip tranz"
+
+msgid "Charges"
+msgstr ""
+
+msgid "Credits"
+msgstr ""
+
+msgid "Outstanding"
+msgstr ""
+
+msgid "Period"
+msgstr "Perioada"
+
+msgid "Suppress Zeros"
+msgstr ""
+
+msgid "Supplier Balances"
+msgstr "Solduri furnizori"
+
+msgid "Open Balance"
+msgstr "Sold initial"
+
+msgid "Balances in Home Currency"
+msgstr "Solduri in moneda de baza"
+
+msgid "End Date"
+msgstr "Data de sfarsit"
+
+msgid "Payment Report"
+msgstr "Raport de plati"
+
+msgid "Shortage"
+msgstr ""
+
+msgid "Available"
+msgstr "Disponibil"
+
+msgid "Stock ID"
+msgstr ""
+
+msgid "UOM"
+msgstr "U.M."
+
+msgid "Check"
+msgstr ""
+
+msgid "Demand"
+msgstr ""
+
+msgid "On Order"
+msgstr ""
+
+msgid "Category"
+msgstr "Categorie"
+
+msgid "Only Shortage"
+msgstr ""
+
+msgid "Stock Check Sheets"
+msgstr ""
+
+msgid "STATEMENT"
+msgstr ""
+
+msgid "Outstanding Transactions"
+msgstr ""
+
+msgid "Statement"
+msgstr ""
+
+msgid "as of"
+msgstr ""
+
+msgid "Sales Summary Report"
+msgstr ""
+
+msgid "Tax Id Only"
+msgstr ""
+
+msgid "Tax Id"
+msgstr "C.I.F."
+
+msgid "Total ex. Tax"
+msgstr "Total fara taxe"
+
+msgid "Tax"
+msgstr "Taxe"
+
+msgid "Component"
+msgstr ""
+
+msgid "Loc"
+msgstr ""
+
+msgid "Wrk Ctr"
+msgstr ""
+
+msgid "Bill of Material Listing"
+msgstr ""
+
+msgid "PURCHASE ORDER"
+msgstr "COMANDA"
+
+msgid "Total Tax Excluded"
+msgstr "Total fara TVA"
+
+msgid "Included"
+msgstr "Inclus"
+
+msgid "TOTAL PO"
+msgstr "TOTAL COMANDA"
+
+msgid "Qty"
+msgstr "Cant."
+
+msgid "Cost"
+msgstr "Cost"
+
+msgid "Contribution"
+msgstr ""
+
+msgid "Inventory Sales Report"
+msgstr ""
+
+msgid "SALES QUOTATION"
+msgstr "FACTURA PROFORMA"
+
+msgid "TOTAL ORDER EX VAT"
+msgstr "TOTAL FARA TVA"
+
+msgid "TOTAL ORDER VAT INCL."
+msgstr "TOTAL CU TVA"
+
+msgid "Accumulated"
+msgstr ""
+
+msgid "Achieved %"
+msgstr ""
+
+msgid "Tags"
+msgstr ""
+
+msgid "Budget"
+msgstr ""
+
+msgid "Period Y-1"
+msgstr ""
+
+msgid "Profit and Loss Statement"
+msgstr ""
+
+msgid "Calculated Return"
+msgstr ""
+
+msgid "Customer Ref"
+msgstr ""
+
+msgid "Inv Date"
+msgstr ""
+
+msgid "Salesman"
+msgstr "Reprezentant vanzari"
+
+msgid "Summary Only"
+msgstr "Doar sumar"
+
+msgid "Salesman Listing"
+msgstr "Lista reprezentati vanzari"
+
+msgid "Reports and Analysis"
+msgstr "Rapoarte si analize"
+
+msgid "Customer &Balances"
+msgstr "Solduri clienti"
+
+msgid "Start Date"
+msgstr "Data de inceput"
+
+msgid "Currency Filter"
+msgstr "Filtru pe moneda"
+
+msgid "Destination"
+msgstr "Destinatie"
+
+msgid "&Aged Customer Analysis"
+msgstr ""
+
+msgid "Show Also Allocated"
+msgstr ""
+
+msgid "Graphics"
+msgstr "Grafice"
+
+msgid "Customer &Detail Listing"
+msgstr ""
+
+msgid "Activity Since"
+msgstr ""
+
+msgid "Sales Folk"
+msgstr "Reprezentant vanzari"
+
+msgid "Activity Greater Than"
+msgstr "Cifra de afaceri mai mare ca"
+
+msgid "Activity Less Than"
+msgstr "Cifra de afaceri mai mica decat"
+
+msgid "Sales &Summary Report"
+msgstr ""
+
+msgid "&Price Listing"
+msgstr ""
+
+msgid "Inventory Category"
+msgstr "Categorie de stocuri"
+
+msgid "Show Pictures"
+msgstr "Afiseaza imagini"
+
+msgid "Show GP %"
+msgstr "Afiseaza profit brut (%)"
+
+msgid "&Order Status Listing"
+msgstr ""
+
+msgid "Stock Location"
+msgstr "Gestiune articole"
+
+msgid "Back Orders Only"
+msgstr ""
+
+msgid "&Salesman Listing"
+msgstr ""
+
+msgid "Print &Invoices"
+msgstr "Tipareste &Facturi"
+
+msgid "From"
+msgstr "De la"
+
+msgid "To"
+msgstr "La"
+
+msgid "email Customers"
+msgstr ""
+
+msgid "Payment Link"
+msgstr ""
+
+msgid "Print &Credit Notes"
+msgstr "Tipareste facturi storno"
+
+msgid "Print &Deliveries"
+msgstr "Tipareste avize de expeditie"
+
+msgid "Print as Packing Slip"
+msgstr ""
+
+msgid "Print &Statements"
+msgstr ""
+
+msgid "Email Customers"
+msgstr ""
+
+msgid "&Print Sales Orders"
+msgstr "Tipareste comenzi"
+
+msgid "Print as Quote"
+msgstr "Tipareste ca proforma"
+
+msgid "&Print Sales Quotations"
+msgstr "Tipareste proforme"
+
+msgid "Print Receipts"
+msgstr "Tipareste chitante"
+
+msgid "Supplier &Balances"
+msgstr "Solduri &furnizori"
+
+msgid "&Aged Supplier Analyses"
+msgstr ""
+
+msgid "&Payment Report"
+msgstr "Raport de &plati"
+
+msgid "Outstanding &GRNs Report"
+msgstr ""
+
+msgid "Print Purchase &Orders"
+msgstr "Tipareste comenzi"
+
+msgid "Print Remittances"
+msgstr ""
+
+msgid "Inventory"
+msgstr "Stocuri"
+
+msgid "Inventory &Valuation Report"
+msgstr ""
+
+msgid "Inventory &Planning Report"
+msgstr ""
+
+msgid "Stock &Check Sheets"
+msgstr ""
+
+msgid "Inventory Column"
+msgstr ""
+
+msgid "Show Shortage"
+msgstr ""
+
+msgid "Inventory &Sales Report"
+msgstr ""
+
+msgid "&GRN Valuation Report"
+msgstr ""
+
+msgid "Manufacturing"
+msgstr "Productie"
+
+msgid "&Bill of Material Listing"
+msgstr ""
+
+msgid "From product"
+msgstr "De la produsul"
+
+msgid "To product"
+msgstr "La produsul"
+
+msgid "Print &Work Orders"
+msgstr ""
+
+msgid "Email Locations"
+msgstr ""
+
+msgid "Dimensions"
+msgstr ""
+
+msgid "Dimension &Summary"
+msgstr ""
+
+msgid "From Dimension"
+msgstr ""
+
+msgid "To Dimension"
+msgstr ""
+
+msgid "Show Balance"
+msgstr ""
+
+msgid "Banking"
+msgstr "Banci"
+
+msgid "Bank &Statement"
+msgstr ""
+
+msgid "Bank Accounts"
+msgstr "Conturi bancare"
+
+msgid "General Ledger"
+msgstr "Contabilitate"
+
+msgid "Chart of &Accounts"
+msgstr "Planul de conturi"
+
+msgid "Show Balances"
+msgstr ""
+
+msgid "List of &Journal Entries"
+msgstr ""
+
+msgid "GL Account &Transactions"
+msgstr ""
+
+msgid "From Account"
+msgstr "Din contul"
+
+msgid "To Account"
+msgstr "In contul"
+
+msgid "Annual &Expense Breakdown"
+msgstr ""
+
+msgid "Year"
+msgstr "An"
+
+msgid "Account Tags"
+msgstr ""
+
+msgid "&Balance Sheet"
+msgstr ""
+
+msgid "Decimal values"
+msgstr ""
+
+msgid "&Profit and Loss Statement"
+msgstr ""
+
+msgid "Compare to"
+msgstr ""
+
+msgid "Trial &Balance"
+msgstr ""
+
+msgid "Zero values"
+msgstr "Valori zero"
+
+msgid "Only balances"
+msgstr "Doar solduri"
+
+msgid "Ta&x Report"
+msgstr ""
+
+msgid "Audit Trail"
+msgstr ""
+
+msgid "User"
+msgstr "Utilizator"
+
+msgid "QOH"
+msgstr ""
+
+msgid "Cust Ord"
+msgstr ""
+
+msgid "Supp Ord"
+msgstr ""
+
+msgid "Sugg Ord"
+msgstr ""
+
+msgid "Inventory Planning Report"
+msgstr ""
+
+msgid "INVOICE"
+msgstr "FACTURA FISCALA"
+
+msgid "SALES ORDER"
+msgstr "NOTA DE COMANDA"
+
+msgid "QUOTE"
+msgstr "PROFORMA"
+
+msgid "Brought Forward"
+msgstr ""
+
+msgid "This Period"
+msgstr ""
+
+msgid "Trial Balance"
+msgstr ""
+
+msgid "Ending Balance"
+msgstr ""
+
+msgid ""
+"The Opening Balance is not in balance, probably due to a non closed Previous "
+"Fiscalyear."
+msgstr ""
+
+msgid "Customer Balances"
+msgstr "Solduri clienti"
+
+msgid "Detailed Report"
+msgstr "Raport detaliat"
+
+msgid "currency"
+msgstr "moneda"
+
+msgid "Aged Supplier Analysis"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Trans Date"
+msgstr ""
+
+msgid "Action"
+msgstr "Actiune"
+
+msgid "Changed"
+msgstr "Modificat"
+
+msgid "Closed"
+msgstr "Inchis"
+
+msgid "PO No"
+msgstr "Nr.Cda."
+
+msgid "Inv"
+msgstr "Fact"
+
+msgid "Inv Price"
+msgstr "Pret fact"
+
+msgid "PO Price"
+msgstr "Pret cda."
+
+msgid "GRN Valuation Report"
+msgstr ""
+
+msgid "Type/Account"
+msgstr "Tip/Cont"
+
+msgid "Date/Dim."
+msgstr ""
+
+msgid "Person/Item/Memo"
+msgstr ""
+
+msgid "List of Journal Entries"
+msgstr ""
+
+msgid "Unit Cost"
+msgstr "Cost unitar"
+
+msgid "Inventory Valuation Report"
+msgstr ""
+
+msgid "All Areas"
+msgstr "Toate zonele"
+
+msgid "All Sales Folk"
+msgstr "Toti reprezentantii de vanzari"
+
+msgid "Greater than "
+msgstr "Mai mare ca "
+
+msgid "Less than "
+msgstr "Mai mic ca "
+
+msgid "Customer Postal Address"
+msgstr "Adresa postala client"
+
+msgid "Price/Turnover"
+msgstr ""
+
+msgid "Branch Contact Information"
+msgstr ""
+
+msgid "Branch Delivery Address"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
+
+msgid "Customer Details Listing"
+msgstr ""
+
+msgid "Customers in"
+msgstr "Clienti in"
+
+msgid "Price List"
+msgstr "Lista de preturi"
+
+msgid "Turnover"
+msgstr "Cifra de afaceri"
+
+msgid "Ph"
+msgstr ""
+
+msgid "Close Balance"
+msgstr ""
+
+msgid "Balance Sheet"
+msgstr ""
+
+msgid "Liabilities"
+msgstr ""
+
+msgid " and "
+msgstr ""
+
+msgid "Equities"
+msgstr ""
+
+msgid "Aged Customer Analysis"
+msgstr ""
+
+msgid "Bank Statement"
+msgstr ""
+
+msgid "Person/Item"
+msgstr ""
+
+msgid "Bank Account"
+msgstr "Cont bancar"
+
+msgid "Opening Balance"
+msgstr ""
+
+msgid "Total Debit / Credit"
+msgstr ""
+
+msgid "Net Change"
+msgstr ""
+
+msgid "WORK ORDER"
+msgstr ""
+
+msgid "Work Order Requirements"
+msgstr ""
+
+msgid "Insufficient stock"
+msgstr ""
+
+msgid "GL Account Transactions"
+msgstr ""
+
+msgid "Accounts"
+msgstr "Conturi"
+
+msgid "YTD"
+msgstr ""
+
+msgid "Dimension Summary"
+msgstr ""
+
+msgid "DELIVERY"
+msgstr ""
+
+msgid "PACKING SLIP"
+msgstr ""
+
+msgid "DELIVERY NOTE"
+msgstr "AVIZ DE EXPEDITIE"
+
+msgid "TOTAL DELIVERY INCL. VAT"
+msgstr "TOTAL LIVRARE CU TVA"
+
+msgid "All Orders"
+msgstr "Toate comenzile"
+
+msgid "Ord Date"
+msgstr ""
+
+msgid "Del Date"
+msgstr ""
+
+msgid "Code"
+msgstr ""
+
+msgid "Selection"
+msgstr ""
+
+msgid "Order Status Listing"
+msgstr ""
+
+msgid "RECEIPT"
+msgstr "CHITANTA"
+
+msgid "TOTAL RECEIPT"
+msgstr "TOTAL CHITANTA"
+
+msgid "Received / Sign"
+msgstr "Primit / Semnatura"
+
+msgid "By Cash / Cheque* / Draft No."
+msgstr ""
+
+msgid "Dated"
+msgstr ""
+
+msgid "Drawn on Bank"
+msgstr ""
+
+msgid "Tax Report"
+msgstr ""
+
+msgid "Branch Name"
+msgstr "Nume sediu"
+
+msgid "Net"
+msgstr ""
+
+msgid "Rate"
+msgstr "Cota"
+
+msgid "Tax Rate"
+msgstr "TVA"
+
+msgid "Outputs"
+msgstr ""
+
+msgid "Output Tax"
+msgstr ""
+
+msgid "Inputs"
+msgstr ""
+
+msgid "Input Tax"
+msgstr ""
+
+msgid "Net Tax"
+msgstr "Valoare TVA"
+
+msgid "Total payable or refund"
+msgstr ""
+
+msgid "CREDIT NOTE"
+msgstr "FACTURA FISCALA"
+
+msgid "Category/Items"
+msgstr "Categorii/Articole"
+
+msgid "GP %"
+msgstr ""
+
+msgid "Price Listing"
+msgstr ""
+
+msgid "Sales Kits"
+msgstr ""
+
+msgid "Info"
+msgstr ""
+
+msgid "Amounts in thousands"
+msgstr "Valori in mii"
+
+msgid "Annual Expense Breakdown"
+msgstr ""
+
+msgid "Search Outstanding Work Orders"
+msgstr ""
+
+msgid "Search Work Orders"
+msgstr ""
+
+msgid "at Location:"
+msgstr ""
+
+msgid "Only Overdue:"
+msgstr ""
+
+msgid "Only Open:"
+msgstr ""
+
+msgid "for item:"
+msgstr ""
+
+msgid "Release"
+msgstr ""
+
+msgid "Issue"
+msgstr ""
+
+msgid "Produce"
+msgstr ""
+
+msgid "Costs"
+msgstr ""
+
+msgid "Required"
+msgstr ""
+
+msgid "Manufactured"
+msgstr "Fabricat"
+
+msgid "Marked orders are overdue."
+msgstr ""
+
+msgid "Inventory Item Where Used Inquiry"
+msgstr ""
+
+msgid "Select an item to display its parent item(s)."
+msgstr ""
+
+msgid "Parent Item"
+msgstr ""
+
+msgid "Work Centre"
+msgstr ""
+
+msgid "Quantity Required"
+msgstr ""
+
+msgid "Costed Bill Of Material Inquiry"
+msgstr ""
+
+msgid "There are no manufactured or kit items defined in the system."
+msgstr ""
+
+msgid "Select a manufacturable item:"
+msgstr ""
+
+msgid "All Costs Are In:"
+msgstr "Toate costurile sunt in:"
+
+msgid "Bill Of Materials"
+msgstr ""
+
+msgid ""
+"There are no work centres defined in the system. BOMs require at least one "
+"work centre be defined."
+msgstr ""
+
+msgid "The quantity entered must be numeric and greater than zero."
+msgstr ""
+
+msgid "Selected component has been updated"
+msgstr ""
+
+msgid ""
+"A new component part has been added to the bill of material for this item."
+msgstr ""
+
+msgid ""
+"The selected component is already on this bom. You can modify it's quantity "
+"but it cannot appear more than once on the same bom."
+msgstr ""
+
+msgid ""
+"The selected component is a parent of the current item. Recursive BOMs are "
+"not allowed."
+msgstr ""
+
+msgid "The component item has been deleted from this bom"
+msgstr ""
+
+msgid "Component:"
+msgstr ""
+
+msgid "Location to Draw From:"
+msgstr ""
+
+msgid "Work Centre Added:"
+msgstr ""
+
+msgid "Quantity:"
+msgstr "Cantitate:"
+
+msgid "Work Centres"
+msgstr ""
+
+msgid "The work centre name cannot be empty."
+msgstr ""
+
+msgid "Selected work center has been updated"
+msgstr ""
+
+msgid "New work center has been added"
+msgstr ""
+
+msgid ""
+"Cannot delete this work centre because BOMs have been created referring to "
+"it."
+msgstr ""
+
+msgid ""
+"Cannot delete this work centre because work order requirements have been "
+"created referring to it."
+msgstr ""
+
+msgid "Selected work center has been deleted"
+msgstr ""
+
+msgid "description"
+msgstr "descriere"
+
+msgid "Name:"
+msgstr "Nume:"
+
+msgid "Work Order Release to Manufacturing"
+msgstr ""
+
+msgid "This work order has already been released."
+msgstr ""
+
+msgid ""
+"This Work Order cannot be released. The selected item to manufacture does "
+"not have a bom."
+msgstr ""
+
+msgid "The work order has been released to manufacturing."
+msgstr ""
+
+msgid "View this Work Order"
+msgstr ""
+
+msgid "Select another &work order"
+msgstr ""
+
+msgid "Work Order #:"
+msgstr ""
+
+msgid "Work Order Reference:"
+msgstr ""
+
+msgid "Released Date"
+msgstr ""
+
+msgid "Release Work Order"
+msgstr ""
+
+msgid "Work Order Entry"
+msgstr ""
+
+msgid "There are no manufacturable items defined in the system."
+msgstr ""
+
+msgid "The work order been added."
+msgstr ""
+
+msgid "Print this Work Order"
+msgstr ""
+
+msgid "Email this Work Order"
+msgstr ""
+
+msgid "View the GL Journal Entries for this Work Order"
+msgstr ""
+
+msgid "Print the GL Journal Entries for this Work Order"
+msgstr ""
+
+msgid "The work order been updated."
+msgstr ""
+
+msgid "Work order has been deleted."
+msgstr ""
+
+msgid ""
+"This work order has been closed. There can be no more issues against it."
+msgstr ""
+
+msgid "Enter a new work order"
+msgstr ""
+
+msgid "Select an existing work order"
+msgstr ""
+
+msgid "The quantity entered is invalid or less than zero."
+msgstr ""
+
+msgid "The date entered is in an invalid format."
+msgstr ""
+
+msgid "The selected item to manufacture does not have a bom."
+msgstr ""
+
+msgid "The labour cost entered is invalid or less than zero."
+msgstr ""
+
+msgid "The cost entered is invalid or less than zero."
+msgstr ""
+
+msgid ""
+"The work order cannot be processed because there is an insufficient quantity "
+"for component:"
+msgstr ""
+
+msgid ""
+"The selected item cannot be unassembled because there is insufficient stock."
+msgstr ""
+
+msgid ""
+"The quantity cannot be changed to be less than the quantity already "
+"manufactured for this order."
+msgstr ""
+
+msgid ""
+"This work order cannot be deleted because it has already been processed."
+msgstr ""
+
+msgid "The order number sent is not valid."
+msgstr ""
+
+msgid "This work order is closed and cannot be edited."
+msgstr ""
+
+msgid "Destination Location:"
+msgstr "Gestiunea destinatie:"
+
+msgid "Quantity Required:"
+msgstr ""
+
+msgid "Quantity Manufactured:"
+msgstr ""
+
+msgid "Date Required By"
+msgstr ""
+
+msgid "Credit Labour Account"
+msgstr ""
+
+msgid "Credit Overhead Account"
+msgstr ""
+
+msgid "Released On:"
+msgstr ""
+
+msgid "Save changes to work order"
+msgstr ""
+
+msgid "Close This Work Order"
+msgstr ""
+
+msgid "Delete This Work Order"
+msgstr ""
+
+msgid "Add Workorder"
+msgstr ""
+
+msgid "Issue Items to Work Order"
+msgstr ""
+
+msgid "The work order issue has been entered."
+msgstr ""
+
+msgid "Select another &Work Order to Process"
+msgstr ""
+
+msgid "The entered date for the issue is invalid."
+msgstr ""
+
+msgid ""
+"The issue cannot be processed because an entered item would cause a negative "
+"inventory balance :"
+msgstr ""
+
+msgid ""
+"The process cannot be completed because there is an insufficient total "
+"quantity for a component."
+msgstr ""
+
+msgid "Component is :"
+msgstr ""
+
+msgid "From location :"
+msgstr ""
+
+msgid "The quantity entered is negative or invalid."
+msgstr ""
+
+msgid "The entered standard cost is negative or invalid."
+msgstr ""
+
+msgid "Items to Issue"
+msgstr ""
+
+msgid "Process Issue"
+msgstr ""
+
+msgid "View Work Order"
+msgstr ""
+
+msgid "BOM for item:"
+msgstr ""
+
+msgid "Issues"
+msgstr ""
+
+msgid "Productions"
+msgstr ""
+
+msgid "Additional Costs"
+msgstr ""
+
+msgid "This work order has been voided."
+msgstr ""
+
+msgid "View Work Order Production"
+msgstr ""
+
+msgid "Production #"
+msgstr ""
+
+msgid "For Work Order #"
+msgstr ""
+
+msgid "Quantity Manufactured"
+msgstr ""
+
+msgid "This production has been voided."
+msgstr ""
+
+msgid "View Work Order Issue"
+msgstr ""
+
+msgid "Issue #"
+msgstr ""
+
+msgid "From Location"
+msgstr ""
+
+msgid "To Work Centre"
+msgstr ""
+
+msgid "Date of Issue"
+msgstr ""
+
+msgid "This issue has been voided."
+msgstr ""
+
+msgid "There are no items for this issue."
+msgstr ""
+
+msgid "Items for this Issue"
+msgstr ""
+
+msgid "Work Order Additional Costs"
+msgstr ""
+
+msgid "The additional cost has been entered."
+msgstr ""
+
+msgid "Enter another additional cost."
+msgstr ""
+
+msgid "The amount entered is not a valid number or less then zero."
+msgstr ""
+
+msgid ""
+"The additional cost date cannot be before the release date of the work order."
+msgstr ""
+
+msgid "Additional Costs:"
+msgstr ""
+
+msgid "Debit Account"
+msgstr ""
+
+msgid "Credit Account"
+msgstr ""
+
+msgid "Process Additional Cost"
+msgstr ""
+
+msgid "Produce or Unassemble Finished Items From Work Order"
+msgstr ""
+
+msgid "The manufacturing process has been entered."
+msgstr ""
+
+msgid "The quantity entered is not a valid number or less then zero."
+msgstr ""
+
+msgid ""
+"The production date cannot be before the release date of the work order."
+msgstr ""
+
+msgid ""
+"The production exceeds the quantity needed. Please change the Work Order."
+msgstr ""
+
+msgid ""
+"The unassembling cannot be processed because there is insufficient stock."
+msgstr ""
+
+msgid ""
+"The production cannot be processed because a required item would cause a "
+"negative inventory balance :"
+msgstr ""
+
+msgid "Produce Finished Items"
+msgstr ""
+
+msgid "Return Items to Work Order"
+msgstr ""
+
+msgid "Process And Close Order"
+msgstr ""
+
+msgid "FrontAccouting ERP Installation Wizard"
+msgstr ""
+
+#, php-format
+msgid "Step %d: %s"
+msgstr "Pas: %d: %s"
+
+msgid "Chart of accounts"
+msgstr "Plan de conturi"
+
+msgid "Encoding"
+msgstr ""
+
+msgid "Install"
+msgstr "Instaleaza"
+
+msgid "Installed"
+msgstr "Instalat"
+
+msgid "Language"
+msgstr "Limba"
+
+msgid ""
+"Cannot connect to database. User or password is invalid or you have no "
+"permittions to create database."
+msgstr ""
+
+msgid "Cannot save system configuration file 'config.php'."
+msgstr ""
+
+msgid "Cannot open 'config_db.php' configuration file."
+msgstr ""
+
+msgid "Cannot write to the 'config_db.php' configuration file."
+msgstr ""
+
+msgid ""
+"Configuration file 'config_db.php' is not writable. Change its permissions "
+"so it is, then re-run installation step."
+msgstr ""
+
+msgid "Host name cannot be empty."
+msgstr ""
+
+msgid "Database user name cannot be empty."
+msgstr ""
+
+msgid "Database name cannot be empty."
+msgstr ""
+
+msgid "Company name cannot be empty."
+msgstr ""
+
+msgid "Company admin name cannot be empty."
+msgstr ""
+
+msgid "Company admin password cannot be empty."
+msgstr ""
+
+msgid "Company admin passwords differ."
+msgstr ""
+
+msgid "System Diagnostics"
+msgstr ""
+
+msgid "Select install wizard language:"
+msgstr ""
+
+msgid ""
+"All application preliminary requirements seems to be correct. Please press "
+"Continue button below."
+msgstr ""
+
+msgid "Continue >>"
+msgstr "Continua >>"
+
+msgid ""
+"Application cannot be installed. Please fix problems listed below in red, "
+"and press Refresh button."
+msgstr ""
+
+msgid "Database Server Settings"
+msgstr ""
+
+msgid "Server Host:"
+msgstr ""
+
+msgid "Database User:"
+msgstr ""
+
+msgid "Database Password:"
+msgstr ""
+
+msgid "Database Name:"
+msgstr ""
+
+msgid "Use '0_' Table Prefix:"
+msgstr ""
+
+msgid "Install Additional Language Packs from FA Repository:"
+msgstr ""
+
+msgid "Install Additional COAs from FA Repository:"
+msgstr ""
+
+msgid ""
+"Use table prefix if you share selected database for more than one FA company."
+msgstr ""
+
+msgid ""
+"Do not select additional langs nor COAs if you have no working internet "
+"connection right now. You can install them later."
+msgstr ""
+
+msgid "<< Back"
+msgstr "<< Inapoi"
+
+msgid "User Interface Languages Selection"
+msgstr ""
+
+msgid "Charts of Accounts Selection"
+msgstr ""
+
+msgid "Company Settings"
+msgstr "Parametri firma"
+
+msgid "Company Name:"
+msgstr "Nume firma:"
+
+msgid "Admin Login:"
+msgstr ""
+
+msgid "Admin Password:"
+msgstr ""
+
+msgid "Reenter Password:"
+msgstr ""
+
+msgid "Select Chart of Accounts:"
+msgstr ""
+
+msgid "Select Default Language:"
+msgstr "Alegeti limba implicita:"
+
+msgid "FrontAccounting ERP has been installed successsfully."
+msgstr ""
+
+msgid "Please do not forget to remove install wizard folder."
+msgstr ""
+
+msgid "Click here to start."
+msgstr ""
+
+msgid "Main  Menu"
+msgstr "Meniu Principal"
+
+msgid "Inventory Item Sales prices"
+msgstr "Preturi de vanzare articole"
+
+msgid ""
+"There are no sales types in the system. Please set up sales types befor "
+"entering pricing."
+msgstr ""
+
+msgid "The price entered must be numeric."
+msgstr "Pretul trebuie sa fie numeric."
+
+msgid "This price has been updated."
+msgstr "Acest pret a fost actualizat."
+
+msgid "The new price has been added."
+msgstr "Pretul a fost adaugat."
+
+msgid "The selected price has been deleted."
+msgstr "Pretul selectat a fost sters"
+
+msgid "There are no prices set up for this part."
+msgstr "Nu exista preturi introduse in aceasta zona."
+
+msgid "Currency:"
+msgstr "Moneda:"
+
+msgid "Sales Type:"
+msgstr "Lista de preturi:"
+
+msgid "Price:"
+msgstr "Pret:"
+
+msgid "per"
+msgstr "pe"
+
+msgid "The price is calculated."
+msgstr "Acest pret este calculat"
+
+msgid "Item Adjustments Note"
+msgstr ""
+
+msgid ""
+"There are no inventory items defined in the system which can be adjusted "
+"(Purchased or Manufactured)."
+msgstr ""
+
+msgid ""
+"There are no inventory movement types defined in the system. Please define "
+"at least one inventory adjustment type."
+msgstr ""
+"Nu exista tipuri de miscari de stocuri definite in sistem. Definiti cel "
+"putin un tip de miscare de stocuri."
+
+msgid "Items adjustment has been processed"
+msgstr "Corectia de stoc a articolului a fost procesata"
+
+msgid "&View this adjustment"
+msgstr "Afiseaza aceasta corectie"
+
+msgid "View the GL &Postings for this Adjustment"
+msgstr ""
+
+msgid "Enter &Another Adjustment"
+msgstr "Introduceti o noua corectie de stoc"
+
+msgid "The entered date for the adjustment is invalid."
+msgstr "Data introdusa pentru aceasta corectie de stoc este incorecta."
+
+msgid ""
+"The adjustment cannot be processed because an adjustment item would cause a "
+"negative inventory balance :"
+msgstr ""
+
+msgid "Adjustment Items"
+msgstr "Articole in corectia de stoc"
+
+msgid "Process Adjustment"
+msgstr "Proceseaza corectia de stoc"
+
+msgid "Inventory Item Status"
+msgstr "Stocuri articole"
+
+msgid ""
+"This is a service and cannot have a stock holding, only the total quantity "
+"on outstanding sales orders is shown."
+msgstr ""
+
+msgid "Re-Order Level"
+msgstr ""
+
+msgid "Inventory Item Movement"
+msgstr ""
+
+msgid "From Location:"
+msgstr "Din gestiunea:"
+
+msgid "Show Movements"
+msgstr "Afiseaza miscarile"
+
+msgid "Detail"
+msgstr "Detaliu"
+
+msgid "Quantity In"
+msgstr "Cantitate intrata"
+
+msgid "Quantity Out"
+msgstr "Canitate iesita"
+
+msgid "Quantity on hand before"
+msgstr "Cantitate disponibila inainte"
+
+msgid "Quantity on hand after"
+msgstr "Cantitate disponibila dupa"
+
+msgid "Inventory Movement Types"
+msgstr "Tipuri de miscari de stocuri"
+
+msgid "The inventory movement type name cannot be empty."
+msgstr "Numele tipului de miscare de stoc nu poate fi vid."
+
+msgid "Selected movement type has been updated"
+msgstr "Tipul de miscare de stoc a fost actualizat."
+
+msgid "New movement type has been added"
+msgstr "Un nou tip de miscare de stoc a fost adaugat"
+
+msgid ""
+"Cannot delete this inventory movement type because item transactions have "
+"been created referring to it."
+msgstr ""
+"Acest tip de miscare de stoc nu se poate sterge deoarece au fost create "
+"tranzactii cu acest tip."
+
+msgid "Selected movement type has been deleted"
+msgstr "Tipul de miscare de stoc a fost sters"
+
+msgid "Units of Measure"
+msgstr "Unitati de masura"
+
+msgid "The unit of measure code cannot be empty."
+msgstr "Codul unitatii de masura nu poate fi gol."
+
+msgid "The unit of measure code is too long."
+msgstr "Codul unitatii de masura este prea lung."
+
+msgid "The unit of measure description cannot be empty."
+msgstr "Descrierea unitatii de masura nu poate fi vida."
+
+msgid "Selected unit has been updated"
+msgstr "Unitatea de masura a fost actualizata"
+
+msgid "New unit has been added"
+msgstr "O noua unitate de masura a fost adaugata"
+
+msgid ""
+"Cannot delete this unit of measure because items have been created using "
+"this unit."
+msgstr ""
+"Nu se poate sterge aceasta unitate de masura, deoarece este folosita de "
+"articole."
+
+msgid "Selected unit has been deleted"
+msgstr "Unitatea de masura a fost stearsa"
+
+msgid "Decimals"
+msgstr "Zecimale"
+
+msgid "User Quantity Decimals"
+msgstr "Foloseste parametri utilizator"
+
+msgid "Unit Abbreviation:"
+msgstr ""
+
+msgid "Descriptive Name:"
+msgstr "Nume descriptiv:"
+
+msgid "Decimal Places:"
+msgstr "Zecimale:"
+
+msgid "Sales Kits & Alias Codes"
+msgstr ""
+
+msgid "Stock Item"
+msgstr ""
+
+msgid "kit"
+msgstr ""
+
+msgid "Item code description cannot be empty."
+msgstr ""
+
+msgid "This item code is already assigned to stock item or sale kit."
+msgstr ""
+
+msgid "Kit/alias code cannot be empty."
+msgstr ""
+
+msgid ""
+"The selected component contains directly or on any lower level the kit under "
+"edition. Recursive kits are not allowed."
+msgstr ""
+
+msgid ""
+"The selected component is already in this kit. You can modify it's quantity "
+"but it cannot appear more than once in the same kit."
+msgstr ""
+
+msgid "New alias code has been created."
+msgstr ""
+
+msgid "New component has been added to selected kit."
+msgstr ""
+
+msgid "Component of selected kit has been updated."
+msgstr ""
+
+msgid "Kit common properties has been updated"
+msgstr ""
+
+msgid ""
+"This item cannot be deleted because it is the last item in the kit used by "
+"following kits"
+msgstr ""
+
+msgid "Select a sale kit:"
+msgstr ""
+
+msgid "New kit"
+msgstr ""
+
+msgid "Alias/kit code:"
+msgstr ""
+
+msgid "Category:"
+msgstr "Categorie:"
+
+msgid "Update kit/alias name"
+msgstr ""
+
+msgid "kits"
+msgstr ""
+
+msgid "Foreign Item Codes"
+msgstr ""
+
+msgid "There is no item selected."
+msgstr ""
+
+msgid "The price entered was not positive number."
+msgstr ""
+
+msgid "New item code has been added."
+msgstr ""
+
+msgid "Item code has been updated."
+msgstr ""
+
+msgid "Item code has been sucessfully deleted."
+msgstr ""
+
+msgid "EAN/UPC Code"
+msgstr ""
+
+msgid "UPC/EAN code:"
+msgstr ""
+
+msgid "Item Categories"
+msgstr "Categorii articole"
+
+msgid "The item category description cannot be empty."
+msgstr "Descrierea categoriei de articole nu poate fi vida."
+
+msgid "Selected item category has been updated"
+msgstr "Categoria de articole selectata a fost actualizata"
+
+msgid "New item category has been added"
+msgstr "O noua categorie de articole a fost adaugata"
+
+msgid ""
+"Cannot delete this item category because items have been created using this "
+"item category."
+msgstr ""
+
+msgid "Selected item category has been deleted"
+msgstr "Categoria de articole selectata a fost stearsa"
+
+msgid "Tax type"
+msgstr ""
+
+msgid "Sales Act"
+msgstr ""
+
+msgid "Inventory Account"
+msgstr ""
+
+msgid "COGS Account"
+msgstr ""
+
+msgid "Adjustment Account"
+msgstr ""
+
+msgid "Assembly Account"
+msgstr ""
+
+msgid "Category Name:"
+msgstr "Nume categorie:"
+
+msgid "Default values for new items"
+msgstr "Valori implicite pentru noile articole"
+
+msgid "Item Tax Type:"
+msgstr "Tip taxe articol:"
+
+msgid "Item Type:"
+msgstr "Tip articol:"
+
+msgid "Units of Measure:"
+msgstr "Unitati de masura:"
+
+msgid "Exclude from sales:"
+msgstr "Nepermis la vanzare:"
+
+msgid "C.O.G.S. Account:"
+msgstr ""
+
+msgid "Inventory Account:"
+msgstr ""
+
+msgid "Inventory Adjustments Account:"
+msgstr ""
+
+msgid "Item Assembly Costs Account:"
+msgstr ""
+
+msgid "Items"
+msgstr "Articole"
+
+msgid "Only graphics files can be uploaded"
+msgstr "Pot fi incarcate doar imagini"
+
+msgid ""
+"Only graphics files are supported - a file extension of .jpg, .png or .gif "
+"is expected"
+msgstr ""
+"Sunt permise doar fisiere imagine - un fisier cu extensia .jpg, .png sau ."
+"gif este permis"
+
+msgid ""
+"The file size is over the maximum allowed. The maximum size allowed in KB is"
+msgstr ""
+"Dimensiunea fisierului este mai mare decat maximum permis. Dimensiunea "
+"maxima permisa este (in KB)"
+
+msgid "The existing image could not be removed"
+msgstr "Imaginea existenta nu poate fi stearsa"
+
+msgid ""
+"There are no item categories defined in the system. At least one item "
+"category is required to add a item."
+msgstr ""
+"Nu exista categorii de articole definite in sistem. Cel putin o categorie "
+"este necesara pentru adaugarea unui aerticol."
+
+msgid ""
+"There are no item tax types defined in the system. At least one item tax "
+"type is required to add a item."
+msgstr ""
+
+msgid "The item name must be entered."
+msgstr "Numele articolului trebuie introdus."
+
+msgid "The item code cannot be empty"
+msgstr "Codul articolului nu poate fi vid."
+
+msgid ""
+"The item code cannot contain any of the following characters -  & + OR a "
+"space OR quotes"
+msgstr "Codul articolului nu poate contine -,&,+,spatiu, ghilimele"
+
+msgid "Item has been updated."
+msgstr "Articolul a fost actualizat."
+
+msgid "A new item has been added."
+msgstr "Un nou articol a fost adaugat."
+
+msgid "Selected item has been deleted."
+msgstr "Articolul selectat a fost sters."
+
+msgid "Item Code:"
+msgstr "Cod Articol:"
+
+msgid "Editable description:"
+msgstr "Descriere editabila:"
+
+msgid "Other"
+msgstr "Altele"
+
+msgid "Image File (.jpg)"
+msgstr "Fisier imagine (.jpg)"
+
+msgid "No image"
+msgstr "Fara imagine"
+
+msgid "Delete Image:"
+msgstr "Sterge imagine:"
+
+msgid "Item status:"
+msgstr "Stare articol:"
+
+msgid "Insert New Item"
+msgstr "Introduceti articol nou"
+
+msgid "Update Item"
+msgstr "Actualizeaza articol"
+
+msgid "Select this items and return to document entry."
+msgstr "Selecteaza acest articol si intoarce-te la introducerea documentului."
+
+msgid "Clone This Item"
+msgstr ""
+
+msgid "Delete This Item"
+msgstr "Sterge acest articol"
+
+msgid "Cancel"
+msgstr "Anuleaza"
+
+msgid "Cancel Edition"
+msgstr ""
+
+msgid "Select an item:"
+msgstr "Alegeti un articol:"
+
+msgid "New item"
+msgstr "Articol nou"
+
+msgid "&Status"
+msgstr ""
+
+msgid "Inventory Locations"
+msgstr "Gestiuni"
+
+msgid ""
+"The location code must be five characters or less long (including converted "
+"special chars)."
+msgstr "Codul gestiunii trebuie sa aiba maxim 5 caractere"
+
+msgid "The location name must be entered."
+msgstr "Numele gestiunii trebuie introdus."
+
+msgid "Selected location has been updated"
+msgstr ""
+
+msgid "New location has been added"
+msgstr "O noua gestiune a fost adaugata"
+
+msgid ""
+"Cannot delete this location because item movements have been created using "
+"this location."
+msgstr ""
+"Aceasta gestiune nu se poate sterge deoarece a fost folosita la mutari de "
+"articole."
+
+msgid ""
+"Cannot delete this location because it is used by some work orders records."
+msgstr ""
+
+msgid ""
+"Cannot delete this location because it is used by some branch records as the "
+"default location to deliver from."
+msgstr ""
+
+msgid ""
+"Cannot delete this location because it is used by some related records in "
+"other tables."
+msgstr ""
+
+msgid "Selected location has been deleted"
+msgstr "Gestiunea aleasa a fost stearsa"
+
+msgid "Location Code"
+msgstr "Cod gestiune"
+
+msgid "Location Name"
+msgstr "Numele gestiunii"
+
+msgid "Address"
+msgstr "Adresa"
+
+msgid "Secondary Phone"
+msgstr "Telefon alternativ"
+
+msgid "Location Code:"
+msgstr "Cod gestiune:"
+
+msgid "Location Name:"
+msgstr "Nume gestiune:"
+
+msgid "Contact for deliveries:"
+msgstr "Contact pentru livrari:"
+
+msgid "Telephone No:"
+msgstr "Telefon:"
+
+msgid "Facsimile No:"
+msgstr "Fax:"
+
+msgid "Supplier Purchasing Data"
+msgstr "Preturi de achizitie furnizori"
+
+msgid "There are no purchasable inventory items defined in the system."
+msgstr "Nu exista articole cumparabile definite in sistem."
+
+msgid "There are no suppliers defined in the system."
+msgstr "Nu exista furnizori definiti in sistem."
+
+msgid "The price entered was not numeric."
+msgstr "Pretul introdus nu este un numar."
+
+msgid ""
+"The conversion factor entered was not numeric. The conversion factor is the "
+"number by which the price must be divided by to get the unit price in our "
+"unit of measure."
+msgstr ""
+"Factorul de conversie nu este un numar. Factorul de conversie este numarul "
+"cu care pretul trebuie impartit pentru a obtine pretul unitar in U.M. ale "
+"noastre"
+
+msgid "This supplier purchasing data has been added."
+msgstr ""
+
+msgid "Supplier purchasing data has been updated."
+msgstr ""
+
+msgid "The purchasing data item has been sucessfully deleted."
+msgstr ""
+
+msgid "Entered item is not defined. Please re-enter."
+msgstr "Articolul introdus nu este definit. Reintroduceti."
+
+msgid "There is no purchasing data set up for the part selected"
+msgstr ""
+
+msgid "Supplier's Unit"
+msgstr "Unitate de masura furnizor"
+
+msgid "Conversion Factor"
+msgstr "Factor de conversie"
+
+msgid "Supplier's Description"
+msgstr "Descriere furnizor"
+
+msgid "Supplier:"
+msgstr "Furnizor:"
+
+msgid "Suppliers Unit of Measure:"
+msgstr "Unitate de masura furnizor:"
+
+msgid "Conversion Factor (to our UOM):"
+msgstr "Factor de convesie (la U.M noastre):"
+
+msgid "Supplier's Code or Description:"
+msgstr "Cod/descriere furnizor:"
+
+msgid "View Inventory Adjustment"
+msgstr "Afiseaza corectia de stoc"
+
+msgid "At Location"
+msgstr "In gestiunea"
+
+msgid "Adjustment Type"
+msgstr "Tip de corectie stoc"
+
+msgid "This adjustment has been voided."
+msgstr "Aceasta corectie de stoc a fost anulata."
+
+msgid "View Inventory Transfer"
+msgstr ""
+
+msgid "To Location"
+msgstr "In gstiunea"
+
+msgid "This transfer has been voided."
+msgstr "Acest transfer a fost anulat."
+
+msgid "Inventory Item Cost Update"
+msgstr ""
+
+msgid ""
+"There are no costable inventory items defined in the system (Purchased or "
+"manufactured items)."
+msgstr ""
+
+msgid "The entered cost is not numeric."
+msgstr ""
+
+msgid "The new cost is the same as the old cost. Cost was not updated."
+msgstr ""
+
+msgid "Cost has been updated."
+msgstr ""
+
+msgid "View the GL Journal Entries for this Cost Update"
+msgstr ""
+
+msgid "Standard Material Cost Per Unit"
+msgstr ""
+
+msgid "Standard Labour Cost Per Unit"
+msgstr ""
+
+msgid "Standard Overhead Cost Per Unit"
+msgstr ""
+
+msgid "Reorder Levels"
+msgstr ""
+
+msgid ""
+"There are no inventory items defined in the system (Purchased or "
+"manufactured items)."
+msgstr ""
+
+msgid "Reorder levels has been updated."
+msgstr ""
+
+msgid "Inventory Location Transfers"
+msgstr ""
+
+msgid "Inventory transfer has been processed"
+msgstr ""
+
+msgid "&View this transfer"
+msgstr ""
+
+msgid "Enter &Another Inventory Transfer"
+msgstr ""
+
+msgid "The locations to transfer from and to must be different."
+msgstr ""
+
+msgid ""
+"The quantity entered is greater than the available quantity for this item at "
+"the source location :"
+msgstr ""
+
+msgid "The quantity entered must be a positive number."
+msgstr ""
+
+msgid "Process Transfer"
+msgstr ""
+
+msgid "Dimension Entry"
+msgstr ""
+
+msgid "The dimension has been entered."
+msgstr ""
+
+msgid "The dimension has been updated."
+msgstr ""
+
+msgid "The dimension has been deleted."
+msgstr ""
+
+msgid "The dimension has been closed. There can be no more changes to it."
+msgstr ""
+
+msgid "The dimension has been re-opened. "
+msgstr ""
+
+msgid "Enter a &new dimension"
+msgstr ""
+
+msgid "&Select an existing dimension"
+msgstr ""
+
+msgid "The dimension reference must be entered."
+msgstr ""
+
+msgid "The dimension name must be entered."
+msgstr ""
+
+msgid "The required by date entered is in an invalid format."
+msgstr ""
+
+msgid "This dimension cannot be deleted because it has already been processed."
+msgstr ""
+
+msgid "The dimension sent is not valid."
+msgstr ""
+
+msgid "Dimension Reference:"
+msgstr ""
+
+msgid "Tags:"
+msgstr ""
+
+msgid "This Dimension is closed."
+msgstr ""
+
+msgid "Save changes to dimension"
+msgstr ""
+
+msgid "Re-open This Dimension"
+msgstr ""
+
+msgid "Mark this dimension as re-opened"
+msgstr ""
+
+msgid "Close This Dimension"
+msgstr ""
+
+msgid "Mark this dimension as closed"
+msgstr ""
+
+msgid "Delete This Dimension"
+msgstr ""
+
+msgid "Delete unused dimension"
+msgstr ""
+
+msgid "Add"
+msgstr "Adauga"
+
+msgid "Search Outstanding Dimensions"
+msgstr ""
+
+msgid "Search Dimensions"
+msgstr ""
+
+msgid "Marked dimensions are overdue."
+msgstr ""
+
+msgid "View Dimension"
+msgstr ""
+
+msgid "The dimension number sent is not valid."
+msgstr ""
+
+msgid "This dimension is closed."
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "Supplier Inquiry"
+msgstr "Info furnizori"
+
+msgid "Select a supplier:"
+msgstr "Alege un furnizor:"
+
+msgid "Print Remittance"
+msgstr ""
+
+msgid "Supplier's Reference"
+msgstr ""
+
+msgid "Search Outstanding Purchase Orders"
+msgstr "Cauta comenzi furnizor nelivrate"
+
+msgid "Receive"
+msgstr "Receptioneaza"
+
+msgid "Marked orders have overdue items."
+msgstr ""
+
+msgid "Search Purchase Orders"
+msgstr "Cauta comenzi furnizor"
+
+msgid "into location:"
+msgstr "in gestiunea:"
+
+msgid "Supplier Allocation Inquiry"
+msgstr ""
+
+msgid "Select a supplier: "
+msgstr "Selecteaza un furnizor: "
+
+msgid "Allocations"
+msgstr ""
+
+msgid "Pay"
+msgstr "Plateste"
+
+msgid "Supp Reference"
+msgstr ""
+
+msgid "Receive Purchase Order Items"
+msgstr ""
+
+msgid "Purchase Order Delivery has been processed"
+msgstr ""
+
+msgid "&View this Delivery"
+msgstr "Afiseaza aceasta livrare"
+
+msgid "View the GL Journal Entries for this Delivery"
+msgstr ""
+
+msgid "Entry purchase &invoice for this receival"
+msgstr ""
+
+msgid "Select a different &purchase order for receiving items against"
+msgstr ""
+
+msgid ""
+"This page can only be opened if a purchase order has been selected. Please "
+"select a purchase order first."
+msgstr ""
+
+msgid "Received"
+msgstr "Receptionat"
+
+msgid ""
+"There is nothing to process. Please enter valid quantities greater than zero."
+msgstr ""
+
+msgid ""
+"Entered quantities cannot be greater than the quantity entered on the "
+"purchase order including the allowed over-receive percentage"
+msgstr ""
+
+msgid ""
+"Modify the ordered items on the purchase order if you wish to increase the "
+"quantities."
+msgstr ""
+
+msgid ""
+"This order has been changed or invoiced since this delivery was started to "
+"be actioned. Processing halted. To enter a delivery against this purchase "
+"order, it must be re-selected and re-read again to update the changes made "
+"by the other user."
+msgstr ""
+
+msgid "Select a different purchase order for receiving goods against"
+msgstr ""
+
+msgid "Re-Read the updated purchase order for receiving goods against"
+msgstr ""
+
+msgid "Items to Receive"
+msgstr "Articole de receptionat"
+
+msgid "Process Receive Items"
+msgstr ""
+
+msgid "Clear all GL entry fields"
+msgstr ""
+
+msgid "Allocate Supplier Payment or Credit Note"
+msgstr ""
+
+msgid "Allocation of"
+msgstr ""
+
+msgid "Supplier Allocations"
+msgstr ""
+
+msgid "Select a Supplier: "
+msgstr "Alegeti un furnizor: "
+
+msgid "Suppliers"
+msgstr "Furnizori"
+
+msgid "Basic Data"
+msgstr ""
+
+msgid "Supplier Name:"
+msgstr "Nume furnizor:"
+
+msgid "Supplier Short Name:"
+msgstr "Cod furnizor:"
+
+msgid "Website:"
+msgstr "Site:"
+
+msgid "Supplier's Currency:"
+msgstr "Moneda furnizor:"
+
+msgid "Our Customer No:"
+msgstr ""
+
+msgid "Purchasing"
+msgstr ""
+
+msgid "Bank Name/Account:"
+msgstr "Cont bancar/Banca:"
+
+msgid "Prices contain tax included:"
+msgstr ""
+
+msgid "Accounts Payable Account:"
+msgstr ""
+
+msgid "Purchase Account:"
+msgstr ""
+
+msgid "Use Item Inventory/COGS Account"
+msgstr ""
+
+msgid "Purchase Discount Account:"
+msgstr ""
+
+msgid "Contact Data"
+msgstr "Date de contact"
+
+msgid "Physical Address:"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Supplier status:"
+msgstr "Stare furnizor:"
+
+msgid "System default"
+msgstr ""
+
+msgid "Update Supplier"
+msgstr "Actualizeaza furnizor"
+
+msgid "Update supplier data"
+msgstr "Actualizeaza date furnizor"
+
+msgid "Select this supplier and return to document entry."
+msgstr "Alege acest furnizor si intoarce-te la introducerea documentului."
+
+msgid "Delete Supplier"
+msgstr "Sterge furnizor"
+
+msgid "Delete supplier data if have been never used"
+msgstr "Sterge datele furnizorului daca nu au fost folosite niciodata"
+
+msgid "Add New Supplier Details"
+msgstr "Adauga furnizor"
+
+msgid "The supplier name must be entered."
+msgstr "Numele furnizorului nu poate fi gol."
+
+msgid "The supplier short name must be entered."
+msgstr "Codul furnizor nu poate fi vid."
+
+msgid "Supplier has been updated."
+msgstr "Furnizorul a fost actualizat."
+
+msgid "A new supplier has been added."
+msgstr "Un furnizor nou a fost adaugat."
+
+msgid ""
+"Cannot delete this supplier because there are transactions that refer to "
+"this supplier."
+msgstr ""
+
+msgid ""
+"Cannot delete the supplier record because purchase orders have been created "
+"against this supplier."
+msgstr ""
+
+msgid "New supplier"
+msgstr "Furnizor nou"
+
+msgid "Purchase &Orders"
+msgstr "Comenzi furnizor"
+
+msgid "Supplier Payment Entry"
+msgstr "Introducere plati furnizori"
+
+msgid "Invalid purchase invoice number."
+msgstr "Numar de factura furnizor incorect."
+
+msgid "Payment has been sucessfully entered"
+msgstr "Plata a fost introdusa"
+
+msgid "&Print This Remittance"
+msgstr ""
+
+msgid "&Email This Remittance"
+msgstr ""
+
+msgid "View the GL &Journal Entries for this Payment"
+msgstr ""
+
+msgid "Enter another supplier &payment"
+msgstr "Introduceti o alta plata furnzior"
+
+msgid "There is no supplier selected."
+msgstr "Nu este selectat nici un furnizor."
+
+msgid "The entered amount is invalid or less than zero."
+msgstr ""
+
+msgid "The entered discount is invalid or less than zero."
+msgstr "Discount-ul introdus este incorect sau negativ."
+
+msgid ""
+"The total of the amount and the discount is zero or negative. Please enter "
+"positive values."
+msgstr ""
+
+#, php-format
+msgid "The total bank amount exceeds allowed limit (%s)."
+msgstr ""
+
+msgid "Payment To:"
+msgstr "Plata la:"
+
+msgid "From Bank Account:"
+msgstr "Din contul bancar:"
+
+msgid "Date Paid"
+msgstr "Data platii"
+
+msgid "Amount of Payment:"
+msgstr "Valoarea platii:"
+
+msgid "The amount and discount are in the bank account's currency."
+msgstr "Valoarea si discount-ul sunt in moneda contului bancar."
+
+msgid "Enter Payment"
+msgstr "Introduceti plata"
+
+msgid "Supplier Credit Note"
+msgstr "Factura storno furnizor"
+
+msgid "Supplier credit note has been processed."
+msgstr "Factura storno furnizor a fost procesata."
+
+msgid "View this Credit Note"
+msgstr "Afiseaza aceasta factura storno"
+
+msgid "View the GL Journal Entries for this Credit Note"
+msgstr ""
+
+msgid "Enter Another Credit Note"
+msgstr "Introduceti o alta factura storno"
+
+msgid ""
+"The account code entered is not a valid code, this line cannot be added to "
+"the transaction."
+msgstr ""
+
+msgid ""
+"The amount entered is not numeric. This line cannot be added to the "
+"transaction."
+msgstr ""
+
+msgid "Cannot post to GL account used by more than one tax type."
+msgstr ""
+
+msgid ""
+"The credit note cannot be processed because the there are no items or values "
+"on the invoice.  Credit notes are expected to have a charge."
+msgstr ""
+
+msgid "You must enter an credit note reference."
+msgstr ""
+
+msgid "You must enter a supplier's credit note reference."
+msgstr ""
+
+msgid ""
+"The credit note as entered cannot be processed because the date entered is "
+"not valid."
+msgstr ""
+
+msgid ""
+"The invoice as entered cannot be processed because the due date is in an "
+"incorrect format."
+msgstr ""
+
+msgid ""
+"The credit note total as entered is less than the sum of the the general "
+"ledger entires (if any) and the charges for goods received. There must be a "
+"mistake somewhere, the credit note as entered will not be processed."
+msgstr ""
+
+msgid ""
+"The return cannot be processed because there is an insufficient quantity for "
+"item:"
+msgstr ""
+
+msgid "The quantity to credit must be numeric and greater than zero."
+msgstr ""
+
+msgid "The price is either not numeric or negative."
+msgstr "Pretul nu este numeric sau este negativ."
+
+msgid "Enter Credit Note"
+msgstr ""
+
+msgid "View Payment to Supplier"
+msgstr "Afiseaza plata la furnizor"
+
+msgid "Payment to Supplier"
+msgstr "Plata la furnizor"
+
+msgid "To Supplier"
+msgstr "Catre furnizorul"
+
+msgid "From Bank Account"
+msgstr "Din contul bancar"
+
+msgid "Supplier's Currency"
+msgstr "Moneda furnizorului"
+
+msgid "This payment has been voided."
+msgstr "Aceasta plata a fost anulata."
+
+msgid "View Supplier Invoice"
+msgstr "Afiseaza factura furnizor"
+
+msgid "SUPPLIER INVOICE"
+msgstr "FACTURA FURNIZOR"
+
+msgid "View Purchase Order"
+msgstr "Afiseaza comanda furnizor"
+
+msgid "This page must be called with a purchase order number to review."
+msgstr ""
+
+msgid "Purchase Order"
+msgstr "Comanda furnizor"
+
+msgid "Requested By"
+msgstr ""
+
+msgid "Line Total"
+msgstr "Total linie"
+
+msgid "Quantity Received"
+msgstr "Cantitate receptionata"
+
+msgid "Quantity Invoiced"
+msgstr "Cantitate facturata"
+
+msgid "Delivered On"
+msgstr ""
+
+msgid "View Supplier Credit Note"
+msgstr "Afiseaza factura storno furnizor"
+
+msgid "SUPPLIER CREDIT NOTE"
+msgstr "FACTURA STORNO FURNIZOR"
+
+msgid "TOTAL CREDIT NOTE"
+msgstr "TOTAL FACTURA STORNO"
+
+msgid "View Purchase Order Delivery"
+msgstr ""
+
+msgid ""
+"This page must be called with a Purchase Order Delivery number to review."
+msgstr ""
+
+msgid "Purchase Order Delivery"
+msgstr "Livrare comanda furnizor"
+
+msgid "This delivery has been voided."
+msgstr ""
+
+msgid "Enter Supplier Invoice"
+msgstr "Introduceti factura furnizor"
+
+msgid "Supplier invoice has been processed."
+msgstr "Factura furnizor a fost procesata."
+
+msgid "View this Invoice"
+msgstr "Afiseaza aceasta factura"
+
+msgid "View the GL Journal Entries for this Invoice"
+msgstr ""
+
+msgid "Entry supplier &payment for this invoice"
+msgstr "Introduceti plata furnizor pentru aceasta factura"
+
+msgid "Enter Another Invoice"
+msgstr "Introduceti alta factura"
+
+msgid ""
+"The invoice cannot be processed because the there are no items or values on "
+"the invoice.  Invoices are expected to have a charge."
+msgstr ""
+
+msgid "You must enter an invoice reference."
+msgstr ""
+
+msgid "You must enter a supplier's invoice reference."
+msgstr ""
+
+msgid ""
+"The invoice as entered cannot be processed because the invoice date is in an "
+"incorrect format."
+msgstr ""
+
+msgid ""
+"This invoice number has already been entered. It cannot be entered again."
+msgstr ""
+"Acest numar de factura a fost deja introdus si nu mai poate fi introdus inca "
+"o data."
+
+msgid "The quantity to invoice must be numeric and greater than zero."
+msgstr "Cantitatea de facturat trebuie sa fie un numar pozitiv."
+
+msgid "The price is not numeric."
+msgstr "Pretul nu este un numar."
+
+msgid ""
+"The price being invoiced is more than the purchase order price by more than "
+"the allowed over-charge percentage. The system is set up to prohibit this. "
+"See the system administrator to modify the set up parameters if necessary."
+msgstr ""
+
+msgid "The over-charge percentage allowance is :"
+msgstr ""
+
+msgid ""
+"The quantity being invoiced is more than the outstanding quantity by more "
+"than the allowed over-charge percentage. The system is set up to prohibit "
+"this. See the system administrator to modify the set up parameters if "
+"necessary."
+msgstr ""
+
+#, php-format
+msgid "All yet non-invoiced items on delivery line # %d has been removed."
+msgstr ""
+
+msgid "Enter Invoice"
+msgstr "Introduceti factura"
+
+msgid "Modify Purchase Order #"
+msgstr "Modifica comanda furnizor #"
+
+msgid "Purchase Order Entry"
+msgstr "Introducere comanda furnizor noua"
+
+msgid "Direct GRN Entry"
+msgstr "Introducere NIR"
+
+msgid "Direct Purchase Invoice Entry"
+msgstr "Introducere factura de achizitii"
+
+msgid "Purchase Order has been entered"
+msgstr "Comanda furnizor a fost introdusa"
+
+msgid "Purchase Order has been updated"
+msgstr "Comanda furnizor a fost actualizata"
+
+msgid "&View this order"
+msgstr "Afiseaza aceasta comanda"
+
+msgid "&Receive Items on this Purchase Order"
+msgstr "Receptionati articole din aceasta comanda furnizor"
+
+msgid "Enter &Another Purchase Order"
+msgstr "Introduceti o alta comanda furnizor"
+
+msgid "Select An &Outstanding Purchase Order"
+msgstr "Alegeti o comanda furnizor nelivrata"
+
+msgid "Direct GRN has been entered"
+msgstr "NIR-ul a fost introdus"
+
+msgid "&View this GRN"
+msgstr "Afisati acest NIR"
+
+msgid "Enter &Another GRN"
+msgstr "Introduceti un alt NIR"
+
+msgid "Direct Purchase Invoice has been entered"
+msgstr "Factura de achizitii a fost introdusa"
+
+msgid "&View this Invoice"
+msgstr "Afiseaza aceasta factura"
+
+msgid "Enter &Another Direct Invoice"
+msgstr "Introduceti o alta factura furnizor"
+
+msgid ""
+"This item cannot be deleted because some of it has already been received."
+msgstr "Acest articol nu poate fi sters deoarece a fost deja receptionat."
+
+msgid ""
+"This order cannot be cancelled because some of it has already been received."
+msgstr ""
+"Aceasta comanda nu poate fi anlata deoarece a fost receptionata partial."
+
+msgid ""
+"The line item quantities may be modified to quantities more than already "
+"received. prices cannot be altered for lines that have already been received "
+"and quantities cannot be reduced below the quantity already received."
+msgstr ""
+
+msgid "This purchase order has been cancelled."
+msgstr "Aceasta comanda furnizor a fost anulata."
+
+msgid "Enter a new purchase order"
+msgstr "Introduceti o noua comanda furnizor"
+
+msgid "The quantity of the order item must be numeric and not less than "
+msgstr "Cantitatea pe comanda trebuie sa fie un numar, nu mai mic ca "
+
+msgid "The price entered must be numeric and not less than zero."
+msgstr "Pretul introdus trebuie sa fie un numar mai mare ca zero."
+
+msgid ""
+"You are attempting to make the quantity ordered a quantity less than has "
+"already been invoiced or received.  This is prohibited."
+msgstr ""
+
+msgid ""
+"The quantity received can only be modified by entering a negative receipt "
+"and the quantity invoiced can only be reduced by entering a credit note "
+"against this item."
+msgstr ""
+
+msgid "The selected item is already on this order."
+msgstr "Articolul selectat este deja pe aceasta comanda."
+
+msgid ""
+"The selected item does not exist or it is a kit part and therefore cannot be "
+"purchased."
+msgstr ""
+
+msgid "The entered order date is invalid."
+msgstr "Data comenzii este incorecta."
+
+msgid "The entered due date is invalid."
+msgstr ""
+
+msgid "There is no reference entered for this purchase order."
+msgstr ""
+
+msgid "There is no delivery address specified."
+msgstr "Nu exista nici o adresa de livrare specificata."
+
+msgid "There is no location specified to move any items into."
+msgstr ""
+
+msgid ""
+"The order cannot be placed because there are no lines entered on this order."
+msgstr "Comanda nu poate fi procesata deoarece nu exista linii introduse."
+
+msgid "Update Order"
+msgstr "Actualizeaza comanda"
+
+msgid "Process GRN"
+msgstr "Proceseaza NIR"
+
+msgid "Update GRN"
+msgstr "Actualizeaza NIR"
+
+msgid "Cancel GRN"
+msgstr "Anuleaza NIR"
+
+msgid "Update Invoice"
+msgstr "Actualizeaza factura"
+
+msgid "Item Tax Types"
+msgstr "Tipuri de taxe articole"
+
+msgid "The item tax type description cannot be empty."
+msgstr "Descrierea tipului de taxe nu poate fi vida."
+
+msgid "Selected item tax type has been updated"
+msgstr "Tipul de taxe selectat a fost actualizat"
+
+msgid "New item tax type has been added"
+msgstr "Un nou tip de taxe a fost adaugat"
+
+msgid ""
+"Cannot delete this item tax type because items have been created referring "
+"to it."
+msgstr "Acest tip de taxe nu poate fi sters deoarece este folosit de articole."
+
+msgid ""
+"Cannot delete this item tax type because item categories have been created "
+"referring to it."
+msgstr ""
+"Acest tip de taxe nu poate fi sters deoarece este folosit de categorii de "
+"articole."
+
+msgid "Selected item tax type has been deleted"
+msgstr "Tipul de taxa selectat a fost sters"
+
+msgid "Tax exempt"
+msgstr "Exceptata"
+
+msgid "Is Fully Tax-exempt:"
+msgstr "Este complet exceptata:"
+
+msgid "Select which taxes this item tax type is exempt from."
+msgstr "Alegeti taxele de la care este exceptata."
+
+msgid "Tax Name"
+msgstr "Nume taxa"
+
+msgid "Is exempt"
+msgstr "Exceptata"
+
+msgid "Tax Types"
+msgstr "Tipuri de taxe"
+
+msgid "The tax type name cannot be empty."
+msgstr "Numele taxei nu poate fi vid."
+
+msgid "The default tax rate must be numeric and not less than zero."
+msgstr "Cota implicita trebuie sa fie un numar mai mare ca zero."
+
+msgid "Selected GL Accounts cannot be used by another tax type."
+msgstr ""
+
+msgid "New tax type has been added"
+msgstr "O noua taxa a fost adaugata"
+
+msgid "Selected tax type has been updated"
+msgstr "Taxa selectata a fost actualizata"
+
+msgid ""
+"Cannot delete this tax type because tax groups been created referring to it."
+msgstr ""
+"Aceasta taxa nu poate fi stearsa deoarece este inclusa in grupuri de taxe."
+
+msgid "Selected tax type has been deleted"
+msgstr "Taxa selectata a fost stearsa"
+
+msgid ""
+"To avoid problems with manual journal entry all tax types should have unique "
+"Sales/Purchasing GL accounts."
+msgstr ""
+
+msgid "Default Rate (%)"
+msgstr "Cota implicita (%)"
+
+msgid "Sales GL Account"
+msgstr ""
+
+msgid "Purchasing GL Account"
+msgstr ""
+
+msgid "Default Rate:"
+msgstr "Cota implicita:"
+
+msgid "Sales GL Account:"
+msgstr ""
+
+msgid "Purchasing GL Account:"
+msgstr ""
+
+msgid "Tax Groups"
+msgstr "Grupuri de taxe"
+
+msgid ""
+"There are no tax types defined. Define tax types before defining tax groups."
+msgstr ""
+"Nu exista taxe definite in sistem. Definiti cel putin o taxa inainte de a "
+"defini grupe de taxe."
+
+msgid "The tax group name cannot be empty."
+msgstr "Numele grupului de taxe nu poate fi vid."
+
+msgid "Selected tax group has been updated"
+msgstr "Grupul de taxe selectat a fost actualizat"
+
+msgid "New tax group has been added"
+msgstr "Un nou grup de taxe a fost adaugat"
+
+msgid ""
+"Cannot delete this tax group because customer branches been created "
+"referring to it."
+msgstr ""
+
+msgid ""
+"Cannot delete this tax group because suppliers been created referring to it."
+msgstr ""
+
+msgid "Selected tax group has been deleted"
+msgstr ""
+
+msgid "Shipping Tax"
+msgstr "Taxa la transport"
+
+msgid "Tax applied to Shipping:"
+msgstr "Taxa aplicata la transport:"
+
+msgid "Select the taxes that are included in this group."
+msgstr "Selectati taxele incluse in acest grup."
+
+msgid "Unit Price"
+msgstr "Pret unitar"
+
+msgid "All amounts stated in"
+msgstr "Toate sumele sunt in"
+
+msgid "Quotation No."
+msgstr "Proforma nr."
+
+msgid "Customers Reference"
+msgstr ""
+
+msgid "Your VAT no."
+msgstr "C.I.F:"
+
+msgid "Our Quotation No"
+msgstr "Proforma Nr."
+
+msgid "Order No."
+msgstr "Comanda Nr."
+
+msgid "Delivery Note No."
+msgstr ""
+
+msgid "To Be Invoiced Before"
+msgstr ""
+
+msgid "Credit No."
+msgstr "Serie/Numar"
+
+msgid "Please quote Credit no. when paying. All amounts stated in"
+msgstr ""
+"Va rugam mentionati nr. factura in documentul de plata. Toate sumele sunt in"
+
+msgid "Invoice No."
+msgstr "Serie/Numar"
+
+msgid "Please quote Invoice no. when paying. All amounts stated in"
+msgstr ""
+"Va rugam mentionati nr. factura in documentul de plata. Toate sumele sunt in"
+
+msgid "Remittance No."
+msgstr ""
+
+msgid "Order To"
+msgstr ""
+
+msgid "Total Amount"
+msgstr ""
+
+msgid "This Allocation"
+msgstr ""
+
+msgid "Purchase Order No."
+msgstr ""
+
+msgid "Deliver To"
+msgstr "Livrare la"
+
+msgid "Receipt No."
+msgstr "Chitanta nr."
+
+msgid "With thanks from"
+msgstr "De la"
+
+msgid "Work Order No."
+msgstr ""
+
+msgid "Manufactured Item"
+msgstr ""
+
+msgid "Into Location"
+msgstr "In gestiunea"
+
+msgid "Unit Quantity"
+msgstr ""
+
+msgid "Total Quantity"
+msgstr ""
+
+msgid "Units Issued"
+msgstr ""
+
+msgid "DueDate"
+msgstr ""
+
+msgid "Bank"
+msgstr "Banca"
+
+msgid "You can pay through"
+msgstr ""
+
+msgid "* Subject to Realisation of the Cheque."
+msgstr ""
+
+msgid "Our VAT No."
+msgstr "C.I.F."
+
+msgid "Official Company Number:"
+msgstr "Nr.Reg.Com:"
+
+msgid "Bank Name:"
+msgstr "Banca:"
+
+msgid "Bank Account Number:"
+msgstr "Contul:"
+
+msgid "Valid Until"
+msgstr ""
+
+msgid "Page"
+msgstr ""
+
+msgid "Print GRN for invoices"
+msgstr "Tipareste NIR pentru facturi"
+
+msgid "Package Details"
+msgstr ""
+
+msgid ""
+"The script must be called with a valid package id to review the info for."
+msgstr ""
+
+msgid "Available version"
+msgstr ""
+
+msgid "Package type"
+msgstr ""
+
+msgid "Package content"
+msgstr ""
+
+msgid "Author"
+msgstr ""
+
+msgid "Home page"
+msgstr ""
+
+msgid "Package maintainer"
+msgstr ""
+
+msgid "Installation path"
+msgstr ""
+
+msgid "Minimal software versions"
+msgstr ""
+
+msgid "Right to left"
+msgstr ""
+
+msgid "Charset encoding"
+msgstr ""
+
+#, php-format
+msgid "Content information for package '%s'"
+msgstr ""
+
+msgid "Property"
+msgstr ""
+
+msgid "Reconcile Bank Account"
+msgstr ""
+
+msgid "Invalid reconcile date format"
+msgstr ""
+
+msgid "Reconcile this transaction"
+msgstr ""
+
+msgid "Account:"
+msgstr ""
+
+msgid "Bank Statement:"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "Reconcile Date"
+msgstr ""
+
+msgid "Beginning<br>Balance"
+msgstr ""
+
+msgid "Ending<br>Balance"
+msgstr ""
+
+msgid "Account<br>Total"
+msgstr ""
+
+msgid "Reconciled<br>Amount"
+msgstr ""
+
+msgid "Difference"
+msgstr ""
+
+msgid "Date of bank statement to reconcile"
+msgstr ""
+
+msgid "Reconcile"
+msgstr ""
+
+msgid "Transfer between Bank Accounts"
+msgstr "Transferuri intre conturi bancare"
+
+msgid "Transfer has been entered"
+msgstr "Transferul a fost introdus"
+
+msgid "&View the GL Journal Entries for this Transfer"
+msgstr ""
+
+msgid "Enter &Another Transfer"
+msgstr "Introduceti un alt transfer"
+
+msgid "From Account:"
+msgstr "Din contul:"
+
+msgid "To Account:"
+msgstr "In contul:"
+
+msgid "Transfer Date:"
+msgstr "Data transferului:"
+
+msgid "Enter Transfer"
+msgstr "Introduceti transferul"
+
+msgid "The total bank amount cannot be 0."
+msgstr "Suma totala nu poate fi zero."
+
+#, php-format
+msgid "The total bank amount exceeds allowed limit (%s) for source account."
+msgstr ""
+
+#, php-format
+msgid ""
+"The bank transaction would result in exceed of authorized overdraft limit "
+"for transaction: %s #%s on %s."
+msgstr ""
+
+msgid "The source and destination bank accouts cannot be the same."
+msgstr "Conturile bancare sursa si destinatie nu pot fi identice."
+
+#, php-format
+msgid "Modifying Journal Transaction # %d."
+msgstr ""
+
+msgid "Journal Entry"
+msgstr ""
+
+msgid "Journal entry has been entered"
+msgstr ""
+
+msgid "&View this Journal Entry"
+msgstr ""
+
+msgid "Enter &New Journal Entry"
+msgstr ""
+
+msgid "Journal entry has been updated"
+msgstr ""
+
+msgid "Return to Journal &Inquiry"
+msgstr ""
+
+msgid ""
+"You can edit directly only journal entries created via Journal Entry page."
+msgstr ""
+
+msgid "Entry &New Journal Entry"
+msgstr ""
+
+msgid "You must enter at least one journal line."
+msgstr ""
+
+msgid ""
+"The journal must balance (debits equal to credits) before it can be "
+"processed."
+msgstr ""
+
+msgid "Dimension is closed."
+msgstr ""
+
+msgid "You must enter either a debit amount or a credit amount."
+msgstr ""
+
+msgid "The debit amount entered is not a valid number or is less than zero."
+msgstr ""
+
+msgid "The credit amount entered is not a valid number or is less than zero."
+msgstr ""
+
+msgid ""
+"You cannot make a journal entry for a bank account. Please use one of the "
+"banking functions for bank transactions."
+msgstr ""
+
+msgid "Rows"
+msgstr ""
+
+msgid "Process Journal Entry"
+msgstr ""
+
+msgid "Process journal entry only if debits equal to credits"
+msgstr ""
+
+msgid "General Ledger Inquiry"
+msgstr "Info contabile"
+
+msgid "All Accounts"
+msgstr "Toate conturile"
+
+msgid "Amount min:"
+msgstr ""
+
+msgid "Amount max:"
+msgstr ""
+
+msgid ""
+"No general ledger transactions have been created for the specified criteria."
+msgstr ""
+
+msgid "Balance Sheet Drilldown"
+msgstr ""
+
+msgid "As at:"
+msgstr ""
+
+msgid "Tax Inquiry"
+msgstr ""
+
+msgid "Charged on sales"
+msgstr ""
+
+msgid "Paid on purchases"
+msgstr ""
+
+msgid "Net payable or collectible"
+msgstr ""
+
+msgid "Profit & Loss Drilldown"
+msgstr ""
+
+msgid "Group/Account Name"
+msgstr ""
+
+msgid "No zero values"
+msgstr ""
+
+msgid "The from date cannot be bigger than the fiscal year end."
+msgstr ""
+
+msgid "Class"
+msgstr ""
+
+msgid "Journal Inquiry"
+msgstr ""
+
+msgid "Enter reference fragment or leave empty"
+msgstr ""
+
+msgid "Show closed:"
+msgstr ""
+
+msgid "Enter memo fragment or leave empty"
+msgstr ""
+
+msgid "Trans #"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "GL Account Classes"
+msgstr "Clase de conturi"
+
+msgid "The account class ID cannot be empty."
+msgstr "ID clasa nu poate fi vid."
+
+msgid "The account class name cannot be empty."
+msgstr "Numele clasei nu poate fi vid."
+
+msgid "Selected account class settings has been updated"
+msgstr "Clasa de conturi a fost actualizata"
+
+msgid "New account class has been added"
+msgstr "O noua clasa de conturi a fost adaugata"
+
+msgid ""
+"Cannot delete this account class because GL account types have been created "
+"referring to it."
+msgstr ""
+"Aceasta clasa de conturi nu se poate sterge deoarece este folosita de "
+"conturi contabile."
+
+msgid "Selected account class has been deleted"
+msgstr "Clasa de conturi selectata a fost stearsa"
+
+msgid "Class ID"
+msgstr "ID clasa"
+
+msgid "Class Name"
+msgstr "Numele claesi"
+
+msgid "Class Type"
+msgstr "Tipul clasei"
+
+msgid "Class ID:"
+msgstr "ID clasa:"
+
+msgid "Class Name:"
+msgstr "Nume clasa:"
+
+msgid "Class Type:"
+msgstr "Tip clasa:"
+
+msgid "Quick Entries"
+msgstr ""
+
+msgid "Add new"
+msgstr "Adauga"
+
+msgid "The Quick Entry description cannot be empty."
+msgstr ""
+
+msgid "You can only use Balance Based together with Journal Entries."
+msgstr ""
+
+msgid "The base amount description cannot be empty."
+msgstr ""
+
+msgid "Selected quick entry has been updated"
+msgstr ""
+
+msgid "New quick entry has been added"
+msgstr ""
+
+msgid "Selected quick entry line has been updated"
+msgstr ""
+
+msgid "New quick entry line has been added"
+msgstr ""
+
+msgid "Selected quick entry has been deleted"
+msgstr ""
+
+msgid "The Quick Entry has Quick Entry Lines. Cannot be deleted."
+msgstr ""
+
+msgid "Selected quick entry line has been deleted"
+msgstr ""
+
+msgid "Base Amount"
+msgstr ""
+
+msgid "Entry Type"
+msgstr ""
+
+msgid "Balance Based"
+msgstr ""
+
+msgid "Yearly"
+msgstr "Anual"
+
+msgid "Base Amount Description"
+msgstr ""
+
+msgid "Default Base Amount"
+msgstr ""
+
+msgid "Quick Entry Lines"
+msgstr ""
+
+msgid "Post"
+msgstr ""
+
+msgid "Account/Tax Type"
+msgstr ""
+
+msgid "Posted"
+msgstr ""
+
+msgid "Part"
+msgstr ""
+
+msgid "The bank account name cannot be empty."
+msgstr "Numele contului bancar nu poate fi gol."
+
+msgid "The GL account selected is already in use. Select another GL account."
+msgstr ""
+"Contul contabil selectat este deja folosit. Alegeti un alt cont contabil."
+
+msgid "Bank account has been updated"
+msgstr "Contul bancar a fost actualizat"
+
+msgid "New bank account has been added"
+msgstr "Contul bancar a fost adaugat"
+
+msgid ""
+"Cannot delete this bank account because transactions have been created using "
+"this account."
+msgstr ""
+"Nu se poate sterge acest cont bancar deoarece a fost folosit in tranzactii."
+
+msgid ""
+"Cannot delete this bank account because POS definitions have been created "
+"using this account."
+msgstr "Nu se poate sterge acest cont bancar deoarece este folosit de POS-uri"
+
+msgid "Selected bank account has been deleted"
+msgstr "Contul bancar selectat a fost sters"
+
+msgid "GL Account"
+msgstr "Cont contabil"
+
+msgid "Number"
+msgstr "Numar"
+
+msgid "Bank Address"
+msgstr "Adresa bancii:"
+
+msgid "Dflt"
+msgstr "Impl"
+
+msgid "Bank Account Name:"
+msgstr "Numele contului bancar:"
+
+msgid "Account Type:"
+msgstr "Tip cont:"
+
+msgid "Bank Account Currency:"
+msgstr "Moneda contului:"
+
+msgid "Default currency account:"
+msgstr "Cont implicit pentru moneda:"
+
+msgid "Bank Account GL Code:"
+msgstr "Contul contabil asociat:"
+
+msgid "Bank Address:"
+msgstr "Adresa bancii:"
+
+msgid ""
+"There are no account groups defined. Please define at least one account "
+"group before entering accounts."
+msgstr ""
+
+msgid "The account code must be entered."
+msgstr "Codul contului trebuie introdus."
+
+msgid "The account name cannot be empty."
+msgstr "Numele contului nu poate fi vid."
+
+msgid "The account code must be numeric."
+msgstr "Codul contului trebuie sa fie numeric."
+
+msgid "The account belongs to a bank account and cannot be inactivated."
+msgstr "Acest cont apartine unui cont bancar si nu poate fi dezactivat."
+
+msgid "Account data has been updated."
+msgstr "Informatiile contului au fost actualizate."
+
+msgid "New account has been added."
+msgstr "Un cont nou a fost adaugat."
+
+msgid ""
+"Cannot delete this account because transactions have been created using this "
+"account."
+msgstr "Acest cont nu poate fi sters deoarece este folosit la tranzactii."
+
+msgid ""
+"Cannot delete this account because it is used as one of the company default "
+"GL accounts."
+msgstr ""
+
+msgid "Cannot delete this account because it is used by a bank account."
+msgstr "Acest cont nu poate fi sters deoarece este folosit la un cont bancar."
+
+msgid ""
+"Cannot delete this account because it is used by one or more Item Categories."
+msgstr ""
+"Acest cont nu poate fi sters deoarece este folosit de o categorie de "
+"articole."
+
+msgid "Cannot delete this account because it is used by one or more Items."
+msgstr "Acest cont nu poate fi sters deoarece este folosit de un articol."
+
+msgid "Cannot delete this account because it is used by one or more Taxes."
+msgstr ""
+
+msgid ""
+"Cannot delete this account because it is used by one or more Customer "
+"Branches."
+msgstr "Acest cont nu poate fi sters deoarece este folosit de un sediu client."
+
+msgid "Cannot delete this account because it is used by one or more suppliers."
+msgstr "Acest cont nu poate fi folosit deoarece este folosit de un furnizor."
+
+msgid ""
+"Cannot delete this account because it is used by one or more Quick Entry "
+"Lines."
+msgstr ""
+
+msgid "Selected account has been deleted"
+msgstr "Contul selectat a fost sters"
+
+msgid "New account"
+msgstr "Cont nou"
+
+msgid "Account Code:"
+msgstr "Cod cont:"
+
+msgid "Account Code 2:"
+msgstr "Cod 2 cont:"
+
+msgid "Account Name:"
+msgstr "Nume cont:"
+
+msgid "Account Group:"
+msgstr "Grupa de conturi:"
+
+msgid "Account Tags:"
+msgstr ""
+
+msgid "Account status:"
+msgstr "Stare cont:"
+
+msgid "Add Account"
+msgstr "Adauga cont"
+
+msgid "Update Account"
+msgstr "Actualizeaza cont"
+
+msgid "Delete account"
+msgstr "Sterge cont"
+
+msgid "Currencies"
+msgstr "Monede"
+
+msgid "The currency abbreviation must be entered."
+msgstr ""
+
+msgid "The currency name must be entered."
+msgstr "Numele monedei trebuie introdus."
+
+msgid "The currency symbol must be entered."
+msgstr "Simbolul monedei trebuie introdus."
+
+msgid "The hundredths name must be entered."
+msgstr "Numele sutimilor trebuie introdus."
+
+msgid "Selected currency settings has been updated"
+msgstr "Moneda selectata a fost actualizata"
+
+msgid "New currency has been added"
+msgstr "O noua moneda a fost adaugata"
+
+msgid ""
+"Cannot delete this currency, because customer accounts have been created "
+"referring to this currency."
+msgstr ""
+"Nu se poate sterge aceasta moneda, deoarece exista clienti ce o folosesc."
+
+msgid ""
+"Cannot delete this currency, because supplier accounts have been created "
+"referring to this currency."
+msgstr ""
+"Nu se poate sterge aceasta moneda, deoarece exista furnizori ce o folosesc."
+
+msgid ""
+"Cannot delete this currency, because the company preferences uses this "
+"currency."
+msgstr ""
+"Nu se poate sterge aceasta moneda, deoarece firma foloseste aceasta moneda."
+
+msgid ""
+"Cannot delete this currency, because thre are bank accounts that use this "
+"currency."
+msgstr ""
+"Nu se poate sterge aceasta moneda, deoarece este folosita de conturi bancare."
+
+msgid "Selected currency has been deleted"
+msgstr "Moneda selectata a fost stearsa"
+
+msgid "Abbreviation"
+msgstr "Nume scurt"
+
+msgid "Symbol"
+msgstr "Simbol"
+
+msgid "Currency Name"
+msgstr "Numele monedei"
+
+msgid "Hundredths name"
+msgstr "Nume sutimi"
+
+msgid "Country"
+msgstr "Tara"
+
+msgid "Auto update"
+msgstr "Actualizare automata"
+
+msgid "The marked currency is the home currency which cannot be deleted."
+msgstr "Moneda evidentiata este moneda firmei si nu poate fi stearsa."
+
+msgid "Currency Abbreviation:"
+msgstr "Nume scurt:"
+
+msgid "Currency Symbol:"
+msgstr "Simbol moneda:"
+
+msgid "Currency Name:"
+msgstr "Nume moneda:"
+
+msgid "Hundredths Name:"
+msgstr "Nume sutimi:"
+
+msgid "Country:"
+msgstr "Tara:"
+
+msgid "Automatic exchange rate update:"
+msgstr "Actualizare automata curs de schimb:"
+
+msgid "GL Account Groups"
+msgstr "Grupe de conturi"
+
+msgid "The account group id cannot be empty."
+msgstr "Id-ul grupei de conturi nu poate fi vid."
+
+msgid "The account group name cannot be empty."
+msgstr "Numele grupei de conturi nu poate fi vid."
+
+msgid "This account group id is already in use."
+msgstr "Acest id de grupa este deja folosit."
+
+msgid "You cannot set an account group to be a subgroup of itself."
+msgstr ""
+
+msgid "Selected account type has been updated"
+msgstr ""
+
+msgid "New account type has been added"
+msgstr "Un nou tip de cont a fost adaugat"
+
+msgid ""
+"Cannot delete this account group because GL accounts have been created "
+"referring to it."
+msgstr ""
+
+msgid ""
+"Cannot delete this account group because GL account groups have been created "
+"referring to it."
+msgstr ""
+
+msgid "Selected account group has been deleted"
+msgstr ""
+
+msgid "Group ID"
+msgstr "ID grup"
+
+msgid "Subgroup Of"
+msgstr "Subgrup al"
+
+msgid "ID:"
+msgstr "ID:"
+
+msgid "Subgroup Of:"
+msgstr "Subgrup al:"
+
+msgid "None"
+msgstr ""
+
+msgid "Revaluation of Currency Accounts"
+msgstr ""
+
+msgid "No Revaluation was needed"
+msgstr ""
+
+#, php-format
+msgid "%d Journal Entries for AR/AP accounts have been added"
+msgstr ""
+
+msgid "Date for Revaluation:"
+msgstr ""
+
+msgid "Revaluate Currencies"
+msgstr ""
+
+msgid "Exchange Rates"
+msgstr "Cursuri de schimb"
+
+msgid "The exchange rate cannot be zero or a negative number."
+msgstr "Cursul de schimb nu poate fi zero sau negativ."
+
+msgid "The exchange rate for the date is already there."
+msgstr "Cursul de schimb pentru aceasta data este deja introdus."
+
+msgid "Date to Use From:"
+msgstr "Foloseste incepand de la:"
+
+msgid "Exchange Rate:"
+msgstr "Cursul de schimb:"
+
+msgid "Get"
+msgstr "Preia"
+
+msgid "Get current ECB rate"
+msgstr "Preia cursul de la ECB"
+
+msgid "Exchange rates are entered against the company currency."
+msgstr "Cursul de schimb este considerat fata de moneda firmei."
+
+msgid "Select a currency :"
+msgstr "Alege o moneda :"
+
+msgid "Date to Use From"
+msgstr "Foloseste incepand de la"
+
+msgid "Exchange Rate"
+msgstr "Curs de schimb"
+
+msgid "The selected currency is the company currency."
+msgstr "Moneda aleasa este moneda firmei."
+
+msgid ""
+"The company currency is the base currency so exchange rates cannot be set "
+"for it."
+msgstr "Nu se pot introduce cursuri de schimb pentru moneda firmei"
+
+msgid "Revenue / Cost Accruals"
+msgstr ""
+
+msgid "The amount can not be 0."
+msgstr ""
+
+msgid "The periods must be greater than 0."
+msgstr "Perioadele trebuie sa fie mai mair ca zero."
+
+msgid ""
+"Some of the period dates are outside the fiscal year. Create a new fiscal "
+"year first!"
+msgstr ""
+
+#, php-format
+msgid "Accruals for %s"
+msgstr ""
+
+msgid "Revenue / Cost Accruals have been processed."
+msgstr ""
+
+msgid "Showing GL Transactions."
+msgstr ""
+
+msgid "Weekly"
+msgstr "Saptamanal"
+
+msgid "Bi-weekly"
+msgstr ""
+
+msgid "Quarterly"
+msgstr "Trimestrial"
+
+msgid "First date of Accruals"
+msgstr ""
+
+msgid "Accrued Balance Account"
+msgstr ""
+
+msgid "Revenue / Cost Account"
+msgstr ""
+
+msgid "Search Amount"
+msgstr ""
+
+msgid "Frequency"
+msgstr "Frecventa"
+
+msgid "Periods"
+msgstr "Perioade"
+
+msgid "Show GL Rows"
+msgstr ""
+
+msgid "Process Accruals"
+msgstr ""
+
+msgid "Are you sure you want to post accruals?"
+msgstr ""
+
+msgid "General Ledger Transaction Details"
+msgstr ""
+
+msgid ""
+"The script must be called with a valid transaction type and transaction "
+"number to review the general ledger postings for."
+msgstr ""
+
+msgid "No general ledger transactions have been created for"
+msgstr ""
+
+msgid "number"
+msgstr "numar"
+
+msgid "This transaction has been voided."
+msgstr "Aceasta tranzactie a fost anulata."
+
+msgid "View Bank Transfer"
+msgstr "Afiseaza transfer bancar"
+
+msgid "To Bank Account"
+msgstr "Catre contul bancar"
+
+msgid "Transfer Type"
+msgstr "Tip transfer"
+
+msgid "View Bank Payment"
+msgstr ""
+
+msgid "GL Payment"
+msgstr ""
+
+msgid "Pay To"
+msgstr "Plateste la"
+
+msgid "There are no items for this payment."
+msgstr ""
+
+msgid "Items for this Payment"
+msgstr "Articole pentru aceasta plata"
+
+msgid "Item Amounts are Shown in :"
+msgstr ""
+
+msgid "Account Description"
+msgstr ""
+
+msgid "View Bank Deposit"
+msgstr ""
+
+msgid "GL Deposit"
+msgstr ""
+
+msgid "Deposit Type"
+msgstr ""
+
+msgid "This deposit has been voided."
+msgstr ""
+
+msgid "There are no items for this deposit."
+msgstr ""
+
+msgid "Items for this Deposit"
+msgstr ""
+
+msgid "Search General Ledger Transactions for account: "
+msgstr ""
+
+msgid "Budget Entry"
+msgstr ""
+
+msgid "The Budget has been saved."
+msgstr ""
+
+msgid "The Budget has been deleted."
+msgstr ""
+
+msgid "Fiscal Year:"
+msgstr "An fiscal:"
+
+msgid "Dim. incl."
+msgstr ""
+
+msgid "Last Year"
+msgstr "Ultimul an"
+
+msgid "Save"
+msgstr "Salveaza"
+
+msgid "Bank Account Payment Entry"
+msgstr ""
+
+msgid "Bank Account Deposit Entry"
+msgstr ""
+
+msgid "Modify Bank Account Entry"
+msgstr ""
+
+msgid "Modify Bank Deposit Entry"
+msgstr ""
+
+#, php-format
+msgid "Payment %d has been entered"
+msgstr "Plata %d a fost introdusa"
+
+msgid "&View the GL Postings for this Payment"
+msgstr ""
+
+msgid "Enter Another &Payment"
+msgstr "Introduceti o alta plata"
+
+msgid "Enter A &Deposit"
+msgstr "Introduceti o incasare"
+
+#, php-format
+msgid "Deposit %d has been entered"
+msgstr "Incasarea %d a fost introdusa"
+
+msgid "View the GL Postings for this Deposit"
+msgstr ""
+
+msgid "Enter Another Deposit"
+msgstr "Introduceti o alta incasare"
+
+msgid "Enter A Payment"
+msgstr "Introduceti o plata"
+
+msgid "&View the GL Postings for this Deposit"
+msgstr ""
+
+msgid "Enter Another &Deposit"
+msgstr "Introduceti o alta incasare"
+
+msgid "Enter A &Payment"
+msgstr "Introduceti o &plata"
+
+msgid "You must enter at least one payment line."
+msgstr ""
+
+msgid "The entered date for the payment is invalid."
+msgstr ""
+
+msgid "You have to select customer and customer branch."
+msgstr "Trebuie sa selectati un client si un sediu client."
+
+msgid "You have to select supplier."
+msgstr "Trebuie sa selectati un furnizor."
+
+msgid "The amount entered is not a valid number or is less than zero."
+msgstr ""
+
+msgid "Payment Items"
+msgstr ""
+
+msgid "Deposit Items"
+msgstr ""
+
+msgid "Process Payment"
+msgstr "Proceseaza plata"
+
+msgid "Process Deposit"
+msgstr "Proceseaza incasarea"
+
+msgid "S&etup"
+msgstr "Param&etri"
+
+msgid "Company Setup"
+msgstr "Parametri firma"
+
+msgid "&Company Setup"
+msgstr "&Parametri firma"
+
+msgid "&User Accounts Setup"
+msgstr "&Utilizatori"
+
+msgid "&Access Setup"
+msgstr "Drepturi de access"
+
+msgid "&Display Setup"
+msgstr "Parametri afisare"
+
+msgid "&Forms Setup"
+msgstr "Parametri &formulare"
+
+msgid "&Taxes"
+msgstr "&Taxe (TVA)"
+
+msgid "Tax &Groups"
+msgstr "Grupe de taxe (TVA)"
+
+msgid "Item Ta&x Types"
+msgstr "Ta&xe (TVA) articole"
+
+msgid "System and &General GL Setup"
+msgstr "Parametri sistem si contabilitate"
+
+msgid "&Fiscal Years"
+msgstr "&Ani fiscali"
+
+msgid "&Print Profiles"
+msgstr "Profile de tiparire"
+
+msgid "Miscellaneous"
+msgstr "Diverse"
+
+msgid "Pa&yment Terms"
+msgstr "Conditii de plata"
+
+msgid "Shi&pping Company"
+msgstr "Firme de transport"
+
+msgid "&Points of Sale"
+msgstr "&POS-uri"
+
+msgid "&Printers"
+msgstr "&Imprimante"
+
+msgid "Contact &Categories"
+msgstr "Categorii de contacte"
+
+msgid "Maintenance"
+msgstr "Mentenanta"
+
+msgid "&Void a Transaction"
+msgstr "Anuleaza o tranzactie"
+
+msgid "View or &Print Transactions"
+msgstr "Afiseaza sau tipareste tranzactii"
+
+msgid "&Attach Documents"
+msgstr "&Ataseaza documente"
+
+msgid "System &Diagnostics"
+msgstr ""
+
+msgid "&Backup and Restore"
+msgstr "Copie de siguranta/restaurare"
+
+msgid "Create/Update &Companies"
+msgstr "Creeaza/modifica firme"
+
+msgid "Install/Update &Languages"
+msgstr "Instaleaza/actualizeaza limbi"
+
+msgid "Install/Activate &Extensions"
+msgstr ""
+
+msgid "Install/Activate &Themes"
+msgstr ""
+
+msgid "Install/Activate &Chart of Accounts"
+msgstr ""
+
+msgid "Software &Upgrade"
+msgstr ""
+
+msgid "&Items and Inventory"
+msgstr "Articole si stocuri"
+
+msgid "Transactions"
+msgstr "Tranzactii"
+
+msgid "Inventory Location &Transfers"
+msgstr "Transfer intre gestiuni"
+
+msgid "Inventory &Adjustments"
+msgstr "Corectii de &stoc"
+
+msgid "Inquiries and Reports"
+msgstr "Info si rapoarte"
+
+msgid "Inventory Item &Movements"
+msgstr "Info &miscari de stocuri"
+
+msgid "Inventory Item &Status"
+msgstr "Info &stocuri articole"
+
+msgid "Inventory &Reports"
+msgstr "Rapoarte de stocuri"
+
+msgid "&Items"
+msgstr "&Articole"
+
+msgid "&Foreign Item Codes"
+msgstr ""
+
+msgid "Sales &Kits"
+msgstr ""
+
+msgid "Item &Categories"
+msgstr "&Categorii de articole"
+
+msgid "Inventory &Locations"
+msgstr "&Gestiuni"
+
+msgid "Inventory &Movement Types"
+msgstr "Tipuri de &miscari de stoc"
+
+msgid "&Units of Measure"
+msgstr "&Unitati de masura"
+
+msgid "&Reorder Levels"
+msgstr ""
+
+msgid "Pricing and Costs"
+msgstr ""
+
+msgid "Sales &Pricing"
+msgstr "&Preturi de vanzare"
+
+msgid "Purchasing &Pricing"
+msgstr "&Preturi de achizitie"
+
+msgid "Standard &Costs"
+msgstr "&Costuri standard"
+
+msgid "&Banking and General Ledger"
+msgstr "&Banci si contabilitate"
+
+msgid "&Payments"
+msgstr "&Plati"
+
+msgid "&Deposits"
+msgstr "&Incasari"
+
+msgid "Bank Account &Transfers"
+msgstr ""
+
+msgid "&Journal Entry"
+msgstr ""
+
+msgid "&Budget Entry"
+msgstr ""
+
+msgid "&Reconcile Bank Account"
+msgstr ""
+
+msgid "Revenue / &Costs Accruals"
+msgstr ""
+
+msgid "&Journal Inquiry"
+msgstr ""
+
+msgid "GL &Inquiry"
+msgstr ""
+
+msgid "Bank Account &Inquiry"
+msgstr ""
+
+msgid "Ta&x Inquiry"
+msgstr ""
+
+msgid "Balance &Sheet Drilldown"
+msgstr ""
+
+msgid "&Profit and Loss Drilldown"
+msgstr ""
+
+msgid "Banking &Reports"
+msgstr ""
+
+msgid "General Ledger &Reports"
+msgstr "Rapoarte contabile"
+
+msgid "Bank &Accounts"
+msgstr "Conturi &Bancare"
+
+msgid "&Quick Entries"
+msgstr ""
+
+msgid "Account &Tags"
+msgstr ""
+
+msgid "&Currencies"
+msgstr "&Monede"
+
+msgid "&Exchange Rates"
+msgstr "Cursuri de schimb"
+
+msgid "&GL Accounts"
+msgstr "Conturi conta&bile"
+
+msgid "GL Account &Groups"
+msgstr "&Grupe de conturi"
+
+msgid "GL Account &Classes"
+msgstr "&Clase de conturi"
+
+msgid "&Revaluation of Currency Accounts"
+msgstr ""
+
+msgid "&Manufacturing"
+msgstr "Productie"
+
+msgid "&Outstanding Work Orders"
+msgstr ""
+
+msgid "Inventory Item Where Used &Inquiry"
+msgstr ""
+
+msgid "Work Order &Inquiry"
+msgstr ""
+
+msgid "Manufacturing &Reports"
+msgstr "Rapoarte de productie"
+
+msgid "&Bills Of Material"
+msgstr ""
+
+msgid "&Work Centres"
+msgstr ""
+
+msgid "&Purchases"
+msgstr "&Achizitii"
+
+msgid "Purchase &Order Entry"
+msgstr "Comanda furnizor noua"
+
+msgid "&Outstanding Purchase Orders Maintenance"
+msgstr "Gestiune comenzi furnizor nelivrat"
+
+msgid "Direct &GRN"
+msgstr "NIR nou"
+
+msgid "Direct &Invoice"
+msgstr "&Factura noua"
+
+msgid "&Payments to Suppliers"
+msgstr "&Plati la furnizori"
+
+msgid "Supplier &Invoices"
+msgstr "&Facturi furnizori"
+
+msgid "Supplier &Credit Notes"
+msgstr "Storno furnizor"
+
+msgid "&Allocate Supplier Payments or Credit Notes"
+msgstr ""
+
+msgid "Purchase Orders &Inquiry"
+msgstr "Info comenzi furnizor"
+
+msgid "Supplier Transaction &Inquiry"
+msgstr "Info tranzactii furnizor"
+
+msgid "Supplier Allocation &Inquiry"
+msgstr ""
+
+msgid "Supplier and Purchasing &Reports"
+msgstr "Rapoarte achizitii si furnizori"
+
+msgid "&Suppliers"
+msgstr "Furnizori"
+
+msgid "&Dimensions"
+msgstr ""
+
+msgid "Dimension &Entry"
+msgstr ""
+
+msgid "&Outstanding Dimensions"
+msgstr ""
+
+msgid "Dimension &Inquiry"
+msgstr ""
+
+msgid "Dimension &Reports"
+msgstr ""
+
+msgid "Dimension &Tags"
+msgstr ""
+
+msgid "&Sales"
+msgstr "&Vanzari"
+
+msgid "Sales &Quotation Entry"
+msgstr "&Proforma noua"
+
+msgid "Sales &Order Entry"
+msgstr "&Comanda noua"
+
+msgid "Direct &Delivery"
+msgstr "Aviz de expeditie nou"
+
+msgid "&Delivery Against Sales Orders"
+msgstr "Afiseaza Comenzi nelivrate"
+
+msgid "&Invoice Against Sales Delivery"
+msgstr "Afiseaza Livrari nefacturate"
+
+msgid "&Template Delivery"
+msgstr ""
+
+msgid "&Template Invoice"
+msgstr ""
+
+msgid "&Create and Print Recurrent Invoices"
+msgstr ""
+
+msgid "Customer &Payments"
+msgstr "Incasari clienti(cash)"
+
+msgid "Customer &Credit Notes"
+msgstr "Storno clienti"
+
+msgid "&Allocate Customer Payments or Credit Notes"
+msgstr ""
+
+msgid "Sales Quotation I&nquiry"
+msgstr "Info proforme"
+
+msgid "Sales Order &Inquiry"
+msgstr "Info comenzi"
+
+msgid "Customer Transaction &Inquiry"
+msgstr "Info tranzactii clienti"
+
+msgid "Customer Allocation &Inquiry"
+msgstr ""
+
+msgid "Customer and Sales &Reports"
+msgstr "Rapoarte clienti si vanzari"
+
+msgid "Add and Manage &Customers"
+msgstr "&Clienti"
+
+msgid "Customer &Branches"
+msgstr "&Sedii clienti"
+
+msgid "Sales &Groups"
+msgstr "&Grupe de clienti"
+
+msgid "Recurrent &Invoices"
+msgstr "&Facturi recurente"
+
+msgid "Sales T&ypes"
+msgstr "Liste de p&returi"
+
+msgid "Sales &Persons"
+msgstr "Reprezentanti &Vanzari"
+
+msgid "Sales &Areas"
+msgstr "&Zone"
+
+msgid "Credit &Status Setup"
+msgstr "&Bonitate client"
+
+msgid "Install Themes"
+msgstr ""
+
+msgid "Selected theme has been successfully deleted"
+msgstr ""
+
+msgid "Theme"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Upload and install latest extension package"
+msgstr ""
+
+#, php-format
+msgid ""
+"You are about to remove package \\'%s\\'.\n"
+"Do you want to continue ?"
+msgstr ""
+
+msgid "Install/Update Languages"
+msgstr ""
+
+msgid "Right To Left"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Supported"
+msgstr ""
+
+msgid "Display also languages not supported by server locales"
+msgstr ""
+
+msgid "Edit non standard language configuration"
+msgstr ""
+
+msgid "Upload and install latest language package"
+msgstr ""
+
+#, php-format
+msgid ""
+"You are about to remove language \\'%s\\'.\n"
+"Do you want to continue ?"
+msgstr ""
+
+msgid "The marked language is the current language which cannot be deleted."
+msgstr ""
+
+msgid "Update default"
+msgstr ""
+
+msgid "Add new language manually"
+msgstr ""
+
+msgid "Language name, code nor encoding cannot be empty"
+msgstr ""
+
+msgid ""
+"Standard package for this language is already installed. If you want to "
+"install this language manually, uninstall standard language package first."
+msgstr ""
+
+msgid "Language Code"
+msgstr ""
+
+msgid "Language Name"
+msgstr ""
+
+msgid "Default Language"
+msgstr ""
+
+msgid "Language File"
+msgstr ""
+
+msgid "Select your language files from your local harddisk."
+msgstr ""
+
+msgid "Access setup"
+msgstr ""
+
+msgid "Role description cannot be empty."
+msgstr ""
+
+msgid "Role name cannot be empty."
+msgstr ""
+
+msgid ""
+"Access level edition in Company setup section have to be enabled for your "
+"account."
+msgstr ""
+
+msgid "New security role has been added."
+msgstr ""
+
+msgid "Security role has been updated."
+msgstr ""
+
+msgid "This role is currently assigned to some users and cannot be deleted"
+msgstr ""
+
+msgid "Security role has been sucessfully deleted."
+msgstr ""
+
+msgid "Role:"
+msgstr "Rol:"
+
+msgid "Role name:"
+msgstr "Nume rol:"
+
+msgid "Role description:"
+msgstr "Descriere rol:"
+
+msgid "Current status:"
+msgstr ""
+
+msgid "On/off set of features"
+msgstr ""
+
+msgid "Update view"
+msgstr ""
+
+msgid "Insert New Role"
+msgstr "Introduceti un nou rol"
+
+msgid "Save Role"
+msgstr "Salveaza rol"
+
+msgid "Clone This Role"
+msgstr ""
+
+msgid "Delete This Role"
+msgstr "Sterge acest rol"
+
+msgid "Display Setup"
+msgstr ""
+
+msgid "Query size must be integer and greater than zero."
+msgstr ""
+
+msgid ""
+"Display settings have been updated. Keep in mind that changed settings are "
+"restored on every login in demo mode."
+msgstr ""
+
+msgid "Display settings have been updated."
+msgstr ""
+
+msgid "Decimal Places"
+msgstr "Zecimale"
+
+msgid "Prices/Amounts:"
+msgstr "Preturi/Sume:"
+
+msgid "Quantities:"
+msgstr "Cantitati:"
+
+msgid "Exchange Rates:"
+msgstr "Cursuri de schimb:"
+
+msgid "Percentages:"
+msgstr "Procente:"
+
+msgid "Dateformat and Separators"
+msgstr "Formatul datei si separator"
+
+msgid "Dateformat:"
+msgstr "Format data:"
+
+msgid "Date Separator:"
+msgstr "Separator data:"
+
+msgid "Thousand Separator:"
+msgstr "Separator mii:"
+
+msgid "Decimal Separator:"
+msgstr "Separator zecimale:"
+
+msgid "Language:"
+msgstr "Limba:"
+
+msgid "Show hints for new users:"
+msgstr ""
+
+msgid "Show GL Information:"
+msgstr ""
+
+msgid "Show Item Codes:"
+msgstr "Afiseaza cod articol:"
+
+msgid "Page Size:"
+msgstr "Dimensiune pagina:"
+
+msgid "Start-up Tab"
+msgstr ""
+
+msgid "Printing profile"
+msgstr ""
+
+msgid "Browser printing support"
+msgstr ""
+
+msgid "Use popup window to display reports:"
+msgstr ""
+
+msgid "Set this option to on if your browser directly supports pdf files"
+msgstr ""
+
+msgid "Use icons instead of text links:"
+msgstr "Foloseste iconite in loc de text:"
+
+msgid "Set this option to on for using icons instead of text links"
+msgstr ""
+
+msgid "Query page size:"
+msgstr ""
+
+msgid "Remember last document date:"
+msgstr "Memoreaza data ultimului document:"
+
+msgid ""
+"If set document date is remembered on subsequent documents, otherwise "
+"default is current date"
+msgstr ""
+
+msgid "Login timeout must be positive number not less than 10."
+msgstr ""
+
+msgid "The company name must be entered."
+msgstr "Numele firmei trebuie introdus."
+
+msgid ""
+"Only jpg and png files are supported - a file extension of .jpg or .png is "
+"expected"
+msgstr "Sunt posibile doar fisiere cu extensii .jpg sau .png"
+
+msgid "Error uploading logo file"
+msgstr "Eroare la incarcare fisier logo"
+
+msgid "Company setup has been updated."
+msgstr "Parametrii firmei au fost modificati."
+
+msgid "Name (to appear on reports):"
+msgstr "Nume (va apare pe rapoarte):"
+
+msgid "Domicile:"
+msgstr "Resedinta:"
+
+msgid "Email Address:"
+msgstr "Adresa e-mail:"
+
+msgid "Home Currency:"
+msgstr "Moneda curenta:"
+
+msgid "Tax Periods:"
+msgstr "Raportarea TVA:"
+
+msgid "Months."
+msgstr "luni."
+
+msgid "Tax Last Period:"
+msgstr ""
+
+msgid "Months back."
+msgstr ""
+
+msgid "Company Logo:"
+msgstr "Sigla firma:"
+
+msgid "New Company Logo (.jpg)"
+msgstr "Sigla noua (.jpg)"
+
+msgid "Delete Company Logo:"
+msgstr "Sterge sigla firma:"
+
+msgid "Use Dimensions:"
+msgstr ""
+
+msgid "Base for auto price calculations:"
+msgstr "Baza pentru preturi calculate:"
+
+msgid "No base price list"
+msgstr ""
+
+msgid "Add Price from Std Cost:"
+msgstr "Adauga la costul standard:"
+
+msgid "Round to nearest:"
+msgstr "Rotunjeste la:"
+
+msgid "Search Item List"
+msgstr "Cauta in lista de articole:"
+
+msgid "Search Customer List"
+msgstr "Cauta in lista de clienti:"
+
+msgid "Search Supplier List"
+msgstr "Cauta in lista de furnizori:"
+
+msgid "Automatic Revaluation Currency Accounts"
+msgstr ""
+
+msgid "Time Zone on Reports"
+msgstr ""
+
+msgid "Login Timeout:"
+msgstr "Timeout inactivitate:"
+
+msgid "seconds"
+msgstr "secunde"
+
+msgid "Version Id"
+msgstr "Id versiune"
+
+msgid "The password entered must be at least 4 characters long."
+msgstr "Parola trebuie sa aiba minim 4 caractere."
+
+msgid "The password cannot contain the user login."
+msgstr "Parola nu poate contine numele de utilizator."
+
+msgid "The passwords entered are not the same."
+msgstr "Parolele introduse nu sunt identice."
+
+msgid "Password cannot be changed in demo mode."
+msgstr "Parola nu poate fi schimbata in modul 'demo'."
+
+msgid "Your password has been updated."
+msgstr "Parola a fost schimbata."
+
+msgid "User login:"
+msgstr "Nume utilizator:"
+
+msgid "Repeat password:"
+msgstr "Repeta parola:"
+
+msgid "Enter your new password in the fields."
+msgstr "Introduceti parola noua in formular."
+
+msgid "Install Charts of Accounts"
+msgstr "Instaleaza plan de conturi"
+
+msgid "Selected chart has been successfully deleted"
+msgstr "Planul de conturi selectat a fost sters"
+
+msgid "Chart"
+msgstr "Plan de conturi"
+
+msgid "Install/Activate extensions"
+msgstr ""
+
+msgid "Selected extension has been successfully deleted"
+msgstr ""
+
+msgid "Extension"
+msgstr ""
+
+msgid "Modules provided"
+msgstr ""
+
+msgid "Options provided"
+msgstr ""
+
+msgid "Install third-party extension."
+msgstr ""
+
+msgid "Active"
+msgstr "Activ"
+
+msgid "Status change for some extensions failed."
+msgstr ""
+
+msgid "Current active extensions set has been saved."
+msgstr ""
+
+msgid "Extensions:"
+msgstr ""
+
+msgid "Forms Setup"
+msgstr ""
+
+msgid "Forms settings have been updated."
+msgstr ""
+
+msgid "Form"
+msgstr ""
+
+msgid "Next Reference"
+msgstr ""
+
+msgid "Void a Transaction"
+msgstr "Anuleaza o tranzactie"
+
+msgid "Select"
+msgstr ""
+
+msgid "from #:"
+msgstr "de la #:"
+
+msgid "to #:"
+msgstr "la #:"
+
+msgid "GL"
+msgstr ""
+
+msgid "Transaction #:"
+msgstr "Tranzactia #:"
+
+msgid "Voiding Date:"
+msgstr ""
+
+msgid "Void Transaction"
+msgstr "Anuleaza tranzactia"
+
+msgid "The entered transaction does not exist or cannot be voided."
+msgstr "Tranzactia introdusa nu exista sau nu poate fi anulata."
+
+msgid ""
+"Are you sure you want to void this transaction ? This action cannot be "
+"undone."
+msgstr ""
+"Sigur doriti anularea acestei tranzactii ? Aceasta actiune este ireversibila."
+
+msgid "Proceed"
+msgstr "Continua"
+
+msgid "The selected transaction was closed for edition and cannot be voided."
+msgstr ""
+
+msgid "The transaction number is expected to be numeric and greater than zero."
+msgstr ""
+
+msgid "The selected transaction has already been voided."
+msgstr "Tranzactia selectata este deja anulata."
+
+msgid "Selected transaction has been voided."
+msgstr "Tranzactia selectata a fost anulata."
+
+msgid "Attach Documents"
+msgstr "Ataseaza documente"
+
+msgid "Attachment has been inserted."
+msgstr "Atasamentul a fost introdus."
+
+msgid "Attachment has been updated."
+msgstr "Atasamentul a fost actualizat."
+
+msgid "Attachment has been deleted."
+msgstr "Atasamentul a fost sters."
+
+msgid "Filename"
+msgstr "Nume fisier"
+
+msgid "Size"
+msgstr "Dimensiune"
+
+msgid "Filetype"
+msgstr "Tip fisier"
+
+msgid "Date Uploaded"
+msgstr "Data inacrcarii"
+
+msgid "Download"
+msgstr "Descarca"
+
+msgid "Transaction #"
+msgstr "Tranzactie #"
+
+msgid "Attached File"
+msgstr "Fisier atasat"
+
+msgid "Create/Update Company"
+msgstr ""
+
+msgid "Database settings are not specified."
+msgstr ""
+
+msgid "This database settings are already used by another company."
+msgstr ""
+
+msgid ""
+"You cannot have table set without prefix together with prefixed sets in the "
+"same database."
+msgstr ""
+
+msgid "Error creating Database: "
+msgstr ""
+
+msgid ", Please create it manually"
+msgstr ""
+
+msgid "Cannot create new company due to bugs in sql file."
+msgstr ""
+
+msgid "Cannot open the configuration file - "
+msgstr ""
+
+msgid "Cannot write to the configuration file - "
+msgstr ""
+
+msgid "The configuration file "
+msgstr ""
+
+msgid ""
+" is not writable. Change its permissions so it is, then re-run the operation."
+msgstr ""
+
+msgid "New company has been created."
+msgstr ""
+
+msgid "Company has been updated."
+msgstr ""
+
+msgid ""
+"Broken company subdirectories system. You have to remove this company "
+"manually."
+msgstr ""
+
+msgid "Cannot rename subdirectory to temporary name."
+msgstr ""
+
+msgid "Cannot rename company subdirectory"
+msgstr ""
+
+msgid "Error removing Database: "
+msgstr ""
+
+msgid ", please remove it manually"
+msgstr ""
+
+msgid "Cannot remove temporary renamed company data directory "
+msgstr ""
+
+msgid "Selected company has been deleted"
+msgstr "Firma selectata a fost stearsa"
+
+msgid "Are you sure you want to delete company no. "
+msgstr "Sunteti sigur ca vreti sa stergeti firma nr. "
+
+msgid "Database Host"
+msgstr ""
+
+msgid "Database User"
+msgstr ""
+
+msgid "Database Name"
+msgstr ""
+
+msgid "Table Pref"
+msgstr ""
+
+msgid "The marked company is the current company which cannot be deleted."
+msgstr "Firma evidentiata este firma curenta si nu poate fi stearsa."
+
+msgid "Host"
+msgstr ""
+
+msgid "Database Password"
+msgstr ""
+
+msgid "Database Script"
+msgstr ""
+
+msgid "New script Admin Password"
+msgstr ""
+
+msgid "Create a new company"
+msgstr "Adauga o firma noua"
+
+msgid "The number of days or the day in the following month must be numeric."
+msgstr ""
+
+msgid "The Terms description must be entered."
+msgstr ""
+
+msgid "Selected payment terms have been updated"
+msgstr "Conditiile de plata au fost actualizate"
+
+msgid "New payment terms have been added"
+msgstr "O noua conditie de plata a fost adaugata"
+
+msgid ""
+"Cannot delete this payment term, because customer accounts have been created "
+"referring to this term."
+msgstr ""
+
+msgid ""
+"Cannot delete this payment term, because supplier accounts have been created "
+"referring to this term"
+msgstr ""
+
+msgid "Selected payment terms have been deleted"
+msgstr ""
+
+msgid "Due After/Days"
+msgstr "Scadent dupa/zile"
+
+msgid "days"
+msgstr "zile"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "Terms Description:"
+msgstr "Descrierea termenilor:"
+
+msgid "Payment type:"
+msgstr "Tip de plata:"
+
+msgid "Days (Or Day In Following Month):"
+msgstr "Zile (sau zi in luna urmatoare):"
+
+msgid "Select backup file first."
+msgstr ""
+
+msgid "Backup and Restore Database"
+msgstr ""
+
+msgid "Backup paths have not been set correctly."
+msgstr ""
+
+msgid "Please contact System Administrator."
+msgstr ""
+
+msgid "cannot find backup directory"
+msgstr ""
+
+msgid "Backup successfully generated."
+msgstr ""
+
+msgid "Database backup failed."
+msgstr ""
+
+msgid "Restore backup completed."
+msgstr ""
+
+msgid "File successfully deleted."
+msgstr ""
+
+msgid "Can't delete backup file."
+msgstr ""
+
+msgid "You can only upload *.sql backup files"
+msgstr ""
+
+msgid "File was not uploaded into the system."
+msgstr ""
+
+msgid "Create backup"
+msgstr ""
+
+msgid "Comments:"
+msgstr "Comentarii:"
+
+msgid "Compression:"
+msgstr ""
+
+msgid "Create Backup"
+msgstr ""
+
+msgid "Backup scripts maintenance"
+msgstr ""
+
+msgid "View Backup"
+msgstr ""
+
+msgid "Download Backup"
+msgstr ""
+
+msgid "Restore Backup"
+msgstr ""
+
+msgid ""
+"You are about to restore database from backup file.\n"
+"Do you want to continue?"
+msgstr ""
+
+msgid "Delete Backup"
+msgstr ""
+
+#, php-format
+msgid ""
+"You are about to remove selected backup file.\n"
+"Do you want to continue ?"
+msgstr ""
+
+msgid "Upload file"
+msgstr ""
+
+msgid "Software Upgrade"
+msgstr ""
+
+#, php-format
+msgid "Database upgrade for company '%s' (%s:%s*) started..."
+msgstr ""
+
+msgid "Database upgrade finished."
+msgstr ""
+
+msgid ""
+"Upgrade cannot be done because database has been already partially upgraded. "
+"Please downgrade database to clean previous version or try forced upgrade."
+msgstr ""
+
+msgid "Cannot connect to database for company"
+msgstr ""
+
+#, php-format
+msgid "Database upgrade to version %s failed for company '%s'."
+msgstr ""
+
+msgid "You should restore company database from latest backup file"
+msgstr ""
+
+msgid "All companies data has been successfully updated"
+msgstr ""
+
+msgid "Sql file"
+msgstr ""
+
+msgid "Force upgrade"
+msgstr ""
+
+#, php-format
+msgid "Partially installed (%s)"
+msgstr ""
+
+msgid ""
+"Database upgrades marked as partially installed cannot be installed "
+"automatically.\n"
+"You have to clean database manually to enable them, or try to perform forced "
+"upgrade."
+msgstr ""
+
+msgid "Upgrade system"
+msgstr ""
+
+msgid "Save database and perform upgrade"
+msgstr ""
+
+msgid "Users"
+msgstr "Utilizatori"
+
+msgid "The user login entered must be at least 4 characters long."
+msgstr "Numele de utilizator trebuie sa aiba cel putin 4 caractere."
+
+msgid "The selected user has been updated."
+msgstr "Utilizatorul a fost actualizat."
+
+msgid "A new user has been added."
+msgstr "Un nou utilizator a fost adaugat."
+
+msgid "User has been deleted."
+msgstr "Utilizatorul a fost sters."
+
+msgid "User login"
+msgstr "Nume utilizator"
+
+msgid "Full Name"
+msgstr "Nume complet"
+
+msgid "Last Visit"
+msgstr "Ultima utilizare"
+
+msgid "Access Level"
+msgstr "Drepturi de access"
+
+msgid "User Login:"
+msgstr "Nume utilizator:"
+
+msgid "Enter a new password to change, leave empty to keep current."
+msgstr ""
+"Introduceti o parola noua sau lasati gol pentru a pastra parola actuala."
+
+msgid "Telephone No.:"
+msgstr "Numar de telefon:"
+
+msgid "Access Level:"
+msgstr "Drepturi de access:"
+
+msgid "User's POS"
+msgstr "POS utilizator"
+
+msgid "Use popup window for reports:"
+msgstr "Foloseste fereastra noua pentru rapoarte:"
+
+msgid "Contact Categories"
+msgstr "Categorii de contacte"
+
+msgid "Category description cannot be empty."
+msgstr "Descrierea categoriei nu poate fi goala."
+
+msgid "Selected contact category has been updated"
+msgstr "Categoria selectata a fost actualizata"
+
+msgid "New contact category has been added"
+msgstr "O noua categorie de contacte a fost adaugata"
+
+msgid "Cannot delete this category because there are contacts related to it."
+msgstr "Nu se poate sterge aceasta categorie deoarece contine contacte."
+
+msgid "Category has been deleted"
+msgstr "Categoria a fost stearsa"
+
+msgid "Type id"
+msgstr "Tip"
+
+msgid "Action id"
+msgstr "Actiune"
+
+msgid "Contact Category Type:"
+msgstr "Tip categorie:"
+
+msgid "Contact Category Subtype:"
+msgstr "Sub-tip categorie:"
+
+msgid "Category Short Name:"
+msgstr "Cod categorie:"
+
+msgid "Category Description:"
+msgstr "Descriere categorie:"
+
+msgid "View or Print Transactions"
+msgstr "Afiseaza sau tipareste tranzactii"
+
+msgid "Only documents can be printed."
+msgstr "Doar documentele pot fi tiparite."
+
+msgid ""
+"The starting transaction number is expected to be numeric and greater than "
+"zero."
+msgstr ""
+
+msgid ""
+"The ending transaction number is expected to be numeric and greater than "
+"zero."
+msgstr ""
+
+msgid "Unspecified tag type"
+msgstr ""
+
+msgid "Dimension Tags"
+msgstr ""
+
+msgid "The tag name cannot be empty."
+msgstr ""
+
+msgid "Selected tag settings have been updated"
+msgstr ""
+
+msgid "New tag has been added"
+msgstr ""
+
+msgid ""
+"Cannot delete this tag because records have been created referring to it."
+msgstr ""
+
+msgid "Selected tag has been deleted"
+msgstr ""
+
+msgid "Tag Name"
+msgstr ""
+
+msgid "Tag Description"
+msgstr ""
+
+msgid "Tag Name:"
+msgstr ""
+
+msgid "Tag Description:"
+msgstr ""
+
+msgid "Printing Profiles"
+msgstr ""
+
+msgid "Default printing destination"
+msgstr "Destinatia implicita la imprimare"
+
+msgid "Printing profile name cannot be empty."
+msgstr ""
+
+msgid "New printing profile has been created"
+msgstr ""
+
+msgid "Printing profile has been updated"
+msgstr ""
+
+msgid "Selected printing profile has been deleted"
+msgstr ""
+
+msgid "Select printing profile"
+msgstr ""
+
+msgid "New printing profile"
+msgstr ""
+
+msgid "Printing Profile Name"
+msgstr ""
+
+msgid "Report Id"
+msgstr ""
+
+msgid "Printer"
+msgstr ""
+
+msgid "Browser support"
+msgstr ""
+
+msgid "no title was found in this report definition file."
+msgstr ""
+
+msgid "Add New Profile"
+msgstr ""
+
+msgid "Update Profile"
+msgstr ""
+
+msgid "Update printer profile"
+msgstr ""
+
+msgid "Delete Profile"
+msgstr ""
+
+msgid "Delete printer profile (only if not used by any user)"
+msgstr ""
+
+msgid "The shipping company name cannot be empty."
+msgstr ""
+
+msgid "New shipping company has been added"
+msgstr ""
+
+msgid "Selected shipping company has been updated"
+msgstr ""
+
+msgid ""
+"Cannot delete this shipping company because sales orders have been created "
+"using this shipper."
+msgstr ""
+
+msgid ""
+"Cannot delete this shipping company because invoices have been created using "
+"this shipping company."
+msgstr ""
+
+msgid "Selected shipping company has been deleted"
+msgstr ""
+
+msgid "Contact Person"
+msgstr "Persoana de contact"
+
+msgid "Phone Number"
+msgstr "Numar de telefon"
+
+msgid "System and General GL Setup"
+msgstr "Setari generale sistem si contabilitate"
+
+msgid "The delivery over-receive allowance must be between 0 and 100."
+msgstr ""
+
+msgid "The invoice over-charge allowance must be between 0 and 100."
+msgstr ""
+
+msgid "The past due days interval allowance must be between 0 and 100."
+msgstr ""
+
+msgid "Before GRN Clearing Account can be changed all GRNs have to be invoiced"
+msgstr ""
+
+msgid "The general GL setup has been updated."
+msgstr "Informatiile generale contabilitate au fost actualizate."
+
+msgid "General GL"
+msgstr ""
+
+msgid "Past Due Days Interval:"
+msgstr ""
+
+msgid "Retained Earnings:"
+msgstr ""
+
+msgid "Profit/Loss Year:"
+msgstr "Contul de profit/pierdere:"
+
+msgid "Exchange Variances Account:"
+msgstr "Contul de diferente de curs valutar:"
+
+msgid "Bank Charges Account:"
+msgstr "Contul de comisioane bancare:"
+
+msgid "Customers and Sales"
+msgstr "Clienti si vanzari"
+
+msgid "Default Credit Limit:"
+msgstr "Limita de credit implicita:"
+
+msgid "Accumulate batch shipping:"
+msgstr ""
+
+msgid "Legal Text on Invoice:"
+msgstr "Mesaj tiparit pe facturi:"
+
+msgid "Shipping Charged Account:"
+msgstr ""
+
+msgid "Customers and Sales Defaults"
+msgstr "Valori implicite clienti si vanzari"
+
+msgid "Receivable Account:"
+msgstr ""
+
+msgid "Delivery Required By:"
+msgstr ""
+
+msgid "Dimension Defaults"
+msgstr ""
+
+msgid "Dimension Required By After:"
+msgstr ""
+
+msgid "Suppliers and Purchasing"
+msgstr "Furnizori si achizitii"
+
+msgid "Delivery Over-Receive Allowance:"
+msgstr ""
+
+msgid "Invoice Over-Charge Allowance:"
+msgstr ""
+
+msgid "Suppliers and Purchasing Defaults"
+msgstr "Valori implicite furnizori si achizitii"
+
+msgid "Payable Account:"
+msgstr ""
+
+msgid "GRN Clearing Account:"
+msgstr ""
+
+msgid "No postings on GRN"
+msgstr ""
+
+msgid "Allow Negative Inventory:"
+msgstr "Stocuri negative permise:"
+
+msgid "Warning:  This may cause a delay in GL postings"
+msgstr ""
+
+msgid "Items Defaults"
+msgstr "Valori implicite articole"
+
+msgid "Manufacturing Defaults"
+msgstr "Valori implicite productie"
+
+msgid "Work Order Required By After:"
+msgstr ""
+
+msgid "Printer Locations"
+msgstr ""
+
+msgid "Printer name cannot be empty."
+msgstr "Numele imprimantei nu poate fi vid."
+
+msgid "You have selected printing to server at user IP."
+msgstr ""
+
+msgid "Timeout cannot be less than zero nor longer than 60 (sec)."
+msgstr ""
+
+msgid "New printer definition has been created"
+msgstr ""
+
+msgid "Selected printer definition has been updated"
+msgstr ""
+
+msgid ""
+"Cannot delete this printer definition, because print profile have been "
+"created using it."
+msgstr ""
+
+msgid "Selected printer definition has been deleted"
+msgstr ""
+
+msgid "Printer Queue"
+msgstr ""
+
+msgid "Printer Name"
+msgstr "Numele imprimantei"
+
+msgid "Printer Description"
+msgstr "Descrierea imprimantei"
+
+msgid "Host name or IP"
+msgstr ""
+
+msgid "Port"
+msgstr ""
+
+msgid "Timeout"
+msgstr ""
+
+msgid "Fiscal Years"
+msgstr "Ani fiscali"
+
+msgid "Invalid BEGIN date in fiscal year."
+msgstr "Data de inceput a anului fiscal este incorecta."
+
+msgid "Invalid END date in fiscal year."
+msgstr "Data de sfarsit a anului fiscal este incorecta."
+
+msgid "Invalid BEGIN or END date in fiscal year."
+msgstr "Data de inceput sau sfarsit a anului fiscal este incorecta."
+
+msgid "BEGIN date bigger than END date."
+msgstr "Data de inceput este mai mare decat data de sfarsit."
+
+msgid "Cannot CLOSE this year because there are open fiscal years before"
+msgstr ""
+"Acest an fiscal nu se poate inchide deoarece exista ani fiscali anteriori "
+"deschisi"
+
+msgid "Selected fiscal year has been updated"
+msgstr "Anul fiscal selectat a fost modificat"
+
+msgid "New fiscal year has been added"
+msgstr "Un an fiscal nou a fost adaugat"
+
+msgid "Cannot delete this fiscal year because thera are fiscal years before."
+msgstr ""
+"Acest an fiscal nu se poate sterge deoarece exista ani fiscali anteriori."
+
+msgid "Cannot delete this fiscal year because the fiscal year is not closed."
+msgstr "Nu se poate sterge acest an fiscal deoarece nu este inchis."
+
+msgid "Selected fiscal year has been deleted"
+msgstr "Anul fiscal selectat a fost sters"
+
+msgid ""
+"Warning: Deleting a fiscal year all transactions \n"
+"\t\tare removed and converted into relevant balances. This process is "
+"irreversible!"
+msgstr ""
+"ATENTIE: Stergerea unui an fiscal va sterge toate tranzactiile - se vor "
+"pastra doar soldurile. Acest proces este ireversibil."
+
+msgid "Fiscal Year Begin"
+msgstr "Inceputul anului fiscal"
+
+msgid "Fiscal Year End"
+msgstr "Sfarsitul anului fiscal"
+
+#, php-format
+msgid ""
+"Are you sure you want to delete fiscal year %s - %s? All transactions are "
+"deleted and converted into relevant balances. Do you want to continue ?"
+msgstr ""
+"Sunteti sigur ca doriti stergere anului fiscal %s - %s? Toate tranzactiile "
+"vor fi sterse - se vor pastra doar soldurile. Continuati ?"
+
+msgid ""
+"The marked fiscal year is the current fiscal year which cannot be deleted."
+msgstr "Anul fiscal evidentiat este anul curent ce nu poate fi sters."
+
+msgid "Fiscal Year Begin:"
+msgstr "Inceputul anului fiscal:"
+
+msgid "Fiscal Year End:"
+msgstr "Sfarsitul anului fiscal:"
+
+msgid "Is Closed:"
+msgstr "Inchis:"
+
+msgid "Banking information"
+msgstr ""
+
+msgid "Bank account"
+msgstr "Contul bancar"
+
+msgid "Bank:"
+msgstr "Banca:"
+
+msgid "Bank account:"
+msgstr "Contul bancar:"
+
+msgid "Import Bank Statements"
+msgstr ""
+
+msgid "Import Bank Statement"
+msgstr ""
+
+msgid "1. Upload files"
+msgstr ""
+
+msgid "Files"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Direct Invoice"
+msgstr ""
+
+msgid "Payments"
+msgstr "Plati"
+
+msgid "Sales Order Inquiry"
+msgstr ""
+
+msgid "Supplier Invoice"
+msgstr "Factura furnizor"
+
+msgid "Inventory Adjustments"
+msgstr "Corectii de stoc"
+
+msgid "Inventory Item Movements"
+msgstr ""
+
+msgid "Sales Pricing"
+msgstr ""
+
+msgid "Ourstanding Work Orders"
+msgstr ""
+
+msgid "Work Order Inquiry"
+msgstr ""
+
+msgid "Bills Of Material"
+msgstr ""
+
+msgid "Dimension Inquiry"
+msgstr ""
+
+msgid "Deposits"
+msgstr "Incasari"
+
+msgid "Bank Account Inquiry"
+msgstr ""
+
+msgid "GL Account Inquiry"
+msgstr ""
+
+msgid "Taxes"
+msgstr "Taxe"
+
+msgid "Top 10 customers in fiscal year"
+msgstr "Top 10 clienti in anul fiscal"
+
+msgid " overdue Sales Invoices"
+msgstr ""
+
+msgid "Ref."
+msgstr ""
+
+msgid "Remainder"
+msgstr ""
+
+msgid "Top 10 suppliers in fiscal year"
+msgstr "Top 10 furnizori in anul fiscal"
+
+msgid " overdue Purchase Invoices"
+msgstr ""
+
+msgid "Top 10 Manufactured Items in fiscal year"
+msgstr ""
+
+msgid "Top 10 Sold Items in fiscal year"
+msgstr "Top 10 articole vandute in anul fiscal"
+
+msgid "Top 10 Dimensions in fiscal year"
+msgstr ""
+
+msgid "Class Balances"
+msgstr ""
+
+msgid "Shortcuts"
+msgstr ""
+
+msgid "Inventory Movements"
+msgstr "Miscari de stocuri"
+
+msgid "Cannot query max sales order number."
+msgstr ""
+
+msgid ""
+"This edit session has been abandoned by opening sales document in another "
+"browser tab. You cannot edit more than one sales document at once."
+msgstr ""
+
+msgid "Updated."
+msgstr ""
+
+msgid "Stocks below Re-Order Level at "
+msgstr ""
+
+msgid "Below"
+msgstr ""
+
+msgid "Please reorder"
+msgstr ""
+
+msgid "Deleted."
+msgstr ""
+
+msgid ""
+"Unsuspected overallocation happened due to sparse credit notes exists for "
+"this invoice.\n"
+" Check all credit notes allocated to this invoice for summarized freight "
+"charges."
+msgstr ""
+
+msgid "Cash invoice"
+msgstr ""
+
+msgid "Voided."
+msgstr ""
+
+msgid "For Part :"
+msgstr ""
+
+msgid "This item is already on this document. You have been warned."
+msgstr ""
+
+msgid ""
+"The selected customer and branch are not valid, or the customer does not "
+"have any branches."
+msgstr ""
+
+msgid "Price after Tax"
+msgstr "Pret cu TVA"
+
+msgid "Price before Tax"
+msgstr "Pret fara TVA"
+
+msgid "Edit document line"
+msgstr ""
+
+msgid "Remove line from document"
+msgstr ""
+
+msgid "Shipping Charge"
+msgstr "Costuri transport"
+
+msgid "No customer found for entered text."
+msgstr ""
+
+#, php-format
+msgid "Customer's payment terms '%s' cannot be selected on this POS"
+msgstr ""
+
+msgid "Reference number unique for this document type"
+msgstr ""
+
+msgid "Customer Currency:"
+msgstr "Mondeda client:"
+
+msgid "Customer Discount:"
+msgstr "Discount client:"
+
+msgid "Price List:"
+msgstr "Lista de preturi:"
+
+msgid "Date of order receive"
+msgstr ""
+
+msgid "Confirm changes"
+msgstr "Confirma modificarile"
+
+msgid "Cancel changes"
+msgstr "Anuleaza modificarile"
+
+msgid "Add Item"
+msgstr "Adauga..."
+
+msgid "Add new item to document"
+msgstr "Adauga la document"
+
+msgid "Cash payment"
+msgstr "Plata cash"
+
+msgid "Deliver from Location:"
+msgstr "Livrare din:"
+
+msgid "Cash account:"
+msgstr ""
+
+msgid "Delivery Details"
+msgstr "Detalii livrare"
+
+msgid "Invoice Delivery Details"
+msgstr "Factura - detalii livrare"
+
+msgid "Invoice before"
+msgstr ""
+
+msgid "Quotation Delivery Details"
+msgstr "Proforma - Detalii livrare"
+
+msgid "Order Delivery Details"
+msgstr "Comanda - detalii livrare"
+
+msgid "Required Delivery Date"
+msgstr "Data solicitata de livrare"
+
+msgid "Enter requested day of delivery"
+msgstr ""
+
+msgid "Enter Valid until Date"
+msgstr ""
+
+msgid "Deliver To:"
+msgstr "Livrare la:"
+
+msgid "Additional identifier for delivery e.g. name of receiving person"
+msgstr ""
+
+msgid "Delivery address. Default is address of customer branch"
+msgstr "Adresa de livrare. Implicit este "
+
+msgid "Contact Phone Number:"
+msgstr "Telefon contact:"
+
+msgid "Phone number of ordering person. Defaults to branch phone number"
+msgstr ""
+
+msgid "Customer Reference:"
+msgstr "Referinta client:"
+
+msgid "Customer reference number for this order (if any)"
+msgstr ""
+
+msgid "Shipping Company:"
+msgstr "Transportator:"
+
+msgid "You have to enter valid stock code or nonempty description"
+msgstr ""
+
+msgid "Cannot open connection to printer"
+msgstr "Conexiunea cu imprimanta nu poate fi deschisa"
+
+msgid "Printer does not acept the job"
+msgstr "Imprimanta nu accepta job-ul"
+
+msgid "Error sending print job control file"
+msgstr ""
+
+msgid "Print control file not accepted"
+msgstr ""
+
+msgid "Cannot send report to printer"
+msgstr "Raportul nu poate fi transmis la imprimanta"
+
+msgid "No ack after report printout"
+msgstr ""
+
+msgid "Cannot flush printing queue"
+msgstr "Nu pot goli coada de imprimare"
+
+msgid "Report Classes:"
+msgstr "Clase de rapoarte:"
+
+msgid "Reports For Class: "
+msgstr "Rapoarte pentru clasa: "
+
+msgid "Display: "
+msgstr "Afiseaza: "
+
+msgid "Unknown report parameter type:"
+msgstr ""
+
+msgid "No Currency Filter"
+msgstr "Fara filtre pe moneda"
+
+msgid "Click Here to Pick up the date"
+msgstr ""
+
+msgid "PDF/Printer"
+msgstr "PDF/Imprimanta"
+
+msgid "No Graphics"
+msgstr "Fara grafice"
+
+msgid "Vertical bars"
+msgstr "Linii verticale"
+
+msgid "Horizontal bars"
+msgstr "Linii orizontale"
+
+msgid "Dots"
+msgstr "Puncte"
+
+msgid "Lines"
+msgstr "Linii"
+
+msgid "Pie"
+msgstr ""
+
+msgid "Donut"
+msgstr ""
+
+msgid "No Type Filter"
+msgstr "Fara filtru pe tip"
+
+msgid "No Account Group Filter"
+msgstr ""
+
+msgid "No Dimension Filter"
+msgstr ""
+
+msgid "No Customer Filter"
+msgstr "Fara filtru pe client"
+
+msgid "No Supplier Filter"
+msgstr "Fara filtru pe furnizor"
+
+msgid "No Location Filter"
+msgstr "Fara filtru pe gestiune"
+
+msgid "No Category Filter"
+msgstr "Fara filtru pe categorie"
+
+msgid "No Sales Folk Filter"
+msgstr "Fara filtru pe reprezentanti vanzari"
+
+msgid "No Users Filter"
+msgstr "Fara filtru pe utilizatori"
+
+msgid "Domicile"
+msgstr ""
+
+msgid ""
+"The security settings on your account do not permit you to print this report"
+msgstr ""
+
+msgid "Print Out Date"
+msgstr "Data imprimarii"
+
+msgid "Fiscal Year"
+msgstr "An fiscal"
+
+msgid "Report Date"
+msgstr "Data raportului"
+
+msgid "Generated At"
+msgstr "Generat la"
+
+msgid "Generated By"
+msgstr "Generat de"
+
+msgid "Report Period"
+msgstr "Perioada raportului"
+
+msgid "You have no email contact defined for this type of document"
+msgstr ""
+
+msgid "Dear"
+msgstr ""
+
+msgid "Attached you will find "
+msgstr ""
+
+msgid "Kindest regards"
+msgstr ""
+
+msgid "There is no contact email set for this document type."
+msgstr ""
+
+msgid "Sending document by email failed"
+msgstr ""
+
+msgid "Email:"
+msgstr ""
+
+msgid "has been sent by email to destination."
+msgstr ""
+
+msgid "Report has been sent to network printer "
+msgstr "Raportul a fost trimis la imprimanta "
+
+msgid "Return Items to Location"
+msgstr ""
+
+msgid "Issue Items to Work order"
+msgstr ""
+
+msgid "To Work Centre:"
+msgstr ""
+
+msgid "Issue Date:"
+msgstr ""
+
+msgid "Issue of"
+msgstr ""
+
+msgid "Issue to"
+msgstr ""
+
+msgid "Reversed the issue of"
+msgstr ""
+
+msgid "Reversed the issue to"
+msgstr ""
+
+msgid "Quick production."
+msgstr ""
+
+msgid "Produced"
+msgstr "Produs"
+
+msgid "Canceled."
+msgstr "Anulat."
+
+msgid "Released."
+msgstr ""
+
+msgid "Voiding Work Order Trans # "
+msgstr ""
+
+msgid "Production."
+msgstr ""
+
+msgid "Reversed the production "
+msgstr ""
+
+msgid "The bill of material for this item is empty."
+msgstr ""
+
+msgid "Total Cost"
+msgstr ""
+
+msgid "There are no Requirements for this Order."
+msgstr ""
+
+msgid "On Hand"
+msgstr ""
+
+msgid "Marked items have insufficient quantities in stock."
+msgstr ""
+
+msgid "There are no Productions for this Order."
+msgstr ""
+
+msgid "There are no Issues for this Order."
+msgstr ""
+
+msgid "There are no additional costs for this Order."
+msgstr ""
+
+msgid "The work order number sent is not valid."
+msgstr ""
+
+msgid "This work order is closed."
+msgstr ""
+
+msgid "Detail:"
+msgstr "Detalii:"
+
+msgid "Positive Adjustment"
+msgstr "Corectie de stoc pozitiva"
+
+msgid "Negative Adjustment"
+msgstr "Corectie de stoc negativa"
+
+msgid ""
+"Cannot delete this item because there are stock movements that refer to this "
+"item."
+msgstr ""
+
+msgid ""
+"Cannot delete this item record because there are bills of material that "
+"require this part as a component."
+msgstr ""
+
+msgid ""
+"Cannot delete this item because there are existing purchase order items for "
+"it."
+msgstr ""
+
+msgid ""
+"This item cannot be deleted because some code aliases \n"
+"\t\t\t\tor foreign codes was entered for it, or there are kits defined \n"
+"\t\t\t\tusing this item as component"
+msgstr ""
+
+msgid "To Location:"
+msgstr "In gestiunea:"
+
+msgid "Transfer Type:"
+msgstr "Tip transfer:"
+
+msgid "There are no transactions for this dimension for the selected period."
+msgstr ""
+
+msgid "Balance for this Dimension"
+msgstr ""
+
+msgid "Supplier invoice adjustment for zero inventory of "
+msgstr ""
+
+msgid "GRN Removal"
+msgstr "Stergere N.I.R."
+
+msgid "Supplier's Ref.:"
+msgstr ""
+
+msgid "Terms:"
+msgstr ""
+
+msgid "Sub-total:"
+msgstr ""
+
+msgid "Invoice Total:"
+msgstr "Total factura:"
+
+msgid "Add GL Line"
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "GL Items for this Invoice"
+msgstr ""
+
+msgid "GL Items for this Credit Note"
+msgstr ""
+
+msgid "Quick Entry:"
+msgstr ""
+
+msgid "Go"
+msgstr ""
+
+msgid "Add to Invoice"
+msgstr "Adauga la factura"
+
+msgid "Add to Credit Note"
+msgstr "Adauga la factura storno"
+
+msgid ""
+"WARNING! Be careful with removal. The operation is executed immediately and "
+"cannot be undone !!!"
+msgstr ""
+
+msgid ""
+"You are about to remove all yet non-invoiced items from selected delivery "
+"line. This operation also irreversibly changes related order line. Do you "
+"want to continue ?"
+msgstr ""
+
+msgid "Items Received Yet to be Invoiced"
+msgstr ""
+
+msgid "Delivery Item Selected For Adding To A Supplier Credit Note"
+msgstr ""
+
+msgid "Received Items Charged on this Invoice"
+msgstr ""
+
+msgid "Received Items Credited on this Note"
+msgstr ""
+
+msgid "Received between"
+msgstr "Receptionat intre"
+
+msgid "and"
+msgstr "si"
+
+msgid "Add All Items"
+msgstr ""
+
+msgid "P.O."
+msgstr ""
+
+msgid "Received On"
+msgstr "Receptionat "
+
+msgid "Qty Yet To Invoice"
+msgstr ""
+
+msgid "Qty Yet To Credit"
+msgstr ""
+
+msgid "Line Value"
+msgstr "Total linie"
+
+msgid ""
+"There are no outstanding items received from this supplier that have not "
+"been invoiced by them."
+msgstr ""
+
+msgid ""
+"There are no received items for the selected supplier that have been "
+"invoiced."
+msgstr ""
+
+msgid "Credits can only be applied to invoiced items."
+msgstr ""
+
+msgid "Supplier Currency:"
+msgstr "Moneda furnizor:"
+
+msgid "Due Date:"
+msgstr ""
+
+msgid "Supplier's Reference:"
+msgstr "Nr. comanda furnizor:"
+
+msgid "Receive Into:"
+msgstr "Receptioneaza in:"
+
+msgid ""
+"The default stock location set up for this user is not a currently defined "
+"stock location. Your system administrator needs to amend your user record."
+msgstr ""
+
+msgid "Deliver to:"
+msgstr "Livrare la:"
+
+msgid "Order Items"
+msgstr "Articole in comanda"
+
+msgid "Deliver Into Location"
+msgstr "Livrare in locatia"
+
+msgid "Order Comments"
+msgstr "Comentarii"
+
+msgid "For Purchase Order"
+msgstr "Pentru comanda furnizor"
+
+msgid "Date Items Received"
+msgstr ""
+
+msgid "in file"
+msgstr ""
+
+msgid "at line "
+msgstr ""
+
+msgid "Debug mode database warning:"
+msgstr ""
+
+msgid "DATABASE ERROR :"
+msgstr ""
+
+msgid ""
+"The entered information is a duplicate. Please go back and enter different "
+"values."
+msgstr "Informatiile introduse exista deja. Introduceti alte valori."
+
+msgid ""
+"Before software upgrade you have to include old $security_groups and "
+"$security_headings arrays from old config.php file to the new one."
+msgstr ""
+
+msgid "Back"
+msgstr "Inapoi"
+
+msgid "System is available for site admin only until full database upgrade"
+msgstr ""
+"Sistemul este disponibil doar pentru administratori pina la finalizarea "
+"actualizarii bazei de date"
+
+msgid "Requesting data..."
+msgstr ""
+
+msgid "Bank Payment"
+msgstr "Plata prin banca"
+
+msgid "Bank Deposit"
+msgstr "Incasare prin banca"
+
+msgid "Funds Transfer"
+msgstr ""
+
+msgid "Sales Invoice"
+msgstr "Factura"
+
+msgid "Customer Payment"
+msgstr "Plata de la client"
+
+msgid "Delivery Note"
+msgstr ""
+
+msgid "Location Transfer"
+msgstr ""
+
+msgid "Inventory Adjustment"
+msgstr "Corectii de stoc"
+
+msgid "Supplier Payment"
+msgstr "Plata furnizor"
+
+msgid "Work Order"
+msgstr ""
+
+msgid "Work Order Issue"
+msgstr ""
+
+msgid "Work Order Production"
+msgstr ""
+
+msgid "Cost Update"
+msgstr ""
+
+msgid "GJ"
+msgstr "GJ"
+
+msgid "BP"
+msgstr "BP"
+
+msgid "BD"
+msgstr "BD"
+
+msgid "BT"
+msgstr "BT"
+
+msgid "SI"
+msgstr "SI"
+
+msgid "CN"
+msgstr "CN"
+
+msgid "CP"
+msgstr "CP"
+
+msgid "IT"
+msgstr "IT"
+
+msgid "IA"
+msgstr "IA"
+
+msgid "PO"
+msgstr "PO"
+
+msgid "PI"
+msgstr "PI"
+
+msgid "PC"
+msgstr "PC"
+
+msgid "SP"
+msgstr "SP"
+
+msgid "WO"
+msgstr "WO"
+
+msgid "WI"
+msgstr "WI"
+
+msgid "WP"
+msgstr "WP"
+
+msgid "SO"
+msgstr "SO"
+
+msgid "SQ"
+msgstr "SQ"
+
+msgid "CU"
+msgstr "CU"
+
+msgid "Dim"
+msgstr ""
+
+msgid "Savings Account"
+msgstr "Cont de economii"
+
+msgid "Chequing Account"
+msgstr ""
+
+msgid "Cash Account"
+msgstr "Cont de cash"
+
+msgid "Transfer"
+msgstr "Transfer"
+
+msgid "Cheque"
+msgstr ""
+
+msgid "Cash"
+msgstr "Cash"
+
+msgid "Quick Entry"
+msgstr ""
+
+msgid "Assemble"
+msgstr ""
+
+msgid "Unassemble"
+msgstr ""
+
+msgid "Advanced Manufacture"
+msgstr ""
+
+msgid "Labour Cost"
+msgstr ""
+
+msgid "Overhead Cost"
+msgstr ""
+
+msgid "Assets"
+msgstr "Mijloace fixe"
+
+msgid "Equity"
+msgstr ""
+
+msgid "Income"
+msgstr "Venituri"
+
+msgid "Cost of Goods Sold"
+msgstr ""
+
+msgid "Expense"
+msgstr "Cheltuieli"
+
+msgid "Amount, increase base"
+msgstr ""
+
+msgid "Amount, reduce base"
+msgstr ""
+
+msgid "% amount of base"
+msgstr ""
+
+msgid "% amount of base, increase base"
+msgstr ""
+
+msgid "% amount of base, reduce base"
+msgstr ""
+
+msgid "Taxes added"
+msgstr ""
+
+msgid "Taxes added, increase base"
+msgstr ""
+
+msgid "Taxes added, reduce base"
+msgstr ""
+
+msgid "Taxes included"
+msgstr ""
+
+msgid "Taxes included, increase base"
+msgstr ""
+
+msgid "Taxes included, reduce base"
+msgstr ""
+
+msgid "Supplier Invoice/Credit"
+msgstr ""
+
+msgid "Purchased"
+msgstr "Cumparat"
+
+msgid "Service"
+msgstr "Serviciu"
+
+msgid "Customer branch"
+msgstr "Sediu client"
+
+msgid "Shipper"
+msgstr "Transportator"
+
+msgid "Company internal"
+msgstr ""
+
+msgid "Prepayment"
+msgstr "plata in avans"
+
+msgid "After No. of Days"
+msgstr "Dupa numar de zile"
+
+msgid "Day In Following Month"
+msgstr "Zi in luna urmatoare"
+
+msgid "This page is usable only with javascript enabled browsers."
+msgstr ""
+
+#, php-format
+msgid ""
+"Cannot retrieve exchange rate for currency %s as of %s. Please add exchange "
+"rate manually on Exchange Rates page."
+msgstr ""
+
+msgid "Optional"
+msgstr "Optional"
+
+msgid "Recommended"
+msgstr "Recomandat"
+
+msgid "Required "
+msgstr "Obligatoriu "
+
+msgid "MySQL version"
+msgstr "Versiune MySQL"
+
+msgid "Upgrade MySQL server to version at least 4.1"
+msgstr ""
+
+msgid "PHP MySQL extension"
+msgstr ""
+
+msgid "Your PHP has to have MySQL extension enabled."
+msgstr ""
+
+msgid "PHP version"
+msgstr "Versiune PHP"
+
+msgid "Upgrade PHP to version at least 4.3.3"
+msgstr ""
+
+msgid "Server system"
+msgstr ""
+
+msgid "Session save path"
+msgstr ""
+
+msgid "Removed install wizard folder"
+msgstr ""
+
+msgid "Not removed"
+msgstr ""
+
+msgid "Remove or rename install wizard folder for security reasons."
+msgstr ""
+
+msgid "Browser type"
+msgstr "Navigator"
+
+msgid "Any browser is supported"
+msgstr ""
+
+msgid "Http server type"
+msgstr ""
+
+msgid "Any server is supported"
+msgstr ""
+
+msgid "Native gettext"
+msgstr ""
+
+msgid "In case of no gettext support, php emulation is used"
+msgstr ""
+
+msgid "Debugging mode"
+msgstr ""
+
+msgid "To switch debugging on set $go_debug>0 in config.php file"
+msgstr ""
+
+msgid "Error logging"
+msgstr ""
+
+msgid "Disabled"
+msgstr "Dezactivat"
+
+msgid "To switch error logging set $error_logging in config.php file"
+msgstr ""
+
+msgid "Log file is not writeable"
+msgstr ""
+
+msgid "Current database version"
+msgstr "Versiunea curenta a bazei de date"
+
+msgid "Database structure seems to be not upgraded to current version"
+msgstr ""
+
+msgid "Company subdirectories consistency"
+msgstr ""
+
+#, php-format
+msgid "'%s' is not writeable"
+msgstr ""
+
+msgid "Temporary directory"
+msgstr ""
+
+msgid "Language configuration consistency"
+msgstr ""
+
+msgid "Languages folder should be writeable."
+msgstr ""
+
+msgid "Languages configuration file should be writeable."
+msgstr ""
+
+#, php-format
+msgid "Missing %s translation file."
+msgstr ""
+
+#, php-format
+msgid "Missing system locale: %s"
+msgstr ""
+
+msgid "Main config file"
+msgstr ""
+
+#, php-format
+msgid "Can't write '%s' file. Check FA directory write permissions."
+msgstr ""
+
+#, php-format
+msgid "'%s' file exists."
+msgstr ""
+
+#, php-format
+msgid "'%s' file should be read-only"
+msgstr ""
+
+msgid "Database auth file"
+msgstr ""
+
+#, php-format
+msgid ""
+"'%s' file should be read-only if you do not plan to add or change companies"
+msgstr ""
+
+msgid "Extensions system"
+msgstr ""
+
+msgid "Extensions configuration files and directories should be writeable"
+msgstr ""
+
+#, php-format
+msgid "Non-standard theme directory '%s' is not writable"
+msgstr ""
+
+msgid ""
+"OpenSSL PHP extension have to be enabled to use extension repository system."
+msgstr ""
+
+msgid ""
+"OpenSSL have to be available on your server to use extension repository "
+"system."
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "Test type"
+msgstr ""
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Cost was "
+msgstr ""
+
+msgid " changed to "
+msgstr ""
+
+msgid " for item "
+msgstr " pentru articolul "
+
+msgid "Zero/negative inventory handling"
+msgstr ""
+
+msgid ""
+"Some transactions journal GL postings were not indexed due to lack of audit "
+"trail record."
+msgstr ""
+
+msgid "Date Voided:"
+msgstr "Data anularii:"
+
+msgid "Total Allocated:"
+msgstr ""
+
+msgid "Left to Allocate:"
+msgstr ""
+
+msgid "No Quick Entries are defined."
+msgstr ""
+
+msgid "No Quick Entry lines are defined."
+msgstr ""
+
+msgid "January"
+msgstr "Ianuarie"
+
+msgid "February"
+msgstr "Februarie"
+
+msgid "March"
+msgstr "Martie"
+
+msgid "April"
+msgstr "Aprilie"
+
+msgid "May"
+msgstr "Mai"
+
+msgid "June"
+msgstr "Iunie"
+
+msgid "July"
+msgstr "Iulie"
+
+msgid "August"
+msgstr "August"
+
+msgid "September"
+msgstr "Septembrie"
+
+msgid "October"
+msgstr "Octombrie"
+
+msgid "November"
+msgstr "Noiembrie"
+
+msgid "December"
+msgstr "Decembrie"
+
+msgid "Su"
+msgstr "Du"
+
+msgid "Mo"
+msgstr "Lu"
+
+msgid "Tu"
+msgstr "Ma"
+
+msgid "We"
+msgstr "Mi"
+
+msgid "Th"
+msgstr "Jo"
+
+msgid "Fr"
+msgstr "Vi"
+
+msgid "Sa"
+msgstr "Sa"
+
+msgid "W"
+msgstr "W"
+
+msgid "in units of : "
+msgstr "in unitati de : "
+
+msgid "Other Allocations"
+msgstr ""
+
+msgid "The entry for one or more amounts is invalid or negative."
+msgstr ""
+
+msgid "At least one transaction is overallocated."
+msgstr ""
+
+msgid ""
+"These allocations cannot be processed because the amount allocated is more "
+"than the total amount left to allocate."
+msgstr ""
+
+msgid "Submit changes"
+msgstr ""
+
+msgid "Clone"
+msgstr ""
+
+msgid "Edit new record with current data"
+msgstr ""
+
+msgid "Cancel edition"
+msgstr "Anulare"
+
+msgid "Show also Inactive"
+msgstr "Afiseaza si inactive"
+
+msgid "First"
+msgstr "Inceput"
+
+msgid "Prev"
+msgstr "Inapoi"
+
+msgid "Next"
+msgstr "Inainte"
+
+msgid "Last"
+msgstr "Sfarsit"
+
+#, php-format
+msgid "Records %d-%d of %d"
+msgstr "Inregistrari %d-%d din %d"
+
+msgid "No records"
+msgstr "Nu exista inregistrari"
+
+msgid "Set filter"
+msgstr ""
+
+msgid "Press Space tab for search pattern entry"
+msgstr ""
+
+msgid "Enter code fragment to search or * for all"
+msgstr ""
+
+msgid "Enter description fragment to search or * for all"
+msgstr ""
+
+msgid "All Suppliers"
+msgstr "Toti furnizorii"
+
+msgid "Press Space tab to filter by name fragment"
+msgstr ""
+
+msgid "Select supplier"
+msgstr "Alege furnizor"
+
+msgid "All Customers"
+msgstr "Toti clientii"
+
+msgid "Press Space tab to filter by name fragment; F2 - entry new customer"
+msgstr ""
+"Apasa spatiu pentru a filtra dupa fragment din nume; F2 - introducere client "
+"nou"
+
+msgid "Select customer"
+msgstr "Alege un client"
+
+msgid "All branches"
+msgstr "Toate sediile"
+
+msgid "Select customer branch"
+msgstr "Alege sediu client"
+
+msgid "All Locations"
+msgstr "Toate gestiunile"
+
+msgid "All Items"
+msgstr "Toate articolele"
+
+msgid "All Sales Types"
+msgstr ""
+
+msgid "Use Item Sales Accounts"
+msgstr ""
+
+msgid "All Types"
+msgstr "Toate tipurile"
+
+msgid "Overdue Invoices"
+msgstr ""
+
+msgid "Invoices"
+msgstr "Facturi"
+
+msgid "Overdue Credit Notes"
+msgstr ""
+
+msgid "GRNs"
+msgstr "NIR-uri"
+
+msgid "Automatically put balance on back order"
+msgstr ""
+
+msgid "Cancel any quantites not delivered"
+msgstr "Anuleaza orice cantitati nelivrate"
+
+msgid "Items Returned to Inventory Location"
+msgstr "Articole returnate in depozit"
+
+msgid "Items Written Off"
+msgstr ""
+
+msgid "New role"
+msgstr "Rol nou"
+
+msgid "No tags defined."
+msgstr ""
+
+msgid "No active tags defined."
+msgstr ""
+
+#, php-format
+msgid "Activated for '%s'"
+msgstr ""
+
+msgid "Available and/or installed"
+msgstr ""
+
+msgid "Standard new company American COA (4 digit)"
+msgstr ""
+
+msgid "Standard American COA (4 digit) with demo data"
+msgstr ""
+
+msgid "No payment Link"
+msgstr ""
+
+msgid "Assignment"
+msgstr ""
+
+msgid "Sec Phone"
+msgstr "Telefon alternativ"
+
+msgid "email"
+msgstr "e-mail"
+
+msgid "Contact data"
+msgstr ""
+
+msgid "First Name:"
+msgstr "Prenume:"
+
+msgid "Last Name:"
+msgstr "Nume:"
+
+msgid "Contact active for:"
+msgstr ""
+
+msgid "Notes:"
+msgstr "Note:"
+
+msgid "The contact name cannot be empty."
+msgstr ""
+
+msgid "Contact reference cannot be empty."
+msgstr ""
+
+msgid "You have to select at least one category."
+msgstr ""
+
+msgid "Current Credit:"
+msgstr "Credit curent:"
+
+msgid "Bank Balance:"
+msgstr ""
+
+msgid "Request from outside of this page is forbidden."
+msgstr ""
+
+msgid "CSRF attack detected from: "
+msgstr ""
+
+msgid "You should automatically be forwarded."
+msgstr ""
+
+msgid "If this does not happen"
+msgstr ""
+
+msgid "click here"
+msgstr "click aici"
+
+msgid "to continue"
+msgstr "pentru a continua"
+
+msgid "View Attachment"
+msgstr "Afiseaza atasament"
+
+msgid "Close"
+msgstr "Inchide"
+
+msgid "Branches"
+msgstr "Sedii"
+
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
+msgstr "Informatiile introduse nu au fost salvate.\\nAbandonati modificarile?"
+
+msgid "Incorrect Password"
+msgstr "Parola incorecta"
+
+msgid "The user and password combination is not valid for the system."
+msgstr "numele de utilizator sau parola nu sunt valide pentru acest sistem."
+
+msgid ""
+"If you are not an authorized user, please contact your system administrator "
+"to obtain an account to enable you to use the system."
+msgstr ""
+"Daca nu sunteti un utlizator autorizat, contactati administratorul de sistem "
+"pentru a obtine un cont de utilizator ce va permite folosirea sistemului."
+
+msgid "Try again"
+msgstr "Incercati din nou"
+
+msgid "Security settings have not been defined for your user account."
+msgstr "Drepturile de access pentru contul dumneavoastra nu au fost definite."
+
+msgid "Please contact your system administrator."
+msgstr "Contactati administratorul de sistem."
+
+msgid ""
+"Please remove $security_groups and $security_headings arrays from config.php "
+"file!"
+msgstr ""
+
+msgid ""
+"Access to application has been blocked until database upgrade is completed "
+"by system administrator."
+msgstr ""
+"Accesul la aplicatie a fost blocat pina la finalizarea actualizarii bazei de "
+"date."
+
+msgid ""
+"The security settings on your account do not permit you to access this "
+"function"
+msgstr ""
+"Drepturile de access ale contului dumneavoastra nu permit accessul la "
+"aceasta functie."
+
+msgid ""
+"System is blocked after source upgrade until database is updated on System/"
+"Software Upgrade page"
+msgstr ""
+
+#, php-format
+msgid "No key field '%s' in file '%s'"
+msgstr ""
+
+#, php-format
+msgid "Cannot delete outdated '%s' file."
+msgstr ""
+
+msgid "Release file in repository is invalid, or public key is outdated."
+msgstr ""
+
+msgid "Repository version does not match application version."
+msgstr ""
+
+#, php-format
+msgid ""
+"Security alert: broken index file in repository '%s'. Please inform "
+"repository administrator about this issue."
+msgstr ""
+
+#, php-format
+msgid ""
+"Security alert: broken package '%s' in repository. Please inform repository "
+"administrator about this issue."
+msgstr ""
+
+#, php-format
+msgid "Package '%s' not found."
+msgstr ""
+
+msgid "System administration"
+msgstr "Administrare sistem"
+
+msgid "Company setup"
+msgstr "Parametri firma"
+
+msgid "Special maintenance"
+msgstr ""
+
+msgid "Sales configuration"
+msgstr "Configurare vanzari"
+
+msgid "Sales transactions"
+msgstr "Tranzactii vanzari"
+
+msgid "Sales related reports"
+msgstr "Rapoarte legate de vanzari"
+
+msgid "Purchase configuration"
+msgstr "Configurare achizitii"
+
+msgid "Purchase transactions"
+msgstr "Tranzactii achizitie"
+
+msgid "Purchase analytics"
+msgstr ""
+
+msgid "Inventory configuration"
+msgstr "Configurare articole/stocuri"
+
+msgid "Inventory operations"
+msgstr "Operatiuni articole/stocuri"
+
+msgid "Inventory analytics"
+msgstr ""
+
+msgid "Manufacturing configuration"
+msgstr "Configurare productie"
+
+msgid "Manufacturing transactions"
+msgstr "Tranzactii productie"
+
+msgid "Manufacturing analytics"
+msgstr ""
+
+msgid "Dimensions configuration"
+msgstr ""
+
+msgid "Banking & GL configuration"
+msgstr ""
+
+msgid "Banking & GL transactions"
+msgstr ""
+
+msgid "Banking & GL analytics"
+msgstr ""
+
+msgid "Install/update companies"
+msgstr ""
+
+msgid "Install/update languages"
+msgstr "instaleaza/actualizeaza fisiere limba"
+
+msgid "Install/upgrade modules"
+msgstr "Instaleaza/actualizeaza module"
+
+msgid "Software upgrades"
+msgstr ""
+
+msgid "Company parameters"
+msgstr "Parametri firma"
+
+msgid "Access levels edition"
+msgstr ""
+
+msgid "Users setup"
+msgstr ""
+
+msgid "Point of sales definitions"
+msgstr "Definitii POS"
+
+msgid "Printers configuration"
+msgstr ""
+
+msgid "Print profiles"
+msgstr ""
+
+msgid "Payment terms"
+msgstr "Conditii de plata"
+
+msgid "Shipping ways"
+msgstr ""
+
+msgid "Credit status definitions changes"
+msgstr ""
+
+msgid "Inventory locations changes"
+msgstr ""
+
+msgid "Inventory movement types"
+msgstr "Tipuri de miscari de stocuri"
+
+msgid "Manufacture work centres"
+msgstr ""
+
+msgid "Forms setup"
+msgstr ""
+
+msgid "Contact categories"
+msgstr "Categorii de contacte"
+
+msgid "Voiding transactions"
+msgstr "Anulare tranzactii"
+
+msgid "Database backup/restore"
+msgstr ""
+
+msgid "Common view/print transactions interface"
+msgstr ""
+
+msgid "Attaching documents"
+msgstr ""
+
+msgid "Display preferences"
+msgstr ""
+
+msgid "Password changes"
+msgstr "Modificari parola"
+
+msgid "Sales types"
+msgstr ""
+
+msgid "Sales prices edition"
+msgstr ""
+
+msgid "Sales staff maintenance"
+msgstr ""
+
+msgid "Sales areas maintenance"
+msgstr "Gestiune zone"
+
+msgid "Sales groups changes"
+msgstr ""
+
+msgid "Sales templates"
+msgstr ""
+
+msgid "Recurrent invoices definitions"
+msgstr ""
+
+msgid "Sales transactions view"
+msgstr ""
+
+msgid "Sales customer and branches changes"
+msgstr ""
+
+msgid "Sales quotations"
+msgstr "Proforme"
+
+msgid "Sales orders edition"
+msgstr ""
+
+msgid "Sales deliveries edition"
+msgstr ""
+
+msgid "Sales invoices edition"
+msgstr ""
+
+msgid "Sales credit notes against invoice"
+msgstr ""
+
+msgid "Sales freehand credit notes"
+msgstr ""
+
+msgid "Customer payments entry"
+msgstr "Introducere plati clienti"
+
+msgid "Customer payments allocation"
+msgstr ""
+
+msgid "Sales analytical reports"
+msgstr ""
+
+msgid "Sales document bulk reports"
+msgstr ""
+
+msgid "Sales prices listing"
+msgstr ""
+
+msgid "Sales staff listing"
+msgstr ""
+
+msgid "Customer bulk listing"
+msgstr ""
+
+msgid "Customer status report"
+msgstr ""
+
+msgid "Customer payments report"
+msgstr "Raport plati clienti"
+
+msgid "Purchase price changes"
+msgstr "Modificari preturi de achizitie"
+
+msgid "Supplier transactions view"
+msgstr "Afisare tranzactii furnizori"
+
+msgid "Suppliers changes"
+msgstr "Modificari furnizori"
+
+msgid "Purchase order entry"
+msgstr "Introducere comanda furnizor"
+
+msgid "Purchase receive"
+msgstr "Receptie comenzi"
+
+msgid "Supplier invoices"
+msgstr "Facturi furnizor"
+
+msgid "Deleting GRN items during invoice entry"
+msgstr ""
+
+msgid "Supplier credit notes"
+msgstr "Facturi storno furnizor"
+
+msgid "Supplier payments"
+msgstr "Plati la furnizori"
+
+msgid "Supplier payments allocations"
+msgstr ""
+
+msgid "Supplier analytical reports"
+msgstr ""
+
+msgid "Supplier document bulk reports"
+msgstr ""
+
+msgid "Supplier payments report"
+msgstr "Raport plati furnizori"
+
+msgid "Stock items add/edit"
+msgstr ""
+
+msgid "Sales kits"
+msgstr ""
+
+msgid "Item categories"
+msgstr "Categorii de articole"
+
+msgid "Units of measure"
+msgstr "Unitati de masura"
+
+msgid "Stock status view"
+msgstr ""
+
+msgid "Stock transactions view"
+msgstr ""
+
+msgid "Foreign item codes entry"
+msgstr ""
+
+msgid "Inventory location transfers"
+msgstr ""
+
+msgid "Inventory adjustments"
+msgstr "Corectii de stoc"
+
+msgid "Reorder levels"
+msgstr ""
+
+msgid "Items analytical reports and inquiries"
+msgstr ""
+
+msgid "Inventory valuation report"
+msgstr ""
+
+msgid "Bill of Materials"
+msgstr ""
+
+msgid "Manufacturing operations view"
+msgstr ""
+
+msgid "Work order entry"
+msgstr ""
+
+msgid "Material issues entry"
+msgstr ""
+
+msgid "Final product receive"
+msgstr ""
+
+msgid "Work order releases"
+msgstr ""
+
+msgid "Work order analytical reports and inquiries"
+msgstr ""
+
+msgid "Manufacturing cost inquiry"
+msgstr ""
+
+msgid "Work order bulk reports"
+msgstr ""
+
+msgid "Bill of materials reports"
+msgstr ""
+
+msgid "Dimension tags"
+msgstr ""
+
+msgid "Dimension view"
+msgstr ""
+
+msgid "Dimension entry"
+msgstr ""
+
+msgid "Dimension reports"
+msgstr ""
+
+msgid "Item tax type definitions"
+msgstr ""
+
+msgid "GL accounts edition"
+msgstr ""
+
+msgid "GL account groups"
+msgstr ""
+
+msgid "GL account classes"
+msgstr ""
+
+msgid "Quick GL entry definitions"
+msgstr ""
+
+msgid "Bank accounts"
+msgstr "Conturi bancare"
+
+msgid "Tax rates"
+msgstr ""
+
+msgid "Tax groups"
+msgstr "Grupuri de taxe"
+
+msgid "Fiscal years maintenance"
+msgstr ""
+
+msgid "Company GL setup"
+msgstr ""
+
+msgid "GL Account tags"
+msgstr ""
+
+msgid "Allow entry on non closed Fiscal years"
+msgstr ""
+
+msgid "Bank transactions view"
+msgstr ""
+
+msgid "GL postings view"
+msgstr ""
+
+msgid "Exchange rate table changes"
+msgstr ""
+
+msgid "Bank payments"
+msgstr "Plati prin banca"
+
+msgid "Bank deposits"
+msgstr "Incasari prin banca"
+
+msgid "Bank account transfers"
+msgstr ""
+
+msgid "Bank reconciliation"
+msgstr ""
+
+msgid "Manual journal entries"
+msgstr ""
+
+msgid "Journal entries to bank related accounts"
+msgstr ""
+
+msgid "Budget edition"
+msgstr ""
+
+msgid "Item standard costs"
+msgstr ""
+
+msgid "GL analytical reports and inquiries"
+msgstr ""
+
+msgid "Tax reports and inquiries"
+msgstr ""
+
+msgid "Bank reports and inquiries"
+msgstr ""
+
+msgid "GL reports and inquiries"
+msgstr ""
+
+msgid "Exchange Variance"
+msgstr ""
+
+msgid "Document reentered."
+msgstr ""
+
+#, php-format
+msgid ""
+"Cannot retrieve currency rate from %s page. Please set the rate manually."
+msgstr ""
+
+msgid "Reverse Transaction:"
+msgstr ""
+
+msgid "balance from account"
+msgstr ""
+
+msgid "Edit journal line"
+msgstr ""
+
+msgid "Remove line from journal"
+msgstr ""
+
+msgid "Add new line to journal"
+msgstr ""
+
+msgid "Pay To:"
+msgstr ""
+
+msgid "To the Order of:"
+msgstr ""
+
+#, php-format
+msgid "Cannot open the extension setup file '%s' for writing."
+msgstr ""
+
+#, php-format
+msgid "Cannot write to the extensions setup file '%s'."
+msgstr ""
+
+msgid "Cannot update system extensions list."
+msgstr ""
+
+#, php-format
+msgid "Cannot update extensions list for company '%s'."
+msgstr ""
+
+msgid "Cannot open the languages file - "
+msgstr ""
+
+msgid "Cannot write to the language file - "
+msgstr ""
+
+msgid "The language files folder "
+msgstr ""
+
+#, php-format
+msgid "SQL script execution failed in line %d: %s"
+msgstr ""
+
+msgid "user online"
+msgstr "utilizator conectat"
+
+msgid "users online"
+msgstr "utilizatori conectati"
+
+msgid ""
+"The Retained Earnings Account or the Profit and Loss Year Account has not "
+"been set in System and General GL Setup"
+msgstr ""
+
+msgid ""
+"The Retained Earnings Account should be a Balance Account or the Profit and "
+"Loss Year Account should be an Expense Account (preferred the last one in "
+"the Expense Class)"
+msgstr ""
+
+msgid "Closing Year"
+msgstr ""

@@ -1,0 +1,14 @@
+Package: nb_NO
+Version: 2.3.11-1
+Description: Norwegian (Bokmal) translation
+Author: Rolf Gunnar Hansen <rolf.g.hansen@marisoft.com>
+Maintenance: Rolf Gunnar Hansen <rolf.g.hansen@marisoft.com>
+Homepage: 
+Language: nb_NO
+Encoding: iso-8859-1
+RTLDir: no
+Type: language
+Name: Norwegian
+InstallPath: lang/nb_NO
+Filename: nb_NO-2.3.11-1
+

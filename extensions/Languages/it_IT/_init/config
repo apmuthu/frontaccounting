@@ -1,0 +1,14 @@
+Package: it_IT
+Version: 2.3.0-1
+Description: Italian translation
+Author: Paolo Ardoino <paolo.ardoino@gmail.com>
+Homepage: frontaccounting.net
+Language: it_IT
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Italian
+InstallPath: lang/it_IT
+Filename: it_IT-2.3.0-1
+

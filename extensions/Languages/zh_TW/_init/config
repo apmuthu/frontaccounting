@@ -1,0 +1,15 @@
+Package: zh_TW
+Version: 2.3.0-2
+Description: Traditional chinese transaltion Version merged from FA 2.2
+Author: Finjon Kiang <kiang@osobiz.com>
+Maintenance: Finjon Kiang <kiang@osobiz.com>
+Homepage: frontaccounting.net
+Language: zh_TW
+Encoding: utf-8
+RTLDir: no
+Depends: 
+Type: language
+Name: Chinese (Traditional)
+InstallPath: lang/zh_TW
+Filename: zh_TW-2.3.0-2
+

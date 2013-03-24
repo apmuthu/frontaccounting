@@ -1,0 +1,15 @@
+Package: ro_RO
+Version: 2.3.0-1
+Description: Romanian translation
+Author: Serban Constantinescu <serban.constantinescu@gmail.com>
+Maintenance: 
+Homepage: frontaccounting.net
+Language: ro_RO
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Romanian
+InstallPath: lang/ro_RO
+Filename: ro_RO-2.3.0-1
+

@@ -1,0 +1,14 @@
+Package: ka_GE
+Version: 2.3.1-5
+Description: Georgian translation
+Author: Giorgi Natsvlishvili <gnatsvlishvili@gmail.com>
+Maintenance: Giorgi Natsvlishvili <gnatsvlishvili@gmail.com>
+Homepage: frontaccounting.net
+Language: ka_GE
+Encoding: utf-8
+RTLDir: no
+Type: language
+Name: Georgian
+InstallPath: lang/ka_GE
+Filename: ka_GE-2.3.1-5
+

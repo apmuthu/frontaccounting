@@ -1,0 +1,12 @@
+Package: grayblue
+Version: 2.3.0-5
+Name: Theme Grayblue
+Description: Div based optional theme
+Filename: grayblue-2.3.0-5
+Author: Joe Hunt
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Depends: 
+Type: theme
+InstallPath: themes/grayblue
+

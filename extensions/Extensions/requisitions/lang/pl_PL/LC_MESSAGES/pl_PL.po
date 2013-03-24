@@ -1,0 +1,267 @@
+# Front Accounting internationalization file.
+# Copyright (C) 2007-2011 Front Accounting Team
+# This file is distributed under the same license as the Front Accounting package.
+# Janusz Dobrowolski <janusz@frontaccounting.eu>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.3.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-19 20:34+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Janusz Dobrowolski<janusz@frontaccounting.eu>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: hooks.php:16 hooks.php:29
+msgid "Requisitions Entries"
+msgstr "Zg³oszenia Zapotrzebowania"
+
+#: hooks.php:18
+msgid "Requisitions Allocation"
+msgstr "Kompletacja Zamówieñ"
+
+#: hooks.php:27 requisition_allocations.php:17 requisition_details.php:17
+#: requisitions.php:17
+msgid "Requisitions"
+msgstr "Kompletacja Zamówieñ"
+
+#: hooks.php:30
+msgid "Requisitions Allocations"
+msgstr "Kompletacja Zamówieñ"
+
+#: requisition_allocations.php:28
+msgid "Purchase orders has been generated."
+msgstr "Zamówienia zosta³y wygenerowane."
+
+#: requisition_allocations.php:30
+msgid "Purchase orders generation failed."
+msgstr "Generowanie zamówieñ zakoñczy³o siê b³êdem."
+
+#: requisition_allocations.php:43
+msgid "The quantity of use cannot be empty."
+msgstr "Wprowad¼ niezerow± ilo¶æ."
+
+#: requisition_allocations.php:49
+msgid "The price cannot be empty."
+msgstr "Podaj cenê."
+
+#: requisition_allocations.php:58 requisition_details.php:67
+msgid "Selected requisition details has been updated."
+msgstr "Szczegó³y zapotrzebowania zosta³y zaktualizowane."
+
+#: requisition_allocations.php:80
+msgid "RNo."
+msgstr "Zno."
+
+#: requisition_allocations.php:80
+msgid "Point of Use"
+msgstr "Miejsce u¿ycia"
+
+#: requisition_allocations.php:80
+msgid "Request Date"
+msgstr "Data Zamówienia"
+
+#: requisition_allocations.php:80 requisition_details.php:129
+msgid "Item Code"
+msgstr "Kod Towaru"
+
+#: requisition_allocations.php:80 requisition_details.php:129
+msgid "Item Name"
+msgstr "Nazwa Towaru"
+
+#: requisition_allocations.php:80 requisition_details.php:129
+msgid "Purpose"
+msgstr "Cel"
+
+#: requisition_allocations.php:80
+msgid "Quantity"
+msgstr "Ilo¶æ"
+
+#: requisition_allocations.php:80
+msgid "Price"
+msgstr "Cena"
+
+#: requisition_allocations.php:80
+msgid "Supplier"
+msgstr "Dostawca"
+
+#: requisition_allocations.php:98 requisition_details.php:143
+#: requisitions.php:116
+msgid "Edit"
+msgstr "Edytuj"
+
+#: requisition_allocations.php:124
+msgid "Supplier : "
+msgstr "Dostawca: "
+
+#: requisition_allocations.php:128 requisition_details.php:175
+msgid "kits"
+msgstr "kpl"
+
+#: requisition_allocations.php:130
+msgid "Order Quantity:"
+msgstr "Ilo¶æ Zamawiana:"
+
+#: requisition_allocations.php:131
+msgid "Order Price :"
+msgstr "Cena Zamówienia:"
+
+#: requisition_allocations.php:139
+msgid "Generate Purchase Orders"
+msgstr "Generuj Zamówienia Zakupu"
+
+#: requisition_details.php:29
+#, php-format
+msgid "Requisition #%d is already completed or does not exists."
+msgstr "Zapotrzebowanie nr %d jest zamkniête lub nie istnieje."
+
+#: requisition_details.php:30 requisition_details.php:36
+msgid "Entry &New Requisition."
+msgstr "Wprowad¼ &Nowe Zapotrzebowanie"
+
+#: requisition_details.php:35
+#, php-format
+msgid "Requisition #%d has been completed."
+msgstr "Zapotrzebowanie nr %d zosta³o zamkniête."
+
+#: requisition_details.php:52
+msgid "The item of use cannot be empty."
+msgstr "U¿yty towar nie mo¿e byæ pusty."
+
+#: requisition_details.php:58
+msgid "The estimated price be empty."
+msgstr "Przybli¿ona cena nie mo¿e byæ pusta."
+
+#: requisition_details.php:72
+msgid "New requisition details has been added"
+msgstr "Dodano nowe szczegó³y zapotrzebowania."
+
+#: requisition_details.php:84
+msgid "Selected requisition detail has been deleted"
+msgstr "Wybrana pozycja zapotrzebowania zosta³a usuniêta"
+
+#: requisition_details.php:103 requisitions.php:103
+msgid "Point of use"
+msgstr "Miejsce u¿ycia"
+
+#: requisition_details.php:103 requisitions.php:103
+msgid "Narrative"
+msgstr "Opis"
+
+#: requisition_details.php:103 requisitions.php:103
+msgid "Application Date"
+msgstr "Data zastosowania"
+
+#: requisition_details.php:103
+msgid "Completation"
+msgstr "Kompletacja"
+
+#: requisition_details.php:114
+msgid "Complete"
+msgstr "Kompletuj"
+
+#: requisition_details.php:129
+msgid "Qrder Quantity"
+msgstr "Ilo¶æ w Zamówieniu"
+
+#: requisition_details.php:129
+msgid "Estimate Price"
+msgstr "Przybli¿ona cena"
+
+#: requisition_details.php:144 requisitions.php:118
+msgid "Delete"
+msgstr "Usuñ"
+
+#: requisition_details.php:170
+msgid "Item :"
+msgstr "Towar:"
+
+#: requisition_details.php:171
+msgid "Purpose :"
+msgstr "Cel:"
+
+#: requisition_details.php:177
+msgid "Requisition Quantity:"
+msgstr "Ilo¶æ potrzebna:"
+
+#: requisition_details.php:178
+msgid "Estimate Price :"
+msgstr "Cena jednostkowa"
+
+#: requisitions.php:34
+msgid "The point of use cannot be empty."
+msgstr "Miejsce u¿ycia nie mo¿e byæ puste."
+
+#: requisitions.php:40
+msgid "The narrative be empty."
+msgstr "Opis nie mo¿e byæ pusty."
+
+#: requisitions.php:49
+msgid "Selected requisition has been updated."
+msgstr "Wybrane zapotrzebowanie zosta³o zaktualizowane"
+
+#: requisitions.php:56
+msgid "New requisition has been added"
+msgstr "Dodano nowe zapotrzebowanie"
+
+#: requisitions.php:69
+msgid ""
+"Cannot delete this requisition because details transactions have been "
+"created referring to it."
+msgstr ""
+"Nie mo¿na usun±æ tego zapotrzebowania, poniewa¿ istniej± s± wprowadznoe do "
+"niego detale."
+
+#: requisitions.php:84
+msgid "Selected requisition has been deleted"
+msgstr "Wybrane zapotrzebowanie zosta³o usuniête"
+
+#: requisitions.php:103
+msgid "RNo. "
+msgstr "Zno. "
+
+#: requisitions.php:103 requisitions.php:120
+msgid "Details"
+msgstr "Szczegó³y"
+
+#: requisitions.php:145
+msgid "Point of use :"
+msgstr "Miejsce u¿ycia:"
+
+#: requisitions.php:146
+msgid "Narrative :"
+msgstr "Opis:"
+
+#: requisitions.php:147
+msgid "Details :"
+msgstr "Szczegó³y"
+
+#: ../../../../themes/default/renderer.php:28
+msgid "Main Menu"
+msgstr "Menu G³ówne"
+
+#: ../../../../themes/default/renderer.php:53
+#: ../../../../themes/default/renderer.php:82
+msgid "Logout"
+msgstr "Wylogowanie"
+
+#: ../../../../themes/default/renderer.php:54
+#: ../../../../themes/default/renderer.php:80
+msgid "Help"
+msgstr "Pomoc"
+
+#: ../../../../themes/default/renderer.php:75
+msgid "Preferences"
+msgstr "Ustawienia"
+
+#: ../../../../themes/default/renderer.php:76
+msgid "Change password"
+msgstr "Zmieñ has³o"
+
+#: ../../../../themes/default/renderer.php:127
+msgid "Theme:"
+msgstr "Temat graf.:"

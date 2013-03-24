@@ -1,0 +1,411 @@
+<h1>Module Textcart</h1>
+
+<h2>Introduction</h2>
+
+<p>This module provides a quick import/export facility between <strong>orders</strong> (or any other carts) and text via the UI.
+This allows, for example :</p>
+
+<ul>
+<li>copy/paste from a Sales Order to a Purchase Order or another Sales Order</li>
+<li>quick modification of an order</li>
+<li>modifying an Order with Excel</li>
+<li>converting email to order</li>
+<li>bulk import of big order</li>
+<li>variant, made easy via the Line Templating System (LTS)</li>
+<li>and much more</li>
+</ul>
+
+<p>Note that this module doesn't create or save orders in the database. It's just an alternative to the current UI for building an order, which then needs to be saved.</p>
+
+<h2>Why exporting to text?</h2>
+
+<p>FA is a web application, therefore you expect to be able to enter an order using the mouse via the user friendly UI, which FA provides.
+However, as nice as a mouse interface can be, entering or manipulating a text can be quicker and allows you to use whatever tool you want to modify it.
+You might want to copy a sales order to a purchase order whilst modifying the quantity to match the supplier minimum quantities or multiply all the prices by a certain factor. It's not easy with a mouse, but it's easy with Excel or any text editor.</p>
+
+<h2>How does it work?</h2>
+
+<p>Just go to any <strong>cart</strong> page (Sale Order, Purchase Order or Item Adjustment/Transfer) and select the <em>Text</em> cart next to the <em>Order</em> one.
+You should then get your order translated in text (if it's not empty).
+You can then copy/paste it into excel or anything else, modify it and re inject it in the same cart or another one. You'll then be able to see your <strong>cart</strong> in the normal UI, check it and save the order if needed.</p>
+
+<h3>Syntax overview</h3>
+
+<p>The format of a textcart is a bit complicated to explain but it's easy to write and grasp by example.
+If you edit an existing order (or add a few items in an empty one) and select the <strong>Text</strong> cart tab, you should have something like this :</p>
+
+<pre><code>  -- some lines starting with '--''
+  -- there are comments (so ignored by FA)
+  -- they are a quick reminder of the syntax
+</code></pre>
+
+<p>then the details of the cart like :</p>
+
+<pre><code>  ITEM1 + 10 $ 4.00 5.0 % | "description of item 1"
+  ITEM2 +  8 $ 5.00 0.0 % | "description of item 2"
+</code></pre>
+
+<p>etc ...</p>
+
+<p>This means you have two items in your cart, the first item being : </p>
+
+<p>ITEM1, quantity 10, price 4.00 and a discount of 5%.</p>
+
+<p><strong><em>Warning</em></strong> : the <strong>$</strong> sign here is not related to your currency, it's just a symbol meaning price.
+The format might be a bit alarming, but this one is meant to be exportable to Excel and have all the information without any ambiguity. You don't need to write everything.</p>
+
+<p>The minimum that you need to write is, the item <em>stock_code</em>.
+Then if you want (in no particular order), the quantity, the price and the discount,
+(quantities are preceded by '<strong>+</strong>', prices by '<strong>$</strong>' and discount followed by '<strong>%</strong>' ).
+Finally an optional description preceded by a '<strong>|</strong>' enclosed or not with double-quotes.</p>
+
+<ul>
+<li>fields can be separated by spaces, tabs and/or commas. </li>
+<li>order doesn't matter (for quantity, price and discount)</li>
+<li>field identifiers ('<strong>+</strong>', '<strong>$</strong>', '<strong>%</strong>') can be attached or separated to their value</li>
+<li>'<strong>+</strong>' is optional if the quantity is an integer (like <em>8</em>)</li>
+<li>'<strong>$</strong>' is optional if the price is a decimal number (like <em>5.00</em>)</li>
+<li>the default quantity is 1</li>
+</ul>
+
+<p>So, the following lines are equivalent (considering that <em>4.00</em> is the default price and <em>"description of item 1"</em> is the real item description)</p>
+
+<pre><code>  ITEM2 +  8 $ 5.00 0.0 % | "description of item 2"
+  ITEM2 +8 $5.00 0.0% | description of item 2 
+  ITEM2 +8,  $5.00, 0.0%, | description of item 2 
+  ITEM2 8 5.00 
+  ITEM2 5.00 8
+  ITEM2 8 $5
+</code></pre>
+
+<p>However </p>
+
+<pre><code>  ITEM2 8 5
+</code></pre>
+
+<p>is wrong, as <em>5</em> will be seen as a quantity, and not a price.</p>
+
+<p>(<em>Note for Excel users</em>) If you copy/paste into Excel you should have 8 columns. The separation between the '<strong>$</strong>' sign and the amount is deliberate. Without that, Excel (my version at least) would consider the column as a string, so it's easier that way.</p>
+
+<p>Lines can also contain formulas and default values through a simple but powerful line templating system (see the <em>Templating System</em> section).</p>
+
+<h2>Update Modes</h2>
+
+<p>Once, you are happy with your text (either entered directly in the text area, or copied from somewhere) you can either replace the whole order, update a part of it or just insert some items.</p>
+
+<p>Let's say your original cart contains :</p>
+
+<pre><code>ITEM-1 10
+ITEM-2 5
+</code></pre>
+
+<p>And your textcart is :</p>
+
+<pre><code>ITEM-2 10
+</code></pre>
+
+<ul>
+<li><p><strong>Replace</strong> will replace all the items with the ones in the textcart. In this case the resulting cart will be :</p>
+
+<p>ITEM-2 10</p></li>
+<li><p><strong>Insert</strong> will append the whole textcart to the original order resulting in :</p>
+
+<p>ITEM-1 10
+ITEM-2 5
+ITEM-2 10</p></li>
+</ul>
+
+<p>We have 2 lines with ITEM-2.</p>
+
+<ul>
+<li><p><strong>Update</strong> will update the lines of the original cart with the new value.</p>
+
+<p>ITEM-1 10
+ITEM-2 10</p>
+
+<p>ITEM-2 quantity has change to 10.</p></li>
+</ul>
+
+<p>Modes an also be overridden for each individual line by starting with either :  </p>
+
+<ul>
+<li>'<strong>+</strong>' insert the current line</li>
+<li>'<strong>=</strong>' update the current line</li>
+<li>'<strong>-</strong>' delete the current line.</li>
+</ul>
+
+<h2>Examples</h2>
+
+<h3>Suppress some lines from a cart</h3>
+
+<p>You want to suppress ITEM-2 from the following cart:</p>
+
+<pre><code>ITEM-1 10
+ITEM-2 5
+</code></pre>
+
+<h4>1st method</h4>
+
+<p>Delete the line ITEM2 from the text, the textcart will look like this :</p>
+
+<pre><code>ITEM-1 10
+</code></pre>
+
+<p>and press <em>Replace</em>.</p>
+
+<h4>2nd method</h4>
+
+<p>Write a text cart to delete ITEM2 with the following :</p>
+
+<pre><code>-ITEM2
+</code></pre>
+
+<p>And press <em>Insert</em>.</p>
+
+<h3>Update</h3>
+
+<p>You want to change the quantity  of ITEM-2 from the following cart to 1:</p>
+
+<p>ITEM-1 10
+   ITEM-2 5</p>
+
+<h3>1st method</h3>
+
+<p>Edit the cart just to change the quantity of ITEM-2 to 1.</p>
+
+<p>ITEM-1 10
+   ITEM-2 1</p>
+
+<p>And press <em>Replace</em>.</p>
+
+<h3>2nd method</h3>
+
+<p>Just write the line you want to change :</p>
+
+<p>ITEM-2 1</p>
+
+<p>and press <em>Update</em>.</p>
+
+<h3>Import/Export to Excel</h3>
+
+<p>If you need to do some complex modifications via Excel, just copy/paste the textcart to Excel, do your modifications, then copy/paste the desired cart from Excel to the text area and press <em>Replace</em>.</p>
+
+<h3>Sales order to purchase order</h3>
+
+<p>If you want to create a purchase order from a sales order, do the following :</p>
+
+<ul>
+<li>just copy the textcart from the sales order</li>
+<li>create a new purchase order, select the text tab from the <strong>Purchase Order</strong> page</li>
+<li>paste the sales order textcart in the textcart area</li>
+<li><p>at this point, we need to change the sales price by the purchasing price. The quickest to do so is to insert the following line (<em>Template Line</em>) at the beginning of the textcart </p>
+
+<p>:# $(@)</p></li>
+<li><p>press <em>Replace</em> and save your order.</p></li>
+</ul>
+
+<p>If you need to do fancy calculations beforehand (like matching the quantity to the minimum quantity required by the supplier), export the cart to Excel (or anything else), make the desired changes to the quantities and prices then import it to the purchase order.</p>
+
+<h3>Transfer all items from one location to another one</h3>
+
+<p>For <strong>Transfer</strong> and <strong>Adjusement</strong> items, if the cart is empty, the default textcart, rather than being empty, will be initially filled with all the items present in the specific location.</p>
+
+<h2>Line Templating System</h2>
+
+<p>For people who need to write big orders from scratch, the line templating system (LTS) allows orders to be written in a really compact way, without having to repeat what doesn't change from line to line.
+Lines sharing the same pattern can be captured to a <em>line template</em>.</p>
+
+<h3>Syntax</h3>
+
+<p>A Line template is identical to a normal line, except it starts with a ':'. It can contain constants (default values) and/or placeholders ('<strong>#</strong>','<strong>@</strong>').</p>
+
+<ul>
+<li>'<strong>#</strong>' will be replaced by the value corresponding to the same field of the current line</li>
+<li>'<strong>@</strong>' will be replaced by the default value (from the database)</li>
+</ul>
+
+<p>In the same way, '<strong>#</strong>' can be used on a normal line and will be replaced by the value of the template.</p>
+
+<h3>Examples</h3>
+
+<p>Let's say that we have the following cart</p>
+
+<pre><code>  ITEM-1 10
+  ITEM-2 10
+  ...
+  ITEM-5 10
+</code></pre>
+
+<p>We don't want to write the number 10 each time, so, let's define a template line this way :</p>
+
+<pre><code>  :# 10
+</code></pre>
+
+<p>'<strong>:</strong>' means the line is a template line.</p>
+
+<p>'<strong>#</strong>' is a placeholder for the stock_code (ignore this for the moment)</p>
+
+<p><em>10</em> is the default quantity.</p>
+
+<p>Each following line would look like the template with the '<strong>#</strong>' expanded (replaced) with the stock code.
+So, the line :</p>
+
+<pre><code>  ITEM-1
+</code></pre>
+
+<p>will be replaced by :</p>
+
+<pre><code>  ITEM-1 10
+</code></pre>
+
+<p>And the line :</p>
+
+<pre><code>  ITEM-2
+</code></pre>
+
+<p>will be replaced by :</p>
+
+<p>ITEM-2 10</p>
+
+<p>Therefore, instead of the initial cart, we can write this :</p>
+
+<pre><code>  :# 10
+  ITEM-1
+  ITEM-2
+  ...
+  ITEM-5
+</code></pre>
+
+<p>They are equivalent, but the later one is shorter.</p>
+
+<p>Placeholders can be used in any field and will be replaced by the value of the corresponding field.
+In the same way, if the stock codes follow a certain pattern (colour variant) we can use a placeholder to construct the stock_code or the description.</p>
+
+<p>Let's say we want the following order :</p>
+
+<pre><code>  T-Shirt/Blue 5
+  T-Shirt/Red 5
+  T-Shirt/Black 10
+</code></pre>
+
+<p>We can write instead :</p>
+
+<pre><code>  :T-Shirt/# 5
+  Blue
+  Red
+  Black 10
+</code></pre>
+
+<p><code>Blue</code>  will be expanded to <code>T-Shirt/Blue 5</code></p>
+
+<p><code>Red</code> to <code>T-Shirt/Red 5</code></p>
+
+<p><strong><em>Note</em></strong> The quantity for black : <em>10</em> will override the template's one.</p>
+
+<p>If we want to add the colour to the description, we just need to write the bit of the description which differs for each product.</p>
+
+<pre><code>  :T-Shirt/# | this a # t-shirt
+  Blue | blue
+  Red | red
+  Black | black
+</code></pre>
+
+<p>Is equivalent to :</p>
+
+<pre><code>  T-Shirt/Blue | this a blue t-shirt
+  T-Shirt/Red | this a red t-shirt
+  T-Shirt/Black | this a black t-shirt
+</code></pre>
+
+<h4>Placeholder in a normal line</h4>
+
+<p>You can also use a placeholder in a normal line, it will be replaced by the value in the template.</p>
+
+<p>Example :</p>
+
+<pre><code>  :Blue | blue
+  T-shirt/# | this a # shirt
+  Skirt/#   | this a # skirt
+</code></pre>
+
+<p>Is equivalent to :</p>
+
+<pre><code>  T-shirt/Blue | this a blue shirt
+  Skirt/Blue   | this a blue skirt
+</code></pre>
+
+<h3>Formula</h3>
+
+<p>Formulas between brackets will be evaluated as arithmetical expressions.</p>
+
+<p>Example, to knock down by 10% the price of every item of an existing order.</p>
+
+<p>Current cart :</p>
+
+<pre><code>  ITEM-1 10.0
+  ITEM-2 20.0
+</code></pre>
+
+<p>Desired cart :</p>
+
+<pre><code>  ITEM-1 9.0
+  ITEM-2 18.0
+</code></pre>
+
+<p>You can do :</p>
+
+<pre><code>  :# $( # * 0.90 )
+  ITEM-1 10.0
+  ITEM-2 20.0
+</code></pre>
+
+<h3>Raw line</h3>
+
+<p>A line starting with a '<strong>!</strong>' will not be expanded :</p>
+
+<p>Example</p>
+
+<pre><code>  :# $( # * 0.90 )
+  ITEM-1 10.0
+  !ITEM-2 20.0
+</code></pre>
+
+<p>will give:</p>
+
+<pre><code>  ITEM-1 9.0
+  ITEM-2 20.0
+</code></pre>
+
+<p>Note the quantity of <em>20</em> form ITEM-2.</p>
+
+<h3>Forcing value</h3>
+
+<p>In the following cart :</p>
+
+<pre><code>  :# 10
+  ITEM-1
+  ITEM-2 4
+</code></pre>
+
+<p>The line values have priority over the template values. Therefore this cart is equivalent to</p>
+
+<pre><code>  ITEM-1 10
+  ITEM-2 4
+</code></pre>
+
+<p>The <em>4</em> of the 2nd line overwrites the default value of the template.</p>
+
+<p>If you want to force <strong>Textcart</strong> to use the template value, use a <strong>constant formula</strong> (as formulas have priority over constants).</p>
+
+<p>The following cart :</p>
+
+<pre><code>  :# (10)
+  ITEM-1 
+  ITEM-2 4
+</code></pre>
+
+<p>will be equivalent to :</p>
+
+<pre><code>  ITEM-1 10
+  ITEM-2 10
+</code></pre>

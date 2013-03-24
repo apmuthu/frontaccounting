@@ -1,0 +1,14 @@
+Package: chart_en_GB-general
+Version: 2.3.0-2
+Name: British COA
+Description: This is a British chart of accounts for a new company.
+Encoding: iso-8859-1
+Author: Kerrsmith UK
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_GB-general.sql
+Filename: chart_en_GB-general-2.3.0-2
+

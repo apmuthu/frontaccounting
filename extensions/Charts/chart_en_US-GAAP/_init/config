@@ -1,0 +1,18 @@
+Package: chart_en_US-GAAP
+Version: 2.3.0-2
+Name: 8 digit GAAP compatible American chart of accounts
+Description: This is an 8 digit American chart of accounts (COA),
+ based on Generally Accepted Accounting Principles of USA (GAAP)
+ and International Accounting  Standards (IAS). This COA have
+ extended characters (100) in the account name and similar names,
+ to better suit long names. This COA is for new companies.
+Encoding: iso-8859-1
+Author: infotechaccountans.com
+Maintenance: Joe Hunt
+Homepage: infotechaccountants.com
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_US-GAAP.sql
+Filename: chart_en_US-GAAP-2.3.0-2
+

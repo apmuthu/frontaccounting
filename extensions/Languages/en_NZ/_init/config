@@ -1,0 +1,15 @@
+Package: en_NZ
+Version: 2.3.2-2
+Description: New Zealand specific vocabulary fixes
+Author: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Maintenance: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Homepage: n/a
+Language: en_NZ
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: English (NZ)
+InstallPath: lang/en_NZ
+Filename: en_NZ-2.3.2-2
+

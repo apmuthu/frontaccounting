@@ -1,0 +1,14 @@
+Package: chart_de_DE-general
+Version: 2.3.0-3
+Name: German general COA
+Description: This is a German chart of accounts for a starting company.
+Encoding: iso-8859-1
+Author: ??
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: de_DE-general.sql
+Filename: chart_de_DE-general-2.3.0-3
+

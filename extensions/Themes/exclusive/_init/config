@@ -1,0 +1,14 @@
+Package: exclusive
+Version: 2.3.10-2
+Name: Theme Exclusive
+Description: Optional theme with tab submenus in left column. Main area is used for
+ various information depending on the module.
+Filename: exclusive-2.3.10-2
+Author: Joe Hunt
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Depends: 
+Type: theme
+Path: exclusive
+InstallPath: themes/exclusive
+

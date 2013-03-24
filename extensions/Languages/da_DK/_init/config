@@ -1,0 +1,16 @@
+Package: da_DK
+Version: 2.3.0-2
+Description: Danish translation Version merged from FA 2.2
+Author: Rasmus Steen Kristensen <rsk@forretningshuset.dk>
+Maintenance: Rasmus Steen Kristensen <rsk@forretningshuset.dk>
+Homepage: frontaccounting.net
+Language: da_DK
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Danish
+Name-da_DK: Dansk
+InstallPath: lang/da_DK
+Filename: da_DK-2.3.0-2
+

@@ -1,0 +1,358 @@
+# Front Accounting internationalization file.
+# Copyright (C) 2007-2011 Front Accounting Team
+# This file is distributed under the same license as the Front Accounting package.
+# Janusz Dobrowolski <janusz@frontaccounting.eu>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 2.3.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-11 12:06+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: MK <m.kozielski@wp.pl>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:17
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:17
+msgid "Amortisation Schedule"
+msgstr "Schemat Amortyzacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:37
+msgid "The valuation year cannot be empty."
+msgstr "Rok wyceny nie moze byæ pusty."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:43
+msgid "The asset value cannot be empty."
+msgstr "Warto¶æ ¶rodka trwa³ego nie mo¿e byæ pusta."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:52
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:55
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:50
+msgid "Selected asset type has been updated"
+msgstr "¦rodek trwa³y zosta³ zaktualizowany"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:57
+msgid "New Asset value has been added"
+msgstr "Dodano nowy ¶rodek trwa³y"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:70
+msgid "Selected asset valuation has been deleted"
+msgstr "Oszacowanie ¶rodka trwa³ego zosta³o usuniête"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Asset Type"
+msgstr "Typ ¶rodka trwa³ego"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "Asset Name"
+msgstr "Nazwa ¶rodka trwa³ego"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Serial Number"
+msgstr "Numer Seryjny"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Purchase Date"
+msgstr "Data zakupu"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Purchase Price"
+msgstr "Cena zakupu"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+msgid "Amortise"
+msgstr "Amortyzuj"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+msgid "Valuation Year"
+msgstr "Rok rewaluacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Asset Value"
+msgstr "Warto¶æ ¶rodka trwa³ego"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+msgid "Value Change"
+msgstr "Zmiana warto¶ci"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:126
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:126
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:117
+msgid "Delete"
+msgstr "Usuñ"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:147
+msgid "Year of Valuation :"
+msgstr "Rok rewaluacji:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:148
+msgid "Asset Value :"
+msgstr "Warto¶æ ¶rodka trwa³ego:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Year"
+msgstr "Rok"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Depreciation"
+msgstr "Deprecjacja"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Disposal Date"
+msgstr "Data likwidacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Disposal Amount"
+msgstr "Warto¶æ likwidacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Name"
+msgstr "Nazwa"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:20
+msgid "Assets"
+msgstr "¦rodki trwa³e"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:39
+msgid "The asset name cannot be empty."
+msgstr "Nazwa ¶rodka trwa³ego nie mo¿e byæ pusta"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:45
+msgid "The purchase value cannot be empty."
+msgstr "Warto¶æ zakupu nie mo¿e byæ zerowa"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:61
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:58
+msgid "New Asset type has been added"
+msgstr "Dodano nowy typ ¶rodka trwa³ego"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:74
+msgid "Cannot delete this asset because amortisation transactions have been created referring to it."
+msgstr "Nie mo¿na usun±æ tego ¶rodka trwa³ego, poniewa¿ istniej± transakcje z nim zwi±zane."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:89
+msgid "Selected asset has been deleted"
+msgstr "Wybrany ¶rodek trwa³y zosta³ usuniêty"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Purchase Value"
+msgstr "Warto¶æ Zakupu"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "Current Value"
+msgstr "Warto¶æ aktualna"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "A"
+msgstr "A"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:124
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:116
+msgid "Edit"
+msgstr "Edytuj"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:165
+msgid "Asset Type :"
+msgstr "Typ ¶rodka trwa³ego:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:166
+msgid "Asset Name :"
+msgstr "Nazwa ¶rodka trwa³ego:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:167
+msgid "Serial Number :"
+msgstr "Numer seryjny:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:168
+msgid "Tag Number :"
+msgstr "Numer Tagu:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:169
+msgid "Purchase Date :"
+msgstr "Data zakupu:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:170
+msgid "Purchase Value :"
+msgstr "Warto¶æ Zakupu:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:171
+msgid "Location :"
+msgstr "Magazyn:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:172
+msgid "Condition :"
+msgstr "Opis zawarto¶ci szablonu:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:173
+msgid "Acquisition :"
+msgstr "Zakup:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:177
+msgid "Disposal Amount :"
+msgstr "Warto¶æ likwidacji:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:178
+msgid "Disposal Date :"
+msgstr "Data likwidacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:17
+msgid "Asset Types"
+msgstr "Typ ¶rodka trwa³ego"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:34
+msgid "The asset type name cannot be empty."
+msgstr "Nazwa typu ¶rodka trwa³ego nie mo¿e byæ pusta"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:40
+msgid "The depreciation rate cannot be empty."
+msgstr "Stawka amortyzacji nie mo¿e byæ pusta"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:71
+msgid "Cannot delete this asset type because assets transactions have been created referring to it."
+msgstr "Nie mo¿na usun±æ tego typu ¶rodka trwa³ego, poniewa¿ istniej± transakcje jego dotycz±ce"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:86
+msgid "Selected asset type has been deleted"
+msgstr "Wybrany typ ¶rodka trwa³ego zosta³ usuniêty"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:105
+msgid "Asset Type Name"
+msgstr "Nazwa Typu"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:105
+msgid "Depreciation Rate"
+msgstr "Rata amortyzacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:146
+msgid "Asset Type:"
+msgstr "Typ ¶rodka trwa³ego:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:147
+msgid "Depreciation Rate:"
+msgstr "Rata amortyzacji:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:149
+msgid "Asset Account:"
+msgstr "Konto ¶rodka trwa³ego"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:150
+msgid "Depreciation Account:"
+msgstr "Konto amortyzacji:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:151
+msgid "Accumulated Depreciation:"
+msgstr "Skumulowana amortyzacja:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:152
+msgid "Asset Revaluation Account:"
+msgstr "Konto Rewaluacji ¶rodków trwa³ych"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:153
+msgid "Disposal Account:"
+msgstr "Konto Likwidacji:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:16
+msgid "&Asset Type Entries"
+msgstr "Typy ¶rodków trwa³ych"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:17
+msgid "&Assets Entries"
+msgstr "Wprowadzanie ¶rodków trwa³ych"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:18
+msgid "&Amortisation Posting"
+msgstr "Ksiêgowania amortyzacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:25
+msgid "Asset Register"
+msgstr "Rejestr ¶rodków trwa³ych"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:27
+msgid "Asset Type Entries"
+msgstr "Typy amortyzacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:28
+msgid "Assets Entries"
+msgstr "Wprowadzanie ¶rodków trwa³ych"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:29
+msgid "Amortisation Posting"
+msgstr "Ksiêgowanie amortyzacji"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:27
+msgid "Main Menu"
+msgstr "Menu G³ówne"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:52
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:78
+msgid "Logout"
+msgstr "Wylogowanie"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:53
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:76
+msgid "Help"
+msgstr "Pomoc"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:71
+msgid "Preferences"
+msgstr "Ustawienia"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:72
+msgid "Change password"
+msgstr "Zmieñ has³o"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:123
+msgid "Theme:"
+msgstr "Temat graf.:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Asset name"
+msgstr "Nazwa ¶rodka trwa³ego"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:69
+msgid "Component"
+msgstr "Komponent"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:71
+msgid "Assets Listing"
+msgstr "Lista ¶rodków trwa³ych"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:5
+msgid "Assets List"
+msgstr "Lista ¶rodków trwa³ych"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:6
+msgid "Comments"
+msgstr "Komentarz"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:6
+msgid "Destination"
+msgstr "Format"
+

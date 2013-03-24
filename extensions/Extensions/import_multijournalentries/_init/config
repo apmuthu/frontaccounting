@@ -1,0 +1,24 @@
+Package: import_multijournalentries
+Version: 2.3.0-4
+Name: Import Multiple Journal Entries
+Description: This extension imports CSV files of the following format:
+ entryid, date, reference, accountcode, dimension1, dimension2, amount, memo
+ - 'entryid' can be any value, so long as it differs from all other entryids
+ in the import file.  Every entryid will result in a separate journal entry
+ being created with the specified transaction data within it.
+ Transactions with the same entryid must be grouped together within the
+ import file.
+ - 'date' and 'reference' should be the same throughout a given entry.
+ - For proper use of all of these fields (except 'entryid'), see the
+ Journal Entry entry dialog within FrontAccounting under Banking and
+ General Ledger.
+ - entryid does *not* correspond to what the journal entry id will be within
+ FrontAccounting.
+Author: Tom Hallman
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Depends: 
+Type: extension
+InstallPath: modules/import_multijournalentries
+Filename: import_multijournalentries-2.3.0-4
+

@@ -1,0 +1,11 @@
+Package: dashboard_theme
+Version: 2.3.15-2
+Name: Theme Dashboard
+Description: Special theme for dashboard module.
+Author: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Maintenance: Alastair Robertson <frontaccounting@kwikpay.co.nz>
+Homepage: frontaccounting.com
+Type: theme
+InstallPath: themes/dashboard
+Filename: dashboard_theme-2.3.15-2
+
