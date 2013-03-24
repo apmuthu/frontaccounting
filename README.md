@@ -15,4 +15,4 @@ Official Links:
 <li>Extensions: http://anonymous:password@repo.frontaccounting.eu/2.3/</li>
 </ul>
 
-The official FrontAccounting Source Tree uses Mercurial on SourceForge.
+The official <a href="http://frontaccounting.hg.sourceforge.net/hgweb/frontaccounting/frontaccounting/">FrontAccounting Source Tree</a> uses Mercurial on SourceForge.
