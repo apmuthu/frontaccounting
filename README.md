@@ -2,7 +2,7 @@ frontaccounting
 ===============
 
 This is an unofficial site for frontaccounting and it's extensions / utilities.
-Currently only the official v2.3.x branch is mirrored here.
+Currently only the official v2.3.x branch is supported here.
 
 Official Links:
 ===============
