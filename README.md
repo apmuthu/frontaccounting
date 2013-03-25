@@ -16,3 +16,18 @@ Official Links:
 </ul>
 
 The official <a href="http://frontaccounting.hg.sourceforge.net/hgweb/frontaccounting/frontaccounting/">FrontAccounting Source Tree</a> uses Mercurial on SourceForge.
+
+Caveats:
+========
+<ul>
+<li>This repo will be updated only when I have the time.</li>
+<li>It is meant to enable easy localised forking on GitHub from any release.</li>
+<li>It can be used to study differences for migration between versions where individual proficiency in using GIT is better than in using Mercurial</li>
+<li>Like any development code repo, code here should be used with care.</li>
+<li>Do not be fooled that any snapshot is well tested stable release, while in many times it is not.</li>
+<li>Using full random snapshots of FA repo is officially unwelcome</li>
+<li>FA Repo code is placed here for study, development and local deployment only especially where internet is not available</li>
+<li>FA versions are not released too often in order to provide a minimal acceptable level of stability, which is important especially in accounting software</li>
+<li>Very soon the FA project will establish an automatically updated GIT mirror repo that should have all the incremental HG changes</li>
+</ul>
+
