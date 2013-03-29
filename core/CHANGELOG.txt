@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-03-29 : 3213 : Missing Journal Inquiry: Work Order selection in list selector.
 2013-03-24 : 3212 : header.inc cleanup
 2013-03-24 : 3211 : Line end cleanups.
 2013-03-23 : 3210 : Cleanup of 3209
