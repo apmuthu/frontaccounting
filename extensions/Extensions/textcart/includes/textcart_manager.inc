@@ -1,5 +1,7 @@
 <?php
 include_once($path_to_root . "/modules/textcart/includes/utilities.inc");
+include_once($path_to_root . "/includes/manufacturing.inc");
+
 define ('INSERT_MODE', 1);
 define ('UPDATE_MODE', 2);
 define ('DELETE_MODE', 3);
@@ -24,6 +26,7 @@ class TextCartManager {
   );
 
   var $cart_mode = null;
+  var $find_count = array();
 
   function handle_post_request() {
     // Process textcart if needed
@@ -81,17 +84,17 @@ class TextCartManager {
   }                                       
 
   var $cart_key = "Items"; // key of the cart in the $POST
-  var $doc_text = "-- This is a comment -- it will be skipped and not processed 
+	var $doc_text = " -- This is a comment -- it will be skipped and not processed 
 -- structure of a line (every fields are optional apart from stock_name)
 -- stock_name optionals fields |  description 
 -- fields could be :
 --   integer or +number : quantity
---   float or \$nubmer  : price
+--   float or \$number  : price
 --   number%            :discount
 --   date or ^date      :date
 -- at the beginning of a line 
 -- : start a template line
--- ! raw line (not preproceseed)
+-- ! raw line (not preprocessed)
 -- before stock name
 -- + add an item
 -- - suppress the line from the cart
@@ -103,6 +106,7 @@ class TextCartManager {
 ";
   var $use_price=true;
   var $use_date=false;
+  var $delete_on_zero = true;
 
   function cart_to_text($cart) {
     $text = $this->doc_text."
@@ -160,6 +164,11 @@ class TextCartManager {
   function process_textcart($cart, $textcart, $default_mode) {
     $template_line = null;
     foreach (explode("\n", $textcart) as $line) {
+			# exit if we reach the --END-- line
+      preg_match('/^\s*---*\s*END\s*--.*$/', $line, $matches);
+			if ($matches) {
+				break;
+			}
       # remove comments
       $line = preg_replace('/--.*/', "", $line);
       # decide which type of line is
@@ -231,8 +240,22 @@ class TextCartManager {
         // we modifidy the first element, we can't use the attributes as criteria as 
         // they are the new value
         $line_no = $this->find_line_number($cart, $stock_code);
-        if (!isset($line_no)) { return; }
-        $this->update_cart_item($cart, $line_no, $stock_code, $quantity, $price, $discount, $date, $description);
+        if (!isset($line_no)) { break; }
+		if($quantity<0) 
+		{
+			$quantity += $this->quantity($cart, $line_no);
+			#relative update
+		}
+		$minimum_quantity = $this->unmodifiable_quantity($cart, $line_no);
+		if($quantity < $minimum_quantity)
+		{
+			display_warning("'$stock_code' has already been dispatched, use minumum quantity $minimum_quantity");
+			$quantity = $minimum_quantity;
+		}
+		if($quantity == 0 && $this->delete_on_zero)
+			$this->remove_from_cart($cart, $line_no, $stock_code);
+		else
+			$this->update_cart_item($cart, $line_no, $stock_code, $quantity, $price, $discount, $date, $description);
         break;
       case DELETE_MODE:
         $line_no = $this->find_line_number($cart, $stock_code, $quantity, $price, $discount, $description);
@@ -273,7 +296,11 @@ class TextCartManager {
       display_error("$stock_code qty $quantity negative quantity not allowed");
   }
 
+  // This function remember what has been found and don't find it twice.
   function find_line_number($cart, $stock_code, $quantity=null, $price=null, $discount=null,  $description=null) {
+	  $count = $this->find_count[$stock_code];
+	  $to_skip = $count+0;
+
     foreach ($cart->line_items as $line_no => $line) {
       if ($line->stock_id == $stock_code 
         //&& match_criteria($line->quantity, $quantity)
@@ -281,7 +308,15 @@ class TextCartManager {
         //&& match_criteria($line->discount_percent , $discount)
         //&& match_criteria($line->item_description, $description)
       ) {
+	      if($to_skip == 0)
+	      {
+		      $this->find_count[$stock_code] = $count+1;
           return $line_no;
+	      }
+	      else 
+	      {
+		      $to_skip -= 1;
+	      }
 
         }
     }
@@ -400,6 +435,9 @@ class TextCartManager {
   function unmodifiable_quantity($cart, $line_no) {
     return 0;
   }
+  function quantity($cart, $line_no) {
+    return $cart->line_items[$line_no]->quantity;
+  }
 }
 
 class SalesTextCartManager extends TextCartManager {
@@ -412,6 +450,90 @@ class SalesTextCartManager extends TextCartManager {
     return $cart->line_items[$line_no]->qty_done;
   }
 }
+
+class DeliverySalesTextCartManager extends SalesTextCartManager {
+	var $delete_on_zero = false;
+  function quantity($cart, $line_no) {
+    $item = $cart->line_items[$line_no];
+    return $item->quantity - $item->qty_done;
+  }
+
+  function unmodifiable_quantity($cart, $line_no) {
+    return 0;
+  }
+
+  function get_location() {
+    return $_POST['Location'];
+  }
+  function location_list() {
+	  if(!$this->_location_list) {
+	  //
+	  // get all locations
+	  $ll = array($this->get_location());
+	  $sql = "SELECT loc_code FROM ".TB_PREF."locations WHERE !inactive";
+	  $result = db_query($sql);
+	  while($row = db_fetch($result)) {
+		  $loc = $row['loc_code'];
+		  if ($loc != $this->get_location()) $ll[]=$loc;
+	  }
+
+	  $this->_location_list = $ll;
+
+	  }
+
+	  return $this->_location_list;
+  }
+  function cart_to_text($cart) {
+    $text = $this->doc_text."
+
+
+
+"; // empty line are important
+foreach($this->location_list() as $location) {
+	$text.="$location, on_demand, on_order, " ;
+}
+$text.="\n";
+    return $text.$this->cart_to_text_v($cart);
+  }
+
+  function demand($stock_id) {
+	  $result = array();
+	  foreach($this->location_list() as $location) {
+		  $result[] = sprintf("%d, %d, %d", $location,  get_qoh_on_date($stock_id, $location, $this->cart->$due_date),
+			  -get_demand_qty($stock_id, $location), get_on_porder_qty($stock_item, $location));
+	  }
+
+	  return $result;
+  }
+
+  function item_to_text($item, $user_price_dec) {
+      $dec = get_unit_dec($item->stock_id);
+      // dodgy format excel compatible
+      $quantity = $item->quantity - $item->qty_done;
+      if($quantity)
+      {
+      $demand = join(", ",$this->demand($item->stock_id));
+      return sprintf("$item->stock_id\t+ %.${dec}f\t\$ %0.${user_price_dec}f\t%0.1f %%%s -- %s\r\n"
+        ,$item->qty_dispatched
+        ,$item->price
+        ,$item->discount_percent*100
+        ,$item->item_description ? "\t| \"$item->item_description\"" : ""
+	,$demand
+      );
+      }
+      else
+	      return "";
+  }
+
+  function update_cart_item($cart, $line_no, $stock_code, $quantity, $price, $discount, $date, $description) {
+	  $item = $cart->line_items[$line_no];
+    if($quantity > ($item->quantity - $item->qty_done))
+      display_error("'$stock_code' can not be updated because some of it has already been dispatched or invoiced");
+    else
+	    $item->qty_dispatched = $quantity;
+  }
+} /*
+ */
 
 class POTextCartManager extends TextCartManager {
   var $cart_key = "PO";
@@ -457,7 +579,19 @@ class POTextCartManager extends TextCartManager {
 class ItemsTextCartManager extends TextCartManager {
   function cart_to_text_v($cart) {
     if (count($cart->line_items) == 0) {
-      return $this->stock_to_text($this->get_location());
+			return "------------------- START ------------------------
+
+
+
+
+
+
+
+--------------------- END ------------------------
+-- Everyhing afert this line would be skipped
+--  please insert you textcart above it
+
+".$this->stock_to_text($this->get_location());
     } 
     else {
       return parent::cart_to_text_v($cart);
@@ -466,23 +600,28 @@ class ItemsTextCartManager extends TextCartManager {
 
   function stock_to_text($location) {
     $text = "";
-    $sql = "SELECT mv.stock_id , SUM(qty) AS quantity, description FROM ".TB_PREF."stock_moves mv
+    $sql = "SELECT mv.stock_id , SUM(qty) AS quantity, description, avg(material_cost) AS cost FROM ".TB_PREF."stock_moves mv
       JOIN ".TB_PREF."stock_master USING(stock_id)
      WHERE  mv.loc_code = '$location'
      GROUP BY mv.stock_id
      having quantity > 0";
 
     $result = db_query($sql, "No transactions were returned");
-    while($move=db_fetch($result)) {
-      $dec = get_unit_dec($move['stock_id']);
-      $description = $move['description'];
-      $text.= sprintf("${move['stock_id']}\t+ %.${dec}f%s\r\n"
-        , $move['quantity']
-      ,$description ? "\t| \"$description\"" : "");
+    while($row=db_fetch($result)) {
+      $dec = get_unit_dec($row['stock_id']);
+      $text.= $this->row_to_text($row, $dec);
     }
 
     return $text;
   }
+
+	function row_to_text($row, $unit_dec) {
+      $description = $row['description'];
+      return sprintf("${row['stock_id']}\t+ %.${unit_dec}f%s\r\n"
+        , $row['quantity']
+      ,$description ? "\t| \"$description\"" : "");
+	}
+
 }
 class ItemsAdjTextCartManager extends ItemsTextCartManager {
   var $cart_key = "adj_items";
@@ -530,6 +669,13 @@ class ItemsAdjTextCartManager extends ItemsTextCartManager {
         add_to_order($cart, $stock_code, -$quantity, $price);
     }
   }
+	function row_to_text($row, $unit_dec) {
+      $description = $row['description'];
+      return sprintf("${row['stock_id']}\t+ %.${unit_dec}f\t$ %f\r\n"
+        , $row['quantity'] * ($_POST['Increase']==1 ?  1 : -1)
+				,$row['cost']
+      ,$description ? "\t| \"$description\"" : "");
+	}
 
   function item_to_text($item) {
       $dec = get_unit_dec($item->stock_id);

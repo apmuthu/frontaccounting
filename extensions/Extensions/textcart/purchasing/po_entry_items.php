@@ -24,8 +24,11 @@ set_page_security( @$_SESSION['PO']->trans_type,
 			ST_SUPPINVOICE => 'SA_SUPPLIERINVOICE'),
 	array(	'NewOrder' => 'SA_PURCHASEORDER',
 			'ModifyOrderNumber' => 'SA_PURCHASEORDER',
+			'AddedID' => 'SA_PURCHASEORDER',
 			'NewGRN' => 'SA_GRN',
-			'NewInvoice' => 'SA_SUPPLIERINVOICE')
+			'AddedGRN' => 'SA_GRN',
+			'NewInvoice' => 'SA_SUPPLIERINVOICE',
+			'AddedPI' => 'SA_SUPPLIERINVOICE')
 );
 
 $js = '';
@@ -391,7 +394,8 @@ function can_commit()
 		set_focus('StkLocation');
 		return false;
 	} 
-	
+	if (!db_has_currency_rates($_SESSION['PO']->curr_code, $_POST['OrderDate']))
+		return false;
 	if ($_SESSION['PO']->order_has_items() == false)
 	{
      	display_error (_("The order cannot be placed because there are no lines entered on this order."));
@@ -433,7 +437,8 @@ function handle_commit_order()
 			//Direct GRN
 			if ($cart->trans_type == ST_SUPPRECEIVE)
 				$cart->reference = $ref;
-			$cart->Comments = $cart->reference; //grn does not hold supp_ref
+			if ($cart->trans_type != ST_SUPPINVOICE)	
+				$cart->Comments = $cart->reference; //grn does not hold supp_ref
 			foreach($cart->line_items as $key => $line)
 				$cart->line_items[$key]->receive_qty = $line->quantity;
 			$grn_no = add_grn($cart);
@@ -453,8 +458,8 @@ function handle_commit_order()
 			$inv->tax_included = $cart->tax_included;
 			$supp = get_supplier($cart->supplier_id);
 			$inv->tax_group_id = $supp['tax_group_id'];
-//			$inv->ov_discount 'this isn't used at all'
-			$inv->ov_amount = $inv->ov_gst = 0;
+
+			$inv->ov_amount = $inv->ov_gst = $inv->ov_discount = 0;
 			
 			foreach($cart->line_items as $key => $line) {
 				$inv->add_grn_to_trans($line->grn_item_id, $line->po_detail_rec, $line->stock_id,

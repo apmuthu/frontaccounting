@@ -35,11 +35,19 @@ set_page_security( @$_SESSION['Items']->trans_type,
 			ST_CUSTDELIVERY => 'SA_SALESDELIVERY',
 			ST_SALESINVOICE => 'SA_SALESINVOICE'),
 	array(	'NewOrder' => 'SA_SALESORDER',
-			'ModifySalesOrder' => 'SA_SALESORDER',
+			'ModifyOrderNumber' => 'SA_SALESORDER',
+			'AddedID' => 'SA_SALESORDER',
+			'UpdatedID' => 'SA_SALESORDER',
 			'NewQuotation' => 'SA_SALESQUOTE',
 			'ModifyQuotationNumber' => 'SA_SALESQUOTE',
+			'NewQuoteToSalesOrder' => 'SA_SALESQUOTE',
+			'AddedQU' => 'SA_SALESQUOTE',
+			'UpdatedQU' => 'SA_SALESQUOTE',
 			'NewDelivery' => 'SA_SALESDELIVERY',
-			'NewInvoice' => 'SA_SALESINVOICE')
+			'AddedDN' => 'SA_SALESDELIVERY', 
+			'NewInvoice' => 'SA_SALESINVOICE',
+			'AddedDI' => 'SA_SALESINVOICE'
+			)
 );
 
 $js = '';
@@ -242,6 +250,7 @@ function copy_to_cart()
 	$cart->document_date = $_POST['OrderDate'];
 
 	$newpayment = false;
+
 	if (isset($_POST['payment']) && ($cart->payment != $_POST['payment'])) {
 		$cart->payment = $_POST['payment'];
 		$cart->payment_terms = get_payment_terms($_POST['payment']);
@@ -251,7 +260,7 @@ function copy_to_cart()
 		if ($newpayment) {
 			$cart->due_date = $cart->document_date;
 			$cart->phone = $cart->cust_ref = $cart->delivery_address = '';
-			$cart->ship_via = 1;
+			$cart->ship_via = 0;
 			$cart->deliver_to = '';
 		}
 	} else {
@@ -405,12 +414,10 @@ function can_process() {
 		set_focus('ref');
 		return false;
 	}
-   	if ($_SESSION['Items']->trans_no==0 && !is_new_reference($_POST['ref'], 
-   		$_SESSION['Items']->trans_type)) {
-   		display_error(_("The entered reference is already in use."));
-		set_focus('ref');
-   		return false;
-   	} elseif ($_SESSION['Items']->get_items_total() < 0) {
+	if (!db_has_currency_rates($_SESSION['Items']->customer_currency, $_POST['OrderDate']))
+		return false;
+	
+   	if ($_SESSION['Items']->get_items_total() < 0) {
 		display_error("Invoice total amount cannot be less than zero.");
 		return false;
 	}
@@ -428,30 +435,45 @@ if (isset($_POST['ProcessOrder']) && can_process()) {
 	copy_to_cart();
 	$modified = ($_SESSION['Items']->trans_no != 0);
 	$so_type = $_SESSION['Items']->so_type;
-	
-	$_SESSION['Items']->write(1);
-	if (count($messages)) { // abort on failure or error messages are lost
-		$Ajax->activate('_page_body');
-		display_footer_exit();
+
+	$ret = $_SESSION['Items']->write(1);
+	if ($ret == -1)
+	{
+		display_error(_("The entered reference is already in use."));
+		$ref = get_next_reference($_SESSION['Items']->trans_type);
+		if ($ref != $_SESSION['Items']->reference)
+		{
+			display_error(_("The reference number field has been increased. Please save the document again."));
+			$_POST['ref'] = $_SESSION['Items']->reference = $ref;
+			$Ajax->activate('ref');
+		}	
+		set_focus('ref');
 	}
-	$trans_no = key($_SESSION['Items']->trans_no);
-	$trans_type = $_SESSION['Items']->trans_type;
-	new_doc_date($_SESSION['Items']->document_date);
-	processing_end();
-	if ($modified) {
-		if ($trans_type == ST_SALESQUOTE)
-			meta_forward($_SERVER['PHP_SELF'], "UpdatedQU=$trans_no");
-		else	
-			meta_forward($_SERVER['PHP_SELF'], "UpdatedID=$trans_no");
-	} elseif ($trans_type == ST_SALESORDER) {
-		meta_forward($_SERVER['PHP_SELF'], "AddedID=$trans_no");
-	} elseif ($trans_type == ST_SALESQUOTE) {
-		meta_forward($_SERVER['PHP_SELF'], "AddedQU=$trans_no");
-	} elseif ($trans_type == ST_SALESINVOICE) {
-		meta_forward($_SERVER['PHP_SELF'], "AddedDI=$trans_no&Type=$so_type");
-	} else {
-		meta_forward($_SERVER['PHP_SELF'], "AddedDN=$trans_no&Type=$so_type");
-	}
+	else
+	{
+		if (count($messages)) { // abort on failure or error messages are lost
+			$Ajax->activate('_page_body');
+			display_footer_exit();
+		}
+		$trans_no = key($_SESSION['Items']->trans_no);
+		$trans_type = $_SESSION['Items']->trans_type;
+		new_doc_date($_SESSION['Items']->document_date);
+		processing_end();
+		if ($modified) {
+			if ($trans_type == ST_SALESQUOTE)
+				meta_forward($_SERVER['PHP_SELF'], "UpdatedQU=$trans_no");
+			else	
+				meta_forward($_SERVER['PHP_SELF'], "UpdatedID=$trans_no");
+		} elseif ($trans_type == ST_SALESORDER) {
+			meta_forward($_SERVER['PHP_SELF'], "AddedID=$trans_no");
+		} elseif ($trans_type == ST_SALESQUOTE) {
+			meta_forward($_SERVER['PHP_SELF'], "AddedQU=$trans_no");
+		} elseif ($trans_type == ST_SALESINVOICE) {
+			meta_forward($_SERVER['PHP_SELF'], "AddedDI=$trans_no&Type=$so_type");
+		} else {
+			meta_forward($_SERVER['PHP_SELF'], "AddedDN=$trans_no&Type=$so_type");
+		}
+	}	
 }
 
 //--------------------------------------------------------------------------------
@@ -565,28 +587,28 @@ function  handle_cancel_order()
 	if ($_SESSION['Items']->trans_type == ST_CUSTDELIVERY) {
 		display_notification(_("Direct delivery entry has been cancelled as requested."), 1);
 		submenu_option(_("Enter a New Sales Delivery"),	"/sales/sales_order_entry.php?NewDelivery=1");
-
 	} elseif ($_SESSION['Items']->trans_type == ST_SALESINVOICE) {
 		display_notification(_("Direct invoice entry has been cancelled as requested."), 1);
 		submenu_option(_("Enter a New Sales Invoice"),	"/sales/sales_order_entry.php?NewInvoice=1");
-	} else {
+	} elseif ($_SESSION['Items']->trans_type == ST_SALESQUOTE)
+	{
+		delete_sales_order(key($_SESSION['Items']->trans_no), $_SESSION['Items']->trans_type);
+		display_notification(_("This sales quotation has been cancelled as requested."), 1);
+		submenu_option(_("Enter a New Sales Quotation"), "/sales/sales_order_entry.php?NewQuotation=Yes");
+	} else { // sales order
 		if ($_SESSION['Items']->trans_no != 0) {
-			if ($_SESSION['Items']->trans_type == ST_SALESORDER && 
-				sales_order_has_deliveries(key($_SESSION['Items']->trans_no)))
-				display_error(_("This order cannot be cancelled because some of it has already been invoiced or dispatched. However, the line item quantities may be modified."));
-			else {
+			$order_no = key($_SESSION['Items']->trans_no);
+			if (sales_order_has_deliveries($order_no))
+			{
+				close_sales_order($order_no);
+				display_notification(_("Undelivered part of order has been cancelled as requested."), 1);
+				submenu_option(_("Select Another Sales Order for Edition"), "/sales/inquiry/sales_orders_view.php?type=".ST_SALESORDER);
+			} else {
 				delete_sales_order(key($_SESSION['Items']->trans_no), $_SESSION['Items']->trans_type);
-				if ($_SESSION['Items']->trans_type == ST_SALESQUOTE)
-				{
-					display_notification(_("This sales quotation has been cancelled as requested."), 1);
-					submenu_option(_("Enter a New Sales Quotation"), "/sales/sales_order_entry.php?NewQuotation=Yes");
-				}
-				else
-				{
-					display_notification(_("This sales order has been cancelled as requested."), 1);
-					submenu_option(_("Enter a New Sales Order"), "/sales/sales_order_entry.php?NewOrder=Yes");
-				}
-			}	
+
+				display_notification(_("This sales order has been cancelled as requested."), 1);
+				submenu_option(_("Enter a New Sales Order"), "/sales/sales_order_entry.php?NewOrder=Yes");
+			}
 		} else {
 			processing_end();
 			meta_forward($path_to_root.'/index.php','application=orders');
@@ -730,6 +752,8 @@ if ($customer_error == "") {
 		    _('Check entered data and save document'), 'default');
 		submit_js_confirm('CancelOrder', _('You are about to void this Document.\nDo you want to continue?'));
 	} else {
+		if ($_SESSION['Items']->trans_type==ST_SALESORDER)
+			submit_js_confirm('CancelOrder', _('You are about to cancel undelivered part of this order.\nDo you want to continue?'));
 		submit_center_first('ProcessOrder', $corder,
 		    _('Validate changes and update document'), 'default');
 	}
@@ -739,6 +763,7 @@ if ($customer_error == "") {
 } else {
 	display_error($customer_error);
 }
+
 end_form();
 end_page();
 ?>

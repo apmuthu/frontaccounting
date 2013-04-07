@@ -1,11 +1,11 @@
 /README.html: 9bcd945769ff85b633f6de6d2033bd7c063fc61c
 /README.md: e614d6e4a7b32355041e6ecc7544aec46acf31bd
-/sales/sales_order_entry.php: 202f46ec08db0cd115a7a8dd8f408b363edc4fb8
+/sales/sales_order_entry.php: e04c52d8a3fe02d31942df1a9cedc19a889182c5
 /hooks.php: 620b6074a7e8029aaf7e481bfb23a92bebcd4723
-/inventory/transfers.php: ad15bc4cfece6d0f43d72632da34a54eeafc5292
-/inventory/adjustments.php: c3639a1871a23c43db6c85b11e9a8b31e8f2fe6a
-/purchasing/po_entry_items.php: e6d2efef17abefdbe5fe41c724b4d7fafe44778e
-/includes/utilities.inc: 90e7301bb8fea11763c8dc9fbf41b0a8d799f8b9
-/includes/textcart_manager.inc: 9210f28e2c039acb9f784a16fa612a3aa4007dda
-/_init/config: 521617745a765ce516102a136f7311dce95481a6
+/inventory/transfers.php: be032afaa01e5d20f762f7fad0030243a2bb5c64
+/inventory/adjustments.php: d8f332223042678a1b9fa54265f109bb88457798
+/purchasing/po_entry_items.php: 3f9702d0311cf1a8fc55bab4ca22529c52d04162
+/includes/utilities.inc: a9481ad121125a92d3adf464ea1c3027b4e3bd21
+/includes/textcart_manager.inc: bb6f3fc9b9779794e316278bedfafb4ccf97d4c5
+/_init/config: 5a1680fcf7a13972c90f0cab0ab5a5908a8a8c8f
 

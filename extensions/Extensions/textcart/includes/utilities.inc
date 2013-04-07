@@ -27,7 +27,7 @@ function match_criteria($value, $criteria) {
 function expand_template($template, $value, $default_value=null) {
   # replace # placeholder
   #echo "expandind template=$template value=$value default_value=$default_value<br/>";
-  if($value) {
+  if(isset($value) && $value!="") {
     if($template) {
         if(field_value_is_constant($value) == false) {
           # Value needs to be evaluated (either # or ())
@@ -46,7 +46,7 @@ function expand_template($template, $value, $default_value=null) {
   #echo "    null template=$template value=$value default_value=$default_value<br/>";
   }
 
-  if($value)  {
+  if(isset($value) && $value!="")  {
   # now use default value if needed
     $value = str_replace('@', $default_value, $value); 
   #echo "    default template=$template value=$value default_value=$default_value<br/>";
