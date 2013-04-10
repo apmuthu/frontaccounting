@@ -10,6 +10,12 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-04-10 : 3218 : Paypal link url fixed again.
+2013-04-09 : 3217 : Dimension view balances were not updated after change in date range selection.
+2013-04-08 : 3216 : Superceded by HG 3218
+2013-04-08 : 3215 : 0002183: Advanced assembly should work with empty BOM. Fixed.
+2013-04-08 : 3214 : 0002172: Work entry not adjusting cost, fixed
+
 2013-03-29 : 3213 : Missing Journal Inquiry: Work Order selection in list selector.
 2013-03-24 : 3212 : header.inc cleanup
 2013-03-24 : 3211 : Line end cleanups.
