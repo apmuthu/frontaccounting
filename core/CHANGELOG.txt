@@ -10,6 +10,11 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-04-19 : 3223 : Fixed hotkey menu option selection issues on Chrome.
+2013-04-19 : 3222 : Improved Customer and Supplier Balances Report. Option to choose last column as balance.
+2013-04-18 : 3221 : Fiscal years: fixed typo in error message message. Cleanup in rep308 (improper gettext usage on empty string). (missing rep308.php and wrong encoding in empty.po)
+2013-04-18 : 3220 : Added years 2012, 2013 in standard init sql files.
+2013-04-18 : 3219 : A couple of small bugs in customer and supplier balances report fixed.
 2013-04-10 : 3218 : Paypal link url fixed again.
 2013-04-09 : 3217 : Dimension view balances were not updated after change in date range selection.
 2013-04-08 : 3216 : Superceded by HG 3218
