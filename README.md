@@ -1,7 +1,7 @@
 frontaccounting
 ===============
 
-This is an unofficial site for frontaccounting and it's extensions / utilities.
+This is an unofficial Git Repo for frontaccounting and it's extensions / utilities.
 Currently only the official v2.3.x branch is supported here.
 
 Official Links:
@@ -15,7 +15,8 @@ Official Links:
 <li>Extensions: http://anonymous:password@repo.frontaccounting.eu/2.3/</li>
 </ul>
 
-The official <a href="http://frontaccounting.hg.sourceforge.net/hgweb/frontaccounting/frontaccounting/">FrontAccounting Source Tree</a> uses Mercurial on SourceForge.
+The official <a href="http://frontaccounting.hg.sourceforge.net/hgweb/frontaccounting/frontaccounting/">FrontAccounting Source Tree</a> uses Mercurial on SourceForge 
+and is officially <a href="http://devel.frontaccounting.com/git/">mirrored on Git</a>.
 
 Caveats:
 ========
