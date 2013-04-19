@@ -1,0 +1,11 @@
+Package: rep_stock_movement
+Version: 2.3.4-1
+Description: Stock Movements within a selected period
+Name: Stock Movement Report
+Filename: rep_stock_movement-2.3.4-1
+Author: Chaitanya-India <3chaitanya@gmail.com>
+Maintenance: jujuk aris wahyudi <siji.tux@gmail.com>
+Homepage: frontaccounting.com
+Type: extension
+InstallPath: modules/rep_stock_movement
+
