@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-04-20 : 3224 : New report included in core, Costed Inventory Movement Report (rep308.php).
 2013-04-19 : 3223 : Fixed hotkey menu option selection issues on Chrome.
 2013-04-19 : 3222 : Improved Customer and Supplier Balances Report. Option to choose last column as balance.
 2013-04-18 : 3221 : Fiscal years: fixed typo in error message message. Cleanup in rep308 (improper gettext usage on empty string). (missing rep308.php and wrong encoding in empty.po)
