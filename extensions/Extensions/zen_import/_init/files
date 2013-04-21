@@ -2,10 +2,10 @@
 /lang/index.php: ecaa5f0560883d40dc7508073f57abef01cb438b
 /lang/pl_PL/LC_MESSAGES/pl_PL.mo: 645c5ebe90df042253a12bb180edbf7f48635b3e
 /lang/pl_PL/LC_MESSAGES/pl_PL.po: c286b37c84efa8d4bf79606d1b1b99d736ca86d1
-/readme.txt: 8c7b616c5fc5b844dba1c81530d51be0cd71fcf1
+/readme.txt: 2182497b1552c94c0fdd36891dd5909975860038
 /hooks.php: c2adb8a144b5d420ff1404d34217fdf955536864
-/zencart.php: 6289f1145224cbf279bef2992d4b9b76a9c08431
-/includes/zen_interface_db.inc: c616e8ab84dd902b3ea0453a7c094e2463433bf5
-/includes/zen_orders_db.inc: 44b233d9e7242968eaa5d78ebcf2ad10317c8ca0
-/_init/config: fe6276121bebaa004d8030f13379874bd9c54147
+/zencart.php: b766a959ac53c496fa4135a20492b2f0792ab9f2
+/includes/zen_interface_db.inc: c1052187489f52db77e0ae1978188e653ec69a1d
+/includes/zen_orders_db.inc: 3e0bc99f39816d58ecc1dac60e2a956ea18c91d2
+/_init/config: 4484466afd6c9f05b21baba17b1c30b854ed8d91
 

@@ -27,7 +27,7 @@ function create_zen_prefs()
          `name` char(15) NOT NULL default \"\",
          `value` varchar(100) NOT NULL default \"\",
           PRIMARY KEY  (`name`))
-          TYPE=MyISAM";
+          ENGINE=MyISAM";
     db_query($sql, "Error creating table");
 
 	set_zen_import_pref('lastcid', 0);
@@ -88,6 +88,6 @@ function get_zen_order_ids()
 	global $zen;
 
 	$sql = "SELECT MIN(`orders_id`) as min_oid, MAX(`orders_id`) as max_oid FROM `orders`";
-    $result = mysql_query($sql, $zen);
-    return mysql_fetch_assoc($result);
+   $result = mysql_query($sql, $zen);
+   return mysql_fetch_assoc($result);
 }

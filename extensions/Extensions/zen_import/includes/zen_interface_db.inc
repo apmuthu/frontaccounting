@@ -21,11 +21,17 @@ function zen_connect()
 function zen_get_zone_code($zen, $zone_name) {
     $sql = "SELECT zone_code FROM zones WHERE zone_name='$zone_name'";
     $result = mysql_query($sql, $zen);
-    $zone = mysql_fetch_assoc($result);
-    mysql_free_result($result);
-    $id = $zone['zone_code'];
-    if (!not_null($id)) $id = $zone_name;
-    return $id;
+    if (!is_resource($result)) {
+    	//There has been an error
+    		_vd(mysql_error());
+    	}
+    	else {
+   	$zone = mysql_fetch_assoc($result);
+    	mysql_free_result($result);
+    	$id = $zone['zone_code'];
+		if (!not_null($id)) $id = $zone_name;
+      return $id;
+      }
 }
 
 function zen_get_zone_code_from_id($zen, $zone_id) {
