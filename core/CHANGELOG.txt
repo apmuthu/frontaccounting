@@ -10,6 +10,10 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-04-25 : 3227 : Ignore hook system in installer.
+2013-04-20 : 3226 : Additional Chrome related fix in hotkeys support.
+2013-04-20 : 3225 : Supplier credit note was not properly checked against sufficient quantity on hand. 
+
 2013-04-20 : 3224 : New report included in core, Costed Inventory Movement Report (rep308.php).
 2013-04-19 : 3223 : Fixed hotkey menu option selection issues on Chrome.
 2013-04-19 : 3222 : Improved Customer and Supplier Balances Report. Option to choose last column as balance.
