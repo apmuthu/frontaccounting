@@ -10,6 +10,11 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-04-30 : 3231 : Renamed the new Sales Summary Report, Detailed to Item Sales Summary Report.
+2013-04-30 : 3230 : Included custome report (Items) Sales Summary Report into FA core. Called Sales Summary Report, Detailed.
+2013-04-29 : 3229 : Cleanup in operation order during transaction voiding.
+2013-04-29 : 3228 : Fixed javascript problem with some IE versions in themes installation, js cleanups.
+
 2013-04-25 : 3227 : Ignore hook system in installer.
 2013-04-20 : 3226 : Additional Chrome related fix in hotkeys support.
 2013-04-20 : 3225 : Supplier credit note was not properly checked against sufficient quantity on hand. 
