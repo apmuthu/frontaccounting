@@ -281,4 +281,15 @@ $login_max_attempts = 10;
 $xr_providers = array("ECB", "YAHOO", "GOOGLE", "BLOOMBERG");
 $dflt_xr_provider = 0;
 
+/*
+	Optional sorting sales documents lines during edition according to item code
+*/
+$sort_sales_items = false;
+
+/*
+	Trial Balance opening balance presentation option.
+	When set to true past years part of opening balance is cleared.
+*/
+$clear_trial_balance_opening = false;
+
 ?>

@@ -92,7 +92,28 @@ class cart
 		$this->read($type, $trans_no, $prep_child);
 		$this->cart_id = uniqid('');
 	}
-	
+
+	/*
+		Optional sorting items by stock_id.
+	*/
+	function _cmp_lines($a, $b)
+	{
+		return strcmp($a->stock_id, $b->stock_id);
+	}
+
+	/*
+		Returns items array optionally sorted by item code.
+	*/
+	function get_items()
+	{
+		global $sort_sales_items;
+
+		$items = $this->line_items;
+		if (@$sort_sales_items)
+			uasort($items, array($this, '_cmp_lines'));
+
+		return $items;
+	}
 	//
 	//	Prepare cart to new child document entry, just after initial parent doc read.
 	//
