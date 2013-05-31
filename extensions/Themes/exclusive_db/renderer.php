@@ -48,8 +48,8 @@ include_once('xpMenu.class.php');
 			{
 				$applications = $_SESSION['App']->applications;
 				$local_path_to_root = $path_to_root;
-				$img = "<img src='$local_path_to_root/themes/exclusive-db/images/login.gif' width='14' height='14' border='0' alt='"._('Logout')."'>&nbsp;&nbsp;";
-				$himg = "<img src='$local_path_to_root/themes/exclusive-db/images/help.gif' width='14' height='14' border='0' alt='"._('Help')."'>&nbsp;&nbsp;";
+				$img = "<img src='$local_path_to_root/themes/exclusive_db/images/login.gif' width='14' height='14' border='0' alt='"._('Logout')."'>&nbsp;&nbsp;";
+				$himg = "<img src='$local_path_to_root/themes/exclusive_db/images/help.gif' width='14' height='14' border='0' alt='"._('Help')."'>&nbsp;&nbsp;";
 				echo "<div id='header'>\n";
 				echo "<ul>\n";
 				echo "  <li><a href='$path_to_root/admin/display_prefs.php?'>" . _("Preferences") . "</a></li>\n";
@@ -90,7 +90,7 @@ include_once('xpMenu.class.php');
 				 	'manuf'=>'cog.png', 'proj'=>'time.png', 'GL'=>'gl.png', 'system'=>'controller.png');
 				if (!isset($imgs[$app->id]))
 					$imgs[$app->id] = "controller.png";
-				$xpmenu->addCategory($app->id, $acc[0], "$local_path_to_root/themes/exclusive-db/images/".$imgs[$app->id], $app->id);
+				$xpmenu->addCategory($app->id, $acc[0], "$local_path_to_root/themes/exclusive_db/images/".$imgs[$app->id], $app->id);
 				$i = $j = 0;
 				if ($sel_app == "system")
 					$imgs2 = array("page_edit.png", "page_edit.png", "page_edit.png", "page_edit.png", "folder.gif");
@@ -98,7 +98,7 @@ include_once('xpMenu.class.php');
 					$imgs2 = array("folder.gif", "report.png", "page_edit.png", "money.png", "folder.gif");
 				foreach ($app->modules as $module)
 				{
-					$xpmenu->addOption($i++, $module->name, "$local_path_to_root/themes/exclusive-db/images/transparent.gif", "", $app->id, $sel_app);
+					$xpmenu->addOption($i++, $module->name, "$local_path_to_root/themes/exclusive_db/images/transparent.gif", "", $app->id, $sel_app);
 					$apps = array();
 					foreach ($module->lappfunctions as $appfunction)
 						$apps[] = $appfunction;
@@ -112,11 +112,11 @@ include_once('xpMenu.class.php');
 						{
 							if ($application->label != "")
 							{
-								$xpmenu->addOption($i++, $lnk[0], "$local_path_to_root/themes/exclusive-db/images/".$imgs2[$j], "$path_to_root/$application->link", $app->id, $sel_app);
+								$xpmenu->addOption($i++, $lnk[0], "$local_path_to_root/themes/exclusive_db/images/".$imgs2[$j], "$path_to_root/$application->link", $app->id, $sel_app);
 							}
 						}
 						else	
-							$xpmenu->addOption($i++, $lnk[0], "$local_path_to_root/themes/exclusive-db/images/".$imgs2[$j], "#", $app->id, $sel_app);
+							$xpmenu->addOption($i++, $lnk[0], "$local_path_to_root/themes/exclusive_db/images/".$imgs2[$j], "#", $app->id, $sel_app);
 					}
 					$j++;	
 				}
