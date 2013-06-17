@@ -1,0 +1,11 @@
+Package: thinker-theme
+Version: 2.3.15-1
+Name: Thinker theme
+Description: Optional table based theme
+Author: Farhaj Uddin <farhajuddin@hotmail.com>
+Maintenance: Farhaj Uddin <farhajuddin@hotmail.com>
+Homepage: frontaccounting.com
+Type: theme
+InstallPath: themes/thinker
+Filename: thinker-theme-2.3.15-1
+

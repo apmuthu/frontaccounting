@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `0_dashboard_widgets` (
   `description` varchar(100) NOT NULL,
   `param` text,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 INSERT INTO `0_dashboard_widgets` (`id`, `user_id`, `app`, `column_id`, `sort_no`, `collapsed`, `widget`, `description`, `param`) VALUES
 ('1', '1', 'AP', '1', '1', '0', 'weeklysales', 'Top 10 Sales Weeks', '{&quot;top&quot;:&quot;10&quot;,&quot;orderby&quot;:&quot;Gross Sales&quot;,&quot;orderby_seq&quot;:&quot;desc&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;dm.payment_terms = -1&quot;}'),
@@ -57,4 +57,4 @@ CREATE TABLE IF NOT EXISTS `0_dashboard_reminders` (
   `frequency` varchar(20) NOT NULL,
   `param` text,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;

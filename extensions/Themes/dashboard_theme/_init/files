@@ -3,7 +3,6 @@
 /js/jquery.json-2.2.min.js: 8206cc779515d876e09a1c69a91bb92dbc01e459
 /js/index.php: ecaa5f0560883d40dc7508073f57abef01cb438b
 /js/dashboard.js: 4125cbb3e69e526e0f851e7f6555e4a9a300dcd4
-js/jsapi.js: 6133abe74585b35c218069ac720655d3843aef1a
 /readme.txt: 96d5b93e4965810069c185441e021ee4f5e041bf
 /images/menu_update.png: d39d8413130b4e0588485103136f79133691da20
 /images/menu_transaction.png: 70e1a361b7b7c9d80dc6c6e31575f8a67b785427
@@ -47,7 +46,7 @@ js/jsapi.js: 6133abe74585b35c218069ac720655d3843aef1a
 /images/invoice.gif: 6a815451e432bc8a6abdda2a5a542cce49de3d38
 /images/progressbar.gif: 5f0b1b3d414b6d524afc992845161cb49b97262b
 /images/menu_entry.png: a005c0e1916c00c17d1eb25a292110137885f4f0
-/renderer.php: fb02b156630c02bb254b5eea6f6e07893dfc2e74
+/renderer.php: 8d8b63722761ee628cf4ca2a1fea4745f763c188
 /default.css: e596f552271368b26150e7044333eb2d576bc801
 /index.php: ecaa5f0560883d40dc7508073f57abef01cb438b
 /_init/config: 3a100087b224d21ce59c91eba3b71bed1f63731c

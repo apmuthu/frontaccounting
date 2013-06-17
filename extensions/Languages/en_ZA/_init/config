@@ -1,0 +1,15 @@
+Package: en_ZA
+Version: 2.3.17-1
+Description: English (South Africa) translation
+Author: Wynand Louw <wynand@vodamail.co.za>
+Maintenance: Wynand Louw <wynand@vodamail.co.za>
+Homepage: 
+Language: en_ZA
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: English (South Africa)
+InstallPath: lang/en_ZA
+Filename: en_ZA-2.3.17-1
+

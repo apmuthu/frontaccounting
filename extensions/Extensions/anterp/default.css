@@ -1,0 +1,619 @@
+/*--------------------------------------------------\
+| default       |               | default.css       |
+|---------------------------------------------------|
+| For use with:                                     |
+| FrontAccounting 									|
+| http://FrontAccounting.com/  	            		|
+| by Joe Hunt Consulting                            |
+|---------------------------------------------------|
+| Developer:                                        |
+| Joe Hunt                                          |
+|                                                   |
+|---------------------------------------------------|
+| Note:                                             |
+| Changes can be made to this CSS that will be      |
+| reflected throughout FrontAccounting.             |
+|                                                   |
+\--------------------------------------------------*/
+
+/**********************************************************************************************************
+* Edited By: Lim Tee Chert
+* Company: ANTERP SOLUTIONS
+* Email: teechert@gmail.com
+* URL: http://www.anterp.com
+*
+* Paypal Donation Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FE2EQ2S4LAVEQ
+*
+***********************************************************************************************************/
+
+body {
+  margin: 5px 0 0 5px;
+  padding: 0;
+  background: #4e618c none repeat scroll 0% 50%;
+  font-weight: normal;
+  font-family: Trebuchet MS,Arial,Helvetica,Sans-Serif;
+  font-stretch: normal;
+  font-size: 10px;
+}
+tr, td, th {
+  font-size: 11px;
+  line-height: 19px;
+  color: #353535;
+}
+table {
+  text-align: left;
+}
+textarea {
+  font-size: 12px;
+}
+input, select {
+  padding: 1px;
+  font-size: 11px;
+}
+select {
+  max-width: 200px;
+}
+option.inactive {
+  text-decoration: line-through;
+  color: gray;
+}
+input.big {
+  width: 100px;
+}
+input.small {
+  width: 50px;
+}
+a {
+  color: #326ebf;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+}
+a:link {
+  text-decoration: none;
+  color: #326ebf;
+  font-size: 11px;
+  font-weight: bold;
+}
+a:active {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+a:hover, a:focus {
+  color: #6666cc;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.inactive {
+  color: gray;
+}
+button {
+  border: 1px solid #0066cc;
+  padding: 1px 0px;
+  font-size: 11px;
+}
+button img, span {
+  padding: 0px 2px;
+  vertical-align: middle;
+}
+.callout_main {
+  border:  none;
+  margin: 0;
+  padding: 0;
+  font-family: Arial,Helvetica,sans-serif;
+  width: 99%;
+}
+.main_page {
+  border:  none;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+.quick_menu {
+  border:  none;
+  margin: 0;
+  padding: 0;
+  background-color: #4e618c;
+}
+.quick_menu_selected {
+  border:  none;
+  margin: 2px;
+  padding: 2px;
+  font-family: Verdana,Arial,Helvetica;
+  font-size: 13px;
+  white-space: nowrap;
+  color: #00cc00;
+  font-weight: bolder;
+}
+.logoutBar {
+  border-bottom: 1px solid #b3b7bf;
+  background: #eaebec none repeat scroll 0% 50%;
+  padding-right: 1em;
+  color: black;
+  width: 100%;
+}
+.bottomBar {
+  border-bottom: 1px solid #b3b7bf;
+  background: #eaebec none repeat scroll 0% 50%;
+  padding-right: 1em;
+  color: black;
+  width: 100%;
+}
+.bottomBarCell {
+  font-size: 10px;
+  line-height: 12px;
+}
+.bottomBar2 {
+  border-top: 1px solid #b3b7bf;
+  border-bottom: 1px solid #b3b7bf;
+  background: #eaebec none repeat scroll 0% 50%;
+  padding-right: 1em;
+  color: black;
+  width: 100%;
+}
+.logoutBarRight {
+  text-align: right;
+}
+div.logoutBar {
+  border-bottom: 1px solid #b3b7bf;
+  background: #eaebec none repeat scroll 0% 50%;
+  padding-right: 1em;
+  color: black;
+  text-align: right;
+}
+div.logoutBar a {
+  font-weight: normal;
+  margin-left: 1em;
+  color: #436976;
+  background-color: transparent;
+}
+div.logoutBar img {
+  vertical-align: top;
+}
+div.tabs {
+  border-bottom: 1px solid #fdfdfd;
+  padding: 3px 0 0;
+  background: transparent none repeat scroll 0% 50%;
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+div.tabs a {
+  border: 1px solid #b3b7bf;
+  padding: 5px 10px;
+  background: #f2f2f2 none repeat scroll 0% 50%;
+  height: 15px;
+  margin-right: 0;
+  font-weight: bold;
+  color: #436976;
+  font-size: 12px;
+  text-shadow: #ffffff 0px 1px ;
+}
+div.tabs a.selected {
+  border-style: solid;
+  border-color: #b3b7bf #b3b7bf #eaebec;
+  border-width: 1px;
+  background: #eaebec none repeat scroll 0% 50%;
+  font-weight: normal;
+  color: #436976;
+}
+div.tabs a:hover {
+  background: #eaebec none repeat scroll 0% 50%;
+  color: #436976;
+}
+.menu_group {
+  padding: 0px 0px 0px 3px;
+  color: #555555;
+  font-weight: bold;
+  font-size: 13px;
+  background-color: #eaebec;
+  text-shadow: #ffffff 0px 1px ;
+}
+.menu_group_items {
+  border: 1px solid #b3b7bf;
+  padding: 9px;
+  background-color: #f9f9f9;
+  font-weight: normal;
+  text-shadow: #ffffff 0px 1px ;
+}
+#hotkeyshelp {
+  text-align: right;
+  font-weight: bolder;
+}
+#footer {
+  position: relative;
+  bottom: -3px;
+}
+.footer td a {
+  color: #666666;
+  font-size: 9px;
+}
+.footer {
+  font-family: Verdana,Arial,Helvetica;
+  color: #cccccc;
+  font-weight: normal;
+  font-size: 9px;
+  text-align: center;
+  width: 100%;
+}
+.tableheader {
+  color: #555555;
+  background-color: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: #ffffff 0px 1px ;
+}
+.tableheader2 {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  color: #555555;
+  text-align: left;
+  text-shadow: #ffffff 0px 1px ;
+}
+.titletext {
+  border-bottom: 1px solid #efefef;
+  padding: 5px;
+  font-size: 13px;
+  text-shadow: #ffffff 0px 1px ;
+  color: #303030;
+  font-weight: bold;
+  width: 100%;
+}
+.headingtext {
+  font-weight: bold;
+  text-shadow: #ffffff 0px 1px ;
+  color: #555555;
+  font-size: 13px;
+}
+.headingtext2 {
+  font-size: 13px;
+  color: #555555;
+  text-shadow: #ffffff 0px 1px ;
+}
+.headingtext3 {
+  font-size: 12px;
+  font-weight: bold;
+  background-image: none;
+  text-shadow: #ffffff 0px 1px ;
+  color: #555555;
+}
+.errortext {
+  font-size: 13px;
+  color: #ff0000;
+  font-weight: bold;
+}
+.inputsubmit {
+  border: 1px solid #9b9b9b;
+  padding: 4px;
+  text-shadow: #ffffff 0px 1px ;
+  background-color: #d7d6d6;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: inherit;
+  color: #303030;
+}
+.ajaxsubmit {
+  border: 1px solid #9b9b9b;
+  padding: 4px;
+  font-weight: bold;
+  text-shadow: #ffffff 0px 1px ;
+  color: #303030;
+  background-color: #d7d6d6;
+  font-size: 10px;
+  font-style: inherit;
+}
+.oddrow {
+  background-color: #eeeeee;
+}
+.evenrow {
+  background-color: #f8f8f8;
+}
+.overduebg {
+  background-color: #f6abab;
+}
+.overduefg {
+  color: #f6abab;
+}
+.currentfg {
+  color: #ff6666;
+}
+.redfg, a.redfg {
+  color: red;
+  font-weight: bold;
+}
+.settledbg {
+  background-color: #00bb00;
+}
+.settledfg {
+  color: #00bb00;
+}
+.inquirybg {
+  background-color: #fdfeef;
+}
+.currencybg {
+  background-color: #ee8888;
+}
+.stockmankobg {
+  text-shadow: #ffffff 0px 1px ;
+  font-weight: bold;
+  background-color: #f6ff8e;
+  font-size: 11px;
+  color: #d20000;
+}
+.stockmankofg {
+  font-size: 11px;
+  font-weight: bold;
+  color: #d20000;
+  background-color: #f6ff8e;
+  text-shadow: #ffffff 0px 1px ;
+}
+table.tablestyle {
+  border: 1px solid #cfcfcf;
+  border-collapse: collapse;
+}
+table.tablestyle td {
+  border: 1px solid #cfcfcf;
+  border-collapse: collapse;
+}
+table.tablestyle2 {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+}
+table.tablestyle2 td {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+}
+table.tablestyle_inner {
+  border: 1px solid #f9f9f9;
+  border-collapse: collapse;
+}
+table.tablestyle_inner td {
+  border: 1px solid #f9f9f9;
+  border-collapse: collapse;
+}
+.tablestyle_noborder {
+  padding: 3px;
+}
+.label {
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  color: #555555;
+  text-shadow: #ffffff 0px 1px ;
+}
+#loginscreen {
+  background: #f5f5f5 none repeat scroll 0% 50%;
+}
+.login {
+  border-left: 12px solid #367cb5;
+  width: 350px;
+  border-collapse: collapse;
+  background-color: #eeeeee;
+}
+.login td {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+}
+.amount {
+  font-family: Verdana,Arial,Helvetica;
+  font-size: 11px;
+  text-align: right;
+}
+input.amount {
+  border-right: medium none;
+  padding-right: 0px;
+}
+.editbutton {
+  border-style: none;
+  color: #0000ff;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.navibutton[disabled], .navibutton[disabled] span {
+  color: #808080;
+  text-decoration: none;
+  cursor: auto;
+}
+button.navibutton {
+  border-style: none;
+  padding: 0 3px;
+  font-family: Verdana,Arial,Helvetica;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  background-color: transparent;
+  cursor: pointer;
+}
+.navibutton span {
+  text-decoration: underline;
+}
+.navibar {
+  padding: 0 3px;
+  color: #000000;
+  border-collapse: collapse;
+  background-color: #eaebec;
+}
+.navibar tr td {
+  border:  none;
+}
+.listsubmit {
+  display: none;
+}
+ul.ajaxtabs {
+  margin: 3px 3px 0;
+  padding: 3px 0 0;
+  font-family: Tahoma,Verdana;
+  font-style: normal;
+  font-variant: normal;
+  font-size: 12px;
+  line-height: normal;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-weight: bold;
+}
+ul.ajaxtabs li {
+  margin: 0;
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+  display: inline;
+}
+ul.ajaxtabs li button {
+  border-style: solid solid none none;
+  border-color: #b3b7bf #b3b7bf -moz-use-text-color -moz-use-text-color;
+  border-width: 1px 1px medium medium;
+  margin: 0px;
+  padding: 3px 8px;
+  background-color: #eaebec;
+  font-weight: bold;
+}
+ul.ajaxtabs li button:hover {
+  border-top: 1px solid #b3b7bf;
+  color: #ffffff;
+}
+div.spaceBox {
+  border-left: 1px solid #b3b7bf;
+  border-right: 1px solid #b3b7bf;
+  border-bottom: 1px solid #b3b7bf;
+  margin: 0 3px 0px;
+  background-color: #b3b7bf;
+  height: 8px;
+}
+div.contentBox {
+  border: 1px solid #b3b7bf;
+  margin: 0 3px 3px;
+}
+ul.ajaxtabs li button.current, ul.ajaxtabs li button.current:hover {
+  border-left: 1px solid #b3b7bf;
+  background-color: #b3b7bf;
+  color: #ffffff;
+}
+#hints {
+  border: 1px solid #b3b7bf;
+  margin: -4px -2px -2px;
+  padding: 5px;
+  font-size: 13px;
+  background-color: #ffffe0;
+  white-space: nowrap;
+}
+#CCIframe {
+  display: none;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  height: 250px;
+  width: 270px;
+  z-index: 99;
+}
+#CC {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-color: #ffffff;
+  display: none;
+  z-index: 100;
+}
+#CC table {
+  border-left: 1px solid #333366;
+  border-right: 1px solid #333366;
+  font-family: arial,verdana,helvetica,sans-serif;
+  font-size: 8pt;
+}
+#CC th {
+  font-weight: normal;
+  text-align: center;
+}
+#CC th a {
+  padding: 1px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #ffffff;
+}
+#CC td {
+  text-align: center;
+}
+#CC .header {
+  background-color: #285b86;
+}
+#CC .weekday {
+  background-color: #eeeeee;
+  color: #000000;
+}
+#CC .weekend {
+  background-color: #ffffcc;
+  color: #000000;
+}
+#CC .weekno {
+  background-color: #c0daf8;
+  color: #555555;
+}
+#CC .current {
+  border: 1px solid #333399;
+  background-color: #285b86;
+  color: #ffffff;
+}
+#CC .weekday, #CC .weekend, #CC .current {
+  border: 1px solid #ffffff;
+  display: block;
+  text-decoration: none;
+  width: 2em;
+}
+#CC .weekday:hover, #CC .weekend:hover, #CC .current:hover {
+  border: 1px solid #999999;
+  color: #ffffff;
+  background-color: #285b86;
+}
+#CC .previous {
+  text-align: left;
+}
+#CC .next {
+  text-align: right;
+}
+#CC .previous, #CC .next {
+  padding: 1px 3px;
+  font-size: 1.4em;
+}
+#CC .previous a, #CC .next a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+#CC .title {
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+#CC .empty {
+  border: 1px solid #ffffff;
+  background-color: #f8f8f8;
+}
+div.err_msg {
+  border: 1px solid #cc3300;
+  margin: 10px;
+  padding: 3px;
+  background-color: #ffcccc;
+  color: #dd2200;
+  text-align: center;
+}
+div.warn_msg {
+  border: 1px solid #ff9900;
+  margin: 10px;
+  padding: 3px;
+  background-color: #ffff00;
+  color: #ff5500;
+  text-align: center;
+}
+div.note_msg {
+  border: 1px solid #33cc00;
+  margin: 10px;
+  padding: 3px;
+  background-color: #ccffcc;
+  color: #007700;
+  text-align: center;
+}
+#title {
+  margin-bottom: 10px;
+  width: 100%;
+}

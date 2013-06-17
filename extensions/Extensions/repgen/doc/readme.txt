@@ -1,7 +1,7 @@
 /****************************************************************************
 Author: Joe Hunt
 Name: Report Generator REPGEN based on Mr. Bauer's Report Generator from 2002
-Free software under GNU GPL - http://repgen.sf.net
+Free software under GNU GPL
 *****************************************************************************/
 
 If you haven't already, unzip the file 'repgen.zip' in a temporary folder.

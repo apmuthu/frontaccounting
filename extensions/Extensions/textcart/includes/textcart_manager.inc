@@ -195,7 +195,8 @@ class TextCartManager {
             $this->get_default_price($cart, $stock_code));
           //$price = round2($price, $attributes['price'], user_price_dec());
           $discount = $attributes["discount"];
-          $discount =  expand_template($template_line['discount'], $attributes['discount'], 0);
+					$discount =  expand_template($template_line['discount'], $attributes['discount'], 
+												$this->get_default_discount($cart, $stock_code));
         }
         else {
           $price = 0;
@@ -205,7 +206,11 @@ class TextCartManager {
           $date = expand_template($template_line['date'], $attributes['date'], 
           $this->get_default_date($cart, $stock_code));
         }
-        $description =  expand_template($template_line['description'], $attributes['description'], get_kit_description($stock_code));
+				else {
+					$date = null;
+				}
+
+        $description =  expand_template($template_line['description'], $attributes['description'], $this->get_kit_description($cart, $stock_code));
       }
       else {
         $stock_code = $attributes["stock_code"];
@@ -213,9 +218,13 @@ class TextCartManager {
         $quantity = $attributes["quantity"];
         $price = $attributes["price"];
         $discount = $attributes["discount"];
+        $date = $attributes["date"];
         $description = $attributes["description"];
 
       }
+
+			// convert the percentage to float.
+			if($discount) $discount /= 100;
 
       #echo "Stock Code : $stock_code</br><ul>";
       #echo "<li>mode : $mode</li>";
@@ -226,13 +235,10 @@ class TextCartManager {
       #echo "</ul>";
 
       // Checking that product exists, to not process dodgy one
-      $kit = get_item_kit($stock_code);
-      $number = db_num_rows($kit);
-      if ($number == 0) {
+			if(!$this->check_item_exists($stock_code))  {
         display_error("Product '$stock_code' doesn't exist");
         display_error("Line '$line' skipped");
       }
-      db_free_result($kit);
 
       if(!$mode) { $mode = $default_mode; }
       switch ($mode) {
@@ -323,6 +329,7 @@ class TextCartManager {
     display_error("Can't find line details with ".join(", ",array($stock_code, $quantity, $price, $discount, $description)));
     return null;
   }
+
   function parse_line($line) {
     global $mode_map;
     #echo "parsing : $line<br/>";
@@ -331,7 +338,7 @@ class TextCartManager {
     $stock_code = "";
     $quantity = "";
     $price = "";
-    $discount = "";
+    $discount = null;
     $date=null;
     $description = "";
 
@@ -349,7 +356,7 @@ class TextCartManager {
       $mode = $this->mode_map[$matches[1]];
       $stock_code =  $matches[2];
       $fields_str = $matches[3];
-      $description = trim($matches[4], '" ');
+      $description = trim(@$matches[4], '" ');
 
       # Hack to allow spaces between attribute qualifier
       $fields_str = preg_replace('/([+$^])\s*/', '\1' , $fields_str);
@@ -379,7 +386,7 @@ class TextCartManager {
           display_error("price already set for line '$line'");
           return;
         };
-        $price = $matches[1] . $matches[2];//  ack to get first match or the second one
+        $price = $matches[1] . @$matches[2];//  ack to get first match or the second one
       }
       elseif (preg_match('/^(\d+(?:.\d+)?'.PARAM_REG.')%$/', $field, $matches)) {
         if($discount) {
@@ -418,7 +425,7 @@ class TextCartManager {
       ,"stock_code" => $stock_code
       ,"quantity" => $quantity
       ,"price" => $price
-      ,"discount" => $discount/100.0
+      ,"discount" => $discount
       ,"description" => $description
       ,"date" => $date
     );
@@ -432,12 +439,28 @@ class TextCartManager {
     return add_days(Today(), 10);
   } 
 
+	function get_default_discount($cart, $stock_code) {
+		if(empty($cart)) return null;
+		return 100*$cart->default_discount;
+	}
+
+	function get_kit_description($cart, $stock_code) {
+		return get_kit_description($stock_code);
+	}
+
   function unmodifiable_quantity($cart, $line_no) {
     return 0;
   }
   function quantity($cart, $line_no) {
     return $cart->line_items[$line_no]->quantity;
   }
+
+	function check_item_exists($stock_code) {
+      $kit = get_item_kit($stock_code);
+      $number = db_num_rows($kit);
+      db_free_result($kit);
+			return $number != 0;
+	}
 }
 
 class SalesTextCartManager extends TextCartManager {

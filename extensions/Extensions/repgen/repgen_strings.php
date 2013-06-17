@@ -616,7 +616,7 @@ while ($f = db_fetch($res))
 		if (!isset($ine[$i]))
 			$ine[$i] = "";
 	}
-    $in_index = sprintf("%2s%2d%3d%3d%3d%3d%4s%1s%2%d%2d%1s%1s%1s%1s%5s",$sort_ar[$ine[1]],$ine[8],$ine[5],$ine[6],$ine[3],
+    $in_index =	sprintf("%2s%2d%3d%3d%3d%3d%4s%1s%2%d%2d%1s%1s%1s%1s%5s",$sort_ar[$ine[1]],$ine[8],$ine[5],$ine[6],$ine[3],
     	$ine[4], $ine[0],$ine[9],$ine[10], $ine[11], $ine[12], $ine[13], $ine[14], $ine[15],$ine[2]);
         // for sort after 1) Art 2) Ord 3) X1 4) Y1 ....
     $rec_ar[$in_index] = $in;

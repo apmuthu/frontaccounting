@@ -27,7 +27,7 @@ function match_criteria($value, $criteria) {
 function expand_template($template, $value, $default_value=null) {
   # replace # placeholder
   #echo "expandind template=$template value=$value default_value=$default_value<br/>";
-  if(isset($value) && $value!="") {
+  if(isset($value) && $value!=="") {
     if($template) {
         if(field_value_is_constant($value) == false) {
           # Value needs to be evaluated (either # or ())
@@ -46,18 +46,24 @@ function expand_template($template, $value, $default_value=null) {
   #echo "    null template=$template value=$value default_value=$default_value<br/>";
   }
 
-  if(isset($value) && $value!="")  {
+  if(isset($value) && $value!=="")  {
   # now use default value if needed
     $value = str_replace('@', $default_value, $value); 
   #echo "    default template=$template value=$value default_value=$default_value<br/>";
 
-      #evaluate expression 
+      #evaluate arithmtic expression 
       if(preg_match('/^\((.*)\)$/', $value, $matches)) {
-        // keep only arithmetical expression
-        $to_eval =  preg_replace('/[a-zA-Z]*/', "", $matches[1]);
-        #echo "eval trimmed '$matches[1]' => '$to_eval' <br/>";
-        eval("\$value=$to_eval;");
-  #echo "replaced template=$template value=$value default_value=$default_value<br/>";
+				$expression = $matches[1];
+				if(preg_match('/^!(.*)/', $expression, $matches)) {
+					$value = $matches[1];
+				}
+				else {
+					// keep only arithmetical expression
+					$to_eval =  preg_replace('/[a-zA-Z]*/', "", $expression);
+					#echo "eval trimmed '$matches[1]' => '$to_eval' <br/>";
+					eval("\$value=$to_eval;");
+					#echo "replaced template=$template value=$value default_value=$default_value<br/>";
+				 }
       }
     return $value;
   }

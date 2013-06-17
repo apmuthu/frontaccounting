@@ -16,7 +16,6 @@ class hooks_dashboard extends hooks {
 		Install additonal menu options provided by module
 	*/
     function install_tabs($app) {
-
         $app->add_application(new dashboard_app);
     }
 
