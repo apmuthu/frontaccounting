@@ -69,33 +69,47 @@ class db_pager {
 	}
 	//
 	//	Parse base sql select query.
-	//
+	//	or use an associative array.
+	//  Usefull is the query can't be split correctly (using subquery for example).
+	//  The associative array shouldn't contain the keyword itself.
+	//  ex :
+	//  array('select' => 'SUM(quantity)', 'from' => TB_PREF."stock_moves", 'group' => 'location')
 	function set_sql($sql)
 	{
 		if ($sql != $this->sql) {
 		    $this->sql = $sql;
 		    $this->ready = false;
-    		$parts = preg_split('/\sORDER\s*BY\s/si', $sql, 2);
-			if(count($parts) == 2) {
-				$sql = $parts[0];
-				$this->order = $parts[1];
+
+				if(is_array($sql)) {
+					foreach(explode(' ', 'select from where group order') as $section) {
+						$this->$section = @$sql[$section];
+					}
+					$this->select = "SELECT ".$this->select;
+				}
+				else {
+					// parse the query
+						$parts = preg_split('/\sORDER\s*BY\s/si', $sql, 2);
+					if(count($parts) == 2) {
+						$sql = $parts[0];
+						$this->order = $parts[1];
+					}
+						$parts = preg_split('/\sGROUP\s*BY\s/si', $sql, 2);
+					if(count($parts) == 2) {
+						$sql = $parts[0];
+						$this->group = $parts[1];
+					}
+						$parts = preg_split('/\sWHERE\s/si', $sql, 2);
+					if(count($parts) == 2) {
+						$sql = $parts[0];
+						$this->where = $parts[1];
+					}
+						$parts = preg_split('/\sFROM\s/si', $sql, 2);
+					if(count($parts) == 2) {
+						$sql = $parts[0];
+						$this->from = $parts[1];
+					}
+					$this->select = $sql;
 			}
-    		$parts = preg_split('/\sGROUP\s*BY\s/si', $sql, 2);
-			if(count($parts) == 2) {
-				$sql = $parts[0];
-				$this->group = $parts[1];
-			}
-	    	$parts = preg_split('/\sWHERE\s/si', $sql, 2);
-			if(count($parts) == 2) {
-				$sql = $parts[0];
-				$this->where = $parts[1];
-			}
-	    	$parts = preg_split('/\sFROM\s/si', $sql, 2);
-			if(count($parts) == 2) {
-				$sql = $parts[0];
-				$this->from = $parts[1];
-			}
-			$this->select = $sql;
 		}
 	}
 	//
@@ -129,7 +143,16 @@ class db_pager {
 	//
 	function sort_table($col) 
 	{
+
+			$max_priority = 0;
+			foreach($this->columns as $id => $_col) {
+			if(!isset($_col['ord_priority'])) continue;
+				$max_priority = max($max_priority, $_col['ord_priority']);
+			};
+
+
 	    $ord = $this->columns[$col]['ord'];
+  		$this->columns[$col]['ord_priority']  = $max_priority+1; // set priority , higher than anything else
 	    $ord = ($ord == '') ? 'asc' : (($ord == 'asc') ? 'desc' : '');
 	    $this->columns[$col]['ord'] = $ord;
 	    $this->set_page(1);
@@ -274,7 +297,16 @@ class db_pager {
 		if ($group) $sql.= " GROUP BY $group";
 	    $ord = array();
 
+			// sort order column by priority instead of table order.
+			$columns = array();
 	    foreach ($this->columns as $col) {
+					if(isset($col['ord_priority'])) {
+						$columns[$col['ord_priority']] = $col;
+					}
+			}
+			krsort($columns);
+
+	    foreach ($columns as $col) {
 	       	if (isset($col['ord'])) {
 	        	if ( $col['ord'] != '' && isset($col['name'])) {
 		    	    $ord[] = $col['name'] .' '. $col['ord'];

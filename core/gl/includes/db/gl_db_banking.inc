@@ -190,14 +190,14 @@ function add_exchange_variation_all($date=null, $ref="", $memo)
 //	
 
 function add_bank_transfer($from_account, $to_account, $date_,
-	$amount, $ref, $memo_, $charge=0)
+	$amount, $ref, $memo_, $charge=0, $target_amount=0)
 {
 	global $Refs, $SysPrefs;
 	
 	begin_transaction();
 	$args = func_get_args(); if (count($args) < 7) $args[] = 0;
 	$args = (object)array_combine(array('from_account', 'to_account', 'date_', 'amount',
-		'ref', 'memo_', 'charge'), $args);
+		'ref', 'memo_', 'charge', 'target_amount'), $args);
 	$args->trans_no = 0;
 	hook_db_prewrite($args, ST_BANKTRANSFER);
 
@@ -238,16 +238,21 @@ function add_bank_transfer($from_account, $to_account, $date_,
 		$total += add_gl_trans($trans_type, $trans_no, $date_,
 			$charge_act, 0, 0, $person_id, $charge, $currency);
 	}
+
+	// provide backward compatibility for extension modules (target amount can be not passed)
+	$to_currency = $target_amount ? $toact['bank_curr_code'] : $currency;
+	$to_amount = $target_amount ? $target_amount : $amount;
+
 	// do the destination account postings
 	$total += add_gl_trans($trans_type, $trans_no, $date_, $to_gl_account, 0, 0, $person_id,
-		$amount, $currency);
+		$to_amount, $to_currency);
 		
 	/*Post a balance post if $total != 0 */
 	add_gl_balance($trans_type, $trans_no, $date_, -$total);	
 	
 	add_bank_trans($trans_type, $trans_no, $to_account, $ref,
-		$date_, $amount, PT_MISC, $person_id,
-		$currency, "Cannot insert a destination bank transaction");
+		$date_, $to_amount, PT_MISC, $person_id,
+		$to_currency, "Cannot insert a destination bank transaction");
 
 	if ($SysPrefs->auto_currency_revaluation())
 	{
@@ -288,7 +293,7 @@ function add_bank_transfer($from_account, $to_account, $date_,
 // FIXME -revise code for update case
 //
 function write_bank_transaction($trans_type, $trans_no, $from_account, $items, $date_,
-	$person_type_id, $person_id, $person_detail_id,	$ref, $memo_, $use_transaction=true)
+	$person_type_id, $person_id, $person_detail_id,	$ref, $memo_, $use_transaction=true, $settled_amount=null)
 {
 	global $Refs, $SysPrefs;
 
@@ -303,7 +308,7 @@ function write_bank_transaction($trans_type, $trans_no, $from_account, $items, $
 
 	$args = func_get_args(); if (count($args) < 11) $args[] = true;
 	$args = (object)array_combine(array('trans_type', 'trans_no', 'from_account', 'items', 'date_',
-		'person_type_id', 'person_id', 'person_detail_id', 'ref', 'memo_', 'use_transaction'),
+		'person_type_id', 'person_id', 'person_detail_id', 'ref', 'memo_', 'use_transaction', 'settled_amount'),
 		$args);
 	hook_db_prewrite($args, $trans_type);
 	$aid = 0;
@@ -324,7 +329,10 @@ function write_bank_transaction($trans_type, $trans_no, $from_account, $items, $
     	// we need to add a customer transaction record
 
 		// convert to customer currency
-		$cust_amount = exchange_from_to($total_amount, $currency, get_customer_currency($person_id), $date_);
+		if (!isset($settled_amount)) // leaved for backward/ext compatibility 
+			$cust_amount = exchange_from_to($total_amount, $currency, get_customer_currency($person_id), $date_);
+		else
+			$cust_amount = $settled_amount;
 		// we need to negate it too
 		$cust_amount = -$cust_amount;
 
@@ -336,7 +344,10 @@ function write_bank_transaction($trans_type, $trans_no, $from_account, $items, $
     {
     	// we need to add a supplier transaction record
 		// convert to supp currency
-		$supp_amount = exchange_from_to($total_amount, $currency, get_supplier_currency($person_id), $date_);
+		if (!isset($settled_amount)) // leaved for for backward/ext compatibility 
+			$supp_amount = exchange_from_to($total_amount, $currency, get_supplier_currency($person_id), $date_);
+		else
+			$supp_amount = $settled_amount;
 
 		// we need to negate it too
 		$supp_amount = -$supp_amount;
