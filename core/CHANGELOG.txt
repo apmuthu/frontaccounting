@@ -10,6 +10,10 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-08-17 Janusz	Bank Transfer: fixed problem with entering transfer
+2013-08-15 Janusz	Added F4 hotkey for item popup editor in sales documents.
+2013-08-15 Joe   	Customer/Supplier payments with amounts bigger than...
+
 2013-08-01 12:23 +0200 Joe
 (3284) Release 2.3.17
  version.php
