@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-08-26 Janusz	Fixed problem with customer payment allocations (invalid exrate stored in debtor_trans
 2013-08-17 Janusz	Bank Transfer: fixed problem with entering transfer
 2013-08-15 Janusz	Added F4 hotkey for item popup editor in sales documents.
 2013-08-15 Joe   	Customer/Supplier payments with amounts bigger than...
