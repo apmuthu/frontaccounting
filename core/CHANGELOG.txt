@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-09-02 Joe   	Bug no 2409 and 2410. Fixed headers and sql error when deleting a category.
 2013-08-26 Janusz	Fixed problem with customer payment allocations (invalid exrate stored in debtor_trans
 2013-08-17 Janusz	Bank Transfer: fixed problem with entering transfer
 2013-08-15 Janusz	Added F4 hotkey for item popup editor in sales documents.
