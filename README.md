@@ -16,7 +16,7 @@ Official Links:
 </ul>
 
 The old official <a href="http://frontaccounting.hg.sourceforge.net/hgweb/frontaccounting/frontaccounting/">FrontAccounting Source Tree</a> used Mercurial on SourceForge 
-and was officially <a href="http://devel.frontaccounting.com/git/">mirrored on Git</a> till 2013-05-16.
+and was officially <a href="http://devel.frontaccounting.com/git/">mirrored on Git</a> from 2013-04-16 till 2013-05-16.
 
 Current Sole Repo is on <a href="http://devel.frontaccounting.com/git/">Git</a>.
 
@@ -31,6 +31,5 @@ Caveats:
 <li>Using full random snapshots of FA repo is officially unwelcome.</li>
 <li>FA Repo code is placed here for study, development and local deployment only especially where internet is not available.</li>
 <li>FA versions are not released too often in order to provide a minimal acceptable level of stability, which is important especially in accounting software.</li>
-<li>The FA project has established an automatically updated <a href="http://devel.frontaccounting.com/git/">GIT mirror repo</a> that has all the incremental HG and older changes publicly available since 2013-04-16.</li>
 </ul>
 
