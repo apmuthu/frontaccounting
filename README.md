@@ -15,10 +15,8 @@ Official Links:
 <li>Extensions: http://anonymous:password@repo.frontaccounting.eu/2.3/</li>
 </ul>
 
-The old official <a href="http://frontaccounting.hg.sourceforge.net/hgweb/frontaccounting/frontaccounting/">FrontAccounting Source Tree</a> used Mercurial on SourceForge 
-and was officially <a href="http://devel.frontaccounting.com/git/">mirrored on Git</a> from 2013-04-16 till 2013-05-16.
-
-Current Sole Repo is on <a href="http://devel.frontaccounting.com/git/">Git</a>.
+The official <a href="http://frontaccounting.hg.sourceforge.net/hgweb/frontaccounting/frontaccounting/">FrontAccounting Source Tree</a> uses Mercurial on SourceForge 
+and was officially <a href="http://devel.frontaccounting.com/git/">mirrored on Git</a> from 2013-04-16 onwards.
 
 Caveats:
 ========

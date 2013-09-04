@@ -12,6 +12,9 @@ This is a changelog for FrontAccounting All releases.
 
 2013-09-03 Janusz	Customer Payment: fixed missing charge amount during edition, fixed submit button
 2013-09-02 Joe   	Bug no 2409 and 2410. Fixed headers and sql error when deleting a category.
+2013-08-31 Janusz	Customer Payment: fixed bug with exchange rates resulting in invalid postings ts AR and foreign Exchange Gain Accounts.
+2013-08-30 Janusz	Delivery Against Sales Orders: sales orders displayed as overdue after delivery date.
+2013-08-30 Janusz	Customer Balances Report, Supplier Balances Report: balances in home currency were calculated using wrong exchange rates.
 2013-08-26 Janusz	Fixed problem with customer payment allocations (invalid exrate stored in debtor_trans
 2013-08-17 Janusz	Bank Transfer: fixed problem with entering transfer
 2013-08-15 Janusz	Added F4 hotkey for item popup editor in sales documents.
