@@ -1,5 +1,5 @@
 Package: es_CL
-Version: 2.3.13-1
+Version: 2.3.13-2
 Description: Chile spanish translation
 Author: Victor Rodrigez <caribe95@gmail.com>
 Maintenance: Victor Rodrigez <caribe95@gmail.com>
@@ -12,5 +12,5 @@ Type: language
 Name: Spanish (Chile)
 Name-es_CL: Español (Chile)
 InstallPath: lang/es_CL
-Filename: es_CL-2.3.13-1
+Filename: es_CL-2.3.13-2
 
