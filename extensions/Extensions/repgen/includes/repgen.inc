@@ -47,6 +47,62 @@ define ("POS_RIGHT",30);      	// last Print Position at right of line
 define ("YDIST",4);           	// distance between two lines
 
 $p_formate = array("a4"=>"595|842","letter"=>"612|792"); // Paperformat
+
+/*  
+// Full List taken from http://repgen.sf.net  
+// mm x 4 : width x height  
+$p_formate = array(  
+    "A4"=>"595|842",  
+    "A3"=>"842|1190",  
+    "A5"=>"421|595",  
+    "4A0"=>"4767.87|6740.79",  
+    "2A0"=>"3370.39|4767.87",  
+    "A0"=>"2383.94|3370.39",  
+    "A1"=>"1683.94|3370.39",  
+    "A2"=>"1190.55|1683.78",  
+    "A6"=>"297.64|419.53",  
+    "A7"=>"209.76|297.64",  
+    "A8"=>"147.40|209.76",  
+    "A9"=>"104.88|147.40",  
+    "A10"=>"73.70|104.88",  
+    "B0"=>"2834.65|4008.19",  
+    "B1"=>"2004.09|2834.65",  
+    "B2"=>"1417.32|2004.09",  
+    "B3"=>"1000.63|1417.32",  
+    "B4"=>"708.66|1000.63",  
+    "B5"=>"498.90|708.66",  
+    "B6"=>"354.33|498.90",  
+    "B7"=>"249.45|354.33",  
+    "B8"=>"175.75|249.45",  
+    "B9"=>"124.72|175.75",  
+    "B10"=>"87.87|124.72",  
+    "C0"=>"2599.37|3676.54",  
+    "C1"=>"1836.85|2599.37",  
+    "C2"=>"1298.27|1836.85",  
+    "C3"=>"918.43|1298.27",  
+    "C4"=>"649.13|918.43",  
+    "C5"=>"459.21|649.13",  
+    "C6"=>"323.15|459.21",  
+    "C7"=>"229.61|323.15",  
+    "C8"=>"161.57|229.61",  
+    "C9"=>"113.39|161.57",  
+    "C10"=>"79.37|113.39",  
+    "LETTER"=>"612.00|792.00",  
+    "EXECUTIVE"=>"521.86|756.00",  
+    "LEGAL"=>"612.00|1008.00",  
+    "FOLIO"=>"612.00|936.00",  
+    "RA0"=>"2437.80|3458.27",  
+    "RA1"=>"1729.13|2437.80",  
+    "RA2"=>"1218.90|1729.13",  
+    "RA3"=>"864.57|1218.90",  
+    "RA4"=>"609.45|864.57",  
+    "SRA0"=>"2551.18|3628.35",  
+    "SRA1"=>"1814.17|2551.18",  
+    "SRA2"=>"1275.59|1814.17",  
+    "SRA3"=>"907.09|1275.59",  
+    "SRA4"=>"637.80|907.09"); // Paperformat   
+*/  
+ 
 /*
  *
  * Class Item stores one Item of the report
@@ -59,12 +115,12 @@ class item
 	/* this is an Item of the Report
 	*/
 	var $type;         	// Itemtype: String = S, Term = T or DB-Feld = D
-	var $art;          	// Art: Page Head = PH   Group Head = GH
-                   		//      Detail = DE      Group Foor = GF
-                   		//      PageFoot = PF
-	var $fontname;     	//  Fontname
+	var $art;          	// Art: Page Header = PH   Group Header = GH
+                   		//      Detail      = DE   Group Footer = GF
+                   		//      Page Footer = PF
+	var $fontname;     	// Fontname
 	var $fontsize;     	// Fontsize
-	var $fieldlength;  	//  Number of Characters of the field
+	var $fieldlength;  	// Number of Characters of the field
 	var $xpos;         	// x-Position of first character in points or
                    		//            column number, if Group
 	var $ypos;         	// y-Position of first character in points or
@@ -73,14 +129,14 @@ class item
                    		//        depending on $type
 	var $term;         	// Function code if $type = term
 	var $ord;          	// Order of Item in Detail
-	var $from;          	// 2. value for substring of text
+	var $from;          // 2. value for substring of text
 	var $to;          	// 3. value for substring of text
-	//-----------------     for Total sums -----------
+	//-----------------  for Total sums ------------------
 	var $total_item;    // true:this item wants total sum
 	var $o_score;      	// line over the sum
 	var $u_score;      	// line under the score
 	var $bold;         	// should be printed bold
-	//---------------     end of toal sum ----------------
+	//---------------     end of total sum ----------------
 	var $filename;     	// filename of Jpeg-image
 	function get_type(){return $this->type;}
 	function set_type($t){$this->type = $t;}

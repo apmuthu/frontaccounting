@@ -20,7 +20,7 @@ class hooks_repgen extends hooks {
 	function install_access()
 	{
 
-		$security_sections[SS_REPORT_GENERATOR] =	_("Report Generator");
+		$security_sections[SS_REPORT_GENERATOR] = _("Report Generator");
 
 		$security_areas['SA_REPORT_GENERATOR'] = array(SS_REPORT_GENERATOR|130, _("Report Generator"));
 
