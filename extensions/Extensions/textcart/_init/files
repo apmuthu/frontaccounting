@@ -5,12 +5,12 @@
 /test/helper.php: e817faba135c6f604a1d56359e020cba0491cdaa
 /README.html: 9bcd945769ff85b633f6de6d2033bd7c063fc61c
 /README.md: e614d6e4a7b32355041e6ecc7544aec46acf31bd
-/sales/sales_order_entry.php: 6831249e8ae995608393ef100ec08277
+/sales/sales_order_entry.php: 8a464e4869e0dc9503767735f4f963516e55e96b
 /hooks.php: 620b6074a7e8029aaf7e481bfb23a92bebcd4723
 /inventory/transfers.php: 23ee8f8e6a25660b416c005a941ada9d4f683457
 /inventory/adjustments.php: d8f332223042678a1b9fa54265f109bb88457798
-/purchasing/po_entry_items.php: da403cf834b051e91163bebc897333d4
+/purchasing/po_entry_items.php: e4b6056dbc5c53cc8ad1efa7b7fc01404818ce4c
 /includes/utilities.inc: 8602fa67f053a8d01e3065dad40e7b54949bf149
 /includes/textcart_manager.inc: 7150867fa2297fe91a0a5ca7bb2042303a5fd668
-/_init/config: d327a22cd4065c404c64e24fb6d48714
+/_init/config: 4d2c9c5ee3a095bca87e937d8286cf0857582d80
 
