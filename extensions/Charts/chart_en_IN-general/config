@@ -1,0 +1,14 @@
+Package: chart_en_IN-general
+Version: 2.3.0-3
+Name: English Indian COA - New.
+Description: This is an English Indian chart of accounts for a starting company.
+Encoding: iso-8859-1
+Author: Ap.Muthu, India
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_IN-new.sql
+Filename: chart_en_IN-general-2.3.0-3
+

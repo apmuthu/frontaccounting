@@ -1,0 +1,14 @@
+Package: chart_en_AU-general
+Version: 2.3.0-4
+Name: Australian COA with 4 digits
+Description: This is a 4 digit Australian chart of accounts.
+Encoding: iso-8859-1
+Author: ??
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_AU-0000.sql
+Filename: chart_en_AU-general-2.3.0-4
+

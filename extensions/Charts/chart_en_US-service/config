@@ -1,0 +1,16 @@
+Package: chart_en_US-service
+Version: 2.3.0-4
+Name: US chart of accounts for service company.
+Description: service - This is a US chart of accounts for a starting service company.
+ After creating a new company with this chart, please check/create a new fiscal year and
+ change the company data to suit your needs.
+Encoding: iso-8859-1
+Author: infotechaccountants.com
+Maintenance: Joe Hunt
+Homepage: infotechaccountants.com
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_US-service.sql
+Filename: chart_en_US-service-2.3.0-4
+

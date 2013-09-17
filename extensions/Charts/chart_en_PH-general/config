@@ -1,0 +1,16 @@
+Package: chart_en_PH-general
+Version: 2.3.0-3
+Name: General Phillipines chart of accounts.
+Description: service - This is a Phillipines chart of accounts for a starting company.
+ After creating a new company with this chart, please check/create a new fiscal year and
+ change the company data to suit your needs.
+Encoding: iso-8859-1
+Author: Manny Jao <manny@financepros.ph>
+Maintenance: Manny Jao <manny@financepros.ph>
+Homepage: financepros.ph
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_PH-general.sql
+Filename: chart_en_PH-general-2.3.0-3
+

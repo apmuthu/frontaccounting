@@ -1,0 +1,14 @@
+Package: chart_en_US-nonprofit
+Version: 2.3.0-2
+Name: US COA for a nonprofit company
+Description: This is a 4 digit COA.
+Encoding: iso-8859-1
+Author: Allan Brenner <alan@abcompcons.com>
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Depends: frontaccounting.com
+Type: chart
+InstallPath: sql
+SqlScript: en_US-nonprofit.sql
+Filename: chart_en_US-nonprofit-2.3.0-2
+

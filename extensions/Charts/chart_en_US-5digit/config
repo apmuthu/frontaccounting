@@ -1,0 +1,14 @@
+Package: chart_en_US-5digit
+Version: 2.3.0-4
+Name: 5 digit American general coa
+Description: This is a 5 digit American chart of accounts for a new company.
+Encoding: iso-8859-1
+Author: infotechaccountants.com
+Maintenance: Joe Hunt
+Homepage: infotechaccountants.com
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_US-new2.sql
+Filename: chart_en_US-5digit-2.3.0-4
+

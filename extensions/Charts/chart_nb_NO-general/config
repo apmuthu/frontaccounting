@@ -1,0 +1,14 @@
+Package: chart_nb_NO-general
+Version: 2.3.0-3
+Name: Norwegian (Bokmal) general COA
+Description: This is a Norwegian chart of accounts for a starting company.
+Encoding: iso-8859-1
+Author: Rolf B. Hansen
+Maintenance: Rolf B. Hansen
+Homepage: frontaccounting.net
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: nb_NO-default.sql
+Filename: chart_nb_NO-general-2.3.0-3
+

@@ -1,0 +1,15 @@
+Package: chart_ar_EG-general
+Version: 2.3.5-1
+Name: Arabic Egypt COA
+Description: This is an Arabic Egypt chart of accounts for a starting company.
+ Needs some minor translations.
+Author: ??
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Encoding: utf-8
+Type: chart
+InstallPath: sql
+SqlScript: ar_EG-general.sql
+Filename: chart_ar_EG-general-2.3.5-1
+

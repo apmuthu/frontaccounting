@@ -1,0 +1,14 @@
+Package: chart_en_US-general
+Version: 2.3.0-3
+Name: Default American coa (5 digits)
+Description: This is a default American chart of accounts (5 digits) for a new company.
+Encoding: iso-8859-1
+Author: Andrew Kestler
+Maintenance: Joe Hunt
+Homepage: frontaccounting.com
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_US-general.sql
+Filename: chart_en_US-general-2.3.0-3
+

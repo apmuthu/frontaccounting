@@ -1,0 +1,14 @@
+Package: chart_de_AT-general
+Version: 2.3.0-4
+Name: German Austrian COA - General
+Description: This is a German Austrian chart of accounts for a starting company.
+Author: ??
+Maintenance: Joe Hunt
+Homepage: 
+Depends: 
+Encoding: iso-8859-1
+Type: chart
+InstallPath: sql
+SqlScript: de_AT-general.sql
+Filename: chart_de_AT-general-2.3.0-4
+

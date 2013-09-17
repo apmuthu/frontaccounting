@@ -1,0 +1,16 @@
+Package: chart_en_US-4digit
+Version: 2.3.0-5
+Name: General 4 digit COA for new company in US
+Description: This is a general 4 digit US chart of accounts for a starting company.
+ After creating a new company with this chart, please check/create a new
+ fiscal year and change the company data to suit your needs.
+Encoding: iso-8859-1
+Author: infotechaccountants.com
+Maintenance: Joe Hunt
+Homepage: infotechaccountants.com
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: en_US-4digit.sql
+Filename: chart_en_US-4digit-2.3.0-5
+
