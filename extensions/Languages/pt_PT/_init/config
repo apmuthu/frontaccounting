@@ -1,8 +1,8 @@
 Package: pt_PT
-Version: 2.3.0-2
-Description: Portuguese translation Version merged from FA 2.2
-Author: Tiago Cruz <tiacruz@gmail.com>
-Maintenance: Tiago Cruz <tiacruz@gmail.com>
+Version: 2.3.17-1
+Description: Portuguese translation
+Author: Mário Batista <mariorbatista@gmail.com>
+Maintenance: Mário Batista <mariorbatista@gmail.com>
 Homepage: frontaccounting.net
 Language: pt_PT
 Encoding: iso-8859-1
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Portuguese
 InstallPath: lang/pt_PT
-Filename: pt_PT-2.3.0-2
+Filename: pt_PT-2.3.17-1
 
