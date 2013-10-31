@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------
-// $ Revision:  1.0 $
+// $ Revision:  1.1 $
 // Creator: Alastair Robertson (frontaccounting@kwikpay.co.nz)
 // date_:   2012-04-08
 // Title:   Import PayPal transactions
@@ -79,3 +79,9 @@ If the customer/invoice setup option was not ticked, a bank receipt is created, 
 
 PayPal Withdrawals:
 A bank transfer is created crediting the PayPal account and debiting the destination bank account.
+
+Revision:
+---------
+1.1  Reorganise processing to reduce memory usage: create customer records in first pass
+     Update function calls for FA 4.3.18 changes
+	 

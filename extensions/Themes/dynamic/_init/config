@@ -1,5 +1,5 @@
 Package: dynamic
-Version: 2.3.10-3
+Version: 2.3.10-4
 Name: Theme Dynamic
 Description: Optional theme with dynamic scrolling submenus on top. Main area is used for
  various information depending on the module.
@@ -9,5 +9,5 @@ Homepage: frontaccounting.com
 Type: theme
 Path: dynamic
 InstallPath: themes/dynamic
-Filename: dynamic-2.3.10-3
+Filename: dynamic-2.3.10-4
 

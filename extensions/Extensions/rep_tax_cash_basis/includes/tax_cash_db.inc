@@ -42,9 +42,9 @@ function tax_cash_sql($from, $to) {
 
     $sql = "SELECT
             'Output',
-            (ttd.net_amount+ttd.amount)*ex_rate gross_output,
-            ttd.net_amount*ex_rate net_output,
-            ttd.amount*ex_rate payable,
+            ca.amt gross_output,
+            (ca.amt/(ttd.net_amount+ttd.amount)) * ttd.net_amount * ex_rate net_output,
+            (ca.amt/(ttd.net_amount+ttd.amount)) * ttd.amount*ex_rate payable,
             0 gross_input,
             0 net_input,
             0 collectible,
@@ -68,8 +68,8 @@ function tax_cash_sql($from, $to) {
             AND ttd.trans_no = ca.trans_no_to
         INNER JOIN ".TB_PREF."tax_types tt
             ON tt.id = ttd.tax_type_id
-        WHERE ttd.tran_date >= '$fromdate'
-            AND ttd.tran_date <= '$todate'
+        WHERE bt.trans_date >= '$fromdate'
+            AND bt.trans_date <= '$todate'
     UNION ALL
         SELECT
             'Output',
@@ -95,8 +95,8 @@ function tax_cash_sql($from, $to) {
             ON tt.id = ttd.tax_type_id
         WHERE bt.type = ".BT_CREDIT."
             AND bt.person_type_id <> ".PT_SUPPLIER."
-            AND ttd.tran_date >= '$fromdate'
-            AND ttd.tran_date <= '$todate'
+            AND bt.trans_date >= '$fromdate'
+            AND bt.trans_date <= '$todate'
     UNION ALL
         SELECT
             'Output',
@@ -122,17 +122,17 @@ function tax_cash_sql($from, $to) {
             ON tt.id = ttd.tax_type_id
         WHERE bt.type = ".BT_CHEQUE."
             AND bt.person_type_id = ".PT_CUSTOMER."
-            AND ttd.tran_date >= '$fromdate'
-            AND ttd.tran_date <= '$todate'
+            AND bt.trans_date >= '$fromdate'
+            AND bt.trans_date <= '$todate'
     UNION ALL
         SELECT
             'Input',
             0 gross_output,
             0 net_output,
             0 payable,
-            bt.amount*ex_rate gross_input,
-            ttd.net_amount*bt.amount/round(ov_amount+ov_gst+ov_discount,6)*ex_rate net_input,
-            -1*ttd.amount*bt.amount/round(ov_amount+ov_gst+ov_discount,6)*ex_rate collectible,
+            sa.amt*ex_rate gross_input,
+            ttd.net_amount*sa.amt/round(ov_amount+ov_gst+ov_discount,6)*ex_rate net_input,
+            -1*ttd.amount*sa.amt/round(ov_amount+ov_gst+ov_discount,6)*ex_rate collectible,
             ttd.rate,
             bt.type,
             bt.person_type_id,
@@ -153,8 +153,8 @@ function tax_cash_sql($from, $to) {
             AND ttd.trans_no = sa.trans_no_to
         INNER JOIN ".TB_PREF."tax_types tt
             ON tt.id = ttd.tax_type_id
-        WHERE ttd.tran_date >= '$fromdate'
-            AND ttd.tran_date <= '$todate'
+        WHERE bt.trans_date >= '$fromdate'
+            AND bt.trans_date <= '$todate'
     UNION ALL
         SELECT
             'Input',
@@ -180,8 +180,8 @@ function tax_cash_sql($from, $to) {
             ON tt.id = ttd.tax_type_id
         WHERE bt.type <> ".BT_CREDIT."
             AND bt.person_type_id <> ".PT_CUSTOMER."
-            AND ttd.tran_date >= '$fromdate'
-            AND ttd.tran_date <= '$todate'
+            AND bt.trans_date >= '$fromdate'
+            AND bt.trans_date <= '$todate'
     UNION ALL
         SELECT
             'Input',
@@ -207,8 +207,8 @@ function tax_cash_sql($from, $to) {
             ON tt.id = ttd.tax_type_id
         WHERE bt.type = ".BT_CHEQUE."
             AND bt.person_type_id = ".PT_SUPPLIER."
-            AND ttd.tran_date >= '$fromdate'
-            AND ttd.tran_date <= '$todate'
+            AND bt.trans_date >= '$fromdate'
+            AND bt.trans_date <= '$todate'
             ";
   return $sql;
 }

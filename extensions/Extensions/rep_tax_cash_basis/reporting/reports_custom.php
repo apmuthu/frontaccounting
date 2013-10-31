@@ -8,10 +8,10 @@
 // ----------------------------------------------------------------
 
 global $reports, $dim;
-			
+
 $reports->addReport(RC_GL, "_tax_details_cash", _('Tax Details (Cash Basis)'),
-	array(	_('Start Date') => 'DATEBEGINM',
-			_('End Date') => 'DATEENDM',
+	array(	_('Start Date') => 'DATEBEGINTAX',
+			_('End Date') => 'DATEENDTAX',
             _('Net Output/Input Amounts') => 'YES_NO',
 			_('Comments') => 'TEXTBOX',
 			_('Destination') => 'DESTINATION'));

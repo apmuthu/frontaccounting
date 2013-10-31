@@ -42,12 +42,24 @@ function get_paypal_unconfirmed_count($user_id) {
     return $row;
 }
 
-function find_customer_by_ref($ref) {
+function find_customer_by_name($name) {
     $sql = "SELECT debtor_no "
             ."FROM ".TB_PREF."debtors_master dm "
-            ."WHERE dm.debtor_ref = ".db_escape($ref);
+            ."WHERE dm.name = ".db_escape($name);
 
-    $result = db_query($sql,"Cannot customer by ref");
+    $result = db_query($sql,"Cannot customer by name");
+    $row = db_fetch_row($result);
+    return $row[0];
+}
+
+function find_customer_by_email($email) {
+    $sql = "SELECT debtor_no "
+            ."FROM ".TB_PREF."debtors_master dm "
+            ."INNER JOIN ".TB_PREF."crm_contacts cc ON dm.debtor_no = cc.entity_id AND cc.type = 'customer' "
+            ."INNER JOIN ".TB_PREF."crm_persons cp on cc.person_id = cp.id "
+            ."WHERE cp.email = ".db_escape($email);
+
+    $result = db_query($sql,"Cannot customer by email");
     $row = db_fetch_row($result);
     return $row[0];
 }
@@ -59,6 +71,16 @@ function find_customer_branch_by_customer_id($customer_id) {
             ." LIMIT 1 ";
 
     $result = db_query($sql,"Cannot branch by customer id");
+    $row = db_fetch_row($result);
+    return $row[0];
+}
+
+function find_unpaid_invoice_for_customer($customer_id) {
+    $sql = "SELECT debtor_no "
+            ."FROM ".TB_PREF."debtors_master dm "
+            ."WHERE dm.debtor_ref = ".db_escape($ref);
+
+    $result = db_query($sql,"Cannot customer by ref");
     $row = db_fetch_row($result);
     return $row[0];
 }

@@ -31,7 +31,7 @@ function can_process()
 if (isset($_POST['submit']) && can_process())
 {
 	update_company_prefs( get_post( array( 'paypal_bank_id', 'paypal_create_invoices', 'paypal_sales_act',
-		'paypal_sales_tax_act', 'paypal_shipping_act', 'paypal_insurance_act',
+		'paypal_sales_tax_act', 'paypal_fee_act', 'paypal_shipping_act', 'paypal_insurance_act',
 		'paypal_withdraw_id','use_paypal_trn_id', 'paypal_sales_type_id', 'paypal_add_tax', 'paypal_recpt_today',
 		'paypal_tax_group_id', 'paypal_item_tax_id', 'paypal_tax_type_id', 'paypal_tax_included', 'paypal_name_col',
         'paypal_salesman', 'paypal_area', 'paypal_location', 'paypal_shipper', 'paypal_credit_status'
@@ -63,6 +63,10 @@ if (get_company_pref('paypal_sales_act') === null) {
 }
 if (get_company_pref('paypal_sales_tax_act') === null) {
     set_company_pref('paypal_sales_tax_act', 'paypal.setup', 'varchar', 15, 0);
+    refresh_sys_prefs();
+}
+if (get_company_pref('paypal_fee_act') === null) {
+    set_company_pref('paypal_fee_act', 'paypal.setup', 'varchar', 15, 0);
     refresh_sys_prefs();
 }
 if (get_company_pref('paypal_shipping_act') === null) {
@@ -143,6 +147,7 @@ $_POST['paypal_sales_tax_act']  = $myrow["paypal_sales_tax_act"];
 $_POST['paypal_shipping_act']  = $myrow["paypal_shipping_act"];
 $_POST['paypal_insurance_act']  = $myrow["paypal_insurance_act"];
 $_POST['paypal_withdraw_id']  = $myrow["paypal_withdraw_id"];
+$_POST['paypal_fee_act']  = $myrow["paypal_fee_act"];
 $_POST['paypal_sales_type_id']  = $myrow["paypal_sales_type_id"];
 $_POST['use_paypal_trn_id'] = $myrow['use_paypal_trn_id'];
 $_POST['paypal_add_tax'] = $myrow['paypal_add_tax'];
@@ -181,6 +186,7 @@ bank_accounts_list_row(_("Bank Account:"), 'paypal_bank_id', $_POST['paypal_bank
 gl_all_accounts_list_row(_("Sales Account:"), 'paypal_sales_act', $_POST['paypal_sales_act']);
 gl_all_accounts_list_row(_("Sales Tax Account:"), 'paypal_sales_tax_act', $_POST['paypal_sales_tax_act']);
 gl_all_accounts_list_row(_("Shipping Account:"), 'paypal_shipping_act', $_POST['paypal_shipping_act']);
+gl_all_accounts_list_row(_("Fee Account:"), 'paypal_fee_act', $_POST['paypal_fee_act']);
 gl_all_accounts_list_row(_("Insurance Account:"), 'paypal_insurance_act', $_POST['paypal_insurance_act']);
 bank_accounts_list_row(_("Withdrawal Account:"), 'paypal_withdraw_id', $_POST['paypal_withdraw_id'], false);
 table_section_title(_("Tax"));
