@@ -208,8 +208,9 @@ function create_cart($type, $trans_no)
 }
 //-----------------------------------------------------------------------------------------------
 
-if (isset($_POST['Process']))
+function check_trans()
 {
+	global $Refs;
 
 	$input_error = 0;
 
@@ -229,7 +230,7 @@ if (isset($_POST['Process']))
 
 	$amnt_chg = -$_SESSION['pay_items']->gl_items_total()-$_SESSION['pay_items']->original_amount;
 
-	if ($limit != null && floatcmp($limit, -$amnt_chg) < 0)
+	if ($limit !== null && floatcmp($limit, -$amnt_chg) < 0)
 	{
 		display_error(sprintf(_("The total bank amount exceeds allowed limit (%s)."), price_format($limit-$_SESSION['pay_items']->original_amount)));
 		set_focus('code_id');
@@ -279,11 +280,15 @@ if (isset($_POST['Process']))
 	if (!db_has_currency_rates(get_bank_account_currency($_POST['bank_account']), $_POST['date_'], true))
 		$input_error = 1;
 
-	if ($input_error == 1)
-		unset($_POST['Process']);
+	if (in_array(get_post('PayType'), array(PT_SUPPLIER, PT_CUSTOMER)) && (input_num('settled_amount') <= 0)) {
+		display_error(_("Settled amount have to be positive number."));
+		set_focus('person_id');
+		$input_error = 1;
+	}
+	return $input_error;
 }
 
-if (isset($_POST['Process']))
+if (isset($_POST['Process']) && !check_trans())
 {
 	begin_transaction();
 

@@ -48,13 +48,23 @@ function get_supp_trans_allocation_balance($trans_type, $trans_no)
 }
 
 //----------------------------------------------------------------------------------------
-
-function update_supp_trans_allocation($trans_type, $trans_no, $alloc)
+//	Update supplier trans alloc field according to current status of supp_allocations
+//
+function update_supp_trans_allocation($trans_type, $trans_no)
 {
-	$sql = "UPDATE ".TB_PREF."supp_trans SET alloc = alloc + ".db_escape($alloc)."
-		WHERE type=".db_escape($trans_type)." AND trans_no = ".db_escape($trans_no);
+	$sql = "UPDATE `".TB_PREF.($trans_type==ST_PURCHORDER ? 'purch_orders' : 'supp_trans')."` trans,
+			(SELECT sum(amt) amt from ".TB_PREF."supp_allocations
+				WHERE (trans_type_to=".db_escape($trans_type)." AND trans_no_to=".db_escape($trans_no).")
+				OR (trans_type_from=".db_escape($trans_type)." AND trans_no_from=".db_escape($trans_no).")) allocated
+		SET 
+			trans.alloc=IFNULL(allocated.amt, 0)
+		WHERE "	. ($trans_type==ST_PURCHORDER ? 
+			  "trans.order_no=".db_escape($trans_no)
+			: "trans.type=".db_escape($trans_type)." AND trans.trans_no=".db_escape($trans_no));
+
 	db_query($sql, "The supp transaction record could not be modified for the allocation against it");
 }
+
 
 //-------------------------------------------------------------------------------------------------------------
 
@@ -149,6 +159,7 @@ function get_allocatable_from_supp_sql($supplier_id, $settled)
 	return $sql;
 }
 
+
 //-------------------------------------------------------------------------------------------------------------
 
 function get_allocatable_to_supp_transactions($supplier_id, $trans_no=null, $type=null)
@@ -165,7 +176,7 @@ function get_allocatable_to_supp_transactions($supplier_id, $trans_no=null, $typ
 	else
 	{
 		$sql = get_alloc_supp_sql(null, "round(ABS(ov_amount+ov_gst+ov_discount)-alloc,6) > 0
-			AND trans.type != ".ST_SUPPAYMENT."
+			AND trans.type NOT IN (".implode(',',array(ST_SUPPAYMENT, ST_BANKPAYMENT)).")
 			AND trans.supplier_id=".db_escape($supplier_id));
 	}
 

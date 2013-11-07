@@ -87,7 +87,7 @@ function gl_payment_controls()
 		amount_row(_("Amount:"), 'amount', null, null, $from_currency);
 		amount_row(_("Bank Charge:"), 'charge', null, null, $from_currency);
 
-		amount_row("Incomming Amount:", 'target_amount', null, '', $to_currency, 2);
+		amount_row(_("Incoming Amount:"), 'target_amount', null, '', $to_currency, 2);
 	} 
 	else 
 	{
@@ -139,7 +139,7 @@ function check_valid_entries()
 
 	$amnt_tr = input_num('charge') + input_num('amount');
 
-	if ($limit != null && floatcmp($limit, $amnt_tr) < 0)
+	if ($limit !== null && floatcmp($limit, $amnt_tr) < 0)
 	{
 		display_error(sprintf(_("The total bank amount exceeds allowed limit (%s) for source account."), price_format($limit)));
 		set_focus('amount');
