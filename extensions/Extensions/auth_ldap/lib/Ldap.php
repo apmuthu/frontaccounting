@@ -196,7 +196,11 @@ class Ldap {
         if(!empty($this->ldapUser) && !empty($this->ldapPswd)){
         	
             if(@ldap_bind($this->ldapResource, $this->getLdapUserDn(), $this->ldapPswd)) {
-            	$filter = "(&(uid=$this->ldapUser)(userAccountControl=$this->userAccountControl))";
+                if ($this->ldapWindows) {
+                    $filter = "(&(uid=$this->ldapUser)(userAccountControl=$this->userAccountControl))";
+                } else {
+                    $filter = "(&(uid=$this->ldapUser))";
+                }
                 
 		        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPeopleDn(), $filter)) {
 		        	$count = ldap_count_entries($this->ldapResource, $this->ldapResultset);
@@ -214,7 +218,12 @@ class Ldap {
 	            }
         }else{
             if(@ldap_bind($this->ldapResource)){
-               $filter = "(userAccountControl=$this->userAccountControl)";
+                if ($this->ldapWindows) {
+                    $filter = "(userAccountControl=$this->userAccountControl)";
+                } else {
+                    // FIXME: is this right for unauthenticated binding on OpenLDAP?
+                    $filter = "()";
+			    }
 			    
 			    if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPeopleDn(), $filter)) {
 		        	$count = ldap_count_entries($this->ldapResource, $this->ldapResultset);
