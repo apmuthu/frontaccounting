@@ -196,7 +196,11 @@ class Ldap {
         if(!empty($this->ldapUser) && !empty($this->ldapPswd)){
         	
             if(@ldap_bind($this->ldapResource, $this->getLdapUserDn(), $this->ldapPswd)) {
-            	$filter = "(&(uid=$this->ldapUser)(userAccountControl=$this->userAccountControl))";
+                if ($this->ldapWindows) {
+                    $filter = "(&(uid=$this->ldapUser)(userAccountControl=$this->userAccountControl))";
+                } else {
+                    $filter = "(&(uid=$this->ldapUser))";
+                }
                 
 		        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPeopleDn(), $filter)) {
 		        	$count = ldap_count_entries($this->ldapResource, $this->ldapResultset);
@@ -214,7 +218,12 @@ class Ldap {
 	            }
         }else{
             if(@ldap_bind($this->ldapResource)){
-               $filter = "(userAccountControl=$this->userAccountControl)";
+                if ($this->ldapWindows) {
+                    $filter = "(userAccountControl=$this->userAccountControl)";
+                } else {
+                    // FIXME: is this right for unauthenticated binding on OpenLDAP?
+                    $filter = "()";
+			    }
 			    
 			    if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPeopleDn(), $filter)) {
 		        	$count = ldap_count_entries($this->ldapResource, $this->ldapResultset);
@@ -287,7 +296,7 @@ class Ldap {
     	$attrs = array();
     	$return_attrs = array();
     	 
-    	if($this->ldapResultset = @ldap_search($this->ldapResource, "ou=people" . "," . $this->getLdapPrefix(), $filter)) {
+    	if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPeopleDn(), $filter)) {
             $userArr = @ldap_first_entry($this->ldapResource, $this->ldapResultset);
     	
 			$attribute = ldap_get_attributes( $this->ldapResource, $userArr );
@@ -309,10 +318,9 @@ class Ldap {
     
     function getMemberships($uid){
         /* The relevant object we are looking for to limit the scope */
-        //$filter = $this->getLdapUserDn();
-        $filter = "uid=" . $uid . ",ou=people" . "," . $this->getLdapPrefix();
+        $filter = "(&({$this->makeMemberFilter($uid)})(objectClass={$this->getGroupObjectClass()}))";
                 
-        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass=groupOfNames))")) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), $filter)) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
 
@@ -335,9 +343,9 @@ class Ldap {
     
     function groupMemberOf($uid, $module) {
         
-        $filter = "uid=" . $uid . ",ou=people" . "," . $this->getLdapPrefix();
+        $filter = "(&({$this->makeMemberFilter($uid)})(objectClass={$this->getGroupObjectClass()}))";
                 
-        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass=groupOfNames))")) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), $filter)) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
 
@@ -377,7 +385,7 @@ class Ldap {
 		
 	    $addgroup_ad['cn']="$object_name";    
 	    $addgroup_ad['objectClass'][0] = "top";
-	    $addgroup_ad['objectClass'][1] ="groupOfNames";
+	    $addgroup_ad['objectClass'][1] ="{$this->getGroupObjectClass()}";
 	    $addgroup_ad['member']=$members;
 	
 	    @ldap_add($this->ldapResource,$group_cn,$addgroup_ad);
@@ -391,7 +399,7 @@ class Ldap {
 	function addMemberToGroup($object_name, $uid)
 	{
 		$group_cn = "cn=".$object_name."," . $this->getLdapGroupDn();
-		$members = "uid=$uid," . $this->getLdapPeopleDn();
+        $members = $this->getLdapUserDn($uid);
 		
 		$group_info['member'] = $members;
 		@ldap_mod_add($this->ldapResource,$group_cn,$group_info);
@@ -405,7 +413,7 @@ class Ldap {
 	function delMemberFromGroup($object_name, $uid)
 	{
 		$group_cn = "cn=".$object_name."," . $this->getLdapGroupDn();
-		$members = "uid=$uid," . $this->getLdapPeopleDn();
+        $members = $this->getLdapUserDn($uid);
 		
 		$group_info['member'] = $members;
 		@ldap_mod_del($this->ldapResource,$group_cn,$group_info);
@@ -421,7 +429,7 @@ class Ldap {
         $filter = "uid=" . $user;
         $userArr = array();
         
-        if($this->ldapResultset = @ldap_search($this->ldapResource, "ou=people" . "," . $this->getLdapPrefix(), $filter)) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPeopleDn(), $filter)) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
         
@@ -445,9 +453,9 @@ class Ldap {
         
         $companyArr = array();
         $groupsName = array();
-        $filter = "(objectClass=groupOfNames)";
+        $filter = "(objectClass={$this->getGroupObjectClass()})";
         
-        if($this->ldapResultset = @ldap_search($this->ldapResource, "ou=groups" . "," . $this->getLdapPrefix(), $filter)) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapGroupDn(), $filter)) {
             $companyArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
 
@@ -461,10 +469,13 @@ class Ldap {
        return $groupsName;
     }
     
-    function getLdapUserDn(){
-        if(!empty($this->ldapPrefix) && !empty($this->ldapUser)){
+    function getLdapUserDn($uid=null){
+        if(!empty($this->ldapPrefix)){
+            if(!is_null($uid)){
+            	return	"uid=" .$uid . "," . $this->getLdapPeopleDn();
+            }
             if(!empty($this->ldapUser)){
-            	return	"uid=" .$this->ldapUser . ",ou=people" . "," . $this->getLdapPrefix();
+            	return	"uid=" .$this->ldapUser . "," . $this->getLdapPeopleDn();
             }
         }
         return false;
@@ -472,15 +483,47 @@ class Ldap {
     
     function getLdapPeopleDn(){
         if(!empty($this->ldapPrefix)){
-            	return	"ou=people" . "," . $this->getLdapPrefix();
+            	return	"ou=" . $this->getPeopleOU() . "," . $this->getLdapPrefix();
         }
         return false;
     }
     
      function getLdapGroupDn(){
         if(!empty($this->ldapPrefix)){            
-            	return	"ou=groups" . "," . $this->getLdapPrefix();
+            	return	"ou=" . $this->getGroupsOU() . "," . $this->getLdapPrefix();
         }
         return false;
+    }
+
+    function getPeopleOU(){
+        if ($this->ldapWindows) {
+            return 'people';
+        } else {
+            return 'Users';
+        }
+    }
+
+    function getGroupsOU(){
+        if ($this->ldapWindows) {
+            return 'groups';
+        } else {
+            return 'Groups';
+        }
+    }
+
+    function getGroupObjectClass(){
+        if ($this->ldapWindows) {
+            return 'groupOfNames';
+        } else {
+            return 'posixGroup';
+        }
+    }
+
+    function makeMemberFilter($uid){
+        if ($this->ldapWindows){
+            return "member={$this->getLdapUserDn($uid)}";
+        } else {
+            return "memberUid=$uid";
+        }
     }
 }
