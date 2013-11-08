@@ -320,7 +320,7 @@ class Ldap {
         /* The relevant object we are looking for to limit the scope */
         $filter = $this->getLdapUserDn($uid);
                 
-        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass=groupOfNames))")) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass={$this->getGroupObjectClass()}))")) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
 
@@ -345,7 +345,7 @@ class Ldap {
         
         $filter = $this->getLdapUserDn($uid);
                 
-        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass=groupOfNames))")) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass={$this->getGroupObjectClass()}))")) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
 
@@ -385,7 +385,7 @@ class Ldap {
 		
 	    $addgroup_ad['cn']="$object_name";    
 	    $addgroup_ad['objectClass'][0] = "top";
-	    $addgroup_ad['objectClass'][1] ="groupOfNames";
+	    $addgroup_ad['objectClass'][1] ="{$this->getGroupObjectClass()}";
 	    $addgroup_ad['member']=$members;
 	
 	    @ldap_add($this->ldapResource,$group_cn,$addgroup_ad);
@@ -453,7 +453,7 @@ class Ldap {
         
         $companyArr = array();
         $groupsName = array();
-        $filter = "(objectClass=groupOfNames)";
+        $filter = "(objectClass={$this->getGroupObjectClass()})";
         
         if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapGroupDn(), $filter)) {
             $companyArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
@@ -508,6 +508,14 @@ class Ldap {
             return 'groups';
         } else {
             return 'Groups';
+        }
+    }
+
+    function getGroupObjectClass(){
+        if ($this->ldapWindows) {
+            return 'groupOfNames';
+        } else {
+            return 'posixGroup';
         }
     }
 }
