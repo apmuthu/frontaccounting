@@ -343,9 +343,9 @@ class Ldap {
     
     function groupMemberOf($uid, $module) {
         
-        $filter = $this->getLdapUserDn($uid);
+        $filter = "(&({$this->makeMemberFilter($uid)})(objectClass={$this->getGroupObjectClass()}))";
                 
-        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass={$this->getGroupObjectClass()}))")) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), $filter)) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
 
