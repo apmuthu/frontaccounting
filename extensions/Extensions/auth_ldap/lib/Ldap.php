@@ -455,7 +455,7 @@ class Ldap {
         $groupsName = array();
         $filter = "(objectClass=groupOfNames)";
         
-        if($this->ldapResultset = @ldap_search($this->ldapResource, "ou=groups" . "," . $this->getLdapPrefix(), $filter)) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapGroupDn(), $filter)) {
             $companyArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
 
@@ -483,15 +483,31 @@ class Ldap {
     
     function getLdapPeopleDn(){
         if(!empty($this->ldapPrefix)){
-            	return	"ou=people" . "," . $this->getLdapPrefix();
+            	return	"ou=" . $this->getPeopleOU() . "," . $this->getLdapPrefix();
         }
         return false;
     }
     
      function getLdapGroupDn(){
         if(!empty($this->ldapPrefix)){            
-            	return	"ou=groups" . "," . $this->getLdapPrefix();
+            	return	"ou=" . $this->getGroupsOU() . "," . $this->getLdapPrefix();
         }
         return false;
+    }
+
+    function getPeopleOU(){
+        if ($this->ldapWindows) {
+            return 'people';
+        } else {
+            return 'Users';
+        }
+    }
+
+    function getGroupsOU(){
+        if ($this->ldapWindows) {
+            return 'groups';
+        } else {
+            return 'Groups';
+        }
     }
 }
