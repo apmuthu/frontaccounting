@@ -309,8 +309,7 @@ class Ldap {
     
     function getMemberships($uid){
         /* The relevant object we are looking for to limit the scope */
-        //$filter = $this->getLdapUserDn();
-        $filter = "uid=" . $uid . "," . $this->getLdapPeopleDn();
+        $filter = $this->getLdapUserDn($uid);
                 
         if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass=groupOfNames))")) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
@@ -461,8 +460,11 @@ class Ldap {
        return $groupsName;
     }
     
-    function getLdapUserDn(){
-        if(!empty($this->ldapPrefix) && !empty($this->ldapUser)){
+    function getLdapUserDn($uid=null){
+        if(!empty($this->ldapPrefix)){
+            if(!is_null($uid)){
+            	return	"uid=" .$uid . "," . $this->getLdapPeopleDn();
+            }
             if(!empty($this->ldapUser)){
             	return	"uid=" .$this->ldapUser . "," . $this->getLdapPeopleDn();
             }
