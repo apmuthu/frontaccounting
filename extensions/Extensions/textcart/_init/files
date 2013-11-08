@@ -9,8 +9,8 @@
 /hooks.php: 620b6074a7e8029aaf7e481bfb23a92bebcd4723
 /inventory/transfers.php: 23ee8f8e6a25660b416c005a941ada9d4f683457
 /inventory/adjustments.php: d8f332223042678a1b9fa54265f109bb88457798
-/purchasing/po_entry_items.php: e4b6056dbc5c53cc8ad1efa7b7fc01404818ce4c
+/purchasing/po_entry_items.php: 2f77094892998102162b8ae1411fc802a1daa574
 /includes/utilities.inc: 8602fa67f053a8d01e3065dad40e7b54949bf149
 /includes/textcart_manager.inc: 7150867fa2297fe91a0a5ca7bb2042303a5fd668
-/_init/config: 8e06e95263595da6ace8711cf6996caf45a6ffc5
+/_init/config: 6dd3e5f0ca0b76635e7edc71c5f25cf9092b22d7
 

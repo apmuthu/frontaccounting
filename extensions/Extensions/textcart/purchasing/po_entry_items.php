@@ -529,7 +529,7 @@ start_form();
 display_po_header($_SESSION['PO']);
 echo "<br>";
 
-$textcart_mgr->tab_display('', &$_SESSION['PO'], "display_order_in_tab");
+$textcart_mgr->tab_display('', $_SESSION['PO'], "display_order_in_tab");
 
 start_table(TABLESTYLE2);
 textarea_row(_("Memo:"), 'Comments', null, 70, 4);

@@ -1,5 +1,5 @@
 Package: textcart
-Version: 2.3.9-5
+Version: 2.3.9-6
 Description: Convert cart to/from text.
  This module enables to convert carts (sales orders, purchase orders
  adjustemen items, etc) to text allowing copy/pasting to external application.
@@ -9,5 +9,5 @@ Maintenance: elax <bmx007@gmail.com>
 Homepage: http://www.frontaccounting.com
 Type: extension
 InstallPath: modules/textcart
-Filename: textcart-2.3.9-5
+Filename: textcart-2.3.9-6
 
