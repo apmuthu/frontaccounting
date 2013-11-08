@@ -287,7 +287,7 @@ class Ldap {
     	$attrs = array();
     	$return_attrs = array();
     	 
-    	if($this->ldapResultset = @ldap_search($this->ldapResource, "ou=people" . "," . $this->getLdapPrefix(), $filter)) {
+    	if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPeopleDn(), $filter)) {
             $userArr = @ldap_first_entry($this->ldapResource, $this->ldapResultset);
     	
 			$attribute = ldap_get_attributes( $this->ldapResource, $userArr );
@@ -310,7 +310,7 @@ class Ldap {
     function getMemberships($uid){
         /* The relevant object we are looking for to limit the scope */
         //$filter = $this->getLdapUserDn();
-        $filter = "uid=" . $uid . ",ou=people" . "," . $this->getLdapPrefix();
+        $filter = "uid=" . $uid . "," . $this->getLdapPeopleDn();
                 
         if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass=groupOfNames))")) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
@@ -335,7 +335,7 @@ class Ldap {
     
     function groupMemberOf($uid, $module) {
         
-        $filter = "uid=" . $uid . ",ou=people" . "," . $this->getLdapPrefix();
+        $filter = "uid=" . $uid . "," . $this->getLdapPeopleDn();
                 
         if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass=groupOfNames))")) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
@@ -421,7 +421,7 @@ class Ldap {
         $filter = "uid=" . $user;
         $userArr = array();
         
-        if($this->ldapResultset = @ldap_search($this->ldapResource, "ou=people" . "," . $this->getLdapPrefix(), $filter)) {
+        if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPeopleDn(), $filter)) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
         }
         
@@ -464,7 +464,7 @@ class Ldap {
     function getLdapUserDn(){
         if(!empty($this->ldapPrefix) && !empty($this->ldapUser)){
             if(!empty($this->ldapUser)){
-            	return	"uid=" .$this->ldapUser . ",ou=people" . "," . $this->getLdapPrefix();
+            	return	"uid=" .$this->ldapUser . "," . $this->getLdapPeopleDn();
             }
         }
         return false;
