@@ -334,7 +334,7 @@ class Ldap {
     
     function groupMemberOf($uid, $module) {
         
-        $filter = "uid=" . $uid . "," . $this->getLdapPeopleDn();
+        $filter = $this->getLdapUserDn($uid);
                 
         if($this->ldapResultset = @ldap_search($this->ldapResource, $this->getLdapPrefix(), "(&(member=$filter)(objectClass=groupOfNames))")) {
             $userArr = ldap_get_entries($this->ldapResource, $this->ldapResultset);
@@ -390,7 +390,7 @@ class Ldap {
 	function addMemberToGroup($object_name, $uid)
 	{
 		$group_cn = "cn=".$object_name."," . $this->getLdapGroupDn();
-		$members = "uid=$uid," . $this->getLdapPeopleDn();
+        $members = $this->getLdapUserDn($uid);
 		
 		$group_info['member'] = $members;
 		@ldap_mod_add($this->ldapResource,$group_cn,$group_info);
@@ -404,7 +404,7 @@ class Ldap {
 	function delMemberFromGroup($object_name, $uid)
 	{
 		$group_cn = "cn=".$object_name."," . $this->getLdapGroupDn();
-		$members = "uid=$uid," . $this->getLdapPeopleDn();
+        $members = $this->getLdapUserDn($uid);
 		
 		$group_info['member'] = $members;
 		@ldap_mod_del($this->ldapResource,$group_cn,$group_info);
