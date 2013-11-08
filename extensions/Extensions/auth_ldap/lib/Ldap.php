@@ -262,9 +262,7 @@ class Ldap {
     
     function getldapUPN(){
         if(!empty($this->ldapDomain) && !empty($this->ldapUser)){
-            if(!empty($this->ldapUser)){
-                return $this->ldapUser."@".$this->ldapDomain;                
-            }
+            return $this->ldapUser."@".$this->ldapDomain;                
         }
         return false;
     }
