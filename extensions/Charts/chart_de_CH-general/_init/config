@@ -1,5 +1,5 @@
 Package: chart_de_CH-general
-Version: 2.3.0-4
+Version: 2.3.0-5
 Name: German Switzerland COA
 Description: This is a German Switzerland chart of accounts for a starting company.
 Author: Pfister from Switzerland
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: de_CH-general.sql
-Filename: chart_de_CH-general-2.3.0-4
+Filename: chart_de_CH-general-2.3.0-5
 

@@ -1,5 +1,5 @@
 Package: chart_fr_CA-general
-Version: 2.3.0-3
+Version: 2.3.0-4
 Name: French Canadian COA - General
 Description: This is a French Canadian chart of accounts for a starting company.
 Encoding: iso-8859-1
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: fr_CA-general.sql
-Filename: chart_fr_CA-general-2.3.0-3
+Filename: chart_fr_CA-general-2.3.0-4
 

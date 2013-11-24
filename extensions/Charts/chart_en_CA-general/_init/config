@@ -1,5 +1,5 @@
 Package: chart_en_CA-general
-Version: 2.3.0-3
+Version: 2.3.0-4
 Name: English Canadian COA - General
 Encoding: iso-8859-1
 Description: This is an English Canadian chart of accounts for a starting company.
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: en_CA-general.sql
-Filename: chart_en_CA-general-2.3.0-3
+Filename: chart_en_CA-general-2.3.0-4
 

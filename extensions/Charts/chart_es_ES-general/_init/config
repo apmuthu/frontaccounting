@@ -1,5 +1,5 @@
 Package: chart_es_ES-general
-Version: 2.3.0-4
+Version: 2.3.0-5
 Name: Spanish COA - ISO
 Description: This is a Spanish chart of accounts for a starting company.
 Encoding: utf-8
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: es_ES-iso.sql
-Filename: chart_es_ES-general-2.3.0-4
+Filename: chart_es_ES-general-2.3.0-5
 

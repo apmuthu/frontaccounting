@@ -1,5 +1,5 @@
 Package: chart_id_ID-4digit
-Version: 2.3.0-3
+Version: 2.3.0-4
 Name: Indonesian 4 digit COA
 Description: This is an Indonesian chart of (4 digits) accounts for a starting company.
 Encoding: iso-8859-1
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: id_ID-4digit.sql
-Filename: chart_id_ID-4digit-2.3.0-3
+Filename: chart_id_ID-4digit-2.3.0-4
 

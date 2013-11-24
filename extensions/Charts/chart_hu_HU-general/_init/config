@@ -1,5 +1,5 @@
 Package: chart_hu_HU-general
-Version: 2.3.0-2
+Version: 2.3.0-3
 Name: Hungarian COA - General
 Description: This is a Hungarian chart of accounts for a starting company.
 Encoding: utf-8
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: hu_HU-general.sql
-Filename: chart_hu_HU-general-2.3.0-2
+Filename: chart_hu_HU-general-2.3.0-3
 
