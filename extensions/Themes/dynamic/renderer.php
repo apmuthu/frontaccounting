@@ -142,7 +142,7 @@
 								}
 							}
 							else	
-								echo "<li><a href='#'></a>$img_src {$lnk[0]}</li>\n";
+								if (!$_SESSION["wa_current_user"]->hide_inaccessible_menu_items()) echo "<li><a href='#'></a>$img_src {$lnk[0]}</li>\n";
 						}
 						$j++;
 						if (count($apps))
