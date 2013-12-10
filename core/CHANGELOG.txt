@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-11-10 Joe                Avoiding redundant passes in Fiscal Year deletion.
 2013-11-07 Joe                Rerun. Allowing more than one document attachment.
 2013-11-07 Joe                Inventory Items Movements always starts with 0 qty. Fixed.
 2013-11-07 Joe                Allowing more than one document attachment.
