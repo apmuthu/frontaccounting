@@ -6,7 +6,7 @@
 -- Company: Company name
 -- User: Administrator
 -- COA: in_ID-general.sql
--- Updated to 2.3.19: 2013-12-02 12:57:12 (M Fatah A)
+-- Last Update to 2.3.19: 2013-12-11 15:50:12 (M Fatah A)
 
 
 DROP TABLE IF EXISTS `0_areas`;
@@ -17,6 +17,7 @@ CREATE TABLE `0_areas` (
   PRIMARY KEY (`area_code`),
   UNIQUE KEY `description` (`description`)
 ) ENGINE=MyISAM ;
+
 
 INSERT INTO `0_areas` (`area_code`, `description`, `inactive`) VALUES
 (1,	'Global',	0);
@@ -54,6 +55,7 @@ CREATE TABLE `0_audit_trail` (
 ) ENGINE=InnoDB ;
 
 
+
 DROP TABLE IF EXISTS `0_bank_accounts`;
 CREATE TABLE `0_bank_accounts` (
   `account_code` varchar(15) NOT NULL DEFAULT '',
@@ -74,9 +76,8 @@ CREATE TABLE `0_bank_accounts` (
   KEY `account_code` (`account_code`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_bank_accounts` (`account_code`, `account_type`, `bank_account_name`, `bank_account_number`, `bank_name`, `bank_address`, `bank_curr_code`, `dflt_curr_act`, `id`, `last_reconciled_date`, `ending_reconcile_balance`, `inactive`) VALUES
-('1060',	0,	'Current account',	'N/A',	'N/A',	'',	'USD',	1,	1,	'0000-00-00 00:00:00',	0,	0),
-('1065',	3,	'Petty Cash account',	'N/A',	'N/A',	'',	'USD',	0,	2,	'0000-00-00 00:00:00',	0,	0),
 ('11111110',	3,	'Kas Kantor',	'',	'',	'',	'IDR',	1,	3,	'0000-00-00 00:00:00',	0,	0),
 ('11111120',	3,	'Kas Gudang',	'',	'',	'',	'IDR',	0,	4,	'0000-00-00 00:00:00',	0,	0),
 ('11111121',	3,	'Kas Bon',	'',	'',	'',	'IDR',	0,	5,	'0000-00-00 00:00:00',	0,	0),
@@ -108,6 +109,7 @@ CREATE TABLE `0_bank_trans` (
   KEY `bank_act_2` (`bank_act`,`reconciled`),
   KEY `bank_act_3` (`bank_act`,`trans_date`)
 ) ENGINE=InnoDB ;
+
 
 
 DROP TABLE IF EXISTS `0_bom`;
@@ -146,6 +148,7 @@ CREATE TABLE `0_budget_trans` (
 ) ENGINE=InnoDB ;
 
 
+
 DROP TABLE IF EXISTS `0_chart_class`;
 CREATE TABLE `0_chart_class` (
   `cid` varchar(3) NOT NULL,
@@ -154,6 +157,7 @@ CREATE TABLE `0_chart_class` (
   `inactive` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`cid`)
 ) ENGINE=MyISAM ;
+
 
 INSERT INTO `0_chart_class` (`cid`, `class_name`, `ctype`, `inactive`) VALUES
 ('1',	'AKTIVA',	1,	0),
@@ -175,6 +179,7 @@ CREATE TABLE `0_chart_master` (
   KEY `account_name` (`account_name`),
   KEY `accounts_by_type` (`account_type`,`account_code`)
 ) ENGINE=MyISAM ;
+
 
 INSERT INTO `0_chart_master` (`account_code`, `account_code2`, `account_name`, `account_type`, `inactive`) VALUES
 ('11111120',	'',	'Kas Gudang',	'11111100',	0),
@@ -456,6 +461,7 @@ CREATE TABLE `0_chart_types` (
   KEY `class_id` (`class_id`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_chart_types` (`id`, `name`, `class_id`, `parent`, `inactive`) VALUES
 ('11000000',	'AKTIVA LANCAR',	'1',	'',	0),
 ('11110000',	'KAS DAN SETARA KAS',	'1',	'11000000',	0),
@@ -572,6 +578,7 @@ CREATE TABLE `0_credit_status` (
   UNIQUE KEY `reason_description` (`reason_description`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_credit_status` (`id`, `reason_description`, `dissallow_invoices`, `inactive`) VALUES
 (1,	'Good History',	0,	0),
 (3,	'No more work until payment received',	1,	0),
@@ -590,6 +597,7 @@ CREATE TABLE `0_crm_categories` (
   UNIQUE KEY `type` (`type`,`action`),
   UNIQUE KEY `type_2` (`type`,`name`)
 ) ENGINE=InnoDB ;
+
 
 INSERT INTO `0_crm_categories` (`id`, `type`, `action`, `name`, `description`, `system`, `inactive`) VALUES
 (1,	'cust_branch',	'general',	'General',	'General contact data for customer branch (overrides company setting)',	1,	0),
@@ -615,6 +623,7 @@ CREATE TABLE `0_crm_contacts` (
   PRIMARY KEY (`id`),
   KEY `type` (`type`,`action`)
 ) ENGINE=InnoDB ;
+
 
 
 DROP TABLE IF EXISTS `0_crm_persons`;
@@ -648,6 +657,7 @@ CREATE TABLE `0_currencies` (
   PRIMARY KEY (`curr_abrev`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_currencies` (`currency`, `curr_abrev`, `curr_symbol`, `country`, `hundreds_name`, `auto_update`, `inactive`) VALUES
 ('US Dollars',	'USD',	'$',	'United States',	'Cents',	1,	0),
 ('Euro',	'EUR',	'?',	'Europe',	'Cents',	1,	0),
@@ -666,6 +676,7 @@ CREATE TABLE `0_cust_allocations` (
   KEY `From` (`trans_type_from`,`trans_no_from`),
   KEY `To` (`trans_type_to`,`trans_no_to`)
 ) ENGINE=InnoDB ;
+
 
 
 DROP TABLE IF EXISTS `0_cust_branch`;
@@ -750,6 +761,7 @@ CREATE TABLE `0_debtor_trans` (
 ) ENGINE=InnoDB ;
 
 
+
 DROP TABLE IF EXISTS `0_debtor_trans_details`;
 CREATE TABLE `0_debtor_trans_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -770,6 +782,7 @@ CREATE TABLE `0_debtor_trans_details` (
 ) ENGINE=InnoDB ;
 
 
+
 DROP TABLE IF EXISTS `0_dimensions`;
 CREATE TABLE `0_dimensions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -787,6 +800,7 @@ CREATE TABLE `0_dimensions` (
 ) ENGINE=InnoDB ;
 
 
+
 DROP TABLE IF EXISTS `0_exchange_rates`;
 CREATE TABLE `0_exchange_rates` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -799,6 +813,7 @@ CREATE TABLE `0_exchange_rates` (
 ) ENGINE=MyISAM ;
 
 
+
 DROP TABLE IF EXISTS `0_fiscal_year`;
 CREATE TABLE `0_fiscal_year` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -809,6 +824,7 @@ CREATE TABLE `0_fiscal_year` (
   UNIQUE KEY `begin` (`begin`),
   UNIQUE KEY `end` (`end`)
 ) ENGINE=InnoDB ;
+
 
 INSERT INTO `0_fiscal_year` (`id`, `begin`, `end`, `closed`) VALUES
 (1,	concat(year(now()),'-01-01'),	concat(year(now()),'-12-31'),	0);
@@ -849,6 +865,7 @@ CREATE TABLE `0_grn_batch` (
 ) ENGINE=InnoDB ;
 
 
+
 DROP TABLE IF EXISTS `0_grn_items`;
 CREATE TABLE `0_grn_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -872,10 +889,11 @@ CREATE TABLE `0_groups` (
   UNIQUE KEY `description` (`description`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_groups` (`id`, `description`, `inactive`) VALUES
-(1,	'Small',	0),
-(2,	'Medium',	0),
-(3,	'Large',	0);
+(1,	'Kecil',	0),
+(2,	'Sedang',	0),
+(3,	'Besar',	0);
 
 DROP TABLE IF EXISTS `0_item_codes`;
 CREATE TABLE `0_item_codes` (
@@ -924,8 +942,9 @@ CREATE TABLE `0_item_units` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_item_units` (`abbr`, `name`, `decimals`, `inactive`) VALUES
-('ea.',	'Each',	0,	0);
+('each',	'Each',	0,	0);
 
 DROP TABLE IF EXISTS `0_locations`;
 CREATE TABLE `0_locations` (
@@ -963,8 +982,9 @@ CREATE TABLE `0_movement_types` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_movement_types` (`id`, `name`, `inactive`) VALUES
-(1,	'Adjustment',	0);
+(1,	'Penyesuaian',	0);
 
 DROP TABLE IF EXISTS `0_payment_terms`;
 CREATE TABLE `0_payment_terms` (
@@ -976,6 +996,7 @@ CREATE TABLE `0_payment_terms` (
   PRIMARY KEY (`terms_indicator`),
   UNIQUE KEY `terms` (`terms`)
 ) ENGINE=MyISAM ;
+
 
 INSERT INTO `0_payment_terms` (`terms_indicator`, `terms`, `days_before_due`, `day_in_following_month`, `inactive`) VALUES
 (1,	'Tanggal 15 bulan berikutnya',	0,	17,	0),
@@ -993,6 +1014,7 @@ CREATE TABLE `0_prices` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `price` (`stock_id`,`sales_type_id`,`curr_abrev`)
 ) ENGINE=MyISAM ;
+
 
 
 DROP TABLE IF EXISTS `0_printers`;
@@ -1046,6 +1068,7 @@ CREATE TABLE `0_purch_data` (
 ) ENGINE=MyISAM ;
 
 
+
 DROP TABLE IF EXISTS `0_purch_orders`;
 CREATE TABLE `0_purch_orders` (
   `order_no` int(11) NOT NULL AUTO_INCREMENT,
@@ -1093,10 +1116,11 @@ CREATE TABLE `0_quick_entries` (
   KEY `description` (`description`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_quick_entries` (`id`, `type`, `description`, `base_amount`, `base_desc`, `bal_type`) VALUES
 (1,	1,	'Maintenance',	0,	'Amount',	0),
-(2,	4,	'Phone',	0,	'Amount',	0),
-(3,	2,	'Cash Sales',	0,	'Amount',	0);
+(2,	4,	'Telp',	0,	'Amount',	0),
+(3,	2,	'Penjualan Cash',	0,	'Amount',	0);
 
 DROP TABLE IF EXISTS `0_quick_entry_lines`;
 CREATE TABLE `0_quick_entry_lines` (
@@ -1126,6 +1150,7 @@ CREATE TABLE `0_recurrent_invoices` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `description` (`description`)
 ) ENGINE=InnoDB ;
+
 
 
 DROP TABLE IF EXISTS `0_refs`;
@@ -1212,6 +1237,7 @@ CREATE TABLE `0_sales_pos` (
   UNIQUE KEY `pos_name` (`pos_name`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_sales_pos` (`id`, `pos_name`, `cash_sale`, `credit_sale`, `pos_location`, `pos_account`, `inactive`) VALUES
 (1,	'Default',	1,	1,	'DEF',	2,	0);
 
@@ -1226,9 +1252,10 @@ CREATE TABLE `0_sales_types` (
   UNIQUE KEY `sales_type` (`sales_type`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_sales_types` (`id`, `sales_type`, `tax_included`, `factor`, `inactive`) VALUES
-(1,	'Retail',	1,	1,	0),
-(2,	'Wholesale',	0,	0.7,	0);
+(1,	'Ritel',	1,	1,	0),
+(2,	'Grosir',	0,	0.7,	0);
 
 DROP TABLE IF EXISTS `0_security_roles`;
 CREATE TABLE `0_security_roles` (
@@ -1242,16 +1269,17 @@ CREATE TABLE `0_security_roles` (
   UNIQUE KEY `role` (`role`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_security_roles` (`id`, `role`, `description`, `sections`, `areas`, `inactive`) VALUES
-(1,	'Inquiries',	'Inquiries',	'768;2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15872;16128',	'257;258;259;260;513;514;515;516;517;518;519;520;521;522;523;524;525;773;774;2822;3073;3075;3076;3077;3329;3330;3331;3332;3333;3334;3335;5377;5633;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8450;8451;10497;10753;11009;11010;11012;13313;13315;15617;15618;15619;15620;15621;15622;15623;15624;15625;15626;15873;15882;16129;16130;16131;16132',	0),
-(2,	'System Administrator',	'System Administrator',	'256;512;768;2816;3072;3328;5376;5632;5888;7936;8192;8448;10496;10752;11008;13056;13312;15616;15872;16128',	'257;258;259;260;513;514;515;516;517;518;519;520;521;522;523;524;525;526;769;770;771;772;773;774;2817;2818;2819;2820;2821;2822;2823;3073;3074;3082;3075;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5634;5635;5636;5637;5641;5638;5639;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8195;8196;8197;8449;8450;8451;10497;10753;10754;10755;10756;10757;11009;11010;11011;11012;13057;13313;13314;13315;15617;15618;15619;15620;15621;15622;15623;15624;15628;15625;15626;15627;15873;15874;15875;15876;15877;15878;15879;15880;15883;15881;15882;16129;16130;16131;16132',	0),
-(3,	'Salesman',	'Salesman',	'768;3072;5632;8192;15872',	'773;774;3073;3075;3081;5633;8194;15873',	0),
-(4,	'Stock Manager',	'Stock Manager',	'2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15872;16128',	'2818;2822;3073;3076;3077;3329;3330;3330;3330;3331;3331;3332;3333;3334;3335;5633;5640;5889;5890;5891;8193;8194;8450;8451;10753;11009;11010;11012;13313;13315;15882;16129;16130;16131;16132',	0),
-(5,	'Production Manager',	'Production Manager',	'512;2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'521;523;524;2818;2819;2820;2821;2822;2823;3073;3074;3076;3077;3078;3079;3080;3081;3329;3330;3330;3330;3331;3331;3332;3333;3334;3335;5633;5640;5640;5889;5890;5891;8193;8194;8196;8197;8450;8451;10753;10755;11009;11010;11012;13313;13315;15617;15619;15620;15621;15624;15624;15876;15877;15880;15882;16129;16130;16131;16132',	0),
-(6,	'Purchase Officer',	'Purchase Officer',	'512;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'521;523;524;2818;2819;2820;2821;2822;2823;3073;3074;3076;3077;3078;3079;3080;3081;3329;3330;3330;3330;3331;3331;3332;3333;3334;3335;5377;5633;5635;5640;5640;5889;5890;5891;8193;8194;8196;8197;8449;8450;8451;10753;10755;11009;11010;11012;13313;13315;15617;15619;15620;15621;15624;15624;15876;15877;15880;15882;16129;16130;16131;16132',	0),
-(7,	'AR Officer',	'AR Officer',	'512;768;2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'521;523;524;771;773;774;2818;2819;2820;2821;2822;2823;3073;3073;3074;3075;3076;3077;3078;3079;3080;3081;3081;3329;3330;3330;3330;3331;3331;3332;3333;3334;3335;5633;5633;5634;5637;5638;5639;5640;5640;5889;5890;5891;8193;8194;8194;8196;8197;8450;8451;10753;10755;11009;11010;11012;13313;13315;15617;15619;15620;15621;15624;15624;15873;15876;15877;15878;15880;15882;16129;16130;16131;16132',	0),
-(8,	'AP Officer',	'AP Officer',	'512;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'257;258;259;260;521;523;524;769;770;771;772;773;774;2818;2819;2820;2821;2822;2823;3073;3074;3082;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5635;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8196;8197;8449;8450;8451;10497;10753;10755;11009;11010;11012;13057;13313;13315;15617;15619;15620;15621;15624;15876;15877;15880;15882;16129;16130;16131;16132',	0),
-(9,	'Accountant',	'New Accountant',	'512;768;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'257;258;259;260;521;523;524;771;772;773;774;2818;2819;2820;2821;2822;2823;3073;3074;3075;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5634;5635;5637;5638;5639;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8196;8197;8449;8450;8451;10497;10753;10755;11009;11010;11012;13313;13315;15617;15618;15619;15620;15621;15624;15873;15876;15877;15878;15880;15882;16129;16130;16131;16132',	0),
+(1,	'Pencarian',	'Pencarian',	'768;2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15872;16128',	'257;258;259;260;513;514;515;516;517;518;519;520;521;522;523;524;525;773;774;2822;3073;3075;3076;3077;3329;3330;3331;3332;3333;3334;3335;5377;5633;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8450;8451;10497;10753;11009;11010;11012;13313;13315;15617;15618;15619;15620;15621;15622;15623;15624;15625;15626;15873;15882;16129;16130;16131;16132',	0),
+(2,	'Admin Sistem',	'Admin Sistem',	'256;512;768;2816;3072;3328;5376;5632;5888;7936;8192;8448;10496;10752;11008;13056;13312;15616;15872;16128',	'257;258;259;260;513;514;515;516;517;518;519;520;521;522;523;524;525;526;769;770;771;772;773;774;2817;2818;2819;2820;2821;2822;2823;3073;3074;3082;3075;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5634;5635;5636;5637;5641;5638;5639;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8195;8196;8197;8449;8450;8451;10497;10753;10754;10755;10756;10757;11009;11010;11011;11012;13057;13313;13314;13315;15617;15618;15619;15620;15621;15622;15623;15624;15628;15625;15626;15627;15873;15874;15875;15876;15877;15878;15879;15880;15883;15881;15882;16129;16130;16131;16132',	0),
+(3,	'Mgr Sales',	'Mgr Sales',	'768;3072;5632;8192;15872',	'773;774;3073;3075;3081;5633;8194;15873',	0),
+(4,	'Mgr Gudang',	'Mgr Gudang',	'2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15872;16128',	'2818;2822;3073;3076;3077;3329;3330;3330;3330;3331;3331;3332;3333;3334;3335;5633;5640;5889;5890;5891;8193;8194;8450;8451;10753;11009;11010;11012;13313;13315;15882;16129;16130;16131;16132',	0),
+(5,	'Mgr Produksi',	'Mgr Produksi',	'512;2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'521;523;524;2818;2819;2820;2821;2822;2823;3073;3074;3076;3077;3078;3079;3080;3081;3329;3330;3330;3330;3331;3331;3332;3333;3334;3335;5633;5640;5640;5889;5890;5891;8193;8194;8196;8197;8450;8451;10753;10755;11009;11010;11012;13313;13315;15617;15619;15620;15621;15624;15624;15876;15877;15880;15882;16129;16130;16131;16132',	0),
+(6,	'Pembelian',	'Pembelian',	'512;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'521;523;524;2818;2819;2820;2821;2822;2823;3073;3074;3076;3077;3078;3079;3080;3081;3329;3330;3330;3330;3331;3331;3332;3333;3334;3335;5377;5633;5635;5640;5640;5889;5890;5891;8193;8194;8196;8197;8449;8450;8451;10753;10755;11009;11010;11012;13313;13315;15617;15619;15620;15621;15624;15624;15876;15877;15880;15882;16129;16130;16131;16132',	0),
+(7,	'Penagihan',	'Penagihan',	'512;768;2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'521;523;524;771;773;774;2818;2819;2820;2821;2822;2823;3073;3073;3074;3075;3076;3077;3078;3079;3080;3081;3081;3329;3330;3330;3330;3331;3331;3332;3333;3334;3335;5633;5633;5634;5637;5638;5639;5640;5640;5889;5890;5891;8193;8194;8194;8196;8197;8450;8451;10753;10755;11009;11010;11012;13313;13315;15617;15619;15620;15621;15624;15624;15873;15876;15877;15878;15880;15882;16129;16130;16131;16132',	0),
+(8,	'Pembayaran',	'Pembayaran',	'512;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'257;258;259;260;521;523;524;769;770;771;772;773;774;2818;2819;2820;2821;2822;2823;3073;3074;3082;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5635;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8196;8197;8449;8450;8451;10497;10753;10755;11009;11010;11012;13057;13313;13315;15617;15619;15620;15621;15624;15876;15877;15880;15882;16129;16130;16131;16132',	0),
+(9,	'Akuntan',	'Akuntan Baru',	'512;768;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'257;258;259;260;521;523;524;771;772;773;774;2818;2819;2820;2821;2822;2823;3073;3074;3075;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5634;5635;5637;5638;5639;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8196;8197;8449;8450;8451;10497;10753;10755;11009;11010;11012;13313;13315;15617;15618;15619;15620;15621;15624;15873;15876;15877;15878;15880;15882;16129;16130;16131;16132',	0),
 (10,	'Sub Admin',	'Sub Admin',	'512;768;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128',	'257;258;259;260;521;523;524;771;772;773;774;2818;2819;2820;2821;2822;2823;3073;3074;3082;3075;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5634;5635;5637;5638;5639;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8196;8197;8449;8450;8451;10497;10753;10755;11009;11010;11012;13057;13313;13315;15617;15619;15620;15621;15624;15873;15874;15876;15877;15878;15879;15880;15882;16129;16130;16131;16132',	0);
 
 DROP TABLE IF EXISTS `0_shippers`;
@@ -1267,6 +1295,7 @@ CREATE TABLE `0_shippers` (
   UNIQUE KEY `name` (`shipper_name`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_shippers` (`shipper_id`, `shipper_name`, `phone`, `phone2`, `contact`, `address`, `inactive`) VALUES
 (1,	'Default',	'',	'',	'',	'',	0);
 
@@ -1278,6 +1307,7 @@ CREATE TABLE `0_sql_trail` (
   `msg` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM ;
+
 
 
 DROP TABLE IF EXISTS `0_stock_category`;
@@ -1300,11 +1330,12 @@ CREATE TABLE `0_stock_category` (
   UNIQUE KEY `description` (`description`)
 ) ENGINE=MyISAM ;
 
+
 INSERT INTO `0_stock_category` (`category_id`, `description`, `dflt_tax_type`, `dflt_units`, `dflt_mb_flag`, `dflt_sales_act`, `dflt_cogs_act`, `dflt_inventory_act`, `dflt_adjustment_act`, `dflt_assembly_act`, `dflt_dim1`, `dflt_dim2`, `inactive`, `dflt_no_sale`) VALUES
-(1,	'Komponen',	1,	'ea.',	'B',	'41001000',	'51010000',	'11151100',	'51060000',	'51030000',	0,	0,	0,	1),
-(2,	'Jasa',	1,	'ea.',	'D',	'41002000',	'51020000',	'11151100',	'51060000',	'51030000',	0,	0,	0,	0),
-(3,	'Barang Dagang',	1,	'ea.',	'B',	'41001000',	'51010000',	'11151100',	'51060000',	'51030000',	0,	0,	0,	0),
-(4,	'Barang Jadi',	1,	'ea.',	'M',	'41001000',	'51010000',	'11151100',	'51060000',	'51030000',	0,	0,	0,	0);
+(1,	'Komponen',	1,	'each',	'B',	'41001000',	'51010000',	'11151100',	'51060000',	'11151000',	0,	0,	0,	1),
+(2,	'Jasa',	1,	'each',	'D',	'41002000',	'51020000',	'11151100',	'51060000',	'11151000',	0,	0,	0,	0),
+(3,	'Barang Dagang',	1,	'each',	'B',	'41001000',	'51010000',	'11151100',	'51060000',	'11151000',	0,	0,	0,	0),
+(4,	'Barang Jadi',	1,	'each',	'M',	'41001000',	'51010000',	'11151100',	'51060000',	'11151000',	0,	0,	0,	0);
 
 DROP TABLE IF EXISTS `0_stock_master`;
 CREATE TABLE `0_stock_master` (
@@ -1332,6 +1363,7 @@ CREATE TABLE `0_stock_master` (
   `editable` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`stock_id`)
 ) ENGINE=InnoDB ;
+
 
 
 DROP TABLE IF EXISTS `0_stock_moves`;
@@ -1418,6 +1450,7 @@ CREATE TABLE `0_supp_invoice_items` (
 ) ENGINE=InnoDB ;
 
 
+
 DROP TABLE IF EXISTS `0_supp_trans`;
 CREATE TABLE `0_supp_trans` (
   `trans_no` int(11) unsigned NOT NULL DEFAULT '0',
@@ -1441,6 +1474,7 @@ CREATE TABLE `0_supp_trans` (
 ) ENGINE=InnoDB ;
 
 
+
 DROP TABLE IF EXISTS `0_sys_prefs`;
 CREATE TABLE `0_sys_prefs` (
   `name` varchar(35) NOT NULL DEFAULT '',
@@ -1451,6 +1485,7 @@ CREATE TABLE `0_sys_prefs` (
   PRIMARY KEY (`name`),
   KEY `category` (`category`)
 ) ENGINE=MyISAM ;
+
 
 INSERT INTO `0_sys_prefs` (`name`, `category`, `type`, `length`, `value`) VALUES
 ('coy_name',	'setup.company',	'varchar',	60,	'Company name'),
@@ -1487,7 +1522,7 @@ INSERT INTO `0_sys_prefs` (`name`, `category`, `type`, `length`, `value`) VALUES
 ('debtors_act',	'glsetup.sales',	'varchar',	15,	'11131110'),
 ('default_sales_act',	'glsetup.sales',	'varchar',	15,	'41001000'),
 ('default_sales_discount_act',	'glsetup.sales',	'varchar',	15,	'42001000'),
-('default_prompt_payment_act',	'glsetup.sales',	'varchar',	15,	'44001000'),
+('default_prompt_payment_act',	'glsetup.sales',	'varchar',	15,	'42001000'),
 ('default_delivery_required',	'glsetup.sales',	'smallint',	6,	'1'),
 ('default_dim_required',	'glsetup.dims',	'int',	11,	'20'),
 ('pyt_discount_act',	'glsetup.purchase',	'varchar',	15,	'51040000'),
@@ -1513,6 +1548,7 @@ CREATE TABLE `0_sys_types` (
   `next_reference` varchar(100) NOT NULL DEFAULT '',
   PRIMARY KEY (`type_id`)
 ) ENGINE=InnoDB ;
+
 
 INSERT INTO `0_sys_types` (`type_id`, `type_no`, `next_reference`) VALUES
 (0,	17,	'1'),
@@ -1594,6 +1630,7 @@ CREATE TABLE `0_tax_types` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB ;
 
+
 INSERT INTO `0_tax_types` (`id`, `rate`, `sales_gl_code`, `purchasing_gl_code`, `name`, `inactive`) VALUES
 (1,	10,	'21104110',	'21104110',	'PPN 10%',	0);
 
@@ -1626,6 +1663,7 @@ CREATE TABLE `0_useronline` (
   KEY `timestamp` (`timestamp`),
   KEY `ip` (`ip`)
 ) ENGINE=MyISAM ;
+
 
 
 DROP TABLE IF EXISTS `0_users`;
@@ -1663,6 +1701,7 @@ CREATE TABLE `0_users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`)
 ) ENGINE=MyISAM ;
+
 
 INSERT INTO `0_users` (`id`, `user_id`, `password`, `real_name`, `role_id`, `phone`, `email`, `language`, `date_format`, `date_sep`, `tho_sep`, `dec_sep`, `theme`, `page_size`, `prices_dec`, `qty_dec`, `rates_dec`, `percent_dec`, `show_gl`, `show_codes`, `show_hints`, `last_visit_date`, `query_size`, `graphic_links`, `pos`, `print_profile`, `rep_popup`, `sticky_doc_date`, `startup_tab`, `inactive`) VALUES
 (1,	'admin',	'5f4dcc3b5aa765d61d8327deb882cf99',	'Administrator',	2,	'',	'adm@adm.com',	'en_US',	0,	0,	0,	0,	'default',	'Letter',	2,	2,	4,	1,	1,	0,	0,	'2013-12-02 06:51:15',	10,	1,	1,	'1',	1,	0,	'system',	0);
@@ -1756,5 +1795,6 @@ CREATE TABLE `0_wo_requirements` (
   PRIMARY KEY (`id`),
   KEY `workorder_id` (`workorder_id`)
 ) ENGINE=InnoDB ;
+
 
 

@@ -94,12 +94,15 @@
 				$account = $this->wa_get_apps($title, $applications, $sel_app);
 				foreach($applications as $app)
 				{
-					if ($account[3] == $app->id)
-						$sel_application = $app;
-					$acc = access_string($app->name);
-					$i++;
-					echo "<li ".($account[3] == $app->id ? "class='active' " : "") . "><a ".($account[3] == $app->id ? "class='active' " : "")." rel='ddsubmenu{$i}' href='$local_path_to_root/index.php?application=" . $app->id
-						."'$acc[1]><b>" . $acc[0] . "</b></a></li>\n";
+                    if ($_SESSION["wa_current_user"]->check_application_access($app))
+                    {
+						if ($account[3] == $app->id)
+							$sel_application = $app;
+						$acc = access_string($app->name);
+						$i++;
+						echo "<li ".($account[3] == $app->id ? "class='active' " : "") . "><a ".($account[3] == $app->id ? "class='active' " : "")." rel='ddsubmenu{$i}' href='$local_path_to_root/index.php?application=" . $app->id
+							."'$acc[1]><b>" . $acc[0] . "</b></a></li>\n";
+					}		
 				}
 				echo "</ul>\n"; 
 				echo "</div>\n"; // menu
@@ -112,6 +115,8 @@
 				$i = 0;
 				foreach($applications as $app)
 				{
+                    if (!$_SESSION["wa_current_user"]->check_application_access($app))
+                    	continue;
 					if ($app->id == "system")
 						$imgs2 = array("page_edit.png", "page_edit.png", "page_edit.png", "page_edit.png", "folder.gif");
 					else	
@@ -121,6 +126,8 @@
 					echo "<ul id='ddsubmenu{$i}' class='ddsubmenustyle'>\n";
 					foreach ($app->modules as $module)
 					{
+        				if (!$_SESSION["wa_current_user"]->check_module_access($module))
+        					continue;
 						$img_src = "<img style='vertical-align:middle;' src='$path_to_root/themes/dynamic/images/".$imgs2[$j]."' width='14' height='14' border='0' />&nbsp;";
 						echo "<li><a href='#'>$img_src $module->name</a>\n"; 
 						$apps = array();
@@ -141,8 +148,8 @@
 									echo "<li><a href='$path_to_root/$application->link'>$img_src {$lnk[0]}</a></li>\n";
 								}
 							}
-							else	
-								if (!$_SESSION["wa_current_user"]->hide_inaccessible_menu_items()) echo "<li><a href='#'></a>$img_src {$lnk[0]}</li>\n";
+							elseif (!$_SESSION["wa_current_user"]->hide_inaccessible_menu_items())	
+								echo "<li><a href='#' style='color:gray;'>$img_src {$lnk[0]}</a></li>\n";
 						}
 						$j++;
 						if (count($apps))
@@ -206,6 +213,8 @@
 				echo "</script>\n"; 
 			}
 			$selected_app = $waapp->get_selected_application();
+			if (!$_SESSION["wa_current_user"]->check_application_access($selected_app))
+				return;
 			// first have a look through the directory, 
 			// and remove old temporary pdfs and pngs
 			$dir = company_path(). '/pdf_files';
@@ -237,7 +246,7 @@
 				display_dimension_topten();
 			elseif ($selected_app->id == "GL")
 				display_gl_info();
-			elseif ($selected_app->id == "system")
+			else	
 			{
 				$title = "Display System Diagnostics";
 				br(2);
