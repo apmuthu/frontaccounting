@@ -10,12 +10,14 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2013-12-30 Ap.Muthu           query_size to unsigned in users table ** Not in Official Repo As yet **
+
 2013-12-10 Joe                Avoiding redundant passes in Fiscal Year deletion.
 2013-12-05 Joe                Rerun. Allowing more than one document attachment.
 2013-12-04 Joe                Inventory Items Movements always starts with 0 qty. Fixed.
 2013-12-04 Joe                Allowing more than one document attachment.
 
-2013-11-23 Ap.Muthu           Slow Query Fix ** Not in Official Repo As yet **
+2013-11-23 Ap.Muthu           Slow Query Fix ** Not fully in Official Repo As yet **
 
 2013-11-20 Janusz Dobrowolski Supplier Payments: Fixed error during payment allocation in strict MySQL mode.
 2013-11-19 Janusz Dobrowolski Fixed back link presented when trying to modify fully invoiced Customer Delivery.
