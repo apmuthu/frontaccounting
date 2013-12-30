@@ -31,3 +31,9 @@ Caveats:
 <li>FA versions are not released too often in order to provide a minimal acceptable level of stability, which is important especially in accounting software.</li>
 </ul>
 
+Third Party Connects
+====================
+<ul>
+<li><b>WordPress Connect</b>: https://github.com/wp-plugins/frontaccounting-connect</li>
+<li>Import active Frontaccounting items into wordpress as posts.</li>
+</ul>
