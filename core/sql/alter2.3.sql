@@ -250,3 +250,4 @@ ALTER TABLE `0_suppliers` ADD COLUMN `tax_included` tinyint(1) NOT NULL default 
 ALTER TABLE `0_supp_trans` ADD COLUMN `tax_included` tinyint(1) NOT NULL default '0';
 ALTER TABLE `0_purch_orders` ADD COLUMN `tax_included` tinyint(1) NOT NULL default '0';
 ALTER TABLE `0_debtor_trans` ADD INDEX `Order` (`order_`);
+ALTER TABLE `0_users` CHANGE `query_size` `query_size` TINYINT(1) UNSIGNED NOT NULL DEFAULT 10;
