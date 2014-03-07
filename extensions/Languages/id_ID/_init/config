@@ -1,8 +1,8 @@
 Package: id_ID
-Version: 2.3.0-3
+Version: 2.3.0-4
 Description: Indonesian translation Version merged from FA 2.2
-Author: Agus Tuasuun <a9u5tu5@yahoo.com>
-Maintenance: Agus Tuasuun <a9u5tu5@yahoo.com>
+Author: Y. Shaka <yshaka@yahoo.co.id>
+Maintenance: Agus Y. Shaka <yshaka@yahoo.co.id>
 Homepage: frontaccounting.net
 Language: id_ID
 Encoding: utf-8
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Indonesian
 InstallPath: lang/id_ID
-Filename: id_ID-2.3.0-3
+Filename: id_ID-2.3.0-4
 

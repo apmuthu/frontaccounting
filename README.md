@@ -16,7 +16,7 @@ Official Links:
 </ul>
 
 The official <a href="http://frontaccounting.hg.sourceforge.net/hgweb/frontaccounting/frontaccounting/">FrontAccounting Source Tree</a> uses Mercurial on SourceForge 
-and was officially <a href="http://devel.frontaccounting.com/git/">mirrored on Git</a> from 2013-04-16 onwards.
+and has been officially <a href="http://devel.frontaccounting.com/git/">mirrored on Git</a> from 2013-04-16 onwards.
 
 Caveats:
 ========

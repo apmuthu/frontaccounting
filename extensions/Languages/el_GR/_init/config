@@ -1,5 +1,5 @@
 Package: el_GR
-Version: 2.3.4-2
+Version: 2.3.19-1
 Description: Greek translation for FrontAccounting.
 Author: Kyriakos Tsoukalas <kt@labyrinthos.gr>
 Maintenance: Kyriakos Tsoukalas <kt@labyrinthos.gr>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Greek
 InstallPath: lang/el_GR
-Filename: el_GR-2.3.4-2
+Filename: el_GR-2.3.19-1
 
