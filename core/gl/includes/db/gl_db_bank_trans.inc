@@ -66,17 +66,17 @@ function exists_bank_trans($type, $type_no)
 function get_bank_trans($type, $trans_no=null, $person_type_id=null, $person_id=null)
 {
 	$sql = "SELECT bt.*, act.*,
-		IFNULL(ABS(dt.ov_amount), IFNULL(ABS(st.ov_amount), bt.amount)) AS settled_amount,
-		IFNULL(ABS(dt.ov_amount/bt.amount), IFNULL(ABS(st.ov_amount/bt.amount), 1)) AS settle_rate,
-		IFNULL(debtor.curr_code, IFNULL(supplier.curr_code, act.bank_curr_code)) AS settle_curr
+		IFNULL(abs(dt.ov_amount), IFNULL(ABS(st.ov_amount), bt.amount)) settled_amount,
+		IFNULL(abs(dt.ov_amount/bt.amount), IFNULL(ABS(st.ov_amount/bt.amount), 1)) settle_rate,
+		IFNULL(debtor.curr_code, IFNULL(supplier.curr_code, act.bank_curr_code)) settle_curr
 
 		FROM ".TB_PREF."bank_trans bt
-				LEFT JOIN ".TB_PREF."debtor_trans dt ON dt.type=bt.type AND dt.trans_no=bt.trans_no
-				LEFT JOIN ".TB_PREF."debtors_master debtor ON debtor.debtor_no = dt.debtor_no
-				LEFT JOIN ".TB_PREF."supp_trans st ON st.type=bt.type AND st.trans_no=bt.trans_no
-				LEFT JOIN ".TB_PREF."suppliers supplier ON supplier.supplier_id = st.supplier_id
-				LEFT JOIN ".TB_PREF."bank_accounts act ON act.id = bt.bank_act
-		WHERE  1 ";
+				 LEFT JOIN ".TB_PREF."debtor_trans dt ON dt.type=bt.type AND dt.trans_no=bt.trans_no
+				 LEFT JOIN ".TB_PREF."debtors_master debtor ON debtor.debtor_no = dt.debtor_no
+				 LEFT JOIN ".TB_PREF."supp_trans st ON st.type=bt.type AND st.trans_no=bt.trans_no
+				 LEFT JOIN ".TB_PREF."suppliers supplier ON supplier.supplier_id = st.supplier_id,
+			 ".TB_PREF."bank_accounts act
+		WHERE act.id=bt.bank_act ";
 	if ($type != null)
 		$sql .= " AND bt.type=".db_escape($type);
 	if ($trans_no != null)
@@ -85,7 +85,7 @@ function get_bank_trans($type, $trans_no=null, $person_type_id=null, $person_id=
 		$sql .= " AND bt.person_type_id = ".db_escape($person_type_id);
 	if ($person_id != null)
 		$sql .= " AND bt.person_id = ".db_escape($person_id);
-	$sql .= " ORDER BY bt.trans_date, bt.id";
+	$sql .= " ORDER BY trans_date, bt.id";
 
 	return db_query($sql, "query for bank transaction");
 }
