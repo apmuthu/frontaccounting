@@ -10,6 +10,11 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-03-12 Joe                Changed decimal places in preferences to be number lists.
+
+2013-12-30 Ap.Muthu           query_size to unsigned in users table ** Not in Official Repo As yet **
+2013-11-23 Ap.Muthu           Slow Query Fix ** Not fully in Official Repo As yet ** (2013-01-04 Update)
+
 2014-03-10 10:58 +0100 Joe
 (3367) Release 2.3.20
  version.php
