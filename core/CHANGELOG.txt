@@ -10,6 +10,8 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-03-14 Ap.Muthu           Forum Fixes INNER JOINs ** Not in Official Repo As yet **
+
 2014-03-12 Joe                Changed decimal places in preferences to be number lists.
 
 2013-12-30 Ap.Muthu           query_size to unsigned in users table ** Not in Official Repo As yet **
