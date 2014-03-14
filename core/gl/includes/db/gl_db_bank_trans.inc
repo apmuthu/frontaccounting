@@ -75,7 +75,7 @@ function get_bank_trans($type, $trans_no=null, $person_type_id=null, $person_id=
 				LEFT JOIN ".TB_PREF."debtors_master debtor ON debtor.debtor_no = dt.debtor_no
 				LEFT JOIN ".TB_PREF."supp_trans st ON st.type=bt.type AND st.trans_no=bt.trans_no
 				LEFT JOIN ".TB_PREF."suppliers supplier ON supplier.supplier_id = st.supplier_id
-				LEFT JOIN ".TB_PREF."bank_accounts act ON act.id = bt.bank_act
+				INNER JOIN ".TB_PREF."bank_accounts act ON act.id = bt.bank_act
 		WHERE  1 ";
 	if ($type != null)
 		$sql .= " AND bt.type=".db_escape($type);
