@@ -10,12 +10,15 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
-2014-03-14 Ap.Muthu           Forum Fixes INNER JOINs ** Not in Official Repo As yet **
+2014-04-05 Joe                Selecting the cancel button in confirming the voiding of document did not work properly + Rerun
+2014-04-03 Joe                Bad elseif sentence in items.php (image upload)
+
+2014-03-14 Ap.Muthu           Forum Fixes INNER JOINs ** Not in Official Repo As yet ** - sales/includes/db/cust_trans_db.inc, gl/includes/db/gl_db_bank_trans.inc
 
 2014-03-12 Joe                Changed decimal places in preferences to be number lists.
 
-2013-12-30 Ap.Muthu           query_size to unsigned in users table ** Not in Official Repo As yet **
-2013-11-23 Ap.Muthu           Slow Query Fix ** Not fully in Official Repo As yet ** (2013-01-04 Update)
+2013-12-30 Ap.Muthu           query_size to unsigned in users table ** Not in Official Repo As yet ** - sql/alter2.3.sql, en_US-demo.sql, en_US-new.sql
+2013-11-23 Ap.Muthu           Slow Query Fix ** Not fully in Official Repo As yet ** (2014-04-05 Update) - sql/alter2.3.sql, en_US-demo.sql, en_US-new.sql
 
 2014-03-10 10:58 +0100 Joe
 (3367) Release 2.3.20
