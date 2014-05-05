@@ -10,7 +10,9 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
-2014-04-08 Joe                Sending location email when below reorder also in Itmes Transfer and Adjustment
+2014-05-05 Joe                Allow changing currency on customer/supplier as long as no transactions exist.
+2014-05-04 Joe                Backward compatible empty sql mode for MySql databases greater than release 5.5.
+2014-04-08 Joe                Sending location email when below reorder also in Items Transfer and Adjustment
 2014-04-05 Joe                Selecting the cancel button in confirming the voiding of document did not work properly + Rerun
 2014-04-03 Joe                Bad elseif sentence in items.php (image upload)
 
