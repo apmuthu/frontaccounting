@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-06-08 Janusz Dobrowolski Language template update
 2014-05-28 Janusz Dobrowolski Customer Credit Note: fixed payments allocation after crediting sales invoice.
 2014-05-28 Janusz Dobrowolski Payment/Deposit: new exchange rate was not used for GL postings, now ex_rate is stored before adding transaction.
 
