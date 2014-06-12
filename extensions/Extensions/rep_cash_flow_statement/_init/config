@@ -1,0 +1,17 @@
+Package: rep_cash_flow_statement
+Version: 2.3.0-1
+Name: Cash Flow Statement Report
+Description: A simple Cash Flow Statement.
+ Cash Flow statement would be done with the bank and cash accounts setup.
+ It will receive all the cash receipts minus the cash payments for each account.
+ The balance would be you positive or negative cash flow.
+ This is not sales on credit or purchases on credit.
+ These will only reflect when you receive payment on those sales or when you pay your supplier.
+ Each account will then have an opening and closing balance and the difference would be you negative or positive cash flow.
+Author: Joe Hunt <joe.hunt.cocnsulting@gmail.com
+Maintenance: Joe Hunt <joe.hunt.cocnsulting@gmail.com
+Homepage: frontaccounting.com
+Type: extension
+InstallPath: modules/rep_cash_flow_statement
+Filename: rep_cash_flow_statement-2.3.0-1
+
