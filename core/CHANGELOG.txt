@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-06-24 Joe                Fixed line overwrite in documents when using rtl language.
 2014-06-17 Joe                User account should not be deleted if there are any entries on his/her name.
 2014-06-14 Joe                Added short name, name and tax id as search options in customer and supplier lists
 2014-06-08 Janusz Dobrowolski Language template update
