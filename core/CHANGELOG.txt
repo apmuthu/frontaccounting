@@ -10,6 +10,9 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-07-10 Joe                Added supplier search in Outstanding Purchase Orders and Purchase Orders Inquiry.
+2014-07-09 Joe                Added customer search in Search not invoiced Deliveries.
+2014-07-07 Joe                Improved readability in Graphics engine, x-legends for all languages.
 2014-07-05 Joe                New variable in config.default.php , $UTF8_fontfile. Needed due to FreeSans problem with Arabic and Chinese in Graphics Engine.
 2014-07-05 Joe                Enabled RTL text in Graphics Engine. Due to bug in imagettftext.
 2014-06-24 Joe                Fixed line overwrite in documents when using rtl language.
