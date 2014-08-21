@@ -10,6 +10,9 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-08-15 Joe                Improved Costed Inventory Movement Report
+2014-08-13 Joe                Wrong parameter when saving Item Transfer
+2014-08-12 Joe                Wrong parameter when saving Item Adjustment
 2014-07-10 Joe                Added supplier search in Outstanding Purchase Orders and Purchase Orders Inquiry.
 2014-07-09 Joe                Added customer search in Search not invoiced Deliveries.
 2014-07-07 Joe                Improved readability in Graphics engine, x-legends for all languages.
