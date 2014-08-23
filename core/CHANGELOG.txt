@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-08-23 Janusz Dobrowolski Fixed php5.4 specific problem with downloading extensions (by campbell-prince)
 2014-08-15 Joe                Improved Costed Inventory Movement Report
 2014-08-13 Joe                Wrong parameter when saving Item Transfer
 2014-08-12 Joe                Wrong parameter when saving Item Adjustment
