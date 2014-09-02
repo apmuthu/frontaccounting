@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-09-02 Janusz Dobrowolski PHP 5.4 warning on deprecated mysql api is ignored to avoid folld in errors file. This is safe to use it with 5.4 in FA 2.3 anyway, will be moved to mysqli in 2.4.
 2014-08-23 Janusz Dobrowolski Fixed php5.4 specific problem with downloading extensions (by campbell-prince)
 2014-08-15 Joe                Improved Costed Inventory Movement Report
 2014-08-13 Joe                Wrong parameter when saving Item Transfer
