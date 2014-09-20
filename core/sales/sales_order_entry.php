@@ -510,7 +510,9 @@ function check_item_data()
 		&& !$SysPrefs->allow_negative_stock())
 	{
 		$qoh = get_qoh_on_date($_POST['stock_id'], $_POST['Location'], $_POST['OrderDate']);
-		if (input_num('qty') > $qoh)
+		$qoh_today = get_qoh_on_date($_POST['stock_id'], $_POST['Location'], null); // Of course we must also test for stock availability by todays date.
+		$qty = input_num('qty');
+		if ($qty > $qoh || $qty > $qoh_today)
 		{
 			$stock = get_item($_POST['stock_id']);
 			display_error(_("The delivery cannot be processed because there is an insufficient quantity for item:") .

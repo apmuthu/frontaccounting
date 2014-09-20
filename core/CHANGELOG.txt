@@ -10,6 +10,16 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-09-19 Joe                Set default Show Also Allocated to Yes in aged reports, just like on screen transactions.
+2014-09-19 Joe                Rerun. We must also test for availability on document date.
+2014-09-19 Joe                We must always test for stock availability by todays date.
+2014-09-17 Janusz Dobrowolski Fixed POST array values paasing on timout screen.
+2014-09-14 Joe                Added new report, Work Order Listing.
+2014-09-14 Joe                Added sorting for number and name in work order inquiry.
+2014-09-12 Joe                Bug fixes and option to print Inventory Valuation Report on Costed Values.
+2014-09-12 Joe                Item Cost Update will also regulate the stock moves standard cost to mirror correct GL.
+2014-09-12 Joe                New flag $use_costed_values in config.php for Inventory Valuation Report
+2014-09-12 Joe                Removed redundant mb_flag 'A'.
 2014-09-02 Janusz Dobrowolski PHP 5.4 warning on deprecated mysql api is ignored to avoid folld in errors file. This is safe to use it with 5.4 in FA 2.3 anyway, will be moved to mysqli in 2.4.
 2014-08-23 Janusz Dobrowolski Fixed php5.4 specific problem with downloading extensions (by campbell-prince)
 2014-08-15 Joe                Improved Costed Inventory Movement Report
