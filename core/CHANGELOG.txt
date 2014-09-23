@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-09-23 Janusz Dobrowolski Small cleanups.
 2014-09-21 Janusz Dobrowolski Fixed stock quantity checks to block transactions which would result in negative inventory status (if not allowed).
 2014-09-19 Joe                Set default Show Also Allocated to Yes in aged reports, just like on screen transactions.
 2014-09-19 Joe                Rerun. We must also test for availability on document date.
