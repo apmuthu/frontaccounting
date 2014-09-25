@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-09-25 Joe                Updated en_US-demo.sql and en_US-new.sql COAs
 2014-09-25 Joe                Global option for printing item images on sales quotations.
 2014-09-24 Joe                Improved Tax Report. Bank Payments/Deposits show 'order to/name' info in name column.
 2014-09-23 Janusz Dobrowolski Small cleanups.
