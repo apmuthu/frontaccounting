@@ -13,7 +13,7 @@ class hooks_dashboard extends hooks {
 	var $module_name = 'dashboard';
 
 	/*
-		Install additonal menu options provided by module
+		Install additional menu options provided by module
 	*/
     function install_tabs($app) {
         $app->add_application(new dashboard_app);

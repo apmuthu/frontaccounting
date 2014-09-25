@@ -1,12 +1,12 @@
 <?php
 
-define('SS_REQUISITIONS', 101<<8); 
+define ('SS_REQUISITIONS', 101<<8); 
 
 class hooks_requisitions extends hooks {
 	var $module_name = 'requisitions'; 
 
 	/*
-		Install additonal menu options provided by module
+		Install additional menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;

@@ -4,7 +4,7 @@ class hooks_import_items extends hooks {
 	var $module_name = 'Import CSV Items'; 
 
 	/*
-		Install additonal menu options provided by module
+		Install additional menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;
