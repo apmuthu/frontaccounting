@@ -10,6 +10,9 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-10-02 Joe                Improved layout Reports Customer / Supplier Balances.
+2014-10-01 Joe                Wrong domestic open balance in Report Supplier Balance for currency suppliers.
+
 2014-09-29 16:04 +0200 Joe
 (3421) Changelog change
  CHANGELOG.txt
