@@ -1,0 +1,8 @@
+
+2014-09-26 Ap.Muthu           Unsigned Repos flag $repo_sign in includes/packages.inc
+2014-09-26 Ap.Muthu           Better clarity icons for Menu Entry in all standard themes
+2014-09-26 Ap.Muthu           Currency Fixes for GBP and EUR not in Official Repo since most there follow latin1 charset - en_US-demo.sql, en_US-new.sql
+2014-06-26 Ap.Muthu           EMail Links in report header2.inc clarity fix
+2014-03-14 Ap.Muthu           Forum Fixes INNER JOINs - sales/includes/db/cust_trans_db.inc, gl/includes/db/gl_db_bank_trans.inc
+2013-12-30 Ap.Muthu           query_size to unsigned in users table - sql/alter2.3.sql, en_US-demo.sql, en_US-new.sql
+2013-11-23 Ap.Muthu           Slow Query Fix ** Partly in Official Repo ** (2014-04-05 Update) - sql/alter2.3.sql, en_US-demo.sql, en_US-new.sql
