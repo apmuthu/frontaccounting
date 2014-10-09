@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-10-09 Janusz Dobrowolski Fixed contact record creation when new customer is added (reference/name were superseded).
 2014-10-02 Joe                Improved layout Reports Customer / Supplier Balances.
 2014-10-01 Joe                Wrong domestic open balance in Report Supplier Balance for currency suppliers.
 
