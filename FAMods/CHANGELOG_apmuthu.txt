@@ -1,4 +1,6 @@
 
+2014-10-11 Ap.Muthu           crm_contacts.entity_id VARCHAR(11) => INT(11)
+2014-10-11 Ap.Muthu           Arabic Fonts for reporting 
 2014-09-26 Ap.Muthu           Unsigned Repos flag $repo_sign in includes/packages.inc
 2014-09-26 Ap.Muthu           Better clarity icons for Menu Entry in all standard themes
 2014-09-26 Ap.Muthu           Currency Fixes for GBP and EUR not in Official Repo since most there follow latin1 charset - en_US-demo.sql, en_US-new.sql

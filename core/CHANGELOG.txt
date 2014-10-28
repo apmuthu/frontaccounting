@@ -10,8 +10,11 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
-2014-10-09 Janusz Dobrowolski Fixed contact record creation when new customer is added (reference/name were superseded).
-2014-10-02 Joe                Improved layout Reports Customer / Supplier Balances.
+2014-10-28 Joe                Improved calculation of standard cost in advanced manufacturing even if qoh = 0.
+2014-10-27 Janusz Dobrowolski Fixed 'C' english language display on Install/Update Languages page, to allow its selection on first page.
+2014-10-15 Janusz Dobrowolski Restoring compressed sql files sometimes failed due to nasty bug in php gzfile function.
+2014-10-08 Janusz Dobrowolski Fixed contact record creation when new customer is added (reference/name were superseded).
+2014-10-01 Joe                Improved layout Reports Customer / Supplier Balances.
 2014-10-01 Joe                Wrong domestic open balance in Report Supplier Balance for currency suppliers.
 
 2014-09-29 16:04 +0200 Joe
