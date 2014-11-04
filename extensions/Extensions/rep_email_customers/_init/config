@@ -1,0 +1,11 @@
+Package: rep_email_customers
+Version: 2.3.22-1
+Name: Send mass mail to your customers.
+Description: This module enables the sending of mass mails to all the customers of the company.
+Author: Maxime Bourget <bmx007@gmail.com>
+Maintenance: Maxime Bourget <bmx007@gmail.com>
+Homepage: n/a
+Type: extension
+InstallPath: modules/rep_email_customers
+Filename: rep_email_customers-2.3.22-1
+

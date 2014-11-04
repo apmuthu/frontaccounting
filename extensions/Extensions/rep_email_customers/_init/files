@@ -1,0 +1,9 @@
+reporting/reports_custom.php: ae2099caea7efbbb88e36ae6727a089222bf2d5f
+reporting/rep_email_customers.php: fbbc01e3f7dcc5b965f529b5059b29024fe9f5cd
+reporting/index.php: ecaa5f0560883d40dc7508073f57abef01cb438b
+index.php: ecaa5f0560883d40dc7508073f57abef01cb438b
+includes/doctext.inc: 848e2a0a28f0d348d70579025eb2f0d7b48810da
+includes/customer_emailer.inc: 11b45a300ad9727690b92a917d42096910330d81
+hooks.php: c5ec4ede07c9659e7f8e0d6cd9ad715718926bcd
+_init/config: 84e5269fdcc3d9b07952b1ab457fb83c2663840a
+README.md: 035dcb0e2ab3a18acbe16b6126be004184935215
