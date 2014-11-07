@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-11-07 Joe                Fixed deprecated preg_replace in php >= 5.3.0 with the /e flag in utf8 reports.
 2014-10-28 Joe                Improved calculation of standard cost in advanced manufacturing even if qoh = 0.
 2014-10-27 Janusz Dobrowolski Fixed 'C' english language display on Install/Update Languages page, to allow its selection on first page.
 2014-10-15 Janusz Dobrowolski Restoring compressed sql files sometimes failed due to nasty bug in php gzfile function.
