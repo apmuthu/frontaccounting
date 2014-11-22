@@ -10,6 +10,13 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-11-22 Janusz Dobrowolski Further fixes to javascript multiple class handling. (Incomplete yet works for now. Needs further changes in FAMods)
+2014-11-21 Janusz Dobrowolski [0002950] Fixed false quantity on hand errors on sales delivery.
+2014-11-21 Janusz Dobrowolski Fixed warning during database restore.
+2014-11-21 Janusz Dobrowolski Fixed warning about non-existing HTTP_USER_AGENT session variable on some Plesk configurations.
+2014-11-19 Joe                Fixed better CSS combobox select.
+2014-11-17 Joe                Fixed ECB URLs moved permanently.
+2014-11-14 Janusz Dobrowolski Cambell: Javascript now works with multiple classes on elements.
 2014-11-07 Joe                Fixed deprecated preg_replace in php >= 5.3.0 with the /e flag in utf8 reports.
 2014-10-28 Joe                Improved calculation of standard cost in advanced manufacturing even if qoh = 0.
 2014-10-27 Janusz Dobrowolski Fixed 'C' english language display on Install/Update Languages page, to allow its selection on first page.
