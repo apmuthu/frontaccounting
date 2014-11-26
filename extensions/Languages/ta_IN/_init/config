@@ -1,0 +1,16 @@
+Package: ta_IN
+Version: 2.3.22-1
+Description: Indian Tamil translation
+Author: Ap.Muthu <apmuthu@usa.net>
+Maintenance: Ap.Muthu <apmuthu@usa.net>
+Homepage: frontaccounting.com
+Language: ta_IN
+Encoding: utf-8
+RTLDir: no
+Depends: 
+Type: language
+Name: Tamil (India)
+Name-ta_IN: தமிழ் (இந்தியா)
+InstallPath: lang/ta_IN
+Filename: ta_IN-2.3.22-1
+
