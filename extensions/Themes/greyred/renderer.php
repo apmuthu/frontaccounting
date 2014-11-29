@@ -30,11 +30,11 @@
 			echo "  <div id='iconlink'>";
 	   		// Logout on main window only
 	   		if (!$no_menu) {
-        		echo "    <a class='shortcut' href='$local_path_to_root/access/logout.php?'><img src='$local_path_to_root/themes/grayred/images/system-shutdown.png' title='"._("Logout")."' /></a>";
+        		echo "    <a class='shortcut' href='$local_path_to_root/access/logout.php?'><img src='$local_path_to_root/themes/greyred/images/system-shutdown.png' title='"._("Logout")."' /></a>";
      		}
   			// Popup help
      		if ($help_base_url != null) {
-			  echo "<a target = '_blank' onclick=" .'"'."javascript:openWindow(this.href,this.target); return false;".'" '. "href='". help_url()."'><img src='$local_path_to_root/themes/grayred/images/help-browser.png' title='"._("Help")."' /></a>\n";
+			  echo "<a target = '_blank' onclick=" .'"'."javascript:openWindow(this.href,this.target); return false;".'" '. "href='". help_url()."'><img src='$local_path_to_root/themes/greyred/images/help-browser.png' title='"._("Help")."' /></a>\n";
 	   		}
      		echo "  </div>\n"; // iconlink
      		echo "  </div>\n";
