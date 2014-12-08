@@ -1,5 +1,5 @@
 Package: chart_pl_PL-general
-Version: 2.3.0-5
+Version: 2.3.0-6
 Name: Polish 9 digits COA
 Description: This is a Polish 9 digits chart of accounts for a starting company.
 Encoding: iso-8859-2
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: pl_PL-default.sql
-Filename: chart_pl_PL-general-2.3.0-5
+Filename: chart_pl_PL-general-2.3.0-6
 

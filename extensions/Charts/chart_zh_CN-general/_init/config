@@ -1,5 +1,5 @@
 Package: chart_zh_CN-general
-Version: 2.3.0-4
+Version: 2.3.0-5
 Name: Chinese (simplified) 4 digit COA
 Description: This is a Chinese (simplified) chart of accounts for a starting company.
 Encoding: utf-8
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: zh_CN-default-utf8.sql
-Filename: chart_zh_CN-general-2.3.0-4
+Filename: chart_zh_CN-general-2.3.0-5
 

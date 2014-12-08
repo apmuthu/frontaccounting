@@ -1,5 +1,5 @@
 Package: chart_en_US-GAAP
-Version: 2.3.0-2
+Version: 2.3.0-3
 Name: 8 digit GAAP compatible American chart of accounts
 Description: This is an 8 digit American chart of accounts (COA),
  based on Generally Accepted Accounting Principles of USA (GAAP)
@@ -14,5 +14,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: en_US-GAAP.sql
-Filename: chart_en_US-GAAP-2.3.0-2
+Filename: chart_en_US-GAAP-2.3.0-3
 

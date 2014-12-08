@@ -1,5 +1,5 @@
 Package: chart_da_DK-general
-Version: 2.3.0-4
+Version: 2.3.0-5
 Name: Danish 4 digits general COA
 Description: This is a Danish 4 digits chart of accounts for a starting company.
 Author: ??
@@ -10,5 +10,5 @@ Encoding: iso-8859-1
 Type: chart
 InstallPath: sql
 SqlScript: da_DK-new2.sql
-Filename: chart_da_DK-general-2.3.0-4
+Filename: chart_da_DK-general-2.3.0-5
 

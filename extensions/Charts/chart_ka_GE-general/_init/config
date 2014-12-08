@@ -1,5 +1,5 @@
 Package: chart_ka_GE-general
-Version: 2.3.0-2
+Version: 2.3.0-3
 Name: Georgian COA
 Description: This is a Georgian chart of accounts for a new company.
 Encoding: utf-8
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: ka_GE-general.sql
-Filename: chart_ka_GE-general-2.3.0-2
+Filename: chart_ka_GE-general-2.3.0-3
 

@@ -1,5 +1,5 @@
 Package: chart_en_SG-general
-Version: 2.3.0-3
+Version: 2.3.0-4
 Name: English Singapore 4 digits COA
 Description: This is an English Singapore 4 digits chart of accounts for a starting company.
 Encoding: iso-8859-1
@@ -10,5 +10,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: en_SG-new.sql
-Filename: chart_en_SG-general-2.3.0-3
+Filename: chart_en_SG-general-2.3.0-4
 

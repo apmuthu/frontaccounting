@@ -1,5 +1,5 @@
 Package: chart_ar_EG-english
-Version: 2.3.11-2
+Version: 2.3.11-3
 Name: Arabic Egypt 8 digits COA - GAAP (English version)
 Description: This is an Arabic Egypt 8 digits chart of accounts for a starting company,
  based on GAAP and IAS in english version.
@@ -11,5 +11,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: ar_EG-8digists-eng.sql
-Filename: chart_ar_EG-english-2.3.11-2
+Filename: chart_ar_EG-english-2.3.11-3
 
