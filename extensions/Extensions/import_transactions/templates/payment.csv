@@ -1,0 +1,3 @@
+"reference","date","description","amount","from account","taxtype","Dimension 1","Dimension 2","person_type_id (1=SUPPLIER 2=CUSTOMER)","Person_id"
+"REF1",15/12/14,"Rent using account 7100",330,7100,1,"D1","D2",,
+"REF2",16/12/14,"Paid Creditor Control account 2100",220,2100,0,"D1","D2",1,1

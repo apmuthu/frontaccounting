@@ -1,0 +1,368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Module-Asset Register\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-03-11 12:06+0100\n"
+"PO-Revision-Date: 2014-11-11 05:09+0800\n"
+"Last-Translator: Gigih Wahyudi <lowland.bpn@gmail.com>\n"
+"Language-Team: FAID <lowland.bpn@gmail.com>\n"
+"Language: id_ID\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:17
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:17
+msgid "Amortisation Schedule"
+msgstr "Penjadwalan Amortisasi"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:37
+msgid "The valuation year cannot be empty."
+msgstr "Tahun penaksiran tidak boleh kosong."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:43
+msgid "The asset value cannot be empty."
+msgstr "Nilai aktiva tidak boleh kosong."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:52
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:55
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:50
+msgid "Selected asset type has been updated"
+msgstr "Tipe aktiva terpilih telah diperbarui"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:57
+msgid "New Asset value has been added"
+msgstr "Nilai aktiva baru telah ditambahkan"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:70
+msgid "Selected asset valuation has been deleted"
+msgstr "Penaksiran aktiva terpilih telah dihapus"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Asset Type"
+msgstr "Tipe Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "Asset Name"
+msgstr "Nama Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Serial Number"
+msgstr "Nomor Seri"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Purchase Date"
+msgstr "Tanggal Pembelian"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Purchase Price"
+msgstr "Harga Pembelian"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:88
+msgid "Amortise"
+msgstr "Amortis"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+msgid "Valuation Year"
+msgstr "Tahun Penaksiran"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Asset Value"
+msgstr "Nilai Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:114
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+msgid "Value Change"
+msgstr "Perubahan Nilai"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:126
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:126
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:117
+msgid "Delete"
+msgstr "Hapus"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:147
+msgid "Year of Valuation :"
+msgstr "Tahun dari Penaksiran :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:148
+msgid "Asset Value :"
+msgstr "Nilai Aktiva :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Year"
+msgstr "Tahun"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation.php:168
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Depreciation"
+msgstr "Depresiasi"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Disposal Date"
+msgstr "Tanggal Disposal"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:51
+msgid "Disposal Amount"
+msgstr "Jumlah Disposal"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:79
+#: /var/www/fa_stable/modules/asset_register/_devel/../amortisation_post.php:107
+msgid "Name"
+msgstr "Nama"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:20
+msgid "Assets"
+msgstr "Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:39
+msgid "The asset name cannot be empty."
+msgstr "Nama aktiva tidak boleh kosong."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:45
+msgid "The purchase value cannot be empty."
+msgstr "Nilai pembelian tidak boleh kosong."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:61
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:58
+msgid "New Asset type has been added"
+msgstr "Tipe aktiva baru telah ditambahkan"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:74
+msgid ""
+"Cannot delete this asset because amortisation transactions have been created "
+"referring to it."
+msgstr ""
+"Tidak dapat menghapus aktiva ini karena transaksi-transaksi amortisasi yang "
+"telah dibuatkan mengacu kepadanya."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:89
+msgid "Selected asset has been deleted"
+msgstr "Aktiva terpilih telah dihapus"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Purchase Value"
+msgstr "Nilai Pembelian"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "Current Value"
+msgstr "Nilai Lancar"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:108
+msgid "A"
+msgstr "A"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:124
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:116
+msgid "Edit"
+msgstr "Sunting"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:165
+msgid "Asset Type :"
+msgstr "Tipe Aktiva :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:166
+msgid "Asset Name :"
+msgstr "Nama Aktiva :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:167
+msgid "Serial Number :"
+msgstr "Nomor Seri :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:168
+msgid "Tag Number :"
+msgstr "Nomor Tag :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:169
+msgid "Purchase Date :"
+msgstr "Tanggal Pembelian :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:170
+msgid "Purchase Value :"
+msgstr "Nilai Pembelian :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:171
+msgid "Location :"
+msgstr "Lokasi :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:172
+msgid "Condition :"
+msgstr "Kondisi :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:173
+msgid "Acquisition :"
+msgstr "Akuisisi :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:177
+msgid "Disposal Amount :"
+msgstr "Jumlah Disposal :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../assets.php:178
+msgid "Disposal Date :"
+msgstr "Tanggal Disposal :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:17
+msgid "Asset Types"
+msgstr "Tipe-Tipe Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:34
+msgid "The asset type name cannot be empty."
+msgstr "Nama tipe aktiva tidak boleh kosong."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:40
+msgid "The depreciation rate cannot be empty."
+msgstr "Tarif depresiasi tidak boleh kosong."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:71
+msgid ""
+"Cannot delete this asset type because assets transactions have been created "
+"referring to it."
+msgstr ""
+"Tidak dapat menghapus tipe aktiva ini karena transaksi-transaksi aktiva yang "
+"telah dibuatkan mengacu kepadanya."
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:86
+msgid "Selected asset type has been deleted"
+msgstr "Tipe aktiva terpilih telah dihapus"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:105
+msgid "Asset Type Name"
+msgstr "Nama Tipe Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:105
+msgid "Depreciation Rate"
+msgstr "Tarif Depresiasi"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:146
+msgid "Asset Type:"
+msgstr "Tipe Aktiva :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:147
+msgid "Depreciation Rate:"
+msgstr "Tarif Depresiasi :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:149
+msgid "Asset Account:"
+msgstr "Akun Aktiva :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:150
+msgid "Depreciation Account:"
+msgstr "Akun Depresiasi :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:151
+msgid "Accumulated Depreciation:"
+msgstr "Depresiasi Terakumulasi :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:152
+msgid "Asset Revaluation Account:"
+msgstr "Akun Penaksiran Ulang Aktiva :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../asset_types.php:153
+msgid "Disposal Account:"
+msgstr "Akun Disposal :"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:16
+msgid "&Asset Type Entries"
+msgstr "Isian Tipe &Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:17
+msgid "&Assets Entries"
+msgstr "Isian &Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:18
+msgid "&Amortisation Posting"
+msgstr "Penerbitan &Amortisasi"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:25
+msgid "Asset Register"
+msgstr "Pendaftaran Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:27
+msgid "Asset Type Entries"
+msgstr "Isian Tipe Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:28
+msgid "Assets Entries"
+msgstr "Isian Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../hooks.php:29
+msgid "Amortisation Posting"
+msgstr "Penerbitan Amortisasi"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:27
+msgid "Main Menu"
+msgstr "Menu Utama"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:52
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:78
+msgid "Logout"
+msgstr "Keluar"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:53
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:76
+msgid "Help"
+msgstr "Bantuan"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:71
+msgid "Preferences"
+msgstr "Preferensi"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:72
+msgid "Change password"
+msgstr "Ubah Sandi"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../../../themes/default/renderer.php:123
+msgid "Theme:"
+msgstr "Tema:"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:64
+msgid "Asset name"
+msgstr "Nama Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:69
+msgid "Component"
+msgstr "Komponen"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/rep_assets_list.php:71
+msgid "Assets Listing"
+msgstr "Pembarisan Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:5
+msgid "Assets List"
+msgstr "Daftar Aktiva"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:6
+msgid "Comments"
+msgstr "Komentar"
+
+#: /var/www/fa_stable/modules/asset_register/_devel/../reporting/reports_custom.php:6
+msgid "Destination"
+msgstr "Tujuan"

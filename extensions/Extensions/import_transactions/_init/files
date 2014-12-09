@@ -1,0 +1,9 @@
+/templates/payment.csv: bb34bdafd1005d79eb584149d55bd0be84a3762d
+/templates/deposit.csv: 766592b0b8deefd218f9f1bc02b84cc2a4febbb3
+/templates/bank.csv: 531005621d9f520f24fc46c4e72e533188f0dc16
+/templates/journal.csv: 27b9d0ce7c2ffb4c8373be5aac6977cdd2263346
+/import_multijournalentries.php: 5d6fa15a4214ba24cd95a7da294cffdc7acbaa5b
+/includes/import_multijournalentries.inc: 845333cb20268485fb8e5822a64054e9d9b3ba0b
+/hooks.php: 01f6593a438b8d6d4cdceba8cd2313aed8950ce6
+/_init/config: 5c5055ebc910c5a8ccc66a116daecf71983a746a
+
