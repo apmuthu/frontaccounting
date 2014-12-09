@@ -1,12 +1,12 @@
 <?php
 
-define ('SS_ASSETREGISTER', 101<<8);
+define('SS_ASSETREGISTER', 101<<8);
 
 class hooks_asset_register extends hooks {
 	var $module_name = 'asset_register'; 
 
 	/*
-		Install additional menu options provided by module
+		Install additonal menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;
