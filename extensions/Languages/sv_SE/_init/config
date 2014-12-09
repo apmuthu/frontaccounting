@@ -1,5 +1,5 @@
 Package: sv_SE
-Version: 2.3.0-3
+Version: 2.3.0-4
 Description: Swedish translation Version merged from FA 2.2
 Author: Joe Hunt <joe.hunt.consulting@gmail.com>
 Maintenance: Joe Hunt <joe.hunt.consulting@gmail.com>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Swedish
 InstallPath: lang/sv_SE
-Filename: sv_SE-2.3.0-3
+Filename: sv_SE-2.3.0-4
 

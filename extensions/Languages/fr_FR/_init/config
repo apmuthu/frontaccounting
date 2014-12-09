@@ -1,5 +1,5 @@
 Package: fr_FR
-Version: 2.3.0-2
+Version: 2.3.0-3
 Description: French translation Version merged from FA 2.2
 Author: 
 Maintenance: 
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: French
 InstallPath: lang/fr_FR
-Filename: fr_FR-2.3.0-2
+Filename: fr_FR-2.3.0-3
 

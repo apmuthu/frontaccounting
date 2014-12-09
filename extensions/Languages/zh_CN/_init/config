@@ -1,5 +1,5 @@
 Package: zh_CN
-Version: 2.3.0-4
+Version: 2.3.0-5
 Description: Simplified chinese translation by Felix Ye
 Author: Felix Ye <felix@mixpwr.com>
 Maintenance: Felix Ye <felix@mixpwr.com>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Chinese (Simplified)
 InstallPath: lang/zh_CN
-Filename: zh_CN-2.3.0-4
+Filename: zh_CN-2.3.0-5
 

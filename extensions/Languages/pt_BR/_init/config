@@ -1,5 +1,5 @@
 Package: pt_BR
-Version: 2.3.0-2
+Version: 2.3.0-3
 Description: Portuguese (Brazil) translation Version merged from FA 2.2
 Author: LMN - InterConnect <info@inter.bz>
 Maintenance: InterConnect <info@inter.bz>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Portuguese (Brazil)
 InstallPath: lang/pt_BR
-Filename: pt_BR-2.3.0-2
+Filename: pt_BR-2.3.0-3
 

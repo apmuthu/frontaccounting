@@ -1,5 +1,5 @@
 Package: de_DE
-Version: 2.3.0-2
+Version: 2.3.0-3
 Description: German translation Version merged from FA 2.2
 Author: Robert Laussegger <rlaussegger@iscongroup.net>
 Maintenance: Robert Laussegger <rlaussegger@iscongroup.net>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: German
 InstallPath: lang/de_DE
-Filename: de_DE-2.3.0-2
+Filename: de_DE-2.3.0-3
 

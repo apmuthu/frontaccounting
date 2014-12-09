@@ -1,5 +1,5 @@
 Package: ka_GE
-Version: 2.3.1-5
+Version: 2.3.1-6
 Description: Georgian translation
 Author: Giorgi Natsvlishvili <gnatsvlishvili@gmail.com>
 Maintenance: Giorgi Natsvlishvili <gnatsvlishvili@gmail.com>
@@ -10,5 +10,5 @@ RTLDir: no
 Type: language
 Name: Georgian
 InstallPath: lang/ka_GE
-Filename: ka_GE-2.3.1-5
+Filename: ka_GE-2.3.1-6
 

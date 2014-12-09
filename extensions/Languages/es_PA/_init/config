@@ -1,5 +1,5 @@
 Package: es_PA
-Version: 2.3.0-2
+Version: 2.3.0-3
 Description: Spanish (Panama) translation Version merged from FA 2.2
 Author: 
 Maintenance: 
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Spanish (Panama)
 InstallPath: lang/es_PA
-Filename: es_PA-2.3.0-2
+Filename: es_PA-2.3.0-3
 

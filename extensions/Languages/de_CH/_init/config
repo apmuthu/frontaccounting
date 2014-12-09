@@ -1,5 +1,5 @@
 Package: de_CH
-Version: 2.3.0-2
+Version: 2.3.0-3
 Description: Swiss german translation Version merged from FA 2.2
 Author: Urs Pfister <webmaster@archivista.ch>
 Maintenance: Urs Pfister <webmaster@archivista.ch>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Swiss German
 InstallPath: lang/de_CH
-Filename: de_CH-2.3.0-2
+Filename: de_CH-2.3.0-3
 
