@@ -1,0 +1,15 @@
+Package: sq_AL
+Version: 2.3.22-1
+Description: Albanian translation
+Author: Artan <artxcenter@gmail.com>
+Maintenance: Artan <artxcenter@gmail.com>
+Homepage: http://www.transifex.com/projects/p/frontaccounting
+Language: sq_AL
+Encoding: iso-8859-1
+RTLDir: no
+Depends: 
+Type: language
+Name: Albanian
+InstallPath: lang/sq_AL
+Filename: sq_AL-2.3.22-1
+
