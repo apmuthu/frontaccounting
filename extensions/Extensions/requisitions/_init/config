@@ -1,5 +1,5 @@
 Package: requisitions
-Version: 2.3.13-2
+Version: 2.3.13-3
 Name: Requisitions
 DefaultStatus: inactive
 Description: Requisitions module provide additional level of purchase order integration inside company.
@@ -14,5 +14,5 @@ Maintenance: Dennis Gichangi <dennis@dennis.me.ke>
 Homepage: www.dennis.me.ke/press
 Type: extension
 InstallPath: modules/requisitions
-Filename: requisitions-2.3.13-2
+Filename: requisitions-2.3.13-3
 

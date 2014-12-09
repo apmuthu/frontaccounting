@@ -5,14 +5,14 @@ class hooks_import_multijournalentries extends hooks {
 	var $module_name = 'import_multijournalentries'; 
 
 	/*
-		Install additional menu options provided by module
+		Install additonal menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;
 
 		switch($app->id) {
 			case 'GL':
-				$app->add_rapp_function(2, _('Import &Multiple Journal Entries'), 
+				$app->add_rapp_function(2, _('Import &Multiple Jourmal Entries'), 
 					$path_to_root.'/modules/import_multijournalentries/import_multijournalentries.php', 'SA_CSVMULTIJOURNALIMPORT');
 		}
 	}

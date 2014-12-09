@@ -1,5 +1,5 @@
 Package: osc_orders
-Version: 2.3.0-2
+Version: 2.3.0-3
 Name: osCommerce Order and Customer Import Module
 Description: This module works with osCommerce version 2.2 and 2.3 and
  is used to import orders and customers into the FA database. It can also
@@ -9,5 +9,5 @@ Maintenance: Thomas A. Moulton <tom@moulton.us>
 Homepage: <none>
 Type: extension
 InstallPath: modules/osc_orders
-Filename: osc_orders-2.3.0-2
+Filename: osc_orders-2.3.0-3
 

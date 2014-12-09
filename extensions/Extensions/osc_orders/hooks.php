@@ -4,7 +4,7 @@ class hooks_osc_import extends hooks {
 	var $module_name = 'osCommerce Order Import'; 
 
 	/*
-		Install additional menu options provided by module
+		Install additonal menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;
