@@ -5,7 +5,7 @@ class hooks_import_multijournalentries extends hooks {
 	var $module_name = 'import_multijournalentries'; 
 
 	/*
-		Install additonal menu options provided by module
+		Install additional menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;

@@ -6,7 +6,7 @@ class hooks_asset_register extends hooks {
 	var $module_name = 'asset_register'; 
 
 	/*
-		Install additonal menu options provided by module
+		Install additional menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;

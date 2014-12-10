@@ -10,7 +10,7 @@
 /includes/db/requisitions_db.inc: c1271e26d73dfec1a1b941c3041894d4f880f119
 /includes/db/index.php: ecaa5f0560883d40dc7508073f57abef01cb438b
 /requisition_allocations.php: 83d19bbef23e3360d8424de6179a1e20df63d90e
-/hooks.php: 83542259c6c38a57f69fd0d28f991578161d8c6f
+/hooks.php: 605b612c2fef4756d450d05dcf39ee23c6298f87
 /_init/config: ce17f00be0f6365e2f271c8cff6b1b6c0caf576e
 /requisitions.php: 6ea40e74184ec6dd1bd34fa04c5c2c352e7d3d15
 /index.php: ecaa5f0560883d40dc7508073f57abef01cb438b

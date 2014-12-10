@@ -13,7 +13,7 @@ class hooks_rep_tax_cash_basis extends hooks {
 	var $module_name = 'Cash Basis Tax Reporting'; 
 
 	/*
-		Install additonal menu options provided by module
+		Install additional menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;
