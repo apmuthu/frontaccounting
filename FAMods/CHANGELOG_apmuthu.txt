@@ -1,4 +1,5 @@
 
+2014-12-11 Ap.Muthu           Removed redundant indexes in Standard Chart of Accounts
 2014-11-22 Ap.Muthu           2014-11-14/22 Cambell/Janusz commit fix: JS multi class names.
 2014-10-11 Ap.Muthu           crm_contacts.entity_id VARCHAR(11) => INT(11)
 2014-10-11 Ap.Muthu           Arabic Fonts for reporting 
