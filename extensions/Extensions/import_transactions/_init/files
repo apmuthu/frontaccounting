@@ -1,9 +1,10 @@
-/templates/payment.csv: bb34bdafd1005d79eb584149d55bd0be84a3762d
-/templates/deposit.csv: 766592b0b8deefd218f9f1bc02b84cc2a4febbb3
-/templates/bank.csv: 531005621d9f520f24fc46c4e72e533188f0dc16
-/templates/journal.csv: 27b9d0ce7c2ffb4c8373be5aac6977cdd2263346
-/import_multijournalentries.php: 5d6fa15a4214ba24cd95a7da294cffdc7acbaa5b
-/includes/import_multijournalentries.inc: 845333cb20268485fb8e5822a64054e9d9b3ba0b
-/hooks.php: 0c1e0c3576e47f3ef60414086e54d1dd77083f3d
-/_init/config: 5c5055ebc910c5a8ccc66a116daecf71983a746a
+/templates/payment_en_GB.csv: 372605ce09ede4ba18ea4979ca2b347af58d8d53
+/templates/deposit_en_GB.csv: d6fcf7872fea6ad2b8cba4ea01806cf1d6d27e3f
+/templates/journal_en_GB.csv: faef78e30fcc23ff10da4ee09cdee865be832940
+/templates/bank_en_GB.csv: a91cb186fc2e52fa8ac3e6f557f8afca49091659
+/Spreadsheet_headers.doc: e22f13ce3bb6bf83de582c3414c0cf325f5c7e3c
+/import_transactions.php: 993c0f8b2b2a2e0d994cd57ba9ff09e94b135ac6
+/includes/import_transactions.inc: 74809ee77b94b9f3ace4d5872e9c3e05b78ba9d5
+/hooks.php: ef47a1a93b4c56168a8b9aef61eef078a9788dec
+/_init/config: 86af8522b8169cf56629fdc565b49d4e73ed5a99
 

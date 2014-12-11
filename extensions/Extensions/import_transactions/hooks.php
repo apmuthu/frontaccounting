@@ -1,5 +1,5 @@
 <?php
-define ('SS_IMPORTMULTIJOURNAL', 101<<8);
+define ('SS_IMPORTTRANSACTIONS', 101<<8);
 
 class hooks_import_transactions extends hooks {
 	var $module_name = 'import_transations'; 
@@ -13,15 +13,15 @@ class hooks_import_transactions extends hooks {
 		switch($app->id) {
 			case 'GL':
 				$app->add_rapp_function(2, _('Import &Transactions'), 
-					$path_to_root.'/modules/import_transactions/import_multijournalentries.php', 'SA_CSVMULTIJOURNALIMPORT');
+					$path_to_root.'/modules/import_transactions/import_transactions.php', 'SA_CSVTRANSACTIONS');
 		}
 	}
 
 	function install_access()
 	{
-		$security_sections[SS_IMPORTMULTIJOURNAL] =	_("Import Transactions");
+		$security_sections[SS_IMPORTTRANSACTIONS] =	_("Import Transactions");
 
-		$security_areas['SA_CSVMULTIJOURNALIMPORT'] = array(SS_IMPORTMULTIJOURNAL|101, _("Import Transactions"));
+		$security_areas['SA_CSVTRANSACTIONS'] = array(SS_IMPORTTRANSACTIONS|101, _("Import Transactions"));
 
 		return array($security_areas, $security_sections);
 	}

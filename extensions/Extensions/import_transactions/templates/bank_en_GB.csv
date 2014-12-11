@@ -1,0 +1,5 @@
+"reference","date","memo","payment","receipt","accountcode","taxtype","dim1ref","dim2ref","person_type_id (supplier = 1, customer =2)","person_id"
+1,01/01/14,"labour",100.5,,6000,0,"D1","D2",,
+2,02/01/14,"cash on account",,300,1100,0,"D1","D2",2,1
+"QWE2",03/01/14,"payment for rent",200.5,,7100,1,"D1","D2",,
+4,04/01/14,"sold fixed asset",,700,0010,0,"D1","D2",,

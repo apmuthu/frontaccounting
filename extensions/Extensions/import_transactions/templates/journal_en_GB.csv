@@ -1,0 +1,10 @@
+"reference","date","memo","amount","accountcode","taxtype","dim1_ref","dim2_ref","person_type_id (supplier=1 customer=2)","person_id"
+"JNL1",01/12/2014,"Bad debts using account 8100",222.24,8100,0,"D1","D2",,
+"JNL1",01/12/2014,"Debtors Control using account 1100",-222.24,1100,0,"D1","D2",2,2
+"JNL2",02/12/2014,"Rent outstanding",122.25,7100,1,"D1","D2",,
+"JNL2",02/12/2014,"Accruals",-122.25,2109,0,"D1","D2",,
+"JNL3",03/12/2014,"Prepayments",322.26,1103,0,"D1","D2",,
+"JNL3",03/12/2014,"Rent Prepaid",-322.26,7100,1,"D1","D2",,
+"JNL4",04/12/2014,"Prepayments",400,1103,0,"D1","D2",,
+"JNL4",04/12/2014,"Prepayments",400,1103,0,"D1","D2",,
+"JNL4",04/12/2014,"Rent Prepaid",-800,7100,1,"D1","D2",,
