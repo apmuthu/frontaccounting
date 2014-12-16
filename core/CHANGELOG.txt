@@ -10,6 +10,8 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-12-17 Joe                Fixed Quote Valid Days in System and GL Setup, Setup tab.
+2014-12-09 Janusz Dobrowolski Fixed problems with latin2 encoding due to changes in htmlspecialchars() behaviour in newer php versions.
 2014-11-22 Janusz Dobrowolski Further fixes to javascript multiple class handling. (Incomplete yet works for now. Needs further changes in FAMods)
 2014-11-21 Janusz Dobrowolski [0002950] Fixed false quantity on hand errors on sales delivery.
 2014-11-21 Janusz Dobrowolski Fixed warning during database restore.
