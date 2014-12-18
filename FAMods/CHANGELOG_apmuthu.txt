@@ -1,4 +1,6 @@
 
+2014-12-18 Geoffrey Walton    Increased form display size of EMail and Co Name fields in Company Setup
+2014-12-18 Ap.Muthu           Added default_quote_valid_days into sys_prefs table to match Sales Quote Inquiry feature addition upstream
 2014-12-11 Ap.Muthu           Removed redundant indexes in Standard Chart of Accounts
 2014-11-22 Ap.Muthu           2014-11-14/22 Cambell/Janusz commit fix: JS multi class names.
 2014-10-11 Ap.Muthu           crm_contacts.entity_id VARCHAR(11) => INT(11)
