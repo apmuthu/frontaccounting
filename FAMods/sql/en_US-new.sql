@@ -1830,6 +1830,7 @@ INSERT INTO `0_sys_prefs` VALUES ('version_id', 'system', 'varchar', 11, '2.3rc'
 INSERT INTO `0_sys_prefs` VALUES ('auto_curr_reval', 'setup.company', 'smallint', 6, '1');
 INSERT INTO `0_sys_prefs` VALUES ('grn_clearing_act', 'glsetup.purchase', 'varchar', 15, '1550');
 INSERT INTO `0_sys_prefs` VALUES ('bcc_email', 'setup.company', 'varchar', 100, '');
+INSERT INTO `0_sys_prefs` VALUES ('default_quote_valid_days', 'glsetup.sales', 'smallint', 6, 30);
 
 -- --------------------------------------------------------
 
