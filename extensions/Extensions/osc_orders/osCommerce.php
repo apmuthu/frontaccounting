@@ -591,7 +591,7 @@ include($path_to_root . "/includes/ui.inc");
 
 if ($action == 'summary') {
     start_form(true);
-    start_table($table_style);
+    start_table(TABLESTYLE);
 
     $th = array("Type", "# of Updates Needed");
     table_header($th);
@@ -621,7 +621,7 @@ if ($action == 'summary') {
 
 if ($action == 'show') {
     start_form(true);
-    start_table($table_style);
+    start_table(TABLESTYLE);
 
     $th = array("Function", "Description");
     table_header($th);
@@ -665,7 +665,7 @@ if ($action == 'cimport') {
 
     start_form(true);
 
-    start_table("$table_style2 width=40%");
+    start_table(TABLESTYLE2, "width=40%");
 
     table_section_title("Default GL Accounts");
 
@@ -725,7 +725,7 @@ if ($action == 'oimport') {
 
     start_form(true);
 
-    start_table("$table_style2 width=40%");
+    start_table(TABLESTYLE2, "width=40%");
 
     table_section_title("Order Import Options");
 
@@ -744,7 +744,7 @@ if ($action == 'pcheck') {
 
     start_form(true);
 
-    start_table("$table_style2 width=40%");
+    start_table(TABLESTYLE2, "width=40%");
 
     table_section_title("Price Check Options");
 
@@ -768,7 +768,7 @@ if ($action == 'pupdate') {
 
     start_form(true);
 
-    start_table("$table_style2 width=40%");
+    start_table(TABLESTYLE2, "width=40%");
 
     table_section_title("Update Price Options");
 
