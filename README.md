@@ -3,6 +3,7 @@ frontaccounting
 
 This is an unofficial Git Repo for frontaccounting and it's extensions / utilities.
 Currently only the official v2.3.x branch is supported here.
+My mods and pending commits to the core are in the <a href="https://github.com/apmuthu/frontaccounting/blob/master/FAMods>FAMods</a> folder and documented in the [FA 2.3 Support Wiki](https://github.com/apmuthu/frontaccounting/wiki).
 
 Official Links:
 ===============
@@ -29,7 +30,7 @@ Caveats:
 <li>Using full random snapshots of FA repo is officially unwelcome.</li>
 <li>FA Repo code is placed here for study, development and local deployment only especially where internet is not available.</li>
 <li>FA versions are not released too often in order to provide a minimal acceptable level of stability, which is important especially in accounting software.</li>
-<li>Any changes in the code that are not yet in the official repo is also listed in the <a href="https://github.com/apmuthu/frontaccounting/blob/master/core/CHANGELOG.txt">CHANGELOG</a>.</li>
+<li>Any changes in the code that are not yet in the official repo is listed in the <a href="https://github.com/apmuthu/frontaccounting/blob/master/FAMods/CHANGELOG_apmuthu.txt">CHANGELOG_apmuthu.txt</a>.</li>
 </ul>
 
 Third Party Connects
