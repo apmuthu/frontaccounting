@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-12-21 Janusz Dobrowolski Removed redundant indexes in standard CoAs.
 2014-12-19 Joe                Extended email entries (Geoffrey Walton).
 2014-12-17 Joe                Fixed Quote Valid Days in System and GL Setup, Setup tab.
 2014-12-09 Janusz Dobrowolski Fixed problems with latin2 encoding due to changes in htmlspecialchars() behaviour in newer php versions.

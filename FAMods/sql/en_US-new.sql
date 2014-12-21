@@ -1748,7 +1748,7 @@ CREATE TABLE IF NOT EXISTS `0_supp_trans` (
   `alloc` double NOT NULL default '0',
   `tax_included` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`type`,`trans_no`),
-  KEY `SupplierID_2` (`supplier_id`,`supp_reference`),
+  KEY `supplier_id` (`supplier_id`,`supp_reference`),
   KEY `tran_date` (`tran_date`)
 ) ENGINE=InnoDB;
 
