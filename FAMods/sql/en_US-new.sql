@@ -1612,7 +1612,7 @@ DROP TABLE IF EXISTS `0_stock_moves`;
 CREATE TABLE IF NOT EXISTS `0_stock_moves` (
   `trans_id` int(11) NOT NULL auto_increment,
   `trans_no` int(11) NOT NULL default '0',
-  `stock_id` char(20) NOT NULL default '',
+  `stock_id` varchar(20) NOT NULL default '',
   `type` smallint(6) NOT NULL default '0',
   `loc_code` char(5) NOT NULL default '',
   `tran_date` date NOT NULL default '0000-00-00',

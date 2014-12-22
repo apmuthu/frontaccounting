@@ -6,3 +6,4 @@ ALTER TABLE `0_supp_trans` DROP INDEX `supplier_id`;
 ALTER TABLE `0_supp_trans` DROP INDEX `type`; 
 ALTER TABLE `0_cust_branch` DROP INDEX `branch_code`; 
 ALTER TABLE `0_supp_trans` DROP INDEX `SupplierID_2`, ADD INDEX `supplier_id` (`supplier_id`, `supp_reference`);
+ALTER TABLE `0_stock_moves` CHANGE `stock_id` `stock_id` VARCHAR(20) DEFAULT '' NOT NULL; 
