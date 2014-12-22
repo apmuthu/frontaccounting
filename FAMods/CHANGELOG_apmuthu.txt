@@ -1,4 +1,5 @@
 
+2014-12-22 Ap.Muthu           Backup file script Shell Commands execution feature added. Executes default shcmds.sh placed above webroot owned by root with 4755 permissions.
 2014-12-21 Ap.Muthu           Consolidates post upgrade sql statements in alter_to_latest2.3.sql
 2014-12-20 Ap.Muthu           Backup file renaming feature added
 2014-12-18 Ap.Muthu           Added default_quote_valid_days into sys_prefs table to match Sales Quote Inquiry feature addition upstream
