@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2014-12-22 Janusz Dobrowolski Reverted redundant indexes in standard CoAs in v2.3 and moved them to v2.4 unstable branch.
 2014-12-21 Janusz Dobrowolski Removed redundant indexes in standard CoAs.
 2014-12-19 Joe                Extended email entries (Geoffrey Walton).
 2014-12-17 Joe                Fixed Quote Valid Days in System and GL Setup, Setup tab.

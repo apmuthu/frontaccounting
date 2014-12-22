@@ -1,4 +1,5 @@
 
+2014-12-24 Ap.Muthu           Backported redundant indexes removal from unstable v2.4 branch
 2014-12-22 Ap.Muthu           rep303.php optimised removing redundant ORDER BY and description grouping as category_id and stock_id take precedence.
 2014-12-22 Ap.Muthu           Backup file script Shell Commands execution feature added. Executes default shcmds.sh placed above webroot owned by root with 4755 permissions.
 2014-12-21 Ap.Muthu           Consolidates post upgrade sql statements in alter_to_latest2.3.sql
