@@ -10,4 +10,11 @@ ALTER TABLE `0_supp_trans` DROP INDEX `supplier_id`;
 ALTER TABLE `0_supp_trans` DROP INDEX `type`;
 ALTER TABLE `0_supp_trans` DROP INDEX `SupplierID_2`, ADD INDEX `supplier_id` (`supplier_id`, `supp_reference`);
 
+ALTER TABLE `0_bom` CHANGE `loc_code` `loc_code` VARCHAR(5) DEFAULT '' NOT NULL; 
+ALTER TABLE `0_loc_stock` CHANGE `stock_id` `stock_id` VARCHAR(20) DEFAULT '' NOT NULL; 
+ALTER TABLE `0_loc_stock` CHANGE `loc_code` `loc_code` VARCHAR(5) DEFAULT '' NOT NULL; 
+ALTER TABLE `0_purch_data` CHANGE `stock_id` `stock_id` VARCHAR(20) DEFAULT '' NOT NULL; 
 ALTER TABLE `0_stock_moves` CHANGE `stock_id` `stock_id` VARCHAR(20) DEFAULT '' NOT NULL;
+ALTER TABLE `0_stock_moves` CHANGE `loc_code` `loc_code` VARCHAR(5) DEFAULT '' NOT NULL; 
+ALTER TABLE `0_wo_requirements` CHANGE `stock_id` `stock_id` VARCHAR(20) DEFAULT '' NOT NULL; 
+ALTER TABLE `0_wo_requirements` CHANGE `loc_code` `loc_code` VARCHAR(5) DEFAULT '' NOT NULL; 

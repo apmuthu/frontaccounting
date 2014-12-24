@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `0_bom` (
   `parent` char(20) NOT NULL default '',
   `component` char(20) NOT NULL default '',
   `workcentre_added` int(11) NOT NULL default '0',
-  `loc_code` char(5) NOT NULL default '',
+  `loc_code` varchar(5) NOT NULL default '',
   `quantity` double NOT NULL default '1',
   PRIMARY KEY  (`parent`,`component`,`workcentre_added`,`loc_code`),
   KEY `component` (`component`),
@@ -1149,8 +1149,8 @@ INSERT INTO `0_locations` VALUES ('DEF', 'Default', 'Delivery 1\nDelivery 2\nDel
 
 DROP TABLE IF EXISTS `0_loc_stock`;
 CREATE TABLE IF NOT EXISTS `0_loc_stock` (
-  `loc_code` char(5) NOT NULL default '',
-  `stock_id` char(20) NOT NULL default '',
+  `loc_code` varchar(5) NOT NULL default '',
+  `stock_id` varchar(20) NOT NULL default '',
   `reorder_level` bigint(20) NOT NULL default '0',
   PRIMARY KEY  (`loc_code`,`stock_id`),
   KEY `stock_id` (`stock_id`)
@@ -1305,7 +1305,7 @@ INSERT INTO `0_print_profiles` VALUES (9, 'Sales Department', '201', 2);
 DROP TABLE IF EXISTS `0_purch_data`;
 CREATE TABLE IF NOT EXISTS `0_purch_data` (
   `supplier_id` int(11) NOT NULL default '0',
-  `stock_id` char(20) NOT NULL default '',
+  `stock_id` varchar(20) NOT NULL default '',
   `price` double NOT NULL default '0',
   `suppliers_uom` char(50) NOT NULL default '',
   `conversion_factor` double NOT NULL default '1',
@@ -1805,7 +1805,7 @@ CREATE TABLE IF NOT EXISTS `0_stock_moves` (
   `trans_no` int(11) NOT NULL default '0',
   `stock_id` varchar(20) NOT NULL default '',
   `type` smallint(6) NOT NULL default '0',
-  `loc_code` char(5) NOT NULL default '',
+  `loc_code` varchar(5) NOT NULL default '',
   `tran_date` date NOT NULL default '0000-00-00',
   `person_id` int(11) default NULL,
   `price` double NOT NULL default '0',
@@ -2484,11 +2484,11 @@ DROP TABLE IF EXISTS `0_wo_requirements`;
 CREATE TABLE IF NOT EXISTS `0_wo_requirements` (
   `id` int(11) NOT NULL auto_increment,
   `workorder_id` int(11) NOT NULL default '0',
-  `stock_id` char(20) NOT NULL default '',
+  `stock_id` varchar(20) NOT NULL default '',
   `workcentre` int(11) NOT NULL default '0',
   `units_req` double NOT NULL default '1',
   `std_cost` double NOT NULL default '0',
-  `loc_code` char(5) NOT NULL default '',
+  `loc_code` varchar(5) NOT NULL default '',
   `units_issued` double NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `workorder_id` (`workorder_id`)
