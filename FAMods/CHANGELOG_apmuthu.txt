@@ -1,4 +1,5 @@
 
+2014-12-25 Ap.Muthu           Added Contacts Lookup indexes to speed up entity search
 2014-12-24 Ap.Muthu           More char => varchar standardisation of loc_code and stock_id fields
 2014-12-24 Ap.Muthu           Backported redundant indexes removal from unstable v2.4 branch
 2014-12-22 Ap.Muthu           rep303.php optimised removing redundant ORDER BY and description grouping as category_id and stock_id take precedence.
