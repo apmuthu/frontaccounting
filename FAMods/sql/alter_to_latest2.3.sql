@@ -18,3 +18,6 @@ ALTER TABLE `0_stock_moves` CHANGE `stock_id` `stock_id` VARCHAR(20) DEFAULT '' 
 ALTER TABLE `0_stock_moves` CHANGE `loc_code` `loc_code` VARCHAR(5) DEFAULT '' NOT NULL; 
 ALTER TABLE `0_wo_requirements` CHANGE `stock_id` `stock_id` VARCHAR(20) DEFAULT '' NOT NULL; 
 ALTER TABLE `0_wo_requirements` CHANGE `loc_code` `loc_code` VARCHAR(5) DEFAULT '' NOT NULL; 
+
+ALTER TABLE `0_crm_contacts` ADD INDEX `entity_id` (`entity_id`);
+ALTER TABLE `0_crm_contacts` ADD INDEX `person_id` (`person_id`);

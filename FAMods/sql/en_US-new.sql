@@ -461,7 +461,9 @@ CREATE TABLE IF NOT EXISTS `0_crm_contacts` (
   `action` varchar(20) NOT NULL COMMENT 'foreign key to crm_categories',
   `entity_id` varchar(11) default NULL COMMENT 'entity id in related class table',
   PRIMARY KEY  (`id`),
-  KEY `type` (`type`,`action`)
+  KEY `type` (`type`,`action`),
+  KEY `entity_id` (`entity_id`),
+  KEY `person_id` (`person_id`)
 ) ENGINE=InnoDB;
 
 --
