@@ -12,6 +12,7 @@
 //6. Display notifications identifying how tables within the database are being affected for a more transparent display to interested programmers.
 //7. Additional lookup tools for looking up customer, supplier, company setup information eg. fiscal year, and other tools that users might find useful for their import.
 //8. Inclusion of csv examples using the en_GB account structure under folder templates.
+//9. See the Spreadsheet_headers file for csv formats.
 
 //Module contents
 //./Import_transactions/import_transactions.php
@@ -40,6 +41,7 @@ include_once($path_to_root . "/gl/includes/gl_db.inc"); //link to other includes
 include_once($path_to_root . "/includes/date_functions.inc"); //sql2date, is_date_in_fiscal_year
 include_once($path_to_root . "/includes/data_checks.inc");
 include_once($path_to_root . "/admin/db/company_db.inc"); //default control accounts
+include_once($path_to_root . "/includes/ui/ui_controls.inc");
 include_once($path_to_root . "/modules/import_transactions/includes/import_transactions.inc"); //functions used
 //include_once($path_to_root . "/gl/includes/ui/gl_journal_ui.inc"); display_import_items adapted from display_ gl_items
 
@@ -57,9 +59,11 @@ all_delete($yes=false);
 
 $js = '';
 if ($use_popup_windows) {$js .= get_js_open_window(800, 500);}
-page(_($help_context = "Import Journals  / Deposits / Payments / Statements"), false, false, "", $js);
+$help_context = "Import Journals  / Deposits / Payments / Statements  <a href='spreadsheet_headers.html'>Help: Formats</a>"; 
+page(_($help_context), false, false, "", $js);
 
 global $Refs;
+global $Ajax;
 
 if ((isset($_POST['type']))) 
 {
@@ -96,7 +100,7 @@ if ((isset($_POST['type'])))
      begin_transaction();
      $curEntryId=last_transno($type)+1;
      $line = 0;
-     $trial=!null;
+     $trial=false;
      $description = "";
      $i=0;
      $total_debit_positive=0;
@@ -124,7 +128,7 @@ if ((isset($_POST['type'])))
             if  (($type == ST_BANKPAYMENT) && ($stateformat!=null))
            //All amounts to the right of amt are ignored since only considering payments which are to the left of deposits on a bank statement.     
            {
-               list($reference, $date, $memo, $amt, $ignore, $code_id, $taxtype, $dim1_ref, $dim2_ref,$person_type_id,$person_id) = $data;
+               list($reference, $date, $memo, $amt, $ignore, $code_id, $taxtype, $dim1_ref, $dim2_ref,$person_type_id,$person_id,$BranchNo) = $data;
                if ((($ignore == "")||($ignore == null)) && ($amt > 0.01 )){} else 
                  {
                    display_notification_centered(_("Ignoring deposit. Use same csv under deposit processing. (line $line in import file '{$_FILES['imp']['name']}')")); 
@@ -136,7 +140,7 @@ if ((isset($_POST['type'])))
            if (($type == ST_BANKDEPOSIT) && ($stateformat!=null))
            {
            //All amounts to the left of amt are ignored since only considering deposits which are to the left of payments on a bank statement.     
-               list($reference, $date, $memo, $ignore, $amt, $code_id, $taxtype, $dim1_ref, $dim2_ref,$person_type_id,$person_id) = $data;
+               list($reference, $date, $memo, $ignore, $amt, $code_id, $taxtype, $dim1_ref, $dim2_ref,$person_type_id,$person_id,$BranchNo) = $data;
                if ((($ignore == "")||($ignore == null)) && ($amt > 0.01 )){} else 
                    {
                     display_notification_centered(_("Ignoring payment. Use same csv under payment processing.(line $line in import file '{$_FILES['imp']['name']}')"));  
@@ -146,7 +150,7 @@ if ((isset($_POST['type'])))
                    } 
            }
            if ((($type == ST_BANKDEPOSIT) || ($type == ST_BANKPAYMENT)) && ($stateformat==null))
-           list($reference, $date, $memo, $amt, $code_id, $taxtype, $dim1_ref, $dim2_ref,$person_type_id,$person_id) = $data;
+           list($reference, $date, $memo, $amt, $code_id, $taxtype, $dim1_ref, $dim2_ref,$person_type_id,$person_id, $BranchNo) = $data;
            
         }
          if ($prev_ref <> $reference) {     
@@ -177,8 +181,8 @@ if ((isset($_POST['type'])))
 	  	display_error(_("Error: date '$date' not properly formatted (line $line in import file '{$_FILES['imp']['name']}')"));
 		$error = true;
 	  }
-      //$date = sql2date($date);
-     if ((is_date_in_fiscalyear($date)) == false) {display_error(_("Error: Date not within company fiscal year. Make sure date is in dd/mm/yyyy format and your csv years are 4 digits long."));$error=true;}
+      //$date = sql2date($date)
+     if ((is_date_in_fiscalyear($date)) == false) {display_error(_("Error: Date not within company fiscal year. Make sure date is in dd/mm/yyyy format and your csv years are 4 digits long. Check that current fiscal year is active under Setup..Company Setup"));$error=true;}
      // validation for 
                   
      if (($type == 1) || ($type ==2)) {$bankdesc = get_gl_account_name($bank_account_gl_code);} 
@@ -201,8 +205,7 @@ if ((isset($_POST['type'])))
        {
           if (check_tax_appropriate($code_id, $taxtype, $line) == true)
           {
-           bank_inclusive_tax($type, $reference, $date, $bank_account, $bank_account_gl_code, $line, $curEntryId, $code_id, $dim1, $dim2, $memo, $amt, $taxtype,$person_type_id,$person_id);
-           
+           bank_inclusive_tax($type, $reference, $date, $bank_account, $bank_account_gl_code, $line, $curEntryId, $code_id, $dim1, $dim2, $memo, $amt, $taxtype,$person_type_id,$person_id, $BranchNo);
           }
           else 
          {
@@ -236,20 +239,24 @@ if ((isset($_POST['type'])))
          $errCnt = $errCnt + 1;
       }    //
 // Commit import to database
- if ((isset($_POST['trial'])) && ($_POST['trial']==null)){     
- $trial = null;}
- if (isset($_POST['trial']) && ($_POST['trial']!=null)) {$trial = !null;} 
+ if (isset($_POST['trial'])){     
+ $trial = $_POST['trial'];}
+  
  if ($type == ST_JOURNAL){$typeString = "Journals";}                
  elseif ($type == ST_BANKDEPOSIT){$typeString = "Deposits";}
  elseif ($type == ST_BANKPAYMENT){$typeString = "Payments";}
-if (($errCnt==0) && ($trial == null))
+ 
+ display_notification("$trial"); 
+
+ if (($errCnt==0) && ($trial == false))
  {if ($entryCount > 0){commit_transaction();display_notification_centered(_("$entryCount $typeString have been imported."));}
   else display_error(_("Import file contained no $typeString."));}
-if (($errCnt==0) && ($trial == !null))
+  
+if (($errCnt==0) && ($trial == true))
  {display_notification_centered(_("$entryCount $typeString would have been successful if imported. Uncheck Trial check before importing."));}
-if (($errCnt>0) && ($trial == !null) && $displayed_at_least_once)
+if (($errCnt>0) && ($trial == true) && $displayed_at_least_once)
  {display_notification_centered(_("$errCnt error(s) detected. Correct before importing."));}
- if (($errCnt>0) && ($trial == null) && $displayed_at_least_once)
+ if (($errCnt>0) && ($trial == true) && $displayed_at_least_once)
  {display_notification_centered(_("$errCnt error(s) detected. Correct before importing."));}   
  $errCnt =0;
    

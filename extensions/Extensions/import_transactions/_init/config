@@ -1,5 +1,5 @@
 Package: import_transactions
-Version: 2.3.22-4
+Version: 2.3.22-5
 Name: Import Transactions
 Description: Import transactions from csv in journal format, payment format, deposit format, or adapted bank statement format.
  Features include a trial check before importing, tabular display of journal entries, importing of bank statements with additional
@@ -15,5 +15,5 @@ Homepage: frontaccounting.com
 Depends: 
 Type: extension
 InstallPath: modules/import_transactions
-Filename: import_transactions-2.3.22-4
+Filename: import_transactions-2.3.22-5
 

@@ -5,7 +5,7 @@ class hooks_import_transactions extends hooks {
 	var $module_name = 'import_transations'; 
 
 	/*
-		Install additional menu options provided by module
+		Install additonal menu options provided by module
 	*/
 	function install_options($app) {
 		global $path_to_root;
