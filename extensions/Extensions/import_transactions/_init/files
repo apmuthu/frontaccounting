@@ -2,7 +2,7 @@
 /templates/deposit_en_GB.csv: ccf99693458b5b5d75638d64322146d8d2584014
 /templates/journal_en_GB.csv: 27b9d0ce7c2ffb4c8373be5aac6977cdd2263346
 /templates/bank_en_GB.csv: 11c7e79cf240225572e9753e9bd257c8a4befd33
-/import_transactions.php: fd40122abd3b582da3bc936485d034573ccbe9c2
+/import_transactions.php: 2be173f28d3ecae08d793874bf06a9e5e3d5739b
 /LICENSE: 23a1f87d806ce0330b3d85485e399a5f9f553409
 /includes/import_transactions.inc: 2ff56f1b5efdacedeaa47ab694fac1604f331120
 /spreadsheet_headers.html: 3a7ba3abbbbda0434fb9540581d4a228e496db7e

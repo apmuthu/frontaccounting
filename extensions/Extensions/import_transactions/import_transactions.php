@@ -91,6 +91,9 @@ if ((isset($_POST['type'])))
    $bank_account = isset($_POST['bank_account']) ? $_POST['bank_account'] : "";
    $bank_account_gl_code = get_bank_gl_account($bank_account);} //gl_db_bank_accounts.inc
    $fp = @fopen($filename, "r");
+
+   $trial = (isset($_POST['trial']) ? $_POST['trial'] : false);
+
    if (!$fp)
    {
     display_error(_("Error opening file $filename"));
@@ -100,7 +103,6 @@ if ((isset($_POST['type'])))
      begin_transaction();
      $curEntryId=last_transno($type)+1;
      $line = 0;
-     $trial=false;
      $description = "";
      $i=0;
      $total_debit_positive=0;
@@ -233,14 +235,12 @@ if ((isset($_POST['type'])))
     div_end();
      
  
- if ($displayed_at_least_once == false) //there has been no occurance of debits equaling credits - at least one journal not properly balanced
+ if ($displayed_at_least_once == false) //there has been no occurrence of debits equalling credits - at least one journal not properly balanced
       {
          display_notification_centered(_("Error: Debits do not equal credits.")); 
          $errCnt = $errCnt + 1;
       }    //
 // Commit import to database
- $trial = (isset($_POST['trial']) ? $_POST['trial'] : false);
-  
  if ($type == ST_JOURNAL){$typeString = "Journals";}                
  elseif ($type == ST_BANKDEPOSIT){$typeString = "Deposits";}
  elseif ($type == ST_BANKPAYMENT){$typeString = "Payments";}
