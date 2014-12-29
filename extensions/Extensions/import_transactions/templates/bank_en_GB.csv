@@ -1,4 +1,4 @@
-reference,date,memo,payment,receipt,accountcode,taxtype,dim1ref,dim2ref,"person_type_id (supplier = 1, customer =2)",person_id,Branch_No
+reference,date,memo,payment,receipt,accountcode,taxtype,dim1ref,dim2ref,person_type_id (supplier=1 customer=2),person_id,Branch_id
 1,01/01/14,labour,100.5,,6000,0,,,,,
 2,02/01/14,cash on account,,300,1100,0,,,2,1,1
 QWE2,03/01/14,payment for rent,200.5,,7100,1,,,,,
