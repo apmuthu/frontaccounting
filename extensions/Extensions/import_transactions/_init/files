@@ -1,12 +1,12 @@
-/templates/payment_en_GB.csv: 73aca9faeb2b65657e9b84dcc55a36c5a04a26d4
-/templates/deposit_en_GB.csv: ccf99693458b5b5d75638d64322146d8d2584014
+/templates/payment_en_GB.csv: 1cae388c86c4041363d5f755d91af69fdeb370de
+/templates/deposit_en_GB.csv: 9e61e2dc23b5851b150e0e9b07d9875cf03a9594
 /templates/journal_en_GB.csv: 9fb79e9f2e974d81c5148d2234ec2ed738a2c3b6
-/templates/bank_en_GB.csv: 42faa99b0f627623a9279711e2fba7a3efdae049
+/templates/bank_en_GB.csv: 27959de85649429a5e4b720f10d9ae1d45f44038
 /import_transactions.php: 2be173f28d3ecae08d793874bf06a9e5e3d5739b
 /LICENSE: 23a1f87d806ce0330b3d85485e399a5f9f553409
 /includes/import_transactions.inc: 2ff56f1b5efdacedeaa47ab694fac1604f331120
 /spreadsheet_headers.html: 029e0120087b8d80471793417467216a0283a70f
-/spreadsheet_headers.doc: 650ca924ab2da5513b5192b1106080fe01c426de
+/spreadsheet_headers.doc: b6c27903025620d82df660e72654748fe6d79681
 /hooks.php: 1c10e29a16f4b057d0517dc07724e76c5e7f00f9
 /_init/config: a82b67fb1f17bb37bbec321d8f5afff0b76ea52f
 /README.md: e131a331570277dfbf0a9945860145f637f30ae9
