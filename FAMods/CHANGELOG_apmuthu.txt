@@ -1,4 +1,5 @@
 
+2014-12-29 Ap.Muthu           FrontAccount reporting class Header2() method dependencies sequenced
 2014-12-28 Ap.Muthu           Backported Non Field DB Data string parser function provided to FA v2.4 Unstable
 2014-12-25 Ap.Muthu           Added Contacts Lookup indexes to speed up entity search
 2014-12-24 Ap.Muthu           More char => varchar standardisation of loc_code and stock_id fields
