@@ -1,4 +1,5 @@
 
+2014-12-31 Ap.Muthu           Extra fields long_description in cust_trans_details_db.inc added
 2014-12-31 Ap.Muthu           Purchase Orders Editing Items with quotes in description mangled if non-editable fixed.
 2014-12-29 Ap.Muthu           FrontAccount reporting class Header2() method dependencies sequenced
 2014-12-28 Ap.Muthu           Backported Non Field DB Data string parser function provided to FA v2.4 Unstable
