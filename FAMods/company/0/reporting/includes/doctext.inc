@@ -69,8 +69,14 @@
 		case ST_CUSTDELIVERY:
 			$this->title = ($packing_slip==1 ? _("PACKING SLIP") : _("DELIVERY NOTE"));
 			$this->formData['document_name'] = _("Delivery Note No.");
-			if (@$packing_slip)
+			if (@$packing_slip) {
 				$Payment_Terms = '';
+// BinLoc and CID Non Field DB Data - Start
+				$this->headers = array(_("Item Code"), _("Item Description"), _("Quantity"), _("Unit"), '', '', _("Bin Location"));
+				$notes_params = parse_notes_params($this->formData['notes']);
+				$CIDval = (array_key_exists('CID', $notes_params) ? ("CID ".$notes_params['CID']) : $this->formData['branch_code']);
+// BinLoc and CID Non Field DB Data - End
+			}
 			$ref = $this->formData['order_'];
 			if ($print_invoice_no == 0)
 			{

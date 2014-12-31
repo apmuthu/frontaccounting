@@ -134,6 +134,10 @@ function print_deliveries()
 						$rep->TextCol(4, 5,	$DisplayPrice, -2);
 						$rep->TextCol(5, 6,	$DisplayDiscount, -2);
 						$rep->TextCol(6, 7,	$DisplayNet, -2);
+					} else {
+						$item_params = parse_notes_params($myrow2['long_description']);
+						$BinLoc = (array_key_exists('BinLoc', $item_params) ? $item_params['BinLoc'] : '');
+						$rep->TextCol(6, 7,	$BinLoc, -2);
 					}
 				}	
 				$rep->row = $newrow;

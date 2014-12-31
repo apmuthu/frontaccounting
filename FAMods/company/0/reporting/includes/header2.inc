@@ -133,6 +133,12 @@
 			$this->Text($c2col, $this->company['domicile'], $mcol);
 			$this->NewLine();
 		}
+		if (@$CIDval)
+		{
+			$this->Text($ccol, _("WorldShip #"), $c2col);
+			$this->Text($c2col, $CIDval, $mcol);
+			$this->NewLine();
+		}
 		$this->Font();
 		$this->row = $adrline;
 		$this->NewLine(3);
