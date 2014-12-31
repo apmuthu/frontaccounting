@@ -37,7 +37,6 @@ function print_deliveries()
 	global $path_to_root, $packing_slip, $alternative_tax_include_on_docs, $suppress_tax_rates, $no_zero_lines_amount;
 
 	include_once($path_to_root . "/reporting/includes/pdf_report.inc");
-	include_once($path_to_root . "/reporting/includes/reporting.inc");
 
 	$from = $_POST['PARAM_0'];
 	$to = $_POST['PARAM_1'];
