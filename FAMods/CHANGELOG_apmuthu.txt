@@ -1,5 +1,6 @@
 
-2014-12-31 Ap.Muthu           Backported faillog folder write check from  in FA v2.4 Unstable
+2014-12-31 Ap.Muthu           Bin Location and CID in PO reports from Non Field DB Data in Company 0
+2014-12-31 Ap.Muthu           Backported faillog folder write check from in FA v2.4 Unstable
 2014-12-31 Ap.Muthu           reporting.inc now included in pdf_report.inc for non field db data usage in reports
 2014-12-31 Ap.Muthu           Restored FAMods to enable viewing diffs
 2014-12-31 Ap.Muthu           Imported original core files to be modded
