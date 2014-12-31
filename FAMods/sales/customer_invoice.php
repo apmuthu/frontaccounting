@@ -62,6 +62,7 @@ if (isset($_GET['AddedID'])) {
 	display_note(get_gl_view_str($trans_type, $invoice_no, _("View the GL &Journal Entries for this Invoice")),1);
 
 	hyperlink_params("$path_to_root/sales/inquiry/sales_deliveries_view.php", _("Select Another &Delivery For Invoicing"), "OutstandingOnly=1");
+	hyperlink_no_params("$path_to_root/sales/inquiry/customer_allocation_inquiry.php?customer_id=", _("Go to Allocation Inquiry"));
 
 	$sql = "SELECT trans_type_from, trans_no_from FROM ".TB_PREF."cust_allocations
 			WHERE trans_type_to=".ST_SALESINVOICE." AND trans_no_to=".db_escape($invoice_no);

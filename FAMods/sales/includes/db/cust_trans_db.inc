@@ -377,19 +377,19 @@ function get_sql_for_sales_deliveries_view($selected_customer, $selected_stock_i
 			Sum(line.quantity-line.qty_done) AS Outstanding,
 			Sum(line.qty_done) AS Done
 		FROM "
-		 .TB_PREF."sales_orders as sorder, "
-		 .TB_PREF."debtor_trans as trans, "
-		 .TB_PREF."debtor_trans_details as line, "
-		 .TB_PREF."debtors_master as debtor, "
-		 .TB_PREF."cust_branch as branch
-			WHERE
-			sorder.order_no = trans.order_ AND
-			trans.debtor_no = debtor.debtor_no
-				AND trans.type = ".ST_CUSTDELIVERY."
-				AND line.debtor_trans_no = trans.trans_no
-				AND line.debtor_trans_type = trans.type
-				AND trans.branch_code = branch.branch_code
-				AND trans.debtor_no = branch.debtor_no ";
+			.TB_PREF."sales_orders as sorder INNER JOIN "
+			.TB_PREF."debtor_trans as trans 
+				ON (sorder.order_no = trans.order_) INNER JOIN "
+			.TB_PREF."debtor_trans_details as line 
+				ON (line.debtor_trans_no = trans.trans_no
+					AND line.debtor_trans_type = trans.type) INNER JOIN "
+			.TB_PREF."debtors_master as debtor
+				ON (trans.debtor_no = debtor.debtor_no) INNER JOIN "
+			.TB_PREF."cust_branch as branch 
+				ON (trans.branch_code = branch.branch_code
+					AND trans.debtor_no = branch.debtor_no)
+		WHERE
+			trans.type = ".ST_CUSTDELIVERY;
 
 	if ($_POST['OutstandingOnly'] == true) {
 		 $sql .= " AND line.qty_done < line.quantity ";

@@ -37,6 +37,7 @@ function print_deliveries()
 	global $path_to_root, $packing_slip, $alternative_tax_include_on_docs, $suppress_tax_rates, $no_zero_lines_amount;
 
 	include_once($path_to_root . "/reporting/includes/pdf_report.inc");
+	include_once($path_to_root . "/reporting/includes/reporting.inc");
 
 	$from = $_POST['PARAM_0'];
 	$to = $_POST['PARAM_1'];
@@ -94,13 +95,13 @@ function print_deliveries()
 					$rep->filename = "Packing_slip" . $myrow['reference'] . ".pdf";
 				}
 			}
-			$rep->SetHeaderType('Header2');
 			$rep->currency = $cur;
 			$rep->Font();
 			$rep->Info($params, $cols, null, $aligns);
 
 			$contacts = get_branch_contacts($branch['branch_code'], 'delivery', $branch['debtor_no'], true);
 			$rep->SetCommonData($myrow, $branch, $sales_order, '', ST_CUSTDELIVERY, $contacts);
+			$rep->SetHeaderType('Header2');
 			$rep->NewPage();
 
    			$result = get_customer_trans_details(ST_CUSTDELIVERY, $i);
@@ -210,9 +211,9 @@ function print_deliveries()
 				{
 					$rep->NewLine(1);
 					$rep->TextCol(1, 7, $myrow['curr_code'] . ": " . $words, - 2);
-				}	
+				}
 				$rep->Font();
-			}	
+			}
 			if ($email == 1)
 			{
 				$rep->End($email);

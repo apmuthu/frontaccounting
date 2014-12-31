@@ -382,7 +382,6 @@ function po_item_controls(&$order, &$rowcounter, $line_no=-1)
 		if ($order->line_items[$id]->descr_editable)
 			text_cells(null,'item_description', null, 45, 150);
 		else {
-			hidden('item_description', $_POST['item_description']);
 //			label_cell($_POST['item_description']);
 			label_cell($order->line_items[$id]->item_description); 
 		}
@@ -394,7 +393,7 @@ function po_item_controls(&$order, &$rowcounter, $line_no=-1)
 	{
 //		hidden('line_no', ($_SESSION['PO']->lines_on_order + 1));
 
-		//Chaitanya : Manufcatured item can be purchased
+		//Chaitanya : Manufactured item can be purchased
 		stock_items_list_cells(null, 'stock_id', null, false, true, false, true);
 		//stock_purchasable_items_list_cells(null, 'stock_id', null, false, true, true);
 		if (list_updated('stock_id')) {

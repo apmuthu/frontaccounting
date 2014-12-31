@@ -74,7 +74,6 @@ class purch_order
 		$this->line_items[$line_no]->quantity = $qty;
 		$this->line_items[$line_no]->price = $price;
 		$this->line_items[$line_no]->req_del_date = $req_del_date;
-		$this->line_items[$line_no]->item_description = $description;
 	}
 
 	function remove_from_order($line_no)

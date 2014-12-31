@@ -11,6 +11,12 @@
 ***********************************************************************/
 $page_security = 'SA_BACKUP';
 
+// Will need script to be owned by root with 4755 permissions. Disabled for backards compatibility.
+$enable_shell_button = false;
+$shell_script_name = '../../shcmds.sh';
+$output_sep = "|";
+// $output_sep = "<br>\n";
+
 $path_to_root="..";
 include_once($path_to_root . "/includes/session.inc");
 include_once($path_to_root . "/includes/ui.inc");
@@ -142,6 +148,26 @@ if (get_post('restore')) {
 		display_error(_("Select backup file first."));
 }
 
+if (get_post('rendump')) {
+	if ($backup_name) {
+		$rename_file = str_replace(" ", "", trim(get_post('comments')));
+		if (strlen($rename_file) > 0) {
+
+			$file_extn = pathinfo($rename_file, PATHINFO_EXTENSION);
+			if (!in_array($file_extn, Array("sql","gz")))
+				$rename_file = str_replace(".", "", $rename_file) . '.sql.gz';
+			$rename_path = BACKUP_PATH . $rename_file;
+
+			if (rename($backup_path, $rename_path)) {
+				display_notification($backup_name . " : " . _("File successfully renamed.")." "
+					. _("New Filename") . ": " . $rename_path);
+				$Ajax->activate('backups');
+			} else display_error(_("Can't rename backup file."));
+
+		} else display_error($rename_file . " : " . _("Enter valid new file name to rename backup file."));
+	} else display_error(_("Select backup file first."));
+}
+
 if (get_post('deldump')) {
 	if ($backup_name) {
 		if (unlink($backup_path)) {
@@ -153,6 +179,18 @@ if (get_post('deldump')) {
 			display_error(_("Can't delete backup file."));
 	} else
 		display_error(_("Select backup file first."));
+}
+
+if (get_post('shcmds') && $enable_shell_button) {
+
+$output = Array();
+if (exec(trim($shell_script_name . ' ' . trim(get_post('comments'))), &$output, &$return_var)) {
+		display_notification(implode($output,$output_sep) . "<br>\n" . _("Web Commands executed successfully"));
+		$Ajax->activate('backups');
+	}
+	else
+		display_error(implode($output,$output_sep) . " " . _("Web Commands execution failed."));
+
 }
 
 if (get_post('upload'))
@@ -191,12 +229,19 @@ table_section_title(_("Backup scripts maintenance"));
 	start_table();
 	submit_row('view',_("View Backup"), false, '', '', false);
 	submit_row('download',_("Download Backup"), false, '', '', false);
+	submit_row('rendump',_("Rename Backup"), false, '','', 'process');
+	submit_js_confirm('rendump',_("You are about to rename database backup file.\nDo you want to continue?"));
 	submit_row('restore',_("Restore Backup"), false, '','', 'process');
 	submit_js_confirm('restore',_("You are about to restore database from backup file.\nDo you want to continue?"));
 
 	submit_row('deldump', _("Delete Backup"), false, '','', true);
 	// don't use 'delete' name or IE js errors appear
 	submit_js_confirm('deldump', sprintf(_("You are about to remove selected backup file.\nDo you want to continue ?")));
+
+if ($enable_shell_button) {
+	submit_row('shcmds',_("Shell Commands"), false, '','', 'process');
+	submit_js_confirm('shcmds',_("You are about to execute shell commands on the server.\nDo you want to continue?"));
+}
 	end_table();
 	echo "</td>";
 	end_row();

@@ -38,16 +38,14 @@ function getTransactions($category, $location, $item_like)
 			".TB_PREF."stock_master.description, ".TB_PREF."stock_master.inactive,
 			IF(".TB_PREF."stock_moves.stock_id IS NULL, '', ".TB_PREF."stock_moves.loc_code) AS loc_code,
 			SUM(IF(".TB_PREF."stock_moves.stock_id IS NULL,0,".TB_PREF."stock_moves.qty)) AS QtyOnHand
-		FROM (".TB_PREF."stock_master,
-			".TB_PREF."stock_category)
-		LEFT JOIN ".TB_PREF."stock_moves ON
-			(".TB_PREF."stock_master.stock_id=".TB_PREF."stock_moves.stock_id)
-		WHERE ".TB_PREF."stock_master.category_id=".TB_PREF."stock_category.category_id
-		AND (".TB_PREF."stock_master.mb_flag='B' OR ".TB_PREF."stock_master.mb_flag='M')";
+		FROM ".TB_PREF."stock_master 
+			LEFT JOIN ".TB_PREF."stock_category USING (category_id)
+			LEFT JOIN ".TB_PREF."stock_moves USING (stock_id)
+		WHERE ".TB_PREF."stock_master.mb_flag IN ('B','M')";
 	if ($category != 0)
 		$sql .= " AND ".TB_PREF."stock_master.category_id = ".db_escape($category);
 	if ($location != 'all')
-		$sql .= " AND IF(".TB_PREF."stock_moves.stock_id IS NULL, '1=1',".TB_PREF."stock_moves.loc_code = ".db_escape($location).")";
+		$sql .= " AND ((".TB_PREF."stock_moves.stock_id IS NULL) OR (".TB_PREF."stock_moves.loc_code = ".db_escape($location)."))";
   if($item_like)
   {
     $regexp = null;
@@ -58,10 +56,6 @@ function getTransactions($category, $location, $item_like)
       $sql .= " AND ".TB_PREF."stock_master.stock_id LIKE ".db_escape($item_like);
   }
 	$sql .= " GROUP BY ".TB_PREF."stock_master.category_id,
-		".TB_PREF."stock_category.description,
-		".TB_PREF."stock_master.stock_id,
-		".TB_PREF."stock_master.description
-		ORDER BY ".TB_PREF."stock_master.category_id,
 		".TB_PREF."stock_master.stock_id";
 
     return db_query($sql,"No transactions were returned");

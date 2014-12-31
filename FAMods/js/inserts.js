@@ -289,7 +289,7 @@ var inserts = {
   					ev = ev||window.event;
   					key = ev.keyCode||ev.which;
  	  				if(key == 13) {
-						if(e.className == 'searchbox') e.onblur();
+						if(string_contains(e.className, 'searchbox')) e.onblur();
 						return false;
 					}
 					return true;
@@ -443,10 +443,10 @@ var inserts = {
 			}
 		}
 		// prevent unneeded transaction entry abortion
-		if (e.className == 'shortcut'
-		 || e.className == 'menu_option'
-		 || e.className == 'menu_tab'
- 		 || e.className == 'selected')
+		if (string_contains(e.className, 'shortcut')
+		 || string_contains(e.className, 'menu_option')
+		 || string_contains(e.className, 'menu_tab')
+ 		 || string_contains(e.className, 'selected'))
 			e.onclick = function(ev) {
 				if (_validate._processing
 				 && _validate._modified

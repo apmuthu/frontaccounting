@@ -113,10 +113,11 @@
 			$this->Text($ccol, _("Email"), $c2col);
 
 			$url = "mailto:" . $this->company['email'];
+			// TCPDF Prototype: Text($c, $txt, $n=0, $corr=0, $r=0, $align='left', 
+			//					$border=0, $fill=0, $link=NULL, $stretch=1)
 			$this->SetTextColor(0, 0, 255);
-			$this->Text($c2col, $this->company['email'], $mcol);
+			$this->Text($c2col, $this->company['email'], $mcol, 0, 0, 'L', 0, 0, $url);
 			$this->SetTextColor(0, 0, 0);
-			$this->addLink($url, $c2col, $this->row, $mcol, $this->row + $this->lineHeight);
 
 			$this->NewLine();
 		}
@@ -197,12 +198,23 @@
 			if (!is_numeric($line))	// title => link
 			{
 				$this->fontSize -= 2;
-				$this->TextWrap($ccol, $this->row, $right - $ccol, $line, 'C');
-				$this->row -= $this->lineHeight;
-				$this->SetTextColor(0, 0, 255);
-				$this->TextWrap($ccol, $this->row, $right - $ccol, $txt, 'C');
+				// TCPDF Prototype: TextWrap($xpos, $ypos, $len, $str, $align = 'left', $border = 0, 
+				//							$fill = 0, $link = NULL, $stretch = 1, $spacebreak=false)
+				if (in_array(substr(strtolower($txt),0,4), array('http', 'www.', 'ftp:')) || 
+					in_array(substr(strtolower($txt),0,6), array('mailto', 'callto'))) {
+					// Links in blue to be rendered clickable
+					$this->SetTextColor(0, 0, 255);
+					$this->TextWrap($ccol, $this->row, $right - $ccol, $line, 'C', 0, 0, $txt);
+					$this->row -= $this->lineHeight;
+				} else {
+					// Non Links that need to be displayed in blue
+					$this->TextWrap($ccol, $this->row, $right - $ccol, $line, 'C');
+					$this->row -= $this->lineHeight;
+					$this->SetTextColor(0, 0, 255);
+					$this->TextWrap($ccol, $this->row, $right - $ccol, $txt, 'C');
+					$this->SetTextColor(0, 0, 0);
+				}
 				$this->SetTextColor(0, 0, 0);
-				$this->addLink($txt, $ccol, $this->row, $this->pageWidth - $this->rightMargin, $this->row + $this->lineHeight);
 				$this->fontSize += 2;
 			}
 			else

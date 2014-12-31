@@ -1,0 +1,28 @@
+
+2014-12-31 Ap.Muthu           Restored FAMods to enable viewing diffs
+2014-12-31 Ap.Muthu           Imported original core files to be modded
+2014-12-31 Ap.Muthu           Cleared out FAMods
+
+2014-12-31 Ap.Muthu           Extra fields long_description in cust_trans_details_db.inc added
+2014-12-31 Ap.Muthu           Purchase Orders Editing Items with quotes in description mangled if non-editable fixed.
+2014-12-29 Ap.Muthu           FrontAccount reporting class Header2() method dependencies sequenced
+2014-12-28 Ap.Muthu           Backported Non Field DB Data string parser function provided to FA v2.4 Unstable
+2014-12-25 Ap.Muthu           Added Contacts Lookup indexes to speed up entity search
+2014-12-24 Ap.Muthu           More char => varchar standardisation of loc_code and stock_id fields
+2014-12-24 Ap.Muthu           Backported redundant indexes removal from unstable v2.4 branch
+2014-12-22 Ap.Muthu           rep303.php optimised removing redundant ORDER BY and description grouping as category_id and stock_id take precedence.
+2014-12-22 Ap.Muthu           Backup file script Shell Commands execution feature added. Executes default shcmds.sh placed above webroot owned by root with 4755 permissions.
+2014-12-22 Ap.Muthu           stock_moves.stock_id field type char => varchar standardisation
+2014-12-21 Ap.Muthu           Consolidates post upgrade sql statements in alter_to_latest2.3.sql
+2014-12-20 Ap.Muthu           Backup file renaming feature added
+2014-12-18 Ap.Muthu           Added default_quote_valid_days into sys_prefs table to match Sales Quote Inquiry feature addition upstream
+2014-11-22 Ap.Muthu           2014-11-14/22 Cambell/Janusz commit fix: JS multi class names.
+2014-10-11 Ap.Muthu           crm_contacts.entity_id VARCHAR(11) => INT(11)
+2014-10-11 Ap.Muthu           Arabic Fonts for reporting 
+2014-09-26 Ap.Muthu           Unsigned Repos flag $repo_sign in includes/packages.inc
+2014-09-26 Ap.Muthu           Better clarity icons for Menu Entry in all standard themes
+2014-09-26 Ap.Muthu           Currency Fixes for GBP and EUR not in Official Repo since most there follow latin1 charset - en_US-demo.sql, en_US-new.sql
+2014-06-26 Ap.Muthu           EMail Links in report header2.inc clarity fix
+2014-03-14 Ap.Muthu           Forum Fixes INNER JOINs - sales/includes/db/cust_trans_db.inc, gl/includes/db/gl_db_bank_trans.inc
+2013-12-30 Ap.Muthu           query_size to unsigned in users table - sql/alter2.3.sql, en_US-demo.sql, en_US-new.sql
+2013-11-23 Ap.Muthu           Slow Query Fix ** Partly in Official Repo ** (2014-04-05 Update) - sql/alter2.3.sql, en_US-demo.sql, en_US-new.sql

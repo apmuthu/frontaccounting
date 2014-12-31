@@ -146,4 +146,34 @@ function print_link($link_text, $rep, $pars = array(), $dir = '',
 	return "<a target='_blank' href='$url'$id$class $pars[1]>$pars[0]</a>";
 }
 
+/*
+// Purpose: Function to parse a string into parameters
+// Release Date: 2014-12-26
+// Author: ApMuthu <apmuthu@usa.net>
+// Usage:
+$str = "PPFrt#2000 CID#6378465 TaxEx#2345-038 abcde ertrgdert COD#4253 jdegtd PIN#6473654";
+$p = parse_notes_params($str);
+echo print_r($p, true);
+*/
+
+function parse_notes_params($str, $sep=" ", $delim="#") {
+	$str_params = explode($sep, $str);
+	$param_array=Array('notes' => '');
+	foreach ($str_params AS $str_param) {
+		$param_set=explode($delim, trim($str_param));
+		$key = (array_key_exists(0, $param_set) ? trim($param_set[0]) : '');
+		$val = (array_key_exists(1, $param_set) ? trim($param_set[1]) : '');
+		if (strlen($key) > 0 && strlen($val) > 0) {
+			$param_array[$key]=$val;
+		} else {
+			// stop at first missing parameter set
+			// break;
+			// Collect the rest into notes
+			$param_array['notes'] .= (" " .  $str_param);
+		}
+	}
+	$param_array['notes'] = trim($param_array['notes']);
+	return $param_array;
+}
+
 ?>
