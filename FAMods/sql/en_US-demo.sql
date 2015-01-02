@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 26, 2014 at 11:32 AM
+-- Generation Time: Jan 03, 2014 at 01:15 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6-1+lenny2
 
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `0_bank_trans` (
   `dimension_id` int(11) NOT NULL default '0',
   `dimension2_id` int(11) NOT NULL default '0',
   `person_type_id` int(11) NOT NULL default '0',
-  `person_id` tinyblob,
+  `person_id` int(11) default NULL,
   `reconciled` date default NULL,
   PRIMARY KEY  (`id`),
   KEY `bank_act` (`bank_act`,`ref`),
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS `0_budget_trans` (
   `dimension_id` int(11) default '0',
   `dimension2_id` int(11) default '0',
   `person_type_id` int(11) default NULL,
-  `person_id` tinyblob,
+  `person_id` int(11) default NULL
   PRIMARY KEY  (`counter`),
   KEY `Type_and_Number` (`type`,`type_no`),
   KEY `Account` (`account`,`tran_date`,`dimension_id`,`dimension2_id`)
@@ -849,7 +849,7 @@ CREATE TABLE IF NOT EXISTS `0_gl_trans` (
   `dimension_id` int(11) NOT NULL default '0',
   `dimension2_id` int(11) NOT NULL default '0',
   `person_type_id` int(11) default NULL,
-  `person_id` tinyblob,
+  `person_id` int(11) default NULL
   PRIMARY KEY  (`counter`),
   KEY `Type_and_Number` (`type`,`type_no`),
   KEY `dimension_id` (`dimension_id`),
