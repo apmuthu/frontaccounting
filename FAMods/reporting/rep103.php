@@ -41,7 +41,6 @@ function get_customer_details_for_report($area=0, $salesid=0)
 			".TB_PREF."cust_branch.br_name,
 			".TB_PREF."cust_branch.br_address,
 			".TB_PREF."cust_branch.br_post_address,
-			".TB_PREF."crm_persons.`name` AS contact_name,
 			".TB_PREF."cust_branch.area,
 			".TB_PREF."cust_branch.salesman,
 			".TB_PREF."areas.description,
@@ -55,12 +54,6 @@ function get_customer_details_for_report($area=0, $salesid=0)
 			ON ".TB_PREF."cust_branch.area = ".TB_PREF."areas.area_code
 		INNER JOIN ".TB_PREF."salesman
 			ON ".TB_PREF."cust_branch.salesman=".TB_PREF."salesman.salesman_code
-		INNER JOIN ".TB_PREF."crm_contacts
-			ON (".TB_PREF."crm_contacts.entity_id=".TB_PREF."cust_branch.branch_code 
-			    AND ".TB_PREF."crm_contacts.`type`='cust_branch' 
-			    AND ".TB_PREF."crm_contacts.`action`='general')
-		INNER JOIN ".TB_PREF."crm_persons
-			ON (".TB_PREF."crm_persons.id=".TB_PREF."crm_contacts.person_id)
 		WHERE ".TB_PREF."debtors_master.inactive = 0";
 	if ($area != 0)
 	{
