@@ -1,4 +1,5 @@
 
+2015-01-04 Ap.Muthu           Deprecated 0_cust_branch.contact_name field replacements in rep103 and rep106 sqls, also speeded up with GROUP BY.
 2015-01-03 Ap.Muthu           Standardised person_id field type tinyblob => int(11) in 0_bank_trans, 0_budget_trans, 0_gl_trans tables
 2014-12-31 Ap.Muthu           Bin Location and CID in PO reports from Non Field DB Data in Company 0
 2014-12-31 Ap.Muthu           Backported faillog folder write check from in FA v2.4 Unstable

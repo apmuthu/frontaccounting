@@ -35,20 +35,24 @@ function GetSalesmanTrans($from, $to)
 	$fromdate = date2sql($from);
 	$todate = date2sql($to);
 
-	$sql = "SELECT DISTINCT ".TB_PREF."debtor_trans.*,
+	$sql = "SELECT ".TB_PREF."debtor_trans.*,
 		ov_amount+ov_discount AS InvoiceTotal,
 		".TB_PREF."debtors_master.name AS DebtorName, ".TB_PREF."debtors_master.curr_code, ".TB_PREF."cust_branch.br_name,
-		".TB_PREF."cust_branch.contact_name, ".TB_PREF."salesman.*
+		".TB_PREF."crm_persons.`name` AS contact_name, ".TB_PREF."salesman.*
 		FROM ".TB_PREF."debtor_trans, ".TB_PREF."debtors_master, ".TB_PREF."sales_orders, ".TB_PREF."cust_branch,
-			".TB_PREF."salesman
+			".TB_PREF."salesman, ".TB_PREF."crm_contacts, ".TB_PREF."crm_persons
 		WHERE ".TB_PREF."sales_orders.order_no=".TB_PREF."debtor_trans.order_
 		    AND ".TB_PREF."sales_orders.branch_code=".TB_PREF."cust_branch.branch_code
 		    AND ".TB_PREF."cust_branch.salesman=".TB_PREF."salesman.salesman_code
+		    AND ".TB_PREF."crm_persons.id=".TB_PREF."crm_contacts.person_id
+		    AND ".TB_PREF."crm_contacts.entity_id=".TB_PREF."cust_branch.branch_code
+		    AND ".TB_PREF."crm_contacts.`type`='cust_branch'
+		    AND ".TB_PREF."crm_contacts.`action`='general'
 		    AND ".TB_PREF."debtor_trans.debtor_no=".TB_PREF."debtors_master.debtor_no
 		    AND (".TB_PREF."debtor_trans.type=".ST_SALESINVOICE." OR ".TB_PREF."debtor_trans.type=".ST_CUSTCREDIT.")
 		    AND ".TB_PREF."debtor_trans.tran_date>='$fromdate'
 		    AND ".TB_PREF."debtor_trans.tran_date<='$todate'
-		ORDER BY ".TB_PREF."salesman.salesman_code, ".TB_PREF."debtor_trans.tran_date";
+		GROUP BY ".TB_PREF."salesman.salesman_code, ".TB_PREF."debtor_trans.tran_date, ".TB_PREF."debtor_trans.`type`, ".TB_PREF."debtor_trans.trans_no";
 
 	return db_query($sql, "Error getting order details");
 }
