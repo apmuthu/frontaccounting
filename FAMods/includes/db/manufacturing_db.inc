@@ -205,22 +205,22 @@ function add_bom($selected_parent, $component, $workcentre_added, $loc_code, $qu
 }
 //--------------------------------------------------------------------------------------
 
-function update_bom($selected_parent, $selected_component, $workcentre_added, $loc_code, $quantity)
+function update_bom($selected_parent, $selected_id, $workcentre_added, $loc_code, $quantity)
 {
 	$sql = "UPDATE ".TB_PREF."bom SET workcentre_added=".db_escape($workcentre_added)
 	 . ",loc_code=".db_escape($loc_code) . ",
 		quantity= " . $quantity . "
 		WHERE parent=".db_escape($selected_parent) . "
-		AND component=".db_escape($selected_component);
+		AND id=".db_escape($selected_id);
 	check_db_error("Could not update this bom component", $sql);
-
+// the "WHERE parent=" part of the above sql is only for security check and not for primary key record uniqueness
 	db_query($sql,"could not update bom");
 }
 	
 function delete_bom($selected_id)
 {
 	$sql = "DELETE FROM ".TB_PREF."bom WHERE id=".db_escape($selected_id);
-	db_query($sql,"Could not delete this bom components");
+	db_query($sql,"Could not delete this bom component");
 }
 
 function get_bom($item)

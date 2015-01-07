@@ -26,41 +26,12 @@ check_db_has_bom_stock_items(_("There are no manufactured or kit items defined i
 check_db_has_workcentres(_("There are no work centres defined in the system. BOMs require at least one work centre be defined."));
 
 simple_page_mode(true);
-$selected_component = $selected_id;
-//--------------------------------------------------------------------------------------------------
 
-//if (isset($_GET["NewItem"]))
-//{
-//	$_POST['stock_id'] = $_GET["NewItem"];
-//}
 if (isset($_GET['stock_id']))
 {
 	$_POST['stock_id'] = $_GET['stock_id'];
 	$selected_parent =  $_GET['stock_id'];
 }
-
-/* selected_parent could come from a post or a get */
-/*if (isset($_GET["selected_parent"]))
-{
-	$selected_parent = $_GET["selected_parent"];
-}
-else if (isset($_POST["selected_parent"]))
-{
-	$selected_parent = $_POST["selected_parent"];
-}
-*/
-/* selected_component could also come from a post or a get */
-/*if (isset($_GET["selected_component"]))
-{
-	$selected_component = $_GET["selected_component"];
-}
-else
-{
-	$selected_component = get_post("selected_component", -1);
-}
-*/
-
-//--------------------------------------------------------------------------------------------------
 
 function display_bom_items($selected_parent)
 {
@@ -94,7 +65,7 @@ function display_bom_items($selected_parent)
 
 //--------------------------------------------------------------------------------------------------
 
-function on_submit($selected_parent, $selected_component=-1)
+function on_submit($selected_parent, $selected_id=-1)
 {
 	if (!check_num('quantity', 0))
 	{
@@ -103,9 +74,9 @@ function on_submit($selected_parent, $selected_component=-1)
 		return;
 	}
 
-	if ($selected_component != -1)
+	if ($selected_id != -1)
 	{
-		update_bom($selected_parent, $selected_component, $_POST['workcentre_added'], $_POST['loc_code'],
+		update_bom($selected_parent, $selected_id, $_POST['workcentre_added'], $_POST['loc_code'],
 			input_num('quantity'));
 		display_notification(_('Selected component has been updated'));
 		$Mode = 'RESET';
