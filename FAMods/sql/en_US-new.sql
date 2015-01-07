@@ -159,16 +159,15 @@ CREATE TABLE IF NOT EXISTS `0_bank_trans` (
 DROP TABLE IF EXISTS `0_bom`;
 CREATE TABLE IF NOT EXISTS `0_bom` (
   `id` int(11) NOT NULL auto_increment,
-  `parent` char(20) NOT NULL default '',
-  `component` char(20) NOT NULL default '',
+  `parent` varchar(20) NOT NULL default '',
+  `component` varchar(20) NOT NULL default '',
   `workcentre_added` int(11) NOT NULL default '0',
   `loc_code` varchar(5) NOT NULL default '',
   `quantity` double NOT NULL default '1',
-  PRIMARY KEY  (`parent`,`component`,`workcentre_added`,`loc_code`),
+  PRIMARY KEY  (`parent`,`loc_code`,`component`,`workcentre_added`),
   KEY `component` (`component`),
   KEY `id` (`id`),
   KEY `loc_code` (`loc_code`),
-  KEY `parent` (`parent`,`loc_code`),
   KEY `workcentre_added` (`workcentre_added`)
 ) ENGINE=MyISAM;
 

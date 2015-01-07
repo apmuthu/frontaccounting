@@ -211,7 +211,7 @@ function update_bom($selected_parent, $selected_component, $workcentre_added, $l
 	 . ",loc_code=".db_escape($loc_code) . ",
 		quantity= " . $quantity . "
 		WHERE parent=".db_escape($selected_parent) . "
-		AND id=".db_escape($selected_component);
+		AND component=".db_escape($selected_component);
 	check_db_error("Could not update this bom component", $sql);
 
 	db_query($sql,"could not update bom");
