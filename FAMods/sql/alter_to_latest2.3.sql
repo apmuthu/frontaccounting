@@ -31,3 +31,24 @@ ALTER TABLE `0_bom`
 	CHANGE `component` `component` VARCHAR(20) DEFAULT '' NOT NULL, 
 	DROP INDEX `parent`, 
 	DROP PRIMARY KEY, ADD PRIMARY KEY (`parent`, `loc_code`, `component`, `workcentre_added`); 
+
+ALTER TABLE `0_credit_status` CHANGE `reason_description` `reason_description` VARCHAR(100) DEFAULT '' NOT NULL;
+ALTER TABLE `0_payment_terms` CHANGE `terms` `terms` VARCHAR(80) DEFAULT '' NOT NULL;
+
+ALTER TABLE `0_purch_data` 
+    CHANGE `suppliers_uom` `suppliers_uom` VARCHAR(50) DEFAULT '' NOT NULL, 
+    CHANGE `supplier_description` `supplier_description` VARCHAR(50) DEFAULT '' NOT NULL;
+
+ALTER TABLE `0_sales_types` CHANGE `sales_type` `sales_type` VARCHAR(50) DEFAULT '' NOT NULL;
+
+ALTER TABLE `0_salesman` 
+    CHANGE `salesman_name` `salesman_name` VARCHAR(60) DEFAULT '' NOT NULL, 
+    CHANGE `salesman_phone` `salesman_phone` VARCHAR(30) DEFAULT '' NOT NULL, 
+    CHANGE `salesman_fax` `salesman_fax` VARCHAR(30) DEFAULT '' NOT NULL;
+
+ALTER TABLE `0_stock_moves` CHANGE `reference` `reference` VARCHAR(40) DEFAULT '' NOT NULL;
+
+ALTER TABLE `0_workcentres` 
+    CHANGE `name` `name` VARCHAR(40) DEFAULT '' NOT NULL, 
+    CHANGE `description` `description` VARCHAR(50) DEFAULT '' NOT NULL;
+

@@ -1,4 +1,5 @@
 
+2015-01-07 Ap.Muthu           Field type standardisation char => varchar, en_US-demo.sql missing commas fixed
 2015-01-07 Ap.Muthu           Backported Customer Branch ID fix for Customer Payments Form
 2015-01-07 Ap.Muthu           Fixed sql in function update_bom() id => component and optimised indexes for 0_bom table
 2015-01-04 Ap.Muthu           Deprecated 0_cust_branch.contact_name field fixes backported, also speeded up with GROUP BY.

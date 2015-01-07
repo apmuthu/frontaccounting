@@ -394,7 +394,7 @@ CREATE TABLE IF NOT EXISTS `0_comments` (
 DROP TABLE IF EXISTS `0_credit_status`;
 CREATE TABLE IF NOT EXISTS `0_credit_status` (
   `id` int(11) NOT NULL auto_increment,
-  `reason_description` char(100) NOT NULL default '',
+  `reason_description` varchar(100) NOT NULL default '',
   `dissallow_invoices` tinyint(1) NOT NULL default '0',
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`),
@@ -1037,7 +1037,7 @@ INSERT INTO `0_movement_types` VALUES (1, 'Adjustment', 0);
 DROP TABLE IF EXISTS `0_payment_terms`;
 CREATE TABLE IF NOT EXISTS `0_payment_terms` (
   `terms_indicator` int(11) NOT NULL auto_increment,
-  `terms` char(80) NOT NULL default '',
+  `terms` varchar(80) NOT NULL default '',
   `days_before_due` smallint(6) NOT NULL default '0',
   `day_in_following_month` smallint(6) NOT NULL default '0',
   `inactive` tinyint(1) NOT NULL default '0',
@@ -1144,9 +1144,9 @@ CREATE TABLE IF NOT EXISTS `0_purch_data` (
   `supplier_id` int(11) NOT NULL default '0',
   `stock_id` varchar(20) NOT NULL default '',
   `price` double NOT NULL default '0',
-  `suppliers_uom` char(50) NOT NULL default '',
+  `suppliers_uom` varchar(50) NOT NULL default '',
   `conversion_factor` double NOT NULL default '1',
-  `supplier_description` char(50) NOT NULL default '',
+  `supplier_description` varchar(50) NOT NULL default '',
   PRIMARY KEY  (`supplier_id`,`stock_id`)
 ) ENGINE=MyISAM;
 
@@ -1322,9 +1322,9 @@ CREATE TABLE IF NOT EXISTS `0_refs` (
 DROP TABLE IF EXISTS `0_salesman`;
 CREATE TABLE IF NOT EXISTS `0_salesman` (
   `salesman_code` int(11) NOT NULL auto_increment,
-  `salesman_name` char(60) NOT NULL default '',
-  `salesman_phone` char(30) NOT NULL default '',
-  `salesman_fax` char(30) NOT NULL default '',
+  `salesman_name` varchar(60) NOT NULL default '',
+  `salesman_phone` varchar(30) NOT NULL default '',
+  `salesman_fax` varchar(30) NOT NULL default '',
   `salesman_email` varchar(100) NOT NULL default '',
   `provision` double NOT NULL default '0',
   `break_pt` double NOT NULL default '0',
@@ -1437,7 +1437,7 @@ INSERT INTO `0_sales_pos` VALUES (1, 'Default', 1, 1, 'DEF', 2, 0);
 DROP TABLE IF EXISTS `0_sales_types`;
 CREATE TABLE IF NOT EXISTS `0_sales_types` (
   `id` int(11) NOT NULL auto_increment,
-  `sales_type` char(50) NOT NULL default '',
+  `sales_type` varchar(50) NOT NULL default '',
   `tax_included` int(1) NOT NULL default '0',
   `factor` double NOT NULL default '1',
   `inactive` tinyint(1) NOT NULL default '0',
@@ -1619,7 +1619,7 @@ CREATE TABLE IF NOT EXISTS `0_stock_moves` (
   `tran_date` date NOT NULL default '0000-00-00',
   `person_id` int(11) default NULL,
   `price` double NOT NULL default '0',
-  `reference` char(40) NOT NULL default '',
+  `reference` varchar(40) NOT NULL default '',
   `qty` double NOT NULL default '1',
   `discount_percent` double NOT NULL default '0',
   `standard_cost` double NOT NULL default '0',
@@ -2108,8 +2108,8 @@ CREATE TABLE IF NOT EXISTS `0_voided` (
 DROP TABLE IF EXISTS `0_workcentres`;
 CREATE TABLE IF NOT EXISTS `0_workcentres` (
   `id` int(11) NOT NULL auto_increment,
-  `name` char(40) NOT NULL default '',
-  `description` char(50) NOT NULL default '',
+  `name` varchar(40) NOT NULL default '',
+  `description` varchar(50) NOT NULL default '',
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `name` (`name`)
