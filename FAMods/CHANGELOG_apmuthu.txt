@@ -1,9 +1,10 @@
 
+2015-01-07 Ap.Muthu           Backported Customer Branch ID fix for Customer Payments Form
 2015-01-07 Ap.Muthu           Fixed sql in function update_bom() id => component and optimised indexes for 0_bom table
-2015-01-04 Ap.Muthu           Deprecated 0_cust_branch.contact_name field fixes backported from FA v2.4, also speeded up with GROUP BY.
+2015-01-04 Ap.Muthu           Deprecated 0_cust_branch.contact_name field fixes backported, also speeded up with GROUP BY.
 2015-01-03 Ap.Muthu           Standardised person_id field type tinyblob => int(11) in 0_bank_trans, 0_budget_trans, 0_gl_trans tables
 2014-12-31 Ap.Muthu           Bin Location and CID in PO reports from Non Field DB Data in Company 0
-2014-12-31 Ap.Muthu           Backported faillog folder write check from in FA v2.4 Unstable
+2014-12-31 Ap.Muthu           Backported faillog folder write check fix
 2014-12-31 Ap.Muthu           reporting.inc now included in pdf_report.inc for non field db data usage in reports
 2014-12-31 Ap.Muthu           Restored FAMods to enable viewing diffs
 2014-12-31 Ap.Muthu           Imported original core files to be modded
@@ -15,7 +16,7 @@
 2014-12-28 Ap.Muthu           Backported Non Field DB Data string parser function provided in FA v2.4 Unstable
 2014-12-25 Ap.Muthu           Added Contacts Lookup indexes to speed up entity search
 2014-12-24 Ap.Muthu           More char => varchar standardisation of loc_code and stock_id fields
-2014-12-24 Ap.Muthu           Backported redundant indexes removal from unstable v2.4 branch
+2014-12-24 Ap.Muthu           Backported redundant indexes removal
 2014-12-22 Ap.Muthu           rep303.php optimised removing redundant ORDER BY and description grouping as category_id and stock_id take precedence.
 2014-12-22 Ap.Muthu           Backup file script Shell Commands execution feature added. Executes default shcmds.sh placed above webroot owned by root with 4755 permissions.
 2014-12-22 Ap.Muthu           stock_moves.stock_id field type char => varchar standardisation
