@@ -1,4 +1,6 @@
 
+
+2015-01-08 Ap.Muthu           Backported Additional validation check on template order during recurrent invoice definition entry.
 2015-01-07 Ap.Muthu           Standardised naming BOM parameter $selected_component => $selected_id, reverts function update_bom() id => component fix done first today
 2015-01-07 Ap.Muthu           Field type standardisation char => varchar, en_US-demo.sql missing commas fixed
 2015-01-07 Ap.Muthu           Backported Customer Branch ID fix for Customer Payments Form
