@@ -139,6 +139,18 @@
 			$this->Text($c2col, $CIDval, $mcol);
 			$this->NewLine();
 		}
+		if (@$MOval)
+		{
+			$this->Text($ccol, _("Min. Order"), $c2col);
+			$this->Text($c2col, $MOval, $mcol);
+			$this->NewLine();
+		}
+		if (@$PPFrtval)
+		{
+			$this->Text($ccol, _("PrePaid Frt"), $c2col);
+			$this->Text($c2col, $PPFrtval, $mcol);
+			$this->NewLine();
+		}
 		$this->Font();
 		$this->row = $adrline;
 		$this->NewLine(3);

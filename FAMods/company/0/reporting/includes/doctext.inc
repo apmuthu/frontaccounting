@@ -164,6 +164,12 @@
 			$this->formData['document_number'] = $print_invoice_no == 0 && isset($this->formData['reference'])
 				? $this->formData['reference'] : $this->formData['order_no'];
 
+// PPFrt and MO Non Field DB Data - Start - Purchase Order
+			$notes_params = parse_notes_params($this->formData['supp_notes']);
+			$MOval = (array_key_exists('MO', $notes_params) ? $notes_params['MO'] : false);
+			$PPFrtval = (array_key_exists('PPFrt', $notes_params) ? $notes_params['PPFrt'] : false);
+// PPFrt and MO Non Field DB Data - End
+
 			$aux_info = array(
 				_("Customer's Reference") => $this->formData['supp_account_no'],
 				_("Sales Person") => $this->formData['contact'],
