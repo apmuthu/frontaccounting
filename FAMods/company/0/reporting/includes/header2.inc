@@ -161,6 +161,14 @@
 		$this->Text($mcol + 100, $this->formData['document_name']);
 		$this->Text($mcol + 180, $this->formData['document_number']);
 
+		if ($print_preparer)
+		{
+			$this->NewLine();
+			$this->Text($mcol + 100, _("Prepared by"));
+			$preparer = trim($user['real_name']);
+			if (empty($preparer)) $preparer = $user['user_id'];
+			$this->Text($mcol + 180, $preparer);
+		}
 		if ($this->pageNumber > 1)
 			$this->Text($this->endLine - 35, _("Page") . ' ' . $this->pageNumber);
 		$this->row = $iline1 - $this->lineHeight;

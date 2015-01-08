@@ -14,6 +14,9 @@
 *	Set document type dependent elements of common page layout.
 *
 */
+	$id_user = $_SESSION['wa_current_user']->user;
+	$user = get_user($id_user);
+	$print_preparer = false;
 	$Addr1 = array(
 			'title' => _("Charge To"),
 			'name' => @$this->formData['br_name'] ? $this->formData['br_name'] : @$this->formData['DebtorName'],
@@ -40,6 +43,7 @@
 			$this->formData['document_date'] = $this->formData['ord_date'];
 			$this->formData['document_number'] = $print_invoice_no == 0 && isset($this->formData['reference'])
 				? $this->formData['reference'] : $this->formData['order_no'];
+			$print_preparer = true;
 			$aux_info = array(
 				_("Customer's Reference") => $this->formData["customer_ref"],
 				_("Sales Person") => get_salesman_name($this->formData['salesman']),
