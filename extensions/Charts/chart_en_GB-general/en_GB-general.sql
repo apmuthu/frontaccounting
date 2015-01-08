@@ -1,13 +1,16 @@
 # MySQL dump of database 'fatest' on host 'localhost'
-# Backup Date and Time: 2013-09-16 13:09
-# Built by FrontAccounting 2.3.18
+# Backup Date and Time: 2014-12-31 15:00
+# Built by FrontAccounting 2.3.22
 # http://frontaccounting.com
 # Company: Company name
 # User: Administrator
 
 
+-- --------------------------------------------------------
 
+--
 -- Table structure for table `0_areas`
+--
 
 DROP TABLE IF EXISTS `0_areas`;
 CREATE TABLE IF NOT EXISTS `0_areas` (
@@ -18,11 +21,17 @@ CREATE TABLE IF NOT EXISTS `0_areas` (
   UNIQUE KEY `description` (`description`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=2 ;
 
+--
 -- Dumping data for table `0_areas`
+--
 
 INSERT INTO `0_areas` VALUES('1', 'UK', '0');
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_attachments`
+--
 
 DROP TABLE IF EXISTS `0_attachments`;
 CREATE TABLE IF NOT EXISTS `0_attachments` (
@@ -35,14 +44,20 @@ CREATE TABLE IF NOT EXISTS `0_attachments` (
   `filename` varchar(60) NOT NULL default '',
   `filesize` int(11) NOT NULL default '0',
   `filetype` varchar(60) NOT NULL default '',
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `type_no` (`type_no`,`trans_no`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_attachments`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_audit_trail`
+--
 
 DROP TABLE IF EXISTS `0_audit_trail`;
 CREATE TABLE IF NOT EXISTS `0_audit_trail` (
@@ -58,12 +73,18 @@ CREATE TABLE IF NOT EXISTS `0_audit_trail` (
   PRIMARY KEY  (`id`),
   KEY `Seq` (`fiscal_year`,`gl_date`,`gl_seq`),
   KEY `Type_and_Number` (`type`,`trans_no`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_audit_trail`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_bank_accounts`
+--
 
 DROP TABLE IF EXISTS `0_bank_accounts`;
 CREATE TABLE IF NOT EXISTS `0_bank_accounts` (
@@ -83,15 +104,20 @@ CREATE TABLE IF NOT EXISTS `0_bank_accounts` (
   KEY `bank_account_name` (`bank_account_name`),
   KEY `bank_account_number` (`bank_account_number`),
   KEY `account_code` (`account_code`)
-) ENGINE=MyISAM  AUTO_INCREMENT=3;
+) ENGINE=MyISAM  AUTO_INCREMENT=3 ;
 
+--
 -- Dumping data for table `0_bank_accounts`
+--
 
-INSERT INTO `0_bank_accounts` VALUES
-('1200', '0', 'Current account', 'N/A', 'N/A', NULL, 'GBP', '0', '1', '0000-00-00 00:00:00', '0', '0'),
-('1230', '3', 'Petty Cash account', 'N/A', 'N/A', NULL, 'GBP', '0', '2', '0000-00-00 00:00:00', '0', '0');
+INSERT INTO `0_bank_accounts` VALUES('1200', 0, 'Current account', 'N/A', 'N/A', '', 'GBP', 1, 1, '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `0_bank_accounts` VALUES('1230', 3, 'Petty Cash account', 'N/A', 'N/A', '', 'GBP', 0, 2, '0000-00-00 00:00:00', 0, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_bank_trans`
+--
 
 DROP TABLE IF EXISTS `0_bank_trans`;
 CREATE TABLE IF NOT EXISTS `0_bank_trans` (
@@ -101,7 +127,6 @@ CREATE TABLE IF NOT EXISTS `0_bank_trans` (
   `bank_act` varchar(15) NOT NULL default '',
   `ref` varchar(40) default NULL,
   `trans_date` date NOT NULL default '0000-00-00',
-  `bank_trans_type_id` int(10) unsigned default NULL,
   `amount` double default NULL,
   `dimension_id` int(11) NOT NULL default '0',
   `dimension2_id` int(11) NOT NULL default '0',
@@ -113,12 +138,18 @@ CREATE TABLE IF NOT EXISTS `0_bank_trans` (
   KEY `type` (`type`,`trans_no`),
   KEY `bank_act_2` (`bank_act`,`reconciled`),
   KEY `bank_act_3` (`bank_act`,`trans_date`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_bank_trans`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_bom`
+--
 
 DROP TABLE IF EXISTS `0_bom`;
 CREATE TABLE IF NOT EXISTS `0_bom` (
@@ -134,12 +165,18 @@ CREATE TABLE IF NOT EXISTS `0_bom` (
   KEY `loc_code` (`loc_code`),
   KEY `parent` (`parent`,`loc_code`),
   KEY `workcentre_added` (`workcentre_added`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_bom`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_budget_trans`
+--
 
 DROP TABLE IF EXISTS `0_budget_trans`;
 CREATE TABLE IF NOT EXISTS `0_budget_trans` (
@@ -157,12 +194,18 @@ CREATE TABLE IF NOT EXISTS `0_budget_trans` (
   PRIMARY KEY  (`counter`),
   KEY `Type_and_Number` (`type`,`type_no`),
   KEY `Account` (`account`,`tran_date`,`dimension_id`,`dimension2_id`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_budget_trans`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_chart_class`
+--
 
 DROP TABLE IF EXISTS `0_chart_class`;
 CREATE TABLE IF NOT EXISTS `0_chart_class` (
@@ -173,15 +216,20 @@ CREATE TABLE IF NOT EXISTS `0_chart_class` (
   PRIMARY KEY  (`cid`)
 ) ENGINE=MyISAM;
 
+--
 -- Dumping data for table `0_chart_class`
+--
 
-INSERT INTO `0_chart_class` VALUES
-('1', 'Assets', '1', '0'),
-('2', 'Liabilities', '2', '0'),
-('3', 'Income', '4', '0'),
-('4', 'Costs', '6', '0');
+INSERT INTO `0_chart_class` VALUES('1', 'Assets', 1, 0);
+INSERT INTO `0_chart_class` VALUES('2', 'Liabilities', 2, 0);
+INSERT INTO `0_chart_class` VALUES('3', 'Income', 4, 0);
+INSERT INTO `0_chart_class` VALUES('4', 'Costs', 6, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_chart_master`
+--
 
 DROP TABLE IF EXISTS `0_chart_master`;
 CREATE TABLE IF NOT EXISTS `0_chart_master` (
@@ -195,11 +243,14 @@ CREATE TABLE IF NOT EXISTS `0_chart_master` (
   KEY `accounts_by_type` (`account_type`,`account_code`)
 ) ENGINE=MyISAM;
 
+--
 -- Dumping data for table `0_chart_master`
+--
 
 INSERT INTO `0_chart_master` VALUES
 ('1001', '', 'Stock', '2', '0'),
 ('1002', '', 'Work in Progress', '2', '0'),
+('1003', '', 'Goods Received Clearing account', '2', 0),
 ('1010', '', 'Freehold Property', '1', '0'),
 ('1011', '', 'Goodwill', '1', '0'),
 ('1012', '', 'Goodwill Amortisation', '1', '0'),
@@ -299,10 +350,12 @@ INSERT INTO `0_chart_master` VALUES
 ('8205', '', 'Refreshments', '10', '0'),
 ('8500', '', 'Dividends', '10', '0'),
 ('8600', '', 'Corporation Tax', '10', '0'),
-('8601', '', 'Profit/Loss Year', '10', '0'),
+('9990', '', 'Year Profit/Loss', '10', '0'),
 ('9999', '', 'Suspense Account', '10', '0');
 
+--
 -- Table structure for table `0_chart_types`
+--
 
 DROP TABLE IF EXISTS `0_chart_types`;
 CREATE TABLE IF NOT EXISTS `0_chart_types` (
@@ -314,23 +367,29 @@ CREATE TABLE IF NOT EXISTS `0_chart_types` (
   PRIMARY KEY  (`id`),
   KEY `name` (`name`),
   KEY `class_id` (`class_id`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM ;
 
+--
 -- Dumping data for table `0_chart_types`
+--
 
 INSERT INTO `0_chart_types` VALUES
-('1', 'CAPITAL ASSETS', '1', '', '0'),
-('2', 'INVENTORY ASSETS', '1', '', '0'),
-('3', 'CURRENT ASSETS', '1', '', '0'),
-('4', 'CURRENT LIABILITIES', '2', '', '0'),
-('5', 'LONG TERM LIABILITIES', '2', '', '0'),
-('6', 'SHARE CAPITAL', '2', '', '0'),
-('7', 'SALES REVENUE', '3', '', '0'),
-('8', 'COST OF GOODS SOLD', '4', '', '0'),
-('9', 'PAYROLL EXPENSES', '4', '', '0'),
-('10', 'GENERAL &amp; ADMINISTRATIVE EXPENSES', '4', '', '0');
+('1', 'CAPITAL ASSETS', '1', '', 0),
+('2', 'INVENTORY ASSETS', '1', '', 0),
+('3', 'CURRENT ASSETS', '1', '', 0),
+('4', 'CURRENT LIABILITIES', '2', '', 0),
+('5', 'LONG TERM LIABILITIES', '2', '', 0),
+('6', 'SHARE CAPITAL', '2', '', 0),
+('7', 'SALES REVENUE', '3', '', 0),
+('8', 'COST OF GOODS SOLD', '4', '', 0),
+('9', 'PAYROLL EXPENSES', '4', '', 0),
+('10', 'GENERAL &amp; ADMINISTRATIVE EXPENSES', '4', '', 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_comments`
+--
 
 DROP TABLE IF EXISTS `0_comments`;
 CREATE TABLE IF NOT EXISTS `0_comments` (
@@ -341,10 +400,16 @@ CREATE TABLE IF NOT EXISTS `0_comments` (
   KEY `type_and_id` (`type`,`id`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_comments`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_credit_status`
+--
 
 DROP TABLE IF EXISTS `0_credit_status`;
 CREATE TABLE IF NOT EXISTS `0_credit_status` (
@@ -356,14 +421,19 @@ CREATE TABLE IF NOT EXISTS `0_credit_status` (
   UNIQUE KEY `reason_description` (`reason_description`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=5 ;
 
+--
 -- Dumping data for table `0_credit_status`
+--
 
-INSERT INTO `0_credit_status` VALUES
-('1', 'Good History', '0', '0'),
-('3', 'No more work until payment received', '1', '0'),
-('4', 'In liquidation', '1', '0');
+INSERT INTO `0_credit_status` VALUES(1, 'Good History', 0, 0);
+INSERT INTO `0_credit_status` VALUES(3, 'No more work until payment received', 1, 0);
+INSERT INTO `0_credit_status` VALUES(4, 'In liquidation', 1, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_crm_categories`
+--
 
 DROP TABLE IF EXISTS `0_crm_categories`;
 CREATE TABLE IF NOT EXISTS `0_crm_categories` (
@@ -377,25 +447,30 @@ CREATE TABLE IF NOT EXISTS `0_crm_categories` (
   PRIMARY KEY  (`id`),
   UNIQUE KEY `type` (`type`,`action`),
   UNIQUE KEY `type_2` (`type`,`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  AUTO_INCREMENT=13 ;
 
+--
 -- Dumping data for table `0_crm_categories`
+--
 
-INSERT INTO `0_crm_categories` VALUES
-('1', 'cust_branch', 'general', 'General', 'General contact data for customer branch (overrides company setting)', '1', '0'),
-('2', 'cust_branch', 'invoice', 'Invoices', 'Invoice posting (overrides company setting)', '1', '0'),
-('3', 'cust_branch', 'order', 'Orders', 'Order confirmation (overrides company setting)', '1', '0'),
-('4', 'cust_branch', 'delivery', 'Deliveries', 'Delivery coordination (overrides company setting)', '1', '0'),
-('5', 'customer', 'general', 'General', 'General contact data for customer', '1', '0'),
-('6', 'customer', 'order', 'Orders', 'Order confirmation', '1', '0'),
-('7', 'customer', 'delivery', 'Deliveries', 'Delivery coordination', '1', '0'),
-('8', 'customer', 'invoice', 'Invoices', 'Invoice posting', '1', '0'),
-('9', 'supplier', 'general', 'General', 'General contact data for supplier', '1', '0'),
-('10', 'supplier', 'order', 'Orders', 'Order confirmation', '1', '0'),
-('11', 'supplier', 'delivery', 'Deliveries', 'Delivery coordination', '1', '0'),
-('12', 'supplier', 'invoice', 'Invoices', 'Invoice posting', '1', '0');
+INSERT INTO `0_crm_categories` VALUES(1, 'cust_branch', 'general', 'General', 'General contact data for customer branch (overrides company setting)', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(2, 'cust_branch', 'invoice', 'Invoices', 'Invoice posting (overrides company setting)', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(3, 'cust_branch', 'order', 'Orders', 'Order confirmation (overrides company setting)', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(4, 'cust_branch', 'delivery', 'Deliveries', 'Delivery coordination (overrides company setting)', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(5, 'customer', 'general', 'General', 'General contact data for customer', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(6, 'customer', 'order', 'Orders', 'Order confirmation', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(7, 'customer', 'delivery', 'Deliveries', 'Delivery coordination', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(8, 'customer', 'invoice', 'Invoices', 'Invoice posting', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(9, 'supplier', 'general', 'General', 'General contact data for supplier', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(10, 'supplier', 'order', 'Orders', 'Order confirmation', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(11, 'supplier', 'delivery', 'Deliveries', 'Delivery coordination', 1, 0);
+INSERT INTO `0_crm_categories` VALUES(12, 'supplier', 'invoice', 'Invoices', 'Invoice posting', 1, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_crm_contacts`
+--
 
 DROP TABLE IF EXISTS `0_crm_contacts`;
 CREATE TABLE IF NOT EXISTS `0_crm_contacts` (
@@ -406,12 +481,17 @@ CREATE TABLE IF NOT EXISTS `0_crm_contacts` (
   `entity_id` varchar(11) default NULL COMMENT 'entity id in related class table',
   PRIMARY KEY  (`id`),
   KEY `type` (`type`,`action`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_crm_contacts`
+--
 
+-- --------------------------------------------------------
 
+--
 -- Table structure for table `0_crm_persons`
+--
 
 DROP TABLE IF EXISTS `0_crm_persons`;
 CREATE TABLE IF NOT EXISTS `0_crm_persons` (
@@ -429,12 +509,18 @@ CREATE TABLE IF NOT EXISTS `0_crm_persons` (
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `ref` (`ref`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_crm_persons`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_currencies`
+--
 
 DROP TABLE IF EXISTS `0_currencies`;
 CREATE TABLE IF NOT EXISTS `0_currencies` (
@@ -443,19 +529,24 @@ CREATE TABLE IF NOT EXISTS `0_currencies` (
   `curr_symbol` varchar(10) NOT NULL default '',
   `country` varchar(100) NOT NULL default '',
   `hundreds_name` varchar(15) NOT NULL default '',
-  `inactive` tinyint(1) NOT NULL default '0',
   `auto_update` tinyint(1) NOT NULL default '1',
-  PRIMARY KEY (`curr_abrev`)
+  `inactive` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`curr_abrev`)
 ) ENGINE=MyISAM;
 
+--
 -- Dumping data for table `0_currencies`
+--
 
-INSERT INTO `0_currencies` VALUES
-('Pounds', 'GBP', '?', 'England', 'Pence', '0', '1'),
-('US Dollars', 'USD', '$', 'United States', 'Cents', '0', '1'),
-('Euro', 'EUR', '?', 'Europe', 'Cents', '0', '1');
+INSERT INTO `0_currencies` VALUES('Pounds', 'GBP', '?', 'England', 'Pence', 1, 0);
+INSERT INTO `0_currencies` VALUES('US Dollars', 'USD', '$', 'United States', 'Cents', 1, 0);
+INSERT INTO `0_currencies` VALUES('Euro', 'EUR', '?', 'Europe', 'Cents', 1, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_cust_allocations`
+--
 
 DROP TABLE IF EXISTS `0_cust_allocations`;
 CREATE TABLE IF NOT EXISTS `0_cust_allocations` (
@@ -469,19 +560,25 @@ CREATE TABLE IF NOT EXISTS `0_cust_allocations` (
   PRIMARY KEY  (`id`),
   KEY `From` (`trans_type_from`,`trans_no_from`),
   KEY `To` (`trans_type_to`,`trans_no_to`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_cust_allocations`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_cust_branch`
+--
 
 DROP TABLE IF EXISTS `0_cust_branch`;
 CREATE TABLE IF NOT EXISTS `0_cust_branch` (
   `branch_code` int(11) NOT NULL auto_increment,
   `debtor_no` int(11) NOT NULL default '0',
   `br_name` varchar(60) NOT NULL default '',
-  `branch_ref` varchar(30) NOT NULL,
+  `branch_ref` varchar(30) NOT NULL default '',
   `br_address` tinytext NOT NULL,
   `area` int(11) default NULL,
   `salesman` int(11) NOT NULL default '0',
@@ -496,16 +593,24 @@ CREATE TABLE IF NOT EXISTS `0_cust_branch` (
   `disable_trans` tinyint(4) NOT NULL default '0',
   `br_post_address` tinytext NOT NULL,
   `group_no` int(11) NOT NULL default '0',
-  `notes` tinytext,
+  `notes` tinytext NOT NULL,
   `inactive` tinyint(1) NOT NULL default '0',
-  PRIMARY KEY (`branch_code`,`debtor_no`),
+  PRIMARY KEY  (`branch_code`,`debtor_no`),
+  KEY `branch_code` (`branch_code`),
   KEY `branch_ref` (`branch_ref`),
   KEY `group_no` (`group_no`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_cust_branch`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_debtors_master`
+--
 
 DROP TABLE IF EXISTS `0_debtors_master`;
 CREATE TABLE IF NOT EXISTS `0_debtors_master` (
@@ -523,91 +628,23 @@ CREATE TABLE IF NOT EXISTS `0_debtors_master` (
   `discount` double NOT NULL default '0',
   `pymt_discount` double NOT NULL default '0',
   `credit_limit` float NOT NULL default '1000',
-  `notes` tinytext,
+  `notes` tinytext NOT NULL,
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`debtor_no`),
   KEY `name` (`name`),
-  UNIQUE KEY `debtor_ref`  (`debtor_ref`)
-) ENGINE=MyISAM;
+  UNIQUE KEY `debtor_ref` (`debtor_ref`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_debtors_master`
+--
 
 
+-- --------------------------------------------------------
 
--- Table structure for table `0_dashboard_reminders`
-
-DROP TABLE IF EXISTS `0_dashboard_reminders`;
-CREATE TABLE IF NOT EXISTS `0_dashboard_reminders` (
-  `id` int(11) NOT NULL auto_increment,
-  `role_id` int(11) NOT NULL,
-  `next_date` date NOT NULL,
-  `description` text,
-  `frequency` varchar(20) NOT NULL,
-  `param` text,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
-
--- Dumping data for table `0_dashboard_reminders`
-
-
--- Table structure for table `0_dashboard_widgets`
-
-DROP TABLE IF EXISTS `0_dashboard_widgets`;
-
-CREATE TABLE IF NOT EXISTS `0_dashboard_widgets` (
-  `id` int(11) NOT NULL auto_increment,
-  `user_id` int(11) NOT NULL,
-  `app` varchar(50) NOT NULL,
-  `column_id` int(11) NOT NULL,
-  `sort_no` int(11) NOT NULL,
-  `collapsed` tinyint(4) NOT NULL,
-  `widget` varchar(100) NOT NULL,
-  `description` varchar(100) NOT NULL,
-  `param` text,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 ;
-
--- Dumping data for table `0_dashboard_widgets`
-
-INSERT INTO `0_dashboard_widgets` VALUES
-('1', '1', 'AP', '1', '1', '0', 'weeklysales', 'Top 10 Sales Weeks', '{&quot;top&quot;:&quot;10&quot;,&quot;orderby&quot;:&quot;Gross Sales&quot;,&quot;orderby_seq&quot;:&quot;desc&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;dm.payment_terms = -1&quot;}'),
-('2', '1', 'AP', '1', '0', '0', 'weeklysales', 'Weekly Sales', '{&quot;top&quot;:&quot;&quot;,&quot;orderby&quot;:&quot;Week End&quot;,&quot;orderby_seq&quot;:&quot;asc&quot;,&quot;graph_type&quot;:&quot;LineChart&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('3', '1', 'AP', '2', '1', '0', 'weeklysales', 'Lowest weeks sales', '{&quot;top&quot;:&quot;10&quot;,&quot;orderby&quot;:&quot;Gross Sales&quot;,&quot;orderby_seq&quot;:&quot;asc&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('6', '1', 'AP', '2', '0', '0', 'dailysales', 'Daily Sales', '{&quot;top&quot;:&quot;10&quot;,&quot;data_filter&quot;:&quot;dm.payment_terms = -1&quot;,&quot;graph_type&quot;:&quot;LineChart&quot;}'),
-('7', '1', 'orders', '1', '0', '0', 'customers', 'Top 10 Customers', '{&quot;top&quot;:&quot;10&quot;,&quot;data_filter&quot;:&quot;&quot;,&quot;graph_type&quot;:&quot;Table&quot;}'),
-('9', '1', 'orders', '1', '1', '0', 'salesinvoices', 'Overdue invoices', '{&quot;data_filter&quot;:&quot;&quot;}'),
-('10', '1', 'AP', '1', '0', '0', 'suppliers', 'Top 10 Suppliers', '{&quot;top&quot;:&quot;&quot;,&quot;data_filter&quot;:&quot;&quot;,&quot;graph_type&quot;:&quot;Table&quot;}'),
-('11', '1', 'AP', '2', '0', '0', 'suppliers', 'Top 10 Suppliers', '{&quot;top&quot;:&quot;&quot;,&quot;data_filter&quot;:&quot;&quot;,&quot;graph_type&quot;:&quot;ColumnChart&quot;}'),
-('12', '1', 'GL', '2', '1', '0', 'glreturn', 'Return', '{&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('13', '1', 'GL', '2', '0', '0', 'glreturn', 'Return', '{&quot;graph_type&quot;:&quot;PieChart&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('14', '1', 'stock', '1', '0', '0', 'items', 'Top 10 Items', '{&quot;top&quot;:&quot;&quot;,&quot;item_type&quot;:&quot;stock&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('15', '1', 'stock', '2', '0', '0', 'items', 'Top 10 Items', '{&quot;top&quot;:&quot;&quot;,&quot;item_type&quot;:&quot;stock&quot;,&quot;graph_type&quot;:&quot;PieChart&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('16', '1', 'manuf', '1', '0', '0', 'items', 'Top 10 items', '{&quot;top&quot;:&quot;&quot;,&quot;item_type&quot;:&quot;manuf&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('17', '1', 'manuf', '2', '0', '0', 'items', 'Top 10 Items', '{&quot;top&quot;:&quot;&quot;,&quot;item_type&quot;:&quot;manuf&quot;,&quot;graph_type&quot;:&quot;PieChart&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('18', '1', 'orders', '2', '0', '0', 'customers', 'Top 10 Customers', '{&quot;top&quot;:&quot;&quot;,&quot;data_filter&quot;:&quot;&quot;,&quot;graph_type&quot;:&quot;ColumnChart&quot;}'),
-('19', '1', 'GL', '2', '2', '0', 'bankbalances', 'Bank Balances', '{&quot;data_filter&quot;:&quot;&quot;}'),
-('20', '1', 'GL', '1', '1', '0', 'dailybankbalances', 'Daily Current Account Balance', '{&quot;days_past&quot;:&quot;&quot;,&quot;days_future&quot;:&quot;&quot;,&quot;bank_act&quot;:&quot;0&quot;,&quot;graph_type&quot;:&quot;ColumnChart&quot;}'),
-('21', '1', 'GL', '1', '0', '0', 'banktransactions', 'Current Account Transactions', '{&quot;days_past&quot;:&quot;15&quot;,&quot;days_future&quot;:&quot;15&quot;,&quot;bank_act&quot;:&quot;0&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('22', '2', 'AP', '1', '1', '0', 'weeklysales', 'Top 10 Sales Weeks', '{&quot;top&quot;:&quot;10&quot;,&quot;orderby&quot;:&quot;Gross Sales&quot;,&quot;orderby_seq&quot;:&quot;desc&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;dm.payment_terms = -1&quot;}'),
-('23', '2', 'AP', '1', '0', '0', 'weeklysales', 'Weekly Sales', '{&quot;top&quot;:&quot;&quot;,&quot;orderby&quot;:&quot;Week End&quot;,&quot;orderby_seq&quot;:&quot;asc&quot;,&quot;graph_type&quot;:&quot;LineChart&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('24', '2', 'AP', '2', '1', '0', 'weeklysales', 'Lowest weeks sales', '{&quot;top&quot;:&quot;10&quot;,&quot;orderby&quot;:&quot;Gross Sales&quot;,&quot;orderby_seq&quot;:&quot;asc&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('25', '2', 'AP', '2', '0', '0', 'dailysales', 'Daily Sales', '{&quot;top&quot;:&quot;10&quot;,&quot;data_filter&quot;:&quot;dm.payment_terms = -1&quot;,&quot;graph_type&quot;:&quot;LineChart&quot;}'),
-('26', '2', 'orders', '1', '0', '0', 'customers', 'Top 10 Customers', '{&quot;top&quot;:&quot;10&quot;,&quot;data_filter&quot;:&quot;&quot;,&quot;graph_type&quot;:&quot;Table&quot;}'),
-('27', '2', 'orders', '1', '1', '0', 'salesinvoices', 'Overdue invoices', '{&quot;data_filter&quot;:&quot;&quot;}'),
-('28', '2', 'AP', '1', '0', '0', 'suppliers', 'Top 10 Suppliers', '{&quot;top&quot;:&quot;&quot;,&quot;data_filter&quot;:&quot;&quot;,&quot;graph_type&quot;:&quot;Table&quot;}'),
-('29', '2', 'AP', '2', '0', '0', 'suppliers', 'Top 10 Suppliers', '{&quot;top&quot;:&quot;&quot;,&quot;data_filter&quot;:&quot;&quot;,&quot;graph_type&quot;:&quot;ColumnChart&quot;}'),
-('30', '2', 'GL', '2', '1', '0', 'glreturn', 'Return', '{&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('31', '2', 'GL', '2', '0', '0', 'glreturn', 'Return', '{&quot;graph_type&quot;:&quot;PieChart&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('32', '2', 'stock', '1', '0', '0', 'items', 'Top 10 Items', '{&quot;top&quot;:&quot;&quot;,&quot;item_type&quot;:&quot;stock&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('33', '2', 'stock', '2', '0', '0', 'items', 'Top 10 Items', '{&quot;top&quot;:&quot;&quot;,&quot;item_type&quot;:&quot;stock&quot;,&quot;graph_type&quot;:&quot;PieChart&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('34', '2', 'manuf', '1', '0', '0', 'items', 'Top 10 items', '{&quot;top&quot;:&quot;&quot;,&quot;item_type&quot;:&quot;manuf&quot;,&quot;graph_type&quot;:&quot;Table&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('35', '2', 'manuf', '2', '0', '0', 'items', 'Top 10 Items', '{&quot;top&quot;:&quot;&quot;,&quot;item_type&quot;:&quot;manuf&quot;,&quot;graph_type&quot;:&quot;PieChart&quot;,&quot;data_filter&quot;:&quot;&quot;}'),
-('36', '2', 'orders', '2', '0', '0', 'customers', 'Top 10 Customers', '{&quot;top&quot;:&quot;&quot;,&quot;data_filter&quot;:&quot;&quot;,&quot;graph_type&quot;:&quot;ColumnChart&quot;}'),
-('37', '2', 'GL', '2', '2', '0', 'bankbalances', 'Bank Balances', '{&quot;data_filter&quot;:&quot;&quot;}'),
-('38', '2', 'GL', '1', '1', '0', 'dailybankbalances', 'Daily Current Account Balance', '{&quot;days_past&quot;:&quot;&quot;,&quot;days_future&quot;:&quot;&quot;,&quot;bank_act&quot;:&quot;0&quot;,&quot;graph_type&quot;:&quot;ColumnChart&quot;}'),
-('39', '2', 'GL', '1', '0', '0', 'banktransactions', 'Current Account Transactions', '{&quot;days_past&quot;:&quot;15&quot;,&quot;days_future&quot;:&quot;15&quot;,&quot;bank_act&quot;:&quot;0&quot;,&quot;data_filter&quot;:&quot;&quot;}');
-
+--
 -- Table structure for table `0_debtor_trans`
+--
 
 DROP TABLE IF EXISTS `0_debtor_trans`;
 CREATE TABLE IF NOT EXISTS `0_debtor_trans` (
@@ -634,13 +671,20 @@ CREATE TABLE IF NOT EXISTS `0_debtor_trans` (
   `payment_terms` int(11) default NULL,
   PRIMARY KEY  (`type`,`trans_no`),
   KEY `debtor_no` (`debtor_no`,`branch_code`),
-  KEY `tran_date` (`tran_date`)
+  KEY `tran_date` (`tran_date`),
+  KEY `order_` (`order_`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_debtor_trans`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_debtor_trans_details`
+--
 
 DROP TABLE IF EXISTS `0_debtor_trans_details`;
 CREATE TABLE IF NOT EXISTS `0_debtor_trans_details` (
@@ -655,16 +699,22 @@ CREATE TABLE IF NOT EXISTS `0_debtor_trans_details` (
   `discount_percent` double NOT NULL default '0',
   `standard_cost` double NOT NULL default '0',
   `qty_done` double NOT NULL default '0',
-  `src_id` int(11) default NULL,
+  `src_id` int(11) NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `Transaction` (`debtor_trans_type`,`debtor_trans_no`),
-  KEY `src_id` (`src_id`)
-) ENGINE=InnoDB;
+  KEY (`src_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_debtor_trans_details`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_dimensions`
+--
 
 DROP TABLE IF EXISTS `0_dimensions`;
 CREATE TABLE IF NOT EXISTS `0_dimensions` (
@@ -675,17 +725,23 @@ CREATE TABLE IF NOT EXISTS `0_dimensions` (
   `closed` tinyint(1) NOT NULL default '0',
   `date_` date NOT NULL default '0000-00-00',
   `due_date` date NOT NULL default '0000-00-00',
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `reference` (`reference`),
   KEY `date_` (`date_`),
   KEY `due_date` (`due_date`),
   KEY `type_` (`type_`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_dimensions`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_exchange_rates`
+--
 
 DROP TABLE IF EXISTS `0_exchange_rates`;
 CREATE TABLE IF NOT EXISTS `0_exchange_rates` (
@@ -696,12 +752,18 @@ CREATE TABLE IF NOT EXISTS `0_exchange_rates` (
   `date_` date NOT NULL default '0000-00-00',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `curr_code` (`curr_code`,`date_`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_exchange_rates`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_fiscal_year`
+--
 
 DROP TABLE IF EXISTS `0_fiscal_year`;
 CREATE TABLE IF NOT EXISTS `0_fiscal_year` (
@@ -712,14 +774,18 @@ CREATE TABLE IF NOT EXISTS `0_fiscal_year` (
   PRIMARY KEY  (`id`),
   UNIQUE KEY `begin` (`begin`),
   UNIQUE KEY `end` (`end`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  AUTO_INCREMENT=3 ;
 
+--
 -- Dumping data for table `0_fiscal_year`
+--
 
-INSERT INTO `0_fiscal_year` VALUES
-('1', '2008-01-01', '2008-12-31', '0');
+INSERT INTO `0_fiscal_year` VALUES(1, '2013-01-01', '2013-12-31', 0);
+INSERT INTO `0_fiscal_year` VALUES(2, '2014-01-01', '2014-12-31', 0);
 
+--
 -- Table structure for table `0_gl_trans`
+--
 
 DROP TABLE IF EXISTS `0_gl_trans`;
 CREATE TABLE IF NOT EXISTS `0_gl_trans` (
@@ -740,12 +806,18 @@ CREATE TABLE IF NOT EXISTS `0_gl_trans` (
   KEY `dimension2_id` (`dimension2_id`),
   KEY `tran_date` (`tran_date`),
   KEY `account_and_tran_date` (`account`,`tran_date`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_gl_trans`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_grn_batch`
+--
 
 DROP TABLE IF EXISTS `0_grn_batch`;
 CREATE TABLE IF NOT EXISTS `0_grn_batch` (
@@ -758,12 +830,18 @@ CREATE TABLE IF NOT EXISTS `0_grn_batch` (
   PRIMARY KEY  (`id`),
   KEY `delivery_date` (`delivery_date`),
   KEY `purch_order_no` (`purch_order_no`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_grn_batch`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_grn_items`
+--
 
 DROP TABLE IF EXISTS `0_grn_items`;
 CREATE TABLE IF NOT EXISTS `0_grn_items` (
@@ -776,12 +854,18 @@ CREATE TABLE IF NOT EXISTS `0_grn_items` (
   `quantity_inv` double NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `grn_batch_id` (`grn_batch_id`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_grn_items`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_groups`
+--
 
 DROP TABLE IF EXISTS `0_groups`;
 CREATE TABLE IF NOT EXISTS `0_groups` (
@@ -792,14 +876,19 @@ CREATE TABLE IF NOT EXISTS `0_groups` (
   UNIQUE KEY `description` (`description`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=4 ;
 
+--
 -- Dumping data for table `0_groups`
+--
 
-INSERT INTO `0_groups` VALUES
-('1', 'Small', '0'),
-('2', 'Medium', '0'),
-('3', 'Large', '0');
+INSERT INTO `0_groups` VALUES(1, 'Small', 0);
+INSERT INTO `0_groups` VALUES(2, 'Medium', 0);
+INSERT INTO `0_groups` VALUES(3, 'Large', 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_item_codes`
+--
 
 DROP TABLE IF EXISTS `0_item_codes`;
 CREATE TABLE IF NOT EXISTS `0_item_codes` (
@@ -814,12 +903,18 @@ CREATE TABLE IF NOT EXISTS `0_item_codes` (
   PRIMARY KEY  (`id`),
   UNIQUE KEY `stock_id` (`stock_id`,`item_code`),
   KEY `item_code` (`item_code`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_item_codes`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_item_tax_types`
+--
 
 DROP TABLE IF EXISTS `0_item_tax_types`;
 CREATE TABLE IF NOT EXISTS `0_item_tax_types` (
@@ -829,11 +924,19 @@ CREATE TABLE IF NOT EXISTS `0_item_tax_types` (
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB  AUTO_INCREMENT=2 ;
 
+--
 -- Dumping data for table `0_item_tax_types`
+--
 
+INSERT INTO `0_item_tax_types` VALUES(1, 'Regular', 0, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_item_tax_type_exemptions`
+--
 
 DROP TABLE IF EXISTS `0_item_tax_type_exemptions`;
 CREATE TABLE IF NOT EXISTS `0_item_tax_type_exemptions` (
@@ -842,12 +945,16 @@ CREATE TABLE IF NOT EXISTS `0_item_tax_type_exemptions` (
   PRIMARY KEY  (`item_tax_type_id`,`tax_type_id`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_item_tax_type_exemptions`
+--
 
 
+-- --------------------------------------------------------
 
-
+--
 -- Table structure for table `0_item_units`
+--
 
 DROP TABLE IF EXISTS `0_item_units`;
 CREATE TABLE IF NOT EXISTS `0_item_units` (
@@ -859,13 +966,18 @@ CREATE TABLE IF NOT EXISTS `0_item_units` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=MyISAM;
 
+--
 -- Dumping data for table `0_item_units`
+--
 
-INSERT INTO `0_item_units` VALUES
-('ea.', 'Each', '0', '0');
+INSERT INTO `0_item_units` VALUES('each', 'Each', 0, 0);
+INSERT INTO `0_item_units` VALUES('hr', 'Hours', 0, 0);
 
+-- --------------------------------------------------------
 
+--
 -- Table structure for table `0_locations`
+--
 
 DROP TABLE IF EXISTS `0_locations`;
 CREATE TABLE IF NOT EXISTS `0_locations` (
@@ -881,13 +993,17 @@ CREATE TABLE IF NOT EXISTS `0_locations` (
   PRIMARY KEY  (`loc_code`)
 ) ENGINE=MyISAM;
 
+--
 -- Dumping data for table `0_locations`
+--
 
+INSERT INTO `0_locations` VALUES('DEF', 'Default', 'N/A', '', '', '', '', '', 0);
 
-INSERT INTO `0_locations` VALUES('DEF', 'Default', 'N/A', '', '', '', '', '', '0');
+-- --------------------------------------------------------
 
-
+--
 -- Table structure for table `0_loc_stock`
+--
 
 DROP TABLE IF EXISTS `0_loc_stock`;
 CREATE TABLE IF NOT EXISTS `0_loc_stock` (
@@ -898,9 +1014,16 @@ CREATE TABLE IF NOT EXISTS `0_loc_stock` (
   KEY `stock_id` (`stock_id`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_loc_stock`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_movement_types`
+--
 
 DROP TABLE IF EXISTS `0_movement_types`;
 CREATE TABLE IF NOT EXISTS `0_movement_types` (
@@ -911,11 +1034,17 @@ CREATE TABLE IF NOT EXISTS `0_movement_types` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=2 ;
 
+--
 -- Dumping data for table `0_movement_types`
+--
 
-INSERT INTO `0_movement_types` VALUES('1', 'Adjustment', '0');
+INSERT INTO `0_movement_types` VALUES(1, 'Adjustment', 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_payment_terms`
+--
 
 DROP TABLE IF EXISTS `0_payment_terms`;
 CREATE TABLE IF NOT EXISTS `0_payment_terms` (
@@ -928,15 +1057,20 @@ CREATE TABLE IF NOT EXISTS `0_payment_terms` (
   UNIQUE KEY `terms` (`terms`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=5 ;
 
+--
 -- Dumping data for table `0_payment_terms`
+--
 
-INSERT INTO `0_payment_terms` VALUES
-('1', 'Due 15th Of the Following Month', '0', '17', '0'),
-('2', 'Due By End Of The Following Month', '0', '30', '0'),
-('3', 'Payment due within 10 days', '10', '0', '0'),
-('4', 'Cash Only', '1', '0', '0');
+INSERT INTO `0_payment_terms` VALUES(1, 'Due 15th Of the Following Month', 0, 17, 0);
+INSERT INTO `0_payment_terms` VALUES(2, 'Due By End Of The Following Month', 0, 30, 0);
+INSERT INTO `0_payment_terms` VALUES(3, 'Payment due within 10 days', 10, 0, 0);
+INSERT INTO `0_payment_terms` VALUES(4, 'Cash Only', 0, 0, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_prices`
+--
 
 DROP TABLE IF EXISTS `0_prices`;
 CREATE TABLE IF NOT EXISTS `0_prices` (
@@ -947,12 +1081,18 @@ CREATE TABLE IF NOT EXISTS `0_prices` (
   `price` double NOT NULL default '0',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `price` (`stock_id`,`sales_type_id`,`curr_abrev`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_prices`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_printers`
+--
 
 DROP TABLE IF EXISTS `0_printers`;
 CREATE TABLE IF NOT EXISTS `0_printers` (
@@ -967,9 +1107,19 @@ CREATE TABLE IF NOT EXISTS `0_printers` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=4 ;
 
+--
 -- Dumping data for table `0_printers`
+--
 
+INSERT INTO `0_printers` VALUES(1, 'QL500', 'Label printer', 'QL500', 'server', 127, 20);
+INSERT INTO `0_printers` VALUES(2, 'Samsung', 'Main network printer', 'scx4521F', 'server', 515, 5);
+INSERT INTO `0_printers` VALUES(3, 'Local', 'Local print server at user IP', 'lp', '', 515, 10);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_print_profiles`
+--
 
 DROP TABLE IF EXISTS `0_print_profiles`;
 CREATE TABLE IF NOT EXISTS `0_print_profiles` (
@@ -981,26 +1131,25 @@ CREATE TABLE IF NOT EXISTS `0_print_profiles` (
   UNIQUE KEY `profile` (`profile`,`report`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=10 ;
 
+--
 -- Dumping data for table `0_print_profiles`
+--
 
-INSERT INTO `0_print_profiles` VALUES
-('1', 'Out of office', NULL, '0'),
-('2', 'Sales Department', NULL, '0'),
-('3', 'Central', NULL, '2'),
-('4', 'Sales Department', '104', '2'),
-('5', 'Sales Department', '105', '2'),
-('6', 'Sales Department', '107', '2'),
-('7', 'Sales Department', '109', '2'),
-('8', 'Sales Department', '110', '2'),
-('9', 'Sales Department', '201', '2');
+INSERT INTO `0_print_profiles` VALUES(1, 'Out of office', '', 0);
+INSERT INTO `0_print_profiles` VALUES(2, 'Sales Department', '', 0);
+INSERT INTO `0_print_profiles` VALUES(3, 'Central', '', 2);
+INSERT INTO `0_print_profiles` VALUES(4, 'Sales Department', '104', 2);
+INSERT INTO `0_print_profiles` VALUES(5, 'Sales Department', '105', 2);
+INSERT INTO `0_print_profiles` VALUES(6, 'Sales Department', '107', 2);
+INSERT INTO `0_print_profiles` VALUES(7, 'Sales Department', '109', 2);
+INSERT INTO `0_print_profiles` VALUES(8, 'Sales Department', '110', 2);
+INSERT INTO `0_print_profiles` VALUES(9, 'Sales Department', '201', 2);
 
+-- --------------------------------------------------------
 
-INSERT INTO `0_printers` VALUES
-('1', 'QL500', 'Label printer', 'QL500', 'server', '127', '20'),
-('2', 'Samsung', 'Main network printer', 'scx4521F', 'server', '515', '5'),
-('3', 'Local', 'Local print server at user IP', 'lp', '', '515', '10');
-
+--
 -- Table structure for table `0_purch_data`
+--
 
 DROP TABLE IF EXISTS `0_purch_data`;
 CREATE TABLE IF NOT EXISTS `0_purch_data` (
@@ -1013,9 +1162,16 @@ CREATE TABLE IF NOT EXISTS `0_purch_data` (
   PRIMARY KEY  (`supplier_id`,`stock_id`)
 ) ENGINE=MyISAM;
 
+--
 -- Dumping data for table `0_purch_data`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_purch_orders`
+--
 
 DROP TABLE IF EXISTS `0_purch_orders`;
 CREATE TABLE IF NOT EXISTS `0_purch_orders` (
@@ -1031,11 +1187,18 @@ CREATE TABLE IF NOT EXISTS `0_purch_orders` (
   `tax_included` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`order_no`),
   KEY `ord_date` (`ord_date`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_purch_orders`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_purch_order_details`
+--
 
 DROP TABLE IF EXISTS `0_purch_order_details`;
 CREATE TABLE IF NOT EXISTS `0_purch_order_details` (
@@ -1052,12 +1215,18 @@ CREATE TABLE IF NOT EXISTS `0_purch_order_details` (
   `quantity_received` double NOT NULL default '0',
   PRIMARY KEY  (`po_detail_item`),
   KEY `order` (`order_no`,`po_detail_item`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_purch_order_details`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_quick_entries`
+--
 
 DROP TABLE IF EXISTS `0_quick_entries`;
 CREATE TABLE IF NOT EXISTS `0_quick_entries` (
@@ -1071,14 +1240,19 @@ CREATE TABLE IF NOT EXISTS `0_quick_entries` (
   KEY `description` (`description`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=4 ;
 
+--
 -- Dumping data for table `0_quick_entries`
+--
 
-INSERT INTO `0_quick_entries` VALUES
-('1', '1', 'Maintenance', '0', 'Amount', '0'),
-('2', '1', 'Phone', '0', 'Amount', '0'),
-('3', '2', 'Cash Sales', '0', 'Amount', '0');
+INSERT INTO `0_quick_entries` VALUES(1, 1, 'Maintenance', 0, 'Amount', 0);
+INSERT INTO `0_quick_entries` VALUES(2, 4, 'Phone', 0, 'Amount', 0);
+INSERT INTO `0_quick_entries` VALUES(3, 2, 'Cash Sales', 0, 'Amount', 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_quick_entry_lines`
+--
 
 DROP TABLE IF EXISTS `0_quick_entry_lines`;
 CREATE TABLE IF NOT EXISTS `0_quick_entry_lines` (
@@ -1091,16 +1265,24 @@ CREATE TABLE IF NOT EXISTS `0_quick_entry_lines` (
   `dimension2_id` smallint(6) unsigned default NULL,
   PRIMARY KEY  (`id`),
   KEY `qid` (`qid`)
-) ENGINE=MyISAM  AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  AUTO_INCREMENT=7 ;
 
+--
 -- Dumping data for table `0_quick_entry_lines`
+--
 
-INSERT INTO `0_quick_entry_lines` VALUES
-('1', '1', '0', '=', '6600', '0', '0'),
-('2', '2', '0', '=', '6730', '0', '0'),
-('3', '3', '0', '=', '3000', '0', '0');
+INSERT INTO `0_quick_entry_lines` VALUES(1, 1, 0, 't-', '1', 0, 0);
+INSERT INTO `0_quick_entry_lines` VALUES(2, 2, 0, 't-', '1', 0, 0);
+INSERT INTO `0_quick_entry_lines` VALUES(3, 3, 0, 't-', '1', 0, 0);
+INSERT INTO `0_quick_entry_lines` VALUES(4, 3, 0, '=', '4000', 0, 0);
+INSERT INTO `0_quick_entry_lines` VALUES(5, 1, 0, '=', '7800', 0, 0);
+INSERT INTO `0_quick_entry_lines` VALUES(6, 2, 0, '=', '7502', 0, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_recurrent_invoices`
+--
 
 DROP TABLE IF EXISTS `0_recurrent_invoices`;
 CREATE TABLE IF NOT EXISTS `0_recurrent_invoices` (
@@ -1116,12 +1298,18 @@ CREATE TABLE IF NOT EXISTS `0_recurrent_invoices` (
   `last_sent` date NOT NULL default '0000-00-00',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `description` (`description`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_recurrent_invoices`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_refs`
+--
 
 DROP TABLE IF EXISTS `0_refs`;
 CREATE TABLE IF NOT EXISTS `0_refs` (
@@ -1132,9 +1320,16 @@ CREATE TABLE IF NOT EXISTS `0_refs` (
   KEY `Type_and_Reference` (`type`,`reference`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_refs`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_salesman`
+--
 
 DROP TABLE IF EXISTS `0_salesman`;
 CREATE TABLE IF NOT EXISTS `0_salesman` (
@@ -1151,11 +1346,17 @@ CREATE TABLE IF NOT EXISTS `0_salesman` (
   UNIQUE KEY `salesman_name` (`salesman_name`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=2 ;
 
+--
 -- Dumping data for table `0_salesman`
+--
 
-INSERT INTO `0_salesman` VALUES('1', 'Sales Person', '', '', '', '5', '1000', '4', '0');
+INSERT INTO `0_salesman` VALUES(1, 'Sales Person', '', '', '', 5, 1000, 4, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_sales_orders`
+--
 
 DROP TABLE IF EXISTS `0_sales_orders`;
 CREATE TABLE IF NOT EXISTS `0_sales_orders` (
@@ -1183,10 +1384,16 @@ CREATE TABLE IF NOT EXISTS `0_sales_orders` (
   PRIMARY KEY  (`trans_type`,`order_no`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_sales_orders`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_sales_order_details`
+--
 
 DROP TABLE IF EXISTS `0_sales_order_details`;
 CREATE TABLE IF NOT EXISTS `0_sales_order_details` (
@@ -1201,12 +1408,18 @@ CREATE TABLE IF NOT EXISTS `0_sales_order_details` (
   `discount_percent` double NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `sorder` (`trans_type`,`order_no`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_sales_order_details`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_sales_pos`
+--
 
 DROP TABLE IF EXISTS `0_sales_pos`;
 CREATE TABLE IF NOT EXISTS `0_sales_pos` (
@@ -1221,12 +1434,17 @@ CREATE TABLE IF NOT EXISTS `0_sales_pos` (
   UNIQUE KEY `pos_name` (`pos_name`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=2 ;
 
+--
 -- Dumping data for table `0_sales_pos`
+--
 
-INSERT INTO `0_sales_pos` VALUES
-('1', 'Default', '1', '1', 'DEF', '2', '0');
+INSERT INTO `0_sales_pos` VALUES(1, 'Default', 1, 1, 'DEF', 2, 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_sales_types`
+--
 
 DROP TABLE IF EXISTS `0_sales_types`;
 CREATE TABLE IF NOT EXISTS `0_sales_types` (
@@ -1239,14 +1457,18 @@ CREATE TABLE IF NOT EXISTS `0_sales_types` (
   UNIQUE KEY `sales_type` (`sales_type`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=3 ;
 
+--
 -- Dumping data for table `0_sales_types`
+--
 
-INSERT INTO `0_sales_types` VALUES
-('1', 'Retail', '0', '1', '0'),
-('2', 'Wholesale', '0', '1', '0');
+INSERT INTO `0_sales_types` VALUES(1, 'Retail', 1, 1, 0);
+INSERT INTO `0_sales_types` VALUES(2, 'Wholesale', 0, 1, 0);
 
+-- --------------------------------------------------------
 
+--
 -- Table structure for table `0_security_roles`
+--
 
 DROP TABLE IF EXISTS `0_security_roles`;
 CREATE TABLE IF NOT EXISTS `0_security_roles` (
@@ -1260,7 +1482,9 @@ CREATE TABLE IF NOT EXISTS `0_security_roles` (
   UNIQUE KEY `role` (`role`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=11 ;
 
+--
 -- Dumping data for table `0_security_roles`
+--
 
 INSERT INTO `0_security_roles` VALUES(1, 'Inquiries', 'Inquiries', '768;2816;3072;3328;5632;5888;8192;8448;10752;11008;13312;15872;16128', '257;258;259;260;513;514;515;516;517;518;519;520;521;522;523;524;525;773;774;2822;3073;3075;3076;3077;3329;3330;3331;3332;3333;3334;3335;5377;5633;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8450;8451;10497;10753;11009;11010;11012;13313;13315;15617;15618;15619;15620;15621;15622;15623;15624;15625;15626;15873;15882;16129;16130;16131;16132', 0);
 INSERT INTO `0_security_roles` VALUES(2, 'System Administrator', 'System Administrator', '256;512;768;2816;3072;3328;5376;5632;5888;7936;8192;8448;10496;10752;11008;13056;13312;15616;15872;16128', '257;258;259;260;513;514;515;516;517;518;519;520;521;522;523;524;525;526;769;770;771;772;773;774;2817;2818;2819;2820;2821;2822;2823;3073;3074;3082;3075;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5634;5635;5636;5637;5641;5638;5639;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8195;8196;8197;8449;8450;8451;10497;10753;10754;10755;10756;10757;11009;11010;11011;11012;13057;13313;13314;13315;15617;15618;15619;15620;15621;15622;15623;15624;15628;15625;15626;15627;15873;15874;15875;15876;15877;15878;15879;15880;15883;15881;15882;16129;16130;16131;16132', 0);
@@ -1273,8 +1497,11 @@ INSERT INTO `0_security_roles` VALUES(8, 'AP Officer', 'AP Officer', '512;2816;3
 INSERT INTO `0_security_roles` VALUES(9, 'Accountant', 'New Accountant', '512;768;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128', '257;258;259;260;521;523;524;771;772;773;774;2818;2819;2820;2821;2822;2823;3073;3074;3075;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5634;5635;5637;5638;5639;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8196;8197;8449;8450;8451;10497;10753;10755;11009;11010;11012;13313;13315;15617;15618;15619;15620;15621;15624;15873;15876;15877;15878;15880;15882;16129;16130;16131;16132', 0);
 INSERT INTO `0_security_roles` VALUES(10, 'Sub Admin', 'Sub Admin', '512;768;2816;3072;3328;5376;5632;5888;8192;8448;10752;11008;13312;15616;15872;16128', '257;258;259;260;521;523;524;771;772;773;774;2818;2819;2820;2821;2822;2823;3073;3074;3082;3075;3076;3077;3078;3079;3080;3081;3329;3330;3331;3332;3333;3334;3335;5377;5633;5634;5635;5637;5638;5639;5640;5889;5890;5891;7937;7938;7939;7940;8193;8194;8196;8197;8449;8450;8451;10497;10753;10755;11009;11010;11012;13057;13313;13315;15617;15619;15620;15621;15624;15873;15874;15876;15877;15878;15879;15880;15882;16129;16130;16131;16132', 0);
 
+-- --------------------------------------------------------
 
+--
 -- Table structure for table `0_shippers`
+--
 
 DROP TABLE IF EXISTS `0_shippers`;
 CREATE TABLE IF NOT EXISTS `0_shippers` (
@@ -1289,11 +1516,17 @@ CREATE TABLE IF NOT EXISTS `0_shippers` (
   UNIQUE KEY `name` (`shipper_name`)
 ) ENGINE=MyISAM  AUTO_INCREMENT=2 ;
 
+--
 -- Dumping data for table `0_shippers`
+--
 
-INSERT INTO `0_shippers` VALUES('1', 'Default', '', '', '', '', '0');
+INSERT INTO `0_shippers` VALUES(1, 'Default', '', '', '', '', 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_sql_trail`
+--
 
 DROP TABLE IF EXISTS `0_sql_trail`;
 CREATE TABLE IF NOT EXISTS `0_sql_trail` (
@@ -1302,18 +1535,23 @@ CREATE TABLE IF NOT EXISTS `0_sql_trail` (
   `result` tinyint(1) NOT NULL,
   `msg` varchar(255) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_sql_trail`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_stock_category`
+--
 
 DROP TABLE IF EXISTS `0_stock_category`;
 CREATE TABLE IF NOT EXISTS `0_stock_category` (
   `category_id` int(11) NOT NULL auto_increment,
   `description` varchar(60) NOT NULL default '',
-  `inactive` tinyint(1) NOT NULL default '0',
   `dflt_tax_type` int(11) NOT NULL default '1',
   `dflt_units` varchar(20) NOT NULL default 'each',
   `dflt_mb_flag` char(1) NOT NULL default 'B',
@@ -1324,20 +1562,27 @@ CREATE TABLE IF NOT EXISTS `0_stock_category` (
   `dflt_assembly_act` varchar(15) NOT NULL default '',
   `dflt_dim1` int(11) default NULL,
   `dflt_dim2` int(11) default NULL,
+  `inactive` tinyint(1) NOT NULL default '0',
   `dflt_no_sale` tinyint(1) NOT NULL default '0',
-  PRIMARY KEY (`category_id`),
+  PRIMARY KEY  (`category_id`),
   UNIQUE KEY `description` (`description`)
-) ENGINE=MyISAM  AUTO_INCREMENT=5;
+) ENGINE=MyISAM  AUTO_INCREMENT=5 ;
 
+--
 -- Dumping data for table `0_stock_category`
+--
 
 INSERT INTO `0_stock_category` VALUES
 ('1', 'Components', '0', '1', 'each', 'B', '4000', '5000', '1001', '1001', '1001', '0', '0', '0'),
 ('2', 'Charges', '0', '1', 'each', 'B', '4000', '5000', '1001', '1001', '1001', '0', '0', '0'),
 ('3', 'Systems', '0', '1', 'each', 'B', '4000', '5000', '1001', '1001', '1001', '0', '0', '0'),
-('4', 'Services', '0', '1', 'each', 'B', '4000', '5000', '1001', '1001', '1001', '0', '0', '0');
+('4', 'Services', '0', '1', 'hr', 'B', '4000', '5000', '1001', '1001', '1001', '0', '0', '0');
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_stock_master`
+--
 
 DROP TABLE IF EXISTS `0_stock_master`;
 CREATE TABLE IF NOT EXISTS `0_stock_master` (
@@ -1366,10 +1611,16 @@ CREATE TABLE IF NOT EXISTS `0_stock_master` (
   PRIMARY KEY  (`stock_id`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_stock_master`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_stock_moves`
+--
 
 DROP TABLE IF EXISTS `0_stock_moves`;
 CREATE TABLE IF NOT EXISTS `0_stock_moves` (
@@ -1389,16 +1640,24 @@ CREATE TABLE IF NOT EXISTS `0_stock_moves` (
   PRIMARY KEY  (`trans_id`),
   KEY `type` (`type`,`trans_no`),
   KEY `Move` (`stock_id`,`loc_code`,`tran_date`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_stock_moves`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_suppliers`
+--
 
 DROP TABLE IF EXISTS `0_suppliers`;
 CREATE TABLE IF NOT EXISTS `0_suppliers` (
   `supplier_id` int(11) NOT NULL auto_increment,
   `supp_name` varchar(60) NOT NULL default '',
+  `supp_ref` varchar(30) NOT NULL default '',
   `address` tinytext NOT NULL,
   `supp_address` tinytext NOT NULL,
   `gst_no` varchar(25) NOT NULL default '',
@@ -1418,14 +1677,20 @@ CREATE TABLE IF NOT EXISTS `0_suppliers` (
   `payment_discount_account` varchar(15) NOT NULL default '',
   `notes` tinytext NOT NULL,
   `inactive` tinyint(1) NOT NULL default '0',
-  `supp_ref` varchar(30) NOT NULL,
   PRIMARY KEY  (`supplier_id`),
   KEY `supp_ref` (`supp_ref`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_suppliers`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_supp_allocations`
+--
 
 DROP TABLE IF EXISTS `0_supp_allocations`;
 CREATE TABLE IF NOT EXISTS `0_supp_allocations` (
@@ -1439,12 +1704,18 @@ CREATE TABLE IF NOT EXISTS `0_supp_allocations` (
   PRIMARY KEY  (`id`),
   KEY `From` (`trans_type_from`,`trans_no_from`),
   KEY `To` (`trans_type_to`,`trans_no_to`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_supp_allocations`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_supp_invoice_items`
+--
 
 DROP TABLE IF EXISTS `0_supp_invoice_items`;
 CREATE TABLE IF NOT EXISTS `0_supp_invoice_items` (
@@ -1462,12 +1733,18 @@ CREATE TABLE IF NOT EXISTS `0_supp_invoice_items` (
   `memo_` tinytext,
   PRIMARY KEY  (`id`),
   KEY `Transaction` (`supp_trans_type`,`supp_trans_no`,`stock_id`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_supp_invoice_items`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_supp_trans`
+--
 
 DROP TABLE IF EXISTS `0_supp_trans`;
 CREATE TABLE IF NOT EXISTS `0_supp_trans` (
@@ -1485,15 +1762,22 @@ CREATE TABLE IF NOT EXISTS `0_supp_trans` (
   `alloc` double NOT NULL default '0',
   `tax_included` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`type`,`trans_no`),
+  KEY `supplier_id` (`supplier_id`),
   KEY `SupplierID_2` (`supplier_id`,`supp_reference`),
+  KEY `type` (`type`),
   KEY `tran_date` (`tran_date`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_supp_trans`
+--
 
 
+-- --------------------------------------------------------
 
+--
 -- Table structure for table `0_sys_prefs`
+--
 
 DROP TABLE IF EXISTS `0_sys_prefs`;
 CREATE TABLE IF NOT EXISTS `0_sys_prefs` (
@@ -1506,61 +1790,68 @@ CREATE TABLE IF NOT EXISTS `0_sys_prefs` (
   KEY `category` (`category`)
 ) ENGINE=MyISAM;
 
+--
 -- Dumping data for table `0_sys_prefs`
+--
 
-INSERT INTO `0_sys_prefs` VALUES
-('coy_name', 'setup.company', 'varchar', '60', 'Company name'),
-('gst_no', 'setup.company', 'varchar', '25', NULL),
-('coy_no', 'setup.company', 'varchar', '25', NULL),
-('tax_prd', 'setup.company', 'int', '11', '1'),
-('tax_last', 'setup.company', 'int', '11', '1'),
-('postal_address', 'setup.company', 'tinytext', '0', 'N/A'),
-('phone', 'setup.company', 'varchar', '30', NULL),
-('fax', 'setup.company', 'varchar', '30', NULL),
-('email', 'setup.company', 'varchar', '100', NULL),
-('coy_logo', 'setup.company', 'varchar', '100', NULL),
-('domicile', 'setup.company', 'varchar', '55', NULL),
-('curr_default', 'setup.company', 'char', '3', 'GBP'),
-('use_dimension', 'setup.company', 'tinyint', '1', '1'),
-('f_year', 'setup.company', 'int', '11', '1'),
-('no_item_list', 'setup.company', 'tinyint', '1', '0'),
-('no_customer_list', 'setup.company', 'tinyint', '1', '0'),
-('no_supplier_list', 'setup.company', 'tinyint', '1', '0'),
-('base_sales', 'setup.company', 'int', '11', '-1'),
-('time_zone', 'setup.company', 'tinyint', '1', '0'),
-('add_pct', 'setup.company', 'int', '5', '-1'),
-('round_to', 'setup.company', 'int', '5', '1'),
-('login_tout', 'setup.company', 'smallint', '6', '600'),
-('past_due_days', 'glsetup.general', 'int', '11', '30'),
-('profit_loss_year_act', 'glsetup.general', 'varchar', '15', '8601'),
-('retained_earnings_act', 'glsetup.general', 'varchar', '15', '3200'),
-('bank_charge_act', 'glsetup.general', 'varchar', '15', '7901'),
-('exchange_diff_act', 'glsetup.general', 'varchar', '15', '4920'),
-('default_credit_limit', 'glsetup.customer', 'int', '11', '1000'),
-('accumulate_shipping', 'glsetup.customer', 'tinyint', '1', '0'),
-('legal_text', 'glsetup.customer', 'tinytext', '0', NULL),
-('freight_act', 'glsetup.customer', 'varchar', '15', '4910'),
-('debtors_act', 'glsetup.sales', 'varchar', '15', '1100'),
-('default_sales_act', 'glsetup.sales', 'varchar', '15', '4000'),
-('default_sales_discount_act', 'glsetup.sales', 'varchar', '15', '4000'),
-('default_prompt_payment_act', 'glsetup.sales', 'varchar', '15', '4000'),
-('default_delivery_required', 'glsetup.sales', 'smallint', '6', '1'),
-('default_dim_required', 'glsetup.dims', 'int', '11', '20'),
-('pyt_discount_act', 'glsetup.purchase', 'varchar', '15', '5000'),
-('creditors_act', 'glsetup.purchase', 'varchar', '15', '2100'),
-('po_over_receive', 'glsetup.purchase', 'int', '11', '10'),
-('po_over_charge', 'glsetup.purchase', 'int', '11', '10'),
-('allow_negative_stock', 'glsetup.inventory', 'tinyint', '1', '0'),
-('default_inventory_act', 'glsetup.items', 'varchar', '15', '1001'),
-('default_cogs_act', 'glsetup.items', 'varchar', '15', '5000'),
-('default_adj_act', 'glsetup.items', 'varchar', '15', '1001'),
-('default_inv_sales_act', 'glsetup.items', 'varchar', '15', '4000'),
-('default_assembly_act', 'glsetup.items', 'varchar', '15', '1001'),
-('default_workorder_required', 'glsetup.manuf', 'int', '11', '20'),
-('version_id', 'system', 'varchar', '11', '2.3rc'),
-('auto_curr_reval', 'setup.company', 'smallint', '6', '1');
+INSERT INTO `0_sys_prefs` VALUES('coy_name', 'setup.company', 'varchar', 60, 'Company name');
+INSERT INTO `0_sys_prefs` VALUES('gst_no', 'setup.company', 'varchar', 25, '');
+INSERT INTO `0_sys_prefs` VALUES('coy_no', 'setup.company', 'varchar', 25, '');
+INSERT INTO `0_sys_prefs` VALUES('tax_prd', 'setup.company', 'int', 11, '1');
+INSERT INTO `0_sys_prefs` VALUES('tax_last', 'setup.company', 'int', 11, '1');
+INSERT INTO `0_sys_prefs` VALUES('postal_address', 'setup.company', 'tinytext', 0, 'N/A');
+INSERT INTO `0_sys_prefs` VALUES('phone', 'setup.company', 'varchar', 30, '');
+INSERT INTO `0_sys_prefs` VALUES('fax', 'setup.company', 'varchar', 30, '');
+INSERT INTO `0_sys_prefs` VALUES('email', 'setup.company', 'varchar', 100, '');
+INSERT INTO `0_sys_prefs` VALUES('coy_logo', 'setup.company', 'varchar', 100, '');
+INSERT INTO `0_sys_prefs` VALUES('domicile', 'setup.company', 'varchar', 55, '');
+INSERT INTO `0_sys_prefs` VALUES('curr_default', 'setup.company', 'char', 3, 'GBP');
+INSERT INTO `0_sys_prefs` VALUES('use_dimension', 'setup.company', 'tinyint', 1, '1');
+INSERT INTO `0_sys_prefs` VALUES('f_year', 'setup.company', 'int', '11', 1);
+INSERT INTO `0_sys_prefs` VALUES('no_item_list', 'setup.company', 'tinyint', 1, '0');
+INSERT INTO `0_sys_prefs` VALUES('no_customer_list', 'setup.company', 'tinyint', 1, '0');
+INSERT INTO `0_sys_prefs` VALUES('no_supplier_list', 'setup.company', 'tinyint', 1, '0');
+INSERT INTO `0_sys_prefs` VALUES('base_sales', 'setup.company', 'int', 11, '-1');
+INSERT INTO `0_sys_prefs` VALUES('time_zone', 'setup.company', 'tinyint', 1, '0');
+INSERT INTO `0_sys_prefs` VALUES('add_pct', 'setup.company', 'int', 5, '-1');
+INSERT INTO `0_sys_prefs` VALUES('round_to', 'setup.company', 'int', 5, '1');
+INSERT INTO `0_sys_prefs` VALUES('login_tout', 'setup.company', 'smallint', 6, '600');
+INSERT INTO `0_sys_prefs` VALUES('past_due_days', 'glsetup.general', 'int', 11, '30');
+INSERT INTO `0_sys_prefs` VALUES('profit_loss_year_act', 'glsetup.general', 'varchar', 15, '9990');
+INSERT INTO `0_sys_prefs` VALUES('retained_earnings_act', 'glsetup.general', 'varchar', 15, '3200');
+INSERT INTO `0_sys_prefs` VALUES('bank_charge_act', 'glsetup.general', 'varchar', 15, '7901');
+INSERT INTO `0_sys_prefs` VALUES('exchange_diff_act', 'glsetup.general', 'varchar', 15, '4920');
+INSERT INTO `0_sys_prefs` VALUES('default_credit_limit', 'glsetup.customer', 'int', 11, '1000');
+INSERT INTO `0_sys_prefs` VALUES('accumulate_shipping', 'glsetup.customer', 'tinyint', 1, '0');
+INSERT INTO `0_sys_prefs` VALUES('legal_text', 'glsetup.customer', 'tinytext', 0, '');
+INSERT INTO `0_sys_prefs` VALUES('freight_act', 'glsetup.customer', 'varchar', 15, '4910');
+INSERT INTO `0_sys_prefs` VALUES('debtors_act', 'glsetup.sales', 'varchar', 15, '1100');
+INSERT INTO `0_sys_prefs` VALUES('default_sales_act', 'glsetup.sales', 'varchar', 15, '4000');
+INSERT INTO `0_sys_prefs` VALUES('default_sales_discount_act', 'glsetup.sales', 'varchar', 15, '4000');
+INSERT INTO `0_sys_prefs` VALUES('default_prompt_payment_act', 'glsetup.sales', 'varchar', 15, '4000');
+INSERT INTO `0_sys_prefs` VALUES('default_delivery_required', 'glsetup.sales', 'smallint', 6, '1');
+INSERT INTO `0_sys_prefs` VALUES('default_dim_required', 'glsetup.dims', 'int', 11, '20');
+INSERT INTO `0_sys_prefs` VALUES('pyt_discount_act', 'glsetup.purchase', 'varchar', 15, '5000');
+INSERT INTO `0_sys_prefs` VALUES('creditors_act', 'glsetup.purchase', 'varchar', 15, '2100');
+INSERT INTO `0_sys_prefs` VALUES('po_over_receive', 'glsetup.purchase', 'int', 11, '10');
+INSERT INTO `0_sys_prefs` VALUES('po_over_charge', 'glsetup.purchase', 'int', 11, '10');
+INSERT INTO `0_sys_prefs` VALUES('allow_negative_stock', 'glsetup.inventory', 'tinyint', 1, '0');
+INSERT INTO `0_sys_prefs` VALUES('default_inventory_act', 'glsetup.items', 'varchar', 15, '1001');
+INSERT INTO `0_sys_prefs` VALUES('default_cogs_act', 'glsetup.items', 'varchar', 15, '5000');
+INSERT INTO `0_sys_prefs` VALUES('default_adj_act', 'glsetup.items', 'varchar', 15, '1001');
+INSERT INTO `0_sys_prefs` VALUES('default_inv_sales_act', 'glsetup.items', 'varchar', 15, '4000');
+INSERT INTO `0_sys_prefs` VALUES('default_assembly_act', 'glsetup.items', 'varchar', 15, '1001');
+INSERT INTO `0_sys_prefs` VALUES('default_workorder_required', 'glsetup.manuf', 'int', 11, '20');
+INSERT INTO `0_sys_prefs` VALUES('version_id', 'system', 'varchar', 11, '2.3rc');
+INSERT INTO `0_sys_prefs` VALUES('auto_curr_reval', 'setup.company', 'smallint', 6, '1');
+INSERT INTO `0_sys_prefs` VALUES('grn_clearing_act', 'glsetup.purchase', 'varchar', 15, '1003');
+INSERT INTO `0_sys_prefs` VALUES('bcc_email', 'setup.company', 'varchar', 100, '');
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_sys_types`
+--
 
 DROP TABLE IF EXISTS `0_sys_types`;
 CREATE TABLE IF NOT EXISTS `0_sys_types` (
@@ -1570,35 +1861,38 @@ CREATE TABLE IF NOT EXISTS `0_sys_types` (
   PRIMARY KEY  (`type_id`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_sys_types`
+--
 
-INSERT INTO `0_sys_types` VALUES
-('0', '17', '1'),
-('1', '7', '1'),
-('2', '4', '1'),
-('4', '3', '1'),
-('10', '16', '1'),
-('11', '2', '1'),
-('12', '6', '1'),
-('13', '1', '1'),
-('16', '2', '1'),
-('17', '2', '1'),
-('18', '1', '1'),
-('20', '6', '1'),
-('21', '1', '1'),
-('22', '3', '1'),
-('25', '1', '1'),
-('26', '1', '1'),
-('28', '1', '1'),
-('29', '1', '1'),
-('30', '0', '1'),
-('32', '0', '1'),
-('35', '1', '1'),
-('40', '1', '1');
+INSERT INTO `0_sys_types` VALUES(0, 17, '1');
+INSERT INTO `0_sys_types` VALUES(1, 7, '1');
+INSERT INTO `0_sys_types` VALUES(2, 4, '1');
+INSERT INTO `0_sys_types` VALUES(4, 3, '1');
+INSERT INTO `0_sys_types` VALUES(10, 16, '1');
+INSERT INTO `0_sys_types` VALUES(11, 2, '1');
+INSERT INTO `0_sys_types` VALUES(12, 6, '1');
+INSERT INTO `0_sys_types` VALUES(13, 1, '1');
+INSERT INTO `0_sys_types` VALUES(16, 2, '1');
+INSERT INTO `0_sys_types` VALUES(17, 2, '1');
+INSERT INTO `0_sys_types` VALUES(18, 1, '1');
+INSERT INTO `0_sys_types` VALUES(20, 6, '1');
+INSERT INTO `0_sys_types` VALUES(21, 1, '1');
+INSERT INTO `0_sys_types` VALUES(22, 3, '1');
+INSERT INTO `0_sys_types` VALUES(25, 1, '1');
+INSERT INTO `0_sys_types` VALUES(26, 1, '1');
+INSERT INTO `0_sys_types` VALUES(28, 1, '1');
+INSERT INTO `0_sys_types` VALUES(29, 1, '1');
+INSERT INTO `0_sys_types` VALUES(30, 0, '1');
+INSERT INTO `0_sys_types` VALUES(32, 0, '1');
+INSERT INTO `0_sys_types` VALUES(35, 1, '1');
+INSERT INTO `0_sys_types` VALUES(40, 1, '1');
 
+-- --------------------------------------------------------
 
-
+--
 -- Table structure for table `0_tags`
+--
 
 DROP TABLE IF EXISTS `0_tags`;
 CREATE TABLE IF NOT EXISTS `0_tags` (
@@ -1609,11 +1903,18 @@ CREATE TABLE IF NOT EXISTS `0_tags` (
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `type` (`type`,`name`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_tags`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_tag_associations`
+--
 
 DROP TABLE IF EXISTS `0_tag_associations`;
 CREATE TABLE IF NOT EXISTS `0_tag_associations` (
@@ -1622,10 +1923,16 @@ CREATE TABLE IF NOT EXISTS `0_tag_associations` (
   UNIQUE KEY `record_id` (`record_id`,`tag_id`)
 ) ENGINE=MyISAM;
 
+--
 -- Dumping data for table `0_tag_associations`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_tax_groups`
+--
 
 DROP TABLE IF EXISTS `0_tax_groups`;
 CREATE TABLE IF NOT EXISTS `0_tax_groups` (
@@ -1635,8 +1942,20 @@ CREATE TABLE IF NOT EXISTS `0_tax_groups` (
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB  AUTO_INCREMENT=3 ;
 
+--
+-- Dumping data for table `0_tax_groups`
+--
+
+INSERT INTO `0_tax_groups` VALUES(1, 'Tax', 0, 0);
+INSERT INTO `0_tax_groups` VALUES(2, 'Tax Exempt', 0, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_tax_group_items`
+--
 
 DROP TABLE IF EXISTS `0_tax_group_items`;
 CREATE TABLE IF NOT EXISTS `0_tax_group_items` (
@@ -1646,15 +1965,17 @@ CREATE TABLE IF NOT EXISTS `0_tax_group_items` (
   PRIMARY KEY  (`tax_group_id`,`tax_type_id`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_tax_group_items`
+--
 
+INSERT INTO `0_tax_group_items` VALUES(1, 1, 5);
 
-) ENGINE=InnoDB;
+-- --------------------------------------------------------
 
--- Dumping data for table `0_tax_groups`
-
-
+--
 -- Table structure for table `0_tax_types`
+--
 
 DROP TABLE IF EXISTS `0_tax_types`;
 CREATE TABLE IF NOT EXISTS `0_tax_types` (
@@ -1670,11 +1991,14 @@ CREATE TABLE IF NOT EXISTS `0_tax_types` (
 
 -- Dumping data for table `0_tax_types`
 
-INSERT INTO `0_tax_types` VALUES
-('1', '20', '2200', '2200', 'VAT', '0'),
-('2', '5', '2205', '2205', 'VAT', '0');
+INSERT INTO `0_tax_types` VALUES(1, 20, '2200', '2200', 'VAT', 0);
+INSERT INTO `0_tax_types` VALUES(2, 5, '2205', '2205', 'VAT', 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_trans_tax_details`
+--
 
 DROP TABLE IF EXISTS `0_trans_tax_details`;
 CREATE TABLE IF NOT EXISTS `0_trans_tax_details` (
@@ -1692,12 +2016,18 @@ CREATE TABLE IF NOT EXISTS `0_trans_tax_details` (
   PRIMARY KEY  (`id`),
   KEY `Type_and_Number` (`trans_type`,`trans_no`),
   KEY `tran_date` (`tran_date`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_trans_tax_details`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_useronline`
+--
 
 DROP TABLE IF EXISTS `0_useronline`;
 CREATE TABLE IF NOT EXISTS `0_useronline` (
@@ -1708,12 +2038,18 @@ CREATE TABLE IF NOT EXISTS `0_useronline` (
   PRIMARY KEY  (`id`),
   KEY `timestamp` (`timestamp`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_useronline`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_users`
+--
 
 DROP TABLE IF EXISTS `0_users`;
 CREATE TABLE IF NOT EXISTS `0_users` (
@@ -1739,7 +2075,7 @@ CREATE TABLE IF NOT EXISTS `0_users` (
   `show_codes` tinyint(1) NOT NULL default '0',
   `show_hints` tinyint(1) NOT NULL default '0',
   `last_visit_date` datetime default NULL,
-  `query_size` tinyint(1) default '10',
+  `query_size` tinyint(1) unsigned NOT NULL default '10',
   `graphic_links` tinyint(1) default '1',
   `pos` smallint(6) default '1',
   `print_profile` varchar(30) NOT NULL default '1',
@@ -1749,13 +2085,19 @@ CREATE TABLE IF NOT EXISTS `0_users` (
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `user_id` (`user_id`)
-) ENGINE=MyISAM  AUTO_INCREMENT=2;
+) ENGINE=MyISAM  AUTO_INCREMENT=2 ;
 
+--
 -- Dumping data for table `0_users`
+--
 
-INSERT INTO `0_users` VALUES('1', 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Administrator', '2', '', 'adm@adm.com', 'en_GB', '1', '0', '0', '0', 'default', 'A4', '2', '2', '4', '1', '1', '0', '0', '2013-09-16 13:09:08', '10', '1', '1', '1', '1', '0', 'orders', '0');
+INSERT INTO `0_users` VALUES(1, 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Administrator', 2, '', 'adm@adm.com', 'en_GB', 0, 0, 0, 0, 'default', 'A4', 2, 2, 4, 1, 1, 0, 0, '2013-01-01 12:00:00', 10, 1, 1, '1', 1, 0, 'orders', 0);
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_voided`
+--
 
 DROP TABLE IF EXISTS `0_voided`;
 CREATE TABLE IF NOT EXISTS `0_voided` (
@@ -1766,10 +2108,16 @@ CREATE TABLE IF NOT EXISTS `0_voided` (
   UNIQUE KEY `id` (`type`,`id`)
 ) ENGINE=InnoDB;
 
+--
 -- Dumping data for table `0_voided`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_workcentres`
+--
 
 DROP TABLE IF EXISTS `0_workcentres`;
 CREATE TABLE IF NOT EXISTS `0_workcentres` (
@@ -1779,12 +2127,18 @@ CREATE TABLE IF NOT EXISTS `0_workcentres` (
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM;
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_workcentres`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_workorders`
+--
 
 DROP TABLE IF EXISTS `0_workorders`;
 CREATE TABLE IF NOT EXISTS `0_workorders` (
@@ -1803,11 +2157,18 @@ CREATE TABLE IF NOT EXISTS `0_workorders` (
   `additional_costs` double NOT NULL default '0',
   PRIMARY KEY  (`id`),
   UNIQUE KEY `wo_ref` (`wo_ref`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_workorders`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_wo_issues`
+--
 
 DROP TABLE IF EXISTS `0_wo_issues`;
 CREATE TABLE IF NOT EXISTS `0_wo_issues` (
@@ -1819,11 +2180,18 @@ CREATE TABLE IF NOT EXISTS `0_wo_issues` (
   `workcentre_id` int(11) default NULL,
   PRIMARY KEY  (`issue_no`),
   KEY `workorder_id` (`workorder_id`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_wo_issues`
+--
 
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_wo_issue_items`
+--
 
 DROP TABLE IF EXISTS `0_wo_issue_items`;
 CREATE TABLE IF NOT EXISTS `0_wo_issue_items` (
@@ -1832,12 +2200,18 @@ CREATE TABLE IF NOT EXISTS `0_wo_issue_items` (
   `issue_id` int(11) default NULL,
   `qty_issued` double default NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_wo_issue_items`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_wo_manufacture`
+--
 
 DROP TABLE IF EXISTS `0_wo_manufacture`;
 CREATE TABLE IF NOT EXISTS `0_wo_manufacture` (
@@ -1848,12 +2222,18 @@ CREATE TABLE IF NOT EXISTS `0_wo_manufacture` (
   `date_` date NOT NULL default '0000-00-00',
   PRIMARY KEY  (`id`),
   KEY `workorder_id` (`workorder_id`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_wo_manufacture`
+--
 
 
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `0_wo_requirements`
+--
 
 DROP TABLE IF EXISTS `0_wo_requirements`;
 CREATE TABLE IF NOT EXISTS `0_wo_requirements` (
@@ -1867,7 +2247,9 @@ CREATE TABLE IF NOT EXISTS `0_wo_requirements` (
   `units_issued` double NOT NULL default '0',
   PRIMARY KEY  (`id`),
   KEY `workorder_id` (`workorder_id`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB AUTO_INCREMENT=1 ;
 
+--
 -- Dumping data for table `0_wo_requirements`
+--
 
