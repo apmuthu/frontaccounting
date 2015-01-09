@@ -1,4 +1,5 @@
 
+2015-01-09 Ap.Muthu           PPFrt and MO (Min Order from Supplier for Free Freight) Non Field DB Data added to header of Purchase Order Entry Form
 2015-01-08 Ap.Muthu           Mod for Print Preparer in the Sales Quotation report ($print_preparer flag set in company overriding doctext.inc if used)
 2015-01-08 Ap.Muthu           PPFrt and MO (Min Order from Supplier for Free Freight) Non Field DB Data added to header of Purchase Order report in company 0 mods
 2015-01-08 Ap.Muthu           Backported Customer Data Entry form fix to stay in newly added / updated page

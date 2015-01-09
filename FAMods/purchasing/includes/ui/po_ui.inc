@@ -10,6 +10,7 @@
     See the License here <http://www.gnu.org/licenses/gpl-3.0.html>.
 ***********************************************************************/
 include_once($path_to_root . "/purchasing/includes/purchasing_db.inc");
+include_once($path_to_root . "/reporting/includes/reporting.inc");
 
 //--------------------------------------------------------------------------------------------------
 
@@ -57,7 +58,7 @@ function get_supplier_details_to_order(&$order, $supplier_id)
 {
 	$sql = "SELECT curr_code, supp_name, tax_group_id, supp.tax_included,
 			supp.credit_limit - Sum(IFNULL(ov_amount + ov_gst + ov_discount,0)) as cur_credit,
-				terms.terms, terms.days_before_due, terms.day_in_following_month
+				terms.terms, terms.days_before_due, terms.day_in_following_month, supp.notes AS supp_notes
 		FROM ".TB_PREF."suppliers supp
 			 LEFT JOIN ".TB_PREF."supp_trans trans ON supp.supplier_id = trans.supplier_id
 			 LEFT JOIN ".TB_PREF."payment_terms terms ON supp.payment_terms=terms.terms_indicator
@@ -80,6 +81,9 @@ function get_supplier_details_to_order(&$order, $supplier_id)
 
 	$order->set_supplier($supplier_id, $myrow["supp_name"], $myrow["curr_code"], 
 		$myrow["tax_group_id"], $myrow["tax_included"]);
+	
+	$supp_notes = parse_notes_params($myrow["supp_notes"]);
+	return $supp_notes;
 }
 
 //---------------------------------------------------------------------------------------------------
@@ -134,7 +138,7 @@ function display_po_header(&$order)
 
 	if ($order->supplier_id != get_post('supplier_id',-1)) {
 		$old_supp = $order->supplier_id;
-		get_supplier_details_to_order($order, $_POST['supplier_id']); 
+		$supp_notes=get_supplier_details_to_order($order, $_POST['supplier_id']); 
 	    get_duedate_from_terms($order);
 		$_POST['due_date'] = $order->due_date;
 
@@ -188,6 +192,9 @@ function display_po_header(&$order)
 
   	text_row(_("Supplier's Reference:"), 'supp_ref', null, 16, 15);
 	locations_list_row(_("Receive Into:"), 'StkLocation', null, false, true); 
+
+	if (@$supp_notes['MO']) label_row(_("Min. Order:"), $supp_notes['MO']);
+	if (@$supp_notes['PPFrt']) label_row(_("PrePaid Frt:"), $supp_notes['PPFrt']);
 
 	table_section(3);
 
