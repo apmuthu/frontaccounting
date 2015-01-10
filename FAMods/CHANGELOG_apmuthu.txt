@@ -1,4 +1,6 @@
 
+2015-01-10 Ap.Muthu           Backport of JsHttpRequest query cleanup
+2015-01-10 Ap.Muthu           Backport of 0_audit_trail.fiscal_year default value
 2015-01-09 Ap.Muthu           PPFrt and MO (Min Order from Supplier for Free Freight) Non Field DB Data added to header of Purchase Order Entry Form
 2015-01-08 Ap.Muthu           Mod for Print Preparer in the Sales Quotation report ($print_preparer flag set in company overriding doctext.inc if used)
 2015-01-08 Ap.Muthu           PPFrt and MO (Min Order from Supplier for Free Freight) Non Field DB Data added to header of Purchase Order report in company 0 mods
