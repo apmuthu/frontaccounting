@@ -417,7 +417,8 @@ function get_branch_to_order($customer_id, $branch_id) {
 			.TB_PREF."cust_branch.br_post_address, "
 			." default_location, location_name, default_ship_via, "
 			.TB_PREF."tax_groups.name AS tax_group_name, "
-			.TB_PREF."tax_groups.id AS tax_group_id
+			.TB_PREF."tax_groups.id AS tax_group_id, "
+			.TB_PREF."cust_branch.notes
 			FROM ".TB_PREF."cust_branch, "
 			  .TB_PREF."tax_groups, "
 			  .TB_PREF."locations

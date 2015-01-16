@@ -11,6 +11,7 @@
 ***********************************************************************/
 include_once($path_to_root . "/sales/includes/cart_class.inc");
 include_once($path_to_root . "/includes/manufacturing.inc");
+include_once($path_to_root . "/reporting/includes/reporting.inc");
 
 //--------------------------------------------------------------------------------
 function add_to_order(&$order, $new_item, $new_item_qty, $price, $discount, $description='')
@@ -107,6 +108,10 @@ function get_customer_details_to_order(&$order, $customer_id, $branch_id)
 	}
 
 	$myrow = db_fetch($result);
+
+	$br_notes = parse_notes_params($myrow['notes']);
+	if (isset($_POST['CustPOneeded'])) unset($_POST['CustPOneeded']);
+	if (isset($br_notes['PO'])) $_POST['CustPOneeded'] = $br_notes['PO'];
 
 	// FIX - implement editable contact selector in sales order 
 	$contact = get_branch_contacts($branch_id, 'order', $customer_id);
@@ -374,6 +379,8 @@ function display_order_header(&$order, $editable, $date_text)
 	customer_credit_row($_POST['customer_id'], $order->credit);
 
 	label_row(_("Customer Discount:"), ($order->default_discount * 100) . "%");
+	if ($order->trans_type != ST_SALESORDER && $order->trans_type != ST_SALESQUOTE && isset($_POST['CustPOneeded']) &&  $_POST['CustPOneeded'] == 1)
+		label_row(_("Purchase Order Needed:"), _("Yes"));
 
 	table_section(3);
 	if ($order->pos['cash_sale'] || $order->pos['credit_sale']) {
