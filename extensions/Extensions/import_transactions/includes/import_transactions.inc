@@ -539,9 +539,9 @@ function journal_inclusive_tax($type,$date, $line, $curEntryId, $code, $dim1, $d
     if ($return_amt <0){display_notification_centered(_("Added to table 'gl_trans' Credit: $curEntryId, $date, $code, $dim1, $dim2, $exclusive_amt, $memo (line $line in import file '{$_FILES['imp']['name']}')"));} 
 }
 
-function journal_id($prev_date,$date,$amt, $input_id, $total_debit_positive, $total_credit_negative, $line)
+function journal_id($prev_date,$date,$amt, $input_id=0, $total_debit_positive, $total_credit_negative, $line)
 {
-    $new_id = $input_id;
+
     $error=false;
     if ($amt > 0) {$total_debit_positive=$total_debit_positive+$amt;}
     if ($amt < 0) {$total_credit_negative=$total_credit_negative+(abs($amt));}   
@@ -554,9 +554,9 @@ function journal_id($prev_date,$date,$amt, $input_id, $total_debit_positive, $to
         
         $total_debit_positive=0;
         $total_credit_negative=0;
-        $input_id = $input_id + 1;
+        $input_id = 1;
       }
-    return array($error,$input_id, $new_id,$total_debit_positive,$total_credit_negative);
+    return array($error,$input_id, $total_debit_positive,$total_credit_negative);
 }
 
 //Output the last transno for bank related transactions using table bank_trans.
@@ -567,7 +567,7 @@ function last_transno($type)
     //'get last row's typeno since type_no is the trans no'
     if ($type == ST_BANKDEPOSIT || $type == ST_BANKPAYMENT)
     {
-        $sql = "SELECT id, type, trans_no, amount FROM ".TB_PREF."bank_trans ORDER BY id DESC LIMIT 1";
+        $sql = "SELECT id, type, trans_no, amount FROM ".TB_PREF."bank_trans ORDER BY trans_no DESC LIMIT 1";
         $result = db_query($sql, _("Cannot locate last entry"));
         $row = mysql_fetch_assoc($result);
         $rowtrans = $row['trans_no'];        
@@ -575,7 +575,7 @@ function last_transno($type)
     
     if ($type == ST_JOURNAL)
     {    
-        $sql = "SELECT counter, type, type_no, amount FROM ".TB_PREF."gl_trans ORDER BY counter DESC LIMIT 1";
+        $sql = "SELECT counter, type, type_no, amount FROM ".TB_PREF."gl_trans ORDER BY type_no DESC LIMIT 1";
         $result = db_query($sql, _("Cannot locate last entry"));
         $row = mysql_fetch_assoc($result);
         $rowtrans = $row['type_no'];        

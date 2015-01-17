@@ -160,7 +160,7 @@ if ((isset($_POST['type'])))
          
          if ($type == 0)
          {
-             list($error,$input_id, $curEntryId,$total_debit_positive,$total_credit_negative)=journal_id($prev_date,$date,$amt, $input_id, $total_debit_positive, $total_credit_negative, $line);
+             list($error,$input_id, $total_debit_positive, $total_credit_negative)=journal_id($prev_date,$date,$amt, $input_id=0, $total_debit_positive, $total_credit_negative, $line);
          }
                       
          list($error,$memo)=check_customer_supplier($code_id,$person_id,$person_type_id,$line,$memo,$error);
@@ -227,7 +227,7 @@ if ((isset($_POST['type'])))
      $error = false;
      $prev_ref = $reference;
      $prev_date = $date;
-     $curEntryId = $curEntryId + 1;   
+     $curEntryId += (($type <> 0) ? 1 : $input_id);   
     }//while
     $displayed_at_least_once = display_entries($type, $entry);
     end_row();
@@ -245,8 +245,6 @@ if ((isset($_POST['type'])))
  elseif ($type == ST_BANKDEPOSIT){$typeString = "Deposits";}
  elseif ($type == ST_BANKPAYMENT){$typeString = "Payments";}
  
- display_notification("$trial"); 
-
  if (!$trial) {
     if ($errCnt == 0) {
         if ($entryCount > 0) {
