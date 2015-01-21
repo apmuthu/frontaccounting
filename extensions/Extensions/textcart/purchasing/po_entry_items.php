@@ -142,6 +142,7 @@ if (isset($_GET['AddedID']))
 	display_footer_exit();	
 }
 //--------------------------------------------------------------------------------------------------
+
 function line_start_focus() {
   global 	$Ajax;
 
