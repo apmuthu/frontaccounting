@@ -1,4 +1,5 @@
 
+2014-12-22 Ap.Muthu           Backup file script Shell Commands execution feature moved to admin/backups_with_shell.php as optional due to mod_fcgid errors pass by reference for some in it's line 188.
 2015-01-16 Ap.Muthu           PO#1 in cust_branch.notes field to display Customer PO requirement in Direct Delivery Form
 2015-01-10 Ap.Muthu           Backport of JsHttpRequest query cleanup
 2015-01-10 Ap.Muthu           Backport of 0_audit_trail.fiscal_year default value

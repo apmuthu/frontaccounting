@@ -11,6 +11,10 @@
 ***********************************************************************/
 $page_security = 'SA_BACKUP';
 
+// Will need script to be owned by root with 4755 permissions. Disabled for backwards compatibility.
+// Cannot use this script version for mod_fcgid: stderr: PHP Fatal error:  Call-time pass-by-reference in line 188
+$enable_shell_button = false;
+$shell_script_name = '../../shcmds.sh';
 $output_sep = "|";
 // $output_sep = "<br>\n";
 
@@ -178,6 +182,18 @@ if (get_post('deldump')) {
 		display_error(_("Select backup file first."));
 }
 
+if (get_post('shcmds') && $enable_shell_button) {
+
+$output = Array();
+if (exec(trim($shell_script_name . ' ' . trim(get_post('comments'))), &$output, &$return_var)) {
+		display_notification(implode($output,$output_sep) . "<br>\n" . _("Web Commands executed successfully"));
+		$Ajax->activate('backups');
+	}
+	else
+		display_error(implode($output,$output_sep) . " " . _("Web Commands execution failed."));
+
+}
+
 if (get_post('upload'))
 {
 	$tmpname = $_FILES['uploadfile']['tmp_name'];
@@ -223,6 +239,10 @@ table_section_title(_("Backup scripts maintenance"));
 	// don't use 'delete' name or IE js errors appear
 	submit_js_confirm('deldump', sprintf(_("You are about to remove selected backup file.\nDo you want to continue ?")));
 
+if ($enable_shell_button) {
+	submit_row('shcmds',_("Shell Commands"), false, '','', 'process');
+	submit_js_confirm('shcmds',_("You are about to execute shell commands on the server.\nDo you want to continue?"));
+}
 	end_table();
 	echo "</td>";
 	end_row();
