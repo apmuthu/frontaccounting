@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2015-01-24 Joe                Fixed Delivery note bug : Parent constraints not working if sales order line deleted after delivery
 2015-01-17 Joe                Missing update of shipping tax when crediting an invoice.
 2014-12-31 Janusz Dobrowolski Fixed error handling (logged in debug instead of production mode).
 2014-12-31 Janusz Dobrowolski Purchase order reference was not restored after last PO cancellation.
