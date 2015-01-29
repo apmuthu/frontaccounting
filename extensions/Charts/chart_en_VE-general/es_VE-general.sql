@@ -110,8 +110,8 @@ CREATE TABLE IF NOT EXISTS `0_bank_accounts` (
 -- Dumping data for table `0_bank_accounts`
 --
 
-INSERT INTO `0_bank_accounts` VALUES('1060', 0, 'Cuenta Corriente', 'N/A', 'N/A', '', 'USD', 1, 1, '0000-00-00 00:00:00', 0, 0);
-INSERT INTO `0_bank_accounts` VALUES('1065', 3, 'Cuenta Caja Chica', 'N/A', 'N/A', '', 'USD', 0, 2, '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `0_bank_accounts` VALUES('1060', 0, 'Cuenta Corriente', 'N/A', 'N/A', '', 'VEF', 1, 1, '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `0_bank_accounts` VALUES('1065', 3, 'Cuenta Caja Chica', 'N/A', 'N/A', '', 'VEF', 0, 2, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1783,7 +1783,7 @@ INSERT INTO `0_sys_prefs` VALUES('fax', 'setup.company', 'varchar', 30, '');
 INSERT INTO `0_sys_prefs` VALUES('email', 'setup.company', 'varchar', 100, '');
 INSERT INTO `0_sys_prefs` VALUES('coy_logo', 'setup.company', 'varchar', 100, '');
 INSERT INTO `0_sys_prefs` VALUES('domicile', 'setup.company', 'varchar', 55, '');
-INSERT INTO `0_sys_prefs` VALUES('curr_default', 'setup.company', 'char', 3, 'USD');
+INSERT INTO `0_sys_prefs` VALUES('curr_default', 'setup.company', 'char', 3, 'VEF');
 INSERT INTO `0_sys_prefs` VALUES('use_dimension', 'setup.company', 'tinyint', 1, '1');
 INSERT INTO `0_sys_prefs` VALUES('f_year', 'setup.company', 'int', 11, '2');
 INSERT INTO `0_sys_prefs` VALUES('no_item_list', 'setup.company', 'tinyint', 1, '0');
