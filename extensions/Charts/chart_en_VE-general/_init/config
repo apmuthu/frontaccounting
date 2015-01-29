@@ -1,0 +1,15 @@
+Package: chart_es_VE-general
+Version: 2.3.22-1
+Name: Spanish Venezuelan 4 digits COA - General
+Description: This is a Spanish Venezulean 4 digits chart of accounts for a starting company,
+ based on en_US-new.sql version.
+Author: gnuacademy.org
+Maintenance: Ap.Muthu
+Homepage: gnuacademy.org
+Encoding: utf-8
+Depends: 
+Type: chart
+InstallPath: sql
+SqlScript: es_VE-general.sql
+Filename: chart_es_VE-general-2.3.22-1
+
