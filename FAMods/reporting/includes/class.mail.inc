@@ -97,8 +97,6 @@ class email
 		if ($filename == $file . '.zip') return 'application/x-zip-compressed';
 		$file = basename($filename, '.pdf');
 		if ($filename == $file . '.pdf') return 'application/pdf';
-		$file = basename($filename, '.xls');
-		if ($filename == $file . '.xls') return 'application/vnd.ms-excel';
 		$file = basename($filename, '.csv');
 		if ($filename == $file . '.csv') return 'application/vnd.ms-excel';
 		$file = basename($filename, '.tar');
@@ -116,17 +114,31 @@ class email
 
 	function send()
     {
-        // Add CC Recipients
-		if (!empty($this->cc))
-			$this->header .= "Cc: " . implode(", ", $this->cc) . "\n" ;
-
-        // Add BCC Recipients
-		if (!empty($this->bcc))
-			$this->header .= "Bcc: " . implode(", ", $this->bcc) . "\n" ;
-
+        // CC Empfänger hinzufügen
+        $max = count($this->cc);
+        if ($max > 0)
+        {
+            $this->header .= "Cc: ".$this->cc[0];
+            for ($i = 1; $i < $max; $i++)
+            {
+                $this->header .= ", ".$this->cc[$i];
+            }
+            $this->header .= "\n";
+        }
+        // BCC Empfänger hinzufügen
+        $max = count($this->bcc);
+        if ($max > 0)
+        {
+            $this->header .= "Bcc: ".$this->bcc[0];
+            for ($i = 1; $i < $max; $i++)
+            {
+                $this->header .= ", ".$this->bcc[$i];
+            }
+            $this->header .= "\n";
+        }
 		$this->header .= "Content-Type: multipart/mixed;\n boundary=\"$this->boundary\"\n";
 
-        // Add Attachments
+        // Attachment hinzufügen
         $max = count($this->attachment);
         if ($max > 0)
         {
