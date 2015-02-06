@@ -212,14 +212,14 @@ function print_annual_balance_breakdown_detail()
 	{
 		$date = $_POST['PARAM_0'];
 		$dimension = $_POST['PARAM_1'];
-		$comments = $_POST['PARAM_2'];
-		$destination = $_POST['PARAM_3'];
+		$comments = $_POST['PARAM_3'];
+		$destination = $_POST['PARAM_4'];
 	}
 	else
 	{
 		$date = $_POST['PARAM_0'];
-		$comments = $_POST['PARAM_1'];
-		$destination = $_POST['PARAM_2'];
+		$comments = $_POST['PARAM_3'];
+		$destination = $_POST['PARAM_4'];
 	}
 	if ($destination)
 		include_once($path_to_root . "/reporting/includes/excel_report.inc");
