@@ -151,6 +151,9 @@
 			if (empty($preparer)) $preparer = $user['user_id'];
 			$this->Text($mcol + 180, $preparer);
 		}
+
+		$this->NewLine(2);
+
 		if ($this->pageNumber > 1)
 			$this->Text($mcol + 180, _("Page") . ' ' . $this->pageNumber);
 		$this->row = $iline1 - $this->lineHeight;
