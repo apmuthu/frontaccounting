@@ -1,4 +1,5 @@
 
+2015-02-13 Ap.Muthu           Incorporated fixes to FAMods from original reporting/repXXX.php for $currency filter fix
 2015-02-10 Ap.Muthu           Incorporated fixes to FAMods from original reporting/includes/header2.inc Page No. Line
 2015-02-03 Ap.Muthu           email class cleanup, xls file now in list of allowable emailable extensions (included in FA 2.4 core on 2015-02-04)
 2015-01-22 Ap.Muthu           Backup file script Shell Commands execution feature moved to admin/backups_with_shell.php as optional due to mod_fcgid errors pass by reference for some in it's line 188.
