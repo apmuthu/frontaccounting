@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2015-02-14 Joe                Rerun of rep107.
 2015-02-13 Joe                Currency filter fixed in reports.
 2015-02-10 Joe                Moved page number, when more than 1 page, on documents down 2 lines.
 2015-01-24 Joe                Fixed Delivery note bug : Parent constraints not working if sales order line deleted after delivery
