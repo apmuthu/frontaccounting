@@ -1851,26 +1851,26 @@ CREATE TABLE IF NOT EXISTS `0_sys_types` (
 -- Dumping data for table `0_sys_types`
 --
 
-INSERT INTO `0_sys_types` VALUES (0, 17, '1');
-INSERT INTO `0_sys_types` VALUES (1, 7, '1');
-INSERT INTO `0_sys_types` VALUES (2, 4, '1');
-INSERT INTO `0_sys_types` VALUES (4, 3, '1');
-INSERT INTO `0_sys_types` VALUES (10, 16, '1');
-INSERT INTO `0_sys_types` VALUES (11, 2, '1');
-INSERT INTO `0_sys_types` VALUES (12, 6, '1');
+INSERT INTO `0_sys_types` VALUES (0, 1, '1');
+INSERT INTO `0_sys_types` VALUES (1, 1, '1');
+INSERT INTO `0_sys_types` VALUES (2, 1, '1');
+INSERT INTO `0_sys_types` VALUES (4, 1, '1');
+INSERT INTO `0_sys_types` VALUES (10, 1, '1');
+INSERT INTO `0_sys_types` VALUES (11, 1, '1');
+INSERT INTO `0_sys_types` VALUES (12, 1, '1');
 INSERT INTO `0_sys_types` VALUES (13, 1, '1');
-INSERT INTO `0_sys_types` VALUES (16, 2, '1');
-INSERT INTO `0_sys_types` VALUES (17, 2, '1');
+INSERT INTO `0_sys_types` VALUES (16, 1, '1');
+INSERT INTO `0_sys_types` VALUES (17, 1, '1');
 INSERT INTO `0_sys_types` VALUES (18, 1, '1');
-INSERT INTO `0_sys_types` VALUES (20, 6, '1');
+INSERT INTO `0_sys_types` VALUES (20, 1, '1');
 INSERT INTO `0_sys_types` VALUES (21, 1, '1');
-INSERT INTO `0_sys_types` VALUES (22, 3, '1');
+INSERT INTO `0_sys_types` VALUES (22, 1, '1');
 INSERT INTO `0_sys_types` VALUES (25, 1, '1');
 INSERT INTO `0_sys_types` VALUES (26, 1, '1');
 INSERT INTO `0_sys_types` VALUES (28, 1, '1');
 INSERT INTO `0_sys_types` VALUES (29, 1, '1');
-INSERT INTO `0_sys_types` VALUES (30, 0, '1');
-INSERT INTO `0_sys_types` VALUES (32, 0, '1');
+INSERT INTO `0_sys_types` VALUES (30, 1, '1');
+INSERT INTO `0_sys_types` VALUES (32, 1, '1');
 INSERT INTO `0_sys_types` VALUES (35, 1, '1');
 INSERT INTO `0_sys_types` VALUES (40, 1, '1');
 

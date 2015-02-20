@@ -1,4 +1,5 @@
 
+2015-02-20 Ap.Muthu           All Standard CoA 0_sys_types.type_no = 0_sys_types.next_reference, since not used in FA 2.3 anymore
 2015-02-17 Ap.Muthu           Backported updated error message to FAMods in gl/manage/bank_accounts.php
 2015-02-17 Ap.Muthu           Backported rep107 missing parameter fix to FAMods in reporting/includes/reporting.inc for Customer Filter
 2015-02-13 Ap.Muthu           Incorporated fixes to FAMods from original reporting/repXXX.php for $currency filter fix

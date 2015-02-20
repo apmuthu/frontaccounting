@@ -2090,28 +2090,28 @@ CREATE TABLE IF NOT EXISTS `0_sys_types` (
 -- Dumping data for table `0_sys_types`
 --
 
-INSERT INTO `0_sys_types` VALUES (0, 19, '3');
-INSERT INTO `0_sys_types` VALUES (1, 8, '2');
-INSERT INTO `0_sys_types` VALUES (2, 5, '2');
-INSERT INTO `0_sys_types` VALUES (4, 3, '1');
-INSERT INTO `0_sys_types` VALUES (10, 19, '4');
-INSERT INTO `0_sys_types` VALUES (11, 3, '2');
-INSERT INTO `0_sys_types` VALUES (12, 6, '1');
-INSERT INTO `0_sys_types` VALUES (13, 5, '2');
-INSERT INTO `0_sys_types` VALUES (16, 2, '1');
-INSERT INTO `0_sys_types` VALUES (17, 2, '1');
-INSERT INTO `0_sys_types` VALUES (18, 1, '3');
-INSERT INTO `0_sys_types` VALUES (20, 8, '3');
+INSERT INTO `0_sys_types` VALUES (0, 3, '3');
+INSERT INTO `0_sys_types` VALUES (1, 2, '2');
+INSERT INTO `0_sys_types` VALUES (2, 2, '2');
+INSERT INTO `0_sys_types` VALUES (4, 1, '1');
+INSERT INTO `0_sys_types` VALUES (10, 4, '4');
+INSERT INTO `0_sys_types` VALUES (11, 2, '2');
+INSERT INTO `0_sys_types` VALUES (12, 1, '1');
+INSERT INTO `0_sys_types` VALUES (13, 2, '2');
+INSERT INTO `0_sys_types` VALUES (16, 1, '1');
+INSERT INTO `0_sys_types` VALUES (17, 1, '1');
+INSERT INTO `0_sys_types` VALUES (18, 3, '3');
+INSERT INTO `0_sys_types` VALUES (20, 3, '3');
 INSERT INTO `0_sys_types` VALUES (21, 1, '1');
-INSERT INTO `0_sys_types` VALUES (22, 4, '2');
-INSERT INTO `0_sys_types` VALUES (25, 1, '2');
-INSERT INTO `0_sys_types` VALUES (26, 1, '8');
+INSERT INTO `0_sys_types` VALUES (22, 2, '2');
+INSERT INTO `0_sys_types` VALUES (25, 2, '2');
+INSERT INTO `0_sys_types` VALUES (26, 8, '8');
 INSERT INTO `0_sys_types` VALUES (28, 1, '1');
-INSERT INTO `0_sys_types` VALUES (29, 1, '2');
-INSERT INTO `0_sys_types` VALUES (30, 5, '6');
-INSERT INTO `0_sys_types` VALUES (32, 0, '1');
+INSERT INTO `0_sys_types` VALUES (29, 2, '2');
+INSERT INTO `0_sys_types` VALUES (30, 6, '6');
+INSERT INTO `0_sys_types` VALUES (32, 1, '1');
 INSERT INTO `0_sys_types` VALUES (35, 1, '1');
-INSERT INTO `0_sys_types` VALUES (40, 1, '3');
+INSERT INTO `0_sys_types` VALUES (40, 3, '3');
 
 -- --------------------------------------------------------
 
