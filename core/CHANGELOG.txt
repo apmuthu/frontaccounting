@@ -10,6 +10,8 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2015-02-20 Joe                Fixed aging reports / inquiries 1 day error with re-run.
+2015-02-19 Joe                Allow search by Id in search work orders.
 2015-02-14 Joe                Rerun of rep107.
 2015-02-13 Joe                Currency filter fixed in reports.
 2015-02-10 Joe                Moved page number, when more than 1 page, on documents down 2 lines.
