@@ -1788,11 +1788,11 @@ CREATE TABLE IF NOT EXISTS `0_stock_master` (
 -- Dumping data for table `0_stock_master`
 --
 
-INSERT INTO `0_stock_master` VALUES ('102', 1, 1, '17inch VGA Monitor', '', 'ea.', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 0, 0, 10, 0, 0, 0, 0, 0);
-INSERT INTO `0_stock_master` VALUES ('103', 1, 1, '32MB VGA Card', '', 'ea.', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 0, 0, 11, 0, 0, 0, 0, 0);
-INSERT INTO `0_stock_master` VALUES ('104', 1, 1, '52x CD Drive', '', 'ea.', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 0, 0, 12, 0, 0, 0, 0, 0);
-INSERT INTO `0_stock_master` VALUES ('201', 4, 1, 'Assembly Labour', '', 'hrs', 'D', '4010', '5010', '5010', '5040', '1530', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-INSERT INTO `0_stock_master` VALUES ('3400', 3, 1, 'P4 Business System', '', 'ea.', 'M', '4010', '5010', '1540', '5040', '1530', 0, 0, 0, 0, 33, 3.9999999999999, 2, 0, 0, 0);
+INSERT INTO `0_stock_master` VALUES ('102', 1, 1, '17inch VGA Monitor', '', 'each', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 0, 0, 10, 0, 0, 0, 0, 0);
+INSERT INTO `0_stock_master` VALUES ('103', 1, 1, '32MB VGA Card', '', 'each', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 0, 0, 11, 0, 0, 0, 0, 0);
+INSERT INTO `0_stock_master` VALUES ('104', 1, 1, '52x CD Drive', '', 'each', 'B', '4010', '5010', '1510', '5040', '1530', 0, 0, 0, 0, 12, 0, 0, 0, 0, 0);
+INSERT INTO `0_stock_master` VALUES ('201', 4, 1, 'Assembly Labour', '', 'hr', 'D', '4010', '5010', '5010', '5040', '1530', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO `0_stock_master` VALUES ('3400', 3, 1, 'P4 Business System', '', 'each', 'M', '4010', '5010', '1540', '5040', '1530', 0, 0, 0, 0, 33, 3.9999999999999, 2, 0, 0, 0);
 
 -- --------------------------------------------------------
 
