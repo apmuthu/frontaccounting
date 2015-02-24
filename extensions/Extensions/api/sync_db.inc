@@ -947,7 +947,7 @@ function getPrice($arrObj, $module) {
 	$rec = 0;
 	$baseCurrency = trim($arrObj['base_currency']);
 	
-	//Check if the base currency is empty. If yes, we need to retreive it from db
+	//Check if the base currency is empty. If yes, we need to retrieve it from db
 	if ($baseCurrency == '') {
 		//Retrieve the default currency
 		$baseCurrency = get_company_pref('curr_default');

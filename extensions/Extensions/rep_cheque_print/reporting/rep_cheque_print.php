@@ -48,7 +48,7 @@ function get_allocations_for_remittance($supplier_id, $type, $trans_no)
 		AND trans.supplier_id=".db_escape($supplier_id),
 		TB_PREF."supp_allocations as alloc");
 	$sql .= " ORDER BY trans_no";
-	return db_query($sql, "Cannot retreive alloc to transactions");
+	return db_query($sql, "Cannot retrieve alloc to transactions");
 }
 
 // Grab Cheque Information

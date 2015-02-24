@@ -212,7 +212,7 @@ if (isset($_POST['import'])) {
 			    if ($type == 'FOREIGN') $foreign = 1;
 			    else $foreign = 0;
 			    $sql = "SELECT id from ".TB_PREF."item_codes WHERE item_code='$code' AND stock_id = '$id'";
-			    $result = db_query($sql, "item code could not be retreived");
+			    $result = db_query($sql, "item code could not be retrieved");
 			    $row = db_fetch_row($result);
 			    if (!$row) add_item_code($code, $id, $description, $cat, $qty, $foreign);
 			    else update_item_code($row[0], $code, $id, $description, $cat, $qty, $foreign);
@@ -231,7 +231,7 @@ if (isset($_POST['import'])) {
                                 }
                             }
 			    $sql = "SELECT stock_id FROM ".TB_PREF."stock_master WHERE stock_id='$id'";
-			    $result = db_query($sql,"item could not be retreived");
+			    $result = db_query($sql,"item could not be retrieved");
 			    $row = db_fetch_row($result);
 			    if (!$row) {
 				    $sql = "INSERT INTO ".TB_PREF."stock_master (stock_id, description, long_description, category_id,
@@ -271,7 +271,7 @@ if (isset($_POST['import'])) {
 				    $j++;
 			    }
 			    $sql = "SELECT id from ".TB_PREF."item_codes WHERE item_code='$code' AND stock_id = '$id'";
-			    $result = db_query($sql, "item code could not be retreived");
+			    $result = db_query($sql, "item code could not be retrieved");
 			    $row = db_fetch_row($result);
 			    if (!$row) add_item_code($code, $id, $description, $cat, 1);
 			    else update_item_code($row[0], $code, $id, $description, $cat, 1);
@@ -288,7 +288,7 @@ if (isset($_POST['import'])) {
 				$sql = "SELECT * FROM ".TB_PREF."prices	WHERE stock_id='$code' AND sales_type_id={$_POST['sales_type_id']} AND
 					curr_abrev='$currency'";
 
-				$result = db_query($sql,"price could not be retreived");
+				$result = db_query($sql,"price could not be retrieved");
 
 				$row = db_fetch_row($result);
 				if (!$row) add_item_price($code, $_POST['sales_type_id'], $currency, $price);

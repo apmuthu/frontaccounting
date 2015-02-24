@@ -108,7 +108,7 @@ In this case the separator is ';', id is the Stock ID, description is the Stock 
 category is a category you want to put your Stock. If this category doesn't exist it will
 be created during import. units is the unit for the Stock. 
 
-The mb_flag is M for Manufacturered, B for Purchased or S for Service (no inventory)
+The mb_flag is M for Manufactured, B for Purchased or S for Service (no inventory)
 
 currency is the currency for the price.
 Leave empty for company currency.
@@ -160,7 +160,7 @@ left join products_to_categories pc on p.products_id = pc.products_id
 left join categories_description cd on pc.categories_id = cd.categories_id and cd.language_id = 1
 where p.products_status = 1
 
-The mb_flag is M for Manufacturered, B for Purchased or S for Service
+The mb_flag is M for Manufactured, B for Purchased or S for Service
 
 tom
 --------------------------------------------------------------------------------

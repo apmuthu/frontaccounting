@@ -335,7 +335,7 @@ if (isset($_POST['action'])) {
 		        $taxgid = get_tax_group_from_zone_id($osc, $cust['entry_zone_id'], $_POST['tax_group_id']);
         
                 $sql = "SELECT debtor_no,name FROM ".TB_PREF."debtors_master WHERE name=".db_escape($name);
-                $result = db_query($sql,"customer could not be retreived");
+                $result = db_query($sql,"customer could not be retrieved");
                 $row = db_fetch_assoc($result);
     
                 if (!$row) {
