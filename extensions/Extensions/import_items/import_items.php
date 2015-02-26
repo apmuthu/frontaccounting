@@ -167,6 +167,7 @@ if (isset($_POST['import'])) {
 			list($type, $code, $id, $description, $category, $units, $qty, $mb_flag, $currency, $price) = $data;
 			$type = strtoupper($type);
 			$mb_flag = strtoupper($mb_flag);
+			if ($mb_flag == "S") $mb_flag ="D"; // old mb_flag toleration
 
 			if ($type == 'NOTE') continue; // a comment
 			if ($type == 'BOM') {
