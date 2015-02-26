@@ -208,7 +208,7 @@ if (isset($_POST['import'])) {
 			    } else $cat = $row[0];
 			}
 		        // type, item_code, stock_id, description, category, units, qty, mb_flag, currency, price
-			if ($type == 'KIT' || $type == 'FOREIGN') { // Sales Kit or Foriegn Item Code
+			if ($type == 'KIT' || $type == 'FOREIGN') { // Sales Kit or Foreign Item Code
 			    if ($type == 'FOREIGN') $foreign = 1;
 			    else $foreign = 0;
 			    $sql = "SELECT id from ".TB_PREF."item_codes WHERE item_code='$code' AND stock_id = '$id'";
@@ -243,7 +243,7 @@ if (isset($_POST['import'])) {
 					    '{$_POST['adjustment_account']}', '{$_POST['assembly_account']}', $dim, 0)";
 
 				    db_query($sql, "The item could not be added");
-				    if ($mb_flag != "S") {
+				    if ($mb_flag == "M" || $mb_flag == "B") {
 					    $sql = "INSERT INTO ".TB_PREF."loc_stock (loc_code, stock_id) VALUES ('{$_POST['location']}', '$id')";
 
 					    db_query($sql, "The item locstock could not be added");
