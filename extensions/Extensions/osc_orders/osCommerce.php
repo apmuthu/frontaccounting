@@ -226,7 +226,7 @@ if (isset($_POST['action'])) {
 	$sql = "DROP TABLE IF EXISTS ".TB_PREF."oscommerce";
 	db_query($sql, "Error dropping table");
 	$sql = "CREATE TABLE ".TB_PREF."oscommerce ( `name` char(15) NOT NULL default '', " .
-  	       " `value` varchar(100) NOT NULL default '', PRIMARY KEY  (`name`)) TYPE=MyISAM";
+  	       " `value` varchar(100) NOT NULL default '', PRIMARY KEY  (`name`)) ENGINE=MyISAM";
 	db_query($sql, "Error creating table");
         header("Location: osCommerce.php?action=show");
     }
