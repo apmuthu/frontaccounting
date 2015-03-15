@@ -10,6 +10,8 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2015-03-14 Janusz Dobrowolski Additional cleanups in standard themes.
+2015-03-12 Janusz Dobrowolski Fixed many issues in output HTML code according to HTML 4.01 Transitional format.
 2015-02-20 Joe                Fixed aging reports / inquiries 1 day error with re-run.
 2015-02-19 Joe                Allow search by Id in search work orders.
 2015-02-14 Joe                Rerun of rep107.
