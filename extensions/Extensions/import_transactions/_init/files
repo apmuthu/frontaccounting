@@ -4,7 +4,7 @@
 /templates/bank_en_GB.csv: 27959de85649429a5e4b720f10d9ae1d45f44038
 /import_transactions.php: 5ec60175cecc07206f0fbee4dd5a596bdde8edf8
 /LICENSE: 23a1f87d806ce0330b3d85485e399a5f9f553409
-/includes/import_transactions.inc: a7ecccb2aa0850351bf5d6ae832a89731fdc5a83
+/includes/import_transactions.inc: 9355a5cf0f706a808acccbbd19489445a3a46058
 /spreadsheet_headers.html: 029e0120087b8d80471793417467216a0283a70f
 /spreadsheet_headers.doc: b6c27903025620d82df660e72654748fe6d79681
 /hooks.php: 1c10e29a16f4b057d0517dc07724e76c5e7f00f9
