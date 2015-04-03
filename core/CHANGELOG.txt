@@ -10,8 +10,6 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
-2015-03-29: Janusz Dobrowolski  Moved to SG Git and Mirrored at GitHub
-
 2015-03-23 16:27 +0100 Joe
 (3456) Release 2.3.23
  version.php
