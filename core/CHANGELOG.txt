@@ -10,6 +10,10 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2015-04-04 Janusz Dobrowolski  Fixed hidden fields support for ajax driven divs.
+2015-04-03 Joe                 Release 2.3.24
+2015-04-03 Janusz Dobrowolski  Additional fix for Windows specific issue in access roles editor.
+
 2015-03-23 16:27 +0100 Joe
 (3456) Release 2.3.23
  version.php
