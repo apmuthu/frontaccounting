@@ -1,5 +1,6 @@
 ALTER TABLE `0_debtor_trans` ADD INDEX `order_` (`order_`);
 ALTER TABLE `0_users` CHANGE `query_size` `query_size` TINYINT(1) UNSIGNED NOT NULL DEFAULT 10;
+ALTER TABLE `0_comments` ADD PRIMARY KEY (`type`, `id`), DROP INDEX `type_and_id`;
 
 ALTER TABLE `0_crm_contacts` CHANGE `entity_id` INT(11) DEFAULT NULL COMMENT 'entity id in related class table';
 
