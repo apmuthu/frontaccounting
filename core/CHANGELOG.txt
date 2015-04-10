@@ -10,6 +10,7 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2015-04-11 Janusz Dobrowolski  Fixed problem with counting number of rows for some SQL queries displayed in db pager.
 2015-04-11 Joe                 Included option for Show Service Items in Inventory Sales Report
 2015-04-04 Janusz Dobrowolski  Fixed hidden fields support for ajax driven divs.
 2015-04-03 Joe                 Release 2.3.24
