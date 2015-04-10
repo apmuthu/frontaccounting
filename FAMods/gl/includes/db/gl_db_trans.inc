@@ -605,14 +605,14 @@ function void_journal_trans($type, $type_no, $use_transaction=true)
 function get_sql_for_journal_inquiry($filter, $from, $to, $ref='', $memo='', $alsoclosed=false)
 {
 
-	$sql = "SELECT	IF(ISNULL(a.gl_seq),0,a.gl_seq) as gl_seq,
+	$sql = "SELECT	COALESCE(a.gl_seq,0) as gl_seq,
 		gl.tran_date,
 		gl.type,
 		gl.type_no,
-		refs.reference,
+		COALESCE(refs.reference,'') AS reference,
 		SUM(IF(gl.amount>0, gl.amount,0)) as amount,
-		com.memo_,
-		IF(ISNULL(u.user_id),'',u.user_id) as user_id
+		COALESCE(com.memo_,'') AS memo_,
+		COALESCE(u.user_id,'') as user_id
 		FROM ".TB_PREF."gl_trans as gl
 		 LEFT JOIN ".TB_PREF."audit_trail as a ON
 			(gl.type=a.type AND gl.type_no=a.trans_no)
@@ -625,11 +625,11 @@ function get_sql_for_journal_inquiry($filter, $from, $to, $ref='', $memo='', $al
 		WHERE gl.tran_date >= '" . date2sql($from) . "'
 		AND gl.tran_date <= '" . date2sql($to) . "'
 		AND gl.amount!=0";
-	if ($ref) {
-		$sql .= " AND reference LIKE ". db_escape("%$ref%");
+	if (!empty($ref)) {
+		$sql .= " AND refs.reference LIKE '%". db_escape($ref) . "%'";
 	}
-	if ($memo) {
-		$sql .= " AND com.memo_ LIKE ". db_escape("%$memo%");
+	if (!empty($memo)) {
+		$sql .= " AND com.memo_ LIKE '%". db_escape($memo) . "%'";
 	}
 	if ($filter != -1) {
 		$sql .= " AND gl.type=".db_escape($filter);
@@ -637,7 +637,7 @@ function get_sql_for_journal_inquiry($filter, $from, $to, $ref='', $memo='', $al
 	if (!$alsoclosed) {
 		$sql .= " AND gl_seq=0";
 	}
-	$sql .= " GROUP BY gl.tran_date, IF(ISNULL(a.gl_seq),0,a.gl_seq), gl.type, gl.type_no";
+	$sql .= " GROUP BY gl.tran_date, COALESCE(a.gl_seq,0), gl.type, gl.type_no";
 	return $sql;
 }
 ?>

@@ -1,4 +1,5 @@
 
+2015-04-10 Ap.Muthu           Dimensions and Journal Inquiry % in LIKE fix for sqls and COALESCE for NULLs
 2015-04-10 Ap.Muthu           Journal Inquiry paging links fix
 2015-04-09 Ap.Muthu           Added Primary Key for 0_comments table
 2015-03-15 Ap.Muthu           Synched FAMods with core consequent on release of FA v2.3.24

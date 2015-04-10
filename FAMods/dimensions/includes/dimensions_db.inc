@@ -194,7 +194,7 @@ function get_sql_for_search_dimensions($dim)
 
 	if (isset($_POST['OrderNumber']) && $_POST['OrderNumber'] != "")
 	{
-		$sql .= " AND reference LIKE ".db_escape("%". $_POST['OrderNumber'] . "%");
+		$sql .= " AND reference LIKE '%" . db_escape($_POST['OrderNumber']) . "%'";
 	} else {
 
 		if ($dim == 1)
