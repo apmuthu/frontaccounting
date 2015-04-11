@@ -763,13 +763,8 @@ CREATE TABLE IF NOT EXISTS `0_fiscal_year` (
 -- Dumping data for table `0_fiscal_year`
 --
 
-INSERT INTO `0_fiscal_year` VALUES (1, '2008-01-01', '2008-12-31', 0);
-INSERT INTO `0_fiscal_year` VALUES (2, '2009-01-01', '2009-12-31', 0);
-INSERT INTO `0_fiscal_year` VALUES (3, '2010-01-01', '2010-12-31', 0);
-INSERT INTO `0_fiscal_year` VALUES (4, '2011-01-01', '2011-12-31', 0);
-INSERT INTO `0_fiscal_year` VALUES (5, '2012-01-01', '2012-12-31', 0);
-INSERT INTO `0_fiscal_year` VALUES (6, '2013-01-01', '2013-12-31', 0);
-INSERT INTO `0_fiscal_year` VALUES (7, '2014-01-01', '2014-12-31', 0);
+INSERT INTO `0_fiscal_year` VALUES (1, '2014-01-01', '2014-12-31', 1);
+INSERT INTO `0_fiscal_year` VALUES (2, '2015-01-01', '2015-12-31', 0);
 
 --
 -- Table structure for table `0_gl_trans`
@@ -1792,7 +1787,7 @@ INSERT INTO `0_sys_prefs` VALUES ('coy_logo', 'setup.company', 'varchar', 100, '
 INSERT INTO `0_sys_prefs` VALUES ('domicile', 'setup.company', 'varchar', 55, '');
 INSERT INTO `0_sys_prefs` VALUES ('curr_default', 'setup.company', 'char', 3, 'USD');
 INSERT INTO `0_sys_prefs` VALUES ('use_dimension', 'setup.company', 'tinyint', 1, '1');
-INSERT INTO `0_sys_prefs` VALUES ('f_year', 'setup.company', 'int', 11, '4');
+INSERT INTO `0_sys_prefs` VALUES ('f_year', 'setup.company', 'int', 11, '2');
 INSERT INTO `0_sys_prefs` VALUES ('no_item_list', 'setup.company', 'tinyint', 1, '0');
 INSERT INTO `0_sys_prefs` VALUES ('no_customer_list', 'setup.company', 'tinyint', 1, '0');
 INSERT INTO `0_sys_prefs` VALUES ('no_supplier_list', 'setup.company', 'tinyint', 1, '0');
@@ -2077,7 +2072,7 @@ CREATE TABLE IF NOT EXISTS `0_users` (
 -- Dumping data for table `0_users`
 --
 
-INSERT INTO `0_users` VALUES (1, 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Administrator', 2, '', 'adm@adm.com', 'en_US', 0, 0, 0, 0, 'default', 'Letter', 2, 2, 4, 1, 1, 0, 0, '2008-04-04 12:34:29', 10, 1, 1, '', 1, 0, 'orders', 0);
+INSERT INTO `0_users` VALUES (1, 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Administrator', 2, '', 'adm@adm.com', 'en_US', 0, 0, 0, 0, 'default', 'Letter', 2, 2, 4, 1, 1, 0, 0, '2014-04-04 12:34:29', 10, 1, 1, '', 1, 0, 'orders', 0);
 
 -- --------------------------------------------------------
 
