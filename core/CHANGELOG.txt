@@ -10,6 +10,9 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2015-04-29 Joe                 Only first item in Supplier Credit Notes had tax added. Fixed.
+2015-04-29 Joe                 Fixed wrong headers in Supplier Credit Note.
+2015-04-28 Joe                 IE 11 doesn't work with input file type in forms. Fixed.
 2015-04-11 Janusz Dobrowolski  Additional syntax cleanup to previous patch.
 2015-04-11 Janusz Dobrowolski  Fixed problem with counting number of rows for some SQL queries displayed in db pager.
 2015-04-11 Joe                 Included option for Show Service Items in Inventory Sales Report
