@@ -66,7 +66,7 @@ msgid "&Backup and Restore"
 msgstr ""
 
 msgid "&Balance Sheet"
-msgstr ""
+msgstr "ஐந்தொகை"
 
 msgid "&Banking and General Ledger"
 msgstr ""
@@ -246,10 +246,10 @@ msgid "&Printers"
 msgstr ""
 
 msgid "&Profit and Loss Drilldown"
-msgstr ""
+msgstr "லாபம்/நட்ட குறிப்பிட்ட விவரம்"
 
 msgid "&Profit and Loss Statement"
-msgstr ""
+msgstr "லாபம்/நட்ட அறிக்கை"
 
 msgid "&Purchases"
 msgstr ""
@@ -937,16 +937,16 @@ msgid "Balance"
 msgstr "இருப்பு"
 
 msgid "Balance &Sheet Drilldown"
-msgstr ""
+msgstr "ஐந்தொகை  குறிப்பிட்ட விவரம்"
 
 msgid "Balance Based"
 msgstr ""
 
 msgid "Balance Sheet"
-msgstr ""
+msgstr "ஐந்தொகை"
 
 msgid "Balance Sheet Drilldown"
-msgstr ""
+msgstr "ஐந்தொகை  குறிப்பிட்ட விவரம்"
 
 msgid "Balance for this Dimension"
 msgstr ""
@@ -1019,7 +1019,6 @@ msgstr ""
 
 msgid "Bank Charges Account:"
 msgstr "வங்கி கட்டணங்கள் கணக்கு:"
-
 
 msgid "Bank Deposit"
 msgstr ""
@@ -1639,6 +1638,33 @@ msgstr ""
 
 msgid "Cannot write to the configuration file - "
 msgstr "கட்டமைப்பு கோப்பில் எழுத முடியவில்லை - "
+
+msgid "Cannot write to the extensions setup file '%s'."
+msgstr ""
+
+msgid "Cannot write to the language file - "
+msgstr ""
+
+msgid "Cash"
+msgstr ""
+
+msgid "Cash Account"
+msgstr ""
+
+msgid "Cash account:"
+msgstr ""
+
+msgid "Cash invoice"
+msgstr ""
+
+msgid "Cash payment"
+msgstr ""
+
+msgid "Cash sale"
+msgstr ""
+
+msgid "Category"
+msgstr "பிரிவு"
 
 msgid "Category Description:"
 msgstr "பிரிவு விரித்துரைத்தல்"
@@ -3120,8 +3146,53 @@ msgstr ""
 msgid "Exchange Variances Account:"
 msgstr "செலாவணி மாறுபாடுகள் கணக்கு:"
 
+msgid "Exchange rate table changes"
+msgstr ""
+
+msgid "Exchange rates are entered against the company currency."
+msgstr ""
+
+msgid "Exclude from sales:"
+msgstr ""
+
+msgid "Expense"
+msgstr ""
+
+msgid "Extension"
+msgstr ""
+
+msgid "Extensions configuration files and directories should be writeable"
+msgstr ""
+
+msgid "Extensions system"
+msgstr ""
+
+msgid "Extensions:"
+msgstr ""
+
+msgid "Facsimile No:"
+msgstr ""
+
+msgid "Factor"
+msgstr ""
+
+msgid "Fax"
+msgstr ""
+
+msgid "Fax No"
+msgstr ""
+
 msgid "Fax Number:"
 msgstr "தொலைநகல் எண்:"
+
+msgid "Fax number:"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
 
 msgid "File successfully deleted."
 msgstr "கோப்பு வெற்றிகரமாக நீக்கப்பட்டது."
@@ -3137,6 +3208,18 @@ msgstr "கோப்புப்பெயர்"
 
 msgid "Filetype"
 msgstr "கோப்புவகை"
+
+msgid "Final product receive"
+msgstr ""
+
+msgid "First"
+msgstr ""
+
+msgid "First Name:"
+msgstr ""
+
+msgid "First date of Accruals"
+msgstr ""
 
 msgid "Fiscal Year"
 msgstr "நிதியாண்டு"
