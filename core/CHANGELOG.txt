@@ -10,6 +10,9 @@
 ------------
 This is a changelog for FrontAccounting All releases.
 
+2015-05-07 Janusz Dobrowolski  Fixed regression in db_pager.
+2015-05-07 Janusz Dobrowolski  Empty password is forbidden when creating new user account. 
+2015-05-07 Janusz Dobrowolski  HTML cleanup in fiscal years selector helper.
 2015-04-29 Joe                 Only first item in Supplier Credit Notes had tax added. Fixed.
 2015-04-29 Joe                 Fixed wrong headers in Supplier Credit Note.
 2015-04-28 Joe                 IE 11 doesn't work with input file type in forms. Fixed.
