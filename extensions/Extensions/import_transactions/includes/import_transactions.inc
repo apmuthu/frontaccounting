@@ -10,83 +10,83 @@ function all_delete($yes=true)
     $result1a = db_query($sql1a, _("Could not query gl_trans"));
     if (db_num_rows($result1a) > 0)
     {  
-     
+
      $sql1b = "DELETE FROM ".TB_PREF."gl_trans";
      $result1b = db_query($sql1b, _("Could not delete records."));
      display_notification(_("Deleted ".db_num_rows($result1a)." records from table gl_trans.")); 
-    }  
-      
+    }
+
     //bank entries table: bank_trans
     $sql2a = "SELECT * FROM ".TB_PREF."bank_trans WHERE id>-1";  
     $result2a = db_query($sql2a, _("Could not query bank_trans"));
     if (db_num_rows($result2a) > 0)
     {
-    
+
     $sql2b = "DELETE FROM ".TB_PREF."bank_trans";
     $result2b=db_query($sql2b, _("Could not delete records."));
     display_notification(_("Deleted ".db_num_rows($result2a)." records from table bank_trans.")); 
     }    
-    
+
     //tax entries  table: trans_tax_details
     $sql3a = "SELECT * FROM ".TB_PREF."trans_tax_details WHERE id>-1";   
     $result3a = db_query($sql3a, _("Could not query bank_trans"));
     if (db_num_rows($result3a) > 0)
     {
-    
+
     $sql3b = "DELETE FROM ".TB_PREF."trans_tax_details";
     $result3b=db_query($sql3b, _("Could not delete records."));
     display_notification(_("Deleted ".db_num_rows($result3a)." records from table trans_tax_details.")); 
     }
-    
+
     //next_reference entries table: sys_types 
     $sql4 =  "UPDATE ".TB_PREF."sys_types SET next_reference='1'";
     $result4=db_query($sql4, _("Could not update records."));
     display_notification(_("Reset column 'next_reference' in table 'sys_types' to '1' for all types.")); 
-    
+
     //refs
     $sql5a = "SELECT * FROM ".TB_PREF."refs";   
     $result5a=db_query($sql5a, _("Could not query bank_trans"));
     if (db_num_rows($result5a) > 0)
     {
-    
+
     $sql5b = "DELETE FROM ".TB_PREF."refs";
     $result5b=db_query($sql5b, _("Could not delete records."));
     display_notification(_("Deleted ".db_num_rows($result5a)." records from table refs")); 
     }
-    
+
     //suppliers transactions all deleted
     $sql6a = "SELECT * FROM ".TB_PREF."supp_trans";  
     $result6a = db_query($sql6a, _("Could not query supp_trans"));
     if (db_num_rows($result6a) > 0)
     {
-        
+
     $sql6b = "DELETE FROM ".TB_PREF."supp_trans";
     $result6b=db_query($sql6b, _("Could not delete records."));
     display_notification(_("Deleted ".db_num_rows($result6a)." records from table supp_trans.")); 
     }   
-        
+
     //customers transactions all deleted
     $sql7a = "SELECT * FROM ".TB_PREF."debtor_trans";  
     $result7a = db_query($sql7a, _("Could not query debtor_trans"));
     if (db_num_rows($result7a) > 0)
     {
-   
+
     $sql7b = "DELETE FROM ".TB_PREF."debtor_trans";
     $result7b=db_query($sql7b, _("Could not delete records."));
     display_notification(_("Deleted ".db_num_rows($result7a)." records from table debtor_trans.")); 
-    }  
-    
+    }
+
     $sql8a = "SELECT * FROM ".TB_PREF."comments";  
     $result8a = db_query($sql8a, _("Could not query comments."));
     if (db_num_rows($result8a) > 0)
     {
-   
+
     $sql8b = "DELETE FROM ".TB_PREF."comments";
     $result8b=db_query($sql8b, _("Could not delete records."));
     display_notification(_("Deleted ".db_num_rows($result8a)." records from table comments.")); 
     }  
-      
-   } 
+
+   }
      
 }
 
@@ -266,6 +266,7 @@ function check_customer_supplier($code_id,$person_id,$person_type_id,$line,$memo
     
 return array($error,$memo);    
 }
+
 //csv_demo_line("Example Journal Dr:","this", "16/12/2014", $lastjlref, "8100", "D1", "D2", "222.24");
 function csv_demo_line($param="",$count,$a,$b,$c,$d,$e,$f,$g,$h,$i,$j,$k,$l,$m) //utilized for displaying examples in a table
 {
@@ -399,7 +400,6 @@ function get_dimension_id_from_dimref($ref)
 
 	return $row[0];
 }//function get_dimension_id_from_reference($ref)
-//
 
 //$entry or item_cart class merely used for tabular display of journal entries.
 function init_entry_part_1($entry) 
@@ -556,7 +556,7 @@ function journal_id($prev_date,$date,$amt, $input_id=0, $total_debit_positive, $
         $total_credit_negative=0;
         $input_id = 1;
       }
-    return array($error,$input_id, $total_debit_positive,$total_credit_negative);
+    return array($error,$input_id, $total_debit_positive, $total_credit_negative);
 }
 
 //Output the last transno for bank related transactions using table bank_trans.
@@ -580,6 +580,7 @@ function last_transno($type)
         $row = mysql_fetch_assoc($result);
         $rowtrans = $row['type_no'];        
     } // end if
+
     return $rowtrans;//
 }//function last_transno($type)
 
@@ -667,8 +668,7 @@ function show_table_section_display($type)
     checkbox_row(_("Display Company Settings Lookup"), 'lookup', $_POST['lookup'], $submit_on_change=true,$title="",'colspan=1');
     if ((isset($_POST['lookup'])) && ($_POST['lookup'] !=null)) {show_table_section_company_settings_lookup();} else $Ajax->activate('_page_body');
     checkbox_row(_("Display Help Notes"), 'notes', $_POST['notes'], $submit_on_change=true,$title="",'colspan=1');
-    if ((isset($_POST['notes'])) && ($_POST['notes'] !=null)) {show_table_section_notes($type);} else $Ajax->activate('_page_body'); 
- 
+    if ((isset($_POST['notes'])) && ($_POST['notes'] !=null)) {show_table_section_notes($type);} else $Ajax->activate('_page_body');
 }
 
 function show_table_section_import_settings()
@@ -676,11 +676,12 @@ function show_table_section_import_settings()
     table_section_title(_("Import Settings"),2);
     import_type_list_row(_("Import Type:"), 'type', $_POST['type'], true);
     if ($_POST['type'] != ST_JOURNAL)
-     {bank_accounts_list_cells( $_POST['type'] == ST_BANKPAYMENT ? _("From:") : _("To:"), 'bank_account',$selected_id="",$_POST['bank_account']);
+    {bank_accounts_list_cells( $_POST['type'] == ST_BANKPAYMENT ? _("From:") : _("To:"), 'bank_account',$selected_id="",$_POST['bank_account']);
       show_table_section_bank_account_number();
-     }
+    }
     return $type = $_POST['type'];
 }
+
 function show_table_section_important_bank()
 {
     table_section_title(_("Display Help Notes: Important regarding bank transactions"),2);
@@ -702,7 +703,7 @@ function show_table_section_important_journals()
     label_row(_("3. No bank transactions are to be processed through the journal. Use 'Deposit Processing' or 'Payment Processing' for this purpose."),"",'colspan=1');
     label_row(_("4. Ensure that your csv file date format eg. DD/MM/YYYY includes a 4 number year ie. YYYY, and it complies with your User selected date format, eg. DDMMYYYY as indicated above under tools. Do this preferably with a low-level format editor since format can be lost when converting to csv from a spreadsheet package. So check your csv with Notepad+ for a four digit year."),"",'colspan=1');
     label_row(_("5. Ensure that 'Account code' in your spreadsheet is in text format since eg. 0010 will lose its zeros in number format when saving to csv."),"",'colspan=1');
-    label_row(_("6. Template: <a href='./templates/journal_en_GB.csv'>journal_en_GB.csv using British Chart of Accounts</a>"),"",'colspan=1');
+    label_row(_("6. Use Template: <a href='./templates/journal_en_GB.csv'>journal_en_GB.csv using British Chart of Accounts</a>"),"",'colspan=1');
     label_row(_("7. The correct debtors control account (eg. 1100) or creditors control account (eg. 2100) should be used with Person_type_id and Person_id. Use 'Display Tax Type, Customers, and Suppliers' to check Person_type_id and Person_id."),"",'colspan=1');
 }
 

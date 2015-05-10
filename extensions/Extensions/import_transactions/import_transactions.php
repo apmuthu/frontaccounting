@@ -126,8 +126,8 @@ if ((isset($_POST['type'])))
          $memo = $memo ." Date: ".$date." Reference: ".$reference;
         }
         else
-        {            
-            if  (($type == ST_BANKPAYMENT) && ($stateformat!=null))
+        {
+           if  (($type == ST_BANKPAYMENT) && ($stateformat!=null))
            //All amounts to the right of amt are ignored since only considering payments which are to the left of deposits on a bank statement.     
            {
                list($reference, $date, $memo, $amt, $ignore, $code_id, $taxtype, $dim1_ref, $dim2_ref,$person_type_id,$person_id,$BranchNo) = $data;
@@ -138,7 +138,8 @@ if ((isset($_POST['type'])))
                    $prev_ref = $reference;
                    continue;                  
                  } 
-           }    
+           }
+
            if (($type == ST_BANKDEPOSIT) && ($stateformat!=null))
            {
            //All amounts to the left of amt are ignored since only considering deposits which are to the left of payments on a bank statement.     
@@ -151,11 +152,12 @@ if ((isset($_POST['type'])))
                     continue;
                    } 
            }
+
            if ((($type == ST_BANKDEPOSIT) || ($type == ST_BANKPAYMENT)) && ($stateformat==null))
            list($reference, $date, $memo, $amt, $code_id, $taxtype, $dim1_ref, $dim2_ref,$person_type_id,$person_id, $BranchNo) = $data;
            
         }
-         if ($prev_ref <> $reference) {     
+        if ($prev_ref <> $reference) {
          init_entry_part_2($entry, $date, $reference);}
          
          if ($type == 0)
@@ -176,7 +178,7 @@ if ((isset($_POST['type'])))
            $Refs->save($type,$curEntryId,$reference);
            save_next_reference($type, $reference);
          }      
-          
+
       $description = get_gl_account_name($code_id);
       if (is_date($date)==false)
           {
@@ -188,9 +190,8 @@ if ((isset($_POST['type'])))
      // validation for 
                   
      if (($type == 1) || ($type ==2)) {$bankdesc = get_gl_account_name($bank_account_gl_code);} 
-      
-      
-      $i=journal_display($i, $type, $taxtype, $amt, $entry, $code_id, $dim1, $dim2, $memo, $description, $bank_account_gl_code, $bank_desc);
+
+     $i=journal_display($i, $type, $taxtype, $amt, $entry, $code_id, $dim1, $dim2, $memo, $description, $bank_account_gl_code, $bank_desc);
       if (!$error)
      {
        if (($type == ST_JOURNAL))
@@ -227,19 +228,20 @@ if ((isset($_POST['type'])))
      $error = false;
      $prev_ref = $reference;
      $prev_date = $date;
-     $curEntryId += (($type <> 0) ? 1 : $input_id);   
+     $curEntryId += (($type <> 0) ? 1 : $input_id);
     }//while
+
     $displayed_at_least_once = display_entries($type, $entry);
     end_row();
     end_table(1); 
     div_end();
      
  
- if ($displayed_at_least_once == false) //there has been no occurrence of debits equalling credits - at least one journal not properly balanced
+    if ($displayed_at_least_once == false) //there has been no occurrence of debits equalling credits - at least one journal not properly balanced
       {
          display_notification_centered(_("Error: Debits do not equal credits.")); 
          $errCnt = $errCnt + 1;
-      }    //
+      }
 // Commit import to database
  if ($type == ST_JOURNAL){$typeString = "Journals";}                
  elseif ($type == ST_BANKDEPOSIT){$typeString = "Deposits";}
