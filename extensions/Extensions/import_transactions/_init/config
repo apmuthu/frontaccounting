@@ -1,5 +1,5 @@
 Package: import_transactions
-Version: 2.3.22-5
+Version: 2.3.24-1
 Name: Import Transactions
 Description: Import transactions from csv in journal format, payment format, deposit format, or adapted bank statement format.
  Features include a trial check before importing, tabular display of journal entries, importing of bank statements with additional
@@ -8,12 +8,12 @@ Description: Import transactions from csv in journal format, payment format, dep
  display notifications identifying how tables within the database are being affected for a more transparent display,
  additional lookup tools for looking up customer id's, supplier id's, company setup information eg. fiscal year,
  tools that users will find useful for inclusion in their spreadsheet prior to conversion to csv,
- and suitable validation checks for customers, suppliers, tax codes, references.
+ and suitable validation checks for customers, suppliers, tax codes, references. Single and Multi Line Invoices now supported.
 Author: Ross Addison <ross@bbqq.co.uk>
 Maintenance: Ross Addison <frontaccounting@bbqq.co.uk>
 Homepage: frontaccounting.com
 Depends: 
 Type: extension
 InstallPath: modules/import_transactions
-Filename: import_transactions-2.3.22-5
+Filename: import_transactions-2.3.24-1
 

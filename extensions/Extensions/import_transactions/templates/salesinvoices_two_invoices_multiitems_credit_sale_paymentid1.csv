@@ -1,0 +1,5 @@
+customer_id,branch_No,reference,date,payment_id,sales_type_name,dimension_id,dimension2_id,item_code,item_description,quantity,unit,price,discountpercentage,freightcost,delfrom,deldate,delto,deladdress,contactphone,email,custref,shipvia,comments,ex_rate
+1,1,6,01/12/2014,1,Retail,,,001,Service Item,1,Each,50,0,0,DEF,01/12/2014,Mr A,1 Abe Street Glasgow G32 FHT,134134,jj@adfa.uk,,,,0
+1,1,6,02/12/2014,1,Retail,,,002,Product item,5,hr,15,0,0,DEF,02/12/2014,Mr B,2 Bee Street Glasgow G32 FHT,12341234123,asdfa@jj.co.uk,,,,0
+2,2,7,01/12/2014,1,Retail,,,001,Service Item,2,Each,50,0,0,DEF,01/12/2014,Mr A,1 Abe Street Glasgow G32 FHT,134134,jj@adfa.uk,,,,0
+2,2,7,02/12/2014,1,Retail,,,002,Product item,6,hr,15,0,0,DEF,02/12/2014,Mr B,2 Bee Street Glasgow G32 FHT,12341234123,asdfa@jj.co.uk,,,,0

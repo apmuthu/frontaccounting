@@ -29,7 +29,7 @@ function all_delete($yes=true)
 
     //tax entries  table: trans_tax_details
     $sql3a = "SELECT * FROM ".TB_PREF."trans_tax_details WHERE id>-1";   
-    $result3a = db_query($sql3a, _("Could not query bank_trans"));
+    $result3a = db_query($sql3a, _("Could not query trans_tax_details"));
     if (db_num_rows($result3a) > 0)
     {
 
@@ -76,6 +76,16 @@ function all_delete($yes=true)
     display_notification(_("Deleted ".db_num_rows($result7a)." records from table debtor_trans.")); 
     }
 
+    $sql7c = "SELECT * FROM ".TB_PREF."debtor_trans_details";  
+    $result7c = db_query($sql7c, _("Could not query debtor_trans_details"));
+    if (db_num_rows($result7c) > 0)
+    {
+
+    $sql7d = "DELETE FROM ".TB_PREF."debtor_trans_details";
+    $result7d=db_query($sql7d, _("Could not delete records."));
+    display_notification(_("Deleted ".db_num_rows($result7c)." records from table debtor_trans_details.")); 
+    }
+
     $sql8a = "SELECT * FROM ".TB_PREF."comments";  
     $result8a = db_query($sql8a, _("Could not query comments."));
     if (db_num_rows($result8a) > 0)
@@ -86,7 +96,45 @@ function all_delete($yes=true)
     display_notification(_("Deleted ".db_num_rows($result8a)." records from table comments.")); 
     }  
 
-   }
+    $sql9a = "SELECT * FROM ".TB_PREF."sales_orders";  
+    $result9a = db_query($sql9a, _("Could not query sales_orders."));
+    if (db_num_rows($result9a) > 0)
+    {
+
+    $sql9b = "DELETE FROM ".TB_PREF."sales_orders";
+    $result9b=db_query($sql9b, _("Could not delete records."));
+    display_notification(_("Deleted ".db_num_rows($result9a)." records from table sales_orders.")); 
+    }
+
+    $sql10a = "SELECT * FROM ".TB_PREF."sales_order_details";  
+    $result10a = db_query($sql10a, _("Could not query sales_order_details."));
+    if (db_num_rows($result10a) > 0)
+    {
+
+    $sql10b = "DELETE FROM ".TB_PREF."sales_order_details";
+    $result10b=db_query($sql10b, _("Could not delete records."));
+    display_notification(_("Deleted ".db_num_rows($result10a)." records from table sales_order_details.")); 
+    } 
+
+    $sql11a = "SELECT * FROM ".TB_PREF."stock_moves";  
+    $result11a = db_query($sql11a, _("Could not query stock_moves."));
+    if (db_num_rows($result11a) > 0)
+    {
+    $sql11b = "DELETE FROM ".TB_PREF."stock_moves";
+    $result11b=db_query($sql11b, _("Could not delete records."));
+    display_notification(_("Deleted ".db_num_rows($result11a)." records from table stock_moves.")); 
+    }
+
+    $sql12a = "SELECT * FROM ".TB_PREF."cust_allocations";  
+    $result12a = db_query($sql12a, _("Could not query cust_allocations."));
+    if (db_num_rows($result12a) > 0)
+    {
+    $sql12b = "DELETE FROM ".TB_PREF."cust_allocations";
+    $result12b=db_query($sql12b, _("Could not delete records."));
+    display_notification(_("Deleted ".db_num_rows($result12a)." records from table cust_allocations.")); 
+    }
+
+   } // if yes = true
      
 }
 
@@ -243,6 +291,14 @@ function check_tax_appropriate($code, $taxtype, $line)
     return $ie;
 }
 
+function check_code_id ($code)
+{
+     $sql = "SELECT account_code FROM ".TB_PREF."chart_master WHERE ".$code." = account_code";
+     $result = db_query($sql, _("Could not query chart_master table"));
+     $row = db_fetch($result);
+     if (db_num_rows($result) > 0) {return true;} else {return false;}
+}
+
 function check_customer_supplier($code_id,$person_id,$person_type_id,$line,$memo,$error)
 {
       if (!empty($person_id)) 
@@ -380,7 +436,7 @@ return $displayed_at_least_once;
 
 function display_entries($type,$entry)
 {
-        if ($type == 0) $jname = "Journal Processing";
+        if ($type == 0) $jname = "General Journal Processing";
         if ($type == 1) $jname = "Payment Processing";
         if ($type == 2) $jname = "Deposit Processing";
         $title = $jname; 
@@ -389,7 +445,7 @@ function display_entries($type,$entry)
 
 function get_dimension_id_from_dimref($ref)
 {
-	if ($ref == null || trim($ref) == '')
+	if (($ref == null) || (trim($ref) == '') || (empty($ref))  )
 		return 0;
 
         $sql = "SELECT id FROM ".TB_PREF."dimensions WHERE reference LIKE ".db_escape($ref);
@@ -418,9 +474,11 @@ function init_entry_part_2($entry,$date,$reference)
 function import_type_list_row($label, $name, $selected=null, $submit_on_change=false)
 {
     $arr = array(
-    ST_JOURNAL=> _("Journal Processing"),
+    ST_JOURNAL=> _("General Journal Processing"),
     ST_BANKDEPOSIT=> _("Deposit Processing"),
-    ST_BANKPAYMENT=> _("Payment Processing")
+    ST_BANKPAYMENT=> _("Payment Processing"),
+    ST_SALESORDER=>_("Sales Order Processing"),
+    ST_SALESINVOICE=> _("Direct Sales Invoice Processing ")
     );
     //echo "<tr><td class='label'>$label</td><td>";
     echo "<tr><td class='label' colspan=1>$label</td><td>";
@@ -446,6 +504,8 @@ if (!isset($_POST['debtors_act'])) $_POST['debtors_act']  = $myrow["debtors_act"
 if (!isset($_POST['creditors_act'])) $_POST['creditors_act']  = $myrow["creditors_act"];  
 if (!isset($_POST['type'])) $_POST['type'] = null;
 if (!isset($_POST['stateformat'])) {$stateformat = null;$_POST['stateformat']=null;}
+if (!isset($_POST['cashorcredit'])) $_POST['cashorcredit']=null;
+if (!isset($_POST['salestools'])) $_POST['salestools']=null;
 if (!isset($_POST['tools'])) $_POST['tools']=null;
 if (!isset($_POST['lookup'])) $_POST['lookup']=null;
 if (!isset($_POST['notes'])) $_POST['notes']=null;
@@ -461,6 +521,9 @@ if (!isset($_POST['cust'])) $_POST['cust'] = null;
 if (!isset($_POST['supp'])) $_POST['supp'] = null;
 if (!isset($_POST['fis'])) $_POST['fis'] = null;
 if (!isset($_POST['ttype'])) $_POST['ttype'] = null;
+if (!isset($_POST['payment'])) $_POST['payment'] = null;
+if (!isset($_POST['payment2'])) $_POST['payment2'] = null;
+//_("Cash Only");
 if (!isset($_POST['lookrefs'])) $_POST['lookrefs'] = _("Select a reference");
 }
 
@@ -539,9 +602,9 @@ function journal_inclusive_tax($type,$date, $line, $curEntryId, $code, $dim1, $d
     if ($return_amt <0){display_notification_centered(_("Added to table 'gl_trans' Credit: $curEntryId, $date, $code, $dim1, $dim2, $exclusive_amt, $memo (line $line in import file '{$_FILES['imp']['name']}')"));} 
 }
 
-function journal_id($prev_date,$date,$amt, $input_id=0, $total_debit_positive, $total_credit_negative, $line)
+function journal_id($prev_date,$date,$amt, $input_id, $total_debit_positive, $total_credit_negative, $line)
 {
-
+    $new_id = $input_id;
     $error=false;
     if ($amt > 0) {$total_debit_positive=$total_debit_positive+$amt;}
     if ($amt < 0) {$total_credit_negative=$total_credit_negative+(abs($amt));}   
@@ -554,9 +617,9 @@ function journal_id($prev_date,$date,$amt, $input_id=0, $total_debit_positive, $
         
         $total_debit_positive=0;
         $total_credit_negative=0;
-        $input_id = 1;
+        $input_id = $input_id + 1;
       }
-    return array($error,$input_id, $total_debit_positive, $total_credit_negative);
+    return array($error,$input_id, $new_id, $total_debit_positive, $total_credit_negative);
 }
 
 //Output the last transno for bank related transactions using table bank_trans.
@@ -567,7 +630,7 @@ function last_transno($type)
     //'get last row's typeno since type_no is the trans no'
     if ($type == ST_BANKDEPOSIT || $type == ST_BANKPAYMENT)
     {
-        $sql = "SELECT id, type, trans_no, amount FROM ".TB_PREF."bank_trans ORDER BY trans_no DESC LIMIT 1";
+        $sql = "SELECT id, type, trans_no, amount FROM ".TB_PREF."bank_trans ORDER BY id DESC LIMIT 1";
         $result = db_query($sql, _("Cannot locate last entry"));
         $row = mysql_fetch_assoc($result);
         $rowtrans = $row['trans_no'];        
@@ -575,31 +638,22 @@ function last_transno($type)
     
     if ($type == ST_JOURNAL)
     {    
-        $sql = "SELECT counter, type, type_no, amount FROM ".TB_PREF."gl_trans ORDER BY type_no DESC LIMIT 1";
+        $sql = "SELECT counter, type, type_no, amount FROM ".TB_PREF."gl_trans ORDER BY counter DESC LIMIT 1";
         $result = db_query($sql, _("Cannot locate last entry"));
         $row = mysql_fetch_assoc($result);
         $rowtrans = $row['type_no'];        
     } // end if
 
+    if (($type == ST_SALESORDER) || ($type == ST_SALESINVOICE))
+    {
+         
+            $sql = "SELECT trans_no,type FROM ".TB_PREF."debtor_trans ORDER BY trans_no DESC LIMIT 1";
+            $result = db_query($sql, _("Cannot locate last entry"));
+            $row = mysql_fetch_assoc($result);
+            $rowtrans = $row['trans_no'];     
+    }
     return $rowtrans;//
 }//function last_transno($type)
-
-function processing($type,$errCnt,$entryCount,$displayed_at_least_once,$trial) //to be used
-{
-if ($type == ST_JOURNAL){$typeString = "Journals";}                
- elseif ($type == ST_BANKDEPOSIT){$typeString = "Deposits";}
- elseif ($type == ST_BANKPAYMENT){$typeString = "Payments";}
-if (($errCnt==0) && ($trial == null))
- {if ($entryCount > 0){commit_transaction();display_notification_centered(_("$entryCount $typeString have been imported."));}
-  else display_error(_("Import file contained no $typeString."));}
-if (($errCnt==0) && ($trial == !null))
- {display_notification_centered(_("$entryCount $typeString would have been successful if imported. Uncheck Trial check before importing."));}
-if (($errCnt>0) && ($trial == !null) && $displayed_at_least_once)
- {display_notification_centered(_("Errors detected. Correct before importing."));}
- if (($errCnt>0) && ($trial == null) && $displayed_at_least_once)
- {display_notification_centered(_("Errors detected. Correct before importing."));}   
- $errCnt =0;
-}
 
 function reference_type_list_cell($label, $name, $selected=null, $submit_on_change=false)
 {
@@ -617,14 +671,14 @@ function reference_type_list_cell($label, $name, $selected=null, $submit_on_chan
 function supplier_exist($person_id)
 {
     $sql= "SELECT supplier_id FROM ".TB_PREF."suppliers WHERE supplier_id=".db_escape($person_id);
-    $result = db_query($sql, _("Could not query debtors master table"));
+    $result = db_query($sql, _("Could not query supplier master table"));
     if (db_num_rows($result) > 0) {return true;} else {return false;} 
 }//function supplier_exist($person_id)
 
 function supplier_name($person_id)
 {
     $sql= "SELECT supp_name FROM ".TB_PREF."suppliers WHERE supplier_id=".db_escape($person_id);
-    $result = db_query($sql, _("could not query debtors master table"));
+    $result = db_query($sql, _("could not query supplier master table"));
     $row = db_fetch($result);
     $suppname = $row['supp_name'];
     return $suppname;
@@ -663,6 +717,12 @@ function show_table_section_display($type)
 {
     global $Ajax;
     table_section_title(_("Display"),2);
+    $array = array(ST_SALESORDER,ST_SALESINVOICE);
+    if (in_array($type, $array, false))
+    {
+    checkbox_row(_("Lookup id's for Payment terms relating to Sales Orders / Invoices "), 'salestools', $_POST['salestools'], $submit_on_change=true,$title="",'colspan=1');
+    if ((isset($_POST['salestools'])) && ($_POST['salestools'] !=null)) {show_table_section_sales();} else $Ajax->activate('_page_body');
+    }
     checkbox_row(_("Lookup id's for Tax Type, Customers, and Suppliers"), 'tools', $_POST['tools'], $submit_on_change=true,$title="",'colspan=1');
     if ((isset($_POST['tools'])) && ($_POST['tools'] !=null)) {show_table_section_tools();} else $Ajax->activate('_page_body');
     checkbox_row(_("Display Company Settings Lookup"), 'lookup', $_POST['lookup'], $submit_on_change=true,$title="",'colspan=1');
@@ -675,7 +735,7 @@ function show_table_section_import_settings()
 {
     table_section_title(_("Import Settings"),2);
     import_type_list_row(_("Import Type:"), 'type', $_POST['type'], true);
-    if ($_POST['type'] != ST_JOURNAL)
+    if (($_POST['type'] == ST_BANKPAYMENT) || ($_POST['type'] == ST_BANKDEPOSIT))
     {bank_accounts_list_cells( $_POST['type'] == ST_BANKPAYMENT ? _("From:") : _("To:"), 'bank_account',$selected_id="",$_POST['bank_account']);
       show_table_section_bank_account_number();
     }
@@ -705,6 +765,8 @@ function show_table_section_important_journals()
     label_row(_("5. Ensure that 'Account code' in your spreadsheet is in text format since eg. 0010 will lose its zeros in number format when saving to csv."),"",'colspan=1');
     label_row(_("6. Use Template: <a href='./templates/journal_en_GB.csv'>journal_en_GB.csv using British Chart of Accounts</a>"),"",'colspan=1');
     label_row(_("7. The correct debtors control account (eg. 1100) or creditors control account (eg. 2100) should be used with Person_type_id and Person_id. Use 'Display Tax Type, Customers, and Suppliers' to check Person_type_id and Person_id."),"",'colspan=1');
+    label_row(_("8. Only General Ledger accounts should be used here. Individual customers and suppliers accounts under their respective accounts are not updated with this extension."),"",'colspan=1');
+    label_row(_("9. Use the 'Sales Order Processing / Direct Sales Invoice Processing' to import individual orders/invoices relative to customers and suppliers."),"",'colspan=1');
 }
 
 function show_table_section_notes($type)
@@ -713,12 +775,42 @@ function show_table_section_notes($type)
     {
         show_table_section_important_journals();   
     }
-    else
+    if (($type == 1) || ($type == 2))
     {
         show_table_section_important_bank();
-    }    
+    }
+    
+    //
+    // ST_SALESORDERS / ST_SALESINVOICES
+    if (($type == 30)||($type == 10))
+    {
+        show_table_section_sales_notes();   
+    }
 }
 
+function show_table_section_sales_notes()
+{
+    table_section_title(_("Display Help Notes: Important regarding Importing Sales Documents"),2);
+    label_row(_("1. Use Template: <a href='./templates/salesinvoices_two_invoices_multiitems_cash_sale.csv'>Import Sales Orders / Invoices</a> to import Sales Orders/Invoices from other packages."),"",'colspan=1');        
+    label_row(_("2. Import multi-line, and single-line sales orders, and direct invoices."),"",'colspan=1');
+    label_row(_("3. Use the lookup tool for payment terms located under Display. eg. Payment term id for cash sales is 4."),"",'colspan=1');
+    label_row(_("4. Credit sales invoices normally have 1 of 3 payment term id's. eg. Payment term id of 1 for 'Due 15th Of the Following Month' "),"",'colspan=1');
+    label_row(_("5. Ensure that your item_code, eg. 001, for Services in your spreadsheet has a 'Text' column format otherwise you will lose your leading zeros when saving your to csv. "),"",'colspan=1');
+    label_row(_("6. The reference column with, eg. T45, or simply a number eg. 5, is very important since it defines the start and finish of a source document in the spreadsheet."),"",'colspan=1');
+    label_row(_("7. Ensure that you have a delivery address completed."),"",'colspan=1');
+    label_row(_("8. Sales orders and delivery notes are automatically created if 'Direct Sales Invoice Processing' is selected."),"",'colspan=1');
+    label_row(_("9. If the Payment id column has a value of 4 in it, ie. Cash Only,  this will automatically allocate a Customer Payment to the invoice from the Petty Cash Account."),"",'colspan=1');
+}
+
+function show_table_section_sales()
+{
+    table_section_title(_("Lookup: Orders / Invoices"),2);
+    checkbox_row(_("Cash Only (no tick)/Credit Sales (tick)"), 'cashorcredit', $_POST['cashorcredit'], $submit_on_change=true,$title="",'colspan=1');
+    $paymcat = ((isset($_POST['cashorcredit'])) && ($_POST['cashorcredit'] !=null) ? PM_CREDIT : ((!isset($_POST['cashorcredit'])) && ($_POST['cashorcredit'] == null) ? PM_CASH : PM_ANY));
+    echo "<tr class='evenrow'>";$paymentterms = sale_payment_list_cells(_("Payment terms:"), 'payment', $paymcat, $selected_id=null, $submit_on_change=true);echo "</tr>";
+    echo "<tr class='oddrow'>";label_cell(_("Payment id: (Use this in the template provided under 'Display Help Notes'"),'colspan=1');label_cell($_POST['payment'],'colspan=1 align=right width=20px');echo "</tr>"; 
+    table_section_title("");
+}
 
 function show_table_section_tools()
 {
@@ -760,3 +852,4 @@ function show_table_section_bankstatement_checkbox()
     return $stateformat = $_POST['stateformat'];
 }
 ?>
+
