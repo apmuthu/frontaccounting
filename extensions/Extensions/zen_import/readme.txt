@@ -19,11 +19,11 @@ INSTALLATION:
 
 1. FrontAccounting -> Setup -> Install/Activate Extensions
 
-   Click on the icon in the right column corresponding to zen_orders
+   Click on the icon in the right column corresponding to zen_import
 
    Extensions drop down box -> Activated for (name of your business)
 
-   Click on "active" box for zen_orders -> Update
+   Click on "active" box for zen_import -> Update
 
 2. FrontAccounting -> Setup -> Access Setup
 

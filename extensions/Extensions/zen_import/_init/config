@@ -1,5 +1,5 @@
 Package: zen_import
-Version: 2.3.15-1
+Version: 2.3.15-2
 Description: Zen Cart customer and order import
  This module enables orders import feature for Zen Cart.
  (tested on Zen Cart 1.5.1 and FrontAccounting 2.3.15)
@@ -9,5 +9,5 @@ Maintenance: ckrosco <ckrosco@gmail.com>
 Homepage: http://www.frontaccounting.com
 Type: extension
 InstallPath: modules/zen_import
-Filename: zen_import-2.3.15-1
+Filename: zen_import-2.3.15-2
 

@@ -6,7 +6,7 @@ modified for Zen Cart 1.3.9h and FrontAccounting 2.3.2 by ckrosco
 Free software under GNU GPL
 ***********************************************/
 
-function zen_orders_installed()
+function zen_import_installed()
 {
 	global $db_connections;
 

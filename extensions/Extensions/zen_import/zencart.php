@@ -21,8 +21,8 @@ include_once($path_to_root . "/sales/includes/db/sales_order_db.inc");
 include_once($path_to_root . "/sales/includes/cart_class.inc");
 include_once($path_to_root . "/sales/includes/ui/sales_order_ui.inc");
 
-include_once($path_to_root . "/modules/zen_orders/includes/zen_interface_db.inc");
-include_once($path_to_root . "/modules/zen_orders/includes/zen_orders_db.inc");
+include_once($path_to_root . "/modules/zen_import/includes/zen_interface_db.inc");
+include_once($path_to_root . "/modules/zen_import/includes/zen_import_db.inc");
 
 function not_null($str) {
     if ($str != '' && $str != NULL) return 1;
@@ -79,7 +79,7 @@ $last_oid = 0;
 $default_TaxGroup = 0;
 $default_Currency = "";
 
-$found = zen_orders_installed();
+$found = zen_import_installed();
 
 if ($found) {
 	$zen = zen_connect();
