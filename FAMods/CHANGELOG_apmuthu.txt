@@ -1,4 +1,8 @@
 
+2015-08-29 Ap.Muthu           Backport: Fixed sparse js dialog when canceling sales document entry.
+2015-08-29 Ap.Muthu           Backport: Void a Transaction: fixed GRN voiding.
+2015-08-29 Ap.Muthu           Backport: PDF documents sent by email have now meaningful names.
+
 2015-05-06 Ap.Muthu           Included ta_IN language in FAMods
 2015-04-29 Ap.Muthu           Updated ta_IN language file and added empty_blank.po as string sorted output of PoEdit
 2015-04-11 Ap.Muthu           Updated en_US-demo.sql CoA to reflect 2014 transactions in synch with upstream
