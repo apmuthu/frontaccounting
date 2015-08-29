@@ -1756,7 +1756,7 @@ INSERT INTO `0_payment_terms` VALUES ('2', 'Final del mes próximo', '0', '30', 
 INSERT INTO `0_payment_terms` VALUES ('3', 'A 10 días', '10', '0', '0');
 INSERT INTO `0_payment_terms` VALUES ('4', 'Contado', '1', '0', '0');
 INSERT INTO `0_payment_terms` VALUES ('5', 'A 30 días', '30', '0', '0');
-INSERT INTO `0_payment_terms` VALUES ('5', 'A 15 días', '15', '0', '0');
+INSERT INTO `0_payment_terms` VALUES ('6', 'A 15 días', '15', '0', '0');
 
 
 ### Structure of table `0_prices` ###

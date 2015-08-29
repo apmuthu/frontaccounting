@@ -631,10 +631,11 @@ CREATE TABLE IF NOT EXISTS `0_currencies` (
 -- Dumping data for table `0_currencies`
 --
 
+INSERT INTO `0_currencies` VALUES('Egyptian Pounds', 'EGP', '£', 'Egypt', 'Piastre', 1, 0);
 INSERT INTO `0_currencies` VALUES('US Dollars', 'USD', '$', 'United States', 'Cents', 1, 0);
 INSERT INTO `0_currencies` VALUES('CA Dollars', 'CAD', '$', 'Canada', 'Cents', 1, 0);
-INSERT INTO `0_currencies` VALUES('Euro', 'EUR', '?', 'Europe', 'Cents', 1, 0);
-INSERT INTO `0_currencies` VALUES('Pounds', 'GBP', '?', 'England', 'Pence', 1, 0);
+INSERT INTO `0_currencies` VALUES('Euro', 'EUR', '€', 'Europe', 'Cents', 1, 0);
+INSERT INTO `0_currencies` VALUES('Pounds', 'GBP', '£', 'England', 'Pence', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -725,8 +726,8 @@ CREATE TABLE IF NOT EXISTS `0_debtors_master` (
   `notes` tinytext NOT NULL,
   `inactive` tinyint(1) NOT NULL default '0',
   PRIMARY KEY  (`debtor_no`),
-  KEY `name` (`name`),
-  UNIQUE KEY `debtor_ref` (`debtor_ref`)
+  UNIQUE KEY `debtor_ref` (`debtor_ref`),
+  KEY `name` (`name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 ;
 
 --

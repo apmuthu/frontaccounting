@@ -111,7 +111,7 @@ CREATE TABLE `0_bank_trans` (
   `trans_date` date NOT NULL DEFAULT '0000-00-00',
   `amount` double DEFAULT NULL,
   `dimension_id` int(11) NOT NULL DEFAULT '0',
-  `dimension0_id` int(11) NOT NULL DEFAULT '0',
+  `dimension2_id` int(11) NOT NULL DEFAULT '0',
   `person_type_id` int(11) NOT NULL DEFAULT '0',
   `person_id` tinyblob,
   `reconciled` date DEFAULT NULL,
@@ -124,6 +124,26 @@ CREATE TABLE `0_bank_trans` (
 
 ### Data of table `0_bank_trans` ###
 
+
+### Table structure for table `0_bom`
+
+DROP TABLE IF EXISTS `0_bom`;
+CREATE TABLE IF NOT EXISTS `0_bom` (
+  `id` int(11) NOT NULL auto_increment,
+  `parent` char(20) NOT NULL default '',
+  `component` char(20) NOT NULL default '',
+  `workcentre_added` int(11) NOT NULL default '0',
+  `loc_code` char(5) NOT NULL default '',
+  `quantity` double NOT NULL default '1',
+  PRIMARY KEY  (`parent`,`component`,`workcentre_added`,`loc_code`),
+  KEY `component` (`component`),
+  KEY `id` (`id`),
+  KEY `loc_code` (`loc_code`),
+  KEY `parent` (`parent`,`loc_code`),
+  KEY `workcentre_added` (`workcentre_added`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 ;
+
+### Dumping data for table `0_bom`
 
 ### Structure of table `0_budget_trans` ###
 
@@ -138,12 +158,12 @@ CREATE TABLE `0_budget_trans` (
   `memo_` tinytext NOT NULL,
   `amount` double NOT NULL DEFAULT '0',
   `dimension_id` int(11) DEFAULT '0',
-  `dimension0_id` int(11) DEFAULT '0',
+  `dimension2_id` int(11) DEFAULT '0',
   `person_type_id` int(11) DEFAULT NULL,
   `person_id` tinyblob,
   PRIMARY KEY (`counter`),
   KEY `Type_and_Number` (`type`,`type_no`),
-  KEY `Account` (`account`,`tran_date`,`dimension_id`,`dimension0_id`)
+  KEY `Account` (`account`,`tran_date`,`dimension_id`,`dimension2_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ;
 
 ### Data of table `0_budget_trans` ###
@@ -468,7 +488,7 @@ CREATE TABLE `0_debtor_trans` (
   `rate` double NOT NULL DEFAULT '1',
   `ship_via` int(11) DEFAULT NULL,
   `dimension_id` int(11) NOT NULL DEFAULT '0',
-  `dimension0_id` int(11) NOT NULL DEFAULT '0',
+  `dimension2_id` int(11) NOT NULL DEFAULT '0',
   `payment_terms` int(11) DEFAULT NULL,
   PRIMARY KEY (`type`,`trans_no`),
   KEY `debtor_no` (`debtor_no`,`branch_code`),
@@ -516,7 +536,7 @@ CREATE TABLE `0_debtors_master` (
   `curr_code` char(3) NOT NULL DEFAULT '',
   `sales_type` int(11) NOT NULL DEFAULT '1',
   `dimension_id` int(11) NOT NULL DEFAULT '0',
-  `dimension0_id` int(11) NOT NULL DEFAULT '0',
+  `dimension2_id` int(11) NOT NULL DEFAULT '0',
   `credit_status` int(11) NOT NULL DEFAULT '0',
   `payment_terms` int(11) DEFAULT NULL,
   `discount` double NOT NULL DEFAULT '0',
@@ -603,13 +623,13 @@ CREATE TABLE `0_gl_trans` (
   `memo_` tinytext NOT NULL,
   `amount` double NOT NULL DEFAULT '0',
   `dimension_id` int(11) NOT NULL DEFAULT '0',
-  `dimension0_id` int(11) NOT NULL DEFAULT '0',
+  `dimension2_id` int(11) NOT NULL DEFAULT '0',
   `person_type_id` int(11) DEFAULT NULL,
   `person_id` tinyblob,
   PRIMARY KEY (`counter`),
   KEY `Type_and_Number` (`type`,`type_no`),
   KEY `dimension_id` (`dimension_id`),
-  KEY `dimension0_id` (`dimension0_id`),
+  KEY `dimension2_id` (`dimension2_id`),
   KEY `tran_date` (`tran_date`),
   KEY `account_and_tran_date` (`account`,`tran_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ;
@@ -977,7 +997,7 @@ CREATE TABLE `0_quick_entry_lines` (
   `action` varchar(2) NOT NULL,
   `dest_id` varchar(15) NOT NULL DEFAULT '',
   `dimension_id` smallint(6) unsigned DEFAULT NULL,
-  `dimension0_id` smallint(6) unsigned DEFAULT NULL,
+  `dimension2_id` smallint(6) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `qid` (`qid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 ;
@@ -1253,7 +1273,7 @@ CREATE TABLE `0_stock_master` (
   `adjustment_account` varchar(15) NOT NULL DEFAULT '',
   `assembly_account` varchar(15) NOT NULL DEFAULT '',
   `dimension_id` int(11) DEFAULT NULL,
-  `dimension0_id` int(11) DEFAULT NULL,
+  `dimension2_id` int(11) DEFAULT NULL,
   `actual_cost` double NOT NULL DEFAULT '0',
   `last_cost` double NOT NULL DEFAULT '0',
   `material_cost` double NOT NULL DEFAULT '0',
@@ -1385,7 +1405,7 @@ CREATE TABLE `0_suppliers` (
   `payment_terms` int(11) DEFAULT NULL,
   `tax_included` tinyint(1) NOT NULL DEFAULT '0',
   `dimension_id` int(11) DEFAULT '0',
-  `dimension0_id` int(11) DEFAULT '0',
+  `dimension2_id` int(11) DEFAULT '0',
   `tax_group_id` int(11) DEFAULT NULL,
   `credit_limit` double NOT NULL DEFAULT '0',
   `purchase_account` varchar(15) NOT NULL DEFAULT '',
