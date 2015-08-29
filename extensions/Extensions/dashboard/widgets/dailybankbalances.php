@@ -56,7 +56,7 @@ class dailybankbalances
               ." GROUP BY bank_act, bank_account_name"
               ." UNION ALL"
               ." SELECT bank_act, bank_account_name, trans_date, SUM(amount) amount"
-              ." FROM 0_bank_trans bt"
+              ." FROM ".TB_PREF."bank_trans bt"
               ." INNER JOIN ".TB_PREF."bank_accounts ba ON bt.bank_act = ba.id"
               ." WHERE bank_act = ".$this->bank_act
               ." AND trans_date < now() + INTERVAL ".$this->days_future." DAY"

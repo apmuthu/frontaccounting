@@ -1,5 +1,5 @@
 Package: dashboard
-Version: 2.3.15-5
+Version: 2.4.0-1
 Name: Company Dashboard
 Description: This module provides setup and support functions for the Dashboard theme. Both require each other to work.
  You need to install both the Dashboard module and Dashboard theme. The Dashboard theme changes each application main
@@ -13,5 +13,5 @@ Homepage: frontaccounting.com
 Depends: dashboard_theme
 InstallPath: modules/dashboard
 Type: extension
-Filename: dashboard-2.3.15-5
+Filename: dashboard-2.4.0-1
 

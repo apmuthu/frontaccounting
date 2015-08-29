@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------
-// $ Revision:  1.0 $
+// $ Revision:  1.1 $
 // Creator: Alastair Robertson (frontaccounting@kwikpay.co.nz)
 //			Based on TCLim's suggestions in the FA forum, 
 //			and Joe Hunt's Exclusive theme
@@ -72,4 +72,11 @@ Weekly Sales:
 This lists the gross sales for each week, as a table, line or bar chart.
 
 
-
+Revision:
+---------
+1.1  Fix sql table definition, changing tinyint(4) to tinyint(1) and remove autoincrement initialisation
+     Bank balances widget showing yesterday's balance
+	 Customers widget add link to customer transactions
+	 Suppliers widget add link to supplier transactions
+	 Daily bank balances widget not working for secondary companies, add link to bank transactions
+	 Reminder rescheduling not working for periods greater than 1 month, week or day

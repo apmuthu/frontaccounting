@@ -59,15 +59,15 @@ class suppliers
         $result = db_query($sql);
 
         if ($this->graph_type=='Table') {
-            $th = array(_("Supplier"), _("Amount"));
+            $th = array(null, _("Supplier"), _("Amount"));
             start_table(TABLESTYLE, "width=98%");
             table_header($th);
             $k = 0; //row colour counter
             while ($myrow = db_fetch($result))
             {
                 alt_table_row_color($k);
-                $name = $myrow["supplier_id"]." ".$myrow["supp_name"];
-                label_cell($name);
+            	label_cell(viewer_link($myrow["supplier_id"], 'purchasing/inquiry/supplier_inquiry.php?supplier_id='.$myrow["supplier_id"]));
+                label_cell(viewer_link($myrow["supp_name"], 'purchasing/inquiry/supplier_inquiry.php?supplier_id='.$myrow["supplier_id"]));
                 amount_cell($myrow['total']);
                 end_row();
             }

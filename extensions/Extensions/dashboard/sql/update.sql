@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `0_dashboard_widgets` (
   `app` varchar(50) NOT NULL,
   `column_id` int(11) NOT NULL,
   `sort_no` int(11) NOT NULL,
-  `collapsed` tinyint(4) NOT NULL,
+  `collapsed` tinyint(1) NOT NULL,
   `widget` varchar(100) NOT NULL,
   `description` varchar(100) NOT NULL,
   `param` text,

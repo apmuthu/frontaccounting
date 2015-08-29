@@ -27,7 +27,7 @@ $description = $myrow["description"];
 $frequency = $myrow["frequency"];
 $param = $myrow["param"];
 $data = json_decode(html_entity_decode($param));
-$occurrence = intval(coalesce($data,'occurence', '1'));
+$occurrence = intval(coalesce($data,'occurrence', '1'));
 switch ($frequency)
 {
     case 'daily':

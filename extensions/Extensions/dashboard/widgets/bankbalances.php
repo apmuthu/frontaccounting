@@ -51,7 +51,7 @@ class bankbalances
         while ($myrow = db_fetch($result))
         {
             alt_table_row_color($k);
-            label_cell($myrow["bank_account_name"]);
+            label_cell(viewer_link($myrow["bank_account_name"], 'gl/inquiry/bank_inquiry.php?bank_account='.$myrow["bank_act"]));
             amount_cell($myrow['balance']);
             end_row();
         }

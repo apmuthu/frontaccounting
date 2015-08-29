@@ -59,7 +59,7 @@ class customers
         $result = db_query($sql);
 
         if ($this->graph_type=='Table') {
-            $th = array(_("Customer"), _("Amount"));
+            $th = array(null, _("Customer"), _("Amount"));
             start_table(TABLESTYLE, "width=98%");
             table_header($th);
             $k = 0; //row colour counter
@@ -67,9 +67,9 @@ class customers
             while ($myrow = db_fetch($result))
             {
                 alt_table_row_color($k);
-                $name = $myrow["debtor_no"]." ".$myrow["name"];
-                label_cell($name);
-                amount_cell($myrow['total']);
+            	label_cell(viewer_link($myrow["debtor_no"], 'sales/inquiry/customer_inquiry.php?customer_id='.$myrow["debtor_no"]));
+            	label_cell(viewer_link($myrow["name"], 'sales/inquiry/customer_inquiry.php?customer_id='.$myrow["debtor_no"]));
+            	amount_cell($myrow['total']);
                 end_row();
             }
             end_table(1);
