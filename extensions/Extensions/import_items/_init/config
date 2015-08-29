@@ -1,5 +1,5 @@
 Package: import_items
-Version: 2.3.0-2
+Version: 2.3.0-3
 Name: Inventory Items CSV Import
 Description: This version supports importing Items, Sales Kits and BOM
  The fields used will be different depending upon what is being imported.
@@ -12,5 +12,5 @@ Homepage: frontaccounting.com
 Depends: 
 InstallPath: modules/import_items
 Type: extension
-Filename: import_items-2.3.0-2
+Filename: import_items-2.3.0-3
 

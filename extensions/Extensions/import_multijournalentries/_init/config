@@ -1,5 +1,5 @@
 Package: import_multijournalentries
-Version: 2.3.0-7
+Version: 2.3.0-8
 Name: Import Multiple Journal Entries
 Description: This extension imports CSV files of the following format:
  entryid, date, reference, accountcode, dimension1, dimension2, amount, memo
@@ -20,5 +20,5 @@ Homepage: frontaccounting.com
 Depends: 
 Type: extension
 InstallPath: modules/import_multijournalentries
-Filename: import_multijournalentries-2.3.0-7
+Filename: import_multijournalentries-2.3.0-8
 
