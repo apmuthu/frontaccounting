@@ -1,5 +1,5 @@
 Package: bs_BA
-Version: 2.3.0-3
+Version: 2.3.0-4
 Description: Bosnian translation Version merged from FA 2.2
 Author: Nermin Sirbic <lang_sh@frontaccounting.com>
 Maintenance: Nermin Sirbic <lang_sh@frontaccounting.com>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Bosnian
 InstallPath: lang/bs_BA
-Filename: bs_BA-2.3.0-3
+Filename: bs_BA-2.3.0-4
 

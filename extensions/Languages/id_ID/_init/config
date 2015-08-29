@@ -1,5 +1,5 @@
 Package: id_ID
-Version: 2.3.0-5
+Version: 2.3.0-6
 Description: Indonesian translation Version merged from FA 2.2
 Author: Y. Shaka <yshaka@yahoo.co.id>
 Maintenance: Agus Y. Shaka <yshaka@yahoo.co.id>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Indonesian
 InstallPath: lang/id_ID
-Filename: id_ID-2.3.0-5
+Filename: id_ID-2.3.0-6
 

@@ -1,5 +1,5 @@
 Package: en_NZ
-Version: 2.3.2-3
+Version: 2.3.2-4
 Description: New Zealand specific vocabulary fixes
 Author: Alastair Robertson <frontaccounting@kwikpay.co.nz>
 Maintenance: Alastair Robertson <frontaccounting@kwikpay.co.nz>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: English (NZ)
 InstallPath: lang/en_NZ
-Filename: en_NZ-2.3.2-3
+Filename: en_NZ-2.3.2-4
 

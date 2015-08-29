@@ -1,5 +1,5 @@
 Package: bg_BG
-Version: 2.3.0-3
+Version: 2.3.0-4
 Description: Bulgarian translation file Version merged from FA 2.2
 Author: Miroslav Roussenov <mirorus@yahoo.com>
 Maintenance: Miroslav Roussenov <mirorus@yahoo.com>
@@ -11,5 +11,5 @@ Depends:
 Type: language
 Name: Bulgarian
 InstallPath: lang/bg_BG
-Filename: bg_BG-2.3.0-3
+Filename: bg_BG-2.3.0-4
 
