@@ -69,7 +69,7 @@ class email
     {
     	if (!isset($filename))
     		$filename = basename($file);
-			$this->attachment[$filename] = $file;
+		$this->attachment[$filename] = $file;
     }
 
     function subject($subject)
@@ -128,8 +128,7 @@ class email
 		$this->header .= "Content-Type: multipart/mixed;\n boundary=\"$this->boundary\"\n";
 
         // Add Attachments
-        $max = count($this->attachment);
-        if ($max > 0)
+        if (!empty($this->attachment))
         {
             foreach ($this->attachment as $filename => $file)
             {
