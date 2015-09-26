@@ -1,4 +1,5 @@
 
+2015-09-26 Ap.Muthu           session_destroy() fix during logout.
 2015-08-31 Ap.Muthu           Backport: Small cleanups in mail class.
 2015-08-29 Ap.Muthu           Backport: Fixed sparse js dialog when canceling sales document entry.
 2015-08-29 Ap.Muthu           Backport: Void a Transaction: fixed GRN voiding.
