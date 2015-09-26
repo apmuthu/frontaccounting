@@ -215,8 +215,8 @@ if (get_post('Refresh')) {
 			if (!$ext['active'])
 				$activated = activate_hooks($ext['package'], $comp);
 			else
-				$activated = hook_invoke($ext['package'], check_value('Active'.$i) ?
-				 'activate_extension':'deactivate_extension', $comp, false);
+				$activated = deactivate_hooks($ext['package'], $comp);
+
 			if ($activated !== null)
 				$result &= $activated;
 			if ($activated || ($activated === null))

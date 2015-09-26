@@ -263,6 +263,23 @@ function activate_hooks($ext, $comp)
 	else
 		return $hooks->activate_extension($comp, false);
 }
+function deactivate_hooks($ext, $comp)
+{
+	global $Hooks;
+	
+	$hooks = @$Hooks[$ext];
+	if (!$hooks) {
+		$hookclass = 'hooks_'.$ext;
+		if (class_exists($hookclass))
+			$hooks = new $hookclass;
+		else
+			return true; // extension does not have hooks file
+	}
+	if (!$hooks)
+		return false;
+	else
+		return $hooks->deactivate_extension($comp, false);
+}
 /*
 	Calls hook $method defined in extension $ext (if any)
 */
