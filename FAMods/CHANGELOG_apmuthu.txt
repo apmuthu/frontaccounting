@@ -1,4 +1,5 @@
 
+2015-10-06 Ap.Muthu           Extension Deactivation fixed in core - removed here 
 2015-09-26 Ap.Muthu           Extension Deactivation fix.
 2015-09-26 Ap.Muthu           session_destroy() fix during logout.
 2015-08-31 Ap.Muthu           Backport: Small cleanups in mail class.
