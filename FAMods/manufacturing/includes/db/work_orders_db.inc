@@ -45,7 +45,7 @@ function add_material_cost($stock_id, $qty, $date_, $advanced=false)
 	if ($qoh + $qty != 0)
 	{
 		if ($qoh == 0) // 27.10.2014 apmuthu and dz.
-			$material_cost += $m_cost;
+			$material_cost = $m_cost;
 		else	
 			$material_cost = ($qoh * $material_cost + $qty * $m_cost) /	($qoh + $qty);
 	}
@@ -555,6 +555,7 @@ function get_sql_for_work_orders($outstanding_only, $all_items)
 
 		$sql .= " AND workorder.required_by < '$Today' ";
 	}
+	$sql .= " ORDER BY workorder.id DESC";
 	return $sql;
 }
 
