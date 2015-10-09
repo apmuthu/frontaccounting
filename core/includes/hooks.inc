@@ -261,7 +261,7 @@ function activate_hooks($ext, $comp, $on=true)
 	if (!$hooks)
 		return false;
 	elseif ($on)
- 		return $hooks->activate_extension($comp, false);
+		return $hooks->activate_extension($comp, false);
 	else
 		return $hooks->deactivate_extension($comp, false);
 }
