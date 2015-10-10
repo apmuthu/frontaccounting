@@ -1,4 +1,5 @@
 
+2015-10-10 Ap.Muthu           Previous commit removed since now included in core
 2015-10-10 Ap.Muthu           Fixed Work Order material cost when qoh is 0 for Assembled Item and WO listing initial sort
 2015-10-06 Ap.Muthu           Extension Deactivation fixed in core - removed here 
 2015-09-26 Ap.Muthu           Extension Deactivation fix.
