@@ -763,8 +763,8 @@ CREATE TABLE IF NOT EXISTS `0_fiscal_year` (
 -- Dumping data for table `0_fiscal_year`
 --
 
-INSERT INTO `0_fiscal_year` VALUES (1, '2014-01-01', '2014-12-31', 1);
-INSERT INTO `0_fiscal_year` VALUES (2, '2015-01-01', '2015-12-31', 0);
+INSERT INTO `0_fiscal_year`(`id`,`begin`,`end`,`closed`) VALUES (1,CONCAT(YEAR(NOW())-1,'-01-01'), CONCAT(YEAR(NOW())-1,'-12-31'),0);
+INSERT INTO `0_fiscal_year`(`id`,`begin`,`end`,`closed`) VALUES (2,CONCAT(YEAR(NOW()),  '-01-01'), CONCAT(YEAR(NOW()),  '-12-31'),0);
 
 --
 -- Table structure for table `0_gl_trans`
@@ -2072,7 +2072,7 @@ CREATE TABLE IF NOT EXISTS `0_users` (
 -- Dumping data for table `0_users`
 --
 
-INSERT INTO `0_users` VALUES (1, 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Administrator', 2, '', 'adm@adm.com', 'en_US', 0, 0, 0, 0, 'default', 'Letter', 2, 2, 4, 1, 1, 0, 0, '2014-04-04 12:34:29', 10, 1, 1, '', 1, 0, 'orders', 0);
+INSERT INTO `0_users` VALUES (1, 'admin', '5f4dcc3b5aa765d61d8327deb882cf99', 'Administrator', 2, '', 'adm@adm.com', 'en_US', 0, 0, 0, 0, 'default', 'Letter', 2, 2, 4, 1, 1, 0, 0, NOW(), 10, 1, 1, '', 1, 0, 'orders', 0);
 
 -- --------------------------------------------------------
 
