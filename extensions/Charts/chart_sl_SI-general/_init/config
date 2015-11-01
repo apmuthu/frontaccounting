@@ -1,0 +1,14 @@
+Package: chart_sl_SI-general
+Version: 2.3.24-1
+Name: Slovenian COA
+Description: This is typical Slovenian chart of accounts.
+Encoding: latin-2
+Author: Mihael Forjanic <forjanicm@gmail.com>
+Maintenance: Mihael Forjanič <forjanicm@gmail.com>
+Homepage: 
+Depends: 
+Type: chart
+SqlScript: sl_SI-general.sql
+InstallPath: sql
+Filename: chart_sl_SI-general-2.3.24-1
+
