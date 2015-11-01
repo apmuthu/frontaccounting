@@ -1,0 +1,15 @@
+Package: sl_SI
+Version: 2.3.24-1
+Description: Slovenian translation files.
+Author: 
+Maintenance: Mihael Forjanič <forjanicm@gmail.com>
+Homepage: frontaccounting.com
+Language: sl_SI
+Encoding: utf-8
+RTLDir: no
+Depends: 
+Type: language
+Name: Slovenian
+InstallPath: lang/sl_SI
+Filename: sl_SI-2.3.24-1
+
