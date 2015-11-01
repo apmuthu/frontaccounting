@@ -1,5 +1,5 @@
 Package: chart_en_ZA-general
-Version: 2.3.0-4
+Version: 2.3.0-5
 Name: English South African 5 digits COA - New
 Description: This is an English Soth African 5 digits chart of accounts for a starting company,
  based on the COA from infotechaccountants.com.
@@ -11,5 +11,5 @@ Depends:
 Type: chart
 InstallPath: sql
 SqlScript: en_ZA-new.sql
-Filename: chart_en_ZA-general-2.3.0-4
+Filename: chart_en_ZA-general-2.3.0-5
 
