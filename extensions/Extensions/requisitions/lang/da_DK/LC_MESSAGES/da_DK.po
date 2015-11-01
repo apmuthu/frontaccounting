@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: FrontAccounting - Requisitions\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-19 20:34+0100\n"
+"PO-Revision-Date: 2015-09-13 18:49+0200\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Michael R. Christensen <mrc@micco.dk>\n"
+"Language-Team: MicCo <mrc@micco.dk>\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: hooks.php:16 hooks.php:29
+msgid "Requisitions Entries"
+msgstr "Rekvisitions poster"
+
+#: hooks.php:18
+msgid "Requisitions Allocation"
+msgstr "Rekvisitioner Allokering"
+
+#: hooks.php:27 requisition_allocations.php:17 requisition_details.php:17
+#: requisitions.php:17
+msgid "Requisitions"
+msgstr "Rekvisitioner"
+
+#: hooks.php:30
+msgid "Requisitions Allocations"
+msgstr "Rekvisitioner Allokeringer"
+
+#: requisition_allocations.php:28
+msgid "Purchase orders has been generated."
+msgstr "Købsordrer er oprettet."
+
+#: requisition_allocations.php:30
+msgid "Purchase orders generation failed."
+msgstr "Købsordrer generering mislykkedes."
+
+#: requisition_allocations.php:43
+msgid "The quantity of use cannot be empty."
+msgstr "Mængden for brug må ikke være tom."
+
+#: requisition_allocations.php:49
+msgid "The price cannot be empty."
+msgstr "Prisen kan ikke være tom."
+
+#: requisition_allocations.php:58 requisition_details.php:67
+msgid "Selected requisition details has been updated."
+msgstr "Valgte rekvisition detaljer er blevet opdateret."
+
+#: requisition_allocations.php:80
+msgid "RNo."
+msgstr "RNr."
+
+#: requisition_allocations.php:80
+msgid "Point of Use"
+msgstr "Punkt for Anvendelse"
+
+#: requisition_allocations.php:80
+msgid "Request Date"
+msgstr "Anmodningsdato"
+
+#: requisition_allocations.php:80 requisition_details.php:129
+msgid "Item Code"
+msgstr "Varenr."
+
+#: requisition_allocations.php:80 requisition_details.php:129
+msgid "Item Name"
+msgstr "Vare navn"
+
+#: requisition_allocations.php:80 requisition_details.php:129
+msgid "Purpose"
+msgstr "Formål"
+
+#: requisition_allocations.php:80
+msgid "Quantity"
+msgstr "Mængde"
+
+#: requisition_allocations.php:80
+msgid "Price"
+msgstr "Pris"
+
+#: requisition_allocations.php:80
+msgid "Supplier"
+msgstr "Leverandør"
+
+#: requisition_allocations.php:98 requisition_details.php:143
+#: requisitions.php:116
+msgid "Edit"
+msgstr "Rediger"
+
+#: requisition_allocations.php:124
+msgid "Supplier : "
+msgstr "Leverandør :"
+
+#: requisition_allocations.php:128 requisition_details.php:175
+msgid "kits"
+msgstr "kits"
+
+#: requisition_allocations.php:130
+msgid "Order Quantity:"
+msgstr "Ordrestørrelse:"
+
+#: requisition_allocations.php:131
+msgid "Order Price :"
+msgstr "Ordre pris"
+
+#: requisition_allocations.php:139
+msgid "Generate Purchase Orders"
+msgstr "Opret Indkøbsordrer"
+
+#: requisition_details.php:29
+#, php-format
+msgid "Requisition #%d is already completed or does not exists."
+msgstr "Rekvisition #%d er allerede gennemført eller eksisterer ikke."
+
+#: requisition_details.php:30 requisition_details.php:36
+msgid "Entry &New Requisition."
+msgstr "Post Ny Rekvisition."
+
+#: requisition_details.php:35
+#, php-format
+msgid "Requisition #%d has been completed."
+msgstr "Rekvisition #%d er afsluttet."
+
+#: requisition_details.php:52
+msgid "The item of use cannot be empty."
+msgstr "Punkt i brug må ikke være tom."
+
+#: requisition_details.php:58
+msgid "The estimated price be empty."
+msgstr "Den anslåede pris kan ikke være tom."
+
+#: requisition_details.php:72
+msgid "New requisition details has been added"
+msgstr "Nye rekvisition detaljer er blevet tilføjet"
+
+#: requisition_details.php:84
+msgid "Selected requisition detail has been deleted"
+msgstr "Valgte rekvisition detaljer er blevet slettet"
+
+#: requisition_details.php:103 requisitions.php:103
+msgid "Point of use"
+msgstr "Punkt for anvendelse"
+
+#: requisition_details.php:103 requisitions.php:103
+msgid "Narrative"
+msgstr "Hændelsesforløb"
+
+#: requisition_details.php:103 requisitions.php:103
+msgid "Application Date"
+msgstr "Applikationsdato"
+
+#: requisition_details.php:103
+msgid "Completation"
+msgstr "Gennemført"
+
+#: requisition_details.php:114
+msgid "Complete"
+msgstr "Komplet"
+
+#: requisition_details.php:129
+msgid "Qrder Quantity"
+msgstr "Order mængde"
+
+#: requisition_details.php:129
+msgid "Estimate Price"
+msgstr "Anslået Pris"
+
+#: requisition_details.php:144 requisitions.php:118
+msgid "Delete"
+msgstr "Slet"
+
+#: requisition_details.php:170
+msgid "Item :"
+msgstr "Vare:"
+
+#: requisition_details.php:171
+msgid "Purpose :"
+msgstr "Formål :"
+
+#: requisition_details.php:177
+msgid "Requisition Quantity:"
+msgstr "Rekvisition mængde:"
+
+#: requisition_details.php:178
+msgid "Estimate Price :"
+msgstr "Anslået Pris :"
+
+#: requisitions.php:34
+msgid "The point of use cannot be empty."
+msgstr "Punktet for anvendelse kan ikke være tomt."
+
+#: requisitions.php:40
+msgid "The narrative be empty."
+msgstr "Hændelsesforløbet kan ikke være tomt."
+
+#: requisitions.php:49
+msgid "Selected requisition has been updated."
+msgstr "Valgte rekvisition er blevet opdateret."
+
+#: requisitions.php:56
+msgid "New requisition has been added"
+msgstr "Nye rekvisition er blevet tilføjet"
+
+#: requisitions.php:69
+msgid ""
+"Cannot delete this requisition because details transactions have been "
+"created referring to it."
+msgstr ""
+"Kan ikke slette denne rekvisition, fordi detaljeret transaktioner er "
+"blevet oprettet med henvisning til den."
+
+#: requisitions.php:84
+msgid "Selected requisition has been deleted"
+msgstr "Valgte rekvisition er blevet slettet"
+
+#: requisitions.php:103
+msgid "RNo. "
+msgstr "RNr."
+
+#: requisitions.php:103 requisitions.php:120
+msgid "Details"
+msgstr "Detaljer"
+
+#: requisitions.php:145
+msgid "Point of use :"
+msgstr "Punkt for anvendelse :"
+
+#: requisitions.php:146
+msgid "Narrative :"
+msgstr "Hændelsesforløb :"
+
+#: requisitions.php:147
+msgid "Details :"
+msgstr "Detaljer:"
+
+#: ../../../../themes/default/renderer.php:28
+msgid "Main Menu"
+msgstr "Hovedmenu"
+
+#: ../../../../themes/default/renderer.php:53
+#: ../../../../themes/default/renderer.php:82
+msgid "Logout"
+msgstr "Log ud"
+
+#: ../../../../themes/default/renderer.php:54
+#: ../../../../themes/default/renderer.php:80
+msgid "Help"
+msgstr "Hjælp"
+
+#: ../../../../themes/default/renderer.php:75
+msgid "Preferences"
+msgstr "Præferencer"
+
+#: ../../../../themes/default/renderer.php:76
+msgid "Change password"
+msgstr "Skift adgangskode"
+
+#: ../../../../themes/default/renderer.php:127
+msgid "Theme:"
+msgstr "Tema:"

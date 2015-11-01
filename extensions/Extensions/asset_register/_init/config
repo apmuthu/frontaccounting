@@ -1,5 +1,5 @@
 Package: asset_register
-Version: 2.3.3-11
+Version: 2.3.3-12
 Name: Asset register
 DefaultStatus: inactive
 Description: Asset register
@@ -11,5 +11,5 @@ Maintenance: Dennis Gichangi <dennis@dennis.me.ke>
 Homepage: http://www.dennis.me.ke/press
 Type: extension
 InstallPath: modules/asset_register
-Filename: asset_register-2.3.3-11
+Filename: asset_register-2.3.3-12
 
