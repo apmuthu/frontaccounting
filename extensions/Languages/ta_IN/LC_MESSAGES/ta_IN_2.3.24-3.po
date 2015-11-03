@@ -1,0 +1,1678 @@
+# Translation of FrontAccounting in Tamil
+# This file is distributed under the same license as the FrontAccounting package.
+msgid ""
+msgstr ""
+"Project-Id-Version: FrontAccounting\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-23 14:55+0100\n"
+"PO-Revision-Date: 2015-11-03 16:08+0530\n"
+"Last-Translator: Ap.Muthu <apmuthu@usa.net>\n"
+"Language-Team: Tamil (India) (http://www.gnuacademy.org/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ta_IN\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+
+#: admin/attachments.php:188 gl/inquiry/journal_inquiry.php:135
+msgid "View"
+msgstr "காண்க"
+
+#: admin/backups.php:192
+msgid "View Backup"
+msgstr "காப்பு காண்க"
+
+#: admin/fiscalyears.php:133
+msgid ""
+"Warning: Deleting a fiscal year all transactions \n"
+"\t\tare removed and converted into relevant balances. This process is irreversible!"
+msgstr ""
+"ஒரு நிதி ஆண்டு நீக்குதல் எல்லா பரிமாற்றங்களையும் நீக்கப்படும் \n"
+"\t\tமற்றும் சம்பந்தப்பட்ட இருப்புகளாக மாற்றப்படுகிறது. இந்த செயல்முறை மாற்றமுடியாத ஆகிறது!"
+
+#: reporting/rep705.php:247 reporting/rep705.php:260 reporting/rep705.php:271
+#: reporting/reports_main.php:354 reporting/reports_main.php:407
+#: reporting/reports_main.php:455
+msgid "Year"
+msgstr "ஆண்டு"
+
+#: gl/manage/gl_quick_entries.php:240 gl/includes/ui/gl_journal_ui.inc:55
+msgid "Yearly"
+msgstr "வருடாந்திரம்"
+
+#: admin/create_coy.php:263 admin/fiscalyears.php:159 admin/inst_lang.php:85
+#: admin/inst_lang.php:97 dimensions/inquiry/search_dimensions.php:107
+#: gl/manage/bank_accounts.php:125 gl/manage/currencies.php:162
+#: gl/manage/gl_account_classes.php:127 gl/manage/gl_quick_entries.php:230
+#: includes/system_tests.inc:38 includes/system_tests.inc:113
+#: includes/system_tests.inc:126 includes/ui/ui_lists.inc:1681
+#: purchasing/manage/suppliers.php:121 reporting/rep101.php:113
+#: reporting/rep102.php:113 reporting/rep102.php:115 reporting/rep104.php:107
+#: reporting/rep106.php:77 reporting/rep114.php:76 reporting/rep201.php:105
+#: reporting/rep202.php:117 reporting/rep202.php:119 reporting/rep203.php:88
+#: reporting/rep303.php:108 reporting/rep303.php:116 reporting/rep402.php:99
+#: reporting/rep501.php:111 sales/manage/sales_points.php:94
+#: sales/manage/sales_points.php:95 sales/manage/sales_types.php:119
+#: taxes/item_tax_types.php:133 taxes/tax_groups.php:137
+msgid "Yes"
+msgstr "ஆம்"
+
+#: admin/backups.php:199
+msgid ""
+"You are about to remove selected backup file.\n"
+"Do you want to continue ?"
+msgstr ""
+"நீங்கள் தேர்ந்தெடுத்த காப்பு கோப்பு நீக்க உள்ளீர்கள்.\n"
+"நீங்கள் தொடர விரும்புகிறீர்களா ?"
+
+#: admin/backups.php:195
+msgid ""
+"You are about to restore database from backup file.\n"
+"Do you want to continue?"
+msgstr ""
+"நீங்கள் காப்பு கோப்பிலிருந்து டேட்டாபேஸ் மீட்டெடுக்க போகிறீர்கள்.\n"
+"நீங்கள் தொடர விரும்புகிறீர்களா?"
+
+#: admin/backups.php:165
+msgid "You can only upload *.sql backup files"
+msgstr "நீங்கள் * .sql காப்பு கோப்புகளை மட்டும் பதிவேற்ற முடியும்"
+
+#: admin/create_coy.php:67
+msgid "You cannot have table set without prefix together with prefixed sets in the same database."
+msgstr "ஒரு முன்னொட்டாக டேபிள் மற்றும் வேறு ஒரு டேபிள் முற்சேர்க்கையாக இல்லாமல் அமைக்கஅதே டேட்டாபேஸ் உள்ளே முடியாது"
+
+#: admin/change_current_user_password.php:73
+msgid "Your password has been updated."
+msgstr "உங்கள் கடவுச்சொல்லை மேம்படுத்தப்பட்டது."
+
+#: includes/ui/ui_view.inc:839 purchasing/includes/ui/invoice_ui.inc:465
+msgid "and"
+msgstr "மற்றும்"
+
+#: admin/backups.php:52
+msgid "cannot find backup directory"
+msgstr "காப்பு அடைவு கண்டுபிடிக்க முடியவில்லை"
+
+#: admin/gl_setup.php:145 admin/gl_setup.php:180 admin/gl_setup.php:182
+#: admin/gl_setup.php:190 admin/gl_setup.php:227 admin/payment_terms.php:140
+msgid "days"
+msgstr "நாட்கள்"
+
+#: access/login.php:33
+msgid "or"
+msgstr "அல்லது"
+
+#: access/login.php:33
+msgid "request new password"
+msgstr "புதிய கடவுச்சொல்லை கேட்க"
+
+#: admin/company_preferences.php:202
+msgid "seconds"
+msgstr "விநாடிகள்"
+
+#: reporting/includes/header2.inc:147 reporting/includes/pdf_report.inc:352
+#: reporting/includes/pdf_report.inc:501 reporting/includes/pdf_report.inc:628
+msgid "Page"
+msgstr "பக்கம்"
+
+#: admin/display_prefs.php:117
+msgid "Page Size:"
+msgstr "பக்க அளவு:"
+
+#: admin/change_current_user_password.php:68
+msgid "Password cannot be changed in demo mode."
+msgstr "கடவுச்சொல் காட்டு முறையில் மாற்றப்பட்டது."
+
+#: includes/access_levels.inc:122
+msgid "Password changes"
+msgstr "கடவுச்சொல்லை மாற்றுகிறது"
+
+#: access/password_reset.php:31 access/password_reset.php:61
+msgid "Password reset"
+msgstr "கடவுச்சொல் மீட்டமைப்பு"
+
+#: access/login.php:97 admin/users.php:200
+msgid "Password:"
+msgstr "கடவுச்சொல்:"
+
+#: admin/gl_setup.php:145
+msgid "Past Due Days Interval:"
+msgstr "கடந்த தாமத நாட்கள் இடைவெளியில்:"
+
+#: sales/customer_invoice.php:397 sales/includes/ui/sales_order_ui.inc:397
+#: sales/includes/ui/sales_order_ui.inc:401
+msgid "Payment:"
+msgstr "செலுத்துதல்"
+
+#: includes/ui/ui_lists.inc:1948 includes/ui/ui_lists.inc:1965
+#: includes/ui/ui_lists.inc:1983 includes/ui/ui_view.inc:543
+msgid "Payments"
+msgstr "செலுத்துதல்கள்"
+
+#: admin/display_prefs.php:76
+msgid "Percentages:"
+msgstr "சதவீதங்கள்:"
+
+#: gl/gl_budget.php:91 gl/gl_budget.php:93 gl/inquiry/profit_loss.php:236
+#: gl/manage/gl_quick_entries.php:240 reporting/rep101.php:126
+#: reporting/rep105.php:118 reporting/rep106.php:92 reporting/rep114.php:90
+#: reporting/rep201.php:118 reporting/rep304.php:121 reporting/rep305.php:106
+#: reporting/rep306.php:148 reporting/rep307.php:122 reporting/rep308.php:236
+#: reporting/rep309.php:103 reporting/rep601.php:85 reporting/rep702.php:59
+#: reporting/rep704.php:95 reporting/rep704.php:105 reporting/rep704.php:113
+#: reporting/rep706.php:185 reporting/rep706.php:193 reporting/rep706.php:203
+#: reporting/rep706.php:211 reporting/rep707.php:210 reporting/rep707.php:217
+#: reporting/rep707.php:227 reporting/rep707.php:235 reporting/rep708.php:200
+#: reporting/rep708.php:209 reporting/rep708.php:216 reporting/rep709.php:111
+#: reporting/rep710.php:85
+msgid "Period"
+msgstr "காலம்"
+
+#: gl/inquiry/profit_loss.php:173 reporting/rep707.php:255
+#: reporting/includes/reports_classes.inc:248
+msgid "Period Y-1"
+msgstr "காலம் Y-1"
+
+#: gl/accruals.php:212
+msgid "Periods"
+msgstr "காலங்கள்"
+
+#: reporting/rep103.php:246 reporting/rep205.php:164
+msgid "Ph"
+msgstr "தொபே"
+
+#: admin/users.php:123 includes/ui/contacts_view.inc:41
+#: inventory/manage/locations.php:146 reporting/rep106.php:88
+#: reporting/includes/header2.inc:101 sales/manage/sales_people.php:99
+msgid "Phone"
+msgstr "தொலைபேசி"
+
+#: sales/manage/customer_branches.php:298
+msgid "Phone No"
+msgstr "தொலைபேசி எண்"
+
+#: admin/shipping_companies.php:91
+msgid "Phone Number"
+msgstr "தொலைபேசி எண்"
+
+#: admin/company_preferences.php:168 admin/shipping_companies.php:138
+#: purchasing/manage/suppliers.php:130 sales/manage/customer_branches.php:260
+msgid "Phone Number:"
+msgstr "தொலைபேசி எண்:"
+
+#: admin/backups.php:51
+msgid "Please contact System Administrator."
+msgstr "கணினி நிர்வாகியை தொடர்பு கொள்ளவும்."
+
+#: includes/session.inc:241
+msgid "Please contact your system administrator."
+msgstr "உங்களுடைய கணினி நிர்வாகியை தொடர்பு கொள்ளவும்."
+
+#: access/login.php:31
+msgid "Please login here"
+msgstr "இங்கே உள்நுழையவும்"
+
+#: admin/display_prefs.php:73
+msgid "Prices/Amounts:"
+msgstr "விலைகள்/தொகைகள்:"
+
+#: admin/print_profiles.php:136 admin/print_profiles.php:138
+msgid "Printing Profile Name"
+msgstr "அச்சிடுதல் சுயவிவர பெயர்"
+
+#: admin/print_profiles.php:18
+msgid "Printing Profiles"
+msgstr "அச்சிடுதல் சுயவிவரங்கள்"
+
+#: admin/display_prefs.php:127 admin/users.php:219
+msgid "Printing profile"
+msgstr "அச்சிடுதல் சுயவிவரம்"
+
+#: gl/inquiry/profit_loss.php:27
+msgid "Profit & Loss Drilldown"
+msgstr "லாபம்/நட்ட குறிப்பிட்ட விவரம்"
+
+#: reporting/rep707.php:258
+msgid "Profit and Loss Statement"
+msgstr "லாபம்/நட்ட அறிக்கை"
+
+#: admin/gl_setup.php:149
+msgid "Profit/Loss Year:"
+msgstr "லாபம்/நட்ட ஆண்டு: "
+
+#: admin/gl_setup.php:178 sales/manage/customer_branches.php:253
+msgid "Prompt Payment Discount Account:"
+msgstr "கூறியபடி செலுத்துமாறு தள்ளுபடி கணக்கு:"
+
+#: sales/manage/customers.php:267
+msgid "Prompt Payment Discount Percent:"
+msgstr "கூறியபடி செலுத்துமாறு தள்ளுபடி சதவீதம்:"
+
+#: admin/display_prefs.php:74
+msgid "Quantities:"
+msgstr "அளவுகள்"
+
+#: inventory/includes/item_adjustments_ui.inc:62
+#: inventory/includes/stock_transfers_ui.inc:60
+#: inventory/manage/item_codes.php:124 inventory/manage/sales_kits.php:40
+#: inventory/view/view_adjustment.php:56 inventory/view/view_transfer.php:56
+#: manufacturing/view/wo_issue_view.php:77 manufacturing/manage/bom_edit.php:71
+#: manufacturing/includes/manufacturing_ui.inc:29
+#: manufacturing/includes/manufacturing_ui.inc:157
+#: manufacturing/includes/manufacturing_ui.inc:332
+#: manufacturing/includes/work_order_issue_ui.inc:33
+#: purchasing/includes/ui/invoice_ui.inc:497
+#: purchasing/includes/ui/po_ui.inc:233 purchasing/view/view_grn.php:40
+#: purchasing/view/view_po.php:45 reporting/rep301.php:169
+#: reporting/rep303.php:121 reporting/rep303.php:127 reporting/rep401.php:71
+#: reporting/includes/doctext.inc:29 reporting/includes/doctext.inc:170
+#: reporting/includes/doctext.inc:203 sales/view/view_credit.php:90
+#: sales/view/view_dispatch.php:112 sales/view/view_invoice.php:113
+#: sales/view/view_sales_order.php:201
+#: sales/includes/ui/sales_credit_ui.inc:167
+#: sales/includes/ui/sales_order_ui.inc:146
+msgid "Quantity"
+msgstr "அளவு"
+
+#: sales/view/view_sales_order.php:202
+msgid "Quantity Delivered"
+msgstr "வழங்கின அளவு"
+
+#: inventory/manage/item_codes.php:179 inventory/manage/sales_kits.php:245
+#: manufacturing/work_order_add_finished.php:203
+#: manufacturing/work_order_entry.php:422 manufacturing/manage/bom_edit.php:228
+msgid "Quantity:"
+msgstr "அளவு:"
+
+#: gl/accruals.php:183
+msgid "Quarterly"
+msgstr "காலாண்டு"
+
+#: admin/display_prefs.php:136
+msgid "Query page size:"
+msgstr "கேள்வி பக்க அளவு:"
+
+#: admin/display_prefs.php:30
+msgid "Query size must be integer and greater than zero."
+msgstr "கேள்வி அளவு முழு மற்றும் பூஜ்யம் விட அதிகமாக இருக்க வேண்டும்."
+
+#: admin/gl_setup.php:180
+msgid "Quote Valid Days:"
+msgstr "மேற்கோள் ஏற்றுக்கொள்ளக்கூடிய நாட்கள்"
+
+#: admin/gl_setup.php:171
+msgid "Receivable Account:"
+msgstr "பெறத்தக்க கணக்கு:"
+
+#: admin/display_prefs.php:138
+msgid "Remember last document date:"
+msgstr "கடைசி ஆவணத்தின் தேதியை ஞாபகம் வைத்துக்கொள்:"
+
+#: admin/change_current_user_password.php:93
+msgid "Repeat New Password:"
+msgstr "மறுபடியும் புதிய கடவுச்சொல்:"
+
+#: admin/backups.php:194
+msgid "Restore Backup"
+msgstr "காப்பு மீட்க"
+
+#: admin/backups.php:139
+msgid "Restore backup completed."
+msgstr "காப்பு மீட்க நிறைவு."
+
+#: access/login.php:13 access/password_reset.php:13
+msgid "Restricted access"
+msgstr "கட்டுப்படுத்தப்பட்ட அணுகல்"
+
+#: admin/gl_setup.php:147
+msgid "Retained Earnings:"
+msgstr "தக்கவைத்து வருவாய்:"
+
+#: admin/company_preferences.php:193
+msgid "Round to nearest:"
+msgstr "அருகிலுள்ள"
+
+#: admin/gl_setup.php:173 admin/gl_setup.php:213
+#: inventory/manage/item_categories.php:192 inventory/manage/items.php:354
+#: sales/manage/customer_branches.php:250
+msgid "Sales Account:"
+msgstr "விற்பனை கணக்கு:"
+
+#: admin/gl_setup.php:176 sales/manage/customer_branches.php:251
+msgid "Sales Discount Account:"
+msgstr "விற்பனை தள்ளுபடி கணக்கு:"
+
+#: admin/create_coy.php:360 gl/gl_budget.php:136
+msgid "Save"
+msgstr "காப்பாற்ற"
+
+#: admin/company_preferences.php:197
+msgid "Search Customer List"
+msgstr "தேடல் வாடிக்கையாளர் பட்டியல்"
+
+#: admin/company_preferences.php:196
+msgid "Search Item List"
+msgstr "தேடல் பொருள் பட்டியல்"
+
+#: admin/company_preferences.php:198
+msgid "Search Supplier List"
+msgstr "தேடல் வழங்குநர் பட்டியல்"
+
+#: admin/attachments.php:88
+msgid "Select attachment file."
+msgstr "தேர்ந்தெடு இணைப்பு கோப்பு."
+
+#: admin/backups.php:21 admin/backups.php:40 admin/backups.php:114
+#: admin/backups.php:142 admin/backups.php:155 admin/backups.php:173
+msgid "Select backup file first."
+msgstr "முதல் ஒரு காப்பு கோப்பு தேர்வு செய்ய"
+
+#: admin/create_coy.php:232
+msgid "Selected company has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட நிறுவனம் நீக்கப்பட்டுவிட்டது"
+
+#: manufacturing/manage/bom_edit.php:110
+msgid "Selected component has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட பகுதி நீக்கப்பட்டுவிட்டது"
+
+#: admin/crm_categories.php:41
+msgid "Selected contact category has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட தொடர்பு பிரிவை மேம்படுத்தப்பட்டது"
+
+#: admin/fiscalyears.php:120
+msgid "Selected fiscal year has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட நிதி ஆண்டு நீக்கப்பட்டுவிட்டது"
+
+#: admin/fiscalyears.php:81
+msgid "Selected fiscal year has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட நிதி ஆண்டு மேம்படுத்தப்பட்டது"
+
+#: admin/attachments.php:86
+msgid "Selected transaction does not exists."
+msgstr "தேர்ந்தெடுக்கப்பட்ட பரிமாற்றத்தில் உள்ளது இல்லை"
+
+#: access/password_reset.php:83
+msgid "Send password -->"
+msgstr "கடவுச்சொல்லை அனுப்பு -->"
+
+#: admin/display_prefs.php:134
+msgid "Set this option to on for using icons instead of text links"
+msgstr "உரை இணைப்புகளுக்கு பதிலாக சின்னங்கள் பயன்படுத்தி கொள்ள இந்த விருப்பத்தை அமைக்கவும்"
+
+#: admin/display_prefs.php:131 admin/users.php:223
+msgid "Set this option to on if your browser directly supports pdf files"
+msgstr "உங்கள் உலாவியில் நேரடியாக pdf கோப்புகளை ஆதரிக்கிறது என்றால் இந்த விருப்பத்தை அமைக்கவும்"
+
+#: admin/gl_setup.php:165
+msgid "Shipping Charged Account:"
+msgstr "போக்குவரத்து கட்டணம் வசூலிக்கப்படும் கணக்கு:"
+
+#: admin/crm_categories.php:97 sales/manage/customer_branches.php:293
+msgid "Short Name"
+msgstr "குறுகிய பெயர்"
+
+#: admin/display_prefs.php:108
+msgid "Show GL Information:"
+msgstr "பேரேட்டு தகவல் காட்டு"
+
+#: admin/display_prefs.php:110
+msgid "Show Item Codes:"
+msgstr "பொருள் குறியீடுகள் காட்டு:"
+
+#: admin/display_prefs.php:106
+msgid "Show hints for new users:"
+msgstr "புதிய பயனர்களுக்கு குறிப்புகளை காட்டு:"
+
+#: admin/attachments.php:208
+msgid "Size"
+msgstr "அளவு"
+
+#: admin/display_prefs.php:119
+msgid "Start-up Tab"
+msgstr "தொடக்க தட்டு"
+
+#: reporting/rep108.php:173
+msgid "Statement"
+msgstr "அறிக்கை"
+
+#: admin/gl_setup.php:193
+msgid "Suppliers and Purchasing"
+msgstr "விநியோகஸ்தர்கள் மற்றும் கொள்முதல்"
+
+#: admin/gl_setup.php:16
+msgid "System and General GL Setup"
+msgstr "அமைப்பு மற்றும் பொது பேரேட்டு அமைப்பு"
+
+#: admin/create_coy.php:254 admin/create_coy.php:344 admin/create_coy.php:349
+msgid "Table Pref"
+msgstr "டேபிள் முன்னொட்டு"
+
+#: admin/company_preferences.php:180
+msgid "Tax Last Period:"
+msgstr "வரி கடைசி காலகட்டத்தில்"
+
+#: taxes/item_tax_types.php:185
+msgid "Tax Name"
+msgstr "வரி பெயர்"
+
+#: admin/company_preferences.php:179
+msgid "Tax Periods:"
+msgstr "வரி காலகட்டங்கள்:"
+
+#: reporting/rep709.php:188
+msgid "Tax Rate"
+msgstr "வரி விகிதம்"
+
+#: access/logout.php:32
+msgid "Thank you for using"
+msgstr "பயன்படுத்தியதற்கு நன்றி"
+
+#: admin/gl_setup.php:59 admin/db/fiscalyears_db.inc:141
+msgid "The Retained Earnings Account should be a Balance Account or the Profit and Loss Year Account should be an Expense Account (preferred the last one in the Expense Class)"
+msgstr "தக்கவைத்து வருவாய் கணக்கு இருப்பு கணக்கு அல்லது இலாப நட்ட ஆண்டு கணக்கில் ஒரு செலவு கணக்கு இருக்க வேண்டும் (செலவு வகுப்பு கடந்த விருப்பமான)"
+
+#: admin/company_preferences.php:38
+msgid "The company name must be entered."
+msgstr "நிறுவனத்தின் பெயர் உள்ளிட வேண்டும்."
+
+#: admin/create_coy.php:153 admin/create_coy.php:189 admin/create_coy.php:220
+msgid "The configuration file "
+msgstr "கட்டமைப்பு கோப்பு "
+
+#: admin/gl_setup.php:30
+msgid "The delivery over-receive allowance must be between 0 and 100."
+msgstr "அதிகமாக விநியோக சகிப்புத்தன்மை 0 மற்றும் 100 இடையில் இருக்க வேண்டும்."
+
+#: admin/company_preferences.php:72 admin/company_preferences.php:93
+#: inventory/manage/items.php:93
+msgid "The existing image could not be removed"
+msgstr "இருக்கும் படத்தை நீக்க முடியவில்லை"
+
+#: admin/company_preferences.php:59 inventory/manage/items.php:85
+msgid "The file size is over the maximum allowed. The maximum size allowed in KB is"
+msgstr "கோப்பின் அளவு அதிகமாக உள்ளது. அதிகபட்ச KB உள்ள அளவு"
+
+#: admin/gl_setup.php:80
+msgid "The general GL setup has been updated."
+msgstr "பொது பேரேட்டு அமைப்பு மேம்படுத்தப்பட்டது. "
+
+#: admin/gl_setup.php:37
+msgid "The invoice over-charge allowance must be between 0 and 100."
+msgstr "அதிகப்படியான விலைப்பட்டியல் சகிப்புத்தன்மை 0 மற்றும் 100 இடையில் இருக்க வேண்டும்."
+
+#: admin/create_coy.php:292
+msgid "The marked company is the current company which cannot be deleted."
+msgstr "குறிப்பிட்ட நிறுவனம் நீக்க முடியாது, தற்போதைய நிறுவனம் ஆகும்."
+
+#: admin/fiscalyears.php:176
+msgid "The marked fiscal year is the current fiscal year which cannot be deleted."
+msgstr "குறிக்கப்பட்ட நிதி ஆண்டு நீக்க முடியாது, ஏனெனில், இது, நடப்பு நிதி ஆண்டில் ஆகிறது."
+
+#: admin/change_current_user_password.php:47 admin/users.php:47
+msgid "The password cannot contain the user login."
+msgstr "கடவுச்சொல்லை பயனர் புகுபதிவு கொண்டிருக்க முடியாது."
+
+#: admin/change_current_user_password.php:40 admin/users.php:40
+msgid "The password entered must be at least 4 characters long."
+msgstr "உள்ளிட்ட கடவுச்சொல் குறைந்தபட்சம் 4 எழுத்துக்கள் நீளமானது இருக்க வேண்டும்."
+
+#: admin/change_current_user_password.php:54
+msgid "The passwords entered are not the same."
+msgstr "பதிந்த கடவுச்சொற்கள் அதே இல்லை."
+
+#: admin/gl_setup.php:44
+msgid "The past due days interval allowance must be between 0 and 100."
+msgstr "அதிகப்படியான தாமத நாட்கள் இடைவெளியில் சகிப்புத்தன்மை 0 மற்றும் 100 இடையில் இருக்க வேண்டும்."
+
+#: includes/session.inc:137
+msgid "The user and password combination is not valid for the system."
+msgstr "பயனர் மற்றும் கடவுச்சொல்லை இணைந்து அமைப்பு சரியானது அல்ல."
+
+#: admin/inst_theme.php:74
+msgid "Theme"
+msgstr "வடிவமைப்பு"
+
+#: access/login.php:156 access/password_reset.php:108
+#: admin/display_prefs.php:112 themes/default/renderer.php:126
+msgid "Theme:"
+msgstr "வடிவமைப்பு:"
+
+#: admin/create_coy.php:62
+msgid "This database settings are already used by another company."
+msgstr "இந்த டேட்டாபேஸ் அமைப்புகள் ஏற்கனவே மற்றொரு நிறுவனத்தினாலும் பயன்படுத்தப்பட்டது."
+
+#: admin/display_prefs.php:87
+msgid "Thousand Separator:"
+msgstr "ஆயிரம் பிரிப்பான்:"
+
+#: reporting/rep710.php:77
+msgid "Time"
+msgstr "நேரம்"
+
+#: admin/company_preferences.php:201
+msgid "Time Zone on Reports"
+msgstr "அறிக்கைகளில் நேர மண்டலம்"
+
+#: admin/printers.php:137
+msgid "Timeout"
+msgstr "நேர முடிவின் கால அளவு"
+
+#: access/login.php:39
+msgid "Too many failed login attempts.<br>Please wait a while or try later."
+msgstr "பல முறை முயற்சித்த.<br>ஒரு காத்திருக்கவும் அல்லது பின்னர் முயற்சிக்கவும்."
+
+#: admin/attachments.php:244 admin/attachments.php:249
+msgid "Transaction #"
+msgstr "பரிவர்த்தனை #"
+
+#: includes/ui/ui_view.inc:901
+msgid "Tu"
+msgstr "செ"
+
+#: reporting/rep103.php:270 reporting/rep205.php:102 reporting/rep205.php:188
+msgid "Turnover"
+msgstr "விற்றுமுதல்"
+
+#: admin/payment_terms.php:127 dimensions/dimension_entry.php:275
+#: dimensions/inquiry/search_dimensions.php:75
+#: dimensions/inquiry/search_dimensions.php:130
+#: dimensions/view/view_dimension.php:55 gl/bank_account_reconcile.php:233
+#: gl/inquiry/bank_inquiry.php:70 gl/inquiry/gl_account_inquiry.php:126
+#: gl/inquiry/journal_inquiry.php:129 gl/inquiry/tax_inquiry.php:82
+#: gl/manage/bank_accounts.php:106 gl/manage/gl_quick_entries.php:186
+#: gl/view/accrual_trans.php:52 gl/includes/ui/gl_bank_ui.inc:93
+#: includes/ui/ui_view.inc:547 inventory/inquiry/stock_movements.php:82
+#: inventory/manage/item_categories.php:98
+#: manufacturing/search_work_orders.php:167
+#: manufacturing/includes/manufacturing_ui.inc:236
+#: manufacturing/includes/manufacturing_ui.inc:276
+#: manufacturing/includes/manufacturing_ui.inc:280
+#: manufacturing/includes/manufacturing_ui.inc:331
+#: purchasing/inquiry/supplier_allocation_inquiry.php:126
+#: purchasing/inquiry/supplier_inquiry.php:168 reporting/rep102.php:134
+#: reporting/rep202.php:139 reporting/rep402.php:103 reporting/rep501.php:87
+#: reporting/rep601.php:79 reporting/rep702.php:60 reporting/rep704.php:83
+#: reporting/rep704.php:86 reporting/rep704.php:89 reporting/rep709.php:112
+#: reporting/rep710.php:78 reporting/rep710.php:86
+#: reporting/reports_main.php:334 reporting/reports_main.php:498
+#: reporting/includes/doctext.inc:140 reporting/includes/doctext.inc:181
+#: reporting/includes/doctext.inc:200
+#: sales/inquiry/customer_allocation_inquiry.php:144
+#: sales/inquiry/customer_inquiry.php:217
+msgid "Type"
+msgstr "வகை:"
+
+#: admin/attachments.php:167 admin/view_print_transaction.php:72
+#: admin/void_transaction.php:157 gl/inquiry/journal_inquiry.php:47
+#: inventory/includes/item_adjustments_ui.inc:47
+#: manufacturing/work_order_add_finished.php:200
+#: manufacturing/work_order_costs.php:150
+#: manufacturing/work_order_entry.php:377
+#: manufacturing/work_order_entry.php:385
+#: manufacturing/includes/work_order_issue_ui.inc:168
+#: sales/inquiry/customer_allocation_inquiry.php:47
+msgid "Type:"
+msgstr "வகை:"
+
+#: admin/company_preferences.php:208 admin/display_prefs.php:143
+#: admin/forms_setup.php:61 admin/gl_setup.php:234 admin/inst_chart.php:74
+#: admin/inst_lang.php:103 admin/inst_module.php:137 admin/inst_module.php:155
+#: admin/inst_module.php:198 admin/inst_theme.php:96
+#: dimensions/dimension_entry.php:293 gl/gl_bank.php:414 gl/gl_budget.php:135
+#: gl/manage/gl_quick_entries.php:60 gl/includes/ui/gl_bank_ui.inc:277
+#: gl/includes/ui/gl_journal_ui.inc:220 includes/ui/db_pager_view.inc:174
+#: includes/ui/simple_crud_class.inc:56 includes/ui/simple_crud_class.inc:227
+#: includes/ui/ui_input.inc:208 includes/ui/ui_input.inc:906
+#: inventory/adjustments.php:234 inventory/cost_update.php:136
+#: inventory/reorder_level.php:111 inventory/transfers.php:230
+#: inventory/includes/item_adjustments_ui.inc:163
+#: inventory/includes/stock_transfers_ui.inc:143
+#: inventory/manage/sales_kits.php:208 manufacturing/work_order_entry.php:457
+#: manufacturing/includes/work_order_issue_ui.inc:138
+#: purchasing/includes/ui/po_ui.inc:296 purchasing/includes/ui/po_ui.inc:439
+#: purchasing/po_receive_items.php:334 sales/credit_note_entry.php:284
+#: sales/customer_credit_invoice.php:381 sales/customer_delivery.php:517
+#: sales/customer_invoice.php:591 sales/inquiry/sales_orders_view.php:323
+#: sales/includes/ui/sales_credit_ui.inc:293
+#: sales/includes/ui/sales_order_ui.inc:232
+#: sales/includes/ui/sales_order_ui.inc:548
+msgid "Update"
+msgstr "மேம்படுத்தல்"
+
+#: admin/backups.php:205
+msgid "Upload file"
+msgstr "கோப்பு பதிவேற்ற"
+
+#: admin/company_preferences.php:188
+msgid "Use Dimensions:"
+msgstr "பயன்பாட்டு பரிமாணங்கள்:"
+
+#: admin/display_prefs.php:133
+msgid "Use icons instead of text links:"
+msgstr "உரை இணைப்புகளுக்கு பதிலாக சின்னங்கள் பயன்படுத்த:"
+
+#: admin/display_prefs.php:130
+msgid "Use popup window to display reports:"
+msgstr "அறிக்கைகள் காட்ட பாப் அப் விண்டோ பயன்படுத்தவும்:"
+
+#: gl/inquiry/journal_inquiry.php:134 reporting/rep710.php:77
+#: reporting/rep710.php:87 reporting/reports_main.php:499
+msgid "User"
+msgstr "பயனர்"
+
+#: admin/users.php:193
+msgid "User Login:"
+msgstr "பயனர் உள்நுழைவு:"
+
+#: admin/users.php:123
+msgid "User login"
+msgstr "பயனர் உள்நுழைவு"
+
+#: admin/change_current_user_password.php:85 admin/users.php:189
+msgid "User login:"
+msgstr "பயனர் உள்நுழைவு:"
+
+#: access/login.php:93
+msgid "User name"
+msgstr "பயனர் பெயர்"
+
+#: access/login.php:90 access/password_reset.php:61 admin/inst_upgrade.php:137
+msgid "Version"
+msgstr "பதிப்பு"
+
+#: admin/company_preferences.php:203
+msgid "Version Id"
+msgstr "பதிப்பு அடையாளம்"
+
+#: admin/create_coy.php:149 admin/create_coy.php:216
+msgid "Cannot open the configuration file - "
+msgstr "கட்டமைப்பு கோப்பு திறக்க முடியவில்லை - "
+
+#: admin/create_coy.php:229
+msgid "Cannot remove temporary renamed company data directory "
+msgstr "தற்காலிக என மறுபெயரிடப்பட்ட நிறுவனத்தின் தரவு அடைவை நீக்க முடியாது"
+
+#: admin/create_coy.php:204
+msgid "Cannot rename company subdirectory"
+msgstr "நிறுவனத்தின் உப அடைவு மறுபெயரிடமுடியாது"
+
+#: admin/create_coy.php:198
+msgid "Cannot rename subdirectory to temporary name."
+msgstr "தற்காலிக பெயர் உப அடைவு மறுபெயரிட முடியாது."
+
+#: admin/create_coy.php:151 admin/create_coy.php:218
+msgid "Cannot write to the configuration file - "
+msgstr "கட்டமைப்பு கோப்பில் எழுத முடியவில்லை - "
+
+#: inventory/manage/item_codes.php:125 reporting/rep104.php:117
+#: reporting/rep105.php:119 reporting/rep301.php:169 reporting/rep301.php:175
+#: reporting/rep302.php:124 reporting/rep302.php:131 reporting/rep303.php:133
+#: reporting/rep304.php:114 reporting/rep304.php:122 reporting/rep306.php:141
+#: reporting/rep306.php:149 reporting/rep307.php:117 reporting/rep307.php:123
+#: reporting/rep308.php:230 reporting/rep308.php:237 reporting/rep309.php:104
+msgid "Category"
+msgstr "பிரிவு"
+
+#: admin/crm_categories.php:153
+msgid "Category Description:"
+msgstr "பிரிவு விரித்துரைத்தல்"
+
+#: inventory/manage/item_categories.php:180
+msgid "Category Name:"
+msgstr "பிரிவு பெயர்:"
+
+#: admin/crm_categories.php:152
+msgid "Category Short Name:"
+msgstr "பிரிவு குறுகிய பெயர்:"
+
+#: admin/crm_categories.php:97
+msgid "Category Subtype"
+msgstr "பிரிவு துணைவகை"
+
+#: admin/crm_categories.php:97
+msgid "Category Type"
+msgstr "பிரிவு வகை"
+
+#: admin/crm_categories.php:31
+msgid "Category description cannot be empty."
+msgstr "பிரிவு விரித்துரைத்தல் காலியாக இருக்க முடியாது."
+
+#: admin/crm_categories.php:77
+msgid "Category has been deleted"
+msgstr "பிரிவு நீக்கப்பட்டுவிட்டது"
+
+#: inventory/manage/item_codes.php:181 inventory/manage/items.php:303
+#: inventory/manage/sales_kits.php:207 inventory/manage/sales_kits.php:233
+msgid "Category:"
+msgstr "பிரிவு:"
+
+#: admin/change_current_user_password.php:16
+#: admin/change_current_user_password.php:99 themes/default/renderer.php:76
+msgid "Change password"
+msgstr "கடவுச்சொல் மாற்ற"
+
+#: access/logout.php:43
+msgid "Click here to Login Again."
+msgstr "மீண்டும் உள்நுழைய இங்கே கிளிக் செய்யவும்."
+
+#: admin/fiscalyears.php:138 dimensions/inquiry/search_dimensions.php:133
+#: dimensions/inquiry/search_dimensions.php:139 includes/ui/ui_lists.inc:681
+#: manufacturing/search_work_orders.php:114 reporting/rep402.php:103
+#: reporting/rep501.php:87 reporting/rep710.php:113
+#: reporting/includes/excel_report.inc:234
+#: reporting/includes/pdf_report.inc:266
+msgid "Closed"
+msgstr "மூடியது"
+
+#: admin/backups.php:181 sales/includes/ui/sales_order_ui.inc:582
+#: sales/includes/ui/sales_order_ui.inc:630
+msgid "Comments:"
+msgstr "கருத்துகள்:"
+
+#: access/login.php:107 access/login.php:114 access/password_reset.php:70
+#: access/password_reset.php:77 admin/create_coy.php:253
+#: admin/create_coy.php:336
+msgid "Company"
+msgstr "நிறுவனம்"
+
+#: admin/company_preferences.php:184
+msgid "Company Logo:"
+msgstr "நிறுவனத்தின் சின்னம்:"
+
+#: admin/company_preferences.php:16 applications/setup.php:18
+msgid "Company Setup"
+msgstr "நிறுவனத்தின் அமைப்பு"
+
+#: admin/create_coy.php:165
+msgid "Company has been updated."
+msgstr "நிறுவனத்தின் மேம்படுத்தப்பட்டது."
+
+#: admin/company_preferences.php:116
+msgid "Company setup has been updated."
+msgstr "நிறுவனத்தின் அமைப்பு மேம்படுத்தப்பட்டது."
+
+#: admin/backups.php:182
+msgid "Compression:"
+msgstr "குறுக்குதல்:"
+
+#: admin/crm_categories.php:17
+msgid "Contact Categories"
+msgstr "தொடர்பு பிரிவுகள்"
+
+#: admin/crm_categories.php:145 admin/crm_categories.php:149
+msgid "Contact Category Subtype:"
+msgstr "தொடர்பு பிரிவு துணைவகை:"
+
+#: admin/crm_categories.php:144 admin/crm_categories.php:148
+msgid "Contact Category Type:"
+msgstr "தொடர்பு பிரிவு வகை:"
+
+#: admin/backups.php:184
+msgid "Create Backup"
+msgstr "காப்பு உருவாக்கு"
+
+#: admin/create_coy.php:382
+msgid "Create a new company"
+msgstr "புதிய ஒரு நிறுவனம் உருவாக்கவும்"
+
+#: admin/backups.php:180
+msgid "Create backup"
+msgstr "காப்பு உருவாக்கு"
+
+#: admin/create_coy.php:21
+msgid "Create/Update Company"
+msgstr "நிறுவனத்தின் உருவாக்கவும்/புதுப்பிக்கப்பட்டது"
+
+#: admin/change_current_user_password.php:91
+msgid "Current Password:"
+msgstr "தற்போதைய கடவுச்சொல்:"
+
+#: admin/gl_setup.php:157
+msgid "Customers and Sales"
+msgstr "வாடிக்கையாளர்கள் மற்றும் விற்பனை"
+
+#: admin/gl_setup.php:169
+msgid "Customers and Sales Defaults"
+msgstr "வாடிக்கையாளர்கள் மற்றும் விற்பனை இயல்புநிலை"
+
+#: admin/create_coy.php:253
+msgid "Database Host"
+msgstr "டேட்டாபேஸ் ஹோஸ்ட்"
+
+#: admin/create_coy.php:254 admin/create_coy.php:343 admin/create_coy.php:348
+msgid "Database Name"
+msgstr "டேட்டாபேஸ் பெயர்"
+
+#: admin/create_coy.php:342
+msgid "Database Password"
+msgstr "டேட்டாபேஸ் கடவுச்சொல்"
+
+#: admin/create_coy.php:355
+msgid "Database Script"
+msgstr "டேட்டாபேஸ் ஸ்கிரிப்ட்"
+
+#: admin/create_coy.php:253 admin/create_coy.php:341 admin/create_coy.php:347
+msgid "Database User"
+msgstr "டேட்டாபேஸ் பயனர்"
+
+#: admin/backups.php:65
+msgid "Database backup failed."
+msgstr "டேட்டாபேஸ் காப்பு தோல்வியடைந்தது."
+
+#: admin/create_coy.php:46 admin/create_coy.php:52
+msgid "Database settings are not specified."
+msgstr "டேட்டாபேஸ் அமைப்புகள் குறிப்பிடப்படவில்லை."
+
+#: admin/inst_upgrade.php:72
+msgid "Database upgrade for company '%s' (%s:%s*) started..."
+msgstr "நிறுவனம் தரவுத்தள மேம்படுத்தல் '%s (%s:%s*) தொடங்கப்பட்டது"
+
+#: admin/display_prefs.php:82
+msgid "Date Separator:"
+msgstr "தேதி பிரிப்பான்கள்"
+
+#: admin/attachments.php:210
+msgid "Date Uploaded"
+msgstr "பதிவேற்றப்பட்ட தேதி"
+
+#: admin/display_prefs.php:78
+msgid "Dateformat and Separators"
+msgstr "தேதி வடிவம் மற்றும் பிரிப்பான்கள்"
+
+#: admin/display_prefs.php:80
+msgid "Dateformat:"
+msgstr "தேதி வடிவம்:"
+
+#: admin/display_prefs.php:71
+msgid "Decimal Places"
+msgstr "தசமம் இடங்கள்"
+
+#: inventory/manage/item_units.php:142
+msgid "Decimal Places:"
+msgstr "தசமம் இடங்கள்:"
+
+#: admin/display_prefs.php:92
+msgid "Decimal Separator:"
+msgstr "தசாம்சப்பிரிப்பான்:"
+
+#: admin/create_coy.php:254 admin/create_coy.php:351 admin/inst_lang.php:36
+#: admin/print_profiles.php:162
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#: admin/gl_setup.php:159
+msgid "Default Credit Limit:"
+msgstr "இயல்புநிலை கடன் எல்லை:"
+
+#: admin/attachments.php:198 admin/create_coy.php:278
+#: admin/crm_categories.php:119 admin/fiscalyears.php:166
+#: admin/inst_chart.php:80 admin/inst_lang.php:109 admin/inst_module.php:143
+#: admin/inst_theme.php:102 admin/payment_terms.php:143 admin/printers.php:97
+#: admin/shipping_companies.php:107 admin/tags.php:141 admin/users.php:155
+#: gl/gl_budget.php:137 gl/manage/bank_accounts.php:131
+#: gl/manage/currencies.php:166 gl/manage/exchange_rates.php:99
+#: gl/manage/gl_account_classes.php:133 gl/manage/gl_account_types.php:155
+#: gl/manage/gl_quick_entries.php:197 gl/manage/gl_quick_entries.php:296
+#: gl/includes/ui/gl_bank_ui.inc:188 gl/includes/ui/gl_journal_ui.inc:122
+#: includes/ui/contacts_view.inc:67 includes/ui/simple_crud_class.inc:54
+#: includes/ui/ui_input.inc:286 inventory/prices.php:159
+#: inventory/purchasing_data.php:165
+#: inventory/includes/item_adjustments_ui.inc:93
+#: inventory/includes/stock_transfers_ui.inc:85
+#: inventory/manage/item_categories.php:122 inventory/manage/item_codes.php:141
+#: inventory/manage/item_units.php:111 inventory/manage/locations.php:162
+#: inventory/manage/movement_types.php:107 inventory/manage/sales_kits.php:56
+#: manufacturing/manage/bom_edit.php:87
+#: manufacturing/manage/work_centres.php:115
+#: manufacturing/includes/work_order_issue_ui.inc:65
+#: purchasing/includes/ui/invoice_ui.inc:297
+#: purchasing/includes/ui/po_ui.inc:265 sales/manage/credit_status.php:120
+#: sales/manage/customer_branches.php:163
+#: sales/manage/recurrent_invoices.php:131 sales/manage/sales_areas.php:104
+#: sales/manage/sales_groups.php:100 sales/manage/sales_people.php:120
+#: sales/manage/sales_points.php:100 sales/manage/sales_types.php:122
+#: sales/includes/ui/sales_credit_ui.inc:199
+#: sales/includes/ui/sales_order_ui.inc:199 taxes/item_tax_types.php:140
+#: taxes/tax_groups.php:143 taxes/tax_types.php:133
+msgid "Delete"
+msgstr "நீக்குக"
+
+#: admin/backups.php:197
+msgid "Delete Backup"
+msgstr "காப்பு நீக்குக"
+
+#: admin/company_preferences.php:186
+msgid "Delete Company Logo:"
+msgstr "நிறுவனத்தின் சின்னம் நீக்க:"
+
+#: admin/gl_setup.php:182
+msgid "Delivery Required By:"
+msgstr "ஒப்படைத்தல் தேவைப்படும் தேதி: "
+
+#: admin/attachments.php:206 admin/attachments.php:250
+#: admin/crm_categories.php:97 admin/inst_upgrade.php:137
+#: admin/payment_terms.php:127 admin/printers.php:84
+#: admin/print_profiles.php:148 gl/inquiry/tax_inquiry.php:82
+#: gl/manage/gl_quick_entries.php:186 gl/manage/gl_quick_entries.php:224
+#: includes/ui/view_package.php:32 inventory/manage/item_codes.php:125
+#: inventory/manage/item_units.php:94 inventory/manage/movement_types.php:95
+#: inventory/manage/sales_kits.php:40 inventory/view/view_adjustment.php:56
+#: inventory/view/view_transfer.php:56 manufacturing/manage/bom_edit.php:70
+#: manufacturing/includes/manufacturing_ui.inc:28
+#: purchasing/includes/ui/invoice_ui.inc:484
+#: purchasing/includes/ui/invoice_ui.inc:496 purchasing/po_receive_items.php:62
+#: reporting/rep104.php:111 reporting/rep105.php:114 reporting/rep204.php:84
+#: reporting/rep303.php:121 reporting/rep303.php:127 reporting/rep304.php:114
+#: reporting/rep305.php:101 reporting/rep306.php:141 reporting/rep307.php:117
+#: reporting/rep308.php:230 reporting/rep309.php:98 reporting/rep401.php:71
+#: sales/create_recurrent_invoices.php:134 sales/manage/credit_status.php:97
+#: sales/manage/recurrent_invoices.php:102
+#: sales/inquiry/sales_orders_view.php:295
+#: sales/inquiry/sales_orders_view.php:299 taxes/tax_groups.php:124
+#: taxes/tax_types.php:115
+msgid "Description"
+msgstr "விரித்துரைத்தல்"
+
+#: inventory/manage/item_codes.php:180 inventory/manage/items.php:301
+#: inventory/manage/movement_types.php:129 inventory/manage/sales_kits.php:206
+#: inventory/manage/sales_kits.php:232
+#: manufacturing/manage/work_centres.php:138 sales/manage/credit_status.php:145
+#: sales/manage/recurrent_invoices.php:165 taxes/item_tax_types.php:173
+#: taxes/tax_groups.php:167 taxes/tax_types.php:158
+msgid "Description:"
+msgstr "விரித்துரைத்தல்:"
+
+#: admin/gl_setup.php:188
+msgid "Dimension Defaults"
+msgstr "பரிமாண இயல்பான நிலை"
+
+#: admin/gl_setup.php:190
+msgid "Dimension Required By After:"
+msgstr "பரிமாண தேவைப்படும் தேதி பின்னர்:"
+
+#: admin/display_prefs.php:16
+msgid "Display Setup"
+msgstr "காட்சி அமைப்பு"
+
+#: admin/display_prefs.php:62
+msgid "Display settings have been updated."
+msgstr "காட்சி அமைப்புகள் மேம்படுத்தப்பட்டது."
+
+#: admin/display_prefs.php:60
+msgid "Display settings have been updated. Keep in mind that changed settings are restored on every login in demo mode."
+msgstr "காட்சி அமைப்புகள் மேம்படுத்தப்பட்டது. அமைப்புகள் காட்டு முறையில் ஒவ்வொரு உள்நுழைவு மீண்டும் மாற்றம் என்பதை நினைவில் கொள்ளுங்கள்."
+
+#: reporting/includes/reports_classes.inc:101
+msgid "Display: "
+msgstr "காட்சி: "
+
+#: reporting/includes/header2.inc:131
+msgid "Domicile"
+msgstr "வழமையான வதிவிடம்"
+
+#: admin/company_preferences.php:166
+msgid "Domicile:"
+msgstr "வழமையான வதிவிடம்:"
+
+#: reporting/includes/reports_classes.inc:253
+msgid "Donut"
+msgstr "டோனட்ஸ்"
+
+#: reporting/includes/reports_classes.inc:253
+msgid "Dots"
+msgstr "புள்ளிகள்"
+
+#: admin/attachments.php:193
+msgid "Download"
+msgstr "பதிவிறக்க"
+
+#: admin/backups.php:193
+msgid "Download Backup"
+msgstr "காப்பு பதிவிறக்க"
+
+#: admin/users.php:124 sales/manage/customer_branches.php:300
+#: sales/view/view_sales_order.php:83
+msgid "E-mail"
+msgstr "மின்னஞ்சல்"
+
+#: includes/ui/contacts_view.inc:105 inventory/manage/locations.php:207
+#: purchasing/manage/suppliers.php:161 sales/manage/customer_branches.php:263
+#: sales/manage/customers.php:259 sales/manage/sales_people.php:158
+msgid "E-mail:"
+msgstr "மின்னஞ்சல்:"
+
+#: admin/attachments.php:183 admin/create_coy.php:277
+#: admin/crm_categories.php:115 admin/fiscalyears.php:164
+#: admin/inst_lang.php:100 admin/payment_terms.php:142 admin/printers.php:96
+#: admin/shipping_companies.php:106 admin/tags.php:140 admin/users.php:153
+#: dimensions/inquiry/search_dimensions.php:120
+#: gl/inquiry/journal_inquiry.php:118 gl/manage/bank_accounts.php:130
+#: gl/manage/currencies.php:164 gl/manage/exchange_rates.php:94
+#: gl/manage/gl_account_classes.php:132 gl/manage/gl_account_types.php:154
+#: gl/manage/gl_quick_entries.php:196 gl/manage/gl_quick_entries.php:295
+#: gl/includes/ui/gl_bank_ui.inc:186 gl/includes/ui/gl_journal_ui.inc:120
+#: includes/ui/contacts_view.inc:64 includes/ui/simple_crud_class.inc:52
+#: inventory/prices.php:158 inventory/purchasing_data.php:164
+#: inventory/includes/item_adjustments_ui.inc:91
+#: inventory/includes/stock_transfers_ui.inc:83
+#: inventory/manage/item_categories.php:121 inventory/manage/item_codes.php:140
+#: inventory/manage/item_units.php:110 inventory/manage/locations.php:161
+#: inventory/manage/movement_types.php:106 inventory/manage/sales_kits.php:55
+#: manufacturing/search_work_orders.php:115
+#: manufacturing/manage/bom_edit.php:86
+#: manufacturing/manage/work_centres.php:114
+#: manufacturing/includes/work_order_issue_ui.inc:63
+#: purchasing/includes/ui/invoice_ui.inc:533
+#: purchasing/includes/ui/po_ui.inc:263
+#: purchasing/inquiry/po_search_completed.php:109
+#: purchasing/inquiry/po_search.php:89 sales/manage/credit_status.php:119
+#: sales/manage/customer_branches.php:159
+#: sales/manage/recurrent_invoices.php:130 sales/manage/sales_areas.php:103
+#: sales/manage/sales_groups.php:99 sales/manage/sales_people.php:119
+#: sales/manage/sales_points.php:99 sales/manage/sales_types.php:121
+#: sales/inquiry/customer_inquiry.php:192
+#: sales/inquiry/sales_deliveries_view.php:156
+#: sales/inquiry/sales_orders_view.php:128
+#: sales/includes/ui/sales_credit_ui.inc:197
+#: sales/includes/ui/sales_order_ui.inc:197 taxes/item_tax_types.php:139
+#: taxes/tax_groups.php:142 taxes/tax_types.php:132
+msgid "Edit"
+msgstr "திருத்து"
+
+#: access/password_reset.php:63 reporting/rep103.php:277
+#: reporting/rep106.php:88 reporting/rep205.php:195
+#: reporting/includes/header2.inc:113 sales/manage/sales_people.php:99
+msgid "Email"
+msgstr "மின்னஞ்சல்"
+
+#: admin/company_preferences.php:170 admin/users.php:211
+msgid "Email Address:"
+msgstr "மின்னஞ்சல் முகவரி:"
+
+#: admin/users.php:204
+msgid "Enter a new password to change, leave empty to keep current."
+msgstr "மாற்ற புதிய கடவுச்சொல்லை உள்ளிடவும், நடப்பில் வைத்திருக்க காலியாக விட்டு."
+
+#: admin/change_current_user_password.php:95
+msgid "Enter your new password in the fields."
+msgstr "துறைகளில் உங்கள் புதிய கடவுச்சொல்லை உள்ளிடவும்."
+
+#: admin/create_coy.php:127
+msgid "Error creating Database: "
+msgstr "டேட்டாபேஸ் உருவாக்குவதில் பிழை: "
+
+#: admin/create_coy.php:210
+msgid "Error removing Database: "
+msgstr "டேட்டாபேஸ் நநீக்குவதில் பிழை:"
+
+#: admin/company_preferences.php:82
+msgid "Error uploading logo file"
+msgstr "சின்னம் கோப்பு பதிவேற்றுதல் பிழை"
+
+#: gl/manage/exchange_rates.php:196
+msgid "Exchange Rate"
+msgstr "நாணயமாற்று விகிதம்"
+
+#: gl/manage/exchange_rates.php:141 includes/ui/ui_view.inc:325
+msgid "Exchange Rate:"
+msgstr "நாணயமாற்று விகிதம்:"
+
+#: gl/manage/exchange_rates.php:24
+msgid "Exchange Rates"
+msgstr "நாணயமாற்று விகிதங்கள்"
+
+#: admin/display_prefs.php:75
+msgid "Exchange Rates:"
+msgstr "நாணயமாற்று விகிதங்கள்:"
+
+#: admin/gl_setup.php:151
+msgid "Exchange Variances Account:"
+msgstr "செலாவணி மாறுபாடுகள் கணக்கு:"
+
+#: admin/company_preferences.php:169 includes/ui/contacts_view.inc:104
+#: purchasing/manage/suppliers.php:160 sales/manage/customer_branches.php:262
+#: sales/manage/customers.php:258
+msgid "Fax Number:"
+msgstr "தொலைநகல் எண்:"
+
+#: admin/backups.php:148
+msgid "File successfully deleted."
+msgstr "கோப்பு வெற்றிகரமாக நீக்கப்பட்டது."
+
+#: admin/backups.php:168
+msgid "File uploaded to backup directory"
+msgstr "கோப்பு காப்பு அடைவில் பதிவேற்றப்பட்டது"
+
+#: admin/backups.php:171
+msgid "File was not uploaded into the system."
+msgstr "கோப்பு அமைப்பில் பதிவேற்றப்படவில்லை."
+
+#: admin/attachments.php:207 admin/backups.php:63 admin/backups.php:149
+msgid "Filename"
+msgstr "கோப்புப்பெயர்"
+
+#: admin/attachments.php:209
+msgid "Filetype"
+msgstr "கோப்புவகை"
+
+#: reporting/includes/excel_report.inc:268
+#: reporting/includes/pdf_report.inc:325
+msgid "Fiscal Year"
+msgstr "நிதியாண்டு"
+
+#: admin/fiscalyears.php:138
+msgid "Fiscal Year Begin"
+msgstr "நிதியாண்டு துவங்கும்"
+
+#: admin/fiscalyears.php:200 admin/fiscalyears.php:211
+msgid "Fiscal Year Begin:"
+msgstr "நிதியாண்டு துவங்கும்:"
+
+#: admin/fiscalyears.php:138
+msgid "Fiscal Year End"
+msgstr "நிதியாண்டு முடிவு"
+
+#: admin/fiscalyears.php:201 admin/fiscalyears.php:212
+msgid "Fiscal Year End:"
+msgstr "நிதியாண்டு முடிவு:"
+
+#: admin/company_preferences.php:178 gl/gl_budget.php:63
+msgid "Fiscal Year:"
+msgstr "நிதியாண்டு:"
+
+#: admin/fiscalyears.php:25
+msgid "Fiscal Years"
+msgstr "நிதி ஆண்டுகள்"
+
+#: admin/forms_setup.php:46
+msgid "Form"
+msgstr "படிவம்"
+
+#: admin/forms_setup.php:16
+msgid "Forms Setup"
+msgstr "படிவங்கள் அமைப்பு"
+
+#: admin/forms_setup.php:36
+msgid "Forms settings have been updated."
+msgstr "படிவங்கள் அமைப்புகளை மேம்படுத்தப்பட்டது."
+
+#: includes/access_levels.inc:112
+msgid "Forms setup"
+msgstr "படிவங்கள் அமைப்பு"
+
+#: admin/company_preferences.php:175 purchasing/manage/suppliers.php:94
+#: sales/manage/customers.php:236
+msgid "GSTNo:"
+msgstr "GST எண்."
+
+#: purchasing/manage/suppliers.php:153
+msgid "General"
+msgstr "பொது"
+
+#: admin/gl_setup.php:143
+msgid "General GL"
+msgstr "பொது பேரேட்டு"
+
+#: reporting/reports_main.php:325
+msgid "General Ledger"
+msgstr "பேரேட்டு"
+
+#: admin/company_preferences.php:177
+msgid "Home Currency:"
+msgstr "உள்ளூர் நாணயம்"
+
+#: admin/create_coy.php:340 admin/create_coy.php:346 admin/printers.php:84
+msgid "Host"
+msgstr "ஹோஸ்ட்"
+
+#: admin/create_coy.php:293
+msgid "If no Admin Password is entered, the new Admin Password will be '<b>password</b>' by default "
+msgstr "நிர்வாகம் கடவுச்சொல் காலியாக இருந்தால், புதிய நிர்வாகியின் கடவுச்சொல்லை இயல்பாக '<b>password</b>' இருக்கும் "
+
+#: admin/display_prefs.php:139
+msgid "If set document date is remembered on subsequent documents, otherwise default is current date"
+msgstr "அமைத்தால், பின்னர் ஆவணங்களை நினைவில் கொள்ளப்படுகிறது, இல்லையெனில், இயல்புநிலை தற்போதைய தேதி ஆகும்"
+
+#: includes/session.inc:136
+msgid "Incorrect Password"
+msgstr "தவறான கடவுச்சொல்"
+
+#: admin/fiscalyears.php:34
+msgid "Invalid BEGIN date in fiscal year."
+msgstr "நிதி ஆண்டில் தவறான தொடங்கும் தேதி."
+
+#: admin/fiscalyears.php:46
+msgid "Invalid BEGIN or END date in fiscal year."
+msgstr "நிதி ஆண்டில் தவறான தொடங்கும் அல்லது முடிவும் தேதி"
+
+#: admin/fiscalyears.php:40
+msgid "Invalid END date in fiscal year."
+msgstr "நிதி ஆண்டில் தவறான முடிவும் தேதி."
+
+#: admin/change_current_user_password.php:33
+msgid "Invalid password entered."
+msgstr "தவறான கடவுச்சொல் நுழைந்து."
+
+#: admin/fiscalyears.php:216
+msgid "Is Closed:"
+msgstr "மூடப்பட்டுள்ளது"
+
+#: admin/display_prefs.php:99 admin/inst_lang.php:35
+msgid "Language"
+msgstr "மொழி"
+
+#: admin/display_prefs.php:101 admin/users.php:215
+msgid "Language:"
+msgstr "மொழி:"
+
+#: admin/gl_setup.php:163
+msgid "Legal Text on Invoice:"
+msgstr "விலைப்பட்டியல் சட்ட உரை:"
+
+#: access/login.php:52 access/login.php:90
+msgid "Login"
+msgstr "உள்நுழைய"
+
+#: access/login.php:121
+msgid "Login -->"
+msgstr "உள்நுழைய -->"
+
+#: admin/company_preferences.php:202
+msgid "Login Timeout:"
+msgstr "உள்நுழைவு காலம் கடந்தது:"
+
+#: access/login.php:27
+msgid "Login as user: demouser and password: password"
+msgstr "பயனராக உள்நுழைய: demouser மற்றும் கடவுச்சொல்: password"
+
+#: includes/session.inc:169
+msgid "Login here"
+msgstr "இங்கே உள்நுழைய"
+
+#: admin/company_preferences.php:31
+msgid "Login timeout must be positive number not less than 10."
+msgstr "உள்நுழைவு நேரம் முடிதல் நேர்மறை எண்ணிக்கை குறைவாக 10 இருக்க வேண்டும்."
+
+#: frontaccounting.php:75 access/logout.php:21 themes/default/renderer.php:68
+#: themes/default/renderer.php:82
+msgid "Logout"
+msgstr "வெளியேறு"
+
+#: purchasing/manage/suppliers.php:150 reporting/rep205.php:102
+#: sales/manage/customer_branches.php:267
+msgid "Mailing Address:"
+msgstr "அஞ்சல் முகவரி:"
+
+#: frontaccounting.php:73 frontaccounting.php:74
+msgid "Main  Menu"
+msgstr "பிரதான பட்டி"
+
+#: admin/display_prefs.php:104 applications/setup.php:42
+#: includes/sysnames.inc:94
+msgid "Miscellaneous"
+msgstr "இதர"
+
+#: gl/accruals.php:182 gl/manage/gl_quick_entries.php:240
+#: gl/includes/ui/gl_journal_ui.inc:55 sales/create_recurrent_invoices.php:134
+#: sales/manage/recurrent_invoices.php:102
+msgid "Monthly"
+msgstr "மாதாந்திர"
+
+#: sales/manage/recurrent_invoices.php:178
+msgid "Monthly:"
+msgstr "மாதாந்திர:"
+
+#: admin/company_preferences.php:180
+msgid "Months back."
+msgstr "மாதங்கள் முன்பு."
+
+#: admin/company_preferences.php:179
+msgid "Months."
+msgstr "மாதங்கள்."
+
+#: admin/company_preferences.php:164
+msgid "Name (to appear on reports):"
+msgstr "(அறிக்கைகளில் தோன்றும்) பெயர்:"
+
+#: sales/manage/customers.php:230
+msgid "Name and Address"
+msgstr "பெயர் மற்றும் முகவரி"
+
+#: sales/manage/customer_branches.php:236
+msgid "Name and Contact"
+msgstr "பெயர் மற்றும் தொடர்பு"
+
+#: admin/shipping_companies.php:134 gl/manage/gl_account_types.php:188
+#: gl/includes/ui/gl_bank_ui.inc:57 inventory/manage/items.php:299
+#: manufacturing/manage/work_centres.php:137
+msgid "Name:"
+msgstr "பெயர்"
+
+#: gl/bank_account_reconcile.php:169
+msgid "New"
+msgstr "புதிய"
+
+#: admin/company_preferences.php:185
+msgid "New Company Logo (.jpg)"
+msgstr "புதிய நிறுவனத்தின் சின்னம் (.jpg)"
+
+#: admin/change_current_user_password.php:92
+msgid "New Password:"
+msgstr "புதிய கடவுச்சொல்:"
+
+#: admin/create_coy.php:165
+msgid "New company has been created."
+msgstr "புதிய நிறுவனம் உருவாக்கப்பட்டது."
+
+#: admin/crm_categories.php:47
+msgid "New contact category has been added"
+msgstr "புதிய தொடர்பு பிரிவில் சேர்க்க"
+
+#: admin/fiscalyears.php:89
+msgid "New fiscal year has been added"
+msgstr "புதிய நிதி ஆண்டு சேர்க்கப்பட்டது"
+
+#: includes/current_user.inc:153
+msgid "New password for"
+msgstr "புதிய கடவுச்சொல்"
+
+#: includes/session.inc:166
+msgid "New password sent"
+msgstr "புதிய கடவுச்சொல் அனுப்பப்பட்டுள்ளது"
+
+#: admin/create_coy.php:356
+msgid "New script Admin Password"
+msgstr "புதிய ஸ்கிரிப்ட் நிர்வாகியின் கடவுச்சொல்"
+
+#: includes/ui/db_pager_view.inc:177
+msgid "Next"
+msgstr "அடுத்த"
+
+#: admin/forms_setup.php:46
+msgid "Next Reference"
+msgstr "அடுத்த மேற்கோள்"
+
+#: admin/backups.php:98 admin/create_coy.php:265 admin/fiscalyears.php:155
+#: admin/inst_lang.php:85 admin/inst_lang.php:97 admin/void_transaction.php:125
+#: dimensions/inquiry/search_dimensions.php:107 gl/manage/bank_accounts.php:127
+#: gl/manage/currencies.php:162 gl/manage/gl_account_classes.php:127
+#: gl/manage/gl_quick_entries.php:230 includes/system_tests.inc:38
+#: includes/system_tests.inc:113 includes/system_tests.inc:126
+#: includes/ui/ui_lists.inc:1680 purchasing/manage/suppliers.php:121
+#: reporting/rep101.php:114 reporting/rep102.php:114 reporting/rep102.php:116
+#: reporting/rep104.php:105 reporting/rep106.php:75 reporting/rep114.php:74
+#: reporting/rep201.php:106 reporting/rep202.php:118 reporting/rep202.php:120
+#: reporting/rep203.php:89 reporting/rep303.php:113 reporting/rep303.php:117
+#: reporting/rep402.php:99 reporting/rep402.php:134 reporting/rep501.php:113
+#: sales/manage/sales_points.php:94 sales/manage/sales_points.php:95
+#: sales/manage/sales_types.php:119 taxes/item_tax_types.php:129
+#: taxes/tax_groups.php:139
+msgid "No"
+msgstr "இல்லை"
+
+#: admin/company_preferences.php:190
+msgid "No base price list"
+msgstr "அடிப்படை விலை பட்டியல் இல்லை"
+
+#: admin/create_coy.php:344 admin/inst_chart.php:68 admin/inst_chart.php:70
+#: admin/inst_lang.php:87 admin/inst_lang.php:90 admin/inst_module.php:126
+#: admin/inst_theme.php:91 admin/inst_theme.php:93 admin/inst_upgrade.php:149
+#: gl/manage/gl_account_types.php:190 includes/ui/allocation_cart.inc:314
+msgid "None"
+msgstr "எதுவும் இல்லை"
+
+#: admin/company_preferences.php:174
+msgid "Official Company Number:"
+msgstr "நிறுவனத்தின் உத்தியோகபூர்வ எண்:"
+
+#: admin/company_preferences.php:64 inventory/manage/items.php:75
+msgid "Only graphics files can be uploaded"
+msgstr "பட கோப்புகளை மட்டுமே பதிவேற்றம் "
+
+#: admin/company_preferences.php:54
+msgid "Only jpg and png files are supported - a file extension of .jpg or .png is expected"
+msgstr "jpg மற்றும் png கோப்புகளை மட்டும் துணைபுரிகிறது - ஒரு .jpg அல்லது .png கோப்பு நீட்டிப்பு எதிர்பார்க்கப்படுகிறது"
+
+#: admin/create_coy.php:153 admin/create_coy.php:189 admin/create_coy.php:220
+#: admin/db/maintenance_db.inc:250
+msgid " is not writable. Change its permissions so it is, then re-run the operation."
+msgstr " எழுதப்பட முடியவில்லை. அதை எழுத அதன் அனுமதிகளை மாற்ற, பின்னர் மீண்டும் முயற்சிக்கவும்."
+
+#: admin/attachments.php:205 admin/view_print_transaction.php:126
+#: admin/void_transaction.php:181 dimensions/inquiry/search_dimensions.php:127
+#: dimensions/view/view_dimension.php:55 gl/bank_account_reconcile.php:234
+#: gl/inquiry/bank_inquiry.php:70 gl/inquiry/gl_account_inquiry.php:126
+#: gl/inquiry/journal_inquiry.php:127 gl/inquiry/journal_inquiry.php:140
+#: includes/ui/allocation_cart.inc:288 inventory/inquiry/stock_movements.php:82
+#: manufacturing/search_work_orders.php:165
+#: manufacturing/includes/manufacturing_ui.inc:157
+#: manufacturing/includes/manufacturing_ui.inc:200
+#: manufacturing/includes/manufacturing_ui.inc:236
+#: manufacturing/includes/manufacturing_ui.inc:276
+#: manufacturing/includes/manufacturing_ui.inc:280
+#: manufacturing/includes/manufacturing_ui.inc:331
+#: purchasing/view/view_po.php:115 purchasing/view/view_po.php:140
+#: purchasing/inquiry/po_search_completed.php:124
+#: purchasing/inquiry/po_search.php:132
+#: purchasing/inquiry/supplier_allocation_inquiry.php:127
+#: purchasing/inquiry/supplier_inquiry.php:169
+#: purchasing/allocations/supplier_allocation_main.php:95
+#: reporting/rep101.php:118 reporting/rep201.php:110 reporting/rep203.php:93
+#: reporting/rep306.php:141 reporting/rep601.php:79 reporting/rep704.php:83
+#: reporting/rep704.php:86 reporting/rep704.php:89 reporting/rep710.php:78
+#: reporting/includes/doctext.inc:145 reporting/includes/doctext.inc:186
+#: reporting/includes/doctext.inc:224
+#: sales/allocations/customer_allocation_main.php:94
+#: sales/view/view_sales_order.php:96 sales/view/view_sales_order.php:129
+#: sales/view/view_sales_order.php:161
+#: sales/inquiry/customer_allocation_inquiry.php:145
+#: sales/inquiry/customer_inquiry.php:218
+msgid "#"
+msgstr "எண்."
+
+#: manufacturing/search_work_orders.php:67
+#: purchasing/inquiry/po_search_completed.php:63
+#: purchasing/inquiry/po_search.php:62
+#: sales/inquiry/sales_deliveries_view.php:103
+#: sales/inquiry/sales_orders_view.php:225
+msgid "#:"
+msgstr "எண்:"
+
+#: reporting/reports_main.php:361 reporting/reports_main.php:413
+#: reporting/reports_main.php:460
+msgid "&Balance Sheet"
+msgstr "ஐந்தொகை"
+
+#: applications/generalledger.php:48
+msgid "&Profit and Loss Drilldown"
+msgstr "லாபம்/நட்ட குறிப்பிட்ட விவரம்"
+
+#: reporting/reports_main.php:372 reporting/reports_main.php:423
+#: reporting/reports_main.php:469
+msgid "&Profit and Loss Statement"
+msgstr "லாபம்/நட்ட அறிக்கை"
+
+#: admin/create_coy.php:127
+msgid ", Please create it manually"
+msgstr ", தயவு செய்து கைமுறையாக உருவாக்கவும்"
+
+#: admin/create_coy.php:210
+msgid ", please remove it manually"
+msgstr ", கைமுறையாக நீக்கவும்"
+
+#: includes/session.inc:167
+msgid "A new password has been sent to your mailbox."
+msgstr "ஒரு புதிய கடவுச்சொல் உங்கள் மின்னஞ்சல் பெட்டிக்கு அனுப்பப்பட்டுள்ளது."
+
+#: admin/gl_setup.php:161
+msgid "Accumulate batch shipping:"
+msgstr "தொகுதி போக்குவரத்து குவிக்க:"
+
+#: gl/inquiry/profit_loss.php:173 reporting/rep707.php:210
+#: reporting/includes/reports_classes.inc:248
+msgid "Accumulated"
+msgstr "குவிக்கப்பட்ட"
+
+#: admin/company_preferences.php:191
+msgid "Add Price from Std Cost:"
+msgstr "சராசரி செலவினங்களில் இருந்து விலை சேர்க்கவும்:"
+
+#: admin/shipping_companies.php:91 inventory/manage/locations.php:146
+msgid "Address"
+msgstr "முகவரி"
+
+#: admin/company_preferences.php:165 admin/shipping_companies.php:142
+#: includes/ui/contacts_view.inc:109 inventory/manage/locations.php:202
+#: sales/manage/customers.php:234 sales/includes/ui/sales_order_ui.inc:621
+msgid "Address:"
+msgstr "முகவரி:"
+
+#: purchasing/manage/suppliers.php:149 sales/manage/customer_branches.php:266
+msgid "Addresses"
+msgstr "முகவரிகள்"
+
+#: admin/create_coy.php:246
+msgid "Are you sure you want to delete company no. "
+msgstr "நநீங்கள் உறுதியாக இருக்கிறீர்களா நீக்கப்படும் நிறுவனத்தின் எண். "
+
+#: admin/fiscalyears.php:168
+msgid "Are you sure you want to delete fiscal year %s - %s? All transactions are deleted and converted into relevant balances. Do you want to continue ?"
+msgstr "நீங்கள் %s - %s நிதி ஆண்டு நீக்க வேண்டுமா? எல்லா பரிமாற்றங்களையும் நீக்கப்படும் மற்றும் சம்பந்தப்பட்ட இருப்புகளாக மாற்றப்படுகிறது. நீங்கள் தொடர விரும்புகிறீர்களா?"
+
+#: admin/attachments.php:74
+msgid "Attach Documents"
+msgstr "ஆவணங்களை இணைக்கவும்"
+
+#: admin/attachments.php:251
+msgid "Attached File"
+msgstr "இணைக்கப்பட்டுள்ள கோப்பு"
+
+#: admin/db/attachments_db.inc:67
+msgid "Attached File:"
+msgstr "இணைக்கப்பட்டுள்ள கோப்பு:"
+
+#: reporting/includes/pdf_report.inc:1006
+msgid "Attached you will find "
+msgstr "நீங்கள் காண்பீர்கள் இணைக்கப்பட்டுள்ளது"
+
+#: includes/access_levels.inc:120
+msgid "Attaching documents"
+msgstr "ஆவணங்கள் இணைக்கிறது"
+
+#: admin/attachments.php:149
+msgid "Attachment has been deleted."
+msgstr "இணைப்பு நீக்கப்பட்டுள்ளது."
+
+#: admin/attachments.php:128
+msgid "Attachment has been inserted."
+msgstr "இணைப்பு சேர்க்கப்பட்டது."
+
+#: admin/attachments.php:134
+msgid "Attachment has been updated."
+msgstr "இணைப்பு மேம்படுத்தப்பட்டது."
+
+#: access/login.php:52 access/login.php:83
+msgid "Authorization timeout"
+msgstr "அங்கீகாரம் நேரம் முடிந்தது"
+
+#: gl/manage/currencies.php:140
+msgid "Auto update"
+msgstr "தானாக மேம்படுத்தல்"
+
+#: admin/company_preferences.php:200
+msgid "Automatic Revaluation Currency Accounts"
+msgstr "தானியங்கி மறுமதிப்பீடு நாணய கணக்குகள்"
+
+#: admin/company_preferences.php:172
+msgid "BCC Address for all outgoing mails:"
+msgstr "அனைத்து வெளிச்செல்லும் மின்னஞ்சல்களுக்கு BCC முகவரி:"
+
+#: admin/fiscalyears.php:52
+msgid "BEGIN date bigger than END date."
+msgstr "தொடங்கும் தேதி முடிவும் தேதி விட பின்னர்."
+
+#: admin/backups.php:43
+msgid "Backup and Restore Database"
+msgstr "டேட்டாபேஸ் காப்பு மற்றும் மீட்டமை "
+
+#: admin/backups.php:50
+msgid "Backup paths have not been set correctly."
+msgstr "காப்பு பாதைகள் சரியாக அமைக்கப்படவில்லை"
+
+#: admin/backups.php:186
+msgid "Backup scripts maintenance"
+msgstr "காப்பு ஸ்கிரிப்டுகள் பராமரிப்பு"
+
+#: admin/backups.php:62
+msgid "Backup successfully generated."
+msgstr "காப்பு வெற்றிகரமாக உருவாக்கப்பட்டது."
+
+#: dimensions/includes/dimensions_ui.inc:45
+#: dimensions/inquiry/search_dimensions.php:134 gl/inquiry/bank_inquiry.php:71
+#: gl/inquiry/gl_account_inquiry.php:141 gl/inquiry/gl_trial_balance.php:189
+#: purchasing/inquiry/supplier_allocation_inquiry.php:137
+#: reporting/rep101.php:122 reporting/rep201.php:114 reporting/rep203.php:94
+#: reporting/rep204.php:84 reporting/rep307.php:117 reporting/rep601.php:80
+#: reporting/rep701.php:111 reporting/rep704.php:84 reporting/rep704.php:87
+#: reporting/rep704.php:90 reporting/rep708.php:185
+#: sales/inquiry/customer_allocation_inquiry.php:155
+msgid "Balance"
+msgstr "இருப்பு"
+
+#: applications/generalledger.php:46
+msgid "Balance &Sheet Drilldown"
+msgstr "ஐந்தொகை  குறிப்பிட்ட விவரம்"
+
+#: gl/manage/gl_account_classes.php:112 gl/manage/gl_account_classes.php:169
+#: reporting/rep706.php:215
+msgid "Balance Sheet"
+msgstr "ஐந்தொகை"
+
+#: gl/inquiry/balance_sheet.php:27
+msgid "Balance Sheet Drilldown"
+msgstr "ஐந்தொகை  குறிப்பிட்ட விவரம்"
+
+#: admin/gl_setup.php:153
+msgid "Bank Charges Account:"
+msgstr "வங்கி கட்டணங்கள் கணக்கு:"
+
+#: admin/company_preferences.php:189
+msgid "Base for auto price calculations:"
+msgstr "தன்னியங்கி விலை கணக்கீடுகள் அடிப்படை:"
+
+#: admin/gl_setup.php:52
+msgid "Before GRN Clearing Account can be changed all GRNs have to be invoiced"
+msgstr "GRN தீர்வு கணக்கு மாற்ற முடியும் முன் அனைத்து GRNகள் விலைப்பட்டியல் வேண்டும் "
+
+#: admin/display_prefs.php:128 admin/users.php:220
+msgid "Browser printing support"
+msgstr "உலாவியின் அச்சிடும் ஆதரவு"
+
+#: admin/print_profiles.php:162
+msgid "Browser support"
+msgstr "உலாவியின் ஆதரவு"
+
+#: admin/backups.php:153
+msgid "Can't delete backup file."
+msgstr "காப்பு கோப்பு நீக்க முடியவில்லை."
+
+#: admin/fiscalyears.php:70
+msgid "Cannot CLOSE this year because there are open fiscal years before"
+msgstr "முந்தைய நிதி ஆண்டுகளில் திறந்திருக்கும் என்பதால் இந்த நிதி ஆண்டு மூட முடியாது."
+
+#: admin/create_coy.php:131
+msgid "Cannot create new company due to bugs in sql file."
+msgstr "SQL கோப்பு பிழைகள் காரணமாக புதிய நிறுவனம் உருவாக்க முடியவில்லை."
+
+#: admin/crm_categories.php:71
+msgid "Cannot delete this category because there are contacts related to it."
+msgstr "அது தொடர்பான தொடர்புகள் உள்ளன, ஏனெனில் இந்த பிரிவை நீக்க முடியாது."
+
+#: admin/fiscalyears.php:107
+msgid "Cannot delete this fiscal year because the fiscal year is not closed."
+msgstr "இந்த நிதி ஆண்டு மூடப்பட்டு இல்லை ஏனெனில் இந்த நிதி ஆண்டு நீக்க முடியாது."
+
+#: admin/fiscalyears.php:102
+msgid "Cannot delete this fiscal year because there are fiscal years before."
+msgstr "நிதி ஆண்டுகளுக்கு முன் உள்ளன, ஏனெனில் இந்த நிதி ஆண்டு நீக்க முடியாது."

@@ -1,5 +1,5 @@
 Package: ta_IN
-Version: 2.3.24-2
+Version: 2.3.24-3
 Description: Indian Tamil translation
 Author: Ap.Muthu <apmuthu@usa.net>
 Maintenance: Ap.Muthu <apmuthu@usa.net>
@@ -12,5 +12,5 @@ Type: language
 Name: Tamil (India)
 Name-ta_IN: தமிழ் (இந்தியா)
 InstallPath: lang/ta_IN
-Filename: ta_IN-2.3.24-2
+Filename: ta_IN-2.3.24-3
 
