@@ -27,9 +27,11 @@ $installed_languages = array (
   ),
   2 => 
   array (
+    'name' => 'Tamil',
+    'package' => 'ta_IN',
     'code' => 'ta_IN',
-    'name' => 'Tamil IN',
-    'encoding' => 'utf-8',
+    'encoding' => 'UTF-8',
+    'version' => '2.3.24-4',
     'path' => 'lang/ta_IN',
   ),
 );

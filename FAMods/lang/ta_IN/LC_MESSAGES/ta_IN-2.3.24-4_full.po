@@ -9,15 +9,14 @@ msgstr ""
 "Project-Id-Version: FrontAccounting\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-23 14:55+0100\n"
-"PO-Revision-Date: 2015-11-03 16:08+0530\n"
+"PO-Revision-Date: 2015-11-04 18:06+0530\n"
 "Last-Translator: Ap.Muthu <apmuthu@usa.net>\n"
-"Language-Team: FA Tamil Team <ta_IN@frontaccounting.com>\n"
-"Language: Tamil\n"
-"Country: INDIA\n"
+"Language-Team: Tamil (India) (http://www.gnuacademy.org/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language: Tamil\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: frontaccounting.php:73 frontaccounting.php:74
 msgid "Main  Menu"
@@ -412,9 +411,7 @@ msgid "Restore Backup"
 msgstr "காப்பு மீட்க"
 
 #: admin/backups.php:195
-msgid ""
-"You are about to restore database from backup file.\n"
-"Do you want to continue?"
+msgid "You are about to restore database from backup file.\nDo you want to continue?"
 msgstr "நீங்கள் காப்பு கோப்பிலிருந்து டேட்டாபேஸ் மீட்டெடுக்க போகிறீர்கள்.\nநீங்கள் தொடர விரும்புகிறீர்களா?"
 
 #: admin/backups.php:197
@@ -423,9 +420,7 @@ msgstr "காப்பு நீக்குக"
 
 #: admin/backups.php:199
 #, php-format
-msgid ""
-"You are about to remove selected backup file.\n"
-"Do you want to continue ?"
+msgid "You are about to remove selected backup file.\nDo you want to continue ?"
 msgstr "நீங்கள் தேர்ந்தெடுத்த காப்பு கோப்பு நீக்க உள்ளீர்கள்.\nநீங்கள் தொடர விரும்புகிறீர்களா ?"
 
 #: admin/backups.php:205
@@ -494,14 +489,11 @@ msgid "The company name must be entered."
 msgstr "நிறுவனத்தின் பெயர் உள்ளிட வேண்டும்."
 
 #: admin/company_preferences.php:54
-msgid ""
-"Only jpg and png files are supported - a file extension of .jpg or .png is "
-"expected"
+msgid "Only jpg and png files are supported - a file extension of .jpg or .png is expected"
 msgstr "jpg மற்றும் png கோப்புகளை மட்டும் துணைபுரிகிறது - ஒரு .jpg அல்லது .png கோப்பு நீட்டிப்பு எதிர்பார்க்கப்படுகிறது"
 
 #: admin/company_preferences.php:59 inventory/manage/items.php:85
-msgid ""
-"The file size is over the maximum allowed. The maximum size allowed in KB is"
+msgid "The file size is over the maximum allowed. The maximum size allowed in KB is"
 msgstr "கோப்பின் அளவு அதிகமாக உள்ளது. அதிகபட்ச KB உள்ள அளவு"
 
 #: admin/company_preferences.php:64 inventory/manage/items.php:75
@@ -689,9 +681,7 @@ msgid "This database settings are already used by another company."
 msgstr "இந்த டேட்டாபேஸ் அமைப்புகள் ஏற்கனவே மற்றொரு நிறுவனத்தினாலும் பயன்படுத்தப்பட்டது."
 
 #: admin/create_coy.php:67
-msgid ""
-"You cannot have table set without prefix together with prefixed sets in the "
-"same database."
+msgid "You cannot have table set without prefix together with prefixed sets in the same database."
 msgstr "ஒரு முன்னொட்டாக டேபிள் மற்றும் வேறு ஒரு டேபிள் முற்சேர்க்கையாக இல்லாமல் அமைக்கஅதே டேட்டாபேஸ் உள்ளே முடியாது"
 
 #: admin/create_coy.php:127
@@ -720,9 +710,7 @@ msgstr "கட்டமைப்பு கோப்பு "
 
 #: admin/create_coy.php:153 admin/create_coy.php:189 admin/create_coy.php:220
 #: admin/db/maintenance_db.inc:250
-msgid ""
-" is not writable. Change its permissions so it is, then re-run the "
-"operation."
+msgid " is not writable. Change its permissions so it is, then re-run the operation."
 msgstr " எழுதப்பட முடியவில்லை. அதை எழுத அதன் அனுமதிகளை மாற்ற, பின்னர் மீண்டும் முயற்சிக்கவும்."
 
 #: admin/create_coy.php:165
@@ -734,9 +722,7 @@ msgid "Company has been updated."
 msgstr "நிறுவனத்தின் மேம்படுத்தப்பட்டது."
 
 #: admin/create_coy.php:182
-msgid ""
-"Broken company subdirectories system. You have to remove this company "
-"manually."
+msgid "Broken company subdirectories system. You have to remove this company manually."
 msgstr ""
 
 #: admin/create_coy.php:198
@@ -810,9 +796,7 @@ msgid "The marked company is the current company which cannot be deleted."
 msgstr "குறிப்பிட்ட நிறுவனம் நீக்க முடியாது, தற்போதைய நிறுவனம் ஆகும்."
 
 #: admin/create_coy.php:293
-msgid ""
-"If no Admin Password is entered, the new Admin Password will be "
-"'<b>password</b>' by default "
+msgid "If no Admin Password is entered, the new Admin Password will be '<b>password</b>' by default "
 msgstr "நிர்வாகம் கடவுச்சொல் காலியாக இருந்தால், புதிய நிர்வாகியின் கடவுச்சொல்லை இயல்பாக '<b>password</b>' இருக்கும் "
 
 #: admin/create_coy.php:340 admin/create_coy.php:346 admin/printers.php:84
@@ -907,9 +891,7 @@ msgid "Query size must be integer and greater than zero."
 msgstr "கேள்வி அளவு முழு மற்றும் பூஜ்யம் விட அதிகமாக இருக்க வேண்டும்."
 
 #: admin/display_prefs.php:60
-msgid ""
-"Display settings have been updated. Keep in mind that changed settings are "
-"restored on every login in demo mode."
+msgid "Display settings have been updated. Keep in mind that changed settings are restored on every login in demo mode."
 msgstr "காட்சி அமைப்புகள் மேம்படுத்தப்பட்டது. அமைப்புகள் காட்டு முறையில் ஒவ்வொரு உள்நுழைவு மீண்டும் மாற்றம் என்பதை நினைவில் கொள்ளுங்கள்."
 
 #: admin/display_prefs.php:62
@@ -1072,9 +1054,7 @@ msgid "Selected fiscal year has been deleted"
 msgstr "தேர்ந்தெடுக்கப்பட்ட நிதி ஆண்டு நீக்கப்பட்டுவிட்டது"
 
 #: admin/fiscalyears.php:133
-msgid ""
-"Warning: Deleting a fiscal year all transactions \n"
-"\t\tare removed and converted into relevant balances. This process is irreversible!"
+msgid "Warning: Deleting a fiscal year all transactions \n\t\tare removed and converted into relevant balances. This process is irreversible!"
 msgstr "ஒரு நிதி ஆண்டு நீக்குதல் எல்லா பரிமாற்றங்களையும் நீக்கப்படும் \n\t\tமற்றும் சம்பந்தப்பட்ட இருப்புகளாக மாற்றப்படுகிறது. இந்த செயல்முறை மாற்றமுடியாத ஆகிறது!"
 
 #: admin/fiscalyears.php:138
@@ -1345,7 +1325,7 @@ msgstr ""
 #: admin/inst_chart.php:50 admin/inst_lang.php:36 admin/inst_module.php:105
 #: admin/inst_theme.php:74 admin/inst_upgrade.php:155
 msgid "Installed"
-msgstr ""
+msgstr "நிறுவப்பட்ட"
 
 #: admin/inst_chart.php:50 admin/inst_lang.php:36 admin/inst_module.php:105
 #: admin/inst_theme.php:74 inventory/inquiry/stock_status.php:77
@@ -1355,7 +1335,7 @@ msgstr ""
 
 #: admin/inst_chart.php:50 admin/inst_lang.php:35 admin/inst_lang.php:220
 msgid "Encoding"
-msgstr ""
+msgstr "என்கோடிங்"
 
 #: admin/inst_chart.php:69 admin/inst_chart.php:71 admin/inst_lang.php:88
 #: admin/inst_module.php:127 admin/inst_module.php:128 admin/inst_theme.php:92
@@ -1366,7 +1346,7 @@ msgstr ""
 #: admin/inst_module.php:137 admin/inst_theme.php:96
 #: admin/inst_upgrade.php:137
 msgid "Install"
-msgstr ""
+msgstr "நிறுவுக"
 
 #: admin/inst_chart.php:75 admin/inst_module.php:138 admin/inst_theme.php:97
 msgid "Upload and install latest extension package"
@@ -1374,9 +1354,7 @@ msgstr ""
 
 #: admin/inst_chart.php:82 admin/inst_module.php:145 admin/inst_theme.php:104
 #, php-format
-msgid ""
-"You are about to remove package \\'%s\\'.\n"
-"Do you want to continue ?"
+msgid "You are about to remove package \\'%s\\'.\nDo you want to continue ?"
 msgstr ""
 
 #: admin/inst_lang.php:23
@@ -1420,9 +1398,7 @@ msgstr ""
 
 #: admin/inst_lang.php:111
 #, php-format
-msgid ""
-"You are about to remove language \\'%s\\'.\n"
-"Do you want to continue ?"
+msgid "You are about to remove language \\'%s\\'.\nDo you want to continue ?"
 msgstr ""
 
 #: admin/inst_lang.php:118
@@ -1571,9 +1547,7 @@ msgid "Partially installed (%s)"
 msgstr ""
 
 #: admin/inst_upgrade.php:170
-msgid ""
-"Database upgrades marked as partially installed cannot be installed automatically.\n"
-"You have to clean database manually to enable them, or try to perform forced upgrade."
+msgid "Database upgrades marked as partially installed cannot be installed automatically.\nYou have to clean database manually to enable them, or try to perform forced upgrade."
 msgstr ""
 
 #: admin/inst_upgrade.php:174
@@ -5669,7 +5643,7 @@ msgstr ""
 #: includes/packages.inc:189
 #, php-format
 msgid "No key field '%s' in file '%s'"
-msgstr ""
+msgstr "முக்கிய புலம் '%s' '%s' கோப்பில் இல்லை "
 
 #: includes/packages.inc:294
 msgid "Cannot download repo index file."
@@ -5678,7 +5652,7 @@ msgstr ""
 #: includes/packages.inc:306 includes/packages.inc:343
 #, php-format
 msgid "Cannot delete outdated '%s' file."
-msgstr ""
+msgstr "காலாவதியான '%s' கோப்பு நீக்க முடியாது"
 
 #: includes/packages.inc:310
 msgid "Release file in repository is invalid, or public key is outdated."
@@ -5710,7 +5684,7 @@ msgstr ""
 #: includes/packages.inc:638 includes/packages.inc:699
 #, php-format
 msgid "Package '%s' not found."
-msgstr ""
+msgstr "'%s' தொகுப்பு காணப்படவில்லை."
 
 #: includes/session.inc:136
 msgid "Incorrect Password"
@@ -6211,7 +6185,7 @@ msgstr ""
 #: includes/system_tests.inc:15 includes/ui/ui_view.inc:210
 #: reporting/rep705.php:254 reporting/rep705.php:265 reporting/rep705.php:274
 msgid "Info"
-msgstr ""
+msgstr "தகவல்"
 
 #: includes/system_tests.inc:16
 msgid "Optional"
@@ -6263,7 +6237,7 @@ msgstr ""
 
 #: includes/system_tests.inc:82
 msgid "Not removed"
-msgstr ""
+msgstr "அகற்றப்படவில்லை"
 
 #: includes/system_tests.inc:83
 msgid "Remove or rename install wizard folder for security reasons."
@@ -6365,7 +6339,7 @@ msgstr ""
 
 #: includes/system_tests.inc:288
 msgid "Main config file"
-msgstr ""
+msgstr "பிரதான கட்டமைப்பு கோப்பு"
 
 #: includes/system_tests.inc:295 includes/system_tests.inc:317
 #, php-format
@@ -6375,16 +6349,16 @@ msgstr ""
 #: includes/system_tests.inc:296 includes/system_tests.inc:318
 #, php-format
 msgid "'%s' file exists."
-msgstr ""
+msgstr "'%s' கோப்பு ஏற்கனவே உள்ளது"
 
 #: includes/system_tests.inc:300
 #, php-format
 msgid "'%s' file should be read-only"
-msgstr ""
+msgstr "'%s' கோப்பினை வாசிக்க-மட்டுமே இருக்க வேண்டும்"
 
 #: includes/system_tests.inc:309
 msgid "Database auth file"
-msgstr ""
+msgstr "டேட்டாபேஸ் அங்கீகாரம் கோப்பு"
 
 #: includes/system_tests.inc:322
 #, php-format
@@ -6418,16 +6392,16 @@ msgstr ""
 
 #: includes/system_tests.inc:420
 msgid "Test"
-msgstr ""
+msgstr "சோதனை"
 
 #: includes/system_tests.inc:420
 msgid "Test type"
-msgstr ""
+msgstr "சோதனை வகை"
 
 #: includes/system_tests.inc:420 includes/ui/view_package.php:47
 #: reporting/rep204.php:85 reporting/rep301.php:169 reporting/rep308.php:231
 msgid "Value"
-msgstr ""
+msgstr "மதிப்பு"
 
 #: includes/system_tests.inc:420 reporting/reports_main.php:40
 #: reporting/reports_main.php:51 reporting/reports_main.php:60
@@ -6461,11 +6435,11 @@ msgstr ""
 #: reporting/includes/pdf_report.inc:346 reporting/includes/pdf_report.inc:618
 #: sales/view/view_sales_order.php:85
 msgid "Comments"
-msgstr ""
+msgstr "கருத்துரைகள்"
 
 #: includes/system_tests.inc:444
 msgid "Ok"
-msgstr ""
+msgstr "சரி"
 
 #: includes/db/audit_trail_db.inc:93
 msgid ""
@@ -6706,7 +6680,7 @@ msgid "Items"
 msgstr ""
 
 #: includes/ui/ui_controls.inc:604
-msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
 msgstr ""
 
 #: includes/ui/ui_input.inc:632 reporting/includes/reports_classes.inc:222
@@ -6887,9 +6861,7 @@ msgstr ""
 
 #: includes/ui/ui_view.inc:301
 #, php-format
-msgid ""
-"Cannot retrieve exchange rate for currency %s. Please adjust approximate "
-"rate if needed."
+msgid "Cannot retrieve exchange rate for currency %s. Please adjust approximate rate if needed."
 msgstr ""
 
 #: includes/ui/ui_view.inc:342
@@ -7582,10 +7554,7 @@ msgid ""
 msgstr ""
 
 #: inventory/includes/db/items_db.inc:146
-msgid ""
-"This item cannot be deleted because some code aliases \n"
-"\t\t\t\tor foreign codes was entered for it, or there are kits defined \n"
-"\t\t\t\tusing this item as component"
+msgid "This item cannot be deleted because some code aliases \n\t\t\t\tor foreign codes was entered for it, or there are kits defined \n\t\t\t\tusing this item as component"
 msgstr ""
 
 #: inventory/inquiry/stock_movements.php:28
@@ -12209,10 +12178,7 @@ msgid ""
 msgstr ""
 
 #: sales/customer_invoice.php:140
-msgid ""
-"There are no delivery notes for this invoice.<br>\n"
-"\t\tMost likely this invoice was created in Front Accounting version prior to 2.0\n"
-"\t\tand therefore can not be modified."
+msgid "There are no delivery notes for this invoice.<br>\n\t\tMost likely this invoice was created in Front Accounting version prior to 2.0\n\t\tand therefore can not be modified."
 msgstr ""
 
 #: sales/customer_invoice.php:149
@@ -12695,7 +12661,7 @@ msgid ""
 msgstr ""
 
 #: sales/sales_order_entry.php:734 sales/sales_order_entry.php:743
-msgid "You are about to void this Document.\\nDo you want to continue?"
+msgid "You are about to void this Document.\nDo you want to continue?"
 msgstr ""
 
 #: sales/sales_order_entry.php:737
@@ -12703,9 +12669,7 @@ msgid "Validate changes and update document"
 msgstr ""
 
 #: sales/sales_order_entry.php:741
-msgid ""
-"You are about to cancel undelivered part of this order.\\nDo you want to "
-"continue?"
+msgid "You are about to cancel undelivered part of this order.\\nDo you want to continue?"
 msgstr ""
 
 #: sales/allocations/customer_allocate.php:28
@@ -13523,10 +13487,7 @@ msgid "Search All Deliveries"
 msgstr ""
 
 #: sales/inquiry/sales_deliveries_view.php:70
-msgid ""
-"For batch invoicing you should\n"
-"\t\t    select at least one delivery. All items must be dispatched to\n"
-"\t\t    the same customer branch."
+msgid "For batch invoicing you should\n\t\t    select at least one delivery. All items must be dispatched to\n\t\t    the same customer branch."
 msgstr ""
 
 #: sales/inquiry/sales_deliveries_view.php:181
@@ -13955,11 +13916,7 @@ msgid "Cannot insert stock id into item_codes"
 msgstr ""
 
 #: sql/alter2.1.php:139
-msgid ""
-"Seems that system upgrade to version 2.1 has \n"
-"\t\t\tbeen performed for this company already.<br> If something has gone \n"
-"\t\t\twrong and you want to retry upgrade process you MUST perform \n"
-"\t\t\tdatabase restore from last backup file first."
+msgid "Seems that system upgrade to version 2.1 has \n\t\t\tbeen performed for this company already.<br> If something has gone \n\t\t\twrong and you want to retry upgrade process you MUST perform \n\t\t\tdatabase restore from last backup file first."
 msgstr ""
 
 #: sql/alter2.2.php:23
