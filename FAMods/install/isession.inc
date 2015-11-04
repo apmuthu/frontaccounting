@@ -99,6 +99,7 @@ $inst_langs = array(
   'pt_BR' => array ( 'name' => 'Português (Brasilia)','code' => 'pt_BR',	'encoding' => 'iso-8859-1'),
   'pt_PT' => array ( 'name' => 'Português','code' => 'pt_PT',	'encoding' => 'iso-8859-1'),
   'sv_SE' => array ( 'name' => 'Svenska',	'code' => 'sv_SE',	'encoding' => 'iso-8859-1'),
+  'ta_IN' => array ( 'name' => 'Tamil',	'code' => 'ta_IN',	'encoding' => 'utf-8'),
   'zh_CN' => array ( 'name' => 'Chinese Simplifed',	'code' => 'zh_CN',	'encoding' => 'utf-8'),
 );
 
