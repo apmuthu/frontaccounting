@@ -3075,7 +3075,7 @@ msgstr ""
 msgid "Enter your new password in the fields."
 msgstr ""
 
-msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
 msgstr ""
 
 msgid "Entered item is not defined. Please re-enter."
