@@ -1,3 +1,4 @@
+2015-11-05 Ap.Muthu           Backported fix for wrong variable in error log message $dbase => $id
 2015-11-04 Ap.Muthu           Updated Tamil translations and fixed file name format
 2015-11-04 Ap.Muthu           Fixed main empty.po wrong escape of linefeed
 2015-11-04 Ap.Muthu           Added Tamil as an installation language, updated core Tamil translations
