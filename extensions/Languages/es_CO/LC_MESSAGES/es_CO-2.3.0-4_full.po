@@ -12,10 +12,7 @@ msgstr ""
 "X-Generator: KBabel 0.9.5\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: COLOMBIA\n"
-"X-Poedit-Basepath: c:/Apache2/htdocs/account22\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Poedit-KeywordsList: _\n"
-"X-Poedit-SearchPath-0: c:/Apache2/htdocs/account22\n"
 
 #: /var/www/fa2.3/devel/../frontaccounting.php:84
 #: /var/www/fa2.3/devel/../frontaccounting.php:85
@@ -14886,7 +14883,7 @@ msgid "Commit Order Changes"
 msgstr "Grabar la Orden"
 
 #: /var/www/fa2.3/devel/../sales/sales_order_entry.php:689
-msgid "You are about to void this Document.\\nDo you want to continue?"
+msgid "You are about to void this Document.\nDo you want to continue?"
 msgstr ""
 
 #: /var/www/fa2.3/devel/../sales/sales_order_entry.php:692
