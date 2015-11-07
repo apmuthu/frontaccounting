@@ -8593,8 +8593,8 @@ msgstr ""
 "Du er ved at gendanne databasen fra backup-fil.\n"
 "Vil du fortsætte?"
 
-msgid "You are about to void this Document.\\nDo you want to continue?"
-msgstr "Du er ved at annullere dette dokument. \\nVil du fortsætte?"
+msgid "You are about to void this Document.\nDo you want to continue?"
+msgstr "Du er ved at annullere dette dokument. \nVil du fortsætte?"
 
 msgid ""
 "You are attempting to make the quantity ordered a quantity less than has "
