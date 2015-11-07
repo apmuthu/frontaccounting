@@ -6771,8 +6771,8 @@ msgid "Items"
 msgstr "Barang"
 
 #: includes/ui/ui_controls.inc:603
-msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
-msgstr "Data yang dimasukkan belum disimpan.\\nBatalkan perubahan?"
+msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgstr "Data yang dimasukkan belum disimpan.\nBatalkan perubahan?"
 
 #: includes/ui/ui_input.inc:631 reporting/includes/reports_classes.inc:219
 msgid "Click Here to Pick up the date"
@@ -12866,15 +12866,15 @@ msgid "Commit Order Changes"
 msgstr "Lakukan perubahan order"
 
 #: sales/sales_order_entry.php:733
-msgid "You are about to void this Document.\\nDo you want to continue?"
-msgstr "Anda akan membatalkan dokumen ini (void).\\nLakukan?"
+msgid "You are about to void this Document.\nDo you want to continue?"
+msgstr "Anda akan membatalkan dokumen ini (void).\nLakukan?"
 
 #: sales/sales_order_entry.php:736
 msgid ""
-"You are about to cancel undelivered part of this order.\\nDo you want to "
+"You are about to cancel undelivered part of this order.\nDo you want to "
 "continue?"
 msgstr ""
-"Anda akan membatalkan part yang belum terkirim pada order ini.\\nLakukan?"
+"Anda akan membatalkan part yang belum terkirim pada order ini.\nLakukan?"
 
 #: sales/sales_order_entry.php:738
 msgid "Validate changes and update document"
