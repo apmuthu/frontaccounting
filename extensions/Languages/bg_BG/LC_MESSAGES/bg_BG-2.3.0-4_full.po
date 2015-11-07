@@ -12943,7 +12943,7 @@ msgstr "Въведи нова поръчка"
 
 #: /var/www/fa2.3/devel/../sales/sales_order_entry.php:689
 #, fuzzy
-msgid "You are about to void this Document.\\nDo you want to continue?"
+msgid "You are about to void this Document.\nDo you want to continue?"
 msgstr "Ще бъде изтрит %s backup файл. <br>Искате ли да продължите?"
 
 #: /var/www/fa2.3/devel/../sales/sales_order_entry.php:692
@@ -14202,7 +14202,7 @@ msgstr "Персонални настройки"
 #~ msgstr "Ограничен Достъп"
 
 #, fuzzy
-#~ msgid "You are about to delete this extension\\nDo you want to continue?"
+#~ msgid "You are about to delete this extension\nDo you want to continue?"
 #~ msgstr "Ще бъде изтрит %s backup файл. <br>Искате ли да продължите?"
 
 #~ msgid "View Transaction"
