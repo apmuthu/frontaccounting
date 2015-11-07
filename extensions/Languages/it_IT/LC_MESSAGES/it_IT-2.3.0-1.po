@@ -9145,8 +9145,8 @@ msgid ""
 "Do you want to continue?"
 msgstr "Stai per ripristinare il databse dal file di backup./nVuoi contiuare?"
 
-msgid "You are about to void this Document.\\nDo you want to continue?"
-msgstr "Stai per annullare questo documento.\\nVuoi continuare?"
+msgid "You are about to void this Document.\nDo you want to continue?"
+msgstr "Stai per annullare questo documento.\nVuoi continuare?"
 
 msgid ""
 "You are attempting to make the quantity ordered a quantity less than has "
