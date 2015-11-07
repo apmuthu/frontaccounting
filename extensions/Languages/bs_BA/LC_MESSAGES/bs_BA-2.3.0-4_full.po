@@ -15202,7 +15202,7 @@ msgid "Commit Order Changes"
 msgstr ""
 
 #: /var/www/fa2.3/devel/../sales/sales_order_entry.php:689
-msgid "You are about to void this Document.\\nDo you want to continue?"
+msgid "You are about to void this Document.\nDo you want to continue?"
 msgstr ""
 
 #: /var/www/fa2.3/devel/../sales/sales_order_entry.php:692
