@@ -12669,7 +12669,7 @@ msgid "Validate changes and update document"
 msgstr ""
 
 #: sales/sales_order_entry.php:741
-msgid "You are about to cancel undelivered part of this order.\\nDo you want to continue?"
+msgid "You are about to cancel undelivered part of this order.\nDo you want to continue?"
 msgstr ""
 
 #: sales/allocations/customer_allocate.php:28
