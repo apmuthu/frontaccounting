@@ -3070,9 +3070,9 @@ msgstr "Wprowad¼ uzgodnion± datê wysy³ki"
 msgid "Enter your new password in the fields."
 msgstr "Podaj nowe has³o w obu polach"
 
-msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
 msgstr ""
-"Wprowadzone dane nie zosta³y jeszcze zapisane.\\nCzy chcesz porzuciæ zmiany?"
+"Wprowadzone dane nie zosta³y jeszcze zapisane.\nCzy chcesz porzuciæ zmiany?"
 
 msgid "Entered item is not defined. Please re-enter."
 msgstr "Podany towar nie istnieje. Wprowad¼ ponownie."
@@ -9124,8 +9124,8 @@ msgstr ""
 "Zamierzasz odtworzyæ bazê danych z pliku.\n"
 " Czy chcesz kontynuowaæ?"
 
-msgid "You are about to void this Document.\\nDo you want to continue?"
-msgstr "Zamierzasz anulowaæ ten dokument.\\nCzy chcesz kontynuowaæ?"
+msgid "You are about to void this Document.\nDo you want to continue?"
+msgstr "Zamierzasz anulowaæ ten dokument.\nCzy chcesz kontynuowaæ?"
 
 msgid ""
 "You are attempting to make the quantity ordered a quantity less than has "
