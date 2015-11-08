@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
+"Language: Georgian\n"
 
 msgid " and "
 msgstr "და"
@@ -3055,8 +3055,8 @@ msgstr "შეიყვანე მიწოდების მოთხოვ�
 msgid "Enter your new password in the fields."
 msgstr "შეიყვანე ახალი პაროლი ველში."
 
-msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
-msgstr "მონაცემები არ შენახულა ჯერ.\\nგინდა გააუქმო ცვლილებები?"
+msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgstr "მონაცემები არ შენახულა ჯერ.\nგინდა გააუქმო ცვლილებები?"
 
 msgid "Entered item is not defined. Please re-enter."
 msgstr "შეყვანილი დასახელება არ არის განსაზღვრული. შეიყვანე თავიდან."
@@ -9137,8 +9137,8 @@ msgstr ""
 "აღდგება სარეზერვო ფაილი.\n"
 "გსურს გააგრძელო?"
 
-msgid "You are about to void this Document.\\nDo you want to continue?"
-msgstr "დოკუმენტი გაუქმდება.\\nგსურს გააგრძელო?"
+msgid "You are about to void this Document.\nDo you want to continue?"
+msgstr "დოკუმენტი გაუქმდება.\nგსურს გააგრძელო?"
 
 msgid ""
 "You are attempting to make the quantity ordered a quantity less than has "
