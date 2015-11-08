@@ -13,13 +13,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: iso-8859-2\n"
-"X-Poedit-Basepath: c:\\Apache2\\htdocs\\account228\n"
-"Language: sl_SI\n"
+"Language: Slovenian\n"
 "X-Generator: Poedit 1.7.5\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
-"X-Poedit-Bookmarks: -1,-1,-1,-1,-1,1678,-1,2173,-1,1712\n"
-"X-Poedit-SearchPath-0: c:\\Apache2\\htdocs\\account228\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #: /var/www/fa2.3/devel/../frontaccounting.php:84
 #: /var/www/fa2.3/devel/../frontaccounting.php:85
@@ -12653,8 +12649,8 @@ msgid "Commit Order Changes"
 msgstr "Spremembe naročil"
 
 #: /var/www/fa2.3/devel/../sales/sales_order_entry.php:689
-msgid "You are about to void this Document.\\nDo you want to continue?"
-msgstr "Ta dokument boste stornirali.\\nŽelite nadaljevati?"
+msgid "You are about to void this Document.\nDo you want to continue?"
+msgstr "Ta dokument boste stornirali.\nŽelite nadaljevati?"
 
 #: /var/www/fa2.3/devel/../sales/sales_order_entry.php:692
 msgid "Validate changes and update document"
@@ -13903,8 +13899,8 @@ msgstr "Osebne nastavitve"
 #~ msgid "Access extensions"
 #~ msgstr "Zugriff Erweiterungen"
 
-#~ msgid "You are about to delete this extension\\nDo you want to continue?"
-#~ msgstr "Sie sind dabei die Erweiterung zu entfernen.\\nWollen Sie fortsetzen?"
+#~ msgid "You are about to delete this extension\nDo you want to continue?"
+#~ msgstr "Sie sind dabei die Erweiterung zu entfernen.\nWollen Sie fortsetzen?"
 
 #~ msgid ""
 #~ "When the check box to indicate a day in the following month is the due date, the "
