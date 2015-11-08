@@ -1968,8 +1968,8 @@ msgstr "حوالہ فریگمنٹ درج کریں یا خالی چھوڑ"
 msgid "Enter your new password in the fields."
 msgstr "اپنے شعبوں میں نیا پاس ورڈ درج کریں."
 
-msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
-msgstr "Entered data has not been saved yet.\\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgstr "Entered data has not been saved yet.\nDo you want to abandon changes?"
 
 msgid "Entered item is not defined. Please re-enter."
 msgstr "درج آئٹم کی وضاحت نہیں ہے براہ مہربانی دوبارہ درج کریں."
