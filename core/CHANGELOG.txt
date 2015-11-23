@@ -1,5 +1,5 @@
 
-2015-11-26: Joe Hunt           Shipping shown in sales documents and views only if present.
+2015-11-23: Joe Hunt           Shipping shown in sales documents and views only if present.
 2015-11-14: Joe Hunt           Account_code to only accept 0-9 and a dot if $accounts_alpha = 0 (default)
 2015-11-13/15: Joe Hunt        Backported Date Picker Icon Vertical Alignment fix (moved from FAMods to core)
 2015-10-18: Joe Hunt / Petros  Reruns of previous commit.
