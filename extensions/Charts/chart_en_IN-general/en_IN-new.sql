@@ -227,7 +227,7 @@ INSERT INTO `0_chart_master` VALUES ('1205', '', 'Allowance for doubtful account
 INSERT INTO `0_chart_master` VALUES ('1510', '', 'Inventory', '2', '0');
 INSERT INTO `0_chart_master` VALUES ('1520', '', 'Stocks of Raw Materials', '2', '0');
 INSERT INTO `0_chart_master` VALUES ('1530', '', 'Stocks of Work In Progress', '2', '0');
-INSERT INTO `0_chart_master` VALUES ('1540', '', 'Stocks of Finsihed Goods', '2', '0');
+INSERT INTO `0_chart_master` VALUES ('1540', '', 'Stocks of Finished Goods', '2', '0');
 INSERT INTO `0_chart_master` VALUES ('1550', '', 'Goods Received Clearing account', '2', '0');
 INSERT INTO `0_chart_master` VALUES ('1820', '', 'Office Furniture and Equipment', '3', '0');
 INSERT INTO `0_chart_master` VALUES ('1825', '', 'Accum. Amort. - Furn. and Equip.', '3', '0');
