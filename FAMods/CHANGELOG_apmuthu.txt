@@ -1,3 +1,4 @@
+2015-12-08 Ap.Muthu           Fixed Supplier Payment Entry hardcoded rounding off decimals
 2015-12-06 Ap.Muthu           Fixed typo in charts: Finsihed => Finished
 2015-11-23 Ap.Muthu           rep110.php: Shipping shown in sales documents and views only if present.
 2015-11-07 Ap.Muthu           Fixed install/lang translated strings for %s in de_DE and pt_PT languages
