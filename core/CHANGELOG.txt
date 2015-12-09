@@ -1,4 +1,5 @@
 
+2015-12-09: Joe Hunt           Fixed Supplier Payment Entry hardcoded rounding off decimals - moved from FAMods
 2015-11-27: Janusz Dobrowolski Fixed es_MX installer translation file in core here on 2015-11-06
 2015-11-23: Joe Hunt           Shipping shown in sales documents and views only if present.
 2015-11-14: Joe Hunt           Account_code to only accept 0-9 and a dot if $accounts_alpha = 0 (default)
