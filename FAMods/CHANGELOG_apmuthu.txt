@@ -1,3 +1,4 @@
+2016-05-20 Ap.Muthu           Moved de_DE and pt_PT installer translation fixes to core
 2015-12-08 Ap.Muthu           Fixed Supplier Payment Entry hardcoded rounding off decimals - moved to core
 2015-12-06 Ap.Muthu           Fixed typo in charts: Finsihed => Finished
 2015-11-23 Ap.Muthu           rep110.php: Shipping shown in sales documents and views only if present.
