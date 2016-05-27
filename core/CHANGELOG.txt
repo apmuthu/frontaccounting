@@ -1,3 +1,4 @@
+2016-05-23 Joe Hunt           Tabbed dialogs allowed non access pages.
 2016-05-23 Joe Hunt           Bloomberg Rate fix for change of wrapper from span to div.
 2016-05-20 Janusz Dobrowolski Bank Accounts Edition fixes
 2016-05-17 Janusz Dobrowolski de_DE and pt_PT installer translation typos fixed
