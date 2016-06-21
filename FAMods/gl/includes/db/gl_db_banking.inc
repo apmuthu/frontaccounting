@@ -441,8 +441,17 @@ function write_bank_transaction($trans_type, $trans_no, $from_account, $items, $
 
 	// old transaction can be voided only after new transaction is entered,
 	//  otherwise the operation could fail for cash accounts due to temporary negative balance
-	if (@$old_trans) 
-			void_transaction($trans_type, $old_trans, Today(), _("Document reentered."));
+	if (@$old_trans) {
+		// try to void old transaction
+		if (!void_transaction($trans_type, $old_trans, Today(), _("Document reentered.")))
+		{
+			// void failed
+			if ($use_transaction)
+				cancel_transaction();
+			display_error("Modification cannot be processed because the old transaction cannot be voided.", true);
+			exit;
+		}
+	}
 
 	$args->trans_no = $trans_no;
 	hook_db_postwrite($args, $trans_type);
