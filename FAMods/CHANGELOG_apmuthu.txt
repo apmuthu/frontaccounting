@@ -1,3 +1,4 @@
+2016-07-16 Ap.Muthu           Optimise open_transactions and re-run
 2016-07-16 Ap.Muthu           Clean up of voiding script
 2016-06-21 Gene Barker        Add error check to make sure old deposit voids
 2016-05-20 Ap.Muthu           Moved de_DE and pt_PT installer translation fixes to core

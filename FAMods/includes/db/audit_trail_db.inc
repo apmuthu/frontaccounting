@@ -98,29 +98,13 @@ function close_transactions($todate) {
 */
 function open_transactions($fromdate) {
 
-	$sql = "SELECT a.id, a.gl_date, a.fiscal_year"
-		." FROM ".TB_PREF."gl_trans gl"
-		." INNER JOIN ". TB_PREF."audit_trail a ON 
-			(gl.type=a.type AND gl.type_no=a.trans_no)"
-		. " WHERE gl_date>='". date2sql($fromdate) ."'"
-		. " AND !ISNULL(gl_seq) AND !ISNULL(fiscal_year)"
-		. " ORDER BY a.fiscal_year, a.gl_date, a.id";
+	$sql = "UPDATE ".TB_PREF."audit_trail SET gl_seq=0 
+		WHERE gl_date>='". date2sql($fromdate) ."' 
+		AND !ISNULL(gl_seq) AND !ISNULL(fiscal_year)";
 
-	$result = db_query($sql, "Cannot select transactions for openning");
-
-	if (db_num_rows($result)) {
-		$last_year = 0;
-
-		while ($row = db_fetch($result)) {
-
-			$sql2 = "UPDATE ".TB_PREF."audit_trail SET"
-				. " gl_seq=0"
-				. " WHERE id=".$row['id'];
-											
-			db_query($sql2, "Cannot clear journal order");
-		}
-	}
+	$result = db_query($sql, "Cannot open transactions");
 }
+
 /*
 	Closed transactions have gl_seq number assigned.
 */
