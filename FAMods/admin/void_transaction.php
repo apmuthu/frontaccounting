@@ -104,7 +104,6 @@ function exist_transaction($type, $type_no)
 			return false;
 		case ST_COSTUPDATE : // it's a stock cost update
 			return false;
-			break;
 	}
 
 	return true;
@@ -154,7 +153,7 @@ function voiding_controls()
     start_table(TABLESTYLE_NOBORDER);
 	start_row();
 
-	systypes_list_cells(_("Type:"), 'filterType', null, true, $not_implemented);
+	systypes_list_cells(_("Transaction Type:"), 'filterType', null, true, $not_implemented);
 	if (list_updated('filterType'))
 		$selected_id = -1;
 
@@ -171,7 +170,7 @@ function voiding_controls()
 
 	end_row();
     end_table(1);
-    
+
 	$trans_ref = false;
 	$sql = get_sql_for_view_transactions($_POST['filterType'], $_POST['FromTransNo'], $_POST['ToTransNo'], $trans_ref);
 	if ($sql == "")
@@ -241,7 +240,7 @@ function check_valid_entries()
 	{
 		display_error(_("The selected transaction was closed for edition and cannot be voided."));
 		set_focus('trans_no');
-		return;
+		return false;
 	}
 	if (!is_date($_POST['date_']))
 	{
@@ -251,7 +250,7 @@ function check_valid_entries()
 	}
 	if (!is_date_in_fiscalyear($_POST['date_']))
 	{
-		display_error(_("The entered date is not in fiscal year."));
+		display_error(_("The entered date is out of fiscal year or is closed for further data entry."));
 		set_focus('date_');
 		return false;
 	}
