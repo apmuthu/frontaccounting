@@ -100,10 +100,10 @@ function open_transactions($fromdate) {
 
 	$sql = "SELECT a.id, a.gl_date, a.fiscal_year"
 		." FROM ".TB_PREF."gl_trans gl"
-		." LEFT JOIN ". TB_PREF."audit_trail a ON 
+		." INNER JOIN ". TB_PREF."audit_trail a ON 
 			(gl.type=a.type AND gl.type_no=a.trans_no)"
 		. " WHERE gl_date>='". date2sql($fromdate) ."'"
-		. " AND !ISNULL(gl_seq)"
+		. " AND !ISNULL(gl_seq) AND !ISNULL(fiscal_year)"
 		. " ORDER BY a.fiscal_year, a.gl_date, a.id";
 
 	$result = db_query($sql, "Cannot select transactions for openning");
@@ -112,9 +112,7 @@ function open_transactions($fromdate) {
 		$last_year = 0;
 
 		while ($row = db_fetch($result)) {
-			if ($row['fiscal_year'] == null) {
-				continue;
-			}
+
 			$sql2 = "UPDATE ".TB_PREF."audit_trail SET"
 				. " gl_seq=0"
 				. " WHERE id=".$row['id'];
