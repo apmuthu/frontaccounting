@@ -59,38 +59,32 @@ function get_audit_trail_last($trans_type, $trans_no)
 */
 function close_transactions($todate) {
 	$errors = 0;
-	$sql = "SELECT DISTINCT a.id, a.gl_date, a.fiscal_year"
-		." FROM ".TB_PREF."gl_trans gl"
-		." LEFT JOIN ". TB_PREF."audit_trail a ON 
-			(gl.type=a.type AND gl.type_no=a.trans_no)"
-		. " WHERE gl_date<='". date2sql($todate) ."'"
-		. " AND NOT ISNULL(gl_seq)"
-		. " ORDER BY a.fiscal_year, a.gl_date, a.id";
 
-	$result = db_query($sql, "Cannot select transactions for closing");
+	begin_transaction();
 
-	if (db_num_rows($result)) {
-		$last_year = 0;
+	$sql = "DROP TABLE IF EXISTS ".TB_PREF."audit_tmp";
+	db_query($sql, "Cannot drop hold table if present");
 
-		while ($row = db_fetch($result)) {
-			if ($row['fiscal_year'] == null) {
-				$errors = 1; continue;
-			}
-			if ($last_year != $row['fiscal_year']) {
-				$last_year = $row['fiscal_year'];
-				$counter = 1; // reset counter on fiscal year change
-			} else
-				$counter++;
-			$sql2 = "UPDATE ".TB_PREF."audit_trail SET"
-				. " gl_seq=$counter"
-				. " WHERE id=".$row['id'];
-											
-			db_query($sql2, "Cannot reindex journal");
-		}
-	}
-	
-	if ($errors) 
-		display_warning(_("Some transactions journal GL postings were not indexed due to lack of audit trail record."));
+	$sql2 = "CREATE TABLE ".TB_PREF."audit_tmp SELECT id, Counter AS gl_seq FROM 
+		( SELECT id, gl_date, fiscal_year
+			, (@counter:=IF(fiscal_year <> @lastyr, 1, @counter+1)) AS Counter
+			, (@lastyr:=IF(fiscal_year <> @lastyr, fiscal_year, @lastyr)) AS LastYr FROM
+			( SELECT DISTINCT a.id, a.gl_date, a.fiscal_year 
+				FROM ".TB_PREF."gl_trans gl INNER JOIN ".TB_PREF."audit_trail a 
+				  ON (gl.type=a.type AND gl.type_no=a.trans_no) 
+				WHERE gl_date<='". date2sql($todate) ."' AND NOT ISNULL(gl_seq) 
+				ORDER BY a.fiscal_year, a.gl_date, a.id) b, (SELECT (@lastyr:=0), (@counter:=1)
+			) w
+		) c";
+	db_query($sql2, "Cannot create hold table for gl_seq sequential values");
+
+	$sql3 = "UPDATE ".TB_PREF."audit_tmp a LEFT JOIN ".TB_PREF."audit_trail b USING (id) 
+			SET b.gl_seq=a.gl_seq";
+	$result = db_query($sql3, "Cannot update audit_trail.gl_seq from hold table");
+
+	db_query($sql, "Cannot drop hold table");
+
+	commit_transaction();
 }
 
 /*
