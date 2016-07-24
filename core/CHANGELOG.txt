@@ -1,3 +1,4 @@
+2016-07-24 Ap.Muthu           Minor bugs in deleting fiscal years
 2016-05-23 Joe Hunt           Tabbed dialogs allowed non access pages.
 2016-05-23 Joe Hunt           Bloomberg Rate fix for change of wrapper from span to div.
 2016-05-20 Janusz Dobrowolski Bank Accounts Edition fixes
