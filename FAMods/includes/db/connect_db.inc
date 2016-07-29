@@ -61,12 +61,19 @@ function db_query($sql, $err_msg=null)
 	
 	if($sql_trail) {
 		$db_last_inserted_id = mysql_insert_id($db);	// preserve in case trail insert is done
+		$db_affected_rows = mysql_affected_rows($db);	// preserve in case trail rows are needed
 		if ($select_trail || (strstr($sql, 'SELECT') === false)) {
+
+			$a_err_msg = '';
+			if($db_last_inserted_id !== false && $db_last_inserted_id <> 0) $a_err_msg = 'I ' . $db_last_inserted_id;
+			elseif ($db_affected_rows !== false) $a_err_msg = 'M ' . $db_affected_rows;
+			$a_err_msg = trim($a_err_msg . ' ' . $err_msg);
+
 			mysql_query(
 			"INSERT INTO ".$cur_prefix."sql_trail
 				(`sql`, `result`, `msg`)
 				VALUES(".db_escape($sql).",".($result ? 1 : 0).",
-				".db_escape($err_msg).")", $db);
+				".db_escape($a_err_msg).")", $db);
 		}
 	}
 
