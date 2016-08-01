@@ -145,9 +145,13 @@ class BoxReports
 				$ctrl = $this->get_ctrl('PARAM_'.$cnt, $type);
 			}
 			if ($ctrl != '')  {
-				$st .= $title . ':<br>';
-				$st .= $ctrl;
-				$st .= "<br><br>";
+				if ( ($type == 'CURRENCY') && substr_count($ctrl, '</option>') == 2 ) { // 1 prompt option and 1 available choice
+					$st .= '<span style="display: none" ' . substr($ctrl,6);
+				} else {
+					$st .= $title . ':<br>';
+					$st .= $ctrl;
+					$st .= "<br><br>";
+				}
 			} else {
 				display_error(_('Unknown report parameter type:').$type);
 			}
