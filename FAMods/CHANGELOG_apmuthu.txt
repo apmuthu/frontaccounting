@@ -1,3 +1,4 @@
+2016-08-01 Ap.Muthu           Removed redundant line in reporting/includes/header2.inc.
 2016-07-29 Ap.Muthu           Enhanced sql_trail now reports last inserted id and affected rows
 2016-07-18 Ap.Muthu           Optimise close_transactions - update iterations moved from php to mysql
 2016-07-16 Ap.Muthu           Optimise open_transactions and re-run
