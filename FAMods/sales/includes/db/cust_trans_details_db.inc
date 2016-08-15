@@ -16,11 +16,12 @@ function get_customer_trans_details($debtor_trans_type, $debtor_trans_no)
 if (!is_array($debtor_trans_no))
 	$debtor_trans_no = array( 0=>$debtor_trans_no );
 
-	$sql = "SELECT ".TB_PREF."debtor_trans_details.*,
-		".TB_PREF."debtor_trans_details.unit_price+".TB_PREF."debtor_trans_details.unit_tax AS FullUnitPrice,
-		".TB_PREF."debtor_trans_details.description AS StockDescription,
-		".TB_PREF."stock_master.units, ".TB_PREF."stock_master.mb_flag, ".TB_PREF."stock_master.long_description 
-		FROM ".TB_PREF."debtor_trans_details, ".TB_PREF."stock_master
+	$sql = "SELECT trans.*,
+		trans.unit_price + trans.unit_tax AS FullUnitPrice,
+		trans.description As StockDescription,
+		stock.units, stock.mb_flag
+		FROM ".TB_PREF."debtor_trans_details trans 
+			INNER JOIN ".TB_PREF."stock_master stock USING (stock_id) 
 		WHERE (";
 
 	$tr=array();
@@ -29,9 +30,7 @@ if (!is_array($debtor_trans_no))
 
 	$sql .= implode(' OR ', $tr);
 
-
 	$sql.=	") AND debtor_trans_type=".db_escape($debtor_trans_type)."
-		AND ".TB_PREF."stock_master.stock_id=".TB_PREF."debtor_trans_details.stock_id
 		ORDER BY id";
 	return db_query($sql, "The debtor transaction detail could not be queried");
 }

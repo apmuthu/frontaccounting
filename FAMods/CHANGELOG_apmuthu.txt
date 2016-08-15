@@ -1,3 +1,4 @@
+2016-08-15 Ap.Muthu           Transaction list speedup for reporting with additional index.
 2016-08-06 Ap.Muthu           Backport: Fixed broken html entities handling in longer TextWrap fields in reports.
 2016-08-01 Ap.Muthu           Suppress display of Currency Filter if only 1 currency is available
 2016-08-01 Ap.Muthu           Backport: Removed redundant line in reporting/includes/header2.inc.

@@ -1,3 +1,4 @@
+ALTER TABLE `0_debtor_trans_details` ADD INDEX `stock_trans` (`stock_id`);
 ALTER TABLE `0_debtor_trans` ADD INDEX `order_` (`order_`);
 ALTER TABLE `0_users` CHANGE `query_size` `query_size` TINYINT(1) UNSIGNED NOT NULL DEFAULT 10;
 ALTER TABLE `0_comments` ADD PRIMARY KEY (`type`, `id`), DROP INDEX `type_and_id`;

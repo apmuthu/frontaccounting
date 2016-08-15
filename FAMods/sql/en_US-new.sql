@@ -685,7 +685,8 @@ CREATE TABLE IF NOT EXISTS `0_debtor_trans_details` (
   `src_id` int(11) NOT NULL,
   PRIMARY KEY  (`id`),
   KEY `Transaction` (`debtor_trans_type`,`debtor_trans_no`),
-  KEY (`src_id`)
+  KEY (`src_id`),
+  KEY `stock_trans` (`stock_id`)
 ) ENGINE=InnoDB;
 
 --
