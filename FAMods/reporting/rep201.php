@@ -110,8 +110,13 @@ function print_supplier_balances()
 	$headers = array(_('Trans Type'), _('#'), _('Date'), _('Due Date'), _('Charges'),
 		_('Credits'), _('Allocated'), _('Outstanding'));
 
-	if ($show_balance)
+	$sup_heading = 'Supplier Outstandings';
+	$sup_filename = 'SupplierOutstandings';
+	if ($show_balance) {
 		$headers[7] = _('Balance');
+		$sup_heading = 'Supplier Balances';
+		$sup_filename = 'SupplierBalances';
+	}
 	$aligns = array('left',	'left',	'left',	'left',	'right', 'right', 'right', 'right');
 
     $params =   array( 	0 => $comments,
@@ -120,7 +125,7 @@ function print_supplier_balances()
     			3 => array(  'text' => _('Currency'),'from' => $currency, 'to' => ''),
 			4 => array('text' => _('Suppress Zeros'), 'from' => $nozeros, 'to' => ''));
 
-    $rep = new FrontReport(_('Supplier Balances'), "SupplierBalances", user_pagesize(), 9, $orientation);
+    $rep = new FrontReport(_($sup_heading), $sup_filename, user_pagesize(), 9, $orientation);
     if ($orientation == 'L')
     	recalculate_cols($cols);
 
