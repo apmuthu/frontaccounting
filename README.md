@@ -34,7 +34,7 @@ Caveats:
 * Using full random snapshots of FA repo is officially unwelcome.
 * FA Repo code is placed here for study, development and local deployment only especially where internet is not available.
 * FA versions are not released too often in order to provide a minimal acceptable level of stability, which is important especially in accounting software.
-* Any changes in the code that are not yet in the official repo is listed in https://github.com/apmuthu/frontaccounting/blob/master/FAMods/CHANGELOG_apmuthu.txt
+* Any changes in the code that are not yet in the official repo is listed in [FAMods/CHANGELOG_apmuthu.txt](https://github.com/apmuthu/frontaccounting/blob/master/FAMods/CHANGELOG_apmuthu.txt).
 
 Third Party Connects
 ====================
