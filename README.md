@@ -40,7 +40,5 @@ Caveats:
 
 Third Party Connects
 ====================
-<ul>
-<li><b>WordPress Connect</b>: https://github.com/wp-plugins/frontaccounting-connect ( empty now ) | [WP SVN](http://plugins.svn.wordpress.org/frontaccounting-connect/trunk/)</li>
-<li>Import active Frontaccounting items into wordpress as posts.</li>
-</ul>
+* <b>WordPress Connect</b>: [WP SVN](http://plugins.svn.wordpress.org/frontaccounting-connect/trunk/). The [original repo](https://github.com/wp-plugins/frontaccounting-connect) is empty now.
+* Import active Frontaccounting items into wordpress as posts.
