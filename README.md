@@ -1,12 +1,12 @@
 frontaccounting
 ===============
 
-This is an unofficial Git Repo for frontaccounting and it's extensions / utilities.
-Currently only the official v2.3.x branch is supported here.
-My mods and pending commits to the core are in the <a href="https://github.com/apmuthu/frontaccounting/blob/master/FAMods>FAMods</a> folder and documented in the [FA 2.3 Support Wiki](https://github.com/apmuthu/frontaccounting/wiki).
-Column Widths for large transaction numbers in reports [discussed in the forum](http://frontaccounting.com/punbb/viewtopic.php?id=6456) can be [backported](https://github.com/apmuthu/frontac24/commit/08b81e2fe2536c7c9f7146184dfe4fc37b57c32d).
-DB Schema has been frozen for this version and any changes will break normal upgradeability.
-DB Schema can be optimised as in [FAMods/sql/alter_to_latest.sql](https://github.com/apmuthu/frontaccounting/blob/master/FAMods/sql/alter_to_latest2.3.sql)
+* This is an unofficial Git Repo for frontaccounting and it's extensions / utilities.
+* Currently only the official v2.3.x branch is supported here.
+* My mods and pending commits to the core are in the <a href="https://github.com/apmuthu/frontaccounting/blob/master/FAMods>FAMods</a> folder and documented in the [FA 2.3 Support Wiki](https://github.com/apmuthu/frontaccounting/wiki).
+* Column Widths for large transaction numbers in reports [discussed in the forum](http://frontaccounting.com/punbb/viewtopic.php?id=6456) can be [backported](https://github.com/apmuthu/frontac24/commit/08b81e2fe2536c7c9f7146184dfe4fc37b57c32d).
+* DB Schema has been frozen for this version and any changes will break normal upgradeability.
+* DB Schema can be optimised as in [FAMods/sql/alter_to_latest.sql](https://github.com/apmuthu/frontaccounting/blob/master/FAMods/sql/alter_to_latest2.3.sql)
 
 Official Links:
 ===============
