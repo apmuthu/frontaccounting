@@ -3,7 +3,7 @@ frontaccounting
 
 * This is an unofficial Git Repo for frontaccounting and it's extensions / utilities.
 * Currently only the official v2.3.x branch is supported here.
-* My mods and pending commits to the core are in the <a href="https://github.com/apmuthu/frontaccounting/blob/master/FAMods>FAMods</a> folder and documented in the [FA 2.3 Support Wiki](https://github.com/apmuthu/frontaccounting/wiki).
+* My mods and pending commits to the core are in the [FAMods](https://github.com/apmuthu/frontaccounting/blob/master/FAMods) folder and documented in the [FA 2.3 Support Wiki](https://github.com/apmuthu/frontaccounting/wiki).
 * Column Widths for large transaction numbers in reports [discussed in the forum](http://frontaccounting.com/punbb/viewtopic.php?id=6456) can be [backported](https://github.com/apmuthu/frontac24/commit/08b81e2fe2536c7c9f7146184dfe4fc37b57c32d).
 * DB Schema has been frozen for this version and any changes will break normal upgradeability.
 * DB Schema can be optimised as in [FAMods/sql/alter_to_latest.sql](https://github.com/apmuthu/frontaccounting/blob/master/FAMods/sql/alter_to_latest2.3.sql)
@@ -21,8 +21,8 @@ Official Links:
 <li>Extensions: http://anonymous:password@repo.frontaccounting.eu/2.3/</li> - updation stopped at the beginning of 2016 for this version.
 </ul>
 
-The official <a href="http://sourceforge.net/p/frontaccounting/git/ci/master/tree/">FrontAccounting Source Tree</a> uses Git on SourceForge since 2015-03-29
-and has been officially <a href="https://github.com/FrontAccountingERP/FA">mirrored on GitHub</a> from 2015-03-29 onwards.
+The official [FrontAccounting Source Tree](http://sourceforge.net/p/frontaccounting/git/ci/master/tree/) uses Git on SourceForge since 2015-03-29
+and has been officially [mirrored on GitHub](https://github.com/FrontAccountingERP/FA) from 2015-03-29 onwards.
 
 Caveats:
 ========
@@ -35,12 +35,12 @@ Caveats:
 <li>Using full random snapshots of FA repo is officially unwelcome.</li>
 <li>FA Repo code is placed here for study, development and local deployment only especially where internet is not available.</li>
 <li>FA versions are not released too often in order to provide a minimal acceptable level of stability, which is important especially in accounting software.</li>
-<li>Any changes in the code that are not yet in the official repo is listed in the <a href="https://github.com/apmuthu/frontaccounting/blob/master/FAMods/CHANGELOG_apmuthu.txt">CHANGELOG_apmuthu.txt</a>.</li>
+<li>Any changes in the code that are not yet in the official repo is listed in the [CHANGELOG_apmuthu.txt](https://github.com/apmuthu/frontaccounting/blob/master/FAMods/CHANGELOG_apmuthu.txt).</li>
 </ul>
 
 Third Party Connects
 ====================
 <ul>
-<li><b>WordPress Connect</b>: https://github.com/wp-plugins/frontaccounting-connect ( empty now ) | <a href="http://plugins.svn.wordpress.org/frontaccounting-connect/trunk/">WP SVN</a></li>
+<li><b>WordPress Connect</b>: https://github.com/wp-plugins/frontaccounting-connect ( empty now ) | [WP SVN](http://plugins.svn.wordpress.org/frontaccounting-connect/trunk/)</li>
 <li>Import active Frontaccounting items into wordpress as posts.</li>
 </ul>
