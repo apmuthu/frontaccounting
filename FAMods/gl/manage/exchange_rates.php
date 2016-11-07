@@ -201,8 +201,20 @@ $table =& new_db_pager('orders_tbl', $sql, $cols);
 
 if (is_company_currency($_POST['curr_abrev']))
 {
+	$rate_list = get_last_exchange_rates();
+	$defcurr = get_global_curr_code();
+
+	$ratelist  = "<table border='1'>\n";
+	$ratelist .= "<tr><th colspan='3' align='center'>Last Exchange Rates</th><tr>\n";
+	$ratelist .= "<tr><th>Currency</th><th>Rate in <u>$defcurr</u></th><th>Date</th></tr>\n";
+	foreach ($rate_list as $cont) {
+		if ($def_curr <> $cont['1'])
+			$ratelist .= "<tr><th>".$cont[0]."</th><td align='right'>".$cont[2]."</td><td>".$cont[3]."</td></tr>\n";
+	}
+	$ratelist .= "</table>\n";
 
 	display_note(_("The selected currency is the company currency."), 2);
+	display_note($ratelist, 1);
 	display_note(_("The company currency is the base currency so exchange rates cannot be set for it."), 1);
 }
 else

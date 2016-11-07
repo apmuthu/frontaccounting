@@ -232,4 +232,18 @@ function get_sql_for_exchange_rates()
 		 ORDER BY date_ DESC";
 	return $sql;	 
 }
+function get_last_exchange_rates()
+{
+	$rate_list = Array();
+	$sql = "SELECT currency, curr_code, ROUND(rate_buy, 4) AS Rate, date_ 
+FROM ".TB_PREF."exchange_rates a LEFT JOIN ".TB_PREF."currencies b ON (a.curr_code = b.curr_abrev)
+WHERE (curr_code, date_) IN
+(SELECT curr_code, MAX(date_) AS date_ FROM ".TB_PREF."exchange_rates GROUP BY curr_code)
+ORDER BY curr_code";
+	$result = db_query($sql, "The latest exchange rates could not be retrieved");
+	while ($cont = db_fetch_row($result)) {
+		$rate_list[] = $cont;
+	}
+	return $rate_list;
+}
 ?>
