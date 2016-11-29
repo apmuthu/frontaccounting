@@ -1,3 +1,4 @@
+2016-11-29 Joe Hunt           Fixed A Bug in Item Sales Summary Report
 2016-11-29 Joe Hunt           0003667: supplier payment link after entering supplier invoice result. Fixed. 
 2016-11-14 Janusz Dobrowolski Cleanup in sales_invoice_db.inc (obsolete parameters in update_debtor_trans_allocation calls)
 2016-07-26 Joe Hunt           Dimension is missing in Supplier Invoice View, GL Rows.
