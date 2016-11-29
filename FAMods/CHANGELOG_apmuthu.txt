@@ -1,3 +1,4 @@
+2016-11-28 Joe Hunt           Moved previous commit to core
 2016-11-28 Joe Hunt           Backport of 0003667: supplier payment link after entering supplier invoice results in error
 2016-11-07 Ap.Muthu           Display Last Exchange Rates when Default Currency is selected
 2016-08-30 Ap.Muthu           Backport: Ajax calls - set the checkbox value = 0 for an unset checkbox rather than skipping the element.
