@@ -1,3 +1,4 @@
+2016-12-23 Ap.Muthu           Moved from FAMods: Fixed bug - submitting forms in FA 2.3.x when checkbox field not changed
 2016-12-04 Joe Hunt           Rerun Item Sales Summary Report fix
 2016-11-29 Joe Hunt           Fixed A Bug in Item Sales Summary Report
 2016-11-29 Joe Hunt           0003667: supplier payment link after entering supplier invoice result. Fixed. 
