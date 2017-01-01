@@ -31,7 +31,7 @@ $installed_languages = array (
     'package' => 'ta_IN',
     'code' => 'ta_IN',
     'encoding' => 'UTF-8',
-    'version' => '2.3.24-4',
+    'version' => '2.3.24-5',
     'path' => 'lang/ta_IN',
   ),
 );

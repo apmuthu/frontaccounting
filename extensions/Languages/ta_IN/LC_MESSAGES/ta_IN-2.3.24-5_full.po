@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Ap.Muthu <apmuthu@usa.net>, 2015
+# Ap.Muthu <apmuthu@usa.net>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: FrontAccounting\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-23 14:55+0100\n"
-"PO-Revision-Date: 2015-11-04 18:06+0530\n"
+"PO-Revision-Date: 2017-01-01 21:03+0530\n"
 "Last-Translator: Ap.Muthu <apmuthu@usa.net>\n"
 "Language-Team: Tamil (India) (http://www.gnuacademy.org/)\n"
 "MIME-Version: 1.0\n"
@@ -1251,11 +1251,11 @@ msgstr ""
 
 #: admin/gl_setup.php:201
 msgid "Payable Account:"
-msgstr ""
+msgstr "செலுத்த வேண்டிய கணக்கு:"
 
 #: admin/gl_setup.php:203 purchasing/manage/suppliers.php:127
 msgid "Purchase Discount Account:"
-msgstr ""
+msgstr "விற்பனை தள்ளுபடி கணக்கு:"
 
 #: admin/gl_setup.php:205
 msgid "GRN Clearing Account:"
@@ -1267,11 +1267,11 @@ msgstr ""
 
 #: admin/gl_setup.php:207 reporting/reports_main.php:206
 msgid "Inventory"
-msgstr ""
+msgstr "சரக்குகளின் விவரப்பட்டியல்"
 
 #: admin/gl_setup.php:209
 msgid "Allow Negative Inventory:"
-msgstr ""
+msgstr "எதிர்மறை சரக்கு அனுமதி:"
 
 #: admin/gl_setup.php:210
 msgid "Warning:  This may cause a delay in GL postings"
@@ -1279,12 +1279,12 @@ msgstr ""
 
 #: admin/gl_setup.php:212
 msgid "Items Defaults"
-msgstr ""
+msgstr "பொருட்களின் இயல்புநிலைகள்"
 
 #: admin/gl_setup.php:215 inventory/manage/item_categories.php:202
 #: inventory/manage/items.php:358
 msgid "Inventory Account:"
-msgstr ""
+msgstr "சரக்குகளின் கணக்கு:"
 
 #: admin/gl_setup.php:217 inventory/manage/item_categories.php:196
 #: inventory/manage/item_categories.php:204 inventory/manage/items.php:359
@@ -1304,7 +1304,7 @@ msgstr ""
 
 #: admin/gl_setup.php:225
 msgid "Manufacturing Defaults"
-msgstr ""
+msgstr "தயாரிப்பு இயல்புநிலைகள்"
 
 #: admin/gl_setup.php:227
 msgid "Work Order Required By After:"
@@ -1320,7 +1320,7 @@ msgstr ""
 
 #: admin/inst_chart.php:50
 msgid "Chart"
-msgstr ""
+msgstr "கணக்குகளின் அட்டவணை"
 
 #: admin/inst_chart.php:50 admin/inst_lang.php:36 admin/inst_module.php:105
 #: admin/inst_theme.php:74 admin/inst_upgrade.php:155
@@ -1331,7 +1331,7 @@ msgstr "நிறுவப்பட்ட"
 #: admin/inst_theme.php:74 inventory/inquiry/stock_status.php:77
 #: reporting/rep303.php:114
 msgid "Available"
-msgstr ""
+msgstr "கையிருப்பில்"
 
 #: admin/inst_chart.php:50 admin/inst_lang.php:35 admin/inst_lang.php:220
 msgid "Encoding"
@@ -1340,7 +1340,7 @@ msgstr "என்கோடிங்"
 #: admin/inst_chart.php:69 admin/inst_chart.php:71 admin/inst_lang.php:88
 #: admin/inst_module.php:127 admin/inst_module.php:128 admin/inst_theme.php:92
 msgid "Unknown"
-msgstr ""
+msgstr "தெரியாத"
 
 #: admin/inst_chart.php:74 admin/inst_lang.php:103 admin/inst_module.php:132
 #: admin/inst_module.php:137 admin/inst_theme.php:96
@@ -1374,15 +1374,15 @@ msgstr ""
 #: sales/manage/customer_branches.php:294 sales/manage/sales_people.php:99
 #: taxes/item_tax_types.php:117
 msgid "Name"
-msgstr ""
+msgstr "பெயர்"
 
 #: admin/inst_lang.php:35 admin/inst_lang.php:222
 msgid "Right To Left"
-msgstr ""
+msgstr "வலமிருந்து இடம்"
 
 #: admin/inst_lang.php:47
 msgid "Supported"
-msgstr ""
+msgstr "ஆதரவுள்ளது"
 
 #: admin/inst_lang.php:49
 msgid "Display also languages not supported by server locales"
@@ -1407,7 +1407,7 @@ msgstr ""
 
 #: admin/inst_lang.php:120
 msgid "Update default"
-msgstr ""
+msgstr "இயல்புநிலை மேம்படுத்தல்"
 
 #: admin/inst_lang.php:122
 msgid "Add new language manually"
@@ -1429,7 +1429,7 @@ msgstr ""
 
 #: admin/inst_lang.php:219
 msgid "Language Name"
-msgstr ""
+msgstr "மொழி பெயர்"
 
 #: admin/inst_lang.php:223
 msgid "Default Language"
@@ -12669,7 +12669,7 @@ msgid "Validate changes and update document"
 msgstr ""
 
 #: sales/sales_order_entry.php:741
-msgid "You are about to cancel undelivered part of this order.\\nDo you want to continue?"
+msgid "You are about to cancel undelivered part of this order.\nDo you want to continue?"
 msgstr ""
 
 #: sales/allocations/customer_allocate.php:28
