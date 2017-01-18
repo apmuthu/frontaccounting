@@ -24,10 +24,6 @@ ALTER TABLE `0_wo_requirements` CHANGE `loc_code` `loc_code` VARCHAR(5) DEFAULT 
 ALTER TABLE `0_crm_contacts` ADD INDEX `entity_id` (`entity_id`);
 ALTER TABLE `0_crm_contacts` ADD INDEX `person_id` (`person_id`);
 
-ALTER TABLE `0_bank_trans` CHANGE `person_id` `person_id` INT(11) DEFAULT NULL;
-ALTER TABLE `0_budget_trans` CHANGE `person_id` `person_id` INT(11) DEFAULT NULL;
-ALTER TABLE `0_gl_trans` CHANGE `person_id` `person_id` INT(11) DEFAULT NULL;
-
 ALTER TABLE `0_bom` 
 	CHANGE `parent` `parent` VARCHAR(20) DEFAULT '' NOT NULL, 
 	CHANGE `component` `component` VARCHAR(20) DEFAULT '' NOT NULL, 

@@ -1,3 +1,4 @@
+2017-01-18 Ap.Muthu           Reinstated tinyblob for person_id field type in bank_trans, budget_trans and gl_trans tables
 2017-01-01 Ap.Muthu           Updated Tamil (India) ta_IN language translations
 2016-12-23 Ap.Muthu           Check Value of checkbox fixed - moved to core
 2016-12-22 Ap.Muthu           Check Value of checkbox fixed
