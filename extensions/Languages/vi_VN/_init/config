@@ -1,0 +1,16 @@
+Package: vi_VN
+Version: 2.3.25-1
+Description: Vietnamese translation
+Author: Ap.Muthu <apmuthu@usa.net>
+Maintenance: Ap.Muthu <apmuthu@usa.net>
+Homepage: frontaccounting.com
+Language: vi_VN
+Encoding: utf-8
+RTLDir: no
+Depends: 
+Type: language
+Name: Vietnamese (Vietnam)
+Name-vi_VN: Tiếng Việt (Việt Nam)
+InstallPath: lang/vi_VN
+Filename: vi_VN-2.3.25-1
+
