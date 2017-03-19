@@ -1,3 +1,4 @@
+2017-03-19 Ap.Muthu           Updated pdf_report.inc with upstream entropy fix
 2017-03-04 Ap.Muthu           Added Vietnamese Installation language files
 2017-01-18 Ap.Muthu           Moved previous commit to core - array_combine() object issue
 2017-01-18 Ap.Muthu           Fixed balance of array_combine() object issue

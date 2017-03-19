@@ -1,3 +1,4 @@
+2017-03-19 Ap.Muthu           Entropy fix update. random_id() in main.inc wraps native uniqid()
 2017-01-18 Ap.Muthu           Fixed an array_combine object issue.
 2016-12-23 Ap.Muthu           Moved from FAMods: Fixed bug - submitting forms in FA 2.3.x when checkbox field not changed
 2016-12-04 Joe Hunt           Rerun Item Sales Summary Report fix
