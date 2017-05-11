@@ -1,3 +1,4 @@
+2017-05-11 Ap.Muthu           Reverted previous 2 commits as non duplicate code in sales_credit_db.inc
 2017-05-10 Ap.Muthu           Removed duplicate code in sales_credit_db.inc
 2017-05-10 Ap.Muthu           Moved sales_credit_db.inc to FAMods for fixes to core file
 2017-03-19 Ap.Muthu           Updated pdf_report.inc with upstream entropy fix
