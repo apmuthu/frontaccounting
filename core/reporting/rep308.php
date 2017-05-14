@@ -11,10 +11,10 @@
 ***********************************************************************/
 $page_security = 'SA_ITEMSVALREP';
 // ----------------------------------------------------------------
-// $ Revision:     	2.0 $
-// Creator:        	Jujuk, Joe Hunt
-// date_:        	2011-05-24
-// Title:        	Stock Movements
+// $ Revision:     	2.3 $
+// Creator:        	boxygen
+// date_:        	2017-05-12
+// Title:        	Costed Inventory Movements
 // ----------------------------------------------------------------
 $path_to_root="..";
 
@@ -30,21 +30,11 @@ include_once($path_to_root . "/inventory/includes/inventory_db.inc");
 
 inventory_movements();
 
-function get_domestic_price($myrow, $stock_id, $qty, $old_std_cost, $old_qty)
+function get_domestic_price($myrow, $stock_id)
 {
     if ($myrow['type'] == ST_SUPPRECEIVE || $myrow['type'] == ST_SUPPCREDIT)
     {
         $price = $myrow['price'];
-        if ($myrow['type'] == ST_SUPPRECEIVE)
-        {
-            // Has the supplier invoice increased the receival price?
-            $sql = "SELECT DISTINCT act_price FROM ".TB_PREF."purch_order_details pod INNER JOIN ".TB_PREF."grn_batch grn ON pod.order_no =
-                grn.purch_order_no WHERE grn.id = ".$myrow['trans_no']." AND pod.item_code = '$stock_id'";
-            $result = db_query($sql, "Could not retrieve act_price from purch_order_details");
-            $row = db_fetch_row($result);
-            if ($row[0] > 0 AND $row[0] <> $myrow['price'])
-                $price = $row[0];
-        }
         if ($myrow['person_id'] > 0)
         {
             // Do we have foreign currency?
@@ -54,8 +44,6 @@ function get_domestic_price($myrow, $stock_id, $qty, $old_std_cost, $old_qty)
             $price /= $ex_rate;
         }
     }
-    elseif ($myrow['type'] != ST_INVADJUST) // calcutale the price from avg. price
-        $price = ($myrow['standard_cost'] * $qty - $old_std_cost * $old_qty) / $myrow['qty'];
     else
         $price = $myrow['standard_cost']; // Item Adjustments just have the real cost
     return $price;
@@ -126,19 +114,18 @@ function avg_unit_cost($stock_id, $location=null, $to_date)
     if ($result == false)
         return 0;
     
-    $qty = $old_qty = $count = $old_std_cost = $tot_cost = 0;
+    $qty = $tot_cost = 0;
     while ($row=db_fetch($result))
     {
         $qty += $row['qty'];
-        $price = get_domestic_price($row, $stock_id, $qty, $old_std_cost, $old_qty);
-        $old_std_cost = $row['standard_cost'];
-        $tot_cost += $price;
-        $count++;
-        $old_qty = $qty;
+        $price = get_domestic_price($row, $stock_id);
+        $tran_cost = $price * $row['qty'];
+        $tot_cost += $tran_cost;
     }
-    if ($count == 0)
-        return 0;
-    return $tot_cost / $count;
+    if ($qty != 0)
+        return $tot_cost/ $qty;
+    else
+        return 0; //by Faisal
 }
 
 //----------------------------------------------------------------------------------------------------
@@ -157,7 +144,7 @@ function trans_qty_unit_cost($stock_id, $location=null, $from_date, $to_date, $i
     
     $sql = "SELECT standard_cost, price, tran_date, type, trans_no, qty, person_id FROM ".TB_PREF."stock_moves
         WHERE stock_id=".db_escape($stock_id)."
-        AND tran_date <= '$to_date' AND standard_cost > 0.001 AND qty <> 0 AND type <> ".ST_LOCTRANSFER;
+        AND tran_date <= '$to_date' AND tran_date >= '$from_date' AND standard_cost > 0.001 AND qty <> 0 AND type <> ".ST_LOCTRANSFER;
     
     if ($location != '')
         $sql .= " AND loc_code = ".db_escape($location);
@@ -173,23 +160,18 @@ function trans_qty_unit_cost($stock_id, $location=null, $from_date, $to_date, $i
     if ($result == false)
         return 0;
     
-    $qty = $count = $old_qty = $old_std_cost = $tot_cost = 0;
+    $qty = $tot_cost = 0;
     while ($row=db_fetch($result))
     {
         $qty += $row['qty'];
-        $price = get_domestic_price($row, $stock_id, $qty, $old_std_cost, $old_qty);
-        if (strncmp($row['tran_date'], $from_date,10) >= 0)
-        {
-            $tot_cost += $price;
-            $count++;
-        }
-
-        $old_std_cost = $row['standard_cost'];
-        $old_qty = $qty;
+        $price = get_domestic_price($row, $stock_id); 
+        $tran_cost = $row['qty'] * $price;
+        $tot_cost += $tran_cost;
     }
-    if ($count == 0)
-        return 0;
-    return $tot_cost / $count;
+    if ($qty != 0)
+        return $tot_cost/ $qty;
+    else
+        return 0; //by Faisal
 }
 
 //----------------------------------------------------------------------------------------------------

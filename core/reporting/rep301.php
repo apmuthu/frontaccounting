@@ -11,9 +11,9 @@
 ***********************************************************************/
 $page_security = 'SA_ITEMSVALREP';
 // ----------------------------------------------------------------
-// $ Revision:  2.0 $
-// Creator:    	Joe Hunt
-// date_:    	2005-05-19
+// $ Revision:  2.3 $
+// Creator:    	Joe Hunt, boxygen
+// date_:    	2017-05-13
 // Title:    	Inventory Valuation
 // ----------------------------------------------------------------
 $path_to_root="..";
@@ -26,21 +26,11 @@ include_once($path_to_root . "/inventory/includes/db/items_category_db.inc");
 //----------------------------------------------------------------------------------------------------
 print_inventory_valuation_report();
 
-function get_domestic_price($myrow, $stock_id, $qty, $old_std_cost, $old_qty)
+function get_domestic_price($myrow, $stock_id)
 {
     if ($myrow['type'] == ST_SUPPRECEIVE || $myrow['type'] == ST_SUPPCREDIT)
     {
         $price = $myrow['price'];
-        if ($myrow['type'] == ST_SUPPRECEIVE)
-        {
-            // Has the supplier invoice increased the receival price?
-            $sql = "SELECT DISTINCT act_price FROM ".TB_PREF."purch_order_details pod INNER JOIN ".TB_PREF."grn_batch grn ON pod.order_no =
-                grn.purch_order_no WHERE grn.id = ".$myrow['trans_no']." AND pod.item_code = '$stock_id'";
-            $result = db_query($sql, "Could not retrieve act_price from purch_order_details");
-            $row = db_fetch_row($result);
-            if ($row[0] > 0 AND $row[0] <> $myrow['price'])
-                $price = $row[0];
-        }
         if ($myrow['person_id'] > 0)
         {
             // Do we have foreign currency?
@@ -50,14 +40,12 @@ function get_domestic_price($myrow, $stock_id, $qty, $old_std_cost, $old_qty)
             $price /= $ex_rate;
         }
     }
-    elseif ($myrow['type'] != ST_INVADJUST) // calcutale the price from avg. price
-        $price = ($myrow['standard_cost'] * $qty - $old_std_cost * $old_qty) / $myrow['qty'];
     else
         $price = $myrow['standard_cost']; // Item Adjustments just have the real cost
     return $price;
 }
 
-function getAverageCost($stock_id, $to_date)
+function getAverageCost($stock_id, $location, $to_date)
 {
     if ($to_date == null)
         $to_date = Today();
@@ -68,24 +56,25 @@ function getAverageCost($stock_id, $to_date)
         WHERE stock_id=".db_escape($stock_id)."
         AND tran_date <= '$to_date' AND standard_cost > 0.001 AND qty <> 0 AND type <> ".ST_LOCTRANSFER;
 	
+	if ($location != 'all')
+		$sql .= " AND loc_code = ".db_escape($location);
+   
     $sql .= " ORDER BY tran_date";
     $result = db_query($sql, "No standard cost transactions were returned");
     
     if ($result == false)
         return 0;
-    $qty = $old_qty = $count = $old_std_cost = $tot_cost = 0;
+    $qty = $tot_cost = 0;
     while ($row=db_fetch($result))
     {
         $qty += $row['qty'];
-        $price = get_domestic_price($row, $stock_id, $qty, $old_std_cost, $old_qty);
-        $old_std_cost = $row['standard_cost'];
-        $tot_cost += $price;
-        $count++;
-        $old_qty = $qty;
+        $price = get_domestic_price($row, $stock_id);
+        $tran_cost = $row['qty'] * $price;
+        $tot_cost += $tran_cost;
     }
-    if ($count == 0)
+    if ($qty == 0)
         return 0;
-    return $tot_cost / $count;
+    return $tot_cost / $qty;
 }
 
 function getTransactions($category, $location, $date)
@@ -197,7 +186,7 @@ function print_inventory_valuation_report()
         }
         if (isset($use_costed_values) && $use_costed_values==1)
         {
-            $UnitCost = getAverageCost($trans['stock_id'], $date);
+            $UnitCost = getAverageCost($trans['stock_id'], $location, $date);
             $ItemTotal = $trans['QtyOnHand'] * $UnitCost;
         }
         else
