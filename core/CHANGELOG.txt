@@ -1,3 +1,4 @@
+2017-05-20 Joe Hunt           Sales type potential bug in tax_included (persistent on)
 2017-05-20 Joe Hunt           Deleted doc/CHANGELOG.old.txt. Not needed any more.
 2017-05-20 Joe Hunt           0003761: Reorder email is not sent for items used work order. Fixed
 2017-05-12 Joe Hunt           Optimized Inventory Valuation Reports, 301 and 308.
