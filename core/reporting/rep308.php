@@ -227,7 +227,7 @@ function inventory_movements()
     
     $totval_open = $totval_in = $totval_out = $totval_close = 0;
     $result = fetch_items($category);
-
+    
     $dec = user_price_dec();
     $catgor = '';
     while ($myrow=db_fetch($result))

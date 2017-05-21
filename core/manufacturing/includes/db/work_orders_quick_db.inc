@@ -57,7 +57,6 @@ function add_work_order_quick($wo_ref, $loc_code, $units_reqd, $stock_id, $type,
 		$unit_quantity = $bom_item["quantity"];
 		$item_quantity = $bom_item["quantity"] * $units_reqd;
 
-
 		$sql = "INSERT INTO ".TB_PREF."wo_requirements (workorder_id, stock_id, workcentre, units_req, units_issued, loc_code)
 			VALUES ($woid, " . "'" . $bom_item["component"] . "'" . ",
 			'". $bom_item["workcentre_added"] . "',
@@ -228,7 +227,7 @@ function work_order_quick_costs($woid, $stock_id, $units_reqd, $date_, $advanced
 	{
 		$UnitWOCost = ($total_material_cost + $costs + $labour)/$units_reqd;
 		update_stock_move(ST_WORKORDER, $woid, $stock_id, $UnitWOCost);	
-	}	
+	}
 }
 
 //--------------------------------------------------------------------------------------
