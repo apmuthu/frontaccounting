@@ -137,7 +137,7 @@ class fa2_3 {
 
 		include_once("$path_to_root/sales/includes/cart_class.inc");
 		include_once("$path_to_root/purchasing/includes/po_class.inc");
-		$cart = new cart(ST_SALESORDER);
+		$cart = new Cart(ST_SALESORDER);
 		$sql = "SELECT order_no, trans_type FROM {$pref}sales_orders";
 		$orders = db_query($sql);
 		if (!$orders)
