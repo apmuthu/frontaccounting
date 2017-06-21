@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 23, 2017 at 01:15 AM
+-- Generation Time: June 21, 2017 at 01:15 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6-1+lenny2
 
@@ -2205,7 +2205,8 @@ CREATE TABLE IF NOT EXISTS `0_tax_types` (
   `purchasing_gl_code` varchar(15) NOT NULL default '',
   `name` varchar(60) NOT NULL default '',
   `inactive` tinyint(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `name` (`name`,`rate`)
 ) ENGINE=InnoDB;
 
 --

@@ -51,3 +51,5 @@ ALTER TABLE `0_workcentres`
     CHANGE `description` `description` VARCHAR(50) DEFAULT '' NOT NULL;
 
 ALTER TABLE `0_audit_trail` CHANGE `fiscal_year` `fiscal_year` int(11) NOT NULL default 0;
+
+ALTER TABLE `0_tax_types` ADD UNIQUE INDEX `name` (`name`, `rate`);
