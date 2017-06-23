@@ -40,3 +40,7 @@ Third Party Connects
 ====================
 * <b>WordPress Connect</b>: [WP SVN](http://plugins.svn.wordpress.org/frontaccounting-connect/trunk/). The [original repo](https://github.com/wp-plugins/frontaccounting-connect) is empty now.
 * Import active Frontaccounting items into wordpress as posts.
+
+Utilities
+=========
+* [Online SHA1 checksum](https://emn178.github.io/online-tools/sha1_checksum.html)
