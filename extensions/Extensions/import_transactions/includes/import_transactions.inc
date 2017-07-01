@@ -633,7 +633,7 @@ function last_transno($type)
 //      $sql = "SELECT id, type, trans_no, amount FROM ".TB_PREF."bank_trans ORDER BY id DESC LIMIT 1";
         $sql = "SELECT id, `type`, trans_no, amount FROM ".TB_PREF."bank_trans WHERE `type` =".$type." ORDER BY id DESC LIMIT 1";
         $result = db_query($sql, _("Cannot locate last entry"));
-        $row = mysql_fetch_assoc($result);
+        $row = db_fetch_assoc($result);
         $rowtrans = $row['trans_no'];        
     } // end if
     
@@ -641,7 +641,7 @@ function last_transno($type)
     {    
         $sql = "SELECT counter, type, type_no, amount FROM ".TB_PREF."gl_trans ORDER BY counter DESC LIMIT 1";
         $result = db_query($sql, _("Cannot locate last entry"));
-        $row = mysql_fetch_assoc($result);
+        $row = db_fetch_assoc($result);
         $rowtrans = $row['type_no'];        
     } // end if
 
@@ -651,7 +651,7 @@ function last_transno($type)
 //          $sql = "SELECT trans_no,type FROM ".TB_PREF."debtor_trans ORDER BY trans_no DESC LIMIT 1";
             $sql = "SELECT trans_no, `type` FROM ".TB_PREF."debtor_trans WHERE `type` =".$type." ORDER BY trans_no DESC LIMIT 1";
             $result = db_query($sql, _("Cannot locate last entry"));
-            $row = mysql_fetch_assoc($result);
+            $row = db_fetch_assoc($result);
             $rowtrans = $row['trans_no'];     
     }
     return $rowtrans;//

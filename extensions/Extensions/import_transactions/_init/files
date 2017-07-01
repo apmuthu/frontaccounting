@@ -7,7 +7,7 @@
 /templates/bank_en_GB.csv: 27959de85649429a5e4b720f10d9ae1d45f44038
 /import_transactions.php: 30ff6aac2dde4d293b8c48f8d97418ce8d495700
 /LICENSE: 23a1f87d806ce0330b3d85485e399a5f9f553409
-/includes/import_transactions.inc: ee56d00cc41b552514f2b319031d7393afed0598
+/includes/import_transactions.inc: b58083c56c915b30cce76b3b574f908987b26c95
 /includes/import_sales_cart_class.inc: 6abba0b4b39474f53c723683b0bedde07c7b4422
 /includes/import_sales_order_ui.inc: c488744c5f5bf82e86d985c3230cd266f4bef451
 /includes/import_sales_order_entry.inc: 313b0d5b2f70959eb50ae201fc6e13947a14a119
