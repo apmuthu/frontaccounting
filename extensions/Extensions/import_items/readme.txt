@@ -46,7 +46,9 @@ FOREIGN;ITEM_CODE;STOCK_ID;Description;Category;dummy;Quantity;dummy;dummy;dummy
 
 Where ITEM_CODE is the upc/etc code for an item and Stock_id is the item as we know it
 
-ITEM;ITEM_CODE;STOCK_ID;Description;Category;units;dummy;MB_FLAG;Currency;Price;
+TYPE = ITEM
+
+ITEM;ITEM_CODE;STOCK_ID;Description;Category;units;Dimension;MB_FLAG;Currency;Price;
 
 Where Item_Code = STOCK_ID of the item.
 

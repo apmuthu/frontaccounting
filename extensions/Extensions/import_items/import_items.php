@@ -41,7 +41,7 @@ function check_stock_id($stock_id) {
 }
 
 function get_supplier_id($supplier) {
-    $sql = "SELECT supplier_id FROM ".TB_PREF."suppliers where supp_name = $supplier";
+    $sql = "SELECT supplier_id FROM ".TB_PREF."suppliers where supp_name = '".$supplier."'";
     $result = db_query($sql, "Can not look up supplier");
     $row = db_fetch_row($result);
     if (!$row[0]) return 0;
@@ -49,11 +49,11 @@ function get_supplier_id($supplier) {
 }
 
 function get_dimension_by_name($name) {
-    if ($name = '') return 0;
+    if ($name == '') return 0;
 
-    $sql = "SELECT * FROM ".TB_PREF."dimensions WHERE name=$name";
+    $sql = "SELECT * FROM ".TB_PREF."dimensions WHERE name='".$name."'";
     $result = db_query($sql, "Could not find dimension");
-    if ($db_num_rows($result) == 0) return -1;
+    if (db_num_rows($result) == 0) return -1;
     $row = db_fetch_row($result);
     if (!$row[0]) return -1;
     return $row[0];
@@ -160,7 +160,7 @@ if (isset($_POST['import'])) {
 		if (!$fp)
 			die("can not open file $filename");
 
-		$lines = $i = $j = $k = $b = $u = $p = $pr = $dm_n = 0;
+		$lines = $i = $j = $k = $b = $u = $p = $pr = $dim_n = 0;
 		// type, item_code, stock_id, description, category, units, qty, mb_flag, currency, price
 		while ($data = fgetcsv($fp, 4096, $sep)) {
 			if ($lines++ == 0) continue;
@@ -268,7 +268,7 @@ if (isset($_POST['import'])) {
 					    WHERE stock_id='$id'";
 
 				    db_query($sql, "The item could not be updated");
-				    display_notification("Line $lines: Update $id $descriptiont");
+				    display_notification("Line $lines: Update $id $description");
 				    $j++;
 			    }
 			    $sql = "SELECT id from ".TB_PREF."item_codes WHERE item_code='$code' AND stock_id = '$id'";
