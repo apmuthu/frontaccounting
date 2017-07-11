@@ -239,49 +239,49 @@ if (isset($_POST['action'])) {
         if (isset($_POST['lastoid'])) $lastoid = $_POST['lastoid'];
         if (isset($_POST['taxgroup'])) $defaultTaxGroup = $_POST['taxgroup'];
 
-        if ($dbHost != $db_Host) { // It changd
+        if ($dbHost != $db_Host) { // It changed
             if ($dbHost == '') $sql = "DELETE FROM ".TB_PREF."oscommerce WHERE name = 'myhost'";
             else if ($db_Host == '') $sql = "INSERT INTO ".TB_PREF."oscommerce (name, value) VALUES ('myhost', '" . $dbHost . "')";
 	    else $sql = "UPDATE  ".TB_PREF."oscommerce SET value = '" . $dbHost . "' WHERE name = 'myhost'";
 	    db_query($sql, "Update 'myhost'");
 	}
 
-        if ($dbUser != $db_User) { // It changd
+        if ($dbUser != $db_User) { // It changed
             if ($dbUser == '') $sql = "DELETE FROM ".TB_PREF."oscommerce WHERE name = 'myuser'";
             else if ($db_User == '') $sql = "INSERT INTO ".TB_PREF."oscommerce (name, value) VALUES ('myuser', '" . $dbUser . "')";
 	    else $sql = "UPDATE  ".TB_PREF."oscommerce SET value = '" . $dbUser . "' WHERE name = 'myuser'";
 	    db_query($sql, "Update 'myuser'");
 	}
 
-        if ($dbPassword != $db_Password) { // It changd
+        if ($dbPassword != $db_Password) { // It changed
             if ($dbPassword == '') $sql = "DELETE FROM ".TB_PREF."oscommerce WHERE name = 'mypassword'";
             else if ($db_Password == '') $sql = "INSERT INTO ".TB_PREF."oscommerce (name, value) VALUES ('mypassword', '" . $dbPassword . "')";
 	    else $sql = "UPDATE  ".TB_PREF."oscommerce SET value = '" . $dbPassword . "' WHERE name = 'mypassword'";
 	    db_query($sql, "Update 'mypassword'");
 	}
 
-        if ($dbName != $db_Name) { // It changd
+        if ($dbName != $db_Name) { // It changed
             if ($dbName == '') $sql = "DELETE FROM ".TB_PREF."oscommerce WHERE name = 'myname'";
             else if ($db_Name == '') $sql = "INSERT INTO ".TB_PREF."oscommerce (name, value) VALUES ('myname', '" . $dbName . "')";
 	    else $sql = "UPDATE  ".TB_PREF."oscommerce SET value = '" . $dbName . "' WHERE name = 'myname'";
 	    db_query($sql, "Update 'myname'");
         }
 
-        if ($lastcid != $last_cid) { // It changd
+        if ($lastcid != $last_cid) { // It changed
             if ($lastcid == '') $sql = "DELETE FROM ".TB_PREF."oscommerce WHERE name = 'lastcid'";
             else if ($last_cid == '') $sql = "INSERT INTO ".TB_PREF."oscommerce (name, value) VALUES ('lastcid', $lastcid)";
 	    else $sql = "UPDATE  ".TB_PREF."oscommerce SET value = $lastcid WHERE name = 'lastcid'";
 	    db_query($sql, "Update 'lastcid'");
 	}
 
-        if ($lastoid != $last_oid) { // It changd
+        if ($lastoid != $last_oid) { // It changed
             if ($lastoid == '') $sql = "DELETE FROM ".TB_PREF."oscommerce WHERE name = 'lastoid'";
             else if ($last_oid == '') $sql = "INSERT INTO ".TB_PREF."oscommerce (name, value) VALUES ('lastoid', $lastoid)";
 	    else $sql = "UPDATE  ".TB_PREF."oscommerce SET value = $lastoid WHERE name = 'lastoid'";
 	    db_query($sql, "Update 'lastoid'");
 	}
 
-        if ($defaultTaxGroup != $default_TaxGroup) { // It changd
+        if ($defaultTaxGroup != $default_TaxGroup) { // It changed
             if ($defaultTaxGroup == '') $sql = "DELETE FROM ".TB_PREF."oscommerce WHERE name = 'taxgroup'";
             else if ($default_TaxGroup == '') $sql = "INSERT INTO ".TB_PREF."oscommerce (name, value) VALUES ('taxgroup', $defaultTaxGroup)";
 	    else $sql = "UPDATE  ".TB_PREF."oscommerce SET value = $defaultTaxGroup WHERE name = 'taxgroup'";
@@ -297,6 +297,7 @@ if (isset($_POST['action'])) {
         $lastoid = $last_oid;
         $defaultTaxGroup = $default_TaxGroup;
     }
+
     if ($action == 'c_import') {
 		if (!check_num('credit_limit', 0)) {
 			display_error(_("The credit limit must be numeric and not less than zero."));
@@ -394,7 +395,7 @@ if (isset($_POST['action'])) {
 				// print_r($order);
 				// print_r($order_total);
 				$sql = "SELECT * FROM ".TB_PREF."debtors_master where name=" . db_escape($order['customers_name']);
-				$result = db_query($sql, "Cold not find customer by name");
+				$result = db_query($sql, "Could not find customer by name");
 				// echo "Found " . db_num_rows($result);
 				if (db_num_rows($result) == 0) {
 					display_notification("Customer " . db_escape($order['customers_name']) . " not found");
@@ -414,7 +415,7 @@ if (isset($_POST['action'])) {
 		    		$result = db_query($sql, "could not find any customer branch");
 		    		$old_branch = db_fetch_assoc($result);
 					if ($debug_sql) print_r($old_branch);
-					add_branch($debtor_no, $old_branch['br_name'], $old_braanch['branch_ref'], $addr, $old_branch['salesman'], $old_branch['area'], $taxgid, $old_branch['sales_account'], $old_branch['sales_discount_account'], $old_branch['receivables_account'], $old_branch['payment_discount_account'], $old_branch['default_location'], $addr, 0, 0, 1, $old_branch['notes']);
+					add_branch($debtor_no, $old_branch['br_name'], $old_branch['branch_ref'], $addr, $old_branch['salesman'], $old_branch['area'], $taxgid, $old_branch['sales_account'], $old_branch['sales_discount_account'], $old_branch['receivables_account'], $old_branch['payment_discount_account'], $old_branch['default_location'], $addr, 0, 0, 1, $old_branch['notes']);
                     $id = db_insert_id();
 					$sql = "SELECT * FROM ".TB_PREF."cust_branch WHERE branch_code = $id";
                 	if ($debug_sql) display_notification("Get BR " . $sql);
@@ -661,6 +662,7 @@ if ($action == 'show') {
 
     end_page();
 }
+
 if ($action == 'cimport') {
 
     start_form(true);
@@ -706,10 +708,12 @@ if ($action == 'cimport') {
     currencies_list_row("Customer Currency:", 'currency', get_company_pref("curr_default"));
     payment_terms_list_row("Payment Terms:", 'payment_terms', null);
 	amount_row(_("Credit Limit:"), 'credit_limit', $credit_limit);
+
     if ($dim >= 1)
         dimensions_list_row(_("Dimension")." 1:", 'dimension_id', $_POST['dimension_id'], true, " ", false, 1);
     if ($dim > 1)
         dimensions_list_row(_("Dimension")." 2:", 'dimension2_id', $_POST['dimension2_id'], true, " ", false, 2);
+
     text_row("Starting osC Customer ID:", 'min_cid', $min_cid, 6, 6);
     text_row("Ending osC Customer ID:", 'max_cid', $max_cid, 6, 6);
 
