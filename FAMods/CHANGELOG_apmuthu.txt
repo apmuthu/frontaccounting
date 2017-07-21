@@ -1,3 +1,4 @@
+2017-07-21 Ap.Muthu           Config setting $use_costed_values set to 1 by default
 2017-06-21 Ap.Muthu           Added unique index for name/rate in tax_types table
 2017-06-15 Ap.Muthu           cart => Cart fixed in sales/includes/cart_class.inc and sql/alter2.3.php
 2017-06-15 Ap.Muthu           Copied files from core for cart => Cart fixes
