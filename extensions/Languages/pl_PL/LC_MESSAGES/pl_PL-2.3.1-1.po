@@ -3070,7 +3070,7 @@ msgstr "Wprowad¼ uzgodnion± datê wysy³ki"
 msgid "Enter your new password in the fields."
 msgstr "Podaj nowe has³o w obu polach"
 
-msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr ""
 "Wprowadzone dane nie zosta³y jeszcze zapisane.\nCzy chcesz porzuciæ zmiany?"
 
@@ -9124,7 +9124,7 @@ msgstr ""
 "Zamierzasz odtworzyæ bazê danych z pliku.\n"
 " Czy chcesz kontynuowaæ?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "Zamierzasz anulowaæ ten dokument.\nCzy chcesz kontynuowaæ?"
 
 msgid ""

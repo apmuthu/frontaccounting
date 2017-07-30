@@ -3247,9 +3247,9 @@ msgstr "Εισάγετε επιθυμητή ημέρα αποστολής"
 msgid "Enter your new password in the fields."
 msgstr "Εισάγετε το νέο συνθηματικό στα πεδία."
 
-msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr ""
-"Τα δοσμένα δεδομένα δεν έχουν αποθηκευτεί ακόμα. \nΘέλετε να εγκαταλείψετε "
+"Τα δοσμένα δεδομένα δεν έχουν αποθηκευτεί ακόμα.\nΘέλετε να εγκαταλείψετε "
 "τις αλλαγές; "
 
 msgid "Entered item is not defined. Please re-enter."
@@ -9736,7 +9736,7 @@ msgstr ""
 "Ετοιμάζεστε να αποκαταστήσετε τη βάση δεδομένων από αρχείο εφεδρίας. \n"
 "Θέλετε να συνεχίσετε;"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "Ετοιμάζεστε να ακυρώσετε αυτό το έγγραφο.\nΘέλετε να συνεχίσετε;"
 
 msgid ""

@@ -2882,8 +2882,8 @@ msgstr ""
 "Ju jeni duke rikthyer Bazen e te Dhenave nga dosja e Kopjes Rezerve.\n"
 "Doni te vazhdoni?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
-msgstr "Ju po e anulloni kete dokument. A doni te vazhdoni?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
+msgstr "Ju po e anulloni kete dokument.\nA doni te vazhdoni?"
 
 msgid "You can only upload *.sql backup files"
 msgstr "Ju mund te ngarkoni vetem dosje *.sql"

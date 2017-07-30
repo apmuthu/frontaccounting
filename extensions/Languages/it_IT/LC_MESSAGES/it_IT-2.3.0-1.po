@@ -9145,7 +9145,7 @@ msgid ""
 "Do you want to continue?"
 msgstr "Stai per ripristinare il databse dal file di backup./nVuoi contiuare?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "Stai per annullare questo documento.\nVuoi continuare?"
 
 msgid ""

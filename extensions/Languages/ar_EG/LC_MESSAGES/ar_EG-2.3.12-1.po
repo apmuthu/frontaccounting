@@ -3109,7 +3109,7 @@ msgstr "إدخال عدد الأيام المسموح لعملية التسلي�
 msgid "Enter your new password in the fields."
 msgstr "إدخال كلمة مرور جديدة في الحقل المخصص"
 
-msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr "البيانات المدخلة لم يتم حفظها هل تريد أن تتجاهل التغيرات؟"
 
 msgid "Entered item is not defined. Please re-enter."
@@ -9246,7 +9246,7 @@ msgstr ""
 " أنت بصدد أسترجاع قاعدة البيانات من ملف النسخة الأحتياطي . هل تريد "
 "الأستمرار ؟"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "أنت بصدد إلغاء هذا المستند . هل تريد أن تستمر ؟"
 
 msgid ""

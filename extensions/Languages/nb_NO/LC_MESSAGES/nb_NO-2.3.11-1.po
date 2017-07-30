@@ -8210,8 +8210,8 @@ msgstr ""
 "Du er iferd med å legge tilbake en kopi av databasen.\n"
 "Ønsker du å fortsette?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
-msgstr "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
+msgstr ""
 
 msgid ""
 "You are attempting to make the quantity ordered a quantity less than has "

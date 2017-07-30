@@ -4010,7 +4010,7 @@ msgstr "年"
 msgid "Yes"
 msgstr "是"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "您将要作废此文件。\n您要继续吗？"
 
 msgid "You can only upload *.sql backup files"

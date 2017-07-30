@@ -9047,7 +9047,7 @@ msgid "Yes"
 msgstr "是"
 
 msgid ""
-"You are about to cancel undelivered part of this order.\nDo you want to "
+"You are about to cancel undelivered part of this order.\\nDo you want to "
 "continue?"
 msgstr "您將要取消該訂單未交付的一部分。\\ñ你要繼續嗎？"
 
@@ -9079,7 +9079,7 @@ msgid ""
 "Do you want to continue?"
 msgstr "你即將從備份文件復原數據庫。你要繼續嗎？"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "您正在取消這個文件\n確定繼續？"
 
 msgid ""

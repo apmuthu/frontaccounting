@@ -9124,7 +9124,7 @@ msgstr ""
 "Du är på väg att återställa databasen från säkerhetskopian. \n"
 "Vill du fortsätta?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "Du håller på att annullera detta dokument.\nVill du fortsätta?"
 
 msgid ""

@@ -7163,9 +7163,7 @@ msgid "Items"
 msgstr ""
 
 #: ../includes/ui/ui_controls.inc:575
-msgid ""
-"Entered data has not been saved yet.\n"
-"Do you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr ""
 
 #: ../includes/ui/ui_input.inc:621
@@ -12988,9 +12986,7 @@ msgid "Commit Order Changes"
 msgstr ""
 
 #: ../sales/sales_order_entry.php:691
-msgid ""
-"You are about to void this Document.\n"
-"Do you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr ""
 
 #: ../sales/sales_order_entry.php:694

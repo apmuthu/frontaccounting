@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# FrontAccounting v2.3.x.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -6,7 +6,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: FrontAccounting v2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-23 14:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -6565,7 +6565,7 @@ msgid "Items"
 msgstr ""
 
 #: includes/ui/ui_controls.inc:604
-msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr ""
 
 #: includes/ui/ui_input.inc:632 reporting/includes/reports_classes.inc:222
@@ -12340,7 +12340,7 @@ msgid "Cancels document entry or removes sales order when editing an old documen
 msgstr ""
 
 #: sales/sales_order_entry.php:734 sales/sales_order_entry.php:743
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr ""
 
 #: sales/sales_order_entry.php:737
@@ -12348,7 +12348,7 @@ msgid "Validate changes and update document"
 msgstr ""
 
 #: sales/sales_order_entry.php:741
-msgid "You are about to cancel undelivered part of this order.\nDo you want to continue?"
+msgid "You are about to cancel undelivered part of this order.\\nDo you want to continue?"
 msgstr ""
 
 #: sales/allocations/customer_allocate.php:28

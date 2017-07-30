@@ -12,8 +12,6 @@ msgstr ""
 "X-Poedit-Language: Hungarian\n"
 "X-Poedit-Country: Hungary\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Poedit-Basepath: c:\\Apache2\\htdocs\\account22\n"
-"X-Poedit-SearchPath-0: c:\\Apache2\\htdocs\\account22\n"
 
 msgid "#"
 msgstr "#"

@@ -7912,7 +7912,7 @@ msgstr ""
 "U gaat het %s backup-bestand uergzetten.\n"
 "Wilt U verdergaan ?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "U gaat dit document annuleren.\nWilt u verder gaan?"
 
 msgid ""

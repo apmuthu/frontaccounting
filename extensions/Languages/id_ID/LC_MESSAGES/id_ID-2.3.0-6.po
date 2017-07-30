@@ -3074,7 +3074,7 @@ msgstr "Masukkan hari pengiriman yang diminta"
 msgid "Enter your new password in the fields."
 msgstr "Masukkan sandi baru pada tempatnya."
 
-msgid "Entered data has not been saved yet.\nDo you want to abandon "
+msgid "Entered data has not been saved yet.\\nDo you want to abandon "
         "changes?"
 msgstr "Data yang dimasukkan belum disimpan.\nBatalkan perubahan?"
 
@@ -9175,7 +9175,7 @@ msgstr "Tahunan"
 msgid "Yes"
 msgstr "Ya"
 
-msgid "You are about to cancel undelivered part of this order.\nDo you "
+msgid "You are about to cancel undelivered part of this order.\\nDo you "
         "want to continue?"
 msgstr "Anda akan membatalkan part yang belum terkirim pada order ini."
         "\nLakukan?"
@@ -9207,7 +9207,7 @@ msgid "You are about to restore database from backup file.\n"
 msgstr "Anda akan memulihkan database dari file salinan.\n"
         "Lanjutkan?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "Anda akan membatalkan dokumen ini (void).\nLakukan?"
 
 msgid "You are attempting to make the quantity ordered a quantity less than "

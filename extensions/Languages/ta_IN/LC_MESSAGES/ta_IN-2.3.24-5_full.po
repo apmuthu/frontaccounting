@@ -6680,7 +6680,7 @@ msgid "Items"
 msgstr ""
 
 #: includes/ui/ui_controls.inc:604
-msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr ""
 
 #: includes/ui/ui_input.inc:632 reporting/includes/reports_classes.inc:222
@@ -12661,7 +12661,7 @@ msgid ""
 msgstr ""
 
 #: sales/sales_order_entry.php:734 sales/sales_order_entry.php:743
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr ""
 
 #: sales/sales_order_entry.php:737

@@ -3055,7 +3055,7 @@ msgstr "შეიყვანე მიწოდების მოთხოვ�
 msgid "Enter your new password in the fields."
 msgstr "შეიყვანე ახალი პაროლი ველში."
 
-msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr "მონაცემები არ შენახულა ჯერ.\nგინდა გააუქმო ცვლილებები?"
 
 msgid "Entered item is not defined. Please re-enter."
@@ -9137,7 +9137,7 @@ msgstr ""
 "აღდგება სარეზერვო ფაილი.\n"
 "გსურს გააგრძელო?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "დოკუმენტი გაუქმდება.\nგსურს გააგრძელო?"
 
 msgid ""

@@ -2628,9 +2628,9 @@ msgstr "Введите просил день доставки"
 msgid "Enter your new password in the fields."
 msgstr "Введите новый пароль в поля."
 
-msgid "Entered data has not been saved yet.nDo you want to abandon changes."
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes."
 msgstr ""
-"Введенные данные не были сохранены yet.Do вы хотите отказаться от изменений."
+"Введенные данные не были сохранены yet.\nDo вы хотите отказаться от изменений."
 
 msgid "Entered item is not defined. Please re-enter."
 msgstr "Вступил пункт не определен. Пожалуйста, введите заново."
@@ -7893,9 +7893,9 @@ msgstr "Раз в год"
 msgid "Yes"
 msgstr "Да"
 
-msgid "You are about to void this Document.nDo you want to continue."
+msgid "You are about to void this Document.\\nDo you want to continue."
 msgstr ""
-"Вы собираетесь аннулировать эту Document.Do вы хотите, чтобы продолжить."
+"Вы собираетесь аннулировать эту Document.\nDo вы хотите, чтобы продолжить."
 
 msgid "You can only upload .sql backup files"
 msgstr "Вы можете загружать только. Файлы SQL Backup"

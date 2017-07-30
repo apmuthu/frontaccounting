@@ -8317,7 +8317,7 @@ msgstr ""
 "Sie sind im Begriff die Datenbank aus einer Sicherung wiederherzustellen\n"
 " Wollen Sie fortsetzen?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr ""
 "Sie sind dabei dieses0 Dokument zu stornieren.\nWollen Sie fortsetzen?"
 

@@ -1723,7 +1723,7 @@ msgstr "Introduceti o alta plata furnzior"
 msgid "Enter your new password in the fields."
 msgstr "Introduceti parola noua in formular."
 
-msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr "Informatiile introduse nu au fost salvate.\nAbandonati modificarile?"
 
 msgid "Entered item is not defined. Please re-enter."
@@ -4849,7 +4849,7 @@ msgstr "Anual"
 msgid "Yes"
 msgstr "Da"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "Veti anula acest document.\nContinuati?"
 
 msgid "You have to select customer and customer branch."

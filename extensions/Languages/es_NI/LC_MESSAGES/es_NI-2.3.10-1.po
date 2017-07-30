@@ -3138,7 +3138,7 @@ msgstr "Ingresar fecha de Entrega solicitada"
 msgid "Enter your new password in the fields."
 msgstr "Ingrese su nueva contraseña en los casilleros."
 
-msgid "Entered data has not been saved yet.\nDo you want to abandon changes?"
+msgid "Entered data has not been saved yet.\\nDo you want to abandon changes?"
 msgstr ""
 "Los datos entraods no han sido guardados todavía.\n¿Quiere omitir los "
 "cambios?"
@@ -9368,7 +9368,7 @@ msgstr ""
 "Está por restaurar la base de datos de archivo  de respaldo<br>Quiere "
 "continuar?"
 
-msgid "You are about to void this Document.\nDo you want to continue?"
+msgid "You are about to void this Document.\\nDo you want to continue?"
 msgstr "Estás por anular este Documento. \n¿Quiere Continuar?"
 
 msgid ""
