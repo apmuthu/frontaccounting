@@ -348,6 +348,11 @@ class gettext_php_support extends gettext_native_support
     {
         $src_domain = $path . "/$this->_lang_code/LC_MESSAGES/$domain.po";
         $php_domain = $path . "/$this->_lang_code/LC_MESSAGES/$domain.php";
+
+        if ( $this->_lang_code == 'C' ) {
+            $src_domain = $path . "/new_language_template/LC_MESSAGES/empty.po";
+            $php_domain = $path . "/new_language_template/LC_MESSAGES/C.php";
+        }
         
         if (!file_exists($src_domain)) 
         {
