@@ -1,3 +1,4 @@
+2017-08-15 Ap.Muthu           Added hi_IN (Hindi India) core and install language files
 2017-08-03 Ap.Muthu           Non gettext fallback fix for C language
 2017-08-03 Ap.Muthu           Imported gettext.php for C language fix
 2017-07-30 Ap.Muthu           Cleanup of .po files

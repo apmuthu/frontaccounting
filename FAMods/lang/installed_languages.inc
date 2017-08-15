@@ -34,6 +34,15 @@ $installed_languages = array (
     'version' => '2.3.24-5',
     'path' => 'lang/ta_IN',
   ),
+  3 => 
+  array (
+    'name' => 'Hindi',
+    'package' => 'hi_IN',
+    'code' => 'hi_IN',
+    'encoding' => 'UTF-8',
+    'version' => '2.3.24-5',
+    'path' => 'lang/hi_IN',
+  ),
 );
 
 $dflt_lang = 'C';

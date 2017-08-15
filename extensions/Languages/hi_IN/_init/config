@@ -1,0 +1,16 @@
+Package: hi_IN
+Version: 2.3.24-5
+Description: Indian Hindi translation
+Author: Ap.Muthu <apmuthu@usa.net>
+Maintenance: Ap.Muthu <apmuthu@usa.net>
+Homepage: frontaccounting.com
+Language: hi_IN
+Encoding: utf-8
+RTLDir: no
+Depends: 
+Type: language
+Name: Hindi (India)
+Name-hi_IN: हिंदी (भारत)
+InstallPath: lang/hi_IN
+Filename: hi_IN-2.3.24-5
+
