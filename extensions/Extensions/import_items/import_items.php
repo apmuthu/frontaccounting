@@ -24,9 +24,9 @@ function get_add_workcenter($name) {
     $result = db_query($sql, "Can not search workcentres table");
     $row = db_fetch_row($result);
     if (!$row[0]) {
-	$sql = "INSERT INTO ".TB_PREF."workcentres (name, description) VALUES ( $name, $name)";
-	$result = db_query($sql, "Could not add workcenter");
-	$id = db_insert_id();
+        $sql = "INSERT INTO ".TB_PREF."workcentres (name, description) VALUES ( $name, $name)";
+        $result = db_query($sql, "Could not add workcenter");
+        $id = db_insert_id();
         display_notification("Added $name as id $id");
     } else $id = $row[0];
     return $id;
@@ -41,7 +41,7 @@ function check_stock_id($stock_id) {
 }
 
 function get_supplier_id($supplier) {
-    $sql = "SELECT supplier_id FROM ".TB_PREF."suppliers where supp_name = '".$supplier."'";
+    $sql = "SELECT supplier_id FROM ".TB_PREF."suppliers where supp_name = ".db_escape($supplier);
     $result = db_query($sql, "Can not look up supplier");
     $row = db_fetch_row($result);
     if (!$row[0]) return 0;
@@ -51,7 +51,7 @@ function get_supplier_id($supplier) {
 function get_dimension_by_name($name) {
     if ($name == '') return 0;
 
-    $sql = "SELECT * FROM ".TB_PREF."dimensions WHERE name='".$name."'";
+    $sql = "SELECT * FROM ".TB_PREF."dimensions WHERE name=".db_escape($name);
     $result = db_query($sql, "Could not find dimension");
     if (db_num_rows($result) == 0) return -1;
     $row = db_fetch_row($result);
@@ -68,7 +68,7 @@ function download_file($filename, $saveasname='')
     if ($saveasname == '') $saveasname = basename($filename);
     header('Content-type: application/vnd.ms-excel');
     header('Content-Length: '.filesize($filename));
-    header('Content-Disposition: attachment; filename="'.$saveasname.'"');
+    header('Content-Disposition: attachment; filename='.db_escape($saveasname));
     readfile($filename);
 
     return true;
@@ -83,7 +83,7 @@ function download_csv($filename, $saveasname='')
     }
     if ($saveasname == '') $saveasname = basename($filename);
     header('Content-type: application/vnd.ms-excel');
-    header('Content-Disposition: attachment; filename="'.$saveasname.'"');
+    header('Content-Disposition: attachment; filename='.db_escape($saveasname));
 // print all results, converting data as needed
     return true;
 }
@@ -364,21 +364,22 @@ if ($action == 'import') {
     $company_record = get_company_prefs();
 
     if (!isset($_POST['inventory_account']) || $_POST['inventory_account'] == "")
-   	$_POST['inventory_account'] = $company_record["default_inventory_act"];
+        $_POST['inventory_account'] = $company_record["default_inventory_act"];
 
     if (!isset($_POST['cogs_account']) || $_POST['cogs_account'] == "")
-   	$_POST['cogs_account'] = $company_record["default_cogs_act"];
+        $_POST['cogs_account'] = $company_record["default_cogs_act"];
 
     if (!isset($_POST['sales_account']) || $_POST['sales_account'] == "")
-	$_POST['sales_account'] = $company_record["default_inv_sales_act"];
+        $_POST['sales_account'] = $company_record["default_inv_sales_act"];
 
     if (!isset($_POST['adjustment_account']) || $_POST['adjustment_account'] == "")
-	$_POST['adjustment_account'] = $company_record["default_adj_act"];
+        $_POST['adjustment_account'] = $company_record["default_adj_act"];
 
     if (!isset($_POST['assembly_account']) || $_POST['assembly_account'] == "")
-	$_POST['assembly_account'] = $company_record["default_assembly_act"];
+        $_POST['assembly_account'] = $company_record["default_assembly_act"];
+
     if (!isset($_POST['sep']))
-	$_POST['sep'] = ",";
+        $_POST['sep'] = ",";
 
     gl_all_accounts_list_row("Sales Account:", 'sales_account', $_POST['sales_account']);
     gl_all_accounts_list_row("Inventory Account:", 'inventory_account', $_POST['inventory_account']);
@@ -434,5 +435,5 @@ if ($action == 'export') {
     end_form();
 }
 
-    end_page();
+end_page();
 ?>
