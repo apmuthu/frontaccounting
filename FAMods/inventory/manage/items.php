@@ -260,12 +260,19 @@ function item_settings(&$stock_id)
 	//------------------------------------------------------------------------------------
 	if ($new_item) 
 	{
-		text_row(_("Item Code:"), 'NewStockID', null, 21, 20);
-
+		$tmpBarcodeID="";
+		if ( $_POST['generateBarcode'] )
+		{
+			$tmpBarcodeID=generateBarcode();
+			$_POST['NewStockID'] = $tmpBarcodeID;
+		}
+		text_row(_("Item Code:"), 'NewStockID', $tmpBarcodeID, 21, 20);
+		echo '<tr><td> </td><td><button class="ajaxsubmit" type="submit"aspect=\'default\'  name="generateBarcode"  id="generateBarcode" value="Generate Barcode EAN8"> Generate EAN-8 Barcode </button></td></tr>';
 		$_POST['inactive'] = 0;
-	} 
-	else 
-	{ // Must be modifying an existing item
+	}
+	else
+	{
+		// Must be modifying an existing item
 		if (get_post('NewStockID') != get_post('stock_id') || get_post('addupdate')) { // first item display
 
 			$_POST['NewStockID'] = $_POST['stock_id'];
@@ -518,4 +525,42 @@ end_form();
 //------------------------------------------------------------------------------------
 
 end_page(@$_REQUEST['popup']);
+
+function generateBarcode() {
+	$tmpBarcodeID = "";
+	$tmpCountTrys = 0;
+	while ($tmpBarcodeID == "")	{
+		srand ((double) microtime( )*1000000);
+		$random_1  = rand(1,9);
+		$random_2  = rand(0,9);
+		$random_3  = rand(0,9);
+		$random_4  = rand(0,9);
+		$random_5  = rand(0,9);
+		$random_6  = rand(0,9);
+		$random_7  = rand(0,9);
+		//$random_8  = rand(0,9);
+
+			// http://stackoverflow.com/questions/1136642/ean-8-how-to-calculate-checksum-digit
+		$sum1 = $random_2 + $random_4 + $random_6; 
+		$sum2 = 3 * ($random_1  + $random_3  + $random_5  + $random_7 );
+		$checksum_value = $sum1 + $sum2;
+
+		$checksum_digit = 10 - ($checksum_value % 10);
+		if ($checksum_digit == 10) 
+			$checksum_digit = 0;
+
+		$random_8  = $checksum_digit;
+
+		$tmpBarcodeID = $random_1 . $random_2 . $random_3 . $random_4 . $random_5 . $random_6 . $random_7 . $random_8;
+
+		// LETS CHECK TO SEE IF THIS NUMBER HAS EVER BEEN USED
+		$query = "SELECT stock_id FROM ".TB_PREF."stock_master WHERE stock_id='" . $tmpBarcodeID . "'";
+		$arr_stock = db_fetch(db_query($query));
+  
+		if (  !$arr_stock['stock_id'] ) {
+			return $tmpBarcodeID;
+		}
+		$tmpBarcodeID = "";	 
+	}
+}
 ?>
