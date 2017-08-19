@@ -1,7 +1,5 @@
 <?php
 
-
-      //do some stuff here
-
+//do some stuff here
 
 ?> 

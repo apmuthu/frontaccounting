@@ -65,7 +65,7 @@ function delete_payroll_pay_type($id) {
 
 //JM: 23/04/12 -- pulled from main payroll_db.inc
 //--------------------------------------------------------------------------------------------
-function get_pay_type_array(){
+function get_pay_type_array() {
     $sql = "SELECT id, name FROM ".TB_PREF."payroll_pay_type";
     $result = db_query($sql, "could not get pay rates");
     $type_array = array();
@@ -75,7 +75,7 @@ function get_pay_type_array(){
     return $type_array;
 }
 
-function get_default_pay_rate($id){
+function get_default_pay_rate($id) {
     $sql = "SELECT default_rate FROM ".TB_PREF."payroll_pay_type WHERE id=".db_escape($id);
     $result = db_query($sql, "could not get pay rates");
     $row = db_fetch_row($result);
@@ -83,7 +83,7 @@ function get_default_pay_rate($id){
     return $row[0];
 }
 
-function db_has_pay_types(){
+function db_has_pay_types() {
     return check_empty_result("SELECT COUNT(*) FROM ".TB_PREF."payroll_pay_type");
 }
 

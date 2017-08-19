@@ -10,9 +10,7 @@ $payroll_paytype_cmethod = array(
     5 => _('multiply w/ # of working days'), // eg. lunch tickets
     6 => _('multiply w/ # of regular working hours'), // timesheet based
     7 => _('multiply w/ # of overtime hours'),
-
 );
-
 
 function payroll_paytype_cmethod_list_row($label, $name, $selected_id=null, $submit_on_change=false) {
 	global $payroll_paytype_cmethod;
@@ -24,13 +22,5 @@ function payroll_paytype_cmethod_list_row($label, $name, $selected_id=null, $sub
 	echo array_selector($name, $selected_id, $payroll_paytype_cmethod, $options);
 	echo "</td></tr>\n";
 }
-
-
-
-
-
-
-
-
 
 ?>

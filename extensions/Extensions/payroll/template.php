@@ -1,7 +1,7 @@
 <?php
 /*
-  Template for payroll module pages
-  This should include section dividers and common gettin' started kind of things
+Template for payroll module pages
+This should include section dividers and common gettin' started kind of things
 */
 
 /////////////////////////////////////////////////////
@@ -16,17 +16,13 @@ add_access_extensions();
 include_once($path_to_root . "/includes/ui.inc");
 include_once($path_to_root . "/includes/data_checks.inc");
 
-
 /////////////////////////////////////////////////////
 //Functions
 /////////////////////////////////////////////////////
 
-
 //--------------------------------------------------------------------------------------------
 
-
 //--------------------------------------------------------------------------------------------
-
 
 /////////////////////////////////////////////////////
 //Page Flow
@@ -40,4 +36,4 @@ display_error("a red error message");
 
 end_page();
 
-?>  
+?>

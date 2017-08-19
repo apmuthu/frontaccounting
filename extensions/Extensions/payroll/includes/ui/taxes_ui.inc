@@ -22,7 +22,6 @@ $payroll_tax_period = array(
     12 => _('Monthly')
 );
 
-
 //-----------------------------------------------------------------------------------------------
 function payroll_tax_types_list($name, $selected_id=null, $new_item=false, $submit_on_change=false, $show_inactive = false) {
 	global $all_items;
@@ -46,12 +45,10 @@ function payroll_tax_types_list_cells($label, $name, $selected_id=null, $new_ite
 	echo "</td>\n";
 }
 
-
-
 //-----------------------------------------------------------------------------------------------
 function payroll_tax_resp_list_row($label, $name, $selected_id=null, $submit_on_change=false) {
 	global $payroll_tax_responsibility;
-		
+
 	echo "<tr><td class='label'>$label</td><td>";
 	$options = array(
 	    'select_submit'=> $submit_on_change
@@ -95,4 +92,5 @@ function payroll_tax_period_list_row($label, $name, $selected_id=null, $submit_o
 	echo array_selector($name, $selected_id, $payroll_tax_period, $options );
 	echo "</td></tr>\n";
 }
+
 ?>

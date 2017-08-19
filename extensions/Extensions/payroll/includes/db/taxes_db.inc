@@ -48,6 +48,7 @@ function get_payroll_tax_types() {
     $sql = "SELECT * FROM ".TB_PREF."payroll_tax_type";
     return db_query($sql, "could not get taxes");
 }
+
 //-----------------------------------------------------------------------------------------------------------
 /*
   `id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -83,8 +84,6 @@ function db_has_payroll_tax_types(){
 }
 
 //JM 23/04/12 - consolidating db includes
-//all the following were extracted from the main payroll_db.inc and may or may not still be in use
-//at the very least, these will need to be updated with the new table schema
 
 //JM - this will be replaced by add_payroll_tax_table_data above 
 //--------------------------------------------------------------------------------------------

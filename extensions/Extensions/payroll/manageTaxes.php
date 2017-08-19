@@ -1,6 +1,5 @@
 <?php
 
-
 $page_security = 'SA_PAYROLL';
 $path_to_root = "../..";
 
@@ -13,93 +12,87 @@ include_once($path_to_root . "/includes/ui.inc");
 include_once($path_to_root . "/modules/payroll/includes/payroll_db.inc");
 include_once($path_to_root . "/modules/payroll/includes/payroll_ui.inc");
 
-
-
-
-
 $new_tax_type = get_post('tax_type_id')=='' || get_post('cancel');
-
 
 //--------------------------------------------------------------------------------------------------
 if (list_updated('tax_type_id')) {
-	$Ajax->activate('tax_table');
-	$Ajax->activate('controls');
-	$Ajax->activate('tax_rate_table');
+    $Ajax->activate('tax_table');
+    $Ajax->activate('controls');
+    $Ajax->activate('tax_rate_table');
 }
 
 function clear_data() {
-	unset($_POST);
+    unset($_POST);
 }
 
-
 if (get_post('addupdate')) {
-   	$input_error = 0;
-	if ($_POST['code'] == '') {
-      	    $input_error = 1;
-      	    display_error( _("Tax Code cannot be empty."));
-	    set_focus('code');
-   	} elseif ($_POST['name'] == '') {
-      	    $input_error = 1;
-      	    display_error( _("Tax Name cannot be empty."));
-	    set_focus('name');
-   	}
+    $input_error = 0;
+    if ($_POST['code'] == '') {
+        $input_error = 1;
+        display_error( _("Tax Code cannot be empty."));
+        set_focus('code');
+    } elseif ($_POST['name'] == '') {
+        $input_error = 1;
+        display_error( _("Tax Name cannot be empty."));
+        set_focus('name');
+    }
 
-	if ($input_error == 0) {
-     	    if ($new_tax_type) {
-		add_payroll_tax_type($_POST['code'], $_POST['name'], $_POST['type'], $_POST['responsibility'],
-				$_POST['tax_base'], $_POST['accrual_gl_code'], $_POST['expense_gl_code'], $_POST['tax_period']);
-		display_notification(_("New Tax type has been added."));
-       	    } else {
-       		update_payroll_tax_type($_POST['tax_type_id'], $_POST['code'], $_POST['name'], $_POST['type'], $_POST['responsibility'],
-				$_POST['tax_base'], $_POST['accrual_gl_code'], $_POST['expense_gl_code'], $_POST['tax_period']);
-		update_record_status($_POST['tax_type_id'], get_post('inactive'), 'payroll_tax_type', 'id');
-	  	display_notification(_("The tax type has been updated."));
-       	    }
-	    $new_tax_type = true;
-	    clear_data();
-	    $Ajax->activate('_page_body');
-	}
+    if ($input_error == 0) {
+        if ($new_tax_type) {
+            add_payroll_tax_type($_POST['code'], $_POST['name'], $_POST['type'], $_POST['responsibility'],
+                $_POST['tax_base'], $_POST['accrual_gl_code'], $_POST['expense_gl_code'], $_POST['tax_period']);
+            display_notification(_("New Tax type has been added."));
+        } else {
+            update_payroll_tax_type($_POST['tax_type_id'], $_POST['code'], $_POST['name'], $_POST['type'], $_POST['responsibility'],
+                $_POST['tax_base'], $_POST['accrual_gl_code'], $_POST['expense_gl_code'], $_POST['tax_period']);
+            update_record_status($_POST['tax_type_id'], get_post('inactive'), 'payroll_tax_type', 'id');
+            display_notification(_("The tax type has been updated."));
+        }
+        $new_tax_type = true;
+        clear_data();
+        $Ajax->activate('_page_body');
+    }
 }
 
 //--------------------------------------------------------------------------------------------------
 /*
 if (get_post('delete')) {
-	if (check_role_used(get_post('role'))) {
-		display_error(_("This role is currently assigned to some users and cannot be deleted"));
- 	} else {
-		delete_security_role(get_post('role'));
-		display_notification(_("Security role has been sucessfully deleted."));
-		unset($_POST['role']);
-	}
-	$Ajax->activate('_page_body');
+    if (check_role_used(get_post('role'))) {
+        display_error(_("This role is currently assigned to some users and cannot be deleted"));
+    } else {
+        delete_security_role(get_post('role'));
+        display_notification(_("Security role has been sucessfully deleted."));
+        unset($_POST['role']);
+    }
+    $Ajax->activate('_page_body');
 }
 */
 if (get_post('cancel')) {
-	unset($_POST['tax_type_id']);
-	$Ajax->activate('_page_body');
+    unset($_POST['tax_type_id']);
+    $Ajax->activate('_page_body');
 }
 
 if (!isset($_POST['tax_type_id']) || list_updated('tax_type_id')) {
-	$tax_type_id = get_post('tax_type_id');
+    $tax_type_id = get_post('tax_type_id');
 
-	unset($_POST);
-	if ($tax_type_id) {
-		$row = get_payroll_tax_type($tax_type_id);
-		$_POST['code'] = $row['code'];
-		$_POST['name'] = $row['name'];
-		$_POST['inactive'] = $row['inactive'];
-		$_POST['type'] = $row['type'];
-		$_POST['tax_base'] = $row['tax_base'];
-		$_POST['responsibility'] = $row['responsibility'];
-		$_POST['accrual_gl_code'] = $row['accrual_gl_code'];
-		$_POST['expense_gl_code'] = $row['expense_gl_code'];
-		$_POST['tax_period'] = $row['tax_period'];
-	} else {
-		$_POST['code'] = $_POST['name'] = '';
-		unset($_POST['inactive']);
-	}
+    unset($_POST);
+    if ($tax_type_id) {
+        $row = get_payroll_tax_type($tax_type_id);
+        $_POST['code'] = $row['code'];
+        $_POST['name'] = $row['name'];
+        $_POST['inactive'] = $row['inactive'];
+        $_POST['type'] = $row['type'];
+        $_POST['tax_base'] = $row['tax_base'];
+        $_POST['responsibility'] = $row['responsibility'];
+        $_POST['accrual_gl_code'] = $row['accrual_gl_code'];
+        $_POST['expense_gl_code'] = $row['expense_gl_code'];
+        $_POST['tax_period'] = $row['tax_period'];
+    } else {
+        $_POST['code'] = $_POST['name'] = '';
+        unset($_POST['inactive']);
+    }
 
-	$_POST['tax_type_id'] = $tax_type_id;
+    $_POST['tax_type_id'] = $tax_type_id;
 }
 
 
@@ -122,26 +115,26 @@ end_table();
 echo "<hr>";
 
 if (get_post('_show_inactive_update')) {
-	$Ajax->activate('tax_type_id');
-	set_focus('tax_type_id');
+    $Ajax->activate('tax_type_id');
+    set_focus('tax_type_id');
 }
 
 if (find_submit('_Section')) {
-	$Ajax->activate('tax_table');
-	$Ajax->activate('tax_rate_table');
+    $Ajax->activate('tax_table');
+    $Ajax->activate('tax_rate_table');
 }
 
 if (!isset($_POST['type']))
-	$_POST['type'] = 0;
+    $_POST['type'] = 0;
 
 if (!isset($_POST['responsibility']))
-	$_POST['responsibility'] = 0;
+    $_POST['responsibility'] = 0;
 
 if (!isset($_POST['tax_base']))
-	$_POST['tax_base'] = 0;
+    $_POST['tax_base'] = 0;
 
 if (!isset($_POST['tax_period']))
-	$_POST['tax_period'] = 1;
+    $_POST['tax_period'] = 1;
 //-----------------------------------------------------------------------------------------------
 div_start('tax_table');
 //start_table(TABLESTYLE2);
@@ -167,7 +160,6 @@ end_outer_table(1);
 
 //record_status_list_row(_("Current status:"), 'inactive');
 end_table(1);
-
 
 div_start('tax_rate_table');
 if ($new_tax_type) {
@@ -220,6 +212,5 @@ div_end();
 
 end_form();
 end_page();
-
 
 ?>

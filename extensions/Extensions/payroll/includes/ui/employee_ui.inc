@@ -23,11 +23,10 @@ $payroll_emp_role = array(
     '4'=>"Owner"
 );
 
-
 //--------------------------------------------------------------------------------------------
 function payroll_payfreq_list_row($label, $name, $selected_id=null, $submit_on_change=false) {
 	global $payroll_payfreq;
-		
+
 	echo "<tr><td class='label'>$label</td><td>";
 	$options = array(
 	    'select_submit'=> $submit_on_change
@@ -39,7 +38,7 @@ function payroll_payfreq_list_row($label, $name, $selected_id=null, $submit_on_c
 //--------------------------------------------------------------------------------------------
 function payroll_filing_status_list_row($label, $name, $selected_id=null, $submit_on_change=false) {
 	global $payroll_filing_status;
-		
+
 	echo "<tr><td class='label'>$label</td><td>";
 	$options = array(
 	    'select_submit'=> $submit_on_change
@@ -51,7 +50,7 @@ function payroll_filing_status_list_row($label, $name, $selected_id=null, $submi
 //--------------------------------------------------------------------------------------------
 function payroll_emp_role_list_row($label, $name, $selected_id=null, $submit_on_change=false) {
 	global $payroll_emp_role;
-		
+
 	echo "<tr><td class='label'>$label</td><td>";
 	$options = array(
 	    'select_submit'=> $submit_on_change
@@ -62,7 +61,6 @@ function payroll_emp_role_list_row($label, $name, $selected_id=null, $submit_on_
 
 //--------------------------------------------------------------------------------------------
 function payroll_pay_type_list_row($label, $name, $selected_id=null, $submit_on_change=false) {
-		
 	echo "<tr><td class='label'>$label</td><td>";
 	$options = array(
 	    'select_submit'=> $submit_on_change
@@ -75,17 +73,13 @@ function payroll_pay_type_list_row($label, $name, $selected_id=null, $submit_on_
 //customer_list function
 //--------------------------------------------------------------------------------------------
 function employee_list($name, $selected_id=null, $spec_option=false, $submit_on_change=false, 
-	$show_inactive=false, $editkey = false)
-{
+	$show_inactive=false, $editkey = false) {
+
 	global $all_items;
-
 	$sql = "SELECT emp_id, CONCAT_WS(' ', emp_first_name, emp_last_name), inactive FROM ".TB_PREF."employees ";
-
 	$mode = 0;//We don't have many employees, hardcoding to no search
-
 	if ($editkey)
 		set_editor('employee', $name, $editkey);//what is this? //set_editor defined in ui_controls.inc
-
 	$ret = combo_input($name, $selected_id, $sql, 'emp_id', 'emp_first_name', //sql fields
 	array(
 	    //'format' => '_format_add_curr',
@@ -108,8 +102,7 @@ function employee_list($name, $selected_id=null, $spec_option=false, $submit_on_
 
 //--------------------------------------------------------------------------------------------
 function employee_list_cells($label, $name, $selected_id=null, $all_option=false, 
-	$submit_on_change=false, $show_inactive=false, $editkey = false)
-{
+	$submit_on_change=false, $show_inactive=false, $editkey = false) {
 	if ($label != null)
 		echo "<td>$label</td>\n";
 	echo "<td nowrap>";
@@ -118,4 +111,4 @@ function employee_list_cells($label, $name, $selected_id=null, $all_option=false
 	echo "</td>\n";
 }
 
-?> 
+?>
