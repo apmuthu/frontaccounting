@@ -1,0 +1,11 @@
+Package: payroll
+Version: 2.3.10-1
+Name: Simple US payroll
+Description: Simple US payroll system for generating paychecks
+ and tax forms, and administrating employees. Based on classes 
+ pulled from TimeTrex open source employee tracking software.
+Author: Joshua Marchlewski <fa@sticmann.com>
+Maintenance: Joshua Marchlewski <fa@sticmann.com>
+Homepage: frontaccounting.com
+Type: extension
+InstallPath: modules/payroll 
