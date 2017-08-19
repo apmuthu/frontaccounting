@@ -126,7 +126,7 @@ function update_employee_compensation($emp_id, $pay_type_id, $rate, $rate_id) {
 function remove_employee_compensation($rate_id) {
 
     $sql = "DELETE FROM ".TB_PREF."employee_pay_rates WHERE id = $rate_id";
-    db_query($sql, "Could not get remove pay rate");
+    db_query($sql, "Could not remove pay rate");
 }
 
 ?>
