@@ -299,6 +299,10 @@ function get_pkg_or_list($type = null, $pkgname = null, $filter=array(), $outkey
 		$sig = url_get_contents($repo.'/Release.sig');
 		$data = file_get_contents($loclist);
 		$cert = file_get_contents(PUBKEY_PATH.'/FA.pem');
+		if (!function_exists('openssl_verify')) {
+			display_error(_("OpenSSL have to be available on your server to use extension repository system."));
+			return null;
+		}	
 		if ((!isset($repo_sign) || $repo_sign == 1) && openssl_verify($data, $sig, $cert) <= 0) {
 			if ($refresh) {
 				if (!@unlink($loclist))
@@ -468,7 +472,8 @@ function get_languages_list()
 		else
 			$pkgs[$l['package']] = array_merge($pkgs[$l['package']], $l);
 	}
-	ksort($pkgs);
+	if ($pkgs)
+		ksort($pkgs);
 	return $pkgs;
 }
 //---------------------------------------------------------------------------------------
@@ -531,7 +536,8 @@ function get_extensions_list($type = null)
 //		else
 			$pkgs[$ext['package']] = array_merge($pkgs[$ext['package']], $ext);
 	}
-	ksort($pkgs);
+	if ($pkgs)
+		ksort($pkgs);
 	return $pkgs;
 }
 //
@@ -558,8 +564,8 @@ function get_themes_list()
 		}
 	}
 	// TODO: Add other themes from themes directory
-	
-	ksort($pkgs);
+	if ($pkgs)
+		ksort($pkgs);
 	return $pkgs;
 }
 //---------------------------------------------------------------------------------------
@@ -592,7 +598,8 @@ function get_charts_list()
 		else
 			$pkgs[$ext['package']] = array_merge($pkgs[$ext['package']], $ext);
 	}
-	ksort($pkgs);
+	if ($pkgs)
+		ksort($pkgs);
 	return $pkgs;
 }
 //---------------------------------------------------------------------------------------------
