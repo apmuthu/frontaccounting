@@ -1,3 +1,4 @@
+2017-10-01 Ap.Muthu           Fixed user config values unavailable error generated before user login
 2017-09-30 Ap.Muthu           Backported OpenSSL Verify check and pkg sorted display
 2017-08-18 Ap.Muthu           Backported EAN-8 Barcode to tcpdf barcode library
 2017-08-18 Ap.Muthu           Imported barcodes.php from core for EAN 8 extension
