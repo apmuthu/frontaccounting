@@ -138,6 +138,7 @@ $backup_path = BACKUP_PATH . $backup_name;
 if (get_post('creat')) {
 	generate_backup($conn, get_post('comp'), get_post('comments'));
 	$Ajax->activate('backups');
+	refresh_sys_prefs(); // re-read system setup
 };
 
 if (get_post('restore')) {
