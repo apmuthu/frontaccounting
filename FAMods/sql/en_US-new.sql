@@ -377,7 +377,7 @@ CREATE TABLE IF NOT EXISTS `0_comments` (
   `id` int(11) NOT NULL default '0',
   `date_` date default '0000-00-00',
   `memo_` tinytext,
-  PRIMARY KEY (`type`,`id`)
+  KEY `type_and_id` (`type`,`id`)
 ) ENGINE=InnoDB;
 
 --
