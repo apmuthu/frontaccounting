@@ -1,0 +1,3533 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FrontAccounting\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-23 14:55+0100\n"
+"PO-Revision-Date: 2017-11-02 20:06+0530\n"
+"Last-Translator: Ap.Muthu <apmuthu@usa.net>\n"
+"Language-Team: Tamil (India) (http://www.transifex.com/gnuacademy/"
+"frontaccounting-1/language/ta_IN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ta_IN\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid " and "
+msgstr " மற்றும்"
+
+msgid ""
+" is not writable. Change its permissions so it is, then re-run the operation."
+msgstr " எழுத முடியாது. அதன் அனுமதியை மாற்றவும், அது மீண்டும் இயக்கத்தை இயக்கவும்."
+
+msgid "#"
+msgstr "எண்."
+
+msgid "#:"
+msgstr "எண்:"
+
+msgid "%d Journal Entries for AR/AP accounts have been added"
+msgstr "AR/AP கணக்குகளுக்கான%d ஜர்னல் பதிவுகள் சேர்க்கப்பட்டுள்ளன"
+
+msgid "&Access Setup"
+msgstr " அணுகல் அமைப்பு"
+
+msgid "&Allocate Customer Payments or Credit Notes"
+msgstr " வாடிக்கையாளர் கொடுப்பனவுகள் அல்லது கடன் குறிப்புகளை ஒதுக்குதல்"
+
+msgid "&Allocate Supplier Payments or Credit Notes"
+msgstr " வழங்குபவர் கொடுப்பனவு அல்லது கடன் குறிப்புகளை ஒதுக்கீடு"
+
+msgid "&Attach Documents"
+msgstr "ஆவணங்கள் இணைக்கவும்"
+
+msgid "&Backup and Restore"
+msgstr "காப்பு மற்றும் மீட்பு"
+
+msgid "&Balance Sheet"
+msgstr "ஐந்தொகை"
+
+msgid "&Banking and General Ledger"
+msgstr " வங்கி மற்றும் பொது லெட்ஜர்"
+
+msgid "&Bills Of Material"
+msgstr "பொருள் மற்றும் பில்கள்"
+
+msgid "&Budget Entry"
+msgstr " பட்ஜெட் நுழைவு"
+
+msgid "&Company Setup"
+msgstr " நிறுவனத்தின் அமைப்பு"
+
+msgid "&Create and Print Recurrent Invoices"
+msgstr " தொடர்ச்சியான பற்றுச்சீட்டுகளை உருவாக்குங்கள் மற்றும் அச்சிடுக"
+
+msgid "&Currencies"
+msgstr "மற்றும் நாணயங்கள்"
+
+msgid "&Delivery Against Sales Orders"
+msgstr "விற்பனையாளர்களுக்கு எதிராக டெலிவரி"
+
+msgid "&Deposits"
+msgstr " வைப்பு"
+
+msgid "&Dimensions"
+msgstr "பரிமாணங்கள்"
+
+msgid "&Display Setup"
+msgstr " காட்சி அமைவு"
+
+msgid "&Exchange Rates"
+msgstr "மாற்று விகிதங்கள்"
+
+msgid "&Fiscal Years"
+msgstr " நிதி ஆண்டுகள்"
+
+msgid "&Foreign Item Codes"
+msgstr " வெளிநாட்டு பொருள் குறியீடுகள்"
+
+msgid "&GL Accounts"
+msgstr " GL கணக்குகள்"
+
+msgid "&Invoice Against Sales Delivery"
+msgstr "விற்பனை விநியோகத்திற்கு எதிராக  விலைப்பட்டியல்"
+
+msgid "&Items"
+msgstr "பொருட்களை"
+
+msgid "&Items and Inventory"
+msgstr " பொருட்கள் மற்றும் சரக்கு"
+
+msgid "&Journal Entry"
+msgstr " ஜர்னல் நுழைவு"
+
+msgid "&Journal Inquiry"
+msgstr " ஜர்னல் விசாரணை"
+
+msgid "&Manufacturing"
+msgstr " தயாரிப்புப்"
+
+msgid "&Outstanding Dimensions"
+msgstr " சிறந்த பரிமாணங்கள்"
+
+msgid "&Outstanding Purchase Orders Maintenance"
+msgstr "மற்றும் சிறந்த கொள்முதல் ஆணைகள் பராமரிப்பு"
+
+msgid "&Outstanding Work Orders"
+msgstr " சிறந்த வேலை ஆணைகள்"
+
+msgid "&Payments"
+msgstr " கொடுப்பனவுகள்"
+
+msgid "&Payments to Suppliers"
+msgstr "சப்ளையர்களுக்கு செலுத்துதல்"
+
+msgid "&Points of Sale"
+msgstr " விற்பனை புள்ளிகள்"
+
+msgid "&Print Profiles"
+msgstr " அச்சு சுயவிவரங்கள்"
+
+msgid "&Printers"
+msgstr " பிரிண்டர்ஸ்"
+
+msgid "&Profit and Loss Drilldown"
+msgstr " லாபம் மற்றும் இழப்பு துரப்பணம்"
+
+msgid "&Profit and Loss Statement"
+msgstr "லாபம்/நட்ட அறிக்கை"
+
+msgid "&Purchases"
+msgstr " கொள்முதல்கள்"
+
+msgid "&Quick Entries"
+msgstr " விரைவு பதிவுகள்"
+
+msgid "&Reconcile Bank Account"
+msgstr "வங்கி கணக்கை மீண்டும் இணைக்கவும்"
+
+msgid "&Reorder Levels"
+msgstr "நிலைகள் மற்றும் மறுவரிசைப்படுத்துக"
+
+msgid "&Revaluation of Currency Accounts"
+msgstr " நாணயக் கணக்குகளின் மறு மதிப்பீடு"
+
+msgid "&Sales"
+msgstr " விற்பனை"
+
+msgid "&Select an existing dimension"
+msgstr " ஏற்கனவே உள்ள பரிமாணத்தைத் தேர்ந்தெடுக்கவும்"
+
+msgid "&Suppliers"
+msgstr " சப்ளையர்கள்"
+
+msgid "&Taxes"
+msgstr " வரி"
+
+msgid "&Template Delivery"
+msgstr " டெலிவரி டெலிவரி"
+
+msgid "&Template Invoice"
+msgstr " டெம்ப்ளேட் விலைப்பட்டியல்"
+
+msgid "&Units of Measure"
+msgstr "அளவீடுகளின் அலகுகள்"
+
+msgid "&User Accounts Setup"
+msgstr " பயனர் கணக்கு அமைவு"
+
+msgid "&View the GL Journal Entries for this Transfer"
+msgstr "இந்த மாற்றத்திற்கான GL ஜர்னல் பதிவுகள் காண்க"
+
+msgid "&View the GL Postings for this Deposit"
+msgstr "இந்த வைப்புக்கான ஜிஎல் போஸ்ட்டைப் பார்க்கவும்"
+
+msgid "&View the GL Postings for this Payment"
+msgstr "இந்த கட்டணத்திற்கான GL இடுகைகளைப் பார்க்கலாம்"
+
+msgid "&View this Journal Entry"
+msgstr "இந்த பத்திரிகை நுழைவு  காண்க"
+
+msgid "&Void a Transaction"
+msgstr "ஒரு பரிவர்த்தனை ரத்துசெய்யவும்"
+
+msgid "&Work Centres"
+msgstr " பணி மையங்கள்"
+
+msgid "'%s' file exists."
+msgstr "'%s' கோப்பு ஏற்கனவே உள்ளது"
+
+msgid "'%s' file should be read-only"
+msgstr "'%s' கோப்பினை வாசிக்க-மட்டுமே இருக்க வேண்டும்"
+
+msgid ", Please create it manually"
+msgstr "தயவுசெய்து கைமுறையாக உருவாக்கவும்"
+
+msgid ", please remove it manually"
+msgstr "தயவு செய்து அதை கைமுறையாக அகற்றவும்"
+
+msgid "A new password has been sent to your mailbox."
+msgstr "ஒரு புதிய கடவுச்சொல் உங்கள் மின்னஞ்சல் பெட்டிக்கு அனுப்பப்பட்டுள்ளது."
+
+msgid "A new user has been added."
+msgstr "ஒரு புதிய பயனர் சேர்க்கப்பட்டுள்ளது."
+
+msgid "Abbreviation"
+msgstr "சுருக்கமான"
+
+msgid "Access Level"
+msgstr "அணுகல் நிலை"
+
+msgid "Access Level:"
+msgstr "அணுகல் நிலை:"
+
+msgid ""
+"Access level edition in Company setup section have to be enabled for your "
+"account."
+msgstr ""
+"நிறுவனத்தின் கணக்கு பிரிவில் அணுகல் நிலை பதிப்பை உங்கள் கணக்கில் செயல்படுத்த வேண்டும்."
+
+msgid "Access levels edition"
+msgstr "அணுகல் நிலை பதிப்புகள்"
+
+msgid "Access setup"
+msgstr "அணுகல் அமைப்பு"
+
+msgid "Account"
+msgstr "கணக்கு"
+
+msgid "Account &Tags"
+msgstr "கணக்கு  குறிச்சொற்கள்"
+
+msgid "Account Code"
+msgstr "கணக்கு கோட்"
+
+msgid "Account Code 2:"
+msgstr "கணக்கு கோட் 2:"
+
+msgid "Account Code:"
+msgstr "கணக்கு கோட்:"
+
+msgid "Account Description"
+msgstr "கணக்கு விவரம்"
+
+msgid "Account Group:"
+msgstr "கணக்குக் குழு:"
+
+msgid "Account Name"
+msgstr "கணக்கின் பெயர்"
+
+msgid "Account Name:"
+msgstr "கணக்கின் பெயர்:"
+
+msgid "Account Tags"
+msgstr "கணக்கு குறிச்சொற்கள்"
+
+msgid "Account Tags:"
+msgstr "கணக்கு குறிச்சொற்கள்:"
+
+msgid "Account Type:"
+msgstr "கணக்கு வகை:"
+
+msgid "Account data has been updated."
+msgstr "கணக்கு தரவு புதுப்பிக்கப்பட்டது."
+
+msgid "Account not added, possible duplicate Account Code."
+msgstr "கணக்கு சேர்க்கப்படவில்லை, கணக்கு நகல் சாத்தியம்."
+
+msgid "Account status:"
+msgstr "கணக்கு நிலை:"
+
+msgid "Account/Tax Type"
+msgstr "கணக்கு/வரி வகை"
+
+msgid "Account:"
+msgstr "கணக்கு:"
+
+msgid "Account<br>Total"
+msgstr "கணக்கு <br> மொத்த"
+
+msgid "Accruals for %s"
+msgstr "%s க்கான வருமானம்"
+
+msgid "Accrued Balance Account"
+msgstr "சம்பாதித்த இருப்பு கணக்கு"
+
+msgid "Accumulate batch shipping:"
+msgstr "தொகுதி கப்பல் சேர:"
+
+msgid "Accumulated"
+msgstr "குவிக்கப்பட்ட"
+
+msgid "Achieved %"
+msgstr "அடைந்தது %"
+
+msgid "Active"
+msgstr "செயலில்"
+
+msgid "Add"
+msgstr "கூட்டு"
+
+msgid "Add Account"
+msgstr "கணக்கு சேர்க்க"
+
+msgid "Add Item"
+msgstr "பொருள் சேர்க்கவும்"
+
+msgid "Add New Profile"
+msgstr "புதிய சுயவிவரத்தைச் சேர்க்கவும்"
+
+msgid "Add Price from Std Cost:"
+msgstr "வகுப்பு விலையில் இருந்து விலையை சேர்க்கவும்:"
+
+msgid "Add an Attachment"
+msgstr "இணைப்பு சேர்க்கவும்"
+
+msgid "Add and Manage &Customers"
+msgstr "சேர் மற்றும் நிர்வகி  வாடிக்கையாளர்கள்"
+
+msgid "Add new"
+msgstr "புதிதாக சேர்க்கவும்"
+
+msgid "Add new item to document"
+msgstr "ஆவணப்படுத்த புதிய உருப்படியைச் சேர்க்கவும்"
+
+msgid "Add new language manually"
+msgstr "கைமுறையாக புதிய மொழியை சேர்க்கவும்"
+
+msgid "Add new line to journal"
+msgstr "பத்திரிகைக்கு புதிய வரி சேர்க்கவும்"
+
+msgid "Address"
+msgstr "முகவரி"
+
+msgid "Address:"
+msgstr "முகவரி:"
+
+msgid "Addresses"
+msgstr "முகவரிகள்"
+
+msgid "All"
+msgstr "அனைத்து"
+
+msgid "All Accounts"
+msgstr "எல்லா கணக்குகளும்"
+
+msgid "Allow Negative Inventory:"
+msgstr "எதிர்மறை சரக்கு அனுமதி:"
+
+msgid "Amount"
+msgstr "தொகை"
+
+msgid "Amount max:"
+msgstr "தொகை அதிகபட்சம்:"
+
+msgid "Amount min:"
+msgstr "தொகை நிமிடம்:"
+
+msgid "Amount:"
+msgstr "தொகை:"
+
+msgid "Are you sure you want to delete company no. "
+msgstr "நநீங்கள் உறுதியாக இருக்கிறீர்களா நீக்கப்படும் நிறுவனத்தின் எண். "
+
+msgid ""
+"Are you sure you want to delete fiscal year %s - %s? All transactions are "
+"deleted and converted into relevant balances. Do you want to continue ?"
+msgstr ""
+"%s -%s நிதியாண்டு%s ஐ நிச்சயமாக நீக்க விரும்புகிறீர்களா? எல்லா பரிவர்த்தனைகளும் "
+"நீக்கப்பட்டன மற்றும் பொருத்தமான நிலுவைகளாக மாற்றப்படுகின்றன. தொடர விரும்புகிறீர்களா?"
+
+msgid "Are you sure you want to post accruals?"
+msgstr "நீங்கள் நிச்சயமாக இடுகைகளை இடுகையிட விரும்புகிறீர்களா?"
+
+msgid ""
+"Are you sure you want to void this transaction ? This action cannot be "
+"undone."
+msgstr "இந்த பரிவர்த்தனை ரத்துசெய்ய விரும்புகிறீர்களா? இந்த செயலைச் செயல்தவிர்க்க முடியாது."
+
+msgid "As at:"
+msgstr "இருக்கிறதுபோல:"
+
+msgid "Attach Documents"
+msgstr "ஆவணங்களை இணைக்கவும்"
+
+msgid "Attached File"
+msgstr "இணைக்கப்பட்டுள்ள கோப்பு"
+
+msgid "Attached File:"
+msgstr "இணைக்கப்பட்டுள்ள கோப்பு:"
+
+msgid "Attached you will find "
+msgstr "நீங்கள் காண்பீர்கள் இணைக்கப்பட்டுள்ளது"
+
+msgid "Attaching documents"
+msgstr "ஆவணங்களை இணைத்தல்"
+
+msgid "Attachment has been deleted."
+msgstr "இணைப்பு நீக்கப்பட்டுள்ளது."
+
+msgid "Attachment has been inserted."
+msgstr "இணைப்பு சேர்க்கப்பட்டது."
+
+msgid "Attachment has been updated."
+msgstr "இணைப்பு மேம்படுத்தப்பட்டது."
+
+msgid "Authorization timeout"
+msgstr "அங்கீகாரம் நேரம் முடிந்தது"
+
+msgid "Auto update"
+msgstr "தானியங்கு புதுப்பிப்பு"
+
+msgid "Automatic Revaluation Currency Accounts"
+msgstr "தானியங்கி மறு மதிப்பீடு நாணயக் கணக்குகள்"
+
+msgid "Automatic exchange rate update:"
+msgstr "தானியங்கி மாற்று விகிதம் மேம்படுத்தல்:"
+
+msgid "Available"
+msgstr "கிடைக்கும்"
+
+msgid "BCC Address for all outgoing mails:"
+msgstr "அனைத்து வெளிச்செல்லும் மின்னஞ்சல்களுக்கும் BCC முகவரி:"
+
+msgid "BEGIN date bigger than END date."
+msgstr "END தேதியை விட BEGIN தேதி பெரியது."
+
+msgid "Backup and Restore Database"
+msgstr "காப்புப்பிரதி மற்றும் மீட்டமை தரவுத்தளம்"
+
+msgid "Backup paths have not been set correctly."
+msgstr "காப்புப் பாதைகளை சரியாக அமைக்கவில்லை."
+
+msgid "Backup scripts maintenance"
+msgstr "காப்பு ஸ்கிரிப்டை பராமரிப்பு"
+
+msgid "Backup successfully generated."
+msgstr "காப்பு வெற்றிகரமாக உருவாக்கப்பட்டது."
+
+msgid "Balance"
+msgstr "இருப்பு"
+
+msgid "Balance &Sheet Drilldown"
+msgstr "இருப்பு  தாள் துளைத்தல்"
+
+msgid "Balance Based"
+msgstr "அடிப்படையில் சமநிலை"
+
+msgid "Balance Sheet"
+msgstr "இருப்பு தாள்"
+
+msgid "Balance Sheet Drilldown"
+msgstr "இருப்பு தாள் துளைத்தல்"
+
+msgid "Balance for this Dimension"
+msgstr "இந்த பரிமாணத்திற்கான இருப்பு"
+
+msgid "Bank"
+msgstr "வங்கி"
+
+msgid "Bank &Accounts"
+msgstr "வங்கி கணக்குகள்"
+
+msgid "Bank Account &Inquiry"
+msgstr "வங்கி கணக்கு மற்றும் விசாரணைகள்"
+
+msgid "Bank Account &Transfers"
+msgstr "வங்கி கணக்கு மற்றும் இடமாற்றங்கள்"
+
+msgid "Bank Account Currency:"
+msgstr "வங்கி கணக்கு நாணயம்:"
+
+msgid "Bank Account Deposit Entry"
+msgstr "வங்கி கணக்கு வைப்பு நுழைவு"
+
+msgid "Bank Account GL Code:"
+msgstr "வங்கி கணக்கு ஜி.எல் கோட்:"
+
+msgid "Bank Account Name:"
+msgstr "வங்கி கணக்கு பெயர்:"
+
+msgid "Bank Account Number:"
+msgstr "வங்கி கணக்கு எண்:"
+
+msgid "Bank Account Payment Entry"
+msgstr "வங்கி கணக்கு கொடுப்பனவு நுழைவு"
+
+msgid "Bank Accounts"
+msgstr "வங்கி கணக்குகள்"
+
+msgid "Bank Address"
+msgstr "வங்கி முகவரி"
+
+msgid "Bank Address:"
+msgstr "வங்கி முகவரி:"
+
+msgid "Bank Charge:"
+msgstr "வங்கி கட்டணம்:"
+
+msgid "Bank Charges Account:"
+msgstr "வங்கிக் கட்டணங்கள் கணக்கு:"
+
+msgid "Bank Name:"
+msgstr "வங்கி பெயர்:"
+
+msgid "Bank Statement"
+msgstr "வங்கி அறிக்கை"
+
+msgid "Bank Statement:"
+msgstr "வங்கி அறிக்கை:"
+
+msgid "Bank account has been updated"
+msgstr "வங்கி கணக்கு புதுப்பிக்கப்பட்டது"
+
+msgid "Banking & GL analytics"
+msgstr "வங்கி மற்றும் GL பகுப்பாய்வு"
+
+msgid "Banking & GL configuration"
+msgstr "வங்கி மற்றும் ஜிஎல் கட்டமைப்பு"
+
+msgid "Banking & GL transactions"
+msgstr "வங்கி மற்றும் ஜிஎல் பரிவர்த்தனைகள்"
+
+msgid "Banking &Reports"
+msgstr "வங்கி மற்றும் அறிக்கைகள்"
+
+msgid "Base Amount"
+msgstr "அடிப்படை தொகை"
+
+msgid "Base Amount Description"
+msgstr "அடிப்படை அளவு விளக்கம்"
+
+msgid "Base for auto price calculations:"
+msgstr "கார் விலை கணக்கீடுகளுக்கான அடிப்படை:"
+
+msgid "Before GRN Clearing Account can be changed all GRNs have to be invoiced"
+msgstr ""
+"GRN க்ளியரிங் கணக்கு மாற்றப்படுவதற்கு முன்பாக அனைத்து GRN களையும் பதிவு செய்ய வேண்டும்"
+
+msgid "Beginning<br>Balance"
+msgstr "<br> இருப்பு தொடங்கி"
+
+msgid "Bi-weekly"
+msgstr "வாரமிருமுறை"
+
+msgid "Branch:"
+msgstr "கிளை:"
+
+msgid ""
+"Broken company subdirectories system. You have to remove this company "
+"manually."
+msgstr ""
+"உடைந்த நிறுவனம் துணை அடைவு அமைப்பு. நீங்கள் இந்த நிறுவனத்தை கைமுறையாக அகற்ற வேண்டும்."
+
+msgid "Brought Forward"
+msgstr "முன்னோக்கி வந்தார்"
+
+msgid "Browser printing support"
+msgstr "உலாவி அச்சிடும் ஆதரவு"
+
+msgid "Browser support"
+msgstr "உலாவி ஆதரவு"
+
+msgid "Budget"
+msgstr "பட்ஜெட்"
+
+msgid "Budget Entry"
+msgstr "பட்ஜெட் நுழைவு"
+
+msgid "C.O.G.S. Account:"
+msgstr "C.O.G.S. கணக்கு:"
+
+msgid "Calculated Return"
+msgstr "கணக்கிடப்பட்ட திரும்ப"
+
+msgid "Can't delete backup file."
+msgstr "காப்புப்பிரதி கோப்பை நீக்க முடியாது."
+
+msgid "Cancel"
+msgstr "ரத்து"
+
+msgid "Cancel Edition"
+msgstr "பதிப்பு ரத்து"
+
+msgid "Cancel changes"
+msgstr "மாற்றங்களை ரத்துசெய்"
+
+msgid "Cannot CLOSE this year because there are open fiscal years before"
+msgstr "திறந்த நிதி ஆண்டுகளுக்கு முன் இருப்பதால் இந்த ஆண்டு நெருக்கமாக முடியாது"
+
+msgid "Cannot create new company due to bugs in sql file."
+msgstr "SQL கோப்பில் பிழைகள் காரணமாக புதிய நிறுவனத்தை உருவாக்க முடியாது."
+
+msgid "Cannot delete outdated '%s' file."
+msgstr "காலாவதியான '%s' கோப்பு நீக்க முடியாது"
+
+msgid ""
+"Cannot delete this account because it is used as one of the company default "
+"GL accounts."
+msgstr ""
+"இந்த கணக்கை நீக்க முடியாது, ஏனெனில் அது நிறுவனத்தின் இயல்புநிலை GL கணக்குகளில் ஒன்றாக "
+"பயன்படுத்தப்படுகிறது."
+
+msgid "Cannot delete this account because it is used by a bank account."
+msgstr "இந்த கணக்கை ஒரு வங்கிக் கணக்கால் பயன்படுத்துவதால் அதை நீக்க முடியாது."
+
+msgid ""
+"Cannot delete this account because it is used by one or more Customer "
+"Branches."
+msgstr ""
+"இந்த கணக்கை நீக்க முடியாது, ஏனெனில் இது ஒன்று அல்லது அதற்கு மேற்பட்ட வாடிக்கையாளர் "
+"கிளைகளால் பயன்படுத்தப்படுகிறது."
+
+msgid ""
+"Cannot delete this account because it is used by one or more Item Categories."
+msgstr ""
+"இந்த கணக்கை நீக்க முடியாது, ஏனெனில் ஒன்று அல்லது அதற்கு மேற்பட்ட பொருள் வகைகள் "
+"பயன்படுத்தப்படுகின்றன."
+
+msgid "Cannot delete this account because it is used by one or more Items."
+msgstr ""
+"இந்த கணக்கை நீக்க முடியாது, ஏனெனில் இது ஒன்று அல்லது அதற்கு மேற்பட்ட உருப்படிகளால் "
+"பயன்படுத்தப்படுகிறது."
+
+msgid ""
+"Cannot delete this account because it is used by one or more Quick Entry "
+"Lines."
+msgstr ""
+"இந்த கணக்கை நீக்க முடியாது, ஏனெனில் இது ஒன்று அல்லது அதற்கு மேற்பட்ட விரைவு நுழைவு "
+"கோடுகள் பயன்படுத்தப்படுகிறது."
+
+msgid "Cannot delete this account because it is used by one or more Taxes."
+msgstr ""
+"இந்த கணக்கை நீக்க முடியாது, ஏனெனில் இது ஒன்று அல்லது அதற்கு மேற்பட்ட வரிகளால் "
+"பயன்படுத்தப்படுகிறது."
+
+msgid "Cannot delete this account because it is used by one or more suppliers."
+msgstr ""
+"இந்த கணக்கை நீக்க முடியாது, ஏனெனில் இது ஒன்று அல்லது அதற்கு மேற்பட்ட சப்ளையர்கள் "
+"பயன்படுத்தும்."
+
+msgid ""
+"Cannot delete this account because transactions have been created using this "
+"account."
+msgstr ""
+"இந்தக் கணக்கைப் பயன்படுத்தி பரிவர்த்தனைகள் உருவாக்கப்பட்டதால் இந்த கணக்கை நீக்க முடியவில்லை."
+
+msgid ""
+"Cannot delete this account class because GL account types have been created "
+"referring to it."
+msgstr ""
+"இந்த கணக்கு வர்க்கத்தை நீக்க முடியாது, ஏனெனில் GL கணக்கு வகைகள் அதைக் குறிப்பிட்டுள்ளன."
+
+msgid ""
+"Cannot delete this account group because GL account groups have been created "
+"referring to it."
+msgstr ""
+"இந்த கணக்குக் குழுவை நீக்க முடியாது, ஏனெனில் GL கணக்கின் குழுக்கள் இதைக் குறிப்பிட்டுள்ளன."
+
+msgid ""
+"Cannot delete this account group because GL accounts have been created "
+"referring to it."
+msgstr ""
+"இந்த கணக்குக் குழுவை நீக்க முடியாது, ஏனெனில் ஜி.எல் கணக்குகள் அதைக் குறிப்பிட்டுள்ளன."
+
+msgid ""
+"Cannot delete this bank account because POS definitions have been created "
+"using this account."
+msgstr ""
+"இந்தக் கணக்கைப் பயன்படுத்தி POS வரையறைகள் உருவாக்கப்பட்டதால் இந்த வங்கிக் கணக்கை நீக்க "
+"முடியவில்லை."
+
+msgid ""
+"Cannot delete this bank account because transactions have been created using "
+"this account."
+msgstr ""
+"இந்தக் கணக்கைப் பயன்படுத்தி பரிவர்த்தனைகள் உருவாக்கப்பட்டதால், இந்த வங்கிக் கணக்கை நீக்க "
+"முடியவில்லை."
+
+msgid "Cannot delete this category because there are contacts related to it."
+msgstr "இந்த பிரிவை நீக்க முடியாது, ஏனெனில் இது தொடர்பான தொடர்புகள் உள்ளன."
+
+msgid ""
+"Cannot delete this currency, because customer accounts have been created "
+"referring to this currency."
+msgstr ""
+"இந்த நாணயத்தை நீக்க முடியாது, ஏனெனில் இந்த நாணயத்தை வாடிக்கையாளர் கணக்குகள் "
+"உருவாக்கியுள்ளன."
+
+msgid ""
+"Cannot delete this currency, because supplier accounts have been created "
+"referring to this currency."
+msgstr ""
+"இந்த நாணயத்தை நீக்க முடியாது, ஏனென்றால் இந்த நாணயத்தை குறிப்பிடும் சப்ளையர் கணக்குகள் "
+"உருவாக்கப்பட்டன."
+
+msgid ""
+"Cannot delete this currency, because the company preferences uses this "
+"currency."
+msgstr ""
+"இந்த நாணயத்தை நீக்க முடியாது, ஏனென்றால் நிறுவனத்தின் விருப்பம் இந்த நாணயத்தைப் "
+"பயன்படுத்துகிறது."
+
+msgid ""
+"Cannot delete this currency, because thre are bank accounts that use this "
+"currency."
+msgstr ""
+"இந்த நாணயத்தை நீக்க முடியாது, ஏனெனில் இந்த நாணயத்தைப் பயன்படுத்தும் மூடிய கணக்குகள் "
+"முப்பது ஆகும்."
+
+msgid "Cannot delete this fiscal year because the fiscal year is not closed."
+msgstr "நிதி ஆண்டு மூடப்படாமல் இருப்பதால் இந்த நிதியாண்டியை நீக்க முடியாது."
+
+msgid "Cannot delete this fiscal year because there are fiscal years before."
+msgstr "நிதி ஆண்டுகளுக்கு முன்பே இந்த நிதியாண்டியை நீக்க முடியாது."
+
+msgid ""
+"Cannot delete this payment term, because customer accounts have been created "
+"referring to this term."
+msgstr ""
+"வாடிக்கையாளர் கணக்குகள் இந்த காலவரை குறிப்பிட்டுள்ளதால், இந்த கட்டண காலத்தை நீக்க முடியாது."
+
+msgid ""
+"Cannot delete this payment term, because supplier accounts have been created "
+"referring to this term"
+msgstr ""
+"இந்த கட்டண காலத்தை நீக்க முடியாது, ஏனென்றால் வழங்குநரின் கணக்குகள் இந்த காலவரை "
+"குறிப்பிட்டுள்ளன"
+
+msgid ""
+"Cannot delete this printer definition, because print profile have been "
+"created using it."
+msgstr ""
+"இந்த அச்சுப்பொறியின் வரையறையை நீக்க முடியாது, ஏனென்றால் அச்சிடல் சுயவிவரம் அதைப் "
+"பயன்படுத்தி உருவாக்கப்பட்டது."
+
+msgid ""
+"Cannot delete this shipping company because invoices have been created using "
+"this shipping company."
+msgstr ""
+"இந்த கப்பல் நிறுவனத்தை பயன்படுத்தி விவரங்கள் உருவாக்கப்பட்டதால், இந்த கப்பல் நிறுவனத்தை நீக்க "
+"முடியாது."
+
+msgid ""
+"Cannot delete this shipping company because sales orders have been created "
+"using this shipper."
+msgstr ""
+"விற்பனை கப்பல்கள் இந்த கப்பல் சேவையைப் பயன்படுத்தி உருவாக்கப்பட்டது என்பதால், இந்த கப்பல் "
+"நிறுவனத்தை நீக்க முடியாது."
+
+msgid ""
+"Cannot delete this tag because records have been created referring to it."
+msgstr "இந்த குறியை நீக்க முடியாது, ஏனென்றால் அதைப் பற்றி பதிவுகள் உருவாக்கப்பட்டன."
+
+msgid "Cannot delete this user because entries are associated with this user."
+msgstr "இந்த பயனருடன் உள்ளீடுகளை இணைத்துள்ளதால், இந்த பயனரை நீக்க முடியாது."
+
+msgid "Cannot open the configuration file - "
+msgstr "கட்டமைப்பு கோப்பை திறக்க முடியவில்லை -"
+
+msgid "Cannot open the extension setup file '%s' for writing."
+msgstr "நீட்டிப்பு அமைப்பு கோப்பு '%s' திறக்க முடியவில்லை."
+
+msgid "Cannot open the languages file - "
+msgstr "மொழிகள் கோப்பு திறக்க முடியாது -"
+
+msgid "Cannot post to GL account used by more than one tax type."
+msgstr "ஒன்றுக்கு மேற்பட்ட வரி வகை பயன்படுத்தப்படும் GL கணக்கில் பதிவு செய்ய முடியாது."
+
+msgid "Cannot remove temporary renamed company data directory "
+msgstr "தற்காலிகமாக மறுபெயரிடப்பட்ட நிறுவன தரவுக் கோப்பகத்தை அகற்ற முடியாது"
+
+msgid "Cannot rename company subdirectory"
+msgstr "நிறுவனம் துணை அடைவு மறுபெயரிட முடியாது"
+
+msgid "Cannot rename subdirectory to temporary name."
+msgstr "தற்காலிக பெயருடன் துணை அடைவை மறுபெயரிட முடியாது."
+
+msgid "Cannot update extensions list for company '%s'."
+msgstr "நிறுவனத்தின் '%s' க்கான நீட்டிப்பு பட்டியலை புதுப்பிக்க முடியவில்லை."
+
+msgid "Cannot update system extensions list."
+msgstr "கணினி நீட்டிப்பு பட்டியலைப் புதுப்பிக்க முடியவில்லை."
+
+msgid "Cannot write to the configuration file - "
+msgstr "கட்டமைப்பு கோப்பில் எழுத முடியாது -"
+
+msgid "Cannot write to the extensions setup file '%s'."
+msgstr "'%s' நீட்டிப்புகள் அமைப்பு கோப்புக்கு எழுத முடியாது."
+
+msgid "Cannot write to the language file - "
+msgstr "மொழி கோப்புக்கு எழுத முடியாது -"
+
+msgid "Category"
+msgstr "வகை"
+
+msgid "Category Description:"
+msgstr "வகை விளக்கம்:"
+
+msgid "Category Name:"
+msgstr "பிரிவு பெயர்:"
+
+msgid "Category Short Name:"
+msgstr "வகை குறுகிய பெயர்:"
+
+msgid "Category Subtype"
+msgstr "வகை துணை வகை"
+
+msgid "Category Type"
+msgstr "வகை வகை"
+
+msgid "Category description cannot be empty."
+msgstr "பகுப்பு விளக்கம் காலியாக இருக்க முடியாது."
+
+msgid "Category has been deleted"
+msgstr "பகுப்பு நீக்கப்பட்டது"
+
+msgid "Category:"
+msgstr "பிரிவு:"
+
+msgid "Change password"
+msgstr "கடவுச்சொல்லை மாற்று"
+
+msgid "Charged on sales"
+msgstr "விற்பனையில் சார்ஜ் செய்யப்பட்டது"
+
+msgid "Chart"
+msgstr "விளக்கப்படம்"
+
+msgid "Class"
+msgstr "வர்க்கம்"
+
+msgid "Class ID"
+msgstr "வகுப்பு ஐடி"
+
+msgid "Class ID:"
+msgstr "வகுப்பு ஐடி:"
+
+msgid "Class Name"
+msgstr "வகுப்பு பெயர்"
+
+msgid "Class Name:"
+msgstr "வகுப்பு பெயர்:"
+
+msgid "Class Type"
+msgstr "வகுப்பு வகை"
+
+msgid "Class Type:"
+msgstr "வகுப்பு வகை:"
+
+msgid "Class:"
+msgstr "வர்க்கம்:"
+
+msgid "Click here to Login Again."
+msgstr "மீண்டும் உள்நுழைய இங்கே கிளிக் செய்யவும்."
+
+msgid "Clone This Role"
+msgstr "இந்த கதாபாத்திரம் குளோன்"
+
+msgid "Close This Dimension"
+msgstr "இந்த பரிமாணத்தை மூடுக"
+
+msgid "Closed"
+msgstr "மூடப்பட்ட"
+
+msgid "Closing Year"
+msgstr "மூடு வருடம்"
+
+msgid "Comments"
+msgstr "கருத்துரைகள்"
+
+msgid "Comments:"
+msgstr "கருத்துரைகள்:"
+
+msgid "Common view/print transactions interface"
+msgstr "பொது காட்சி/அச்சு பரிமாற்ற இடைமுகம்"
+
+msgid "Company"
+msgstr "நிறுவனம்"
+
+msgid "Company Logo:"
+msgstr "நிறுவனத்தின் லோகோ:"
+
+msgid "Company Setup"
+msgstr "நிறுவனத்தின் அமைப்பு"
+
+msgid "Company has been updated."
+msgstr "நிறுவனம் புதுப்பிக்கப்பட்டது."
+
+msgid "Company parameters"
+msgstr "நிறுவனத்தின் அளவுருக்கள்"
+
+msgid "Company setup"
+msgstr "நிறுவனத்தின் அமைப்பு"
+
+msgid "Company setup has been updated."
+msgstr "நிறுவனத்தின் அமைப்பு புதுப்பிக்கப்பட்டது."
+
+msgid "Compare to"
+msgstr "ஒப்பிடும் பொழுது"
+
+msgid "Compression:"
+msgstr "அமுக்க:"
+
+msgid "Confirm changes"
+msgstr "மாற்றங்களை உறுதிப்படுத்துக"
+
+msgid "Contact &Categories"
+msgstr "தொடர்பு  வகைகள்"
+
+msgid "Contact Categories"
+msgstr "தொடர்பு வகைகள்"
+
+msgid "Contact Category Subtype:"
+msgstr "தொடர்பு வகை துணை வகை:"
+
+msgid "Contact Category Type:"
+msgstr "தொடர்பு வகை வகை:"
+
+msgid "Contact Person"
+msgstr "நபர் தொடர்பு"
+
+msgid "Contact Person:"
+msgstr "தொடர்பு நபரை:"
+
+msgid "Contact categories"
+msgstr "தொடர்பு பிரிவுகள்"
+
+msgid "Costed Bill Of Material Inquiry"
+msgstr "பொருள் விசாரணையின் செலவு பில்"
+
+msgid "Country"
+msgstr "நாடு"
+
+msgid "Country:"
+msgstr "நாடு:"
+
+msgid "Create Backup"
+msgstr "காப்பு உருவாக்கு"
+
+msgid "Create a new company"
+msgstr "புதிய ஒரு நிறுவனம் உருவாக்கவும்"
+
+msgid "Create backup"
+msgstr "காப்பு உருவாக்கு"
+
+msgid "Create/Update &Companies"
+msgstr "உருவாக்குதல்/புதுப்பித்தல் மற்றும் நிறுவனங்கள்"
+
+msgid "Create/Update Company"
+msgstr "உருவாக்குதல்/புதுப்பித்தல் நிறுவனம்"
+
+msgid "Credit"
+msgstr "கடன்"
+
+msgid "Credit &Status Setup"
+msgstr "கடன்  நிலைமை அமைப்பு"
+
+msgid "Credit status definitions changes"
+msgstr "கடன் நிலை வரையறைகள் மாற்றங்கள்"
+
+msgid "Currencies"
+msgstr "நாணயங்கள்"
+
+msgid "Currency"
+msgstr "நாணய"
+
+msgid "Currency Abbreviation:"
+msgstr "நாணய சுருக்கெழுத்து:"
+
+msgid "Currency Name"
+msgstr "நாணய பெயர்"
+
+msgid "Currency Name:"
+msgstr "நாணய பெயர்:"
+
+msgid "Currency Symbol:"
+msgstr "நாணய சின்னம்:"
+
+msgid "Currency:"
+msgstr "நாணய:"
+
+msgid "Current Password:"
+msgstr "தற்போதைய கடவுச்சொல்:"
+
+msgid "Current active extensions set has been saved."
+msgstr "தற்போதைய செயலில் நீட்டிப்புகளின் தொகுப்பு சேமிக்கப்பட்டது."
+
+msgid "Current status:"
+msgstr "தற்போதைய நிலை:"
+
+msgid "Customer &Branches"
+msgstr "வாடிக்கையாளர்  கிளைகள்"
+
+msgid "Customer &Credit Notes"
+msgstr "வாடிக்கையாளர்  கடன் குறிப்புகள்"
+
+msgid "Customer &Payments"
+msgstr "வாடிக்கையாளர்  கொடுப்பனவு"
+
+msgid "Customer Allocation &Inquiry"
+msgstr "வாடிக்கையாளர் ஒதுக்கீடு  விசாரணை"
+
+msgid "Customer Transaction &Inquiry"
+msgstr "வாடிக்கையாளர் பரிவர்த்தனை  விசாரணைகள்"
+
+msgid "Customer and Sales &Reports"
+msgstr "வாடிக்கையாளர் மற்றும் விற்பனை மற்றும் அறிக்கைகள்"
+
+msgid "Customer:"
+msgstr "வாடிக்கையாளர்:"
+
+msgid "Customers and Sales"
+msgstr "வாடிக்கையாளர்கள் மற்றும் விற்பனை"
+
+msgid "Customers and Sales Defaults"
+msgstr "வாடிக்கையாளர்கள் மற்றும் விற்பனை தவறுகள்"
+
+msgid "Database Host"
+msgstr "தரவுத்தள புரவலன்"
+
+msgid "Database Name"
+msgstr "தரவுத்தள பெயர்"
+
+msgid "Database Password"
+msgstr "தரவுத்தள கடவுச்சொல்"
+
+msgid "Database Script"
+msgstr "தரவுத்தள ஸ்கிரிப்ட்"
+
+msgid "Database User"
+msgstr "தரவுத்தள பயனர்"
+
+msgid "Database auth file"
+msgstr "டேட்டாபேஸ் அங்கீகாரம் கோப்பு"
+
+msgid "Database backup failed."
+msgstr "தரவுத்தள காப்பு மீண்டும் தோல்வியடைந்தது."
+
+msgid "Database backup/restore"
+msgstr "டேட்டாபேஸ் காப்பு பிரதி / மீட்டமை"
+
+msgid "Database settings are not specified."
+msgstr "தரவுத்தள அமைப்புகள் குறிப்பிடப்படவில்லை."
+
+msgid "Database upgrade for company '%s' (%s:%s*) started..."
+msgstr "நிறுவனம் தரவுத்தள மேம்படுத்தல் '%s (%s:%s*) தொடங்கப்பட்டது"
+
+msgid "Date"
+msgstr "தேதி"
+
+msgid "Date Required By"
+msgstr "தேதி தேவைப்படுகிறது"
+
+msgid "Date Separator:"
+msgstr "தேதி பிரிப்பான்:"
+
+msgid "Date Uploaded"
+msgstr "பதிவேற்றிய தேதி"
+
+msgid "Date for Revaluation:"
+msgstr "மறு மதிப்பீடு தேதி:"
+
+msgid "Date of bank statement to reconcile"
+msgstr "சமரசம் செய்ய வங்கி அறிக்கையின் தேதி"
+
+msgid "Date to Use From"
+msgstr "பயன்படுத்த வேண்டிய தேதி"
+
+msgid "Date to Use From:"
+msgstr "பயன்படுத்த வேண்டிய தேதி:"
+
+msgid "Date:"
+msgstr "நாள்:"
+
+msgid "Dateformat and Separators"
+msgstr "தேதி வடிவம் மற்றும் பிரிப்பான்கள்"
+
+msgid "Dateformat:"
+msgstr "தேதி வடிவம்:"
+
+msgid "Days (Or Day In Following Month):"
+msgstr "நாட்கள் (அல்லது மாதம் தொடர்ந்து மாதத்தில்):"
+
+msgid "Debit"
+msgstr "டெபிட்"
+
+msgid "Decimal Places"
+msgstr "தசம இடங்கள்"
+
+msgid "Decimal Places:"
+msgstr "தசமம் இடங்கள்:"
+
+msgid "Decimal Separator:"
+msgstr "டெசிமல் பிரிப்பான்:"
+
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+msgid "Default Base Amount"
+msgstr "இயல்புநிலை அடிப்படை தொகை"
+
+msgid "Default Credit Limit:"
+msgstr "இயல்புநிலை கடன் வரம்பு:"
+
+msgid "Default Language"
+msgstr "இயல்புநிலை மொழி"
+
+msgid "Default currency account:"
+msgstr "இயல்புநிலை நாணய கணக்கு:"
+
+msgid "Default printing destination"
+msgstr "இயல்புநிலை அச்சிடும் இலக்கு"
+
+msgid "Delete"
+msgstr "நீக்குக"
+
+msgid "Delete Backup"
+msgstr "காப்பு நீக்கு"
+
+msgid "Delete Company Logo:"
+msgstr "நிறுவனத்தின் லோகோவை நீக்கு:"
+
+msgid "Delete Profile"
+msgstr "சுயவிவரத்தை நீக்கு"
+
+msgid "Delete This Dimension"
+msgstr "இந்த பரிமாணத்தை நீக்கு"
+
+msgid "Delete This Role"
+msgstr "இந்த பங்கை நீக்கு"
+
+msgid "Delete account"
+msgstr "கணக்கை நீக்குக"
+
+msgid "Delete printer profile (only if not used by any user)"
+msgstr "அச்சுப்பொறி சுயவிவரத்தை நீக்கு (எந்த பயனரால் பயன்படுத்தப்படாவிட்டால் மட்டும்)"
+
+msgid "Delete unused dimension"
+msgstr "பயன்படுத்தப்படாத பரிமாணத்தை நீக்கு"
+
+msgid "Delivery Over-Receive Allowance:"
+msgstr "டெலிவரி ஓவர்-ரிஸீவ் அலவன்ஸ்:"
+
+msgid "Delivery Required By:"
+msgstr "வழங்கல் தேவைப்படுகிறது:"
+
+msgid "Deposit %d has been entered"
+msgstr "வைப்பு%d நுழைந்தது"
+
+msgid "Deposit %d has been modified"
+msgstr "வைப்பு%d மாற்றப்பட்டுள்ளது"
+
+msgid "Deposit Items"
+msgstr "வைப்பு பொருட்கள்"
+
+msgid "Deposit Type"
+msgstr "வைப்பு வகை"
+
+msgid "Description"
+msgstr "விரித்துரைத்தல்"
+
+msgid "Description:"
+msgstr "விரித்துரைத்தல்:"
+
+msgid "Dflt"
+msgstr "Dflt"
+
+msgid "Difference"
+msgstr "வேறுபாடு"
+
+msgid "Dim. incl."
+msgstr "மங்கலான. உள்ளிட்ட."
+
+msgid "Dimension"
+msgstr "பரிமாண"
+
+msgid "Dimension &Entry"
+msgstr "பரிமாணம்  நுழைவு"
+
+msgid "Dimension &Inquiry"
+msgstr "பரிமாணமும் விசாரணையும்"
+
+msgid "Dimension &Reports"
+msgstr "பரிமாணம்  அறிக்கைகள்"
+
+msgid "Dimension &Tags"
+msgstr "பரிமாணம்  குறிச்சொற்கள்"
+
+msgid "Dimension Defaults"
+msgstr "பரிமாண இயல்புநிலை"
+
+msgid "Dimension Entry"
+msgstr "பரிமாண நுழைவு"
+
+msgid "Dimension Reference:"
+msgstr "பரிமாண குறிப்பு:"
+
+msgid "Dimension Required By After:"
+msgstr "பின்வருமாறு பரிமாணம் தேவைப்படுகிறது:"
+
+msgid "Dimension Tags"
+msgstr "பரிமாண குறிச்சொற்கள்"
+
+msgid "Dimension is closed."
+msgstr "பரிமாணம் மூடப்பட்டுள்ளது."
+
+msgid "Dimensions"
+msgstr "பரிமாணங்கள்"
+
+msgid "Dimensions configuration"
+msgstr "பரிமாணங்களின் கட்டமைப்பு"
+
+msgid "Direct &Delivery"
+msgstr "நேரடி  டெலிவரி"
+
+msgid "Direct &GRN"
+msgstr "நேரடி  GRN"
+
+msgid "Direct &Invoice"
+msgstr "நேரடி  விலைப்பட்டியல்"
+
+msgid "Display Setup"
+msgstr "காட்சி அமைவு"
+
+msgid "Display also languages not supported by server locales"
+msgstr "சர்வர் லோக்கல்ஸால் ஆதரிக்கப்படாத மொழிகளையும் கூட காட்டவும்"
+
+msgid "Display preferences"
+msgstr "காட்சி விருப்பத்தேர்வுகள்"
+
+msgid "Display settings have been updated."
+msgstr "காட்சி அமைப்புகள் புதுப்பிக்கப்பட்டுள்ளன."
+
+msgid ""
+"Display settings have been updated. Keep in mind that changed settings are "
+"restored on every login in demo mode."
+msgstr ""
+"காட்சி அமைப்புகள் புதுப்பிக்கப்பட்டுள்ளன. டெமோ பயன்முறையில் ஒவ்வொரு உள்நுழைவிலும் "
+"மாற்றப்பட்ட அமைப்புகள் மீட்டமைக்கப்பட வேண்டும் என்பதை நினைவில் கொள்ளுங்கள்."
+
+msgid "Display: "
+msgstr "காட்சி: "
+
+msgid "Document reentered."
+msgstr "ஆவணம் திரும்பியது."
+
+msgid "Domicile"
+msgstr "வழமையான வதிவிடம்"
+
+msgid "Domicile:"
+msgstr "உறைவிடம்:"
+
+msgid "Donut"
+msgstr "டோனட்ஸ்"
+
+msgid "Dots"
+msgstr "புள்ளிகள்"
+
+msgid "Download"
+msgstr "பதிவிறக்க"
+
+msgid "Download Backup"
+msgstr "காப்புப் பிரதி எடுக்கவும்"
+
+msgid "Due After/Days"
+msgstr "/நாட்களுக்கு பிறகு"
+
+msgid "Due Date"
+msgstr "தேதி தேதி"
+
+msgid "E-mail"
+msgstr "மின்னஞ்சல்"
+
+msgid "E-mail:"
+msgstr "மின்னஞ்சல்:"
+
+msgid "Edit"
+msgstr "திருத்து"
+
+msgid "Edit document line"
+msgstr "ஆவணம் வரி திருத்தவும்"
+
+msgid "Edit journal line"
+msgstr "பத்திரிகை வரி திருத்தவும்"
+
+msgid "Edit non standard language configuration"
+msgstr "நிலையான மொழி கட்டமைப்பைத் திருத்தவும்"
+
+msgid "Email"
+msgstr "மின்னஞ்சல்"
+
+msgid "Email Address:"
+msgstr "மின்னஞ்சல் முகவரி:"
+
+msgid "Encoding"
+msgstr "என்கோடிங்"
+
+msgid "Ending Balance"
+msgstr "இருப்பு முடித்தல்"
+
+msgid "Ending<br>Balance"
+msgstr "<br> இருப்பு முடிவு"
+
+msgid "Enter &Another Transfer"
+msgstr " மற்றொரு பரிமாற்றத்தை உள்ளிடுக"
+
+msgid "Enter &New Journal Entry"
+msgstr "புதிய பத்திரிகை நுழைவு உள்ளிடவும்"
+
+msgid "Enter A &Deposit"
+msgstr "ஒரு  வைப்பு உள்ளிடவும்"
+
+msgid "Enter A &Payment"
+msgstr "ஒரு  பணம் சேர்க்கவும்"
+
+msgid "Enter A Payment"
+msgstr "பணம் செலுத்துங்கள்"
+
+msgid "Enter Another &Deposit"
+msgstr "மற்றொரு  வைப்பு உள்ளிடவும்"
+
+msgid "Enter Another &Payment"
+msgstr "மற்றொரு  பணம் சேர்க்கவும்"
+
+msgid "Enter Another Deposit"
+msgstr "மற்றொரு வைப்பு உள்ளிடவும்"
+
+msgid "Enter Transfer"
+msgstr "பரிமாற்றத்தை உள்ளிடுக"
+
+msgid "Enter a &new dimension"
+msgstr "ஒரு புதிய பரிமாணத்தை உள்ளிடுக"
+
+msgid "Enter a new password to change, leave empty to keep current."
+msgstr "மாற்ற ஒரு புதிய கடவுச்சொல்லை உள்ளிடுக, தற்போதைய வைத்திருக்க காலியாக விடவும்."
+
+msgid "Enter memo fragment or leave empty"
+msgstr "மெமோ துண்டு ஒன்றை உள்ளிடவும் அல்லது காலியாக விடவும்"
+
+msgid "Enter reference fragment or leave empty"
+msgstr "குறிப்பு பகுதியை உள்ளிடவும் அல்லது காலியாக விடவும்"
+
+msgid "Enter your new password in the fields."
+msgstr "துறைகள் உங்கள் புதிய கடவுச்சொல்லை உள்ளிடவும்."
+
+msgid "Entry &New Journal Entry"
+msgstr "நுழைவு  புதிய ஜர்னல் நுழைவு"
+
+msgid "Entry Type"
+msgstr "நுழைவு வகை"
+
+msgid "Equities"
+msgstr "பங்குகள்"
+
+msgid "Error creating Database: "
+msgstr "தரவுத்தளத்தை உருவாக்குவதில் பிழை:"
+
+msgid "Error removing Database: "
+msgstr "தரவுத்தளத்தை நீக்குவதில் பிழை:"
+
+msgid "Error uploading logo file"
+msgstr "லோகோ கோப்பைப் பதிவேற்றுவதில் பிழை"
+
+msgid "Exchange Rate"
+msgstr "மாற்று விகிதம்"
+
+msgid "Exchange Rate:"
+msgstr "பரிமாற்ற விகிதம்:"
+
+msgid "Exchange Rates"
+msgstr "மாற்று விகிதங்கள்"
+
+msgid "Exchange Rates:"
+msgstr "மாற்று விகிதங்கள்:"
+
+msgid "Exchange Variance"
+msgstr "பரிமாற்ற மாறுபாடு"
+
+msgid "Exchange Variances Account:"
+msgstr "பரிமாற்ற மாறுபாடுகள் கணக்கு:"
+
+msgid "Exchange rates are entered against the company currency."
+msgstr "நிறுவன நாணயத்திற்கு எதிராக பரிமாற்ற விகிதங்கள் நுழைகின்றன."
+
+msgid "Extension"
+msgstr "நீட்டிப்பு"
+
+msgid "Extensions:"
+msgstr "நீட்சிகள்:"
+
+msgid "Fax Number:"
+msgstr "தொலைநகல் எண்:"
+
+msgid "File successfully deleted."
+msgstr "கோப்பு வெற்றிகரமாக நீக்கப்பட்டது."
+
+msgid "File uploaded to backup directory"
+msgstr "காப்பு கோப்பகத்தில் பதிவேற்றிய கோப்பு"
+
+msgid "File was not uploaded into the system."
+msgstr "கணினியில் பதிவேற்றப்படவில்லை."
+
+msgid "Filename"
+msgstr "கோப்புபெயர்"
+
+msgid "Filetype"
+msgstr "கோப்புவகையும்"
+
+msgid "First date of Accruals"
+msgstr "முதலீட்டு முதல் தேதி"
+
+msgid "Fiscal Year"
+msgstr "நிதியாண்டு"
+
+msgid "Fiscal Year Begin"
+msgstr "நிதி ஆண்டின் தொடக்கமாகும்"
+
+msgid "Fiscal Year Begin:"
+msgstr "நிதி ஆண்டு துவக்கம்:"
+
+msgid "Fiscal Year End"
+msgstr "நிதி ஆண்டு முடிவு"
+
+msgid "Fiscal Year End:"
+msgstr "நிதி ஆண்டு முடிவு:"
+
+msgid "Fiscal Year:"
+msgstr "நிதி ஆண்டு:"
+
+msgid "Fiscal Years"
+msgstr "நிதி ஆண்டுகள்"
+
+msgid "Form"
+msgstr "படிவம்"
+
+msgid "Forms Setup"
+msgstr "படிவங்கள் அமைப்பு"
+
+msgid "Forms settings have been updated."
+msgstr "படிவங்கள் அமைப்புகளை மேம்படுத்தப்பட்டது."
+
+msgid "Forms setup"
+msgstr "படிவங்கள் அமைவு"
+
+msgid "Frequency"
+msgstr "அதிர்வெண்"
+
+msgid "From"
+msgstr "இருந்து"
+
+msgid "From Account:"
+msgstr "கணக்கிலிருந்து:"
+
+msgid "From Bank Account"
+msgstr "வங்கி கணக்கில் இருந்து"
+
+msgid "From:"
+msgstr "இருந்து:"
+
+msgid "Full Name"
+msgstr "முழு பெயர்"
+
+msgid "GL"
+msgstr "ஜீ"
+
+msgid "GL &Inquiry"
+msgstr "GL  விசாரணை"
+
+msgid "GL Account"
+msgstr "GL கணக்கு"
+
+msgid "GL Account &Classes"
+msgstr "GL கணக்கு  வகுப்புகள்"
+
+msgid "GL Account &Groups"
+msgstr "GL கணக்கு  குழுக்கள்"
+
+msgid "GL Account Classes"
+msgstr "GL கணக்கு வகுப்புகள்"
+
+msgid "GL Account Groups"
+msgstr "GL கணக்கு குழுக்கள்"
+
+msgid "GL Accounts"
+msgstr "GL கணக்குகள்"
+
+msgid "GL Deposit"
+msgstr "GL வைப்பு"
+
+msgid "GL Payment"
+msgstr "GL கட்டணம்"
+
+msgid "GRN Clearing Account:"
+msgstr "GRN க்ளியரிங் கணக்கு:"
+
+msgid "GSTNo:"
+msgstr "GSTNo:"
+
+msgid "General"
+msgstr "பொது"
+
+msgid "General GL"
+msgstr "பொது ஜி.எல்"
+
+msgid "General Ledger"
+msgstr "பேரேட்டு"
+
+msgid "General Ledger &Reports"
+msgstr "பொது லெட்ஜர்  அறிக்கைகள்"
+
+msgid "General Ledger Inquiry"
+msgstr "பொது லெட்ஜர் விசாரணை"
+
+msgid "General Ledger Transaction Details"
+msgstr "பொது லெட்ஜர் பரிவர்த்தனை விவரங்கள்"
+
+msgid "Get"
+msgstr "பெற"
+
+msgid "Get current rate from"
+msgstr "தற்போதைய விகிதத்தைப் பெறுக"
+
+msgid "Go"
+msgstr "போய்"
+
+msgid "Group"
+msgstr "குழு"
+
+msgid "Group ID"
+msgstr "குழு ஐடி"
+
+msgid "Group Name"
+msgstr "குழு பெயர்"
+
+msgid "Group/Account Name"
+msgstr "குழு/கணக்கு பெயர்"
+
+msgid "Home Currency:"
+msgstr "முகப்பு நாணய:"
+
+msgid "Host"
+msgstr "தொகுப்பாளர்"
+
+msgid "Host name or IP"
+msgstr "புரவலன் பெயர் அல்லது ஐபி"
+
+msgid "Hundredths Name:"
+msgstr "நூற்றுக்கணக்கான பெயர்:"
+
+msgid "Hundredths name"
+msgstr "நூற்றுக்கணக்கான பெயர்"
+
+msgid "ID:"
+msgstr "ஐடி:"
+
+msgid ""
+"If no Admin Password is entered, the new Admin Password will be "
+"'<b>password</b>' by default "
+msgstr ""
+"நிர்வாகம் கடவுச்சொல் உள்ளிட்டால், புதிய நிர்வாகி கடவுச்சொல் இயல்புநிலையாக '<b> கடவுச்சொல் "
+"</ b>' ஆக இருக்கும்"
+
+msgid ""
+"If set document date is remembered on subsequent documents, otherwise "
+"default is current date"
+msgstr ""
+"ஆவணம் தேதி அமைக்க என்றால், பின்னர் ஆவணங்கள் நினைவில், இல்லையெனில் இயல்புநிலை தற்போதைய தேதி"
+
+msgid "Incoming Amount:"
+msgstr "உள்வரும் தொகை:"
+
+msgid "Incorrect Password"
+msgstr "தவறான கடவுச்சொல்"
+
+msgid "Info"
+msgstr "தகவல்"
+
+msgid "Input Tax"
+msgstr "உள்ளீட்டு வரி"
+
+msgid "Inputs"
+msgstr "உள்ளீடுகள்"
+
+msgid "Inquiries and Reports"
+msgstr "விசாரணைகள் மற்றும் அறிக்கைகள்"
+
+msgid "Insert New Role"
+msgstr "புதிய பங்கைச் செருகவும்"
+
+msgid "Install"
+msgstr "நிறுவ"
+
+msgid "Install Themes"
+msgstr "தீம்கள் நிறுவவும்"
+
+msgid "Install third-party extension."
+msgstr "மூன்றாம் தரப்பு நீட்டிப்பை நிறுவுக."
+
+msgid "Install/Activate &Extensions"
+msgstr "நிறுவவும்/செயல்படுத்தவும் நீட்டிப்புகள்"
+
+msgid "Install/Activate &Themes"
+msgstr "நிறுவவும்/செயல்படுத்தவும் தீம்கள்"
+
+msgid "Install/Activate extensions"
+msgstr "நிறுவு/நீட்டிப்புகளை செயல்படுத்தவும்"
+
+msgid "Install/Update &Languages"
+msgstr "நிறுவு/புதுப்பித்தல்  மொழிகள்"
+
+msgid "Install/Update Languages"
+msgstr "நிறுவு/புதுப்பி மொழிகள்"
+
+msgid "Install/update companies"
+msgstr "நிறுவு/புதுப்பித்தல் நிறுவனங்கள்"
+
+msgid "Install/update languages"
+msgstr "மொழிகள் நிறுவவும்/மேம்படுத்தவும்"
+
+msgid "Install/upgrade modules"
+msgstr "தொகுதிகள் நிறுவவும்/மேம்படுத்தவும்"
+
+msgid "Installed"
+msgstr "நிறுவப்பட்ட"
+
+msgid "Into:"
+msgstr "இண்டு:"
+
+msgid "Invalid BEGIN date in fiscal year."
+msgstr "நிதியாண்டில் BEGIN தேதி தவறானது."
+
+msgid "Invalid BEGIN or END date in fiscal year."
+msgstr "நிதி ஆண்டில் தவறான BEGIN அல்லது END தேதி."
+
+msgid "Invalid END date in fiscal year."
+msgstr "நிதி ஆண்டில் தவறான END தேதி."
+
+msgid "Invalid password entered."
+msgstr "தவறான கடவுச்சொல் உள்ளிட்டுள்ளது."
+
+msgid "Invalid reconcile date format"
+msgstr "தவறான மறுநிகழ்வு தேதி வடிவம்"
+
+msgid "Inventory"
+msgstr "சரக்கு"
+
+msgid "Inventory &Adjustments"
+msgstr "சரக்கு மற்றும் சரிசெய்தல்"
+
+msgid "Inventory &Locations"
+msgstr "சரக்கு மற்றும் இடங்கள்"
+
+msgid "Inventory &Reports"
+msgstr "சரக்கு மற்றும் அறிக்கைகள்"
+
+msgid "Inventory Account:"
+msgstr "சரக்குக் கணக்கு:"
+
+msgid "Inventory Adjustments Account:"
+msgstr "சரக்கு சரிசெய்தல் கணக்கு:"
+
+msgid "Inventory Item &Movements"
+msgstr "சரக்கு பொருள் மற்றும் இயக்கங்கள்"
+
+msgid "Inventory Item &Status"
+msgstr "சரக்கு பொருள் மற்றும் நிலை"
+
+msgid "Inventory Item Where Used &Inquiry"
+msgstr "பயன்படுத்திய பொருள்  விசாரணை"
+
+msgid "Inventory Location &Transfers"
+msgstr "சரக்கு இருப்பிடம் மற்றும் இடமாற்றங்கள்"
+
+msgid "Inventory analytics"
+msgstr "சரக்கு பகுப்பாய்வு"
+
+msgid "Inventory configuration"
+msgstr "சரக்கு கட்டமைப்பு"
+
+msgid "Inventory locations changes"
+msgstr "சரக்கு இருப்பிடங்கள் மாறும்"
+
+msgid "Inventory movement types"
+msgstr "சரக்கு இயக்கம் வகைகள்"
+
+msgid "Inventory operations"
+msgstr "சரக்கு செயல்பாடுகள்"
+
+msgid "Invoice Over-Charge Allowance:"
+msgstr "விலைப்பட்டியல் கட்டணம் அதிகரிப்பு:"
+
+msgid "Is Closed:"
+msgstr "மூடப்பட்டுள்ளது:"
+
+msgid "Item &Categories"
+msgstr "பொருள்  வகைகள்"
+
+msgid "Item Amounts are Shown in:"
+msgstr "பொருள் தொகைகள் இதில் காட்டப்பட்டுள்ளன:"
+
+msgid "Item Ta&x Types"
+msgstr "பொருள் Ta  x வகைகள்"
+
+msgid "Items Defaults"
+msgstr "விடயங்கள் இயல்புநிலை"
+
+msgid "Items for this Deposit"
+msgstr "இந்த வைப்புக்கான பொருட்கள்"
+
+msgid "Items for this Payment"
+msgstr "இந்த கட்டணத்திற்கான பொருட்கள்"
+
+msgid "Journal Entry"
+msgstr "ஜர்னல் நுழைவு"
+
+msgid "Journal Inquiry"
+msgstr "ஜர்னல் விசாரணை"
+
+msgid "Journal entry has been entered"
+msgstr "ஜர்னல் நுழைவு நுழைந்துள்ளது"
+
+msgid "Journal entry has been updated"
+msgstr "இதழ் நுழைவு புதுப்பிக்கப்பட்டது"
+
+msgid "Landscape"
+msgstr "இயற்கை"
+
+msgid "Language"
+msgstr "மொழி"
+
+msgid "Language Code"
+msgstr "மொழி குறியீடு"
+
+msgid "Language File"
+msgstr "மொழி கோப்பு"
+
+msgid "Language Name"
+msgstr "மொழி பெயர்"
+
+msgid "Language name, code nor encoding cannot be empty"
+msgstr "மொழி பெயர், குறியீடு அல்லது குறியாக்கம் காலியாக இருக்க முடியாது"
+
+msgid "Language:"
+msgstr "மொழி:"
+
+msgid "Last Visit"
+msgstr "கடந்த வருகை"
+
+msgid "Last Year"
+msgstr "சென்ற ஆண்டு"
+
+msgid "Legal Text on Invoice:"
+msgstr "விலைப்பட்டியல் மீதான சட்ட உரை:"
+
+msgid "Liabilities"
+msgstr "பொறுப்புகள்"
+
+msgid "Login"
+msgstr "உள்நுழைய"
+
+msgid "Login -->"
+msgstr "உள்நுழைய -->"
+
+msgid "Login Timeout:"
+msgstr "தேதி முடிதல்:"
+
+msgid "Login as user: demouser and password: password"
+msgstr "பயனராக உள்நுழைய: demouser மற்றும் கடவுச்சொல்: password"
+
+msgid "Login here"
+msgstr "இங்கே உள்நுழைய"
+
+msgid "Login timeout must be positive number not less than 10."
+msgstr "தேதி காலாவதியானது நேர்மறை எண்ணாக 10 க்கும் குறைவாக இருக்க வேண்டும்."
+
+msgid "Logout"
+msgstr "வெளியேறு"
+
+msgid "Mailing Address:"
+msgstr "அஞ்சல் முகவரி:"
+
+msgid "Main  Menu"
+msgstr "பிரதான பட்டி"
+
+msgid "Main config file"
+msgstr "பிரதான கட்டமைப்பு கோப்பு"
+
+msgid "Maintenance"
+msgstr "பராமரிப்பு"
+
+msgid "Manufacture work centres"
+msgstr "உற்பத்தி மையங்கள்"
+
+msgid "Manufacturing"
+msgstr "தயாரிப்பு"
+
+msgid "Manufacturing &Reports"
+msgstr "உற்பத்தி மற்றும் அறிக்கைகள்"
+
+msgid "Manufacturing Defaults"
+msgstr "உற்பத்தித் தவறுகள்"
+
+msgid "Manufacturing analytics"
+msgstr "உற்பத்தி பகுப்பாய்வு"
+
+msgid "Manufacturing configuration"
+msgstr "உற்பத்தி கட்டமைப்பு"
+
+msgid "Manufacturing transactions"
+msgstr "உற்பத்தி பரிவர்த்தனைகள்"
+
+msgid "Mark this dimension as closed"
+msgstr "இந்த பரிமாணத்தை மூடியதாகக் குறிக்கவும்"
+
+msgid "Mark this dimension as re-opened"
+msgstr "இந்த பரிமாணத்தை மீண்டும் திறந்ததாகக் குறிக்கவும்"
+
+msgid "Marked dimensions are overdue."
+msgstr "குறிக்கப்பட்ட பரிமாணங்கள் தாமதமாகும்."
+
+msgid "Memo"
+msgstr "மெமோ"
+
+msgid "Memo:"
+msgstr "மெமோ:"
+
+msgid "Miscellaneous"
+msgstr "இதர"
+
+msgid "Modify Bank Account Entry"
+msgstr "வங்கி கணக்கு நுழைவை மாற்றவும்"
+
+msgid "Modify Bank Deposit Entry"
+msgstr "வங்கி வைப்பு நுழைவுத் திருத்தத்தை மாற்றவும்"
+
+msgid "Modifying Journal Transaction # %d."
+msgstr "ஜர்னல் பரிமாற்றத்தை மாற்றியமைத்தல்%d."
+
+msgid "Modules provided"
+msgstr "தொகுதிகள் வழங்கப்பட்டன"
+
+msgid "Monthly"
+msgstr "மாதாந்திர"
+
+msgid "Monthly:"
+msgstr "மாதாந்திர:"
+
+msgid "Months back."
+msgstr "மீண்டும் மாதங்கள்."
+
+msgid "Months."
+msgstr "மாதங்கள்."
+
+msgid "N/A"
+msgstr "பொ/இ"
+
+msgid "Name"
+msgstr "பெயர்"
+
+msgid "Name (to appear on reports):"
+msgstr "பெயர் (அறிக்கைகள் தோன்ற):"
+
+msgid "Name and Address"
+msgstr "பெயர் மற்றும் முகவரி"
+
+msgid "Name and Contact"
+msgstr "பெயர் மற்றும் தொடர்பு"
+
+msgid "Name:"
+msgstr "பெயர்:"
+
+msgid "Net payable or collectible"
+msgstr "நிகர செலுத்தத்தக்க அல்லது தொகுக்கப்படும்"
+
+msgid "New"
+msgstr "புதிய"
+
+msgid "New Company Logo (.jpg)"
+msgstr "புதிய நிறுவனத்தின் லோகோ (.jpg)"
+
+msgid "New Password:"
+msgstr "புதிய கடவுச்சொல்:"
+
+msgid "New account"
+msgstr "புதிய கணக்கு"
+
+msgid "New account class has been added"
+msgstr "புதிய கணக்கு வகுப்பு சேர்க்கப்பட்டுள்ளது"
+
+msgid "New account has been added."
+msgstr "புதிய கணக்கு சேர்க்கப்பட்டுள்ளது."
+
+msgid "New account type has been added"
+msgstr "புதிய கணக்கு வகை சேர்க்கப்பட்டுள்ளது"
+
+msgid "New bank account has been added"
+msgstr "புதிய வங்கி கணக்கு சேர்க்கப்பட்டுள்ளது"
+
+msgid "New company has been created."
+msgstr "புதிய நிறுவனம் உருவாக்கப்பட்டது."
+
+msgid "New contact category has been added"
+msgstr "புதிய தொடர்பு வகை சேர்க்கப்பட்டது"
+
+msgid "New currency has been added"
+msgstr "புதிய நாணயம் சேர்க்கப்பட்டது"
+
+msgid "New fiscal year has been added"
+msgstr "புதிய நிதி ஆண்டு சேர்க்கப்பட்டுள்ளது"
+
+msgid "New password for"
+msgstr "புதிய கடவுச்சொல்"
+
+msgid "New password sent"
+msgstr "புதிய கடவுச்சொல் அனுப்பப்பட்டுள்ளது"
+
+msgid "New payment terms have been added"
+msgstr "புதிய கட்டண விதிமுறைகள் சேர்க்கப்பட்டுள்ளன"
+
+msgid "New printer definition has been created"
+msgstr "புதிய அச்சுப்பொறி வரையறை உருவாக்கப்பட்டது"
+
+msgid "New printing profile"
+msgstr "புதிய அச்சிடும் சுயவிவரம்"
+
+msgid "New printing profile has been created"
+msgstr "புதிய அச்சிடும் சுயவிவரம் உருவாக்கப்பட்டது"
+
+msgid "New quick entry has been added"
+msgstr "புதிய விரைவு நுழைவு சேர்க்கப்பட்டுள்ளது"
+
+msgid "New quick entry line has been added"
+msgstr "புதிய விரைவு நுழைவு வரி சேர்க்கப்பட்டது"
+
+msgid "New script Admin Password"
+msgstr "புதிய ஸ்கிரிப்ட் நிர்வாகம் கடவுச்சொல்"
+
+msgid "New security role has been added."
+msgstr "புதிய பாதுகாப்பு பாத்திரம் சேர்க்கப்பட்டது."
+
+msgid "New shipping company has been added"
+msgstr "புதிய கப்பல் நிறுவனம் சேர்க்கப்பட்டுள்ளது"
+
+msgid "New tag has been added"
+msgstr "புதிய குறி சேர்க்கப்பட்டுள்ளது"
+
+msgid "Next"
+msgstr "அடுத்த"
+
+msgid "Next Reference"
+msgstr "அடுத்த மேற்கோள்"
+
+msgid "No"
+msgstr "இல்லை"
+
+msgid "No Revaluation was needed"
+msgstr "மறு மதிப்பீடு தேவை"
+
+msgid "No base price list"
+msgstr "அடிப்படை விலை பட்டியல் இல்லை"
+
+msgid "No general ledger transactions have been created for"
+msgstr "பொதுப் பேரேடு பரிவர்த்தனைகள் எதுவும் உருவாக்கப்படவில்லை"
+
+msgid ""
+"No general ledger transactions have been created for the specified criteria."
+msgstr ""
+"குறிப்பிட்ட அளவுகோல்களுக்கு எந்த பொதுப் பேரேடு பரிவர்த்தனைகளும் உருவாக்கப்படவில்லை."
+
+msgid "No key field '%s' in file '%s'"
+msgstr "முக்கிய புலம் '%s' '%s' கோப்பில் இல்லை "
+
+msgid "No postings on GRN"
+msgstr "GRN இல் இடுகைகள் இல்லை"
+
+msgid "No zero values"
+msgstr "பூஜ்ய மதிப்புகள் இல்லை"
+
+msgid "None"
+msgstr "யாரும்"
+
+msgid "Not removed"
+msgstr "அகற்றப்படவில்லை"
+
+msgid "Number"
+msgstr "எண்"
+
+msgid "Official Company Number:"
+msgstr "அதிகாரப்பூர்வ கம்பெனி எண்:"
+
+msgid "Ok"
+msgstr "சரி"
+
+msgid "On/off set of features"
+msgstr "அம்சங்களின் தொகுப்பு ஆஃப்/ஆஃப்"
+
+msgid "Only Open:"
+msgstr "திறந்தே:"
+
+msgid "Only Overdue:"
+msgstr "ஒரேவழியாக மட்டுமே:"
+
+msgid "Only balances"
+msgstr "ஒரே நிலுவை"
+
+msgid "Only documents can be printed."
+msgstr "ஆவணங்களை மட்டுமே அச்சிட முடியும்."
+
+msgid "Only graphics files can be uploaded"
+msgstr "மட்டுமே கிராபிக்ஸ் கோப்புகளை பதிவேற்ற முடியும்"
+
+msgid ""
+"Only jpg and png files are supported - a file extension of .jpg or .png is "
+"expected"
+msgstr ""
+"Jpg and png கோப்புகள் மட்டுமே ஆதரிக்கப்படுகின்றன - .jpg அல்லது .png இன் கோப்பு "
+"நீட்டிப்பு எதிர்பார்க்கப்படுகிறது"
+
+msgid "Open Balance"
+msgstr "திறந்த இருப்பு"
+
+msgid "Opening Balance"
+msgstr "ஆரம்ப இருப்பு"
+
+msgid "Options provided"
+msgstr "விருப்பங்கள் வழங்கப்பட்டன"
+
+msgid "Output Tax"
+msgstr "வெளியீடு வரி"
+
+msgid "Outputs"
+msgstr "வெளிப்பாடுகளாவன"
+
+msgid "PDF/Printer"
+msgstr "பிடிஎப்/பிரிண்டர்"
+
+msgid "Pa&yment Terms"
+msgstr "கட்டண வரையறைகள்"
+
+msgid "Package '%s' not found."
+msgstr "'%s' தொகுப்பு காணப்படவில்லை."
+
+msgid "Page"
+msgstr "பக்கம்"
+
+msgid "Page Size:"
+msgstr "பக்க அளவு:"
+
+msgid "Paid on purchases"
+msgstr "கொள்முதல் மீது பணம்"
+
+msgid "Part"
+msgstr "பகுதி"
+
+msgid "Password cannot be changed in demo mode."
+msgstr "டெமோ பயன்முறையில் கடவுச்சொல்லை மாற்ற முடியாது."
+
+msgid "Password changes"
+msgstr "கடவுச்சொல்லை மாற்றுகிறது"
+
+msgid "Password reset"
+msgstr "கடவுச்சொல் மீட்டமைப்பு"
+
+msgid "Password:"
+msgstr "கடவுச்சொல்:"
+
+msgid "Past Due Days Interval:"
+msgstr "கடந்த Due நாட்கள் இடைவேளை:"
+
+msgid "Pay To"
+msgstr "செலுத்த"
+
+msgid "Pay To:"
+msgstr "செலுத்த:"
+
+msgid "Payable Account:"
+msgstr "செலுத்தத்தக்க கணக்கு:"
+
+msgid "Payment %d has been entered"
+msgstr "கட்டணம்%d உள்ளிடப்பட்டுள்ளது"
+
+msgid "Payment %d has been modified"
+msgstr "கட்டணம்%d மாற்றப்பட்டுள்ளது"
+
+msgid "Payment Items"
+msgstr "கொடுப்பனவு பொருட்கள்"
+
+msgid "Payment Terms"
+msgstr "கட்டண வரையறைகள்"
+
+msgid "Payment Type"
+msgstr "கட்டணம் வகை"
+
+msgid "Payment terms"
+msgstr "கட்டண வரையறைகள்"
+
+msgid "Payment type:"
+msgstr "கட்டணம் வகை:"
+
+msgid "Payment:"
+msgstr "செலுத்துதல்"
+
+msgid "Payments"
+msgstr "செலுத்துதல்கள்"
+
+msgid "Percentages:"
+msgstr "சதவீதங்கள்:"
+
+msgid "Period"
+msgstr "காலம்"
+
+msgid "Period Y-1"
+msgstr "காலம் Y-1"
+
+msgid "Periods"
+msgstr "பீரியட்ஸ்"
+
+msgid "Person/Item"
+msgstr "நபர்/பொருள்"
+
+msgid "Ph"
+msgstr "தொபே"
+
+msgid "Phone"
+msgstr "தொலைபேசி"
+
+msgid "Phone No"
+msgstr "தொலைபேசி எண்"
+
+msgid "Phone Number"
+msgstr "தொலைபேசி எண்"
+
+msgid "Phone Number:"
+msgstr "தொலைபேசி எண்:"
+
+msgid "Please contact System Administrator."
+msgstr "கணினி நிர்வாகியை தொடர்பு கொள்க."
+
+msgid "Please contact your system administrator."
+msgstr "உங்களுடைய கணினி நிர்வாகியை தொடர்பு கொள்ளவும்."
+
+msgid "Please login here"
+msgstr "இங்கே உள்நுழையவும்"
+
+msgid "Point of sales definitions"
+msgstr "விற்பனை வரையறைகள் புள்ளி"
+
+msgid "Port"
+msgstr "போர்ட்"
+
+msgid "Portrait"
+msgstr "ஓவிய"
+
+msgid "Post"
+msgstr "போஸ்ட்"
+
+msgid "Posted"
+msgstr "வெளியிட்டது"
+
+msgid "Prices/Amounts:"
+msgstr "விலை/தொகைகள்:"
+
+msgid "Pricing and Costs"
+msgstr "விலை மற்றும் செலவுகள்"
+
+msgid "Print"
+msgstr "அச்சு"
+
+msgid "Print profiles"
+msgstr "சுயவிவரங்களை அச்சிடுக"
+
+msgid "Printer"
+msgstr "பிரிண்டர்"
+
+msgid "Printer Description"
+msgstr "அச்சுப்பொறி விளக்கம்"
+
+msgid "Printer Locations"
+msgstr "அச்சுப்பொறி இடங்கள்"
+
+msgid "Printer Name"
+msgstr "அச்சுப்பொறி பெயர்"
+
+msgid "Printer Queue"
+msgstr "பிரிண்டர் வரிசை"
+
+msgid "Printer name cannot be empty."
+msgstr "அச்சுப்பொறிப் பெயர் காலியாக இருக்க முடியாது."
+
+msgid "Printers configuration"
+msgstr "பிரிண்டர்கள் கட்டமைப்பு"
+
+msgid "Printing Profile Name"
+msgstr "அச்சிடும் சுயவிவர பெயர்"
+
+msgid "Printing Profiles"
+msgstr "அச்சு சுயவிவரங்கள்"
+
+msgid "Printing profile"
+msgstr "அச்சிடும் சுயவிவரம்"
+
+msgid "Printing profile has been updated"
+msgstr "அச்சிடல் சுயவிவரம் புதுப்பிக்கப்பட்டது"
+
+msgid "Printing profile name cannot be empty."
+msgstr "அச்சிடும் சுயவிவரத்தின் பெயர் காலியாக இருக்க முடியாது."
+
+msgid "Proceed"
+msgstr "தொடர"
+
+msgid "Process Accruals"
+msgstr "செயலாக்க நடவடிக்கைகள்"
+
+msgid "Process Deposit"
+msgstr "செயல்முறை வைப்பு"
+
+msgid "Process Journal Entry"
+msgstr "செயல் ஜர்னல் நுழைவு"
+
+msgid "Process Payment"
+msgstr "செயல்முறை கொடுப்பனவு"
+
+msgid "Process journal entry only if debits equal to credits"
+msgstr "கடன்களுக்கான சமமாக இருந்தால் மட்டுமே செயல்முறை இதழ் நுழைவு"
+
+msgid "Profit & Loss Drilldown"
+msgstr "லாபம்  இழப்பு துரப்பணம்"
+
+msgid "Profit and Loss Statement"
+msgstr "லாபம்/நட்ட அறிக்கை"
+
+msgid "Profit/Loss Year:"
+msgstr "லாபம்/இழப்பு வருடம்:"
+
+msgid "Prompt Payment Discount Account:"
+msgstr "உடனடி கொடுப்பனவு தள்ளுபடி கணக்கு:"
+
+msgid "Prompt Payment Discount Percent:"
+msgstr "கூறியபடி செலுத்துமாறு தள்ளுபடி சதவீதம்:"
+
+msgid "Purchase &Order Entry"
+msgstr "கொள்முதல்  ஆர்டர் நுழைவு"
+
+msgid "Purchase Discount Account:"
+msgstr "கொள்முதல் தள்ளுபடி கணக்கு:"
+
+msgid "Purchase Orders &Inquiry"
+msgstr "கொள்முதல் ஆணைகள்  விசாரணைகள்"
+
+msgid "Purchase analytics"
+msgstr "வாங்குதல் பகுப்பாய்வு"
+
+msgid "Purchase configuration"
+msgstr "கட்டமைப்பை வாங்கவும்"
+
+msgid "Purchase transactions"
+msgstr "கொள்முதல் பரிவர்த்தனைகள்"
+
+msgid "Purchasing &Pricing"
+msgstr "கொள்முதல்  விலை"
+
+msgid "Quantities:"
+msgstr "அளவு:"
+
+msgid "Quantity"
+msgstr "அளவு"
+
+msgid "Quantity Delivered"
+msgstr "வழங்கின அளவு"
+
+msgid "Quantity:"
+msgstr "அளவு:"
+
+msgid "Quarterly"
+msgstr "காலாண்டு"
+
+msgid "Query page size:"
+msgstr "கேள்வி பக்கம் அளவு:"
+
+msgid "Query size must be integer and greater than zero."
+msgstr "கேள்வி அளவு பூஜ்ஜியத்தை விட முழுமையானதாக இருக்க வேண்டும்."
+
+msgid "Quick Entries"
+msgstr "விரைவு பதிவுகள்"
+
+msgid "Quick Entry"
+msgstr "விரைவு நுழைவு"
+
+msgid "Quick Entry Lines"
+msgstr "விரைவு நுழைவு கோடுகள்"
+
+msgid "Quote Valid Days:"
+msgstr "சரியான நாட்கள்:"
+
+msgid "Re-open This Dimension"
+msgstr "இந்த பரிமாணத்தை மீண்டும் திற"
+
+msgid "Receivable Account:"
+msgstr "பெறத்தக்க கணக்கு:"
+
+msgid "Reconcile"
+msgstr "சரிசெய்யும்"
+
+msgid "Reconcile Bank Account"
+msgstr "வங்கி கணக்கை மீண்டும் இணைக்கவும்"
+
+msgid "Reconcile Date"
+msgstr "மறுநிகழ்வு தேதி"
+
+msgid "Reconcile this transaction"
+msgstr "இந்த பரிவர்த்தனை மீண்டும் இணைக்கவும்"
+
+msgid "Reconciled<br>Amount"
+msgstr "ஒருமைப்படுத்திய <br> தொகை"
+
+msgid "Recurrent &Invoices"
+msgstr "மீண்டும் மீண்டும்  பொருள்"
+
+msgid "Reference"
+msgstr "குறிப்பு"
+
+msgid "Reference:"
+msgstr "குறிப்பு:"
+
+msgid "Remember last document date:"
+msgstr "கடைசி ஆவணம் தேதி நினைவில்:"
+
+msgid "Remove line from document"
+msgstr "ஆவணத்திலிருந்து வரி நீக்கவும்"
+
+msgid "Remove line from journal"
+msgstr "பத்திரிகையில் இருந்து வரி நீக்க"
+
+msgid "Repeat New Password:"
+msgstr "புதிய கடவுச்சொல்லை மீண்டும் செய்யவும்:"
+
+msgid "Report Id"
+msgstr "அறிக்கை ஐடி"
+
+msgid "Restore Backup"
+msgstr "காப்புப்பிரதி மீட்டமை"
+
+msgid "Restore backup completed."
+msgstr "காப்புப் பிரதி எடுக்கப்பட்டது."
+
+msgid "Restricted access"
+msgstr "கட்டுப்படுத்தப்பட்ட அணுகல்"
+
+msgid "Retained Earnings:"
+msgstr "தக்க வருவாய்:"
+
+msgid "Return to Journal &Inquiry"
+msgstr "ஜர்னல்  விசாரணையில் திரும்பவும்"
+
+msgid "Revaluate Currencies"
+msgstr "நாணயங்களை மதிப்பீடு செய்யவும்"
+
+msgid "Revaluation of Currency Accounts"
+msgstr "நாணய கணக்குகள் மறு மதிப்பீடு"
+
+msgid "Revenue / &Costs Accruals"
+msgstr "வருவாய்/செலவுகள் அதிகரிப்பு"
+
+msgid "Revenue / Cost Account"
+msgstr "வருவாய்/செலவு கணக்கு"
+
+msgid "Revenue / Cost Accruals"
+msgstr "வருவாய்/செலவு அதிகரிப்பு"
+
+msgid "Revenue / Cost Accruals have been processed."
+msgstr "வருவாய்/செலவு அதிகரிப்பு செயல்படுத்தப்பட்டது."
+
+msgid "Right To Left"
+msgstr "வலது இடது"
+
+msgid "Role description cannot be empty."
+msgstr "பங்கு விளக்கம் காலியாக இருக்க முடியாது."
+
+msgid "Role description:"
+msgstr "பங்கு விளக்கம்:"
+
+msgid "Role name cannot be empty."
+msgstr "பங்கு பெயரை காலியாக இருக்க முடியாது."
+
+msgid "Role name:"
+msgstr "பங்குப் பெயர்:"
+
+msgid "Role:"
+msgstr "ரோல்:"
+
+msgid "Round to nearest:"
+msgstr "அருகிலுள்ள"
+
+msgid "Rounding error %s encountered for trans_type:%s,trans_no:%s"
+msgstr "எதிர்விளைவு பிழை %s, trans_no:%s,trans_type:%s க்கான"
+
+msgid "Rows"
+msgstr "வரிசைகள்"
+
+msgid "S&etup"
+msgstr "எஸ்  etup"
+
+msgid "SQL script execution failed in line %d: %s"
+msgstr "%s:%s வரிக்கு SQL ஸ்கிரிப்ட் செயல்படுத்தல் தோல்வியடைந்தது"
+
+msgid "Sales &Areas"
+msgstr "விற்பனை மற்றும் பகுதிகள்"
+
+msgid "Sales &Groups"
+msgstr "விற்பனை  குழுக்கள்"
+
+msgid "Sales &Kits"
+msgstr "விற்பனை  கருவிகள்"
+
+msgid "Sales &Order Entry"
+msgstr "விற்பனை  ஆர்டர் நுழைவு"
+
+msgid "Sales &Persons"
+msgstr "விற்பனை மற்றும் நபர்கள்"
+
+msgid "Sales &Pricing"
+msgstr "விற்பனை  விலை"
+
+msgid "Sales &Quotation Entry"
+msgstr "விற்பனை  மேற்கோள் நுழைவு"
+
+msgid "Sales Account:"
+msgstr "விற்பனை கணக்கு:"
+
+msgid "Sales Discount Account:"
+msgstr "விற்பனை தள்ளுபடி கணக்கு:"
+
+msgid "Sales Order &Inquiry"
+msgstr "விற்பனை ஆணை  விசாரணைகள்"
+
+msgid "Sales Quotation I&nquiry"
+msgstr "விற்பனை மேற்கோள் I  nquiry"
+
+msgid "Sales T&ypes"
+msgstr "விற்பனை வகைகள்"
+
+msgid "Sales configuration"
+msgstr "விற்பனை கட்டமைப்பு"
+
+msgid "Sales related reports"
+msgstr "விற்பனை தொடர்பான அறிக்கைகள்"
+
+msgid "Sales transactions"
+msgstr "விற்பனை பரிவர்த்தனைகள்"
+
+msgid "Save"
+msgstr "சேமி"
+
+msgid "Save Role"
+msgstr "பங்கு சேமிக்க"
+
+msgid "Save changes to dimension"
+msgstr "பரிமாணத்திற்கு மாற்றங்களைச் சேமி"
+
+msgid "Save database and perform upgrade"
+msgstr "தரவுத்தளத்தை சேமித்து மேம்படுத்தவும்"
+
+msgid "Search"
+msgstr "தேடல்"
+
+msgid "Search Amount"
+msgstr "தேடல் தொகை"
+
+msgid "Search Customer List"
+msgstr "வாடிக்கையாளர் பட்டியலைத் தேடுக"
+
+msgid "Search Dimensions"
+msgstr "தேடல் பரிமாணங்கள்"
+
+msgid "Search General Ledger Transactions for account: "
+msgstr "கணக்கிற்கான பொதுவான லெட்ஜர் பரிவர்த்தனைகள்:"
+
+msgid "Search Item List"
+msgstr "உருப்படி பட்டியலைத் தேடு"
+
+msgid "Search Outstanding Dimensions"
+msgstr "சிறந்த பரிமாணங்களைத் தேடுக"
+
+msgid "Search Supplier List"
+msgstr "தேடல் வழங்குபவர் பட்டியல்"
+
+msgid "Secondary Phone"
+msgstr "இரண்டாம்நிலை தொலைபேசி"
+
+msgid "Secondary Phone Number:"
+msgstr "இரண்டாம் நிலை தொலைபேசி எண்:"
+
+msgid "Security role has been sucessfully deleted."
+msgstr "பாதுகாப்புப் பங்கு வெற்றிகரமாக நீக்கப்பட்டது."
+
+msgid "Security role has been updated."
+msgstr "பாதுகாப்பு பாத்திரம் மேம்படுத்தப்பட்டது."
+
+msgid "Select"
+msgstr "தேர்வு"
+
+msgid "Select a currency :"
+msgstr "ஒரு நாணயத்தைத் தேர்ந்தெடு:"
+
+msgid "Select attachment file."
+msgstr "தேர்ந்தெடு இணைப்பு கோப்பு."
+
+msgid "Select backup file first."
+msgstr "முதலில் காப்புப் பிரதி கோப்பைத் தேர்ந்தெடுக்கவும்."
+
+msgid "Select printing profile"
+msgstr "அச்சிடும் சுயவிவரத்தைத் தேர்ந்தெடுக்கவும்"
+
+msgid "Select your language files from your local harddisk."
+msgstr "உங்கள் உள்ளூர் ஹார்டிடஸ்க் இலிருந்து உங்கள் மொழி கோப்புகளைத் தேர்ந்தெடுக்கவும்."
+
+msgid "Selected account class has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கணக்கு வகுப்பு நீக்கப்பட்டது"
+
+msgid "Selected account class settings has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கணக்கு வகை அமைப்புகள் புதுப்பிக்கப்பட்டுள்ளன"
+
+msgid "Selected account group has been deleted"
+msgstr "தேர்ந்தெடுத்த கணக்குக் குழு நீக்கப்பட்டது"
+
+msgid "Selected account has been deleted"
+msgstr "தேர்ந்தெடுத்த கணக்கு நீக்கப்பட்டது"
+
+msgid "Selected account type has been updated"
+msgstr "தேர்ந்தெடுத்த கணக்கு வகை புதுப்பிக்கப்பட்டது"
+
+msgid "Selected bank account has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வங்கி கணக்கு நீக்கப்பட்டது"
+
+msgid "Selected chart has been successfully deleted"
+msgstr "தேர்ந்தெடுத்த விளக்கப்படம் வெற்றிகரமாக நீக்கப்பட்டது"
+
+msgid "Selected company has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட நிறுவனம் நீக்கப்பட்டது"
+
+msgid "Selected component has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட பகுதி நீக்கப்பட்டுவிட்டது"
+
+msgid "Selected contact category has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட தொடர்பு வகை புதுப்பிக்கப்பட்டது"
+
+msgid "Selected currency has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட நாணயம் நீக்கப்பட்டது"
+
+msgid "Selected currency settings has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட நாணய அமைப்புகள் புதுப்பிக்கப்பட்டன"
+
+msgid "Selected extension has been successfully deleted"
+msgstr "தேர்ந்தெடுத்த நீட்டிப்பு வெற்றிகரமாக நீக்கப்பட்டது"
+
+msgid "Selected fiscal year has been deleted"
+msgstr "தேர்ந்தெடுத்த நிதி ஆண்டு நீக்கப்பட்டது"
+
+msgid "Selected fiscal year has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட நிதி ஆண்டு புதுப்பிக்கப்பட்டது"
+
+msgid "Selected payment terms have been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கட்டண விதிமுறைகள் நீக்கப்பட்டன"
+
+msgid "Selected payment terms have been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கட்டண விதிமுறைகள் புதுப்பிக்கப்பட்டுள்ளன"
+
+msgid "Selected printer definition has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட பிரிண்டர் வரையறை நீக்கப்பட்டது"
+
+msgid "Selected printer definition has been updated"
+msgstr "தேர்ந்தெடுத்த பிரிண்டர் வரையறை புதுப்பிக்கப்பட்டது"
+
+msgid "Selected printing profile has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட அச்சிடும் சுயவிவரம் நீக்கப்பட்டது"
+
+msgid "Selected quick entry has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட விரைவு இடுகை நீக்கப்பட்டது"
+
+msgid "Selected quick entry has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட விரைவு நுழைவு மேம்படுத்தப்பட்டது"
+
+msgid "Selected quick entry line has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட விரைவு நுழைவு வரி நீக்கப்பட்டது"
+
+msgid "Selected quick entry line has been updated"
+msgstr "தேர்ந்தெடுத்த விரைவு இடுகை வரி புதுப்பிக்கப்பட்டது"
+
+msgid "Selected shipping company has been deleted"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கப்பல் நிறுவனம் நீக்கப்பட்டது"
+
+msgid "Selected shipping company has been updated"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கப்பல் நிறுவனம் புதுப்பிக்கப்பட்டது"
+
+msgid "Selected tag has been deleted"
+msgstr "தேர்ந்தெடுத்த டேக் நீக்கப்பட்டது"
+
+msgid "Selected tag settings have been updated"
+msgstr "தேர்ந்தெடுத்த குறிச்சொல் அமைப்புகள் புதுப்பிக்கப்பட்டுள்ளன"
+
+msgid "Selected theme has been successfully deleted"
+msgstr "தேர்ந்தெடுத்த தீம் வெற்றிகரமாக நீக்கப்பட்டது"
+
+msgid "Selected transaction does not exists."
+msgstr "தேர்ந்தெடுக்கப்பட்ட பரிமாற்றத்தில் உள்ளது இல்லை"
+
+msgid "Selected transaction has been voided."
+msgstr "தேர்ந்தெடுக்கப்பட்ட பரிவர்த்தனை நீக்கப்பட்டது."
+
+msgid "Send password -->"
+msgstr "கடவுச்சொல்லை அனுப்பு -->"
+
+msgid "Set this option to on for using icons instead of text links"
+msgstr "ஐகான்களை பதிலாக உரை இணைப்புகள் பதிலாக இந்த விருப்பத்தை அமைக்க"
+
+msgid "Set this option to on if your browser directly supports pdf files"
+msgstr ""
+"உங்கள் உலாவி நேரடியாக PDF கோப்புகளை ஆதரிக்கிறது என்றால் இந்த விருப்பத்தை அமைக்கவும்"
+
+msgid "Settle currency"
+msgstr "நாணயத்தைத் தீர்க்கவும்"
+
+msgid "Settled AP Amount:"
+msgstr "AP தொகை தொகை:"
+
+msgid "Settled AR Amount:"
+msgstr "AR தொகை தொகை:"
+
+msgid "Settled amount"
+msgstr "குடியேறிய தொகை"
+
+msgid "Settled amount have to be positive number."
+msgstr "குடியேறிய தொகை நேர்மறை எண்ணாக இருக்க வேண்டும்."
+
+msgid "Shi&pping Company"
+msgstr "கப்பல் நிறுவனம்"
+
+msgid "Shipping Charged Account:"
+msgstr "கப்பல் சார்ஜ் செய்யப்பட்ட கணக்கு:"
+
+msgid "Shipping Company"
+msgstr "கப்பல் நிறுவனம்"
+
+msgid "Shipping ways"
+msgstr "கப்பல் வழிகள்"
+
+msgid "Short Name"
+msgstr "குறுகிய பெயர்"
+
+msgid "Show"
+msgstr "காட்டு"
+
+msgid "Show GL Information:"
+msgstr "GL தகவல் காட்டு:"
+
+msgid "Show GL Rows"
+msgstr "GL வரிசைகள் காண்பி"
+
+msgid "Show Item Codes:"
+msgstr "பொருள் குறியீடுகள் காட்டு:"
+
+msgid "Show closed:"
+msgstr "மூடியவை காட்டு:"
+
+msgid "Show hints for new users:"
+msgstr "புதிய பயனர்களுக்கான குறிப்புகள் காட்டு:"
+
+msgid "Show inactive:"
+msgstr "செயலற்றவை காட்டு:"
+
+msgid "Showing GL Transactions."
+msgstr "GL பரிமாற்றங்களை காண்பிக்கிறது."
+
+msgid "Size"
+msgstr "அளவு"
+
+msgid "Software &Upgrade"
+msgstr "மென்பொருள்  மேம்படுத்தல்"
+
+msgid "Software Upgrade"
+msgstr "மென்பொருள் மேம்படுத்தல்"
+
+msgid "Software upgrades"
+msgstr "மென்பொருள் மேம்பாடுகள்"
+
+msgid "Special maintenance"
+msgstr "சிறப்பு பராமரிப்பு"
+
+msgid "Standard &Costs"
+msgstr "ஸ்டாண்டர்ட்  செலவுகள்"
+
+msgid ""
+"Standard package for this language is already installed. If you want to "
+"install this language manually, uninstall standard language package first."
+msgstr ""
+"இந்த மொழிக்கான நிலையான தொகுப்பு ஏற்கனவே நிறுவப்பட்டுள்ளது. இந்த மொழியை நீங்கள் "
+"கைமுறையாக நிறுவ வேண்டுமெனில், முதலில் தர மொழியைப் பயன்படுத்தவும்."
+
+msgid "Start Date"
+msgstr "தொடக்க தேதி"
+
+msgid "Start-up Tab"
+msgstr "தொடக்கத் தாவல்"
+
+msgid "Statement"
+msgstr "அறிக்கை"
+
+msgid "Status change for some extensions failed."
+msgstr "சில நீட்டிப்புகளுக்கான நிலைமாற்றம் தோல்வியடைந்தது."
+
+msgid "Subgroup Of"
+msgstr "துணைக்குழு"
+
+msgid "Subgroup Of:"
+msgstr "துணைக்குழு:"
+
+msgid "Supplier &Credit Notes"
+msgstr "சப்ளையர்  கடன் குறிப்புகள்"
+
+msgid "Supplier &Invoices"
+msgstr "சப்ளையர்  இன்யூசஸ்"
+
+msgid "Supplier Allocation &Inquiry"
+msgstr "வழங்குநர் ஒதுக்கீடு  விசாரணை"
+
+msgid "Supplier Transaction &Inquiry"
+msgstr "வழங்குபவர் பரிவர்த்தனை  விசாரணை"
+
+msgid "Supplier and Purchasing &Reports"
+msgstr "சப்ளையர் மற்றும் வாங்குதல்  அறிக்கைகள்"
+
+msgid "Supplier's Reference"
+msgstr "சப்ளையரின் குறிப்பு"
+
+msgid "Supplier:"
+msgstr "விற்பனையாளர்:"
+
+msgid "Suppliers and Purchasing"
+msgstr "சப்ளையர்கள் மற்றும் கொள்முதல்"
+
+msgid "Suppliers and Purchasing Defaults"
+msgstr "சப்ளையர்கள் மற்றும் கொள்முதல் தவறுகள்"
+
+msgid "Supported"
+msgstr "ஆதரிக்கப்படும்"
+
+msgid "Symbol"
+msgstr "சின்னமாக"
+
+msgid "System &Diagnostics"
+msgstr "கணினி  கண்டறிதல்"
+
+msgid "System Diagnostics"
+msgstr "கணினி கண்டறிதல்"
+
+msgid "System administration"
+msgstr "கணினி நிர்வாகம்"
+
+msgid "System and &General GL Setup"
+msgstr "கணினி மற்றும் பொது GL அமைவு"
+
+msgid "System and General GL Setup"
+msgstr "கணினி மற்றும் பொது GL அமைவு"
+
+msgid "Ta&x Inquiry"
+msgstr "Ta  x விசாரணை"
+
+msgid "Table Pref"
+msgstr "அட்டவணை முன்"
+
+msgid "Tag Description"
+msgstr "குறி விளக்கம்"
+
+msgid "Tag Description:"
+msgstr "குறிச்சொல் விளக்கம்:"
+
+msgid "Tag Name"
+msgstr "குறிச்சொல் பெயர்"
+
+msgid "Tag Name:"
+msgstr "குறிச்சொல் பெயர்:"
+
+msgid "Tags:"
+msgstr "குறிச்சொற்கள்:"
+
+msgid "Tax &Groups"
+msgstr "வரி மற்றும் குழுக்கள்"
+
+msgid "Tax Inquiry"
+msgstr "வரி விசாரணை"
+
+msgid "Tax Last Period:"
+msgstr "வரி கடந்த காலம்:"
+
+msgid "Tax Name"
+msgstr "வரி பெயர்"
+
+msgid "Tax Periods:"
+msgstr "வரி காலம்:"
+
+msgid "Tax Rate"
+msgstr "வரி விகிதம்"
+
+msgid "Tax Type"
+msgstr "வரி வகை"
+
+msgid "Telephone No.:"
+msgstr "தொலைபேசி எண்.:"
+
+msgid "Terms Description:"
+msgstr "விதிமுறைகள் விவரம்:"
+
+msgid "Test"
+msgstr "சோதனை"
+
+msgid "Test type"
+msgstr "சோதனை வகை"
+
+msgid "Thank you for using"
+msgstr "பயன்படுத்தியதற்கு நன்றி"
+
+msgid ""
+"The Bank Charge Account has not been set in System and General GL Setup."
+msgstr "வங்கி பொறுப்பு கணக்கு அமைப்பு மற்றும் பொது ஜெனரல் கிளெட்டில் அமைக்கப்படவில்லை."
+
+msgid "The Budget has been deleted."
+msgstr "பட்ஜெட் நீக்கப்பட்டது."
+
+msgid "The Budget has been saved."
+msgstr "பட்ஜெட் சேமிக்கப்பட்டது."
+
+msgid ""
+"The Opening Balance is not in balance, probably due to a non closed Previous "
+"Fiscalyear."
+msgstr ""
+"திறந்த இருப்பு சமநிலையில் இல்லை, அநேகமாக ஒரு மூடப்படாத முந்தைய Fiscalyear காரணமாக "
+"இருக்கலாம்."
+
+msgid "The Quick Entry description cannot be empty."
+msgstr "விரைவு நுழைவு விளக்கம் காலியாக இருக்க முடியாது."
+
+msgid "The Quick Entry has Quick Entry Lines. Cannot be deleted."
+msgstr "விரைவு நுழைவு விரைவு நுழைவு கோடுகள் உள்ளது. நீக்க முடியாது."
+
+msgid ""
+"The Retained Earnings Account or the Profit and Loss Year Account has not "
+"been set in System and General GL Setup"
+msgstr ""
+"தக்க வருவாய் கணக்கு அல்லது லாபம் மற்றும் இழப்பு வருடாந்திர கணக்கு முறைமை மற்றும் பொது GL "
+"அமைப்பில் அமைக்கப்படவில்லை"
+
+msgid ""
+"The Retained Earnings Account should be a Balance Account or the Profit and "
+"Loss Year Account should be an Expense Account (preferred the last one in "
+"the Expense Class)"
+msgstr ""
+"தக்க வருவாய் கணக்கு ஒரு இருப்பு கணக்கு அல்லது லாபம் மற்றும் இழப்பு வருடாந்திர கணக்கு "
+"இருக்க வேண்டும் ஒரு செலவு கணக்கு (செலவின வகுப்பு கடைசி விருப்பம்)"
+
+msgid "The Terms description must be entered."
+msgstr "விதிமுறைகள் விளக்கம் உள்ளிடப்பட வேண்டும்."
+
+msgid "The account belongs to a bank account and cannot be inactivated."
+msgstr "கணக்கு வங்கிக் கணக்குக்கு சொந்தமானது மற்றும் செயலிழக்காது."
+
+msgid "The account class ID cannot be empty."
+msgstr "கணக்கு வர்க்க ஐடி காலியாக இருக்க முடியாது."
+
+msgid "The account class name cannot be empty."
+msgstr "கணக்கின் வர்க்கப் பெயர் காலியாக இருக்க முடியாது."
+
+msgid "The account code must be entered."
+msgstr "கணக்கு குறியீட்டை உள்ளிட வேண்டும்."
+
+msgid "The account code must be numeric."
+msgstr "கணக்கின் குறியீடு எண்களாக இருக்க வேண்டும்."
+
+msgid "The account group id cannot be empty."
+msgstr "கணக்கு குழு ஐடி காலியாக இருக்க முடியாது."
+
+msgid "The account group name cannot be empty."
+msgstr "கணக்கு குழு பெயர் காலியாக இருக்க முடியாது."
+
+msgid "The account name cannot be empty."
+msgstr "கணக்கு பெயர் காலியாக இருக்க முடியாது."
+
+msgid "The amount can not be 0."
+msgstr "அளவு 0 இருக்கக்கூடாது."
+
+msgid "The amount entered is not a valid number or is less than zero."
+msgstr "உள்ளிட்ட மதிப்பு செல்லுபடியாகாத எண் அல்ல அல்லது பூஜ்யம் குறைவாக உள்ளது."
+
+msgid "The bank account name cannot be empty."
+msgstr "வங்கி கணக்கு பெயர் காலியாக இருக்க முடியாது."
+
+msgid ""
+"The bank transaction would result in exceed of authorized overdraft limit "
+"for transaction: %s #%s on %s."
+msgstr "வங்கி பரிவர்த்தனை பரிவர்த்தனைக்கான அதிக ஓவர் டிராஃப்ட் வரம்பை மீறும்:%sஇல் %s #%s."
+
+msgid "The base amount description cannot be empty."
+msgstr "அடிப்படை அளவு விளக்கம் காலியாக இருக்க முடியாது."
+
+msgid ""
+"The company currency is the base currency so exchange rates cannot be set "
+"for it."
+msgstr ""
+"நிறுவனத்தின் செலாவணி அடிப்படை நாணயமாக உள்ளது, எனவே பரிமாற்ற விகிதங்கள் அதை அமைக்க "
+"முடியாது."
+
+msgid "The company name must be entered."
+msgstr "நிறுவனத்தின் பெயர் உள்ளிடப்பட வேண்டும்."
+
+msgid "The configuration file "
+msgstr "கட்டமைப்பு கோப்பு"
+
+msgid "The credit amount entered is not a valid number or is less than zero."
+msgstr "உள்ளிட்ட கடன் தொகை தவறான எண்ணாக இல்லை அல்லது பூஜ்யம் குறைவாக உள்ளது."
+
+msgid "The currency abbreviation must be entered."
+msgstr "நாணய சுருக்கத்தை உள்ளிட வேண்டும்."
+
+msgid "The currency name must be entered."
+msgstr "நாணய பெயர் உள்ளிட வேண்டும்."
+
+msgid "The currency symbol must be entered."
+msgstr "நாணய சின்னத்தை உள்ளிட வேண்டும்."
+
+msgid "The date entered is in an invalid format."
+msgstr "உள்ளிட்ட தேதி தவறான வடிவத்தில் உள்ளது."
+
+msgid "The debit amount entered is not a valid number or is less than zero."
+msgstr "உள்ளிட்ட டெபிட் தொகை செல்லுபடியாகாத எண் அல்ல அல்லது பூஜ்யம் குறைவாக உள்ளது."
+
+msgid "The delivery over-receive allowance must be between 0 and 100."
+msgstr "வழங்கல் பெறும் கொடுப்பனவு 0 மற்றும் 100 க்கு இடையில் இருக்க வேண்டும்."
+
+msgid "The dimension has been closed. There can be no more changes to it."
+msgstr "பரிமாணம் மூடப்பட்டுள்ளது. அதற்கு இன்னும் மாற்றங்கள் இருக்க முடியாது."
+
+msgid "The dimension has been deleted."
+msgstr "பரிமாணம் நீக்கப்பட்டது."
+
+msgid "The dimension has been entered."
+msgstr "பரிமாணம் உள்ளிடப்பட்டுள்ளது."
+
+msgid "The dimension has been re-opened. "
+msgstr "பரிமாணத்தை மீண்டும் திறக்கப்பட்டுள்ளது."
+
+msgid "The dimension has been updated."
+msgstr "பரிமாணம் புதுப்பிக்கப்பட்டது."
+
+msgid "The dimension name must be entered."
+msgstr "பரிமாணத்தின் பெயர் உள்ளிடப்பட வேண்டும்."
+
+msgid "The dimension number sent is not valid."
+msgstr "அனுப்பப்பட்ட பரிமாண எண் செல்லுபடியாகாது."
+
+msgid "The dimension sent is not valid."
+msgstr "அனுப்பப்பட்ட பரிமாணம் செல்லுபடியாகாது."
+
+msgid ""
+"The ending transaction number is expected to be numeric and greater than "
+"zero."
+msgstr ""
+"முடிவான பரிவர்த்தனை எண் பூஜ்ஜியத்தை விட எண் மற்றும் அதிகமானதாக இருக்கும் என "
+"எதிர்பார்க்கப்படுகிறது."
+
+msgid "The entered amount is invalid or less than zero."
+msgstr "உள்ளிடப்பட்ட தொகை தவறானது அல்லது பூஜ்ஜியத்தை விட குறைவாக உள்ளது."
+
+msgid "The entered date for the payment is invalid."
+msgstr "கட்டணம் செலுத்துவதற்கான தேதி தவறானது."
+
+msgid "The entered date is invalid."
+msgstr "உள்ளிட்ட தேதி செல்லாதது."
+
+msgid ""
+"The entered date is out of fiscal year or is closed for further data entry."
+msgstr "நுழைந்த தேதி நிதியாண்டில் இல்லை அல்லது மேலும் தரவு நுழைவுக்காக மூடப்பட்டுள்ளது."
+
+msgid "The entered transaction does not exist or cannot be voided."
+msgstr "உள்ளிட்ட பரிவர்த்தனை இல்லை அல்லது வரக்கூடாது."
+
+msgid "The exchange rate cannot be zero or a negative number."
+msgstr "மாற்று விகிதம் பூஜ்யம் அல்லது எதிர்ம எண் அல்ல."
+
+msgid "The exchange rate for the date is already there."
+msgstr "தேதிக்கான மாற்று விகிதம் ஏற்கனவே உள்ளது."
+
+msgid "The existing image could not be removed"
+msgstr "இருக்கும் படத்தை அகற்ற முடியவில்லை"
+
+msgid ""
+"The file size is over the maximum allowed. The maximum size allowed in KB is"
+msgstr "கோப்பு அளவு அதிகபட்ச அனுமதி உள்ளது. KB இல் அதிகபட்ச அளவு அனுமதிக்கப்படுகிறது"
+
+msgid "The from date cannot be bigger than the fiscal year end."
+msgstr "தேதி முதல் நிதி ஆண்டு முடிவை விட பெரிய இருக்க முடியாது."
+
+msgid "The general GL setup has been updated."
+msgstr "பொது GL அமைப்பு புதுப்பிக்கப்பட்டது."
+
+msgid "The hundredths name must be entered."
+msgstr "நூறுகளின் பெயர் உள்ளிட வேண்டும்."
+
+msgid "The incomming bank amount cannot be 0."
+msgstr "Incomming வங்கி அளவு 0 இருக்க முடியாது."
+
+msgid "The invoice over-charge allowance must be between 0 and 100."
+msgstr "விலைப்பட்டியல் கட்டணம் செலுத்தும் கட்டணம் 0 மற்றும் 100 க்கு இடையில் இருக்க வேண்டும்."
+
+msgid ""
+"The journal must balance (debits equal to credits) before it can be "
+"processed."
+msgstr "இதனை செயலாக்க முடியும் முன் இதழ் (வரவுகளை சமமாக பற்று)."
+
+msgid "The language files folder "
+msgstr "மொழி கோப்புகளை அடைவு"
+
+msgid "The marked company is the current company which cannot be deleted."
+msgstr "குறிக்கப்பட்ட நிறுவனம் தற்போதைய நிறுவனமாக நீக்கப்பட முடியாதது."
+
+msgid "The marked currency is the home currency which cannot be deleted."
+msgstr "குறிக்கப்பட்ட நாணயம் வீட்டு நாணயம் ஆகும், இது நீக்கப்பட முடியாது."
+
+msgid ""
+"The marked fiscal year is the current fiscal year which cannot be deleted."
+msgstr "குறிக்கப்பட்ட நிதி ஆண்டு தற்போதைய நிதியாண்டில் நீக்கப்பட முடியாதது."
+
+msgid "The marked language is the current language which cannot be deleted."
+msgstr "குறிக்கப்பட்ட மொழி தற்போதைய மொழியாக நீக்கப்படமுடியாது."
+
+msgid "The number of days or the day in the following month must be numeric."
+msgstr "அடுத்த மாதத்தில் நாட்களின் எண்ணிக்கை அல்லது நாளின் எண் இருக்க வேண்டும்."
+
+msgid "The password cannot contain the user login."
+msgstr "கடவுச்சொல் பயனர் உள்நுழைவைக் கொண்டிருக்க முடியாது."
+
+msgid "The password entered must be at least 4 characters long."
+msgstr "உள்ளிட்ட கடவுச்சொல் குறைந்தது 4 எழுத்துகள் இருக்க வேண்டும்."
+
+msgid "The passwords entered are not the same."
+msgstr "உள்ளிட்ட கடவுச்சொற்கள் ஒன்றும் இல்லை."
+
+msgid "The past due days interval allowance must be between 0 and 100."
+msgstr ""
+"கடந்த கால இடைவெளியில் இடைவெளி கொடுப்பனவு 0 மற்றும் 100 க்கு இடையில் இருக்க வேண்டும்."
+
+msgid "The periods must be greater than 0."
+msgstr "காலங்கள் 0 ஐ விட அதிகமாக இருக்க வேண்டும்."
+
+msgid "The required by date entered is in an invalid format."
+msgstr "உள்ளிட்ட தேதியிலிருந்து தேவை தவறான வடிவமைப்பில் உள்ளது."
+
+msgid ""
+"The script must be called with a valid transaction type and transaction "
+"number to review the general ledger postings for."
+msgstr ""
+"ஸ்கிரிப்டை ஒரு பொது பரிவர்த்தனை வகை மற்றும் பரிவர்த்தனை எண்ணை கொண்டு அழைக்க வேண்டும்."
+
+msgid "The selected currency is the company currency."
+msgstr "தேர்ந்தெடுக்கப்பட்ட நாணயம் நிறுவனம் நாணயம் ஆகும்."
+
+msgid "The selected transaction has already been voided."
+msgstr "தேர்ந்தெடுக்கப்பட்ட பரிவர்த்தனை ஏற்கனவே நீக்கப்பட்டிருக்கிறது."
+
+msgid "The selected transaction was closed for edition and cannot be voided."
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட பரிவர்த்தனை பதிப்பிற்காக மூடப்பட்டது மற்றும் ரத்து செய்யப்பட முடியாது."
+
+msgid "The selected user has been updated."
+msgstr "தேர்ந்தெடுத்த பயனர் புதுப்பிக்கப்பட்டது."
+
+msgid "The shipping company name cannot be empty."
+msgstr "கப்பல் நிறுவனத்தின் பெயர் காலியாக இருக்க முடியாது."
+
+msgid "The source and destination bank accouts cannot be the same."
+msgstr "ஆதாரம் மற்றும் இலக்கு வங்கி தூண்டுதல்கள் ஒரே மாதிரியாக இருக்க முடியாது."
+
+msgid ""
+"The starting transaction number is expected to be numeric and greater than "
+"zero."
+msgstr ""
+"தொடங்கும் பரிவர்த்தனை எண் பூஜ்ஜியத்தை விட எண்ணி மற்றும் அதிகமானதாக இருக்கும் என "
+"எதிர்பார்க்கப்படுகிறது."
+
+msgid "The tag name cannot be empty."
+msgstr "குறிச்சொல் பெயர் காலியாக இருக்க முடியாது."
+
+msgid "The total bank amount cannot be 0."
+msgstr "மொத்த வங்கி தொகை 0 இருக்க முடியாது."
+
+msgid "The total bank amount exceeds allowed limit (%s)."
+msgstr "மொத்த வங்கி தொகை வரம்பை (%s) அனுமதிக்கப்பட்டுள்ளது."
+
+msgid "The transaction number is expected to be numeric and greater than zero."
+msgstr ""
+"பரிவர்த்தனை எண் பூஜ்ஜியத்தை விட எண் மற்றும் அதிகமானதாக இருக்கும் என எதிர்பார்க்கப்படுகிறது."
+
+msgid "The user and password combination is not valid for the system."
+msgstr "பயனர் மற்றும் கடவுச்சொல்லை இணைந்து அமைப்பு சரியானது அல்ல."
+
+msgid "The user login entered must be at least 4 characters long."
+msgstr "உள்ளிட்ட பயனர் உள்நுழைவு குறைந்தபட்சம் 4 எழுத்துகள் இருக்க வேண்டும்."
+
+msgid "Theme"
+msgstr "தீம்"
+
+msgid "Theme:"
+msgstr "வடிவமைப்பு:"
+
+msgid ""
+"There are no account groups defined. Please define at least one account "
+"group before entering accounts."
+msgstr ""
+"கணக்குக் குழுக்கள் வரையறுக்கப்படவில்லை. கணக்குகளை நுழைவதற்கு முன் ஒரு கணக்கு குழுவை "
+"வரையறுக்கவும்."
+
+msgid "There are no bank accounts defined in the system."
+msgstr "கணினியில் வரையறுக்கப்பட்ட வங்கி கணக்குகள் இல்லை."
+
+msgid "There are no items for this deposit."
+msgstr "இந்த வைப்புக்கு ஏதுமில்லை."
+
+msgid "There are no items for this payment."
+msgstr "இந்த கட்டணத்திற்கான உருப்படி எதுவுமில்லை."
+
+msgid "There are no transactions for this dimension for the selected period."
+msgstr "தேர்ந்தெடுக்கப்பட்ட காலத்திற்கான இந்த பரிமாணத்திற்கு பரிமாற்றங்கள் எதுவும் இல்லை."
+
+msgid "This Dimension is closed."
+msgstr "இந்த பரிமாணம் மூடப்பட்டுள்ளது."
+
+msgid "This Period"
+msgstr "இந்த தருணம்"
+
+msgid "This account group id is already in use."
+msgstr "இந்த கணக்கு குழு ஐடி ஏற்கனவே பயன்படுத்தப்பட்டுள்ளது."
+
+msgid "This customer account is on hold."
+msgstr "இந்த வாடிக்கையாளர் கணக்கு உள்ளது."
+
+msgid "This database settings are already used by another company."
+msgstr "இந்த தரவுத்தள அமைப்புகள் ஏற்கனவே மற்றொரு நிறுவனத்தால் பயன்படுத்தப்படுகின்றன."
+
+msgid "This deposit has been voided."
+msgstr "இந்த வைப்புத் தள்ளுபடி செய்யப்பட்டுள்ளது."
+
+msgid "This dimension cannot be deleted because it has already been processed."
+msgstr "ஏற்கனவே பரிமாற்றம் செய்யப்பட்டதால், இந்த பரிமாணத்தை நீக்க முடியாது."
+
+msgid "This dimension is closed."
+msgstr "இந்த பரிமாணம் மூடப்பட்டுள்ளது."
+
+msgid "This payment has been voided."
+msgstr "இந்த கட்டணம் ரத்து செய்யப்பட்டது."
+
+msgid "This role is currently assigned to some users and cannot be deleted"
+msgstr ""
+"இந்த பாத்திரம் தற்போது சில பயனர்களுக்கு ஒதுக்கப்பட்டிருக்கிறது மற்றும் நீக்கப்பட முடியாது"
+
+msgid "This transaction has been voided."
+msgstr "இந்த பரிவர்த்தனை நீக்கப்பட்டது."
+
+msgid "This transfer has been voided."
+msgstr "இந்த இடமாற்றம் நீக்கப்பட்டது."
+
+msgid "Thousand Separator:"
+msgstr "ஆயிரம் பிரிப்பான்:"
+
+msgid "Time"
+msgstr "நேரம்"
+
+msgid "Time Zone on Reports"
+msgstr "அறிக்கைகள் பற்றிய நேர மண்டலம்"
+
+msgid "Timeout"
+msgstr "நேரம் முடிந்தது"
+
+msgid "Timeout cannot be less than zero nor longer than 60 (sec)."
+msgstr ""
+"காலாவதியானது பூஜ்ஜியத்தை விட குறைவாகவோ அல்லது 60 (நொடி) க்கும் அதிகமாக "
+"இருக்கக்கூடாது."
+
+msgid "To"
+msgstr "செய்ய"
+
+msgid "To Account:"
+msgstr "கணக்கில்:"
+
+msgid "To Bank Account"
+msgstr "வங்கி கணக்கு"
+
+msgid "To the Order of:"
+msgstr "ஆணை:"
+
+msgid "To:"
+msgstr "பெறுநர்:"
+
+msgid "Too many failed login attempts.<br>Please wait a while or try later."
+msgstr "பல முறை முயற்சித்த.<br>ஒரு காத்திருக்கவும் அல்லது பின்னர் முயற்சிக்கவும்."
+
+msgid "Total"
+msgstr "மொத்த"
+
+msgid "Total payable or refund"
+msgstr "மொத்த செலுத்தத்தக்க அல்லது திரும்பப்பெறுக"
+
+msgid "Trans #"
+msgstr "டிரான்ஸ் #"
+
+msgid "Transaction #"
+msgstr "பரிவர்த்தனை #"
+
+msgid "Transaction #:"
+msgstr "பரிவர்த்தனை #:"
+
+msgid "Transactions"
+msgstr "பரிவர்த்தனைகள்"
+
+msgid "Transfer Date:"
+msgstr "பரிமாற்ற தேதி:"
+
+msgid "Transfer Type"
+msgstr "பரிமாற்ற வகை"
+
+msgid "Transfer has been entered"
+msgstr "பரிமாற்றம் உள்ளிடப்பட்டுள்ளது"
+
+msgid "Trial &Balance"
+msgstr "சோதனை  இருப்பு"
+
+msgid "Trial Balance"
+msgstr "சோதனை இருப்பு"
+
+msgid "Tu"
+msgstr "செ"
+
+msgid "Turnover"
+msgstr "விற்றுமுதல்"
+
+msgid "Type"
+msgstr "வகை"
+
+msgid "Type:"
+msgstr "வகை:"
+
+msgid "Unknown"
+msgstr "தெரியாத"
+
+msgid "Unspecified tag type"
+msgstr "குறிப்பிடப்படாத குறிச்சொல் வகை"
+
+msgid "Update"
+msgstr "புதுப்பிக்கப்பட்டது"
+
+msgid "Update Account"
+msgstr "கணக்கு புதுப்பிக்கவும்"
+
+msgid "Update Profile"
+msgstr "சுயவிவரத்தை புதுப்பிக்கவும்"
+
+msgid "Update default"
+msgstr "இயல்புநிலை புதுப்பிக்கவும்"
+
+msgid "Update printer profile"
+msgstr "அச்சுப்பொறி சுயவிவரத்தை புதுப்பிக்கவும்"
+
+msgid "Update view"
+msgstr "காட்சி புதுப்பிக்கவும்"
+
+msgid "Upload and install latest extension package"
+msgstr "சமீபத்திய நீட்டிப்பு தொகுப்பை பதிவேற்றி நிறுவவும்"
+
+msgid "Upload and install latest language package"
+msgstr "சமீபத்திய மொழி தொகுப்பு பதிவேற்ற மற்றும் நிறுவ"
+
+msgid "Upload file"
+msgstr "கோப்பை பதிவேற்றவும்"
+
+msgid "Use Dimensions:"
+msgstr "பரிமாணங்களைப் பயன்படுத்துக:"
+
+msgid "Use icons instead of text links:"
+msgstr "உரை இணைப்புகள் பதிலாக சின்னங்கள் பயன்படுத்தவும்:"
+
+msgid "Use popup window for reports:"
+msgstr "அறிக்கைகள் பாப் அப் விண்டோவைப் பயன்படுத்தவும்:"
+
+msgid "Use popup window to display reports:"
+msgstr "அறிக்கைகள் காட்ட பாப் அப் சாளரத்தை பயன்படுத்தவும்:"
+
+msgid "User"
+msgstr "பயனர்"
+
+msgid "User Login:"
+msgstr "பயனர் உள்நுழைவு:"
+
+msgid "User has been deleted."
+msgstr "பயனர் நீக்கப்பட்டது."
+
+msgid "User login"
+msgstr "பயனர் உள்நுழைவு"
+
+msgid "User login:"
+msgstr "பயனர் உள்நுழைவு:"
+
+msgid "User name"
+msgstr "பயனர் பெயர்"
+
+msgid "User's POS"
+msgstr "பயனர் POS"
+
+msgid "Users"
+msgstr "பயனர்கள்"
+
+msgid "Users setup"
+msgstr "பயனர்கள் அமைப்பது"
+
+msgid "Value"
+msgstr "மதிப்பு"
+
+msgid "Version"
+msgstr "பதிப்பு"
+
+msgid "Version Id"
+msgstr "பதிப்பு அடையாளம்"
+
+msgid "View"
+msgstr "காண்க"
+
+msgid "View Backup"
+msgstr "காப்பு பிரதி பார்க்கவும்"
+
+msgid "View Bank Deposit"
+msgstr "வங்கி வைப்பு பார்க்கவும்"
+
+msgid "View Bank Payment"
+msgstr "வங்கி செலுத்துதலைக் காண்க"
+
+msgid "View Bank Transfer"
+msgstr "பார்க்க வங்கி மாற்றம்"
+
+msgid "View Dimension"
+msgstr "காட்சி பரிமாணம்"
+
+msgid "View or &Print Transactions"
+msgstr "காண்க அல்லது  அச்சிடு பரிமாற்றங்கள்"
+
+msgid "View or Print Transactions"
+msgstr "பார்வை அல்லது அச்சிடும் பரிவர்த்தனைகள்"
+
+msgid "View the GL Postings for this Deposit"
+msgstr "இந்த வைப்புக்கான GL இடுகைகளைக் காண்க"
+
+msgid "Void Transaction"
+msgstr "தவறான பரிவர்த்தனை"
+
+msgid "Void a Transaction"
+msgstr "ஒரு பரிவர்த்தனை ரத்து செய்யப்பட்டது"
+
+msgid "Voided."
+msgstr "வெளியேற்றப்பட்ட."
+
+msgid "Voiding Date:"
+msgstr "வெயிட்டிங் தேதி:"
+
+msgid "Voiding transactions"
+msgstr "வாங்குதல் நடவடிக்கைகள்"
+
+msgid "Warning:  This may cause a delay in GL postings"
+msgstr "எச்சரிக்கை: இது ஜிஎல் தகவல்களுக்கு தாமதத்தை ஏற்படுத்தும்"
+
+msgid ""
+"Warning: Deleting a fiscal year all transactions \n"
+"\t\tare removed and converted into relevant balances. This process is "
+"irreversible!"
+msgstr ""
+"எச்சரிக்கை: ஒரு நிதியாண்டில் அனைத்து நடவடிக்கைகளையும் நீக்கி\n"
+"\t\tare நீக்கப்பட்டு, பொருத்தமான நிலுவைகளை மாற்றும். இந்த செயல்முறை மீள முடியாதது!"
+
+msgid "Weekly"
+msgstr "வீக்லி"
+
+msgid "Work &Order Entry"
+msgstr "வேலை  ஆர்டர் நுழைவு"
+
+msgid "Work Order &Inquiry"
+msgstr "வேலை ஆணை  விசாரணைகள்"
+
+msgid "Work Order Required By After:"
+msgstr "வேலை ஆணை பின்னர் தேவைப்படுகிறது:"
+
+msgid "Year"
+msgstr "ஆண்டு"
+
+msgid "Yearly"
+msgstr "வருடாந்திரம்"
+
+msgid "Yes"
+msgstr "ஆமாம்"
+
+msgid ""
+"You are about to remove language \\'%s\\'.\n"
+"Do you want to continue ?"
+msgstr ""
+"நீங்கள் மொழியை \\'%s\\' அகற்றுவீர்கள்.\n"
+"தொடர விரும்புகிறீர்களா?"
+
+msgid ""
+"You are about to remove package \\'%s\\'.\n"
+"Do you want to continue ?"
+msgstr ""
+"நீங்கள் தொகுப்பை \\'%s\\' அகற்ற உள்ளீர்கள்.\n"
+"தொடர விரும்புகிறீர்களா?"
+
+msgid ""
+"You are about to remove selected backup file.\n"
+"Do you want to continue ?"
+msgstr ""
+"நீங்கள் தேர்ந்தெடுத்த காப்புக் கோப்பை அகற்றப் போகிறீர்கள்.\n"
+"தொடர விரும்புகிறீர்களா?"
+
+msgid ""
+"You are about to restore database from backup file.\n"
+"Do you want to continue?"
+msgstr ""
+"நீங்கள் காப்புப் பிரதி கோப்பிலிருந்து தரவுத்தளத்தை மீட்டெடுக்கப் போகிறீர்கள்.\n"
+"தொடர விரும்புகிறீர்களா?"
+
+msgid ""
+"You can edit directly only journal entries created via Journal Entry page."
+msgstr ""
+"ஜர்னல் நுழைவுப் பக்கத்தின் மூலம் மட்டுமே நேரடியாக ஜர்னல் உள்ளீடுகளை நீங்கள் திருத்த முடியும்."
+
+msgid "You can only upload *.sql backup files"
+msgstr "*.sql காப்புப் பிரதிகளை மட்டுமே பதிவேற்ற முடியும்"
+
+msgid "You can only use Balance Based together with Journal Entries."
+msgstr "நீங்கள் ஜர்னல் நுழைவுகளுடன் சேர்ந்து சமநிலைகளைப் பயன்படுத்தலாம்."
+
+msgid ""
+"You cannot have table set without prefix together with prefixed sets in the "
+"same database."
+msgstr ""
+"அதே தரவுத்தளத்தில் prefixed செட் உடன் முன்னொட்டு இல்லாமல் அட்டவணை அமைக்க முடியாது."
+
+msgid ""
+"You cannot make a journal entry for a bank account. Please use one of the "
+"banking functions for bank transactions."
+msgstr ""
+"ஒரு வங்கிக் கணக்கில் ஒரு பத்திரிகை இடுகை செய்ய முடியாது. வங்கி பரிவர்த்தனைகளுக்கான "
+"வங்கிக் கடன்களில் ஒன்றைப் பயன்படுத்தவும்."
+
+msgid "You cannot set an account group to be a subgroup of itself."
+msgstr "நீங்கள் ஒரு குழு குழு அமைக்க முடியாது ஒரு துணை குழு."
+
+msgid "You have selected printing to server at user IP."
+msgstr "பயனர் ஐபி சேவையகத்திற்கு அச்சிடுவதைத் தேர்ந்தெடுத்தீர்கள்."
+
+msgid "You have to select customer and customer branch."
+msgstr "நீங்கள் வாடிக்கையாளர் மற்றும் வாடிக்கையாளர் பிரிவைத் தேர்ந்தெடுக்க வேண்டும்."
+
+msgid "You have to select supplier."
+msgstr "நீங்கள் சப்ளையரை தேர்ந்தெடுக்க வேண்டும்."
+
+msgid "You must enter at least one journal line."
+msgstr "நீங்கள் குறைந்தது ஒரு பத்திரிகை வரி உள்ளிட வேண்டும்."
+
+msgid "You must enter at least one payment line."
+msgstr "குறைந்தபட்சம் ஒரு கட்டண வரி உள்ளிட வேண்டும்."
+
+msgid "You must enter either a debit amount or a credit amount."
+msgstr "நீங்கள் ஒரு பற்று தொகை அல்லது கடன் அளவு உள்ளிட வேண்டும்."
+
+msgid "Your password has been updated."
+msgstr "உங்கள் கடவுச்சொல் புதுப்பிக்கப்பட்டது."
+
+msgid "and"
+msgstr "மற்றும்"
+
+msgid "balance from account"
+msgstr "கணக்கு இருந்து சமநிலை"
+
+msgid "cannot find backup directory"
+msgstr "காப்புப்பதிவு அடைவு கண்டுபிடிக்க முடியவில்லை"
+
+msgid "days"
+msgstr "நாட்களில்"
+
+msgid "from #:"
+msgstr "# இலிருந்து"
+
+msgid "from:"
+msgstr "இருந்து:"
+
+msgid "no title was found in this report definition file."
+msgstr "இந்த அறிக்கையில் வரையறுக்கப்பட்ட கோப்பில் எந்தப் பெயரும் இல்லை."
+
+msgid "number"
+msgstr "எண்"
+
+msgid "or"
+msgstr "அல்லது"
+
+msgid "request new password"
+msgstr "புதிய கடவுச்சொல்லை கேட்க"
+
+msgid "seconds"
+msgstr "விநாடிகள்"
+
+msgid "to #:"
+msgstr "#:"
+
+msgid "to:"
+msgstr "க்கு:"
+
+msgid "user online"
+msgstr "பயனர் ஆன்லைன்"
+
+msgid "users online"
+msgstr "ஆன்லைன் பயனர்கள்"

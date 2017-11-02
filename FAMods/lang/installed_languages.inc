@@ -28,20 +28,22 @@ $installed_languages = array (
   2 => 
   array (
     'name' => 'Tamil',
-    'package' => 'ta_IN',
     'code' => 'ta_IN',
-    'encoding' => 'UTF-8',
-    'version' => '2.3.24-5',
+    'encoding' => 'utf-8',
     'path' => 'lang/ta_IN',
+    'rtl' => false,
+    'package' => '',
+    'version' => '',
   ),
   3 => 
   array (
     'name' => 'Hindi',
-    'package' => 'hi_IN',
     'code' => 'hi_IN',
-    'encoding' => 'UTF-8',
-    'version' => '2.3.24-5',
+    'encoding' => 'utf-8',
     'path' => 'lang/hi_IN',
+    'rtl' => false,
+    'package' => '',
+    'version' => '',
   ),
 );
 
