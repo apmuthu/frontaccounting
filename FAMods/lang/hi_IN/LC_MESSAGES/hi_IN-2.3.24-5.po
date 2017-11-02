@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: FrontAccounting\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-03-23 14:55+0100\n"
-"PO-Revision-Date: 2017-08-15 13:18+0530\n"
+"PO-Revision-Date: 2017-11-02 13:17+0000\n"
 "Last-Translator: Ap.Muthu <apmuthu@usa.net>\n"
 "Language-Team: Hindi (India) (http://www.transifex.com/gnuacademy/frontaccounting-1/language/hi_IN/)\n"
 "MIME-Version: 1.0\n"
@@ -283,56 +283,56 @@ msgstr "विवरण"
 
 #: admin/attachments.php:207 admin/backups.php:63 admin/backups.php:149
 msgid "Filename"
-msgstr ""
+msgstr "फ़ाइल का नाम"
 
 #: admin/attachments.php:208
 msgid "Size"
-msgstr ""
+msgstr "आकार"
 
 #: admin/attachments.php:209
 msgid "Filetype"
-msgstr ""
+msgstr "फाइल का प्रकार"
 
 #: admin/attachments.php:210
 msgid "Date Uploaded"
-msgstr ""
+msgstr "अपलोड की गई तिथि"
 
 #: admin/attachments.php:244 admin/attachments.php:249
 msgid "Transaction #"
-msgstr ""
+msgstr "लेनदेन #"
 
 #: admin/attachments.php:251
 msgid "Attached File"
-msgstr ""
+msgstr "संलग्न फाइल"
 
 #: admin/backups.php:21 admin/backups.php:40 admin/backups.php:114
 #: admin/backups.php:142 admin/backups.php:155 admin/backups.php:173
 msgid "Select backup file first."
-msgstr ""
+msgstr "पहले बैकअप फ़ाइल का चयन करें"
 
 #: admin/backups.php:43
 msgid "Backup and Restore Database"
-msgstr ""
+msgstr "बैकअप और पुनर्स्थापना डेटाबेस"
 
 #: admin/backups.php:50
 msgid "Backup paths have not been set correctly."
-msgstr ""
+msgstr "बैकअप पथ ठीक से सेट नहीं किए गए हैं।"
 
 #: admin/backups.php:51
 msgid "Please contact System Administrator."
-msgstr ""
+msgstr "कृपया सिस्टम प्रशासक से संपर्क करें।"
 
 #: admin/backups.php:52
 msgid "cannot find backup directory"
-msgstr ""
+msgstr "बैकअप निर्देशिका नहीं ढूँढ सकता"
 
 #: admin/backups.php:62
 msgid "Backup successfully generated."
-msgstr ""
+msgstr "बैकअप सफलतापूर्वक उत्पन्न"
 
 #: admin/backups.php:65
 msgid "Database backup failed."
-msgstr ""
+msgstr "डेटाबेस बैकअप विफल हुआ"
 
 #: admin/backups.php:98 admin/create_coy.php:265 admin/fiscalyears.php:155
 #: admin/inst_lang.php:85 admin/inst_lang.php:97
@@ -351,268 +351,268 @@ msgstr ""
 #: sales/manage/sales_types.php:119 taxes/item_tax_types.php:129
 #: taxes/tax_groups.php:139
 msgid "No"
-msgstr ""
+msgstr "नहीं"
 
 #: admin/backups.php:139
 msgid "Restore backup completed."
-msgstr ""
+msgstr "पुनर्स्थापना बैकअप पूर्ण हुआ।"
 
 #: admin/backups.php:148
 msgid "File successfully deleted."
-msgstr ""
+msgstr "फ़ाइल को सफलतापूर्वक हटा दिया गया"
 
 #: admin/backups.php:153
 msgid "Can't delete backup file."
-msgstr ""
+msgstr "बैकअप फ़ाइल को हटा नहीं सकते"
 
 #: admin/backups.php:165
 msgid "You can only upload *.sql backup files"
-msgstr ""
+msgstr "आप केवल * .sql बैकअप फ़ाइलों को अपलोड कर सकते हैं"
 
 #: admin/backups.php:168
 msgid "File uploaded to backup directory"
-msgstr ""
+msgstr "बैकअप निर्देशिका पर अपलोड की गई फ़ाइल"
 
 #: admin/backups.php:171
 msgid "File was not uploaded into the system."
-msgstr ""
+msgstr "फ़ाइल सिस्टम में अपलोड नहीं की गई थी"
 
 #: admin/backups.php:180
 msgid "Create backup"
-msgstr ""
+msgstr "बैकअप बनाना"
 
 #: admin/backups.php:181 sales/includes/ui/sales_order_ui.inc:582
 #: sales/includes/ui/sales_order_ui.inc:630
 msgid "Comments:"
-msgstr ""
+msgstr "टिप्पणियाँ:"
 
 #: admin/backups.php:182
 msgid "Compression:"
-msgstr ""
+msgstr "संपीड़न:"
 
 #: admin/backups.php:184
 msgid "Create Backup"
-msgstr ""
+msgstr "बैकअप बनाना"
 
 #: admin/backups.php:186
 msgid "Backup scripts maintenance"
-msgstr ""
+msgstr "बैकअप स्क्रिप्ट रखरखाव"
 
 #: admin/backups.php:192
 msgid "View Backup"
-msgstr ""
+msgstr "बैकअप देखें"
 
 #: admin/backups.php:193
 msgid "Download Backup"
-msgstr ""
+msgstr "बैकअप डाउनलोड करें"
 
 #: admin/backups.php:194
 msgid "Restore Backup"
-msgstr ""
+msgstr "बैकअप बहाल"
 
 #: admin/backups.php:195
 msgid ""
 "You are about to restore database from backup file.\n"
 "Do you want to continue?"
-msgstr ""
+msgstr "आप बैकअप फ़ाइल से डेटाबेस को पुनर्स्थापित करने वाले हैं।\nक्या आप जारी रखना चाहते हैं?"
 
 #: admin/backups.php:197
 msgid "Delete Backup"
-msgstr ""
+msgstr "बैकअप हटाएं"
 
 #: admin/backups.php:199
 #, php-format
 msgid ""
 "You are about to remove selected backup file.\n"
 "Do you want to continue ?"
-msgstr ""
+msgstr "आप चयनित बैकअप फ़ाइल को हटाने वाले हैं।\nक्या आप जारी रखना चाहते हैं?"
 
 #: admin/backups.php:205
 msgid "Upload file"
-msgstr ""
+msgstr "दस्तावेज अपलोड करें"
 
 #: admin/change_current_user_password.php:16
 #: admin/change_current_user_password.php:99 themes/default/renderer.php:76
 msgid "Change password"
-msgstr ""
+msgstr "पासवर्ड बदलें"
 
 #: admin/change_current_user_password.php:33
 msgid "Invalid password entered."
-msgstr ""
+msgstr "अमान्य पासवर्ड दर्ज किया गया।"
 
 #: admin/change_current_user_password.php:40 admin/users.php:40
 msgid "The password entered must be at least 4 characters long."
-msgstr ""
+msgstr "दर्ज किया गया पासवर्ड कम से कम 4 अक्षर लंबा होना चाहिए।"
 
 #: admin/change_current_user_password.php:47 admin/users.php:47
 msgid "The password cannot contain the user login."
-msgstr ""
+msgstr "पासवर्ड में उपयोगकर्ता लॉगिन नहीं हो सकता है"
 
 #: admin/change_current_user_password.php:54
 msgid "The passwords entered are not the same."
-msgstr ""
+msgstr "दर्ज किए गए पासवर्ड समान नहीं हैं"
 
 #: admin/change_current_user_password.php:68
 msgid "Password cannot be changed in demo mode."
-msgstr ""
+msgstr "डेमो मोड में पासवर्ड परिवर्तित नहीं किया जा सकता"
 
 #: admin/change_current_user_password.php:73
 msgid "Your password has been updated."
-msgstr ""
+msgstr "आपका पासवर्ड बदला जा चुका है।"
 
 #: admin/change_current_user_password.php:85 admin/users.php:189
 msgid "User login:"
-msgstr ""
+msgstr "उपयोगकर्ता लॉगिन:"
 
 #: admin/change_current_user_password.php:91
 msgid "Current Password:"
-msgstr ""
+msgstr "वर्तमान पासवर्ड:"
 
 #: admin/change_current_user_password.php:92
 msgid "New Password:"
-msgstr ""
+msgstr "नया पासवर्ड:"
 
 #: admin/change_current_user_password.php:93
 msgid "Repeat New Password:"
-msgstr ""
+msgstr "नया पासवर्ड दोहराएँ:"
 
 #: admin/change_current_user_password.php:95
 msgid "Enter your new password in the fields."
-msgstr ""
+msgstr "फ़ील्ड में अपना नया पासवर्ड दर्ज करें"
 
 #: admin/company_preferences.php:16 applications/setup.php:18
 msgid "Company Setup"
-msgstr ""
+msgstr "कंपनी सेटअप"
 
 #: admin/company_preferences.php:31
 msgid "Login timeout must be positive number not less than 10."
-msgstr ""
+msgstr "लॉगिन टाइमआउट 10 से कम नहीं होने वाला सकारात्मक नंबर होना चाहिए"
 
 #: admin/company_preferences.php:38
 msgid "The company name must be entered."
-msgstr ""
+msgstr "कंपनी का नाम दर्ज किया जाना चाहिए।"
 
 #: admin/company_preferences.php:54
 msgid ""
 "Only jpg and png files are supported - a file extension of .jpg or .png is "
 "expected"
-msgstr ""
+msgstr "केवल जेपीजी और पीएनजी फाइलें समर्थित हैं - .jpg या .png के एक फ़ाइल एक्सटेंशन की उम्मीद है"
 
 #: admin/company_preferences.php:59 inventory/manage/items.php:85
 msgid ""
 "The file size is over the maximum allowed. The maximum size allowed in KB is"
-msgstr ""
+msgstr "फ़ाइल का आकार अधिकतम अनुमति से अधिक है केबी में अनुमत अधिकतम आकार"
 
 #: admin/company_preferences.php:64 inventory/manage/items.php:75
 msgid "Only graphics files can be uploaded"
-msgstr ""
+msgstr "केवल ग्राफिक्स फ़ाइलों को अपलोड किया जा सकता है"
 
 #: admin/company_preferences.php:72 admin/company_preferences.php:93
 #: inventory/manage/items.php:93
 msgid "The existing image could not be removed"
-msgstr ""
+msgstr "मौजूदा छवि को हटाया नहीं जा सका"
 
 #: admin/company_preferences.php:82
 msgid "Error uploading logo file"
-msgstr ""
+msgstr "लोगो फ़ाइल अपलोड करने में त्रुटि हुई"
 
 #: admin/company_preferences.php:116
 msgid "Company setup has been updated."
-msgstr ""
+msgstr "कंपनी की स्थापना अपडेट की गई है।"
 
 #: admin/company_preferences.php:164
 msgid "Name (to appear on reports):"
-msgstr ""
+msgstr "नाम (रिपोर्टों पर प्रदर्शित होने के लिए):"
 
 #: admin/company_preferences.php:165 admin/shipping_companies.php:142
 #: includes/ui/contacts_view.inc:109 inventory/manage/locations.php:202
 #: sales/manage/customers.php:234 sales/includes/ui/sales_order_ui.inc:621
 msgid "Address:"
-msgstr ""
+msgstr "पता:"
 
 #: admin/company_preferences.php:166
 msgid "Domicile:"
-msgstr ""
+msgstr "अधिवास:"
 
 #: admin/company_preferences.php:168 admin/shipping_companies.php:138
 #: purchasing/manage/suppliers.php:130 sales/manage/customer_branches.php:260
 msgid "Phone Number:"
-msgstr ""
+msgstr "फ़ोन नंबर:"
 
 #: admin/company_preferences.php:169 includes/ui/contacts_view.inc:104
 #: purchasing/manage/suppliers.php:160 sales/manage/customer_branches.php:262
 #: sales/manage/customers.php:258
 msgid "Fax Number:"
-msgstr ""
+msgstr "फैक्स नंबर:"
 
 #: admin/company_preferences.php:170 admin/users.php:211
 msgid "Email Address:"
-msgstr ""
+msgstr "ईमेल पता:"
 
 #: admin/company_preferences.php:172
 msgid "BCC Address for all outgoing mails:"
-msgstr ""
+msgstr "सभी जावक मेलों के लिए बीसीसी पता:"
 
 #: admin/company_preferences.php:174
 msgid "Official Company Number:"
-msgstr ""
+msgstr "आधिकारिक कंपनी संख्या:"
 
 #: admin/company_preferences.php:175 purchasing/manage/suppliers.php:94
 #: sales/manage/customers.php:236
 msgid "GSTNo:"
-msgstr ""
+msgstr "GSTNo:"
 
 #: admin/company_preferences.php:177
 msgid "Home Currency:"
-msgstr ""
+msgstr "होम मुद्रा:"
 
 #: admin/company_preferences.php:178 gl/gl_budget.php:63
 msgid "Fiscal Year:"
-msgstr ""
+msgstr "वित्तीय वर्ष:"
 
 #: admin/company_preferences.php:179
 msgid "Tax Periods:"
-msgstr ""
+msgstr "टैक्स अवधि:"
 
 #: admin/company_preferences.php:179
 msgid "Months."
-msgstr ""
+msgstr "महीने।"
 
 #: admin/company_preferences.php:180
 msgid "Tax Last Period:"
-msgstr ""
+msgstr "कर अंतिम अवधि:"
 
 #: admin/company_preferences.php:180
 msgid "Months back."
-msgstr ""
+msgstr "महीना पीठ"
 
 #: admin/company_preferences.php:184
 msgid "Company Logo:"
-msgstr ""
+msgstr "कंपनी का लोगो:"
 
 #: admin/company_preferences.php:185
 msgid "New Company Logo (.jpg)"
-msgstr ""
+msgstr "नई कंपनी लोगो (.jpg)"
 
 #: admin/company_preferences.php:186
 msgid "Delete Company Logo:"
-msgstr ""
+msgstr "कंपनी लोगो हटाएं:"
 
 #: admin/company_preferences.php:188
 msgid "Use Dimensions:"
-msgstr ""
+msgstr "आयाम का उपयोग करें:"
 
 #: admin/company_preferences.php:189
 msgid "Base for auto price calculations:"
-msgstr ""
+msgstr "ऑटो मूल्य गणना के लिए आधार:"
 
 #: admin/company_preferences.php:190
 msgid "No base price list"
-msgstr ""
+msgstr "कोई आधार मूल्य सूची नहीं"
 
 #: admin/company_preferences.php:191
 msgid "Add Price from Std Cost:"
-msgstr ""
+msgstr "कक्षा लागत से मूल्य जोड़ें:"
 
 #: admin/company_preferences.php:193
 msgid "Round to nearest:"
@@ -620,31 +620,31 @@ msgstr ""
 
 #: admin/company_preferences.php:196
 msgid "Search Item List"
-msgstr ""
+msgstr "खोज आइटम सूची"
 
 #: admin/company_preferences.php:197
 msgid "Search Customer List"
-msgstr ""
+msgstr "ग्राहक सूची खोजें"
 
 #: admin/company_preferences.php:198
 msgid "Search Supplier List"
-msgstr ""
+msgstr "खोज प्रदायक सूची"
 
 #: admin/company_preferences.php:200
 msgid "Automatic Revaluation Currency Accounts"
-msgstr ""
+msgstr "स्वचालित रिवैल्यूएशन मुद्रा खाते"
 
 #: admin/company_preferences.php:201
 msgid "Time Zone on Reports"
-msgstr ""
+msgstr "रिपोर्ट के समय क्षेत्र"
 
 #: admin/company_preferences.php:202
 msgid "Login Timeout:"
-msgstr ""
+msgstr "लॉगिन मध्यांतर:"
 
 #: admin/company_preferences.php:202
 msgid "seconds"
-msgstr ""
+msgstr "सेकंड"
 
 #: admin/company_preferences.php:203
 msgid "Version Id"
@@ -673,94 +673,94 @@ msgstr ""
 #: sales/includes/ui/sales_order_ui.inc:232
 #: sales/includes/ui/sales_order_ui.inc:548
 msgid "Update"
-msgstr ""
+msgstr "अद्यतन"
 
 #: admin/create_coy.php:21
 msgid "Create/Update Company"
-msgstr ""
+msgstr "बनाएँ / अपडेट कंपनी"
 
 #: admin/create_coy.php:46 admin/create_coy.php:52
 msgid "Database settings are not specified."
-msgstr ""
+msgstr "डेटाबेस सेटिंग्स निर्दिष्ट नहीं हैं।"
 
 #: admin/create_coy.php:62
 msgid "This database settings are already used by another company."
-msgstr ""
+msgstr "यह डेटाबेस सेटिंग्स पहले से ही किसी अन्य कंपनी द्वारा उपयोग की जाती हैं"
 
 #: admin/create_coy.php:67
 msgid ""
 "You cannot have table set without prefix together with prefixed sets in the "
 "same database."
-msgstr ""
+msgstr "आप एक ही डाटाबेस में प्रीफ़िक्स सेट के साथ उपसर्ग के बिना टेबल सेट नहीं कर सकते।"
 
 #: admin/create_coy.php:127
 msgid "Error creating Database: "
-msgstr ""
+msgstr "डेटाबेस बनाने में त्रुटि:"
 
 #: admin/create_coy.php:127
 msgid ", Please create it manually"
-msgstr ""
+msgstr ", कृपया मैन्युअल रूप से इसे बनाएं"
 
 #: admin/create_coy.php:131
 msgid "Cannot create new company due to bugs in sql file."
-msgstr ""
+msgstr "एसक्यूएल फ़ाइल में कीड़े के कारण नई कंपनी नहीं बना सकती"
 
 #: admin/create_coy.php:149 admin/create_coy.php:216
 msgid "Cannot open the configuration file - "
-msgstr ""
+msgstr "कॉन्फ़िगरेशन फ़ाइल नहीं खोल सकता -"
 
 #: admin/create_coy.php:151 admin/create_coy.php:218
 msgid "Cannot write to the configuration file - "
-msgstr ""
+msgstr "विन्यास फाइल में लिख नहीं सकते हैं -"
 
 #: admin/create_coy.php:153 admin/create_coy.php:189 admin/create_coy.php:220
 msgid "The configuration file "
-msgstr ""
+msgstr "विन्यास फाइल"
 
 #: admin/create_coy.php:153 admin/create_coy.php:189 admin/create_coy.php:220
 #: admin/db/maintenance_db.inc:250
 msgid ""
 " is not writable. Change its permissions so it is, then re-run the "
 "operation."
-msgstr ""
+msgstr " लिखने योग्य नहीं है इसकी अनुमतियों को बदलें ताकि वह है, फिर आपरेशन फिर से चलाएं।"
 
 #: admin/create_coy.php:165
 msgid "New company has been created."
-msgstr ""
+msgstr "नई कंपनी बनाई गई है।"
 
 #: admin/create_coy.php:165
 msgid "Company has been updated."
-msgstr ""
+msgstr "कंपनी को अद्यतन किया गया है।"
 
 #: admin/create_coy.php:182
 msgid ""
 "Broken company subdirectories system. You have to remove this company "
 "manually."
-msgstr ""
+msgstr "टूटी हुई कंपनी उपनिर्देशिका प्रणाली आपको मैन्युअल रूप से इस कंपनी को निकालना होगा"
 
 #: admin/create_coy.php:198
 msgid "Cannot rename subdirectory to temporary name."
-msgstr ""
+msgstr "उपनिर्देशिका को अस्थायी नाम में बदल नहीं सकते"
 
 #: admin/create_coy.php:204
 msgid "Cannot rename company subdirectory"
-msgstr ""
+msgstr "कंपनी उपनिर्देशिका का नाम बदल नहीं सकते"
 
 #: admin/create_coy.php:210
 msgid "Error removing Database: "
-msgstr ""
+msgstr "डेटाबेस को हटाने में त्रुटि:"
 
 #: admin/create_coy.php:210
 msgid ", please remove it manually"
-msgstr ""
+msgstr ", मैन्युअल रूप से इसे हटा दें"
 
 #: admin/create_coy.php:229
 msgid "Cannot remove temporary renamed company data directory "
-msgstr ""
+msgstr "अस्थायी नाम बदला कंपनी डेटा निर्देशिका को नहीं हटा सकते"
 
 #: admin/create_coy.php:232
 msgid "Selected company has been deleted"
-msgstr ""
+msgstr "चयनित कंपनी को हटा दिया गया है"
 
 #: admin/create_coy.php:246
 msgid "Are you sure you want to delete company no. "
@@ -768,24 +768,24 @@ msgstr ""
 
 #: admin/create_coy.php:253
 msgid "Database Host"
-msgstr ""
+msgstr "डेटाबेस होस्ट"
 
 #: admin/create_coy.php:253 admin/create_coy.php:341 admin/create_coy.php:347
 msgid "Database User"
-msgstr ""
+msgstr "डेटाबेस उपयोगकर्ता"
 
 #: admin/create_coy.php:254 admin/create_coy.php:343 admin/create_coy.php:348
 msgid "Database Name"
-msgstr ""
+msgstr "डेटाबेस नाम"
 
 #: admin/create_coy.php:254 admin/create_coy.php:344 admin/create_coy.php:349
 msgid "Table Pref"
-msgstr ""
+msgstr "टेबल प्रीफ़"
 
 #: admin/create_coy.php:254 admin/create_coy.php:351 admin/inst_lang.php:36
 #: admin/print_profiles.php:162
 msgid "Default"
-msgstr ""
+msgstr "चूक"
 
 #: admin/create_coy.php:263 admin/fiscalyears.php:159 admin/inst_lang.php:85
 #: admin/inst_lang.php:97 dimensions/inquiry/search_dimensions.php:107
@@ -802,44 +802,44 @@ msgstr ""
 #: sales/manage/sales_points.php:95 sales/manage/sales_types.php:119
 #: taxes/item_tax_types.php:133 taxes/tax_groups.php:137
 msgid "Yes"
-msgstr ""
+msgstr "हाँ"
 
 #: admin/create_coy.php:292
 msgid "The marked company is the current company which cannot be deleted."
-msgstr ""
+msgstr "चिह्नित कंपनी वर्तमान कंपनी है जिसे हटाया नहीं जा सकता।"
 
 #: admin/create_coy.php:293
 msgid ""
 "If no Admin Password is entered, the new Admin Password will be "
 "'<b>password</b>' by default "
-msgstr ""
+msgstr "यदि कोई व्यवस्थापक पासवर्ड दर्ज नहीं किया गया है, तो नया व्यवस्थापक पासवर्ड डिफ़ॉल्ट रूप से '<b>पासवर्ड</b>' होगा "
 
 #: admin/create_coy.php:340 admin/create_coy.php:346 admin/printers.php:84
 msgid "Host"
-msgstr ""
+msgstr "मेज़बान"
 
 #: admin/create_coy.php:342
 msgid "Database Password"
-msgstr ""
+msgstr "डेटाबेस पासवर्ड"
 
 #: admin/create_coy.php:344 admin/inst_chart.php:68 admin/inst_chart.php:70
 #: admin/inst_lang.php:87 admin/inst_lang.php:90 admin/inst_module.php:126
 #: admin/inst_theme.php:91 admin/inst_theme.php:93 admin/inst_upgrade.php:149
 #: gl/manage/gl_account_types.php:190 includes/ui/allocation_cart.inc:314
 msgid "None"
-msgstr ""
+msgstr "कोई नहीं"
 
 #: admin/create_coy.php:355
 msgid "Database Script"
-msgstr ""
+msgstr "डेटाबेस स्क्रिप्ट"
 
 #: admin/create_coy.php:356
 msgid "New script Admin Password"
-msgstr ""
+msgstr "नई स्क्रिप्ट व्यवस्थापक पासवर्ड"
 
 #: admin/create_coy.php:360 gl/gl_budget.php:136
 msgid "Save"
-msgstr ""
+msgstr "बचाना"
 
 #: admin/create_coy.php:382
 msgid "Create a new company"
@@ -847,93 +847,93 @@ msgstr ""
 
 #: admin/crm_categories.php:17
 msgid "Contact Categories"
-msgstr ""
+msgstr "संपर्क श्रेणियाँ"
 
 #: admin/crm_categories.php:31
 msgid "Category description cannot be empty."
-msgstr ""
+msgstr "श्रेणी का विवरण रिक्त नहीं हो सकता।"
 
 #: admin/crm_categories.php:41
 msgid "Selected contact category has been updated"
-msgstr ""
+msgstr "चयनित संपर्क श्रेणी को अपडेट कर दिया गया है"
 
 #: admin/crm_categories.php:47
 msgid "New contact category has been added"
-msgstr ""
+msgstr "नई संपर्क श्रेणी जोड़ा गया है"
 
 #: admin/crm_categories.php:71
 msgid "Cannot delete this category because there are contacts related to it."
-msgstr ""
+msgstr "इस श्रेणी को नहीं हटाया जा सकता क्योंकि इसमें से संबंधित संपर्क हैं"
 
 #: admin/crm_categories.php:77
 msgid "Category has been deleted"
-msgstr ""
+msgstr "श्रेणी हटा दी गई है"
 
 #: admin/crm_categories.php:97
 msgid "Category Type"
-msgstr ""
+msgstr "श्रेणी प्रकार"
 
 #: admin/crm_categories.php:97
 msgid "Category Subtype"
-msgstr ""
+msgstr "श्रेणी उपप्रकार"
 
 #: admin/crm_categories.php:97 sales/manage/customer_branches.php:293
 msgid "Short Name"
-msgstr ""
+msgstr "संक्षिप्त नाम"
 
 #: admin/crm_categories.php:144 admin/crm_categories.php:148
 msgid "Contact Category Type:"
-msgstr ""
+msgstr "संपर्क श्रेणी प्रकार:"
 
 #: admin/crm_categories.php:145 admin/crm_categories.php:149
 msgid "Contact Category Subtype:"
-msgstr ""
+msgstr "संपर्क श्रेणी उपप्रकार:"
 
 #: admin/crm_categories.php:152
 msgid "Category Short Name:"
-msgstr ""
+msgstr "श्रेणी संक्षिप्त नाम:"
 
 #: admin/crm_categories.php:153
 msgid "Category Description:"
-msgstr ""
+msgstr "वर्ग विवरण:"
 
 #: admin/display_prefs.php:16
 msgid "Display Setup"
-msgstr ""
+msgstr "डिस्पले सेट आ करें"
 
 #: admin/display_prefs.php:30
 msgid "Query size must be integer and greater than zero."
-msgstr ""
+msgstr "क्वेरी का आकार पूर्णांक होना चाहिए और शून्य से अधिक होना चाहिए।"
 
 #: admin/display_prefs.php:60
 msgid ""
 "Display settings have been updated. Keep in mind that changed settings are "
 "restored on every login in demo mode."
-msgstr ""
+msgstr "प्रदर्शन सेटिंग्स को अद्यतन किया गया है। ध्यान रखें कि डेमो मोड में प्रत्येक लॉगिन पर बदल सेटिंग्स बहाल कर दी गई हैं।"
 
 #: admin/display_prefs.php:62
 msgid "Display settings have been updated."
-msgstr ""
+msgstr "प्रदर्शन सेटिंग्स को अद्यतन किया गया है।"
 
 #: admin/display_prefs.php:71
 msgid "Decimal Places"
-msgstr ""
+msgstr "दशमलव स्थान"
 
 #: admin/display_prefs.php:73
 msgid "Prices/Amounts:"
-msgstr ""
+msgstr "कीमतें / राशियाँ:"
 
 #: admin/display_prefs.php:74
 msgid "Quantities:"
-msgstr ""
+msgstr "मात्रा:"
 
 #: admin/display_prefs.php:75
 msgid "Exchange Rates:"
-msgstr ""
+msgstr "विनिमय दरें:"
 
 #: admin/display_prefs.php:76
 msgid "Percentages:"
-msgstr ""
+msgstr "प्रतिशत:"
 
 #: admin/display_prefs.php:78
 msgid "Dateformat and Separators"
@@ -945,144 +945,144 @@ msgstr ""
 
 #: admin/display_prefs.php:82
 msgid "Date Separator:"
-msgstr ""
+msgstr "दिनांक सेपरेटर:"
 
 #: admin/display_prefs.php:87
 msgid "Thousand Separator:"
-msgstr ""
+msgstr "हजार विभाजक:"
 
 #: admin/display_prefs.php:92
 msgid "Decimal Separator:"
-msgstr ""
+msgstr "दशमलव विभाजक:"
 
 #: admin/display_prefs.php:99 admin/inst_lang.php:35
 msgid "Language"
-msgstr ""
+msgstr "भाषा"
 
 #: admin/display_prefs.php:101 admin/users.php:215
 msgid "Language:"
-msgstr ""
+msgstr "भाषा:"
 
 #: admin/display_prefs.php:104 applications/setup.php:42
 #: includes/sysnames.inc:94
 msgid "Miscellaneous"
-msgstr ""
+msgstr "कई तरह का"
 
 #: admin/display_prefs.php:106
 msgid "Show hints for new users:"
-msgstr ""
+msgstr "नए उपयोगकर्ताओं के लिए संकेत दिखाएं:"
 
 #: admin/display_prefs.php:108
 msgid "Show GL Information:"
-msgstr ""
+msgstr "जीएल जानकारी दिखाएं:"
 
 #: admin/display_prefs.php:110
 msgid "Show Item Codes:"
-msgstr ""
+msgstr "आइटम कोड दिखाएं:"
 
 #: admin/display_prefs.php:117
 msgid "Page Size:"
-msgstr ""
+msgstr "पृष्ठ आकार:"
 
 #: admin/display_prefs.php:119
 msgid "Start-up Tab"
-msgstr ""
+msgstr "स्टार्ट-अप टैब"
 
 #: admin/display_prefs.php:127 admin/users.php:219
 msgid "Printing profile"
-msgstr ""
+msgstr "मुद्रण प्रोफ़ाइल"
 
 #: admin/display_prefs.php:128 admin/users.php:220
 msgid "Browser printing support"
-msgstr ""
+msgstr "ब्राउज़र मुद्रण समर्थन"
 
 #: admin/display_prefs.php:130
 msgid "Use popup window to display reports:"
-msgstr ""
+msgstr "रिपोर्ट प्रदर्शित करने के लिए पॉपअप विंडो का उपयोग करें:"
 
 #: admin/display_prefs.php:131 admin/users.php:223
 msgid "Set this option to on if your browser directly supports pdf files"
-msgstr ""
+msgstr "इस विकल्प को इस पर सेट करें यदि आपका ब्राउज़र सीधे पीडीएफ फाइलों का समर्थन करता है"
 
 #: admin/display_prefs.php:133
 msgid "Use icons instead of text links:"
-msgstr ""
+msgstr "पाठ लिंक के बजाय आइकन का उपयोग करें:"
 
 #: admin/display_prefs.php:134
 msgid "Set this option to on for using icons instead of text links"
-msgstr ""
+msgstr "पाठ लिंक के बजाय माउस का उपयोग करने के लिए इस विकल्प को सेट करें"
 
 #: admin/display_prefs.php:136
 msgid "Query page size:"
-msgstr ""
+msgstr "प्रश्न पृष्ठ का आकार:"
 
 #: admin/display_prefs.php:138
 msgid "Remember last document date:"
-msgstr ""
+msgstr "अंतिम दस्तावेज़ की तारीख याद रखें:"
 
 #: admin/display_prefs.php:139
 msgid ""
 "If set document date is remembered on subsequent documents, otherwise "
 "default is current date"
-msgstr ""
+msgstr "यदि सेट की गई दस्तावेज़ की तारीख बाद के दस्तावेजों पर याद की जाती है, अन्यथा डिफ़ॉल्ट वर्तमान तिथि है"
 
 #: admin/fiscalyears.php:25
 msgid "Fiscal Years"
-msgstr ""
+msgstr "राजकोषीय वर्ष"
 
 #: admin/fiscalyears.php:34
 msgid "Invalid BEGIN date in fiscal year."
-msgstr ""
+msgstr "वित्तीय वर्ष में अमान्य BEGIN तारीख"
 
 #: admin/fiscalyears.php:40
 msgid "Invalid END date in fiscal year."
-msgstr ""
+msgstr "वित्तीय वर्ष में अमान्य END तारीख"
 
 #: admin/fiscalyears.php:46
 msgid "Invalid BEGIN or END date in fiscal year."
-msgstr ""
+msgstr "वित्तीय वर्ष में अमान्य BEGIN या END की तारीख"
 
 #: admin/fiscalyears.php:52
 msgid "BEGIN date bigger than END date."
-msgstr ""
+msgstr "BEGIN तारीख END की तारीख से बड़ी तारीख"
 
 #: admin/fiscalyears.php:70
 msgid "Cannot CLOSE this year because there are open fiscal years before"
-msgstr ""
+msgstr "इस वर्ष को बंद नहीं कर सकता क्योंकि वहां खुला वित्तीय वर्ष पहले है"
 
 #: admin/fiscalyears.php:81
 msgid "Selected fiscal year has been updated"
-msgstr ""
+msgstr "चयनित वित्तीय वर्ष को अपडेट किया गया है"
 
 #: admin/fiscalyears.php:89
 msgid "New fiscal year has been added"
-msgstr ""
+msgstr "नया वित्तीय वर्ष जोड़ा गया है"
 
 #: admin/fiscalyears.php:102
 msgid "Cannot delete this fiscal year because there are fiscal years before."
-msgstr ""
+msgstr "इस वित्तीय वर्ष को हटा नहीं सकते क्योंकि वित्तीय वर्ष पहले भी हैं"
 
 #: admin/fiscalyears.php:107
 msgid "Cannot delete this fiscal year because the fiscal year is not closed."
-msgstr ""
+msgstr "इस वित्तीय वर्ष को हटा नहीं सकते क्योंकि वित्तीय वर्ष बंद नहीं हुआ है।"
 
 #: admin/fiscalyears.php:120
 msgid "Selected fiscal year has been deleted"
-msgstr ""
+msgstr "चयनित वित्तीय वर्ष हटा दिया गया है"
 
 #: admin/fiscalyears.php:133
 msgid ""
 "Warning: Deleting a fiscal year all transactions \n"
 "\t\tare removed and converted into relevant balances. This process is irreversible!"
-msgstr ""
+msgstr "चेतावनी: किसी वित्तीय वर्ष को सभी लेनदेन हटाना \n\t\tare निकाल दिया गया और प्रासंगिक शेष में रूपांतरित किया गया। यह प्रक्रिया अपरिवर्तनीय है!"
 
 #: admin/fiscalyears.php:138
 msgid "Fiscal Year Begin"
-msgstr ""
+msgstr "राजकोषीय वर्ष आरंभ"
 
 #: admin/fiscalyears.php:138
 msgid "Fiscal Year End"
-msgstr ""
+msgstr "वित्तीय वर्ष समाप्ति"
 
 #: admin/fiscalyears.php:138 dimensions/inquiry/search_dimensions.php:133
 #: dimensions/inquiry/search_dimensions.php:139 includes/ui/ui_lists.inc:681
@@ -1091,31 +1091,31 @@ msgstr ""
 #: reporting/includes/excel_report.inc:234
 #: reporting/includes/pdf_report.inc:266
 msgid "Closed"
-msgstr ""
+msgstr "बन्द है"
 
 #: admin/fiscalyears.php:168
 #, php-format
 msgid ""
 "Are you sure you want to delete fiscal year %s - %s? All transactions are "
 "deleted and converted into relevant balances. Do you want to continue ?"
-msgstr ""
+msgstr "क्या आप वाकई वित्तीय वर्ष %s - %s को हटाना चाहते हैं? सभी लेनदेन हटाए जाते हैं और प्रासंगिक शेष में रूपांतरित होते हैं। क्या आप जारी रखना चाहते हैं ?"
 
 #: admin/fiscalyears.php:176
 msgid ""
 "The marked fiscal year is the current fiscal year which cannot be deleted."
-msgstr ""
+msgstr "चिह्नित वित्तीय वर्ष चालू वित्त वर्ष है जिसे हटाया नहीं जा सकता।"
 
 #: admin/fiscalyears.php:200 admin/fiscalyears.php:211
 msgid "Fiscal Year Begin:"
-msgstr ""
+msgstr "वित्तीय वर्ष आरंभ:"
 
 #: admin/fiscalyears.php:201 admin/fiscalyears.php:212
 msgid "Fiscal Year End:"
-msgstr ""
+msgstr "वित्तीय वर्ष समाप्ति:"
 
 #: admin/fiscalyears.php:216
 msgid "Is Closed:"
-msgstr ""
+msgstr "बंद हो गया है:"
 
 #: admin/forms_setup.php:16
 msgid "Forms Setup"
@@ -1135,186 +1135,186 @@ msgstr ""
 
 #: admin/gl_setup.php:16
 msgid "System and General GL Setup"
-msgstr ""
+msgstr "सिस्टम और जनरल जीएल सेटअप"
 
 #: admin/gl_setup.php:30
 msgid "The delivery over-receive allowance must be between 0 and 100."
-msgstr ""
+msgstr "डिलीवरी ओवर-प्राप्त भत्ता 0 और 100 के बीच होना चाहिए।"
 
 #: admin/gl_setup.php:37
 msgid "The invoice over-charge allowance must be between 0 and 100."
-msgstr ""
+msgstr "चालान ओवर-चार्ज भत्ता 0 और 100 के बीच होना चाहिए।"
 
 #: admin/gl_setup.php:44
 msgid "The past due days interval allowance must be between 0 and 100."
-msgstr ""
+msgstr "पिछले देय दिनों का अंतराल भत्ता 0 और 100 के बीच होना चाहिए।"
 
 #: admin/gl_setup.php:52
 msgid ""
 "Before GRN Clearing Account can be changed all GRNs have to be invoiced"
-msgstr ""
+msgstr "जीआरएन समाशोधन खाता बदलने से पहले सभी जीआरएन को चालान करना होगा"
 
 #: admin/gl_setup.php:59 admin/db/fiscalyears_db.inc:141
 msgid ""
 "The Retained Earnings Account should be a Balance Account or the Profit and "
 "Loss Year Account should be an Expense Account (preferred the last one in "
 "the Expense Class)"
-msgstr ""
+msgstr "प्रतिधारण आय खाता एक बैलेंस खाता होना चाहिए या लाभ और हानि वर्ष खाता व्यय खाता होना चाहिए (व्यय क्लास में पिछले एक को पसंद किया जाना चाहिए)"
 
 #: admin/gl_setup.php:80
 msgid "The general GL setup has been updated."
-msgstr ""
+msgstr "सामान्य जीएल सेटअप को अपडेट किया गया है।"
 
 #: admin/gl_setup.php:143
 msgid "General GL"
-msgstr ""
+msgstr "जनरल जीएल"
 
 #: admin/gl_setup.php:145
 msgid "Past Due Days Interval:"
-msgstr ""
+msgstr "विगत दिनों के अंत का अंत:"
 
 #: admin/gl_setup.php:145 admin/gl_setup.php:180 admin/gl_setup.php:182
 #: admin/gl_setup.php:190 admin/gl_setup.php:227 admin/payment_terms.php:140
 msgid "days"
-msgstr ""
+msgstr "दिन"
 
 #: admin/gl_setup.php:147
 msgid "Retained Earnings:"
-msgstr ""
+msgstr "प्रतिधारित कमाई:"
 
 #: admin/gl_setup.php:149
 msgid "Profit/Loss Year:"
-msgstr ""
+msgstr "लाभ / हानि वर्ष:"
 
 #: admin/gl_setup.php:151
 msgid "Exchange Variances Account:"
-msgstr ""
+msgstr "एक्सचेंज वेरिएंस खाता:"
 
 #: admin/gl_setup.php:153
 msgid "Bank Charges Account:"
-msgstr ""
+msgstr "बैंक प्रभार खाता:"
 
 #: admin/gl_setup.php:157
 msgid "Customers and Sales"
-msgstr ""
+msgstr "ग्राहक और बिक्री"
 
 #: admin/gl_setup.php:159
 msgid "Default Credit Limit:"
-msgstr ""
+msgstr "डिफ़ॉल्ट क्रेडिट सीमा:"
 
 #: admin/gl_setup.php:161
 msgid "Accumulate batch shipping:"
-msgstr ""
+msgstr "संचित बैच शिपिंग:"
 
 #: admin/gl_setup.php:163
 msgid "Legal Text on Invoice:"
-msgstr ""
+msgstr "चालान पर कानूनी पाठ:"
 
 #: admin/gl_setup.php:165
 msgid "Shipping Charged Account:"
-msgstr ""
+msgstr "शिपिंग चार्ज किया गया खाता:"
 
 #: admin/gl_setup.php:169
 msgid "Customers and Sales Defaults"
-msgstr ""
+msgstr "ग्राहक और बिक्री डिफ़ॉल्ट"
 
 #: admin/gl_setup.php:171
 msgid "Receivable Account:"
-msgstr ""
+msgstr "प्राप्य खाते:"
 
 #: admin/gl_setup.php:173 admin/gl_setup.php:213
 #: inventory/manage/item_categories.php:192 inventory/manage/items.php:354
 #: sales/manage/customer_branches.php:250
 msgid "Sales Account:"
-msgstr ""
+msgstr "विक्रय खाता:"
 
 #: admin/gl_setup.php:176 sales/manage/customer_branches.php:251
 msgid "Sales Discount Account:"
-msgstr ""
+msgstr "बिक्री डिस्काउंट खाता:"
 
 #: admin/gl_setup.php:178 sales/manage/customer_branches.php:253
 msgid "Prompt Payment Discount Account:"
-msgstr ""
+msgstr "त्वरित भुगतान डिस्काउंट खाता:"
 
 #: admin/gl_setup.php:180
 msgid "Quote Valid Days:"
-msgstr ""
+msgstr "उद्धरण मान्य दिन:"
 
 #: admin/gl_setup.php:182
 msgid "Delivery Required By:"
-msgstr ""
+msgstr "द्वारा डिलीवरी की आवश्यकता:"
 
 #: admin/gl_setup.php:188
 msgid "Dimension Defaults"
-msgstr ""
+msgstr "आयाम डिफ़ॉल्ट"
 
 #: admin/gl_setup.php:190
 msgid "Dimension Required By After:"
-msgstr ""
+msgstr "आयाम के बाद आवश्यक:"
 
 #: admin/gl_setup.php:193
 msgid "Suppliers and Purchasing"
-msgstr ""
+msgstr "आपूर्तिकर्ता और खरीद"
 
 #: admin/gl_setup.php:195
 msgid "Delivery Over-Receive Allowance:"
-msgstr ""
+msgstr "डिलिवरी ओवर-रिसीव भत्ता:"
 
 #: admin/gl_setup.php:197
 msgid "Invoice Over-Charge Allowance:"
-msgstr ""
+msgstr "चालान ओवर-चार्ज भत्ता:"
 
 #: admin/gl_setup.php:199
 msgid "Suppliers and Purchasing Defaults"
-msgstr ""
+msgstr "आपूर्तिकर्ता और खरीद डिफ़ॉल्ट"
 
 #: admin/gl_setup.php:201
 msgid "Payable Account:"
-msgstr ""
+msgstr "देय खाता:"
 
 #: admin/gl_setup.php:203 purchasing/manage/suppliers.php:127
 msgid "Purchase Discount Account:"
-msgstr ""
+msgstr "डिस्काउंट खाता खरीदें:"
 
 #: admin/gl_setup.php:205
 msgid "GRN Clearing Account:"
-msgstr ""
+msgstr "जीआरएन क्लियरिंग अकाउंट:"
 
 #: admin/gl_setup.php:205
 msgid "No postings on GRN"
-msgstr ""
+msgstr "जीआरएन पर कोई पोस्टिंग नहीं"
 
 #: admin/gl_setup.php:207 reporting/reports_main.php:206
 msgid "Inventory"
-msgstr ""
+msgstr "इन्वेंटरी"
 
 #: admin/gl_setup.php:209
 msgid "Allow Negative Inventory:"
-msgstr ""
+msgstr "नकारात्मक इन्वेंटरी की अनुमति दें:"
 
 #: admin/gl_setup.php:210
 msgid "Warning:  This may cause a delay in GL postings"
-msgstr ""
+msgstr "चेतावनी: इससे जीएल पोस्टिंग में देरी हो सकती है"
 
 #: admin/gl_setup.php:212
 msgid "Items Defaults"
-msgstr ""
+msgstr "आइटम डिफ़ॉल्ट"
 
 #: admin/gl_setup.php:215 inventory/manage/item_categories.php:202
 #: inventory/manage/items.php:358
 msgid "Inventory Account:"
-msgstr ""
+msgstr "इन्वेंटरी अकाउंट:"
 
 #: admin/gl_setup.php:217 inventory/manage/item_categories.php:196
 #: inventory/manage/item_categories.php:204 inventory/manage/items.php:359
 #: inventory/manage/items.php:364
 msgid "C.O.G.S. Account:"
-msgstr ""
+msgstr "C.O.G.S. लेखा:"
 
 #: admin/gl_setup.php:219 inventory/manage/item_categories.php:205
 #: inventory/manage/items.php:360
 msgid "Inventory Adjustments Account:"
-msgstr ""
+msgstr "इन्वेंटरी समायोजन खाता:"
 
 #: admin/gl_setup.php:221 inventory/manage/item_categories.php:209
 #: inventory/manage/items.php:371
@@ -1323,11 +1323,11 @@ msgstr ""
 
 #: admin/gl_setup.php:225
 msgid "Manufacturing Defaults"
-msgstr ""
+msgstr "विनिर्माण डिफ़ॉल्ट"
 
 #: admin/gl_setup.php:227
 msgid "Work Order Required By After:"
-msgstr ""
+msgstr "कार्य आदेश आवश्यक होने के बाद:"
 
 #: admin/inst_chart.php:20
 msgid "Install Charts of Accounts"
@@ -1335,41 +1335,41 @@ msgstr "खातों का चार्ट स्थापित करे�
 
 #: admin/inst_chart.php:35
 msgid "Selected chart has been successfully deleted"
-msgstr ""
+msgstr "चयनित चार्ट को सफलतापूर्वक हटा दिया गया है"
 
 #: admin/inst_chart.php:50
 msgid "Chart"
-msgstr ""
+msgstr "चार्ट"
 
 #: admin/inst_chart.php:50 admin/inst_lang.php:36 admin/inst_module.php:105
 #: admin/inst_theme.php:74 admin/inst_upgrade.php:155
 msgid "Installed"
-msgstr ""
+msgstr "स्थापित"
 
 #: admin/inst_chart.php:50 admin/inst_lang.php:36 admin/inst_module.php:105
 #: admin/inst_theme.php:74 inventory/inquiry/stock_status.php:77
 #: reporting/rep303.php:114
 msgid "Available"
-msgstr ""
+msgstr "उपलब्ध"
 
 #: admin/inst_chart.php:50 admin/inst_lang.php:35 admin/inst_lang.php:220
 msgid "Encoding"
-msgstr ""
+msgstr "एन्कोडिंग"
 
 #: admin/inst_chart.php:69 admin/inst_chart.php:71 admin/inst_lang.php:88
 #: admin/inst_module.php:127 admin/inst_module.php:128 admin/inst_theme.php:92
 msgid "Unknown"
-msgstr ""
+msgstr "अनजान"
 
 #: admin/inst_chart.php:74 admin/inst_lang.php:103 admin/inst_module.php:132
 #: admin/inst_module.php:137 admin/inst_theme.php:96
 #: admin/inst_upgrade.php:137
 msgid "Install"
-msgstr ""
+msgstr "इंस्टॉल करें"
 
 #: admin/inst_chart.php:75 admin/inst_module.php:138 admin/inst_theme.php:97
 msgid "Upload and install latest extension package"
-msgstr ""
+msgstr "नवीनतम एक्सटेंशन पैकेज अपलोड और इंस्टॉल करें"
 
 #: admin/inst_chart.php:82 admin/inst_module.php:145 admin/inst_theme.php:104
 #, php-format
@@ -1380,7 +1380,7 @@ msgstr ""
 
 #: admin/inst_lang.php:23
 msgid "Install/Update Languages"
-msgstr ""
+msgstr "स्थापित / अपडेट भाषाएं"
 
 #: admin/inst_lang.php:35 admin/printers.php:84
 #: admin/shipping_companies.php:91 dimensions/dimension_entry.php:271
@@ -1395,27 +1395,27 @@ msgstr ""
 #: sales/manage/customer_branches.php:294 sales/manage/sales_people.php:99
 #: taxes/item_tax_types.php:117
 msgid "Name"
-msgstr ""
+msgstr "नाम"
 
 #: admin/inst_lang.php:35 admin/inst_lang.php:222
 msgid "Right To Left"
-msgstr ""
+msgstr "दाएं से बाएं"
 
 #: admin/inst_lang.php:47
 msgid "Supported"
-msgstr ""
+msgstr "समर्थित"
 
 #: admin/inst_lang.php:49
 msgid "Display also languages not supported by server locales"
-msgstr ""
+msgstr "प्रदर्शित करें भी सर्वर स्थानीय लोकल द्वारा समर्थित नहीं है"
 
 #: admin/inst_lang.php:100
 msgid "Edit non standard language configuration"
-msgstr ""
+msgstr "गैर मानक भाषा कॉन्फ़िगरेशन संपादित करें"
 
 #: admin/inst_lang.php:104
 msgid "Upload and install latest language package"
-msgstr ""
+msgstr "नवीनतम भाषा पैकेज अपलोड और इंस्टॉल करें"
 
 #: admin/inst_lang.php:111
 #, php-format
@@ -1426,103 +1426,103 @@ msgstr ""
 
 #: admin/inst_lang.php:118
 msgid "The marked language is the current language which cannot be deleted."
-msgstr ""
+msgstr "चिह्नित भाषा वर्तमान भाषा है जिसे हटाया नहीं जा सकता।"
 
 #: admin/inst_lang.php:120
 msgid "Update default"
-msgstr ""
+msgstr "डिफ़ॉल्ट अपडेट करें"
 
 #: admin/inst_lang.php:122
 msgid "Add new language manually"
-msgstr ""
+msgstr "मैन्युअल रूप से नई भाषा जोड़ें"
 
 #: admin/inst_lang.php:135
 msgid "Language name, code nor encoding cannot be empty"
-msgstr ""
+msgstr "भाषा का नाम, कोड या एन्कोडिंग रिक्त नहीं हो सकता"
 
 #: admin/inst_lang.php:140
 msgid ""
 "Standard package for this language is already installed. If you want to "
 "install this language manually, uninstall standard language package first."
-msgstr ""
+msgstr "इस भाषा के लिए मानक पैकेज पहले ही स्थापित है। यदि आप मैन्युअल रूप से इस भाषा को स्थापित करना चाहते हैं, तो पहले मानक भाषा पैकेज की स्थापना रद्द करें।"
 
 #: admin/inst_lang.php:218
 msgid "Language Code"
-msgstr ""
+msgstr "भाषा कोड"
 
 #: admin/inst_lang.php:219
 msgid "Language Name"
-msgstr ""
+msgstr "भाषा का नाम"
 
 #: admin/inst_lang.php:223
 msgid "Default Language"
-msgstr ""
+msgstr "डिफ़ॉल्ट भाषा"
 
 #: admin/inst_lang.php:225 admin/inst_lang.php:226
 msgid "Language File"
-msgstr ""
+msgstr "भाषा फाइल"
 
 #: admin/inst_lang.php:229
 msgid "Select your language files from your local harddisk."
-msgstr ""
+msgstr "अपने स्थानीय हार्डडिस्क से अपनी भाषा फ़ाइलों का चयन करें"
 
 #: admin/inst_module.php:20
 msgid "Install/Activate extensions"
-msgstr ""
+msgstr "एक्सटेंशन स्थापित / सक्रिय करें"
 
 #: admin/inst_module.php:78
 msgid "Selected extension has been successfully deleted"
-msgstr ""
+msgstr "चयनित एक्सटेंशन को सफलतापूर्वक हटा दिया गया है"
 
 #: admin/inst_module.php:104 admin/inst_module.php:168
 msgid "Extension"
-msgstr ""
+msgstr "एक्सटेंशन"
 
 #: admin/inst_module.php:104 admin/inst_module.php:168
 msgid "Modules provided"
-msgstr ""
+msgstr "मॉड्यूल प्रदान की"
 
 #: admin/inst_module.php:104 admin/inst_module.php:168
 msgid "Options provided"
-msgstr ""
+msgstr "विकल्प प्रदान किए गए"
 
 #: admin/inst_module.php:132
 msgid "Install third-party extension."
-msgstr ""
+msgstr "तृतीय-पक्ष एक्सटेंशन स्थापित करें।"
 
 #: admin/inst_module.php:168 includes/ui/ui_lists.inc:681
 #: includes/ui/ui_lists.inc:2161 reporting/includes/excel_report.inc:232
 #: reporting/includes/pdf_report.inc:264
 msgid "Active"
-msgstr ""
+msgstr "सक्रिय"
 
 #: admin/inst_module.php:231
 msgid "Status change for some extensions failed."
-msgstr ""
+msgstr "कुछ एक्सटेंशन के लिए स्थिति परिवर्तन विफल हुआ।"
 
 #: admin/inst_module.php:234
 msgid "Current active extensions set has been saved."
-msgstr ""
+msgstr "वर्तमान सक्रिय एक्सटेंशन सेट सहेजे गए हैं।"
 
 #: admin/inst_module.php:256
 msgid "Extensions:"
-msgstr ""
+msgstr "एक्सटेंशन:"
 
 #: admin/inst_theme.php:20
 msgid "Install Themes"
-msgstr ""
+msgstr "थीम इंस्टॉल करें"
 
 #: admin/inst_theme.php:59
 msgid "Selected theme has been successfully deleted"
-msgstr ""
+msgstr "चयनित थीम को सफलतापूर्वक हटा दिया गया है"
 
 #: admin/inst_theme.php:74
 msgid "Theme"
-msgstr ""
+msgstr "विषय"
 
 #: admin/inst_upgrade.php:16
 msgid "Software Upgrade"
-msgstr ""
+msgstr "सॉफ्टवेयर अपग्रेड"
 
 #: admin/inst_upgrade.php:72
 #, php-format
@@ -1581,44 +1581,44 @@ msgstr ""
 
 #: admin/inst_upgrade.php:174
 msgid "Save database and perform upgrade"
-msgstr ""
+msgstr "डेटाबेस को सहेजें और अपग्रेड करें"
 
 #: admin/payment_terms.php:16 reporting/includes/doctext.inc:242
 #: sales/view/view_invoice.php:74 sales/view/view_sales_order.php:78
 msgid "Payment Terms"
-msgstr ""
+msgstr "भुगतान की शर्तें"
 
 #: admin/payment_terms.php:51
 msgid "The number of days or the day in the following month must be numeric."
-msgstr ""
+msgstr "अगले महीने में दिन या दिन की संख्या संख्यात्मक होना चाहिए।"
 
 #: admin/payment_terms.php:57
 msgid "The Terms description must be entered."
-msgstr ""
+msgstr "शर्तें का विवरण दर्ज किया जाना चाहिए।"
 
 #: admin/payment_terms.php:77
 msgid "Selected payment terms have been updated"
-msgstr ""
+msgstr "चयनित भुगतान शर्तों को अपडेट कर दिया गया है"
 
 #: admin/payment_terms.php:82
 msgid "New payment terms have been added"
-msgstr ""
+msgstr "नई भुगतान शर्तें जोड़ दी गई हैं"
 
 #: admin/payment_terms.php:95
 msgid ""
 "Cannot delete this payment term, because customer accounts have been created"
 " referring to this term."
-msgstr ""
+msgstr "इस भुगतान अवधि को हटा नहीं सकते, क्योंकि ग्राहक खाते इस शब्द का संदर्भ बनाते हैं।"
 
 #: admin/payment_terms.php:101
 msgid ""
 "Cannot delete this payment term, because supplier accounts have been created"
 " referring to this term"
-msgstr ""
+msgstr "इस भुगतान अवधि को हटा नहीं सकते, क्योंकि इस अवधि के संदर्भ में सप्लायर खाता बना दिया गया है"
 
 #: admin/payment_terms.php:107
 msgid "Selected payment terms have been deleted"
-msgstr ""
+msgstr "चयनित भुगतान शर्तों को हटा दिया गया है"
 
 #: admin/payment_terms.php:127 dimensions/dimension_entry.php:275
 #: dimensions/inquiry/search_dimensions.php:75
@@ -1647,237 +1647,237 @@ msgstr ""
 #: sales/inquiry/customer_allocation_inquiry.php:144
 #: sales/inquiry/customer_inquiry.php:217
 msgid "Type"
-msgstr ""
+msgstr "प्रकार"
 
 #: admin/payment_terms.php:127
 msgid "Due After/Days"
-msgstr ""
+msgstr "कारण के बाद / दिन"
 
 #: admin/payment_terms.php:140
 msgid "N/A"
-msgstr ""
+msgstr "एन / ए"
 
 #: admin/payment_terms.php:174
 msgid "Terms Description:"
-msgstr ""
+msgstr "शर्तें विवरण:"
 
 #: admin/payment_terms.php:176
 msgid "Payment type:"
-msgstr ""
+msgstr "भुगतान के प्रकार:"
 
 #: admin/payment_terms.php:179
 msgid "Days (Or Day In Following Month):"
-msgstr ""
+msgstr "दिन (या अगले महीने में दिन):"
 
 #: admin/printers.php:16
 msgid "Printer Locations"
-msgstr ""
+msgstr "प्रिंटर स्थान"
 
 #: admin/printers.php:31
 msgid "Printer name cannot be empty."
-msgstr ""
+msgstr "प्रिंटर का नाम खाली नहीं हो सकता"
 
 #: admin/printers.php:36
 msgid "You have selected printing to server at user IP."
-msgstr ""
+msgstr "आपने यूज़र आईपी पर सर्वर पर प्रिंटिंग का चयन किया है"
 
 #: admin/printers.php:41
 msgid "Timeout cannot be less than zero nor longer than 60 (sec)."
-msgstr ""
+msgstr "समयबाह्य शून्य से कम नहीं है और न ही 60 (सेकंड) से अधिक हो सकता है"
 
 #: admin/printers.php:52
 msgid "New printer definition has been created"
-msgstr ""
+msgstr "नई प्रिंटर परिभाषा बनाई गई है"
 
 #: admin/printers.php:53
 msgid "Selected printer definition has been updated"
-msgstr ""
+msgstr "चयनित प्रिंटर परिभाषा को अपडेट किया गया है"
 
 #: admin/printers.php:64
 msgid ""
 "Cannot delete this printer definition, because print profile have been "
 "created using it."
-msgstr ""
+msgstr "इस प्रिंटर की परिभाषा को हटा नहीं सकते, क्योंकि प्रिंट प्रोफ़ाइल का उपयोग करके इसे बनाया गया है।"
 
 #: admin/printers.php:69
 msgid "Selected printer definition has been deleted"
-msgstr ""
+msgstr "चयनित प्रिंटर परिभाषा को हटा दिया गया है"
 
 #: admin/printers.php:84 admin/printers.php:136
 msgid "Printer Queue"
-msgstr ""
+msgstr "प्रिंटर कतार"
 
 #: admin/printers.php:132
 msgid "Printer Name"
-msgstr ""
+msgstr "प्रिंटर का नाम"
 
 #: admin/printers.php:133
 msgid "Printer Description"
-msgstr ""
+msgstr "प्रिंटर विवरण"
 
 #: admin/printers.php:134
 msgid "Host name or IP"
-msgstr ""
+msgstr "होस्ट नाम या आईपी"
 
 #: admin/printers.php:135
 msgid "Port"
-msgstr ""
+msgstr "बंदरगाह"
 
 #: admin/printers.php:137
 msgid "Timeout"
-msgstr ""
+msgstr "समय समाप्त"
 
 #: admin/print_profiles.php:18
 msgid "Printing Profiles"
-msgstr ""
+msgstr "प्रिंटिंग प्रोफाइल"
 
 #: admin/print_profiles.php:33
 msgid "Default printing destination"
-msgstr ""
+msgstr "डिफ़ॉल्ट प्रिंटिंग गंतव्य"
 
 #: admin/print_profiles.php:91
 msgid "Printing profile name cannot be empty."
-msgstr ""
+msgstr "मुद्रण प्रोफ़ाइल नाम रिक्त नहीं हो सकता।"
 
 #: admin/print_profiles.php:107
 msgid "New printing profile has been created"
-msgstr ""
+msgstr "नया प्रिंटिंग प्रोफाइल बनाया गया है"
 
 #: admin/print_profiles.php:110
 msgid "Printing profile has been updated"
-msgstr ""
+msgstr "प्रिंटिंग प्रोफाइल को अपडेट किया गया है"
 
 #: admin/print_profiles.php:119
 msgid "Selected printing profile has been deleted"
-msgstr ""
+msgstr "चयनित मुद्रण प्रोफ़ाइल को हटा दिया गया है"
 
 #: admin/print_profiles.php:130
 msgid "Select printing profile"
-msgstr ""
+msgstr "मुद्रण प्रोफ़ाइल का चयन करें"
 
 #: admin/print_profiles.php:131
 msgid "New printing profile"
-msgstr ""
+msgstr "नई मुद्रण प्रोफ़ाइल"
 
 #: admin/print_profiles.php:136 admin/print_profiles.php:138
 msgid "Printing Profile Name"
-msgstr ""
+msgstr "मुद्रण प्रोफ़ाइल का नाम"
 
 #: admin/print_profiles.php:148
 msgid "Report Id"
-msgstr ""
+msgstr "रिपोर्ट आईडी"
 
 #: admin/print_profiles.php:148
 msgid "Printer"
-msgstr ""
+msgstr "मुद्रक"
 
 #: admin/print_profiles.php:162
 msgid "Browser support"
-msgstr ""
+msgstr "ब्राउज़र समर्थन"
 
 #: admin/print_profiles.php:169
 msgid "no title was found in this report definition file."
-msgstr ""
+msgstr "इस रिपोर्ट परिभाषा फ़ाइल में कोई शीर्षक नहीं मिला।"
 
 #: admin/print_profiles.php:175
 msgid "Add New Profile"
-msgstr ""
+msgstr "नई प्रोफ़ाइल जोड़ें"
 
 #: admin/print_profiles.php:177
 msgid "Update Profile"
-msgstr ""
+msgstr "प्रोफ़ाइल अपडेट करें"
 
 #: admin/print_profiles.php:178
 msgid "Update printer profile"
-msgstr ""
+msgstr "प्रिंटर प्रोफ़ाइल अपडेट करें"
 
 #: admin/print_profiles.php:179
 msgid "Delete Profile"
-msgstr ""
+msgstr "प्रोफ़ाइल हटाएं"
 
 #: admin/print_profiles.php:180
 msgid "Delete printer profile (only if not used by any user)"
-msgstr ""
+msgstr "प्रिंटर प्रोफ़ाइल हटाएं (केवल अगर किसी भी उपयोगकर्ता द्वारा उपयोग नहीं किया गया है)"
 
 #: admin/security_roles.php:18
 msgid "Access setup"
-msgstr ""
+msgstr "एक्सेस सेटअप करें"
 
 #: admin/security_roles.php:63
 msgid "Role description cannot be empty."
-msgstr ""
+msgstr "भूमिका विवरण खाली नहीं हो सकता।"
 
 #: admin/security_roles.php:69
 msgid "Role name cannot be empty."
-msgstr ""
+msgstr "भूमिका का नाम रिक्त नहीं हो सकता"
 
 #: admin/security_roles.php:76
 msgid ""
 "Access level edition in Company setup section have to be enabled for your "
 "account."
-msgstr ""
+msgstr "कंपनी सेटअप अनुभाग में एक्सेस स्तर संस्करण आपके खाते के लिए सक्षम होना चाहिए।"
 
 #: admin/security_roles.php:105
 msgid "New security role has been added."
-msgstr ""
+msgstr "नई सुरक्षा भूमिका जोड़ दी गई है।"
 
 #: admin/security_roles.php:113
 msgid "Security role has been updated."
-msgstr ""
+msgstr "सुरक्षा भूमिका को अद्यतन किया गया है।"
 
 #: admin/security_roles.php:126
 msgid "This role is currently assigned to some users and cannot be deleted"
-msgstr ""
+msgstr "यह भूमिका वर्तमान में कुछ उपयोगकर्ताओं को सौंपी गई है और हटाई नहीं जा सकती"
 
 #: admin/security_roles.php:129
 msgid "Security role has been sucessfully deleted."
-msgstr ""
+msgstr "सुरक्षा भूमिका सफलतापूर्वक मिटा दी गई है"
 
 #: admin/security_roles.php:178
 msgid "Role:"
-msgstr ""
+msgstr "भूमिका:"
 
 #: admin/security_roles.php:180 gl/manage/gl_accounts.php:199
 #: inventory/manage/items.php:433 purchasing/manage/suppliers.php:290
 #: sales/manage/customers.php:330
 msgid "Show inactive:"
-msgstr ""
+msgstr "निष्क्रिय दिखाएं:"
 
 #: admin/security_roles.php:195
 msgid "Role name:"
-msgstr ""
+msgstr "भूमिका का नाम:"
 
 #: admin/security_roles.php:196
 msgid "Role description:"
-msgstr ""
+msgstr "भूमिका विवरण:"
 
 #: admin/security_roles.php:197
 msgid "Current status:"
-msgstr ""
+msgstr "वर्तमान स्थिति:"
 
 #: admin/security_roles.php:221
 msgid "On/off set of features"
-msgstr ""
+msgstr "सुविधाओं का सेट / बंद"
 
 #: admin/security_roles.php:240 admin/security_roles.php:246
 msgid "Update view"
-msgstr ""
+msgstr "दृश्य अपडेट करें"
 
 #: admin/security_roles.php:241
 msgid "Insert New Role"
-msgstr ""
+msgstr "नई भूमिका सम्मिलित करें"
 
 #: admin/security_roles.php:245
 msgid "Save Role"
-msgstr ""
+msgstr "रोल सहेजें"
 
 #: admin/security_roles.php:247
 msgid "Clone This Role"
-msgstr ""
+msgstr "इस भूमिका को क्लोन करें"
 
 #: admin/security_roles.php:248
 msgid "Delete This Role"
-msgstr ""
+msgstr "इस भूमिका को हटा दें"
 
 #: admin/security_roles.php:249 admin/void_transaction.php:229
 #: gl/manage/gl_quick_entries.php:61 gl/includes/ui/gl_bank_ui.inc:279
@@ -1891,87 +1891,87 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:295
 #: sales/includes/ui/sales_order_ui.inc:550
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करना"
 
 #: admin/security_roles.php:249 inventory/manage/items.php:416
 msgid "Cancel Edition"
-msgstr ""
+msgstr "संस्करण रद्द करें"
 
 #: admin/shipping_companies.php:15 sales/customer_credit_invoice.php:254
 #: sales/customer_delivery.php:346 sales/customer_invoice.php:431
 #: sales/view/view_credit.php:74 sales/view/view_dispatch.php:92
 #: sales/view/view_invoice.php:91
 msgid "Shipping Company"
-msgstr ""
+msgstr "नौवहन कंपनी"
 
 #: admin/shipping_companies.php:26
 msgid "The shipping company name cannot be empty."
-msgstr ""
+msgstr "शिपिंग कंपनी का नाम रिक्त नहीं हो सकता।"
 
 #: admin/shipping_companies.php:37
 msgid "New shipping company has been added"
-msgstr ""
+msgstr "नई शिपिंग कंपनी को जोड़ा गया है"
 
 #: admin/shipping_companies.php:46
 msgid "Selected shipping company has been updated"
-msgstr ""
+msgstr "चयनित शिपिंग कंपनी को अपडेट कर दिया गया है"
 
 #: admin/shipping_companies.php:59
 msgid ""
 "Cannot delete this shipping company because sales orders have been created "
 "using this shipper."
-msgstr ""
+msgstr "इस शिपिंग कंपनी को हटा नहीं सकते क्योंकि बिक्री के आदेश इस शिपर का उपयोग करके बनाए गए हैं।"
 
 #: admin/shipping_companies.php:67
 msgid ""
 "Cannot delete this shipping company because invoices have been created using"
 " this shipping company."
-msgstr ""
+msgstr "इस शिपिंग कंपनी को हटा नहीं सकते क्योंकि चालान इस शिपिंग कंपनी का उपयोग करके बनाया गया है।"
 
 #: admin/shipping_companies.php:72
 msgid "Selected shipping company has been deleted"
-msgstr ""
+msgstr "चयनित शिपिंग कंपनी को हटा दिया गया है"
 
 #: admin/shipping_companies.php:91
 msgid "Contact Person"
-msgstr ""
+msgstr "संपर्क व्यक्ति"
 
 #: admin/shipping_companies.php:91
 msgid "Phone Number"
-msgstr ""
+msgstr "फ़ोन नंबर"
 
 #: admin/shipping_companies.php:91 inventory/manage/locations.php:146
 msgid "Secondary Phone"
-msgstr ""
+msgstr "द्वितीयक फोन"
 
 #: admin/shipping_companies.php:91 inventory/manage/locations.php:146
 msgid "Address"
-msgstr ""
+msgstr "पता"
 
 #: admin/shipping_companies.php:134 gl/manage/gl_account_types.php:188
 #: gl/includes/ui/gl_bank_ui.inc:57 inventory/manage/items.php:299
 #: manufacturing/manage/work_centres.php:137
 msgid "Name:"
-msgstr ""
+msgstr "नाम:"
 
 #: admin/shipping_companies.php:136 purchasing/manage/suppliers.php:159
 #: sales/manage/customer_branches.php:259
 msgid "Contact Person:"
-msgstr ""
+msgstr "संपर्क व्यक्ति:"
 
 #: admin/shipping_companies.php:140 includes/ui/contacts_view.inc:103
 #: inventory/manage/locations.php:205 purchasing/manage/suppliers.php:131
 #: sales/manage/customer_branches.php:261 sales/manage/customers.php:257
 msgid "Secondary Phone Number:"
-msgstr ""
+msgstr "वैकल्पिक फोन नंबर:"
 
 #: admin/system_diagnostics.php:17
 msgid "System Diagnostics"
-msgstr ""
+msgstr "प्रणाली निदान"
 
 #: admin/tags.php:33
 msgid "Unspecified tag type"
-msgstr ""
+msgstr "अनिर्दिष्ट टैग प्रकार"
 
 #: admin/tags.php:40 reporting/reports_main.php:357
 #: reporting/reports_main.php:366 reporting/reports_main.php:378
@@ -1979,127 +1979,127 @@ msgstr ""
 #: reporting/reports_main.php:428 reporting/reports_main.php:456
 #: reporting/reports_main.php:463 reporting/reports_main.php:473
 msgid "Account Tags"
-msgstr ""
+msgstr "खाता टैग"
 
 #: admin/tags.php:44
 msgid "Dimension Tags"
-msgstr ""
+msgstr "आयाम टैग"
 
 #: admin/tags.php:57
 msgid "The tag name cannot be empty."
-msgstr ""
+msgstr "टैग नाम रिक्त नहीं हो सकता"
 
 #: admin/tags.php:73
 msgid "Selected tag settings have been updated"
-msgstr ""
+msgstr "चयनित टैग सेटिंग को अपडेट कर दिया गया है"
 
 #: admin/tags.php:78
 msgid "New tag has been added"
-msgstr ""
+msgstr "नया टैग जोड़ा गया है"
 
 #: admin/tags.php:94
 msgid ""
 "Cannot delete this tag because records have been created referring to it."
-msgstr ""
+msgstr "इस टैग को हटा नहीं सकते क्योंकि रिकॉर्ड्स को संदर्भित किया गया है।"
 
 #: admin/tags.php:109
 msgid "Selected tag has been deleted"
-msgstr ""
+msgstr "चयनित टैग हटा दिया गया है"
 
 #: admin/tags.php:128
 msgid "Tag Name"
-msgstr ""
+msgstr "टैग नाम"
 
 #: admin/tags.php:128
 msgid "Tag Description"
-msgstr ""
+msgstr "टैग वर्णन"
 
 #: admin/tags.php:165
 msgid "Tag Name:"
-msgstr ""
+msgstr "टैग नाम:"
 
 #: admin/tags.php:166
 msgid "Tag Description:"
-msgstr ""
+msgstr "टैग विवरण:"
 
 #: admin/users.php:16
 msgid "Users"
-msgstr ""
+msgstr "उपयोगकर्ता"
 
 #: admin/users.php:31
 msgid "The user login entered must be at least 4 characters long."
-msgstr ""
+msgstr "प्रवेश किया गया उपयोगकर्ता लॉगिन कम से कम 4 अक्षर लंबा होना चाहिए।"
 
 #: admin/users.php:72
 msgid "The selected user has been updated."
-msgstr ""
+msgstr "चयनित उपयोगकर्ता अपडेट कर दिया गया है।"
 
 #: admin/users.php:86
 msgid "A new user has been added."
-msgstr ""
+msgstr "एक नया उपयोगकर्ता जोड़ा गया है।"
 
 #: admin/users.php:100
 msgid "Cannot delete this user because entries are associated with this user."
-msgstr ""
+msgstr "इस उपयोगकर्ता को हटा नहीं सकते क्योंकि प्रविष्टियां इस उपयोगकर्ता से संबद्ध हैं।"
 
 #: admin/users.php:105
 msgid "User has been deleted."
-msgstr ""
+msgstr "उपयोगकर्ता हटा दिया गया है"
 
 #: admin/users.php:123
 msgid "User login"
-msgstr ""
+msgstr "उपयोगकर्ता लॉगिन"
 
 #: admin/users.php:123 admin/users.php:207 includes/ui/contacts_view.inc:41
 msgid "Full Name"
-msgstr ""
+msgstr "पूरा नाम"
 
 #: admin/users.php:123 includes/ui/contacts_view.inc:41
 #: inventory/manage/locations.php:146 reporting/rep106.php:88
 #: reporting/includes/header2.inc:101 sales/manage/sales_people.php:99
 msgid "Phone"
-msgstr ""
+msgstr "फ़ोन"
 
 #: admin/users.php:124 sales/manage/customer_branches.php:300
 #: sales/view/view_sales_order.php:83
 msgid "E-mail"
-msgstr ""
+msgstr "ईमेल"
 
 #: admin/users.php:124
 msgid "Last Visit"
-msgstr ""
+msgstr "पिछला आगमन"
 
 #: admin/users.php:124
 msgid "Access Level"
-msgstr ""
+msgstr "पहुंच स्तर"
 
 #: admin/users.php:193
 msgid "User Login:"
-msgstr ""
+msgstr "उपयोगकर्ता लॉगिन:"
 
 #: admin/users.php:204
 msgid "Enter a new password to change, leave empty to keep current."
-msgstr ""
+msgstr "बदलने के लिए एक नया पासवर्ड दर्ज करें, वर्तमान रखने के लिए खाली छोड़ दें।"
 
 #: admin/users.php:209
 msgid "Telephone No.:"
-msgstr ""
+msgstr "टेलीफ़ोन नंबर।:"
 
 #: admin/users.php:213
 msgid "Access Level:"
-msgstr ""
+msgstr "पहुंच स्तर:"
 
 #: admin/users.php:217
 msgid "User's POS"
-msgstr ""
+msgstr "उपयोगकर्ता का पीओएस"
 
 #: admin/users.php:222
 msgid "Use popup window for reports:"
-msgstr ""
+msgstr "रिपोर्ट के लिए पॉपअप विंडो का उपयोग करें:"
 
 #: admin/view_print_transaction.php:27
 msgid "View or Print Transactions"
-msgstr ""
+msgstr "लेनदेन देखें या प्रिंट करें"
 
 #: admin/view_print_transaction.php:43 admin/view_print_transaction.php:45
 #: admin/view_print_transaction.php:129 includes/ui/ui_controls.inc:189
@@ -2108,19 +2108,19 @@ msgstr ""
 #: sales/inquiry/sales_deliveries_view.php:162
 #: sales/inquiry/sales_orders_view.php:119
 msgid "Print"
-msgstr ""
+msgstr "छाप"
 
 #: admin/view_print_transaction.php:67
 msgid "Only documents can be printed."
-msgstr ""
+msgstr "केवल दस्तावेजों को मुद्रित किया जा सकता है"
 
 #: admin/view_print_transaction.php:79 admin/void_transaction.php:166
 msgid "from #:"
-msgstr ""
+msgstr "# से:"
 
 #: admin/view_print_transaction.php:81 admin/void_transaction.php:168
 msgid "to #:"
-msgstr ""
+msgstr "सेवा मेरे #:"
 
 #: admin/view_print_transaction.php:83 admin/void_transaction.php:170
 #: dimensions/inquiry/search_dimensions.php:88
@@ -2135,19 +2135,19 @@ msgstr ""
 #: sales/inquiry/sales_deliveries_view.php:118
 #: sales/inquiry/sales_orders_view.php:247
 msgid "Search"
-msgstr ""
+msgstr "खोज"
 
 #: admin/view_print_transaction.php:96
 msgid ""
 "The starting transaction number is expected to be numeric and greater than "
 "zero."
-msgstr ""
+msgstr "प्रारंभिक लेन-देन संख्या शून्य से होने की उम्मीद है और शून्य से अधिक है"
 
 #: admin/view_print_transaction.php:102
 msgid ""
 "The ending transaction number is expected to be numeric and greater than "
 "zero."
-msgstr ""
+msgstr "समापन लेन-देन संख्या शून्य से होने की उम्मीद है और शून्य से अधिक है।"
 
 #: admin/view_print_transaction.php:127 admin/void_transaction.php:182
 #: dimensions/inquiry/search_dimensions.php:128
@@ -2190,7 +2190,7 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:87
 #: sales/includes/ui/sales_order_ui.inc:364
 msgid "Reference"
-msgstr ""
+msgstr "संदर्भ"
 
 #: admin/view_print_transaction.php:128 admin/void_transaction.php:183
 #: dimensions/inquiry/search_dimensions.php:131
@@ -2231,30 +2231,30 @@ msgstr ""
 #: sales/inquiry/customer_allocation_inquiry.php:148
 #: sales/inquiry/customer_inquiry.php:221
 msgid "Date"
-msgstr ""
+msgstr "तारीख"
 
 #: admin/view_print_transaction.php:130 admin/void_transaction.php:184
 #: includes/ui/ui_view.inc:51
 msgid "GL"
-msgstr ""
+msgstr "जीएल"
 
 #: admin/void_transaction.php:29
 msgid "Void a Transaction"
-msgstr ""
+msgstr "एक लेनदेन शून्य करें"
 
 #: admin/void_transaction.php:126 admin/void_transaction.php:185
 #: includes/ui/ui_input.inc:138 includes/ui/ui_input.inc:282
 #: includes/ui/ui_lists.inc:20
 msgid "Select"
-msgstr ""
+msgstr "चुनते हैं"
 
 #: admin/void_transaction.php:204
 msgid "Transaction #:"
-msgstr ""
+msgstr "लेनदेन #:"
 
 #: admin/void_transaction.php:206
 msgid "Voiding Date:"
-msgstr ""
+msgstr "वाउइंग दिनांक:"
 
 #: admin/void_transaction.php:208 dimensions/dimension_entry.php:283
 #: gl/bank_transfer.php:98 gl/inquiry/journal_inquiry.php:56
@@ -2265,29 +2265,29 @@ msgstr ""
 #: purchasing/includes/ui/invoice_ui.inc:174 purchasing/po_entry_items.php:529
 #: purchasing/supplier_payment.php:325 sales/customer_payments.php:399
 msgid "Memo:"
-msgstr ""
+msgstr "मेमो:"
 
 #: admin/void_transaction.php:213 admin/void_transaction.php:222
 msgid "Void Transaction"
-msgstr ""
+msgstr "शून्य लेनदेन"
 
 #: admin/void_transaction.php:218 admin/void_transaction.php:297
 msgid "The entered transaction does not exist or cannot be voided."
-msgstr ""
+msgstr "दर्ज लेन-देन मौजूद नहीं है या इसे voided नहीं किया जा सकता है"
 
 #: admin/void_transaction.php:226
 msgid ""
 "Are you sure you want to void this transaction ? This action cannot be "
 "undone."
-msgstr ""
+msgstr "क्या आप वाकई इस लेनदेन को रद्द करना चाहते हैं? इस क्रिया को पूर्ववत नहीं किया जा सकता है।"
 
 #: admin/void_transaction.php:228 includes/ui/ui_controls.inc:589
 msgid "Proceed"
-msgstr ""
+msgstr "बढ़ना"
 
 #: admin/void_transaction.php:242
 msgid "The selected transaction was closed for edition and cannot be voided."
-msgstr ""
+msgstr "चयनित लेनदेन संस्करण के लिए बंद कर दिया गया था और voided नहीं किया जा सकता है"
 
 #: admin/void_transaction.php:248 gl/accruals.php:32 gl/bank_transfer.php:115
 #: gl/gl_journal.php:156 gl/manage/exchange_rates.php:33
@@ -2299,7 +2299,7 @@ msgstr ""
 #: sales/manage/recurrent_invoices.php:46
 #: sales/manage/recurrent_invoices.php:51
 msgid "The entered date is invalid."
-msgstr ""
+msgstr "प्रविष्ट दिनांक अमान्य है"
 
 #: admin/void_transaction.php:254 gl/accruals.php:38 gl/bank_transfer.php:121
 #: gl/gl_bank.php:266 gl/gl_journal.php:162
@@ -2317,381 +2317,381 @@ msgstr ""
 #: admin/void_transaction.php:261
 msgid ""
 "The transaction number is expected to be numeric and greater than zero."
-msgstr ""
+msgstr "लेन-देन संख्या शून्य से और शून्य से अधिक होने की उम्मीद है।"
 
 #: admin/void_transaction.php:278
 msgid "The selected transaction has already been voided."
-msgstr ""
+msgstr "चयनित लेन-देन पहले ही रद्द कर दिया गया है।"
 
 #: admin/void_transaction.php:291
 msgid "Selected transaction has been voided."
-msgstr ""
+msgstr "चयनित लेनदेन को ध्वस्त कर दिया गया है"
 
 #: admin/db/attachments_db.inc:67
 msgid "Attached File:"
-msgstr ""
+msgstr "संलग्न फाइल:"
 
 #: admin/db/fiscalyears_db.inc:136
 msgid ""
 "The Retained Earnings Account or the Profit and Loss Year Account has not "
 "been set in System and General GL Setup"
-msgstr ""
+msgstr "सिस्टम और जनरल जीएल सेटअप में निर्धारित कमाई खाता या लाभ और घाटा वर्ष खाता सेट नहीं किया गया है"
 
 #: admin/db/fiscalyears_db.inc:166 admin/db/fiscalyears_db.inc:168
 msgid "Closing Year"
-msgstr ""
+msgstr "समापन वर्ष"
 
 #: admin/db/fiscalyears_db.inc:219 reporting/rep101.php:173
 #: reporting/rep201.php:165 reporting/rep706.php:185
 msgid "Open Balance"
-msgstr ""
+msgstr "खाता खोलते समय रकम"
 
 #: admin/db/maintenance_db.inc:152
 #, php-format
 msgid "Cannot open the extension setup file '%s' for writing."
-msgstr ""
+msgstr "लिखने के लिए एक्सटेंशन सेटअप फ़ाइल '%s' खोल नहीं सकता"
 
 #: admin/db/maintenance_db.inc:160
 #, php-format
 msgid "Cannot write to the extensions setup file '%s'."
-msgstr ""
+msgstr "एक्सटेंशन सेटअप फ़ाइल '%s' में लिख नहीं सकते"
 
 #: admin/db/maintenance_db.inc:178
 msgid "Cannot update system extensions list."
-msgstr ""
+msgstr "सिस्टम एक्सटेंशन सूची अपडेट नहीं की जा सकती"
 
 #: admin/db/maintenance_db.inc:196
 #, php-format
 msgid "Cannot update extensions list for company '%s'."
-msgstr ""
+msgstr "कंपनी '%s' के लिए एक्सटेंशन सूची अपडेट नहीं किया जा सकता"
 
 #: admin/db/maintenance_db.inc:233
 msgid "Cannot open the languages file - "
-msgstr ""
+msgstr "भाषा फाइल नहीं खोल सकते हैं - "
 
 #: admin/db/maintenance_db.inc:240
 msgid "Cannot write to the language file - "
-msgstr ""
+msgstr "भाषा फाइल में नहीं लिख सकते हैं - "
 
 #: admin/db/maintenance_db.inc:250
 msgid "The language files folder "
-msgstr ""
+msgstr "भाषा फ़ाइलें फ़ोल्डर"
 
 #: admin/db/maintenance_db.inc:391
 #, php-format
 msgid "SQL script execution failed in line %d: %s"
-msgstr ""
+msgstr "पंक्ति %d: %s में SQL स्क्रिप्ट निष्पादन विफल रहा"
 
 #: admin/db/users_db.inc:221
 msgid "user online"
-msgstr ""
+msgstr "उपयोगकर्ता ऑनलाइन"
 
 #: admin/db/users_db.inc:221
 msgid "users online"
-msgstr ""
+msgstr "प्रयोगकर्ता ऑनलाइन हैं"
 
 #: admin/db/voiding_db.inc:114
 #: manufacturing/includes/db/work_orders_db.inc:456
 #: manufacturing/includes/db/work_orders_db.inc:472
 #: sales/includes/db/sales_invoice_db.inc:208
 msgid "Voided."
-msgstr ""
+msgstr "अमान्य कर।"
 
 #: applications/customers.php:16
 msgid "&Sales"
-msgstr ""
+msgstr "बिक्री"
 
 #: applications/customers.php:18 applications/dimensions.php:21
 #: applications/generalledger.php:18 applications/inventory.php:18
 #: applications/manufacturing.php:18 applications/suppliers.php:18
 msgid "Transactions"
-msgstr ""
+msgstr "लेन-देन"
 
 #: applications/customers.php:19
 msgid "Sales &Quotation Entry"
-msgstr ""
+msgstr "बिक्री कोटेशन प्रवेश"
 
 #: applications/customers.php:21
 msgid "Sales &Order Entry"
-msgstr ""
+msgstr "बिक्री ऑर्डर प्रविष्टि"
 
 #: applications/customers.php:23
 msgid "Direct &Delivery"
-msgstr ""
+msgstr "प्रत्यक्ष वितरण"
 
 #: applications/customers.php:25 applications/suppliers.php:25
 msgid "Direct &Invoice"
-msgstr ""
+msgstr "प्रत्यक्ष चालान"
 
 #: applications/customers.php:28
 msgid "&Delivery Against Sales Orders"
-msgstr ""
+msgstr "बिक्री आदेश के खिलाफ वितरण"
 
 #: applications/customers.php:30
 msgid "&Invoice Against Sales Delivery"
-msgstr ""
+msgstr "बिक्री वितरण के खिलाफ चालान"
 
 #: applications/customers.php:33
 msgid "&Template Delivery"
-msgstr ""
+msgstr "टेम्पलेट डिलिवरी"
 
 #: applications/customers.php:35
 msgid "&Template Invoice"
-msgstr ""
+msgstr "टेम्पलेट चालान"
 
 #: applications/customers.php:37
 msgid "&Create and Print Recurrent Invoices"
-msgstr ""
+msgstr "आवर्ती इनवॉइस बनाएं और प्रिंट करें"
 
 #: applications/customers.php:40
 msgid "Customer &Payments"
-msgstr ""
+msgstr "ग्राहक भुगतान"
 
 #: applications/customers.php:42
 msgid "Customer &Credit Notes"
-msgstr ""
+msgstr "ग्राहक क्रेडिट नोट्स"
 
 #: applications/customers.php:44
 msgid "&Allocate Customer Payments or Credit Notes"
-msgstr ""
+msgstr "ग्राहक भुगतान या क्रेडिट नोट्स आवंटित करें"
 
 #: applications/customers.php:47 applications/dimensions.php:27
 #: applications/generalledger.php:34 applications/inventory.php:24
 #: applications/manufacturing.php:24 applications/suppliers.php:38
 msgid "Inquiries and Reports"
-msgstr ""
+msgstr "पूछताछ और रिपोर्ट"
 
 #: applications/customers.php:48
 msgid "Sales Quotation I&nquiry"
-msgstr ""
+msgstr "बिक्री कोटेशन जांच"
 
 #: applications/customers.php:50
 msgid "Sales Order &Inquiry"
-msgstr ""
+msgstr "बिक्री आदेश जांच"
 
 #: applications/customers.php:52
 msgid "Customer Transaction &Inquiry"
-msgstr ""
+msgstr "ग्राहक लेनदेन पूछताछ"
 
 #: applications/customers.php:55
 msgid "Customer Allocation &Inquiry"
-msgstr ""
+msgstr "ग्राहक आवंटन जांच"
 
 #: applications/customers.php:58
 msgid "Customer and Sales &Reports"
-msgstr ""
+msgstr "ग्राहक और बिक्री रिपोर्ट"
 
 #: applications/customers.php:61 applications/dimensions.php:34
 #: applications/generalledger.php:55 applications/inventory.php:32
 #: applications/manufacturing.php:34 applications/setup.php:54
 #: applications/suppliers.php:50
 msgid "Maintenance"
-msgstr ""
+msgstr "रखरखाव"
 
 #: applications/customers.php:62
 msgid "Add and Manage &Customers"
-msgstr ""
+msgstr "जोड़ें और प्रबंधित करें ग्राहक"
 
 #: applications/customers.php:64
 msgid "Customer &Branches"
-msgstr ""
+msgstr "ग्राहक शाखाएं"
 
 #: applications/customers.php:66
 msgid "Sales &Groups"
-msgstr ""
+msgstr "बिक्री समूह"
 
 #: applications/customers.php:68
 msgid "Recurrent &Invoices"
-msgstr ""
+msgstr "आवर्ती चालान"
 
 #: applications/customers.php:70
 msgid "Sales T&ypes"
-msgstr ""
+msgstr "बिक्री प्रकार"
 
 #: applications/customers.php:72
 msgid "Sales &Persons"
-msgstr ""
+msgstr "बिक्री व्यक्ति"
 
 #: applications/customers.php:74
 msgid "Sales &Areas"
-msgstr ""
+msgstr "बिक्री क्षेत्र"
 
 #: applications/customers.php:76
 msgid "Credit &Status Setup"
-msgstr ""
+msgstr "क्रेडिट स्थिति सेटअप"
 
 #: applications/dimensions.php:17
 msgid "&Dimensions"
-msgstr ""
+msgstr "आयाम"
 
 #: applications/dimensions.php:22
 msgid "Dimension &Entry"
-msgstr ""
+msgstr "आयाम प्रवेश"
 
 #: applications/dimensions.php:24
 msgid "&Outstanding Dimensions"
-msgstr ""
+msgstr "बकाया आयाम"
 
 #: applications/dimensions.php:28
 msgid "Dimension &Inquiry"
-msgstr ""
+msgstr "आयाम जांच"
 
 #: applications/dimensions.php:31
 msgid "Dimension &Reports"
-msgstr ""
+msgstr "आयाम रिपोर्ट"
 
 #: applications/dimensions.php:35
 msgid "Dimension &Tags"
-msgstr ""
+msgstr "आयाम टैग"
 
 #: applications/generalledger.php:16
 msgid "&Banking and General Ledger"
-msgstr ""
+msgstr "बैंकिंग और जनरल लेजर"
 
 #: applications/generalledger.php:19
 msgid "&Payments"
-msgstr ""
+msgstr "भुगतान"
 
 #: applications/generalledger.php:21
 msgid "&Deposits"
-msgstr ""
+msgstr "जमा"
 
 #: applications/generalledger.php:23
 msgid "Bank Account &Transfers"
-msgstr ""
+msgstr "बैंक खाता स्थानांतरण"
 
 #: applications/generalledger.php:25
 msgid "&Journal Entry"
-msgstr ""
+msgstr "जर्नल प्रविष्टि"
 
 #: applications/generalledger.php:27
 msgid "&Budget Entry"
-msgstr ""
+msgstr "बजट प्रविष्टि"
 
 #: applications/generalledger.php:29
 msgid "&Reconcile Bank Account"
-msgstr ""
+msgstr "मिलान करें बैंक खाता"
 
 #: applications/generalledger.php:31
 msgid "Revenue / &Costs Accruals"
-msgstr ""
+msgstr "राजस्व / लागत स्त्रोतों"
 
 #: applications/generalledger.php:35
 msgid "&Journal Inquiry"
-msgstr ""
+msgstr "जर्नल पूछताछ"
 
 #: applications/generalledger.php:37
 msgid "GL &Inquiry"
-msgstr ""
+msgstr "जनरल लेजर पूछताछ"
 
 #: applications/generalledger.php:39
 msgid "Bank Account &Inquiry"
-msgstr ""
+msgstr "बैंक खाता पूछताछ"
 
 #: applications/generalledger.php:41
 msgid "Ta&x Inquiry"
-msgstr ""
+msgstr "कर पूछताछ"
 
 #: applications/generalledger.php:44 reporting/reports_main.php:384
 #: reporting/reports_main.php:434 reporting/reports_main.php:479
 msgid "Trial &Balance"
-msgstr ""
+msgstr "संतुलन परीक्षण"
 
 #: applications/generalledger.php:46
 msgid "Balance &Sheet Drilldown"
-msgstr ""
+msgstr "बैलेंस शीट ड्रिलडाउन"
 
 #: applications/generalledger.php:48
 msgid "&Profit and Loss Drilldown"
-msgstr ""
+msgstr "लाभ और हानि ड्रिलडाउन"
 
 #: applications/generalledger.php:50
 msgid "Banking &Reports"
-msgstr ""
+msgstr "बैंकिंग रिपोर्ट"
 
 #: applications/generalledger.php:52
 msgid "General Ledger &Reports"
-msgstr ""
+msgstr "जनरल लेजर रिपोर्ट"
 
 #: applications/generalledger.php:56
 msgid "Bank &Accounts"
-msgstr ""
+msgstr "बैंक खाते"
 
 #: applications/generalledger.php:58
 msgid "&Quick Entries"
-msgstr ""
+msgstr "त्वरित प्रविष्टियां"
 
 #: applications/generalledger.php:60
 msgid "Account &Tags"
-msgstr ""
+msgstr "खाता टैग"
 
 #: applications/generalledger.php:63
 msgid "&Currencies"
-msgstr ""
+msgstr "मुद्राओं"
 
 #: applications/generalledger.php:65
 msgid "&Exchange Rates"
-msgstr ""
+msgstr "विनिमय दरें"
 
 #: applications/generalledger.php:68
 msgid "&GL Accounts"
-msgstr ""
+msgstr "जीएल खाते"
 
 #: applications/generalledger.php:70
 msgid "GL Account &Groups"
-msgstr ""
+msgstr "जीएल खाता समूह"
 
 #: applications/generalledger.php:72
 msgid "GL Account &Classes"
-msgstr ""
+msgstr "जीएल अकाउंट क्लासेस"
 
 #: applications/generalledger.php:75
 msgid "&Revaluation of Currency Accounts"
-msgstr ""
+msgstr "मुद्रा खाते का पुनर्मूल्यांकन"
 
 #: applications/inventory.php:16
 msgid "&Items and Inventory"
-msgstr ""
+msgstr "आइटम और इन्वेंटरी"
 
 #: applications/inventory.php:19
 msgid "Inventory Location &Transfers"
-msgstr ""
+msgstr "इन्वेंटरी स्थान स्थानांतरण"
 
 #: applications/inventory.php:21
 msgid "Inventory &Adjustments"
-msgstr ""
+msgstr "इन्वेंटरी समायोजन"
 
 #: applications/inventory.php:25
 msgid "Inventory Item &Movements"
-msgstr ""
+msgstr "इन्वेंटरी आइटम आंदोलनों"
 
 #: applications/inventory.php:27
 msgid "Inventory Item &Status"
-msgstr ""
+msgstr "इन्वेंट्री मद स्थिति"
 
 #: applications/inventory.php:29
 msgid "Inventory &Reports"
-msgstr ""
+msgstr "सूची रिपोर्ट"
 
 #: applications/inventory.php:33
 msgid "&Items"
-msgstr ""
+msgstr "आइटम"
 
 #: applications/inventory.php:35
 msgid "&Foreign Item Codes"
-msgstr ""
+msgstr "विदेशी मद कोड"
 
 #: applications/inventory.php:37
 msgid "Sales &Kits"
-msgstr ""
+msgstr "बिक्री किट"
 
 #: applications/inventory.php:39
 msgid "Item &Categories"
-msgstr ""
+msgstr "आइटम श्रेणियाँ"
 
 #: applications/inventory.php:41
 msgid "Inventory &Locations"
-msgstr ""
+msgstr "इन्वेंटरी स्थान"
 
 #: applications/inventory.php:43
 msgid "Inventory &Movement Types"
@@ -2699,84 +2699,84 @@ msgstr ""
 
 #: applications/inventory.php:45
 msgid "&Units of Measure"
-msgstr ""
+msgstr "मापन की इकाई"
 
 #: applications/inventory.php:47 inventory/manage/items.php:458
 msgid "&Reorder Levels"
-msgstr ""
+msgstr "स्तर पुन: क्रम दें"
 
 #: applications/inventory.php:50
 msgid "Pricing and Costs"
-msgstr ""
+msgstr "मूल्य निर्धारण और लागत"
 
 #: applications/inventory.php:51
 msgid "Sales &Pricing"
-msgstr ""
+msgstr "बिक्री मूल्य निर्धारण"
 
 #: applications/inventory.php:53
 msgid "Purchasing &Pricing"
-msgstr ""
+msgstr "क्रय मूल्य निर्धारण"
 
 #: applications/inventory.php:55 inventory/manage/items.php:457
 msgid "Standard &Costs"
-msgstr ""
+msgstr "मानक लागत"
 
 #: applications/manufacturing.php:16
 msgid "&Manufacturing"
-msgstr ""
+msgstr "विनिर्माण"
 
 #: applications/manufacturing.php:19 sales/sales_order_entry.php:120
 msgid "Work &Order Entry"
-msgstr ""
+msgstr "कार्य आदेश प्रविष्टि"
 
 #: applications/manufacturing.php:21
 msgid "&Outstanding Work Orders"
-msgstr ""
+msgstr "उत्कृष्ट कार्य आदेश"
 
 #: applications/manufacturing.php:25
 #: manufacturing/inquiry/bom_cost_inquiry.php:16
 msgid "Costed Bill Of Material Inquiry"
-msgstr ""
+msgstr "सामग्री पूछताछ की लागत बिल"
 
 #: applications/manufacturing.php:27
 msgid "Inventory Item Where Used &Inquiry"
-msgstr ""
+msgstr "इन्वेंटरी आइटम जहां इस्तेमाल किया और पूछताछ"
 
 #: applications/manufacturing.php:29
 msgid "Work Order &Inquiry"
-msgstr ""
+msgstr "कार्य आदेश जांच"
 
 #: applications/manufacturing.php:31
 msgid "Manufacturing &Reports"
-msgstr ""
+msgstr "विनिर्माण रिपोर्ट"
 
 #: applications/manufacturing.php:35
 msgid "&Bills Of Material"
-msgstr ""
+msgstr "सामग्री के बिल"
 
 #: applications/manufacturing.php:37
 msgid "&Work Centres"
-msgstr ""
+msgstr "कार्य केंद्र"
 
 #: applications/setup.php:16
 msgid "S&etup"
-msgstr ""
+msgstr "सेट अप"
 
 #: applications/setup.php:19
 msgid "&Company Setup"
-msgstr ""
+msgstr "कंपनी सेटअप"
 
 #: applications/setup.php:21
 msgid "&User Accounts Setup"
-msgstr ""
+msgstr "उपयोगकर्ता खाते सेटअप"
 
 #: applications/setup.php:23
 msgid "&Access Setup"
-msgstr ""
+msgstr "प्रवेश सेटअप"
 
 #: applications/setup.php:25
 msgid "&Display Setup"
-msgstr ""
+msgstr "डिस्पले सेट आ करें"
 
 #: applications/setup.php:27
 msgid "&Forms Setup"
@@ -2784,63 +2784,63 @@ msgstr ""
 
 #: applications/setup.php:29
 msgid "&Taxes"
-msgstr ""
+msgstr "करों"
 
 #: applications/setup.php:31
 msgid "Tax &Groups"
-msgstr ""
+msgstr "टैक्स समूह"
 
 #: applications/setup.php:33
 msgid "Item Ta&x Types"
-msgstr ""
+msgstr "आइटम कर प्रकार"
 
 #: applications/setup.php:35
 msgid "System and &General GL Setup"
-msgstr ""
+msgstr "सिस्टम सामान्य जीएल सेटअप"
 
 #: applications/setup.php:37
 msgid "&Fiscal Years"
-msgstr ""
+msgstr "वित्तीय वर्ष"
 
 #: applications/setup.php:39
 msgid "&Print Profiles"
-msgstr ""
+msgstr "प्रिंट प्रोफाइल"
 
 #: applications/setup.php:43
 msgid "Pa&yment Terms"
-msgstr ""
+msgstr "भुगतान की शर्तें"
 
 #: applications/setup.php:45
 msgid "Shi&pping Company"
-msgstr ""
+msgstr "नौवहन कंपनी"
 
 #: applications/setup.php:47
 msgid "&Points of Sale"
-msgstr ""
+msgstr "बिक्री के अंक"
 
 #: applications/setup.php:49
 msgid "&Printers"
-msgstr ""
+msgstr "प्रिंटर"
 
 #: applications/setup.php:51
 msgid "Contact &Categories"
-msgstr ""
+msgstr "संपर्क श्रेणियाँ"
 
 #: applications/setup.php:55
 msgid "&Void a Transaction"
-msgstr ""
+msgstr "एक लेनदेन शून्य करें"
 
 #: applications/setup.php:57
 msgid "View or &Print Transactions"
-msgstr ""
+msgstr "लेनदेन देखें या प्रिंट करें"
 
 #: applications/setup.php:59
 msgid "&Attach Documents"
-msgstr ""
+msgstr "दस्तावेज़ लगाओ"
 
 #: applications/setup.php:61
 msgid "System &Diagnostics"
-msgstr ""
+msgstr "प्रणाली निदान"
 
 #: applications/setup.php:64
 msgid "&Backup and Restore"
@@ -2848,19 +2848,19 @@ msgstr ""
 
 #: applications/setup.php:66
 msgid "Create/Update &Companies"
-msgstr ""
+msgstr "बनाएँ/अपडेट करें कंपनियां"
 
 #: applications/setup.php:68
 msgid "Install/Update &Languages"
-msgstr ""
+msgstr "इंस्टॉल / अद्यतन और भाषाएं"
 
 #: applications/setup.php:70
 msgid "Install/Activate &Extensions"
-msgstr ""
+msgstr "स्थापित/सक्रिय एक्सटेंशन"
 
 #: applications/setup.php:72
 msgid "Install/Activate &Themes"
-msgstr ""
+msgstr "इंस्टॉल करें/सक्रिय करें थीम"
 
 #: applications/setup.php:74
 msgid "Install/Activate &Chart of Accounts"
@@ -2868,91 +2868,91 @@ msgstr "खातों का चार्ट स्थापित / सक्
 
 #: applications/setup.php:76
 msgid "Software &Upgrade"
-msgstr ""
+msgstr "सॉफ्टवेयर अपग्रेड"
 
 #: applications/suppliers.php:16
 msgid "&Purchases"
-msgstr ""
+msgstr "खरीद"
 
 #: applications/suppliers.php:19
 msgid "Purchase &Order Entry"
-msgstr ""
+msgstr "खरीद ऑर्डर प्रविष्टि"
 
 #: applications/suppliers.php:21
 msgid "&Outstanding Purchase Orders Maintenance"
-msgstr ""
+msgstr "बकाया खरीद आदेश रखरखाव"
 
 #: applications/suppliers.php:23
 msgid "Direct &GRN"
-msgstr ""
+msgstr "डायरेक्ट एंड जीआरएन"
 
 #: applications/suppliers.php:28
 msgid "&Payments to Suppliers"
-msgstr ""
+msgstr "आपूर्तिकर्ता को भुगतान"
 
 #: applications/suppliers.php:31
 msgid "Supplier &Invoices"
-msgstr ""
+msgstr "प्रदायक और चालान"
 
 #: applications/suppliers.php:33
 msgid "Supplier &Credit Notes"
-msgstr ""
+msgstr "प्रदायक क्रेडिट नोट्स"
 
 #: applications/suppliers.php:35
 msgid "&Allocate Supplier Payments or Credit Notes"
-msgstr ""
+msgstr "आपूर्तिकर्ता भुगतान या क्रेडिट नोट्स आवंटित करें"
 
 #: applications/suppliers.php:39
 msgid "Purchase Orders &Inquiry"
-msgstr ""
+msgstr "खरीद ऑर्डर पूछताछ"
 
 #: applications/suppliers.php:41
 msgid "Supplier Transaction &Inquiry"
-msgstr ""
+msgstr "प्रदायक लेनदेन जांच"
 
 #: applications/suppliers.php:44
 msgid "Supplier Allocation &Inquiry"
-msgstr ""
+msgstr "आपूर्तिकर्ता आवंटन जांच"
 
 #: applications/suppliers.php:47
 msgid "Supplier and Purchasing &Reports"
-msgstr ""
+msgstr "प्रदायक और खरीद रिपोर्ट"
 
 #: applications/suppliers.php:51
 msgid "&Suppliers"
-msgstr ""
+msgstr "आपूर्तिकर्ता"
 
 #: dimensions/dimension_entry.php:27
 msgid "Dimension Entry"
-msgstr ""
+msgstr "आयाम प्रविष्टि"
 
 #: dimensions/dimension_entry.php:47
 msgid "The dimension has been entered."
-msgstr ""
+msgstr "आयाम दर्ज किया गया है।"
 
 #: dimensions/dimension_entry.php:58
 msgid "The dimension has been updated."
-msgstr ""
+msgstr "आयाम अपडेट कर दिया गया है।"
 
 #: dimensions/dimension_entry.php:68
 msgid "The dimension has been deleted."
-msgstr ""
+msgstr "आयाम हटा दिया गया है।"
 
 #: dimensions/dimension_entry.php:78
 msgid "The dimension has been closed. There can be no more changes to it."
-msgstr ""
+msgstr "आयाम बंद कर दिया गया है। इसमें कोई और परिवर्तन नहीं हो सकता है।"
 
 #: dimensions/dimension_entry.php:88
 msgid "The dimension has been re-opened. "
-msgstr ""
+msgstr "आयाम फिर से खोला गया है।"
 
 #: dimensions/dimension_entry.php:98
 msgid "Enter a &new dimension"
-msgstr ""
+msgstr "एक नया आयाम दर्ज करें"
 
 #: dimensions/dimension_entry.php:100
 msgid "&Select an existing dimension"
-msgstr ""
+msgstr "एक मौजूदा आयाम चुनें"
 
 #: dimensions/dimension_entry.php:116
 msgid "The dimension reference must be entered."
@@ -2975,29 +2975,29 @@ msgstr ""
 
 #: dimensions/dimension_entry.php:131
 msgid "The dimension name must be entered."
-msgstr ""
+msgstr "आयाम नाम दर्ज किया जाना चाहिए।"
 
 #: dimensions/dimension_entry.php:138 manufacturing/work_order_entry.php:154
 #: manufacturing/work_order_entry.php:232 purchasing/po_entry_items.php:238
 msgid "The date entered is in an invalid format."
-msgstr ""
+msgstr "दर्ज की गई तारीख अमान्य प्रारूप में है।"
 
 #: dimensions/dimension_entry.php:145
 msgid "The required by date entered is in an invalid format."
-msgstr ""
+msgstr "दर्ज दिनांक द्वारा आवश्यक एक अवैध प्रारूप में है।"
 
 #: dimensions/dimension_entry.php:190
 msgid ""
 "This dimension cannot be deleted because it has already been processed."
-msgstr ""
+msgstr "यह आयाम हटाया नहीं जा सकता क्योंकि यह पहले से ही संसाधित हो चुका है।"
 
 #: dimensions/dimension_entry.php:234
 msgid "The dimension sent is not valid."
-msgstr ""
+msgstr "भेजा आयाम वैध नहीं है।"
 
 #: dimensions/dimension_entry.php:261 dimensions/dimension_entry.php:268
 msgid "Dimension Reference:"
-msgstr ""
+msgstr "आयाम संदर्भ:"
 
 #: dimensions/dimension_entry.php:277 reporting/reports_main.php:34
 #: reporting/reports_main.php:64 reporting/reports_main.php:80
@@ -3014,62 +3014,62 @@ msgstr ""
 #: reporting/reports_main.php:470 reporting/reports_main.php:480
 #: reporting/reports_main.php:489 reporting/reports_main.php:496
 msgid "Start Date"
-msgstr ""
+msgstr "आरंभ करने की तिथि"
 
 #: dimensions/dimension_entry.php:279 manufacturing/work_order_entry.php:418
 msgid "Date Required By"
-msgstr ""
+msgstr "द्वारा दिनांक आवश्यक"
 
 #: dimensions/dimension_entry.php:281
 msgid "Tags:"
-msgstr ""
+msgstr "टैग:"
 
 #: dimensions/dimension_entry.php:288
 msgid "This Dimension is closed."
-msgstr ""
+msgstr "यह आयाम बंद है"
 
 #: dimensions/dimension_entry.php:293
 msgid "Save changes to dimension"
-msgstr ""
+msgstr "आयाम में परिवर्तन सहेजें"
 
 #: dimensions/dimension_entry.php:295
 msgid "Re-open This Dimension"
-msgstr ""
+msgstr "यह आयाम पुनः खोलें"
 
 #: dimensions/dimension_entry.php:295
 msgid "Mark this dimension as re-opened"
-msgstr ""
+msgstr "इस आयाम को फिर से खोले के रूप में चिह्नित करें"
 
 #: dimensions/dimension_entry.php:297
 msgid "Close This Dimension"
-msgstr ""
+msgstr "यह आयाम बंद करें"
 
 #: dimensions/dimension_entry.php:297
 msgid "Mark this dimension as closed"
-msgstr ""
+msgstr "इस आयाम को बंद के रूप में चिह्नित करें"
 
 #: dimensions/dimension_entry.php:298
 msgid "Delete This Dimension"
-msgstr ""
+msgstr "यह आयाम हटाएं"
 
 #: dimensions/dimension_entry.php:298
 msgid "Delete unused dimension"
-msgstr ""
+msgstr "अप्रयुक्त आयाम हटाएं"
 
 #: dimensions/dimension_entry.php:302 includes/ui/simple_crud_class.inc:225
 #: purchasing/includes/ui/invoice_ui.inc:199
 #: purchasing/includes/ui/invoice_ui.inc:405
 #: purchasing/includes/ui/invoice_ui.inc:407
 msgid "Add"
-msgstr ""
+msgstr "जोड़ना"
 
 #: dimensions/includes/dimensions_ui.inc:24
 msgid "There are no transactions for this dimension for the selected period."
-msgstr ""
+msgstr "चयनित अवधि के लिए इस आयाम के लिए कोई लेनदेन नहीं है।"
 
 #: dimensions/includes/dimensions_ui.inc:28
 msgid "Balance for this Dimension"
-msgstr ""
+msgstr "इस आयाम के लिए शेष राशि"
 
 #: dimensions/includes/dimensions_ui.inc:31 gl/accruals.php:90
 #: gl/inquiry/gl_account_inquiry.php:129 gl/inquiry/gl_trial_balance.php:185
@@ -3080,7 +3080,7 @@ msgstr ""
 #: reporting/rep705.php:238 reporting/rep706.php:185 reporting/rep707.php:210
 #: reporting/rep708.php:192
 msgid "Account"
-msgstr ""
+msgstr "लेखा"
 
 #: dimensions/includes/dimensions_ui.inc:31 gl/accruals.php:98
 #: gl/bank_account_reconcile.php:237 gl/inquiry/bank_inquiry.php:71
@@ -3097,7 +3097,7 @@ msgstr ""
 #: sales/inquiry/customer_allocation_inquiry.php:152
 #: sales/inquiry/customer_inquiry.php:226
 msgid "Debit"
-msgstr ""
+msgstr "नामे"
 
 #: dimensions/includes/dimensions_ui.inc:31 gl/accruals.php:98
 #: gl/bank_account_reconcile.php:238 gl/inquiry/bank_inquiry.php:71
@@ -3115,7 +3115,7 @@ msgstr ""
 #: sales/inquiry/customer_allocation_inquiry.php:153
 #: sales/inquiry/customer_inquiry.php:227
 msgid "Credit"
-msgstr ""
+msgstr "श्रेय"
 
 #: dimensions/includes/dimensions_ui.inc:45
 #: dimensions/inquiry/search_dimensions.php:134 gl/inquiry/bank_inquiry.php:71
@@ -3127,15 +3127,15 @@ msgstr ""
 #: reporting/rep704.php:90 reporting/rep708.php:185
 #: sales/inquiry/customer_allocation_inquiry.php:155
 msgid "Balance"
-msgstr ""
+msgstr "संतुलन"
 
 #: dimensions/inquiry/search_dimensions.php:29
 msgid "Search Outstanding Dimensions"
-msgstr ""
+msgstr "बकाया आयाम खोजें"
 
 #: dimensions/inquiry/search_dimensions.php:34
 msgid "Search Dimensions"
-msgstr ""
+msgstr "खोज आयाम"
 
 #: dimensions/inquiry/search_dimensions.php:73 gl/bank_transfer.php:79
 #: gl/inquiry/journal_inquiry.php:45 gl/manage/revaluate_currencies.php:105
@@ -3152,7 +3152,7 @@ msgstr ""
 #: purchasing/includes/ui/po_ui.inc:176 purchasing/includes/ui/po_ui.inc:181
 #: purchasing/supplier_payment.php:298 sales/customer_payments.php:368
 msgid "Reference:"
-msgstr ""
+msgstr "संदर्भ:"
 
 #: dimensions/inquiry/search_dimensions.php:75
 #: includes/ui/allocation_cart.inc:312 includes/ui/ui_lists.inc:1928
@@ -3168,7 +3168,7 @@ msgstr ""
 #: reporting/rep309.php:92 reporting/rep402.php:87 reporting/rep402.php:95
 #: reporting/rep702.php:61 reporting/rep710.php:86 reporting/rep710.php:87
 msgid "All"
-msgstr ""
+msgstr "सब"
 
 #: dimensions/inquiry/search_dimensions.php:76 gl/inquiry/bank_inquiry.php:49
 #: gl/inquiry/gl_trial_balance.php:54 gl/inquiry/journal_inquiry.php:48
@@ -3178,7 +3178,7 @@ msgstr ""
 #: purchasing/inquiry/supplier_inquiry.php:53
 #: sales/inquiry/customer_inquiry.php:50
 msgid "From:"
-msgstr ""
+msgstr "से:"
 
 #: dimensions/inquiry/search_dimensions.php:77 gl/inquiry/bank_inquiry.php:50
 #: gl/inquiry/gl_trial_balance.php:55 gl/inquiry/journal_inquiry.php:49
@@ -3187,17 +3187,17 @@ msgstr ""
 #: purchasing/inquiry/supplier_inquiry.php:54
 #: sales/inquiry/customer_inquiry.php:51
 msgid "To:"
-msgstr ""
+msgstr "सेवा मेरे:"
 
 #: dimensions/inquiry/search_dimensions.php:79
 #: manufacturing/search_work_orders.php:77
 msgid "Only Overdue:"
-msgstr ""
+msgstr "केवल अतिदेय:"
 
 #: dimensions/inquiry/search_dimensions.php:83
 #: manufacturing/search_work_orders.php:80
 msgid "Only Open:"
-msgstr ""
+msgstr "केवल ओपन:"
 
 #: dimensions/inquiry/search_dimensions.php:132
 #: dimensions/view/view_dimension.php:55 includes/ui/allocation_cart.inc:288
@@ -3216,23 +3216,23 @@ msgstr ""
 #: sales/inquiry/customer_inquiry.php:222
 #: sales/includes/ui/sales_order_ui.inc:589
 msgid "Due Date"
-msgstr ""
+msgstr "नियत तारीख"
 
 #: dimensions/inquiry/search_dimensions.php:143
 msgid "Marked dimensions are overdue."
-msgstr ""
+msgstr "चिह्नित आयाम अतिदेय हैं"
 
 #: dimensions/view/view_dimension.php:20
 msgid "View Dimension"
-msgstr ""
+msgstr "आयाम देखें"
 
 #: dimensions/view/view_dimension.php:49
 msgid "The dimension number sent is not valid."
-msgstr ""
+msgstr "भेजे गए आयाम संख्या मान्य नहीं है।"
 
 #: dimensions/view/view_dimension.php:73
 msgid "This dimension is closed."
-msgstr ""
+msgstr "यह आयाम बंद है"
 
 #: dimensions/view/view_dimension.php:85 gl/inquiry/gl_account_inquiry.php:71
 #: gl/inquiry/tax_inquiry.php:61 purchasing/inquiry/po_search_completed.php:65
@@ -3241,7 +3241,7 @@ msgstr ""
 #: sales/inquiry/sales_deliveries_view.php:104
 #: sales/inquiry/sales_orders_view.php:229
 msgid "from:"
-msgstr ""
+msgstr "से:"
 
 #: dimensions/view/view_dimension.php:86 gl/inquiry/gl_account_inquiry.php:72
 #: gl/inquiry/tax_inquiry.php:62 purchasing/inquiry/po_search_completed.php:66
@@ -3250,26 +3250,26 @@ msgstr ""
 #: sales/inquiry/sales_deliveries_view.php:105
 #: sales/inquiry/sales_orders_view.php:230
 msgid "to:"
-msgstr ""
+msgstr "सेवा मेरे:"
 
 #: dimensions/view/view_dimension.php:87 gl/inquiry/balance_sheet.php:131
 #: gl/inquiry/bank_inquiry.php:52 gl/inquiry/gl_account_inquiry.php:85
 #: gl/inquiry/gl_trial_balance.php:63 gl/inquiry/profit_loss.php:183
 #: gl/inquiry/tax_inquiry.php:63
 msgid "Show"
-msgstr ""
+msgstr "दिखाना"
 
 #: gl/accruals.php:20 includes/access_levels.inc:243
 msgid "Revenue / Cost Accruals"
-msgstr ""
+msgstr "राजस्व / लागत accraals"
 
 #: gl/accruals.php:44
 msgid "The amount can not be 0."
-msgstr ""
+msgstr "राशि 0 नहीं हो सकती"
 
 #: gl/accruals.php:50
 msgid "The periods must be greater than 0."
-msgstr ""
+msgstr "अवधि 0 से अधिक होने चाहिए।"
 
 #: gl/accruals.php:67
 msgid ""
@@ -3280,7 +3280,7 @@ msgstr ""
 #: gl/accruals.php:82
 #, php-format
 msgid "Accruals for %s"
-msgstr ""
+msgstr "%s के लिए Accruals"
 
 #: gl/accruals.php:92 gl/accruals.php:94 gl/accruals.php:203
 #: gl/accruals.php:205 gl/gl_budget.php:71 gl/gl_budget.php:72
@@ -3327,7 +3327,7 @@ msgstr ""
 #: sales/includes/ui/sales_order_ui.inc:444
 #: sales/includes/ui/sales_order_ui.inc:449
 msgid "Dimension"
-msgstr ""
+msgstr "आयाम"
 
 #: gl/accruals.php:98 gl/accruals.php:213 gl/inquiry/bank_inquiry.php:71
 #: gl/inquiry/gl_account_inquiry.php:141 gl/inquiry/gl_account_inquiry.php:143
@@ -3350,45 +3350,45 @@ msgstr ""
 #: sales/customer_credit_invoice.php:364 sales/customer_delivery.php:513
 #: sales/customer_invoice.php:587 sales/includes/ui/sales_credit_ui.inc:339
 msgid "Memo"
-msgstr ""
+msgstr "मेमो"
 
 #: gl/accruals.php:162
 msgid "Revenue / Cost Accruals have been processed."
-msgstr ""
+msgstr "राजस्व / लागत accraals पर कार्रवाई की गई है।"
 
 #: gl/accruals.php:168
 msgid "Showing GL Transactions."
-msgstr ""
+msgstr "जीएल लेनदेन दिखा रहा है"
 
 #: gl/accruals.php:180
 msgid "Weekly"
-msgstr ""
+msgstr "साप्ताहिक"
 
 #: gl/accruals.php:181
 msgid "Bi-weekly"
-msgstr ""
+msgstr "द्वि-साप्ताहिक"
 
 #: gl/accruals.php:182 gl/manage/gl_quick_entries.php:240
 #: gl/includes/ui/gl_journal_ui.inc:55 sales/create_recurrent_invoices.php:134
 #: sales/manage/recurrent_invoices.php:102
 msgid "Monthly"
-msgstr ""
+msgstr "महीने के"
 
 #: gl/accruals.php:183
 msgid "Quarterly"
-msgstr ""
+msgstr "त्रैमासिक"
 
 #: gl/accruals.php:195
 msgid "First date of Accruals"
-msgstr ""
+msgstr "अग्रिम की पहली तारीख"
 
 #: gl/accruals.php:197
 msgid "Accrued Balance Account"
-msgstr ""
+msgstr "अर्जित शेष राशि खाता"
 
 #: gl/accruals.php:200
 msgid "Revenue / Cost Account"
-msgstr ""
+msgstr "राजस्व / लागत खाता"
 
 #: gl/accruals.php:208 gl/gl_budget.php:91 gl/gl_budget.php:93
 #: gl/inquiry/journal_inquiry.php:132 gl/inquiry/tax_inquiry.php:82
@@ -3413,90 +3413,90 @@ msgstr ""
 #: reporting/rep209.php:195 reporting/rep706.php:309 reporting/rep707.php:327
 #: reporting/rep710.php:78 sales/view/view_receipt.php:44
 msgid "Amount"
-msgstr ""
+msgstr "रकम"
 
 #: gl/accruals.php:208
 msgid "Search Amount"
-msgstr ""
+msgstr "खोज मात्रा"
 
 #: gl/accruals.php:210
 msgid "Frequency"
-msgstr ""
+msgstr "आवृत्ति"
 
 #: gl/accruals.php:212
 msgid "Periods"
-msgstr ""
+msgstr "काल"
 
 #: gl/accruals.php:216
 msgid "Show GL Rows"
-msgstr ""
+msgstr "जीएल पंक्तियां दिखाएं"
 
 #: gl/accruals.php:217
 msgid "Process Accruals"
-msgstr ""
+msgstr "प्रोसेस प्रोवालिस"
 
 #: gl/accruals.php:218
 msgid "Are you sure you want to post accruals?"
-msgstr ""
+msgstr "क्या आप निश्चित रूप से संसाधनों को पोस्ट करना चाहते हैं?"
 
 #: gl/bank_account_reconcile.php:33
 msgid "Reconcile Bank Account"
-msgstr ""
+msgstr "Reconcile बैंक खाता"
 
 #: gl/bank_account_reconcile.php:35 gl/bank_transfer.php:30 gl/gl_bank.php:49
 #: gl/inquiry/bank_inquiry.php:30 purchasing/supplier_payment.php:42
 #: sales/customer_payments.php:38
 msgid "There are no bank accounts defined in the system."
-msgstr ""
+msgstr "सिस्टम में परिभाषित कोई बैंक खाता नहीं है"
 
 #: gl/bank_account_reconcile.php:39
 msgid "Invalid reconcile date format"
-msgstr ""
+msgstr "अमान्य मिलान तिथि स्वरूप"
 
 #: gl/bank_account_reconcile.php:56
 msgid "Reconcile this transaction"
-msgstr ""
+msgstr "इस लेनदेन को सुलझाना"
 
 #: gl/bank_account_reconcile.php:166 gl/inquiry/bank_inquiry.php:47
 #: gl/inquiry/gl_account_inquiry.php:70
 msgid "Account:"
-msgstr ""
+msgstr "लेखा:"
 
 #: gl/bank_account_reconcile.php:168
 msgid "Bank Statement:"
-msgstr ""
+msgstr "बैंक कथन:"
 
 #: gl/bank_account_reconcile.php:169
 msgid "New"
-msgstr ""
+msgstr "नया"
 
 #: gl/bank_account_reconcile.php:198
 msgid "Reconcile Date"
-msgstr ""
+msgstr "पुनरावृत्ति तिथि"
 
 #: gl/bank_account_reconcile.php:198
 msgid "Beginning<br>Balance"
-msgstr ""
+msgstr "शेष<br>शुरुआत"
 
 #: gl/bank_account_reconcile.php:199
 msgid "Ending<br>Balance"
-msgstr ""
+msgstr "अंतिम<br>शेष राशि"
 
 #: gl/bank_account_reconcile.php:199
 msgid "Account<br>Total"
-msgstr ""
+msgstr "खाता<br>कुल"
 
 #: gl/bank_account_reconcile.php:199
 msgid "Reconciled<br>Amount"
-msgstr ""
+msgstr "मेल मिलाप<br>राशि"
 
 #: gl/bank_account_reconcile.php:199
 msgid "Difference"
-msgstr ""
+msgstr "अंतर"
 
 #: gl/bank_account_reconcile.php:203
 msgid "Date of bank statement to reconcile"
-msgstr ""
+msgstr "बैंक के बयान की तारीख को सुलझाना"
 
 #: gl/bank_account_reconcile.php:239 gl/inquiry/bank_inquiry.php:71
 #: gl/inquiry/gl_account_inquiry.php:141 gl/inquiry/gl_account_inquiry.php:143
@@ -3504,11 +3504,11 @@ msgstr ""
 #: reporting/rep601.php:79 reporting/rep704.php:84 reporting/rep704.php:86
 #: reporting/rep704.php:89
 msgid "Person/Item"
-msgstr ""
+msgstr "व्यक्ति/मद"
 
 #: gl/bank_account_reconcile.php:249
 msgid "Reconcile"
-msgstr ""
+msgstr "समाधान करना"
 
 #: gl/bank_transfer.php:28
 msgid "Transfer between Bank Accounts"
@@ -3516,54 +3516,54 @@ msgstr ""
 
 #: gl/bank_transfer.php:39 gl/manage/revaluate_currencies.php:35
 msgid "Transfer has been entered"
-msgstr ""
+msgstr "स्थानांतरण दर्ज किया गया है"
 
 #: gl/bank_transfer.php:41 gl/manage/revaluate_currencies.php:37
 msgid "&View the GL Journal Entries for this Transfer"
-msgstr ""
+msgstr "इस हस्तांतरण के लिए जीएल जर्नल प्रविष्टियां देखें"
 
 #: gl/bank_transfer.php:43
 msgid "Enter &Another Transfer"
-msgstr ""
+msgstr "दर्ज करें अन्य स्थानांतरण"
 
 #: gl/bank_transfer.php:66
 msgid "From Account:"
-msgstr ""
+msgstr "अकाउंट से:"
 
 #: gl/bank_transfer.php:70
 msgid "To Account:"
-msgstr ""
+msgstr "खाते में:"
 
 #: gl/bank_transfer.php:77
 msgid "Transfer Date:"
-msgstr ""
+msgstr "हस्तांतरण की तारीख:"
 
 #: gl/bank_transfer.php:87 gl/bank_transfer.php:94
 #: sales/customer_payments.php:397
 msgid "Amount:"
-msgstr ""
+msgstr "रकम:"
 
 #: gl/bank_transfer.php:88 gl/bank_transfer.php:95
 #: purchasing/supplier_payment.php:313 sales/customer_payments.php:383
 msgid "Bank Charge:"
-msgstr ""
+msgstr "बैंक शुल्क:"
 
 #: gl/bank_transfer.php:90
 msgid "Incoming Amount:"
-msgstr ""
+msgstr "आवक राशि:"
 
 #: gl/bank_transfer.php:102
 msgid "Enter Transfer"
-msgstr ""
+msgstr "अंतरण दर्ज करें"
 
 #: gl/bank_transfer.php:128 gl/bank_transfer.php:158 gl/bank_transfer.php:190
 #: purchasing/supplier_payment.php:135 purchasing/supplier_payment.php:141
 msgid "The entered amount is invalid or less than zero."
-msgstr ""
+msgstr "दर्ज की गई राशि अमान्य या शून्य से कम है"
 
 #: gl/bank_transfer.php:133 gl/gl_bank.php:224
 msgid "The total bank amount cannot be 0."
-msgstr ""
+msgstr "कुल बैंक राशि 0 नहीं हो सकती"
 
 #: gl/bank_transfer.php:144
 #, php-format
@@ -3575,13 +3575,13 @@ msgstr ""
 msgid ""
 "The bank transaction would result in exceed of authorized overdraft limit "
 "for transaction: %s #%s on %s."
-msgstr ""
+msgstr "बैंक लेनदेन लेनदेन के लिए अधिकृत ओवरड्राफ्ट सीमा से अधिक होगा: %s #%s %s पर।"
 
 #: gl/bank_transfer.php:163 purchasing/supplier_payment.php:149
 #: sales/customer_payments.php:195
 msgid ""
 "The Bank Charge Account has not been set in System and General GL Setup."
-msgstr ""
+msgstr "सिस्टम और जनरल जीएल सेटअप में बैंक प्रभार खाता सेट नहीं किया गया है।"
 
 #: gl/bank_transfer.php:169 gl/gl_bank.php:248 gl/gl_journal.php:168
 #: gl/manage/revaluate_currencies.php:65 inventory/adjustments.php:94
@@ -3597,44 +3597,44 @@ msgstr ""
 
 #: gl/bank_transfer.php:183
 msgid "The source and destination bank accouts cannot be the same."
-msgstr ""
+msgstr "स्रोत और गंतव्य बैंक के आरोप समान नहीं हो सकते"
 
 #: gl/bank_transfer.php:195
 msgid "The incomming bank amount cannot be 0."
-msgstr ""
+msgstr "इनकमिंग बैंक राशि 0 नहीं हो सकती"
 
 #: gl/gl_bank.php:34
 msgid "Bank Account Payment Entry"
-msgstr ""
+msgstr "बैंक खाता भुगतान प्रवेश"
 
 #: gl/gl_bank.php:37
 msgid "Bank Account Deposit Entry"
-msgstr ""
+msgstr "बैंक खाता जमा प्रवेश"
 
 #: gl/gl_bank.php:40
 msgid "Modify Bank Account Entry"
-msgstr ""
+msgstr "बैंक खाता प्रविष्टि संशोधित करें"
 
 #: gl/gl_bank.php:43
 msgid "Modify Bank Deposit Entry"
-msgstr ""
+msgstr "बैंक जमा प्रविष्टि को संशोधित करें"
 
 #: gl/gl_bank.php:74
 #, php-format
 msgid "Payment %d has been entered"
-msgstr ""
+msgstr "भुगतान %d दर्ज किया गया है"
 
 #: gl/gl_bank.php:76 gl/gl_bank.php:94
 msgid "&View the GL Postings for this Payment"
-msgstr ""
+msgstr "इस भुगतान के लिए जीएल पोस्टिंग देखें"
 
 #: gl/gl_bank.php:78 gl/gl_bank.php:96
 msgid "Enter Another &Payment"
-msgstr ""
+msgstr "एक भुगतान दर्ज करें"
 
 #: gl/gl_bank.php:80 gl/gl_bank.php:98
 msgid "Enter A &Deposit"
-msgstr ""
+msgstr "ए जमा दर्ज करें"
 
 #: gl/gl_bank.php:82 gl/gl_journal.php:61 inventory/adjustments.php:50
 #: manufacturing/work_order_entry.php:68 purchasing/po_entry_items.php:112
@@ -3643,122 +3643,122 @@ msgstr ""
 #: sales/customer_credit_invoice.php:62 sales/customer_invoice.php:75
 #: sales/sales_order_entry.php:237
 msgid "Add an Attachment"
-msgstr ""
+msgstr "एक अटैचमेंट जोड़ें"
 
 #: gl/gl_bank.php:92
 #, php-format
 msgid "Payment %d has been modified"
-msgstr ""
+msgstr "भुगतान %d को संशोधित किया गया है"
 
 #: gl/gl_bank.php:108
 #, php-format
 msgid "Deposit %d has been entered"
-msgstr ""
+msgstr "जमा %d दर्ज किया गया है"
 
 #: gl/gl_bank.php:110
 msgid "View the GL Postings for this Deposit"
-msgstr ""
+msgstr "इस जमा राशि के जीएल पोस्टिंग देखें"
 
 #: gl/gl_bank.php:112
 msgid "Enter Another Deposit"
-msgstr ""
+msgstr "अन्य जमा दर्ज करें"
 
 #: gl/gl_bank.php:114
 msgid "Enter A Payment"
-msgstr ""
+msgstr "एक भुगतान दर्ज करें"
 
 #: gl/gl_bank.php:123
 #, php-format
 msgid "Deposit %d has been modified"
-msgstr ""
+msgstr "जमा %d को संशोधित किया गया है"
 
 #: gl/gl_bank.php:125
 msgid "&View the GL Postings for this Deposit"
-msgstr ""
+msgstr "इस जमा राशि के लिए जीएल पोस्टिंग देखें"
 
 #: gl/gl_bank.php:127
 msgid "Enter Another &Deposit"
-msgstr ""
+msgstr "एक जमा दर्ज करें"
 
 #: gl/gl_bank.php:129
 msgid "Enter A &Payment"
-msgstr ""
+msgstr "ए भुगतान दर्ज करें"
 
 #: gl/gl_bank.php:218
 msgid "You must enter at least one payment line."
-msgstr ""
+msgstr "आपको कम से कम एक भुगतान लाइन दर्ज करनी होगी।"
 
 #: gl/gl_bank.php:235 purchasing/supplier_payment.php:200
 #, php-format
 msgid "The total bank amount exceeds allowed limit (%s)."
-msgstr ""
+msgstr "कुल बैंक की राशि अनुमत सीमा से अधिक है (%s)"
 
 #: gl/gl_bank.php:260
 msgid "The entered date for the payment is invalid."
-msgstr ""
+msgstr "भुगतान के लिए प्रविष्ट दिनांक अमान्य है।"
 
 #: gl/gl_bank.php:272
 msgid "You have to select customer and customer branch."
-msgstr ""
+msgstr "आपको ग्राहक और ग्राहक शाखा का चयन करना होगा।"
 
 #: gl/gl_bank.php:276
 msgid "You have to select supplier."
-msgstr ""
+msgstr "आपको सप्लायर का चयन करना होगा"
 
 #: gl/gl_bank.php:284
 msgid "Settled amount have to be positive number."
-msgstr ""
+msgstr "निर्धारित धन सकारात्मक संख्या में होना चाहिए।"
 
 #: gl/gl_bank.php:330
 msgid "The amount entered is not a valid number or is less than zero."
-msgstr ""
+msgstr "दर्ज की गई राशि मान्य संख्या नहीं है या शून्य से कम है"
 
 #: gl/gl_bank.php:336 gl/manage/exchange_rates.php:39
 msgid "The exchange rate cannot be zero or a negative number."
-msgstr ""
+msgstr "विनिमय दर शून्य या नकारात्मक संख्या नहीं हो सकती।"
 
 #: gl/gl_bank.php:408
 msgid "Payment Items"
-msgstr ""
+msgstr "भुगतान आइटम"
 
 #: gl/gl_bank.php:408
 msgid "Deposit Items"
-msgstr ""
+msgstr "जमा आइटम"
 
 #: gl/gl_bank.php:416
 msgid "Process Payment"
-msgstr ""
+msgstr "भुगतान की प्रक्रिया"
 
 #: gl/gl_bank.php:416
 msgid "Process Deposit"
-msgstr ""
+msgstr "प्रक्रिया जमा"
 
 #: gl/gl_budget.php:18
 msgid "Budget Entry"
-msgstr ""
+msgstr "बजट प्रविष्टि"
 
 #: gl/gl_budget.php:26 gl/manage/gl_accounts.php:23
 msgid ""
 "There are no account groups defined. Please define at least one account "
 "group before entering accounts."
-msgstr ""
+msgstr "कोई खाता समूह परिभाषित नहीं है खाते दर्ज करने से पहले कृपया कम से कम एक खाता समूह को परिभाषित करें"
 
 #: gl/gl_budget.php:45
 msgid "The Budget has been saved."
-msgstr ""
+msgstr "बजट को बचाया गया है"
 
 #: gl/gl_budget.php:47
 msgid "The Budget has been deleted."
-msgstr ""
+msgstr "बजट हटा दिया गया है"
 
 #: gl/gl_budget.php:64 gl/manage/gl_accounts.php:231
 #: gl/manage/gl_accounts.php:241
 msgid "Account Code:"
-msgstr ""
+msgstr "खाता कोड:"
 
 #: gl/gl_budget.php:84 gl/manage/exchange_rates.php:142
 msgid "Get"
-msgstr ""
+msgstr "प्राप्त"
 
 #: gl/gl_budget.php:91 gl/gl_budget.php:93 gl/inquiry/profit_loss.php:236
 #: gl/manage/gl_quick_entries.php:240 reporting/rep101.php:126
@@ -3773,15 +3773,15 @@ msgstr ""
 #: reporting/rep708.php:209 reporting/rep708.php:216 reporting/rep709.php:111
 #: reporting/rep710.php:85
 msgid "Period"
-msgstr ""
+msgstr "अवधि"
 
 #: gl/gl_budget.php:91
 msgid "Dim. incl."
-msgstr ""
+msgstr "मंद। incl।"
 
 #: gl/gl_budget.php:91 gl/gl_budget.php:93
 msgid "Last Year"
-msgstr ""
+msgstr "पिछले साल"
 
 #: gl/gl_budget.php:127 gl/inquiry/balance_sheet.php:98
 #: gl/inquiry/balance_sheet.php:205 gl/inquiry/balance_sheet.php:236
@@ -3820,181 +3820,181 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:168
 #: sales/includes/ui/sales_order_ui.inc:148
 msgid "Total"
-msgstr ""
+msgstr "कुल"
 
 #: gl/gl_journal.php:32
 #, php-format
 msgid "Modifying Journal Transaction # %d."
-msgstr ""
+msgstr "संशोधित जर्नल लेन-देन # %d."
 
 #: gl/gl_journal.php:36 includes/sysnames.inc:22 includes/sysnames.inc:149
 msgid "Journal Entry"
-msgstr ""
+msgstr "जर्नल प्रविष्टि"
 
 #: gl/gl_journal.php:54
 msgid "Journal entry has been entered"
-msgstr ""
+msgstr "जर्नल प्रविष्टि दर्ज की गई है"
 
 #: gl/gl_journal.php:56 gl/gl_journal.php:71
 msgid "&View this Journal Entry"
-msgstr ""
+msgstr "इस जर्नल प्रविष्टि को देखें"
 
 #: gl/gl_journal.php:59
 msgid "Enter &New Journal Entry"
-msgstr ""
+msgstr "दर्ज करें नया जर्नल प्रवेश करें"
 
 #: gl/gl_journal.php:69
 msgid "Journal entry has been updated"
-msgstr ""
+msgstr "जर्नल प्रविष्टि को अपडेट किया गया है"
 
 #: gl/gl_journal.php:73
 msgid "Return to Journal &Inquiry"
-msgstr ""
+msgstr "जर्नल जांच पर लौटें"
 
 #: gl/gl_journal.php:86
 msgid ""
 "You can edit directly only journal entries created via Journal Entry page."
-msgstr ""
+msgstr "आप सीधे जर्नल प्रविष्टि पृष्ठ के माध्यम से बनाई गई जर्नल प्रविष्टियों को सीधे संपादित कर सकते हैं।"
 
 #: gl/gl_journal.php:87
 msgid "Entry &New Journal Entry"
-msgstr ""
+msgstr "प्रवेश नई जर्नल प्रवेश"
 
 #: gl/gl_journal.php:143
 msgid "You must enter at least one journal line."
-msgstr ""
+msgstr "आपको कम से कम एक जर्नल लाइन दर्ज करना होगा"
 
 #: gl/gl_journal.php:149
 msgid ""
 "The journal must balance (debits equal to credits) before it can be "
 "processed."
-msgstr ""
+msgstr "इस पत्रिका को संसाधित करने से पहले संतुलन (क्रेडिट के बराबर डेबिट) चाहिए।"
 
 #: gl/gl_journal.php:211 gl/gl_journal.php:218
 msgid "Dimension is closed."
-msgstr ""
+msgstr "आयाम बंद है"
 
 #: gl/gl_journal.php:225
 msgid "You must enter either a debit amount or a credit amount."
-msgstr ""
+msgstr "आपको डेबिट राशि या क्रेडिट राशि दर्ज करनी होगी।"
 
 #: gl/gl_journal.php:232
 msgid "The debit amount entered is not a valid number or is less than zero."
-msgstr ""
+msgstr "दर्ज की गई डेबिट राशि मान्य संख्या नहीं है या शून्य से कम है"
 
 #: gl/gl_journal.php:237
 msgid "The credit amount entered is not a valid number or is less than zero."
-msgstr ""
+msgstr "दर्ज की गई क्रेडिट राशि मान्य संख्या नहीं है या शून्य से कम है।"
 
 #: gl/gl_journal.php:243 includes/ui/ui_view.inc:732
 #: purchasing/supplier_credit.php:128 purchasing/supplier_invoice.php:129
 msgid "Cannot post to GL account used by more than one tax type."
-msgstr ""
+msgstr "एक से अधिक कर प्रकार द्वारा उपयोग किए गए जीएल खाते में पोस्ट नहीं किया जा सकता।"
 
 #: gl/gl_journal.php:250
 msgid ""
 "You cannot make a journal entry for a bank account. Please use one of the "
 "banking functions for bank transactions."
-msgstr ""
+msgstr "आप किसी बैंक खाते के लिए एक जर्नल प्रविष्टि नहीं बना सकते। बैंक लेनदेन के लिए कृपया बैंकिंग कार्यों में से किसी एक का उपयोग करें।"
 
 #: gl/gl_journal.php:329
 msgid "Rows"
-msgstr ""
+msgstr "पंक्तियाँ"
 
 #: gl/gl_journal.php:335
 msgid "Process Journal Entry"
-msgstr ""
+msgstr "प्रक्रिया जर्नल प्रविष्टि"
 
 #: gl/gl_journal.php:336
 msgid "Process journal entry only if debits equal to credits"
-msgstr ""
+msgstr "प्रक्रिया जर्नल प्रविष्टि, यदि क्रेडिट के बराबर डेबिट होती है"
 
 #: gl/inquiry/balance_sheet.php:27
 msgid "Balance Sheet Drilldown"
-msgstr ""
+msgstr "बैलेंस शीट ड्रिलडाउन"
 
 #: gl/inquiry/balance_sheet.php:126
 msgid "As at:"
-msgstr ""
+msgstr "पर जैसा:"
 
 #: gl/inquiry/balance_sheet.php:228 gl/inquiry/profit_loss.php:299
 #: reporting/rep705.php:325 reporting/rep706.php:278 reporting/rep706.php:303
 #: reporting/rep707.php:309 reporting/rep707.php:315
 msgid "Calculated Return"
-msgstr ""
+msgstr "परिकलित गणना"
 
 #: gl/inquiry/balance_sheet.php:236 includes/sysnames.inc:120
 #: reporting/rep706.php:290
 msgid "Liabilities"
-msgstr ""
+msgstr "देयताएं"
 
 #: gl/inquiry/balance_sheet.php:236 reporting/rep706.php:290
 msgid " and "
-msgstr ""
+msgstr " तथा"
 
 #: gl/inquiry/balance_sheet.php:236 reporting/rep706.php:290
 msgid "Equities"
-msgstr ""
+msgstr "इक्विटीज"
 
 #: gl/inquiry/bank_inquiry.php:28 reporting/rep601.php:72
 msgid "Bank Statement"
-msgstr ""
+msgstr "बैंक कथन"
 
 #: gl/inquiry/bank_inquiry.php:78 gl/inquiry/gl_account_inquiry.php:162
 #: reporting/rep601.php:104 reporting/rep704.php:144
 msgid "Opening Balance"
-msgstr ""
+msgstr "प्रारंभिक शेष"
 
 #: gl/inquiry/bank_inquiry.php:124 gl/inquiry/gl_account_inquiry.php:213
 #: gl/inquiry/gl_trial_balance.php:234 reporting/rep601.php:157
 #: reporting/rep704.php:192 reporting/rep708.php:262
 msgid "Ending Balance"
-msgstr ""
+msgstr "अंतिम शेष"
 
 #: gl/inquiry/gl_account_inquiry.php:31
 msgid "General Ledger Inquiry"
-msgstr ""
+msgstr "जनरल लेजर जांच"
 
 #: gl/inquiry/gl_account_inquiry.php:70
 msgid "All Accounts"
-msgstr ""
+msgstr "सभी खाते"
 
 #: gl/inquiry/gl_account_inquiry.php:83
 msgid "Amount min:"
-msgstr ""
+msgstr "राशि मिनट:"
 
 #: gl/inquiry/gl_account_inquiry.php:84
 msgid "Amount max:"
-msgstr ""
+msgstr "अधिकतम राशि:"
 
 #: gl/inquiry/gl_account_inquiry.php:222
 msgid ""
 "No general ledger transactions have been created for the specified criteria."
-msgstr ""
+msgstr "निर्दिष्ट मापदंड के लिए कोई सामान्य खाता लेनदेन नहीं बनाया गया है।"
 
 #: gl/inquiry/gl_trial_balance.php:28 reporting/rep708.php:219
 msgid "Trial Balance"
-msgstr ""
+msgstr "संतुलन परीक्षण"
 
 #: gl/inquiry/gl_trial_balance.php:60
 msgid "No zero values"
-msgstr ""
+msgstr "कोई शून्य मान नहीं है"
 
 #: gl/inquiry/gl_trial_balance.php:61 reporting/reports_main.php:388
 #: reporting/reports_main.php:438 reporting/reports_main.php:483
 msgid "Only balances"
-msgstr ""
+msgstr "केवल शेष राशि"
 
 #: gl/inquiry/gl_trial_balance.php:95 gl/inquiry/gl_trial_balance.php:156
 #: reporting/rep706.php:308 reporting/rep707.php:326 reporting/rep708.php:51
 #: reporting/rep708.php:126 sales/create_recurrent_invoices.php:134
 #: sales/manage/recurrent_invoices.php:102
 msgid "Group"
-msgstr ""
+msgstr "समूह"
 
 #: gl/inquiry/gl_trial_balance.php:173
 msgid "The from date cannot be bigger than the fiscal year end."
-msgstr ""
+msgstr "तिथि से वित्तीय वर्ष के अंत से अधिक बड़ा नहीं हो सकता"
 
 #: gl/inquiry/gl_trial_balance.php:186 gl/manage/bank_accounts.php:106
 #: gl/view/gl_trans_view.php:63 gl/view/gl_trans_view.php:66
@@ -4002,126 +4002,126 @@ msgstr ""
 #: reporting/rep702.php:53 reporting/rep705.php:238 reporting/rep706.php:185
 #: reporting/rep707.php:210 reporting/rep708.php:192
 msgid "Account Name"
-msgstr ""
+msgstr "खाते का नाम"
 
 #: gl/inquiry/gl_trial_balance.php:187 reporting/rep708.php:185
 msgid "Brought Forward"
-msgstr ""
+msgstr "आगे लाया"
 
 #: gl/inquiry/gl_trial_balance.php:188 reporting/rep708.php:185
 msgid "This Period"
-msgstr ""
+msgstr "यह अवधि"
 
 #: gl/inquiry/gl_trial_balance.php:207 gl/manage/gl_account_types.php:128
 msgid "Class"
-msgstr ""
+msgstr "कक्षा"
 
 #: gl/inquiry/gl_trial_balance.php:242 reporting/rep708.php:283
 msgid ""
 "The Opening Balance is not in balance, probably due to a non closed Previous"
 " Fiscalyear."
-msgstr ""
+msgstr "खुलने का शेष संतुलन में नहीं है, संभवत: एक गैर बंद पिछला फिस्कलिस्ट के कारण।"
 
 #: gl/inquiry/journal_inquiry.php:27
 msgid "Journal Inquiry"
-msgstr ""
+msgstr "जर्नल जांच"
 
 #: gl/inquiry/journal_inquiry.php:45
 msgid "Enter reference fragment or leave empty"
-msgstr ""
+msgstr "संदर्भ टुकड़ा दर्ज करें या खाली छोड़ दें"
 
 #: gl/inquiry/journal_inquiry.php:51
 msgid "Show closed:"
-msgstr ""
+msgstr "बंद दिखाएं:"
 
 #: gl/inquiry/journal_inquiry.php:56
 msgid "Enter memo fragment or leave empty"
-msgstr ""
+msgstr "मेमो टुकड़ा दर्ज करें या खाली छोड़ें"
 
 #: gl/inquiry/journal_inquiry.php:130
 msgid "Trans #"
-msgstr ""
+msgstr "ट्रांस #"
 
 #: gl/inquiry/journal_inquiry.php:134 reporting/rep710.php:77
 #: reporting/rep710.php:87 reporting/reports_main.php:499
 msgid "User"
-msgstr ""
+msgstr "उपयोगकर्ता"
 
 #: gl/inquiry/profit_loss.php:27
 msgid "Profit & Loss Drilldown"
-msgstr ""
+msgstr "लाभ और हानि ड्रिलडाउन"
 
 #: gl/inquiry/profit_loss.php:173 reporting/rep707.php:210
 #: reporting/includes/reports_classes.inc:248
 msgid "Accumulated"
-msgstr ""
+msgstr "जमा हुआ"
 
 #: gl/inquiry/profit_loss.php:173 reporting/rep707.php:255
 #: reporting/includes/reports_classes.inc:248
 msgid "Period Y-1"
-msgstr ""
+msgstr "अवधि वाई -1"
 
 #: gl/inquiry/profit_loss.php:173 reporting/rep707.php:246
 #: reporting/includes/reports_classes.inc:248
 msgid "Budget"
-msgstr ""
+msgstr "बजट"
 
 #: gl/inquiry/profit_loss.php:174 reporting/reports_main.php:375
 #: reporting/reports_main.php:426 reporting/reports_main.php:472
 msgid "Compare to"
-msgstr ""
+msgstr "से तुलना"
 
 #: gl/inquiry/profit_loss.php:235
 msgid "Group/Account Name"
-msgstr ""
+msgstr "समूह / खाता नाम"
 
 #: gl/inquiry/profit_loss.php:238 reporting/rep707.php:210
 msgid "Achieved %"
-msgstr ""
+msgstr "हासिल %"
 
 #: gl/inquiry/tax_inquiry.php:30
 msgid "Tax Inquiry"
-msgstr ""
+msgstr "कर पूछताछ"
 
 #: gl/inquiry/tax_inquiry.php:82 reporting/rep709.php:188
 msgid "Outputs"
-msgstr ""
+msgstr "आउटपुट"
 
 #: gl/inquiry/tax_inquiry.php:82 reporting/rep709.php:188
 msgid "Inputs"
-msgstr ""
+msgstr "इनपुट"
 
 #: gl/inquiry/tax_inquiry.php:100
 msgid "Charged on sales"
-msgstr ""
+msgstr "बिक्री पर चार्ज"
 
 #: gl/inquiry/tax_inquiry.php:100 reporting/rep709.php:188
 msgid "Output Tax"
-msgstr ""
+msgstr "उत्पादन कर"
 
 #: gl/inquiry/tax_inquiry.php:106
 msgid "Paid on purchases"
-msgstr ""
+msgstr "खरीद पर भुगतान किया"
 
 #: gl/inquiry/tax_inquiry.php:106 reporting/rep709.php:188
 msgid "Input Tax"
-msgstr ""
+msgstr "इनपुट कर"
 
 #: gl/inquiry/tax_inquiry.php:112
 msgid "Net payable or collectible"
-msgstr ""
+msgstr "शुद्ध देय या संग्रहणीय"
 
 #: gl/inquiry/tax_inquiry.php:119 reporting/rep709.php:219
 msgid "Total payable or refund"
-msgstr ""
+msgstr "कुल देय या धनवापसी"
 
 #: gl/manage/bank_accounts.php:16 reporting/reports_main.php:317
 msgid "Bank Accounts"
-msgstr ""
+msgstr "बैंक खाते"
 
 #: gl/manage/bank_accounts.php:33
 msgid "The bank account name cannot be empty."
-msgstr ""
+msgstr "बैंक खाता नाम रिक्त नहीं हो सकता।"
 
 #: gl/manage/bank_accounts.php:39
 msgid "The GL account selected is already in use. Select another GL account."
@@ -4129,27 +4129,27 @@ msgstr ""
 
 #: gl/manage/bank_accounts.php:52
 msgid "Bank account has been updated"
-msgstr ""
+msgstr "बैंक खाता अपडेट किया गया है"
 
 #: gl/manage/bank_accounts.php:61
 msgid "New bank account has been added"
-msgstr ""
+msgstr "नया बैंक खाता जोड़ा गया है"
 
 #: gl/manage/bank_accounts.php:76
 msgid ""
 "Cannot delete this bank account because transactions have been created using"
 " this account."
-msgstr ""
+msgstr "इस बैंक खाते को हटा नहीं सकते क्योंकि इस खाते का उपयोग करके लेनदेन का निर्माण किया गया है।"
 
 #: gl/manage/bank_accounts.php:82
 msgid ""
 "Cannot delete this bank account because POS definitions have been created "
 "using this account."
-msgstr ""
+msgstr "इस बैंक खाते को नहीं हटा सकते क्योंकि इस खाते का उपयोग करके पीओएस परिभाषाएं बनाई गई हैं।"
 
 #: gl/manage/bank_accounts.php:87
 msgid "Selected bank account has been deleted"
-msgstr ""
+msgstr "चयनित बैंक खाता हटा दिया गया है"
 
 #: gl/manage/bank_accounts.php:106 gl/view/bank_transfer_view.php:69
 #: gl/view/bank_transfer_view.php:78 gl/view/gl_deposit_view.php:66
@@ -4183,272 +4183,272 @@ msgstr ""
 #: sales/inquiry/sales_orders_view.php:272
 #: sales/inquiry/sales_orders_view.php:286
 msgid "Currency"
-msgstr ""
+msgstr "मुद्रा"
 
 #: gl/manage/bank_accounts.php:106
 msgid "GL Account"
-msgstr ""
+msgstr "जीएल खाता"
 
 #: gl/manage/bank_accounts.php:107 reporting/includes/doctext.inc:247
 msgid "Bank"
-msgstr ""
+msgstr "बैंक"
 
 #: gl/manage/bank_accounts.php:107 includes/ui/ui_view.inc:547
 msgid "Number"
-msgstr ""
+msgstr "संख्या"
 
 #: gl/manage/bank_accounts.php:107
 msgid "Bank Address"
-msgstr ""
+msgstr "बैंक का पता"
 
 #: gl/manage/bank_accounts.php:107
 msgid "Dflt"
-msgstr ""
+msgstr "Dflt"
 
 #: gl/manage/bank_accounts.php:163
 msgid "Bank Account Name:"
-msgstr ""
+msgstr "बैंक खाता नाम:"
 
 #: gl/manage/bank_accounts.php:167 gl/manage/bank_accounts.php:171
 msgid "Account Type:"
-msgstr ""
+msgstr "खाते का प्रकार:"
 
 #: gl/manage/bank_accounts.php:175 gl/manage/bank_accounts.php:179
 msgid "Bank Account Currency:"
-msgstr ""
+msgstr "बैंक खाते की मुद्रा:"
 
 #: gl/manage/bank_accounts.php:182
 msgid "Default currency account:"
-msgstr ""
+msgstr "डिफ़ॉल्ट मुद्रा खाता:"
 
 #: gl/manage/bank_accounts.php:185 gl/manage/bank_accounts.php:187
 msgid "Bank Account GL Code:"
-msgstr ""
+msgstr "बैंक खाता जीएल कोड:"
 
 #: gl/manage/bank_accounts.php:189
 msgid "Bank Name:"
-msgstr ""
+msgstr "बैंक का नाम:"
 
 #: gl/manage/bank_accounts.php:190
 msgid "Bank Account Number:"
-msgstr ""
+msgstr "बैंक खाता संख्या:"
 
 #: gl/manage/bank_accounts.php:191
 msgid "Bank Address:"
-msgstr ""
+msgstr "बैंक का पता:"
 
 #: gl/manage/currencies.php:16 includes/access_levels.inc:223
 msgid "Currencies"
-msgstr ""
+msgstr "मुद्राओं"
 
 #: gl/manage/currencies.php:29
 msgid "The currency abbreviation must be entered."
-msgstr ""
+msgstr "मुद्रा संक्षिप्त नाम दर्ज किया जाना चाहिए।"
 
 #: gl/manage/currencies.php:35
 msgid "The currency name must be entered."
-msgstr ""
+msgstr "मुद्रा का नाम दर्ज किया जाना चाहिए।"
 
 #: gl/manage/currencies.php:41
 msgid "The currency symbol must be entered."
-msgstr ""
+msgstr "मुद्रा प्रतीक दर्ज किया जाना चाहिए।"
 
 #: gl/manage/currencies.php:47
 msgid "The hundredths name must be entered."
-msgstr ""
+msgstr "सौवां नाम दर्ज किया जाना चाहिए"
 
 #: gl/manage/currencies.php:69
 msgid "Selected currency settings has been updated"
-msgstr ""
+msgstr "चयनित मुद्रा सेटिंग को अपडेट कर दिया गया है"
 
 #: gl/manage/currencies.php:76
 msgid "New currency has been added"
-msgstr ""
+msgstr "नई मुद्रा जोड़ दी गई है"
 
 #: gl/manage/currencies.php:92
 msgid ""
 "Cannot delete this currency, because customer accounts have been created "
 "referring to this currency."
-msgstr ""
+msgstr "इस मुद्रा को नहीं हटा सकते, क्योंकि ग्राहक खातों को इस मुद्रा का जिक्र किया गया है।"
 
 #: gl/manage/currencies.php:98
 msgid ""
 "Cannot delete this currency, because supplier accounts have been created "
 "referring to this currency."
-msgstr ""
+msgstr "इस मुद्रा को हटा नहीं सकते हैं, क्योंकि आपूर्तिकर्ता खाते इस मुद्रा के संदर्भ में बनाए गए हैं"
 
 #: gl/manage/currencies.php:104
 msgid ""
 "Cannot delete this currency, because the company preferences uses this "
 "currency."
-msgstr ""
+msgstr "इस मुद्रा को हटा नहीं सकते हैं, क्योंकि कंपनी प्राथमिकताएं इस मुद्रा का उपयोग करती हैं।"
 
 #: gl/manage/currencies.php:111
 msgid ""
 "Cannot delete this currency, because thre are bank accounts that use this "
 "currency."
-msgstr ""
+msgstr "इस मुद्रा को नहीं हटा सकते, क्योंकि ये बैंक खाते हैं जो इस मुद्रा का उपयोग करते हैं।"
 
 #: gl/manage/currencies.php:126
 msgid "Selected currency has been deleted"
-msgstr ""
+msgstr "चयनित मुद्रा हटा दी गई है"
 
 #: gl/manage/currencies.php:139
 msgid "Abbreviation"
-msgstr ""
+msgstr "संक्षिप्त"
 
 #: gl/manage/currencies.php:139
 msgid "Symbol"
-msgstr ""
+msgstr "प्रतीक"
 
 #: gl/manage/currencies.php:139
 msgid "Currency Name"
-msgstr ""
+msgstr "मुद्रा का नाम"
 
 #: gl/manage/currencies.php:140
 msgid "Hundredths name"
-msgstr ""
+msgstr "सौवां नाम"
 
 #: gl/manage/currencies.php:140
 msgid "Country"
-msgstr ""
+msgstr "देश"
 
 #: gl/manage/currencies.php:140
 msgid "Auto update"
-msgstr ""
+msgstr "ऑटो अपडेट"
 
 #: gl/manage/currencies.php:175
 msgid "The marked currency is the home currency which cannot be deleted."
-msgstr ""
+msgstr "चिह्नित मुद्रा होम मुद्रा है जिसे हटाया नहीं जा सकता।"
 
 #: gl/manage/currencies.php:201 gl/manage/currencies.php:206
 msgid "Currency Abbreviation:"
-msgstr ""
+msgstr "मुद्रा संक्षिप्त:"
 
 #: gl/manage/currencies.php:209
 msgid "Currency Symbol:"
-msgstr ""
+msgstr "मुद्रा प्रतीक:"
 
 #: gl/manage/currencies.php:210
 msgid "Currency Name:"
-msgstr ""
+msgstr "मुद्रा नाम:"
 
 #: gl/manage/currencies.php:211
 msgid "Hundredths Name:"
-msgstr ""
+msgstr "सौवां नाम:"
 
 #: gl/manage/currencies.php:212
 msgid "Country:"
-msgstr ""
+msgstr "देश:"
 
 #: gl/manage/currencies.php:213
 msgid "Automatic exchange rate update:"
-msgstr ""
+msgstr "स्वचालित विनिमय दर अद्यतन:"
 
 #: gl/manage/exchange_rates.php:24
 msgid "Exchange Rates"
-msgstr ""
+msgstr "विनिमय दरें"
 
 #: gl/manage/exchange_rates.php:45
 msgid "The exchange rate for the date is already there."
-msgstr ""
+msgstr "तिथि के लिए विनिमय दर पहले से ही है"
 
 #: gl/manage/exchange_rates.php:127 gl/manage/exchange_rates.php:133
 msgid "Date to Use From:"
-msgstr ""
+msgstr "से उपयोग करने की तिथि:"
 
 #: gl/manage/exchange_rates.php:141 includes/ui/ui_view.inc:325
 msgid "Exchange Rate:"
-msgstr ""
+msgstr "विनिमय दर:"
 
 #: gl/manage/exchange_rates.php:142
 msgid "Get current rate from"
-msgstr ""
+msgstr "से वर्तमान दर प्राप्त करें"
 
 #: gl/manage/exchange_rates.php:148
 msgid "Exchange rates are entered against the company currency."
-msgstr ""
+msgstr "एक्सचेंज दरें कंपनी मुद्रा के खिलाफ दर्ज की गई हैं"
 
 #: gl/manage/exchange_rates.php:179
 msgid "Select a currency :"
-msgstr ""
+msgstr "एक मुद्रा चुनें:"
 
 #: gl/manage/exchange_rates.php:195
 msgid "Date to Use From"
-msgstr ""
+msgstr "से उपयोग करने की तिथि"
 
 #: gl/manage/exchange_rates.php:196
 msgid "Exchange Rate"
-msgstr ""
+msgstr "विनिमय दर"
 
 #: gl/manage/exchange_rates.php:205
 msgid "The selected currency is the company currency."
-msgstr ""
+msgstr "चयनित मुद्रा कंपनी मुद्रा है"
 
 #: gl/manage/exchange_rates.php:206
 msgid ""
 "The company currency is the base currency so exchange rates cannot be set "
 "for it."
-msgstr ""
+msgstr "कंपनी मुद्रा आधार मुद्रा है इसलिए विनिमय दरों को इसके लिए सेट नहीं किया जा सकता है।"
 
 #: gl/manage/gl_account_classes.php:16
 msgid "GL Account Classes"
-msgstr ""
+msgstr "जीएल अकाउंट क्लासेस"
 
 #: gl/manage/gl_account_classes.php:31
 msgid "The account class ID cannot be empty."
-msgstr ""
+msgstr "खाता वर्ग आईडी रिक्त नहीं हो सकती।"
 
 #: gl/manage/gl_account_classes.php:37
 msgid "The account class name cannot be empty."
-msgstr ""
+msgstr "खाता वर्ग का नाम रिक्त नहीं हो सकता।"
 
 #: gl/manage/gl_account_classes.php:57
 msgid "Selected account class settings has been updated"
-msgstr ""
+msgstr "चयनित खाता श्रेणी सेटिंग को अपडेट कर दिया गया है"
 
 #: gl/manage/gl_account_classes.php:62
 msgid "New account class has been added"
-msgstr ""
+msgstr "नया खाता वर्ग जोड़ा गया है"
 
 #: gl/manage/gl_account_classes.php:77
 msgid ""
 "Cannot delete this account class because GL account types have been created "
 "referring to it."
-msgstr ""
+msgstr "इस खाता वर्ग को नहीं हटाया जा सकता क्योंकि GL खाते प्रकार इसे संदर्भित करते हुए बनाया गया है।"
 
 #: gl/manage/gl_account_classes.php:93
 msgid "Selected account class has been deleted"
-msgstr ""
+msgstr "चयनित खाता वर्ग हटा दिया गया है"
 
 #: gl/manage/gl_account_classes.php:110
 msgid "Class ID"
-msgstr ""
+msgstr "कक्षा आईडी"
 
 #: gl/manage/gl_account_classes.php:110
 msgid "Class Name"
-msgstr ""
+msgstr "कक्षा का नाम"
 
 #: gl/manage/gl_account_classes.php:110
 msgid "Class Type"
-msgstr ""
+msgstr "कक्षा प्रकार"
 
 #: gl/manage/gl_account_classes.php:112 gl/manage/gl_account_classes.php:169
 #: reporting/rep706.php:215
 msgid "Balance Sheet"
-msgstr ""
+msgstr "तुलन पत्र"
 
 #: gl/manage/gl_account_classes.php:157 gl/manage/gl_account_classes.php:163
 msgid "Class ID:"
-msgstr ""
+msgstr "कक्षा आईडी:"
 
 #: gl/manage/gl_account_classes.php:166
 msgid "Class Name:"
-msgstr ""
+msgstr "कक्षा का नाम:"
 
 #: gl/manage/gl_account_classes.php:171
 msgid "Class Type:"
-msgstr ""
+msgstr "कक्षा का प्रकार:"
 
 #: gl/manage/gl_accounts.php:16 reporting/rep701.php:117
 msgid "Chart of Accounts"
@@ -4456,346 +4456,346 @@ msgstr "खातों का चार्ट"
 
 #: gl/manage/gl_accounts.php:53
 msgid "The account code must be entered."
-msgstr ""
+msgstr "खाता कोड दर्ज किया जाना चाहिए।"
 
 #: gl/manage/gl_accounts.php:59
 msgid "The account name cannot be empty."
-msgstr ""
+msgstr "खाता नाम रिक्त नहीं हो सकता।"
 
 #: gl/manage/gl_accounts.php:65
 msgid "The account code must be numeric."
-msgstr ""
+msgstr "खाता कोड संख्यात्मक होना चाहिए।"
 
 #: gl/manage/gl_accounts.php:80
 msgid "The account belongs to a bank account and cannot be inactivated."
-msgstr ""
+msgstr "यह खाता किसी बैंक खाते से है और निष्क्रिय नहीं किया जा सकता है।"
 
 #: gl/manage/gl_accounts.php:89
 msgid "Account data has been updated."
-msgstr ""
+msgstr "खाता डेटा अपडेट कर दिया गया है।"
 
 #: gl/manage/gl_accounts.php:98
 msgid "New account has been added."
-msgstr ""
+msgstr "नया खाता जोड़ा गया है।"
 
 #: gl/manage/gl_accounts.php:102
 msgid "Account not added, possible duplicate Account Code."
-msgstr ""
+msgstr "खाता जोड़ा नहीं, संभावित डुप्लिकेट खाता कोड।"
 
 #: gl/manage/gl_accounts.php:117
 msgid ""
 "Cannot delete this account because transactions have been created using this"
 " account."
-msgstr ""
+msgstr "इस खाते को हटा नहीं सकते क्योंकि लेनदेन इस खाते का उपयोग कर बनाए गए हैं।"
 
 #: gl/manage/gl_accounts.php:123
 msgid ""
 "Cannot delete this account because it is used as one of the company default "
 "GL accounts."
-msgstr ""
+msgstr "यह खाता नहीं हटाया जा सकता है क्योंकि इसका उपयोग कंपनी के डिफ़ॉल्ट जीएल खातों में से एक के रूप में किया जाता है।"
 
 #: gl/manage/gl_accounts.php:129
 msgid "Cannot delete this account because it is used by a bank account."
-msgstr ""
+msgstr "इस खाते को हटा नहीं सकते क्योंकि यह किसी बैंक खाते द्वारा उपयोग किया जाता है।"
 
 #: gl/manage/gl_accounts.php:135
 msgid ""
 "Cannot delete this account because it is used by one or more Item "
 "Categories."
-msgstr ""
+msgstr "इस खाते को हटा नहीं सकते क्योंकि यह एक या अधिक वस्तु श्रेणियों द्वारा उपयोग किया जाता है।"
 
 #: gl/manage/gl_accounts.php:141
 msgid "Cannot delete this account because it is used by one or more Items."
-msgstr ""
+msgstr "यह खाता नहीं हटाया जा सकता क्योंकि यह एक या अधिक आइटम द्वारा उपयोग किया जाता है।"
 
 #: gl/manage/gl_accounts.php:147
 msgid "Cannot delete this account because it is used by one or more Taxes."
-msgstr ""
+msgstr "इस खाते को नहीं हटा सकते क्योंकि यह एक या अधिक करों द्वारा उपयोग किया जाता है।"
 
 #: gl/manage/gl_accounts.php:153
 msgid ""
 "Cannot delete this account because it is used by one or more Customer "
 "Branches."
-msgstr ""
+msgstr "इस खाते को नहीं हटाया जा सकता क्योंकि यह एक या अधिक ग्राहक शाखाओं द्वारा उपयोग किया जाता है।"
 
 #: gl/manage/gl_accounts.php:159
 msgid ""
 "Cannot delete this account because it is used by one or more suppliers."
-msgstr ""
+msgstr "यह खाता नहीं हटाया जा सकता क्योंकि यह एक या अधिक आपूर्तिकर्ताओं द्वारा उपयोग किया जाता है"
 
 #: gl/manage/gl_accounts.php:165
 msgid ""
 "Cannot delete this account because it is used by one or more Quick Entry "
 "Lines."
-msgstr ""
+msgstr "यह खाता नहीं हटाया जा सकता क्योंकि यह एक या अधिक त्वरित प्रवेश पंक्तियों द्वारा उपयोग किया जाता है।"
 
 #: gl/manage/gl_accounts.php:183
 msgid "Selected account has been deleted"
-msgstr ""
+msgstr "चयनित खाता हटा दिया गया है"
 
 #: gl/manage/gl_accounts.php:198
 msgid "New account"
-msgstr ""
+msgstr "नया खाता"
 
 #: gl/manage/gl_accounts.php:244
 msgid "Account Code 2:"
-msgstr ""
+msgstr "खाता कोड 2:"
 
 #: gl/manage/gl_accounts.php:246
 msgid "Account Name:"
-msgstr ""
+msgstr "खाते का नाम:"
 
 #: gl/manage/gl_accounts.php:248
 msgid "Account Group:"
-msgstr ""
+msgstr "खाता समूह:"
 
 #: gl/manage/gl_accounts.php:250
 msgid "Account Tags:"
-msgstr ""
+msgstr "खाता टैग:"
 
 #: gl/manage/gl_accounts.php:252
 msgid "Account status:"
-msgstr ""
+msgstr "खाते की स्थिति:"
 
 #: gl/manage/gl_accounts.php:257
 msgid "Add Account"
-msgstr ""
+msgstr "खाता जोड़ो"
 
 #: gl/manage/gl_accounts.php:261
 msgid "Update Account"
-msgstr ""
+msgstr "अधतन खाता"
 
 #: gl/manage/gl_accounts.php:262
 msgid "Delete account"
-msgstr ""
+msgstr "खाता हटा दो"
 
 #: gl/manage/gl_account_types.php:16
 msgid "GL Account Groups"
-msgstr ""
+msgstr "जीएल खाता समूह"
 
 #: gl/manage/gl_account_types.php:29
 msgid "The account group id cannot be empty."
-msgstr ""
+msgstr "खाता समूह आईडी रिक्त नहीं हो सकता।"
 
 #: gl/manage/gl_account_types.php:35
 msgid "The account group name cannot be empty."
-msgstr ""
+msgstr "खाता समूह नाम रिक्त नहीं हो सकता।"
 
 #: gl/manage/gl_account_types.php:42
 msgid "This account group id is already in use."
-msgstr ""
+msgstr "यह खाता समूह आईडी पहले से उपयोग में है।"
 
 #: gl/manage/gl_account_types.php:50
 msgid "You cannot set an account group to be a subgroup of itself."
-msgstr ""
+msgstr "आप खुद के एक उप समूह होने के लिए एक खाता समूह सेट नहीं कर सकते।"
 
 #: gl/manage/gl_account_types.php:68
 msgid "Selected account type has been updated"
-msgstr ""
+msgstr "चयनित खाता प्रकार को अपडेट किया गया है"
 
 #: gl/manage/gl_account_types.php:73
 msgid "New account type has been added"
-msgstr ""
+msgstr "नया खाता प्रकार जोड़ा गया है"
 
 #: gl/manage/gl_account_types.php:89
 msgid ""
 "Cannot delete this account group because GL accounts have been created "
 "referring to it."
-msgstr ""
+msgstr "यह खाता समूह नहीं हटाया जा सकता है क्योंकि जीएल खाते इसका संदर्भ देते हुए बनाया गया है।"
 
 #: gl/manage/gl_account_types.php:95
 msgid ""
 "Cannot delete this account group because GL account groups have been created"
 " referring to it."
-msgstr ""
+msgstr "इस खाता समूह को नहीं हटाया जा सकता है क्योंकि जीएल खाते समूह इसका संदर्भ देते हुए बनाया गया है।"
 
 #: gl/manage/gl_account_types.php:111
 msgid "Selected account group has been deleted"
-msgstr ""
+msgstr "चयनित खाता समूह को हटा दिया गया है"
 
 #: gl/manage/gl_account_types.php:128
 msgid "Group ID"
-msgstr ""
+msgstr "समूह आईडी"
 
 #: gl/manage/gl_account_types.php:128 sales/manage/sales_groups.php:85
 msgid "Group Name"
-msgstr ""
+msgstr "समूह का नाम"
 
 #: gl/manage/gl_account_types.php:128
 msgid "Subgroup Of"
-msgstr ""
+msgstr "के उप समूह"
 
 #: gl/manage/gl_account_types.php:187
 msgid "ID:"
-msgstr ""
+msgstr "ID:"
 
 #: gl/manage/gl_account_types.php:190
 msgid "Subgroup Of:"
-msgstr ""
+msgstr "उप समूह:"
 
 #: gl/manage/gl_account_types.php:192
 msgid "Class:"
-msgstr ""
+msgstr "वर्ग:"
 
 #: gl/manage/gl_quick_entries.php:16
 msgid "Quick Entries"
-msgstr ""
+msgstr "त्वरित प्रविष्टियां"
 
 #: gl/manage/gl_quick_entries.php:58 includes/ui/simple_crud_class.inc:221
 #: includes/ui/ui_input.inc:206
 msgid "Add new"
-msgstr ""
+msgstr "नया जोड़ें"
 
 #: gl/manage/gl_quick_entries.php:73
 msgid "The Quick Entry description cannot be empty."
-msgstr ""
+msgstr "क्विक प्रविष्टि विवरण रिक्त नहीं हो सकता।"
 
 #: gl/manage/gl_quick_entries.php:80
 msgid "You can only use Balance Based together with Journal Entries."
-msgstr ""
+msgstr "आप केवल जर्नल प्रविष्टियों के साथ बैलेंस का उपयोग कर सकते हैं।"
 
 #: gl/manage/gl_quick_entries.php:86
 msgid "The base amount description cannot be empty."
-msgstr ""
+msgstr "आधार राशि विवरण रिक्त नहीं हो सकता।"
 
 #: gl/manage/gl_quick_entries.php:106
 msgid "Selected quick entry has been updated"
-msgstr ""
+msgstr "चयनित त्वरित प्रविष्टि को अपडेट किया गया है"
 
 #: gl/manage/gl_quick_entries.php:112
 msgid "New quick entry has been added"
-msgstr ""
+msgstr "नई त्वरित प्रविष्टि जोड़ दी गई है"
 
 #: gl/manage/gl_quick_entries.php:124
 msgid "Selected quick entry line has been updated"
-msgstr ""
+msgstr "चयनित त्वरित प्रविष्टि लाइन को अपडेट किया गया है"
 
 #: gl/manage/gl_quick_entries.php:130
 msgid "New quick entry line has been added"
-msgstr ""
+msgstr "नई त्वरित प्रविष्टि पंक्ति जोड़ दी गई है"
 
 #: gl/manage/gl_quick_entries.php:142
 msgid "Selected quick entry has been deleted"
-msgstr ""
+msgstr "चयनित त्वरित प्रविष्टि को हटा दिया गया है"
 
 #: gl/manage/gl_quick_entries.php:147
 msgid "The Quick Entry has Quick Entry Lines. Cannot be deleted."
-msgstr ""
+msgstr "त्वरित प्रविष्टि में त्वरित प्रविष्टि पंक्तियाँ हैं हटाया नहीं जा सकता"
 
 #: gl/manage/gl_quick_entries.php:163
 msgid "Selected quick entry line has been deleted"
-msgstr ""
+msgstr "चयनित त्वरित प्रविष्टि पंक्ति को हटा दिया गया है"
 
 #: gl/manage/gl_quick_entries.php:171
 msgid "Base Amount"
-msgstr ""
+msgstr "आधार राशि"
 
 #: gl/manage/gl_quick_entries.php:226
 msgid "Entry Type"
-msgstr ""
+msgstr "प्रवेश प्रकार"
 
 #: gl/manage/gl_quick_entries.php:230
 msgid "Balance Based"
-msgstr ""
+msgstr "बैलेंस आधारित"
 
 #: gl/manage/gl_quick_entries.php:240 gl/includes/ui/gl_journal_ui.inc:55
 msgid "Yearly"
-msgstr ""
+msgstr "सालाना"
 
 #: gl/manage/gl_quick_entries.php:245
 msgid "Base Amount Description"
-msgstr ""
+msgstr "आधार राशि विवरण"
 
 #: gl/manage/gl_quick_entries.php:246
 msgid "Default Base Amount"
-msgstr ""
+msgstr "डिफ़ॉल्ट आधार राशि"
 
 #: gl/manage/gl_quick_entries.php:255
 msgid "Quick Entry Lines"
-msgstr ""
+msgstr "त्वरित प्रविष्टि लाइनें"
 
 #: gl/manage/gl_quick_entries.php:261 gl/manage/gl_quick_entries.php:263
 #: gl/manage/gl_quick_entries.php:265
 msgid "Post"
-msgstr ""
+msgstr "पद"
 
 #: gl/manage/gl_quick_entries.php:261 gl/manage/gl_quick_entries.php:263
 #: gl/manage/gl_quick_entries.php:265
 msgid "Account/Tax Type"
-msgstr ""
+msgstr "खाता / कर प्रकार"
 
 #: gl/manage/gl_quick_entries.php:320
 msgid "Posted"
-msgstr ""
+msgstr "की तैनाती"
 
 #: gl/manage/gl_quick_entries.php:329 sales/customer_delivery.php:411
 #: sales/customer_invoice.php:479
 msgid "Tax Type"
-msgstr ""
+msgstr "कर प्रकार"
 
 #: gl/manage/gl_quick_entries.php:337
 msgid "Part"
-msgstr ""
+msgstr "अंश"
 
 #: gl/manage/revaluate_currencies.php:23
 msgid "Revaluation of Currency Accounts"
-msgstr ""
+msgstr "मुद्रा खाते का पुनर्मूल्यांकन"
 
 #: gl/manage/revaluate_currencies.php:32
 msgid "No Revaluation was needed"
-msgstr ""
+msgstr "कोई पुनर्मूल्यांकन की आवश्यकता नहीं थी"
 
 #: gl/manage/revaluate_currencies.php:40
 #, php-format
 msgid "%d Journal Entries for AR/AP accounts have been added"
-msgstr ""
+msgstr "एआर/एपी खातों के लिए %d जर्नल प्रविष्टियां जोड़ दी गई हैं"
 
 #: gl/manage/revaluate_currencies.php:104
 msgid "Date for Revaluation:"
-msgstr ""
+msgstr "रिवैल्यूएशन की तिथि:"
 
 #: gl/manage/revaluate_currencies.php:109
 msgid "Revaluate Currencies"
-msgstr ""
+msgstr "मुद्राओं का पुनरीक्षित करें"
 
 #: gl/view/accrual_trans.php:16
 msgid "Search General Ledger Transactions for account: "
-msgstr ""
+msgstr "खाते के लिए जनरल लेजर लेनदेन खोजें:"
 
 #: gl/view/accrual_trans.php:41 gl/view/gl_trans_view.php:26
 msgid ""
 "The script must be called with a valid transaction type and transaction "
 "number to review the general ledger postings for."
-msgstr ""
+msgstr "स्क्रिप्ट के लिए सामान्य लेनदार पोस्टिंग की समीक्षा करने के लिए एक वैध लेनदेन प्रकार और लेनदेन संख्या के साथ कॉल किया जाना चाहिए।"
 
 #: gl/view/bank_transfer_view.php:17
 msgid "View Bank Transfer"
-msgstr ""
+msgstr "देखें बैंक स्थानांतरण"
 
 #: gl/view/bank_transfer_view.php:67 gl/view/gl_payment_view.php:62
 #: purchasing/view/view_supp_payment.php:54
 msgid "From Bank Account"
-msgstr ""
+msgstr "बैंक खाते से"
 
 #: gl/view/bank_transfer_view.php:76 gl/view/gl_deposit_view.php:64
 msgid "To Bank Account"
-msgstr ""
+msgstr "बैंक खाते में"
 
 #: gl/view/bank_transfer_view.php:84
 msgid "Transfer Type"
-msgstr ""
+msgstr "स्थानांतरण प्रकार"
 
 #: gl/view/bank_transfer_view.php:92 inventory/view/view_transfer.php:76
 msgid "This transfer has been voided."
-msgstr ""
+msgstr "यह स्थानांतरण रद्द कर दिया गया है"
 
 #: gl/view/gl_deposit_view.php:17
 msgid "View Bank Deposit"
-msgstr ""
+msgstr "बैंक जमा देखें"
 
 #: gl/view/gl_deposit_view.php:48
 msgid "GL Deposit"
-msgstr ""
+msgstr "जीएल जमा"
 
 #: gl/view/gl_deposit_view.php:71 gl/includes/db/gl_db_banking.inc:213
 #: reporting/reports_main.php:96 reporting/reports_main.php:106
@@ -4804,35 +4804,35 @@ msgstr ""
 #: reporting/reports_main.php:192 reporting/reports_main.php:199
 #: reporting/reports_main.php:296
 msgid "From"
-msgstr ""
+msgstr "से"
 
 #: gl/view/gl_deposit_view.php:74 gl/view/gl_payment_view.php:72
 msgid "Settle currency"
-msgstr ""
+msgstr "निर्धारित करें मुद्रा"
 
 #: gl/view/gl_deposit_view.php:75 gl/view/gl_payment_view.php:73
 msgid "Settled amount"
-msgstr ""
+msgstr "निर्धारित राशि"
 
 #: gl/view/gl_deposit_view.php:77
 msgid "Deposit Type"
-msgstr ""
+msgstr "जमा प्रकार"
 
 #: gl/view/gl_deposit_view.php:86
 msgid "This deposit has been voided."
-msgstr ""
+msgstr "यह जमा रद्द कर दिया गया है।"
 
 #: gl/view/gl_deposit_view.php:92
 msgid "There are no items for this deposit."
-msgstr ""
+msgstr "इस जमा राशि के लिए कोई आइटम नहीं हैं"
 
 #: gl/view/gl_deposit_view.php:97
 msgid "Items for this Deposit"
-msgstr ""
+msgstr "इस जमा राशि के लिए आइटम"
 
 #: gl/view/gl_deposit_view.php:99 gl/view/gl_payment_view.php:97
 msgid "Item Amounts are Shown in:"
-msgstr ""
+msgstr "आइटम राइट्स इन्हें दिखाया गया है:"
 
 #: gl/view/gl_deposit_view.php:104 gl/view/gl_deposit_view.php:107
 #: gl/view/gl_deposit_view.php:110 gl/view/gl_payment_view.php:103
@@ -4843,7 +4843,7 @@ msgstr ""
 #: gl/includes/ui/gl_journal_ui.inc:81 gl/includes/ui/gl_journal_ui.inc:84
 #: gl/includes/ui/gl_journal_ui.inc:87 reporting/rep701.php:111
 msgid "Account Code"
-msgstr ""
+msgstr "खाता कोड"
 
 #: gl/view/gl_deposit_view.php:104 gl/view/gl_deposit_view.php:107
 #: gl/view/gl_deposit_view.php:110 gl/view/gl_payment_view.php:103
@@ -4852,58 +4852,58 @@ msgstr ""
 #: gl/includes/ui/gl_bank_ui.inc:158 gl/includes/ui/gl_journal_ui.inc:81
 #: gl/includes/ui/gl_journal_ui.inc:84 gl/includes/ui/gl_journal_ui.inc:87
 msgid "Account Description"
-msgstr ""
+msgstr "खाते का विवरण"
 
 #: gl/view/gl_payment_view.php:17
 msgid "View Bank Payment"
-msgstr ""
+msgstr "देखें बैंक भुगतान"
 
 #: gl/view/gl_payment_view.php:46
 msgid "GL Payment"
-msgstr ""
+msgstr "जीएल भुगतान"
 
 #: gl/view/gl_payment_view.php:69
 msgid "Pay To"
-msgstr ""
+msgstr "को भुगतान"
 
 #: gl/view/gl_payment_view.php:75 purchasing/view/view_supp_payment.php:64
 #: purchasing/view/view_supp_payment.php:78 sales/view/view_receipt.php:50
 msgid "Payment Type"
-msgstr ""
+msgstr "भुगतान के प्रकार"
 
 #: gl/view/gl_payment_view.php:84 purchasing/view/view_supp_payment.php:85
 msgid "This payment has been voided."
-msgstr ""
+msgstr "यह भुगतान रद्द कर दिया गया है।"
 
 #: gl/view/gl_payment_view.php:90
 msgid "There are no items for this payment."
-msgstr ""
+msgstr "इस भुगतान के लिए कोई आइटम नहीं हैं"
 
 #: gl/view/gl_payment_view.php:95
 msgid "Items for this Payment"
-msgstr ""
+msgstr "इस भुगतान के लिए आइटम"
 
 #: gl/view/gl_trans_view.php:16 gl/view/gl_trans_view.php:35
 msgid "General Ledger Transaction Details"
-msgstr ""
+msgstr "सामान्य खाता लेनदेन विवरण"
 
 #: gl/view/gl_trans_view.php:54
 msgid "No general ledger transactions have been created for"
-msgstr ""
+msgstr "इसके लिए कोई सामान्य खाता लेनदेन नहीं बनाया गया है"
 
 #: gl/view/gl_trans_view.php:54
 msgid "number"
-msgstr ""
+msgstr "संख्या"
 
 #: gl/view/gl_trans_view.php:120
 msgid "This transaction has been voided."
-msgstr ""
+msgstr "यह लेनदेन निरस्त कर दिया गया है"
 
 #: gl/includes/db/gl_db_banking.inc:44 gl/includes/db/gl_db_banking.inc:47
 #: gl/includes/db/gl_db_banking.inc:60 gl/includes/db/gl_db_banking.inc:63
 #: gl/includes/db/gl_db_banking.inc:256
 msgid "Exchange Variance"
-msgstr ""
+msgstr "एक्सचेंज वेरिएंस"
 
 #: gl/includes/db/gl_db_banking.inc:213 reporting/reports_main.php:97
 #: reporting/reports_main.php:107 reporting/reports_main.php:115
@@ -4911,16 +4911,16 @@ msgstr ""
 #: reporting/reports_main.php:144 reporting/reports_main.php:193
 #: reporting/reports_main.php:200 reporting/reports_main.php:297
 msgid "To"
-msgstr ""
+msgstr "सेवा मेरे"
 
 #: gl/includes/db/gl_db_banking.inc:445
 msgid "Document reentered."
-msgstr ""
+msgstr "दस्तावेज़ पुनः दर्ज किया गया"
 
 #: gl/includes/db/gl_db_trans.inc:93
 #, php-format
 msgid "Rounding error %s encountered for trans_type:%s,trans_no:%s"
-msgstr ""
+msgstr "गोलाई त्रुटि %s ट्रांस_प्रकार के लिए सामने आई:%s,ट्रांस_नो:%s"
 
 #: gl/includes/ui/gl_bank_ui.inc:24 gl/includes/ui/gl_journal_ui.inc:28
 #: inventory/includes/item_adjustments_ui.inc:39
@@ -4931,50 +4931,50 @@ msgstr ""
 #: sales/allocations/customer_allocate.php:54
 #: sales/includes/ui/sales_credit_ui.inc:121
 msgid "Date:"
-msgstr ""
+msgstr "तारीख:"
 
 #: gl/includes/ui/gl_bank_ui.inc:52
 msgid "Pay To:"
-msgstr ""
+msgstr "को भुगतान:"
 
 #: gl/includes/ui/gl_bank_ui.inc:57
 msgid "To the Order of:"
-msgstr ""
+msgstr "के आदेश पर:"
 
 #: gl/includes/ui/gl_bank_ui.inc:64 inventory/purchasing_data.php:208
 #: inventory/purchasing_data.php:212 purchasing/includes/ui/invoice_ui.inc:86
 #: purchasing/includes/ui/invoice_ui.inc:93
 #: purchasing/includes/ui/po_ui.inc:127 purchasing/includes/ui/po_ui.inc:132
 msgid "Supplier:"
-msgstr ""
+msgstr "प्रदायक:"
 
 #: gl/includes/ui/gl_bank_ui.inc:67 sales/manage/recurrent_invoices.php:169
 #: sales/includes/ui/sales_credit_ui.inc:29
 #: sales/includes/ui/sales_order_ui.inc:270
 msgid "Customer:"
-msgstr ""
+msgstr "ग्राहक:"
 
 #: gl/includes/ui/gl_bank_ui.inc:71 sales/customer_payments.php:345
 #: sales/manage/recurrent_invoices.php:172
 #: sales/includes/ui/sales_credit_ui.inc:37
 #: sales/includes/ui/sales_order_ui.inc:277
 msgid "Branch:"
-msgstr ""
+msgstr "डाली:"
 
 #: gl/includes/ui/gl_bank_ui.inc:85 gl/includes/ui/gl_bank_ui.inc:88
 #: sales/customer_payments.php:361
 msgid "This customer account is on hold."
-msgstr ""
+msgstr "यह ग्राहक खाता होल्ड पर है"
 
 #: gl/includes/ui/gl_bank_ui.inc:101 gl/includes/ui/gl_journal_ui.inc:56
 #: gl/includes/ui/gl_journal_ui.inc:60
 #: purchasing/includes/ui/invoice_ui.inc:244
 msgid "Go"
-msgstr ""
+msgstr "चले जाओ"
 
 #: gl/includes/ui/gl_bank_ui.inc:120
 msgid "Into:"
-msgstr ""
+msgstr "में:"
 
 #: gl/includes/ui/gl_bank_ui.inc:187 includes/ui/simple_crud_class.inc:52
 #: inventory/includes/item_adjustments_ui.inc:92
@@ -4985,7 +4985,7 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:198
 #: sales/includes/ui/sales_order_ui.inc:198
 msgid "Edit document line"
-msgstr ""
+msgstr "दस्तावेज़ रेखा संपादित करें"
 
 #: gl/includes/ui/gl_bank_ui.inc:189 includes/ui/simple_crud_class.inc:54
 #: inventory/includes/item_adjustments_ui.inc:94
@@ -4996,7 +4996,7 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:200
 #: sales/includes/ui/sales_order_ui.inc:200
 msgid "Remove line from document"
-msgstr ""
+msgstr "दस्तावेज़ से रेखा निकालें"
 
 #: gl/includes/ui/gl_bank_ui.inc:278 gl/includes/ui/gl_journal_ui.inc:221
 #: includes/ui/simple_crud_class.inc:56
@@ -5007,7 +5007,7 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:294
 #: sales/includes/ui/sales_order_ui.inc:549
 msgid "Confirm changes"
-msgstr ""
+msgstr "परिवर्तनों की पुष्टि करें"
 
 #: gl/includes/ui/gl_bank_ui.inc:280 gl/includes/ui/gl_journal_ui.inc:223
 #: includes/ui/simple_crud_class.inc:58
@@ -5018,7 +5018,7 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:296
 #: sales/includes/ui/sales_order_ui.inc:551
 msgid "Cancel changes"
-msgstr ""
+msgstr "परिवर्तन रद्द करें"
 
 #: gl/includes/ui/gl_bank_ui.inc:285 gl/includes/ui/gl_journal_ui.inc:227
 #: inventory/includes/item_adjustments_ui.inc:172
@@ -5028,7 +5028,7 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:302
 #: sales/includes/ui/sales_order_ui.inc:557
 msgid "Add Item"
-msgstr ""
+msgstr "सामान जोडें"
 
 #: gl/includes/ui/gl_bank_ui.inc:286
 #: inventory/includes/item_adjustments_ui.inc:173
@@ -5038,15 +5038,15 @@ msgstr ""
 #: sales/includes/ui/sales_credit_ui.inc:303
 #: sales/includes/ui/sales_order_ui.inc:558
 msgid "Add new item to document"
-msgstr ""
+msgstr "दस्तावेज़ में नया आइटम जोड़ें"
 
 #: gl/includes/ui/gl_bank_ui.inc:309
 msgid "Settled AR Amount:"
-msgstr ""
+msgstr "निर्धारित एआर राशि:"
 
 #: gl/includes/ui/gl_bank_ui.inc:309
 msgid "Settled AP Amount:"
-msgstr ""
+msgstr "निर्धारित एपी राशि:"
 
 #: gl/includes/ui/gl_journal_ui.inc:36
 msgid "Reverse Transaction:"
@@ -5054,184 +5054,184 @@ msgstr ""
 
 #: gl/includes/ui/gl_journal_ui.inc:44 includes/sysnames.inc:98
 msgid "Quick Entry"
-msgstr ""
+msgstr "त्वरित प्रविष्टि"
 
 #: gl/includes/ui/gl_journal_ui.inc:55
 msgid "balance from account"
-msgstr ""
+msgstr "खाते से शेष राशि"
 
 #: gl/includes/ui/gl_journal_ui.inc:121
 msgid "Edit journal line"
-msgstr ""
+msgstr "जर्नल लाइन संपादित करें"
 
 #: gl/includes/ui/gl_journal_ui.inc:123
 msgid "Remove line from journal"
-msgstr ""
+msgstr "जर्नल से रेखा निकालें"
 
 #: gl/includes/ui/gl_journal_ui.inc:228
 msgid "Add new line to journal"
-msgstr ""
+msgstr "जर्नल में नई पंक्ति जोड़ें"
 
 #: includes/access_levels.inc:56
 msgid "System administration"
-msgstr ""
+msgstr "सिस्टम प्रशासन"
 
 #: includes/access_levels.inc:57
 msgid "Company setup"
-msgstr ""
+msgstr "कंपनी की स्थापना"
 
 #: includes/access_levels.inc:58
 msgid "Special maintenance"
-msgstr ""
+msgstr "विशेष रखरखाव"
 
 #: includes/access_levels.inc:59
 msgid "Sales configuration"
-msgstr ""
+msgstr "बिक्री विन्यास"
 
 #: includes/access_levels.inc:60
 msgid "Sales transactions"
-msgstr ""
+msgstr "बिक्री लेनदेन"
 
 #: includes/access_levels.inc:61
 msgid "Sales related reports"
-msgstr ""
+msgstr "बिक्री संबंधी रिपोर्ट"
 
 #: includes/access_levels.inc:62
 msgid "Purchase configuration"
-msgstr ""
+msgstr "खरीद कॉन्फ़िगरेशन"
 
 #: includes/access_levels.inc:63
 msgid "Purchase transactions"
-msgstr ""
+msgstr "लेनदेन खरीदें"
 
 #: includes/access_levels.inc:64
 msgid "Purchase analytics"
-msgstr ""
+msgstr "खरीद विश्लेषिकी"
 
 #: includes/access_levels.inc:65
 msgid "Inventory configuration"
-msgstr ""
+msgstr "सूची विन्यास"
 
 #: includes/access_levels.inc:66
 msgid "Inventory operations"
-msgstr ""
+msgstr "इन्वेंट्री संचालन"
 
 #: includes/access_levels.inc:67
 msgid "Inventory analytics"
-msgstr ""
+msgstr "इन्वेंट्री विश्लेषिकी"
 
 #: includes/access_levels.inc:68
 msgid "Manufacturing configuration"
-msgstr ""
+msgstr "विनिर्माण कॉन्फ़िगरेशन"
 
 #: includes/access_levels.inc:69
 msgid "Manufacturing transactions"
-msgstr ""
+msgstr "विनिर्माण लेनदेन"
 
 #: includes/access_levels.inc:70
 msgid "Manufacturing analytics"
-msgstr ""
+msgstr "विनिर्माण विश्लेषिकी"
 
 #: includes/access_levels.inc:71
 msgid "Dimensions configuration"
-msgstr ""
+msgstr "आयाम विन्यास"
 
 #: includes/access_levels.inc:72 inventory/manage/items.php:341
 #: reporting/reports_main.php:301
 msgid "Dimensions"
-msgstr ""
+msgstr "आयाम"
 
 #: includes/access_levels.inc:73
 msgid "Banking & GL configuration"
-msgstr ""
+msgstr "बैंकिंग और जीएल कॉन्फ़िगरेशन"
 
 #: includes/access_levels.inc:74
 msgid "Banking & GL transactions"
-msgstr ""
+msgstr "बैंकिंग और जीएल लेनदेन"
 
 #: includes/access_levels.inc:75
 msgid "Banking & GL analytics"
-msgstr ""
+msgstr "बैंकिंग और जीएल विश्लेषिकी"
 
 #: includes/access_levels.inc:93
 msgid "Install/update companies"
-msgstr ""
+msgstr "स्थापित/अद्यतन कंपनियों"
 
 #: includes/access_levels.inc:94
 msgid "Install/update languages"
-msgstr ""
+msgstr "भाषा स्थापित / अपडेट करें"
 
 #: includes/access_levels.inc:95
 msgid "Install/upgrade modules"
-msgstr ""
+msgstr "मॉड्यूल स्थापित / अपग्रेड करें"
 
 #: includes/access_levels.inc:96
 msgid "Software upgrades"
-msgstr ""
+msgstr "सॉफ्टवेयर उन्नयन"
 
 #: includes/access_levels.inc:100
 msgid "Company parameters"
-msgstr ""
+msgstr "कंपनी पैरामीटर"
 
 #: includes/access_levels.inc:101
 msgid "Access levels edition"
-msgstr ""
+msgstr "एक्सेस स्तर संस्करण"
 
 #: includes/access_levels.inc:102
 msgid "Users setup"
-msgstr ""
+msgstr "उपयोगकर्ता सेटअप"
 
 #: includes/access_levels.inc:103
 msgid "Point of sales definitions"
-msgstr ""
+msgstr "बिक्री की परिभाषाएं"
 
 #: includes/access_levels.inc:104
 msgid "Printers configuration"
-msgstr ""
+msgstr "प्रिंटर कॉन्फ़िगरेशन"
 
 #: includes/access_levels.inc:105
 msgid "Print profiles"
-msgstr ""
+msgstr "प्रोफाइल प्रिंट करें"
 
 #: includes/access_levels.inc:106
 msgid "Payment terms"
-msgstr ""
+msgstr "भुगतान की शर्तें"
 
 #: includes/access_levels.inc:107
 msgid "Shipping ways"
-msgstr ""
+msgstr "शिपिंग तरीके"
 
 #: includes/access_levels.inc:108
 msgid "Credit status definitions changes"
-msgstr ""
+msgstr "क्रेडिट स्थिति परिभाषाएं बदलती हैं"
 
 #: includes/access_levels.inc:109
 msgid "Inventory locations changes"
-msgstr ""
+msgstr "इन्वेंट्री स्थान बदलता है"
 
 #: includes/access_levels.inc:110
 msgid "Inventory movement types"
-msgstr ""
+msgstr "इन्वेंट्री आंदोलन के प्रकार"
 
 #: includes/access_levels.inc:111
 msgid "Manufacture work centres"
-msgstr ""
+msgstr "निर्माण कार्य केंद्र"
 
 #: includes/access_levels.inc:112
 msgid "Forms setup"
-msgstr ""
+msgstr "फ़ॉर्म सेटअप"
 
 #: includes/access_levels.inc:113
 msgid "Contact categories"
-msgstr ""
+msgstr "संपर्क श्रेणियां"
 
 #: includes/access_levels.inc:117
 msgid "Voiding transactions"
-msgstr ""
+msgstr "लेन-देन लेनदेन"
 
 #: includes/access_levels.inc:118
 msgid "Database backup/restore"
-msgstr ""
+msgstr "डेटाबेस बैकअप / पुनर्स्थापना"
 
 #: includes/access_levels.inc:119
 msgid "Common view/print transactions interface"
@@ -7249,7 +7249,7 @@ msgstr ""
 
 #: inventory/prices.php:192
 msgid "Currency:"
-msgstr ""
+msgstr "मुद्रा:"
 
 #: inventory/prices.php:194
 msgid "Sales Type:"
@@ -7771,7 +7771,7 @@ msgstr ""
 #: reporting/rep306.php:149 reporting/rep307.php:117 reporting/rep307.php:123
 #: reporting/rep308.php:230 reporting/rep308.php:237 reporting/rep309.php:104
 msgid "Category"
-msgstr ""
+msgstr "वर्ग"
 
 #: inventory/manage/item_codes.php:178
 msgid "UPC/EAN code:"
@@ -7864,7 +7864,7 @@ msgstr ""
 
 #: inventory/manage/items.php:352 sales/manage/customer_branches.php:248
 msgid "GL Accounts"
-msgstr ""
+msgstr "जीएल खाते"
 
 #: inventory/manage/items.php:375
 msgid "Other"
@@ -8983,7 +8983,7 @@ msgstr ""
 #: purchasing/inquiry/supplier_inquiry.php:172
 #: reporting/includes/doctext.inc:142 reporting/includes/doctext.inc:165
 msgid "Supplier's Reference"
-msgstr ""
+msgstr "प्रदायक का संदर्भ"
 
 #: purchasing/includes/ui/grn_ui.inc:38 purchasing/includes/ui/grn_ui.inc:81
 #: purchasing/includes/ui/po_ui.inc:345 sales/view/view_sales_order.php:79
@@ -9772,7 +9772,7 @@ msgstr ""
 #: purchasing/supplier_payment.php:191
 msgid ""
 "The entered date is out of fiscal year or is closed for further data entry."
-msgstr ""
+msgstr "प्रविष्ट दिनांक वित्तीय वर्ष से बाहर है या आगे डेटा प्रविष्टि के लिए बंद है।"
 
 #: purchasing/supplier_payment.php:275
 msgid "Payment To:"
@@ -11282,7 +11282,7 @@ msgstr ""
 
 #: reporting/reports_main.php:281
 msgid "Manufacturing"
-msgstr ""
+msgstr "विनिर्माण"
 
 #: reporting/reports_main.php:282
 msgid "&Bill of Material Listing"
@@ -11656,15 +11656,15 @@ msgstr ""
 
 #: reporting/includes/reports_classes.inc:234
 msgid "PDF/Printer"
-msgstr ""
+msgstr "पीडीएफ / प्रिंटर"
 
 #: reporting/includes/reports_classes.inc:241
 msgid "Portrait"
-msgstr ""
+msgstr "चित्र"
 
 #: reporting/includes/reports_classes.inc:241
 msgid "Landscape"
-msgstr ""
+msgstr "परिदृश्य"
 
 #: reporting/includes/reports_classes.inc:252
 msgid "No Graphics"
@@ -13974,7 +13974,9 @@ msgid "Cannot store next sales order reference."
 msgstr ""
 
 #: sql/alter2.2.php:250
-msgid "Cannot upgrade extensions system: file /modules/installed_modules.php is not writeable"
+msgid ""
+"Cannot upgrade extensions system: file /modules/installed_modules.php is not"
+" writeable"
 msgstr ""
 
 #: sql/alter2.3.php:20
