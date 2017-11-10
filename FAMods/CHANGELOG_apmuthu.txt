@@ -1,3 +1,4 @@
+2017-11-10 Ap.Muthu           Hindi (hi_IN) installer translation fully done
 2017-11-02 Ap.Muthu           Tamil (ta_IN) core translation of 1110 / 2997 strings done
 2017-11-02 Ap.Muthu           Hindi (hi_IN) core translation of 1033 / 2997 strings done
 2017-10-31 Ap.Muthu           Added script to update Standard Chart of FA 2.3.26 to FAMods sql
