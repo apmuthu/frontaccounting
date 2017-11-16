@@ -48,7 +48,7 @@ function inventory_all()
 
 function inventory_get($id)
 {
-	
+
 	$item = get_item($id);
 	if(!$item) $item = array();
 	api_success_response(json_encode($item));
@@ -95,9 +95,9 @@ function inventory_add()
 	if(!isset($info['assembly_account'])){
 		api_error(412, 'Assembly Account is required');
 	}
-	
+
 	// TODO Validate Stock Id is Unique
-	
+
 	/*
 	$stock_id, $description, $long_description, $category_id, 
 	$tax_type_id, $units, $mb_flag,	$sales_account, $inventory_account, 
@@ -134,12 +134,12 @@ function inventory_edit($id)
 	$app = \Slim\Slim::getInstance('SASYS');
 	$req = $app->request();
 	$info = $req->post();
-	
+
 	$itm = get_item($id);
 	if($itm == null){
 		api_error(400, 'Invalid Stock Id');
 	}
-	
+
 	// Validate Required Fields
 	if(!isset($info['description'])){
 		api_error(412, 'Description is required');
@@ -171,7 +171,7 @@ function inventory_edit($id)
 	if(!isset($info['assembly_account'])){
 		api_error(412, 'Assembly Account is required');
 	}
-	
+
 	/*
 	$stock_id, $description, $long_description, $category_id, 
 	$tax_type_id, $units='', $mb_flag='', $sales_account, $inventory_account, 
@@ -191,7 +191,7 @@ function inventory_edit($id)
 		0, // no sale
 		1 // editable
 		);
-	
+
 	api_success_response("Item has been updated");
 
 }
@@ -202,16 +202,16 @@ function inventory_delete($id)
 	$app = \Slim\Slim::getInstance('SASYS');
 	$req = $app->request();
 	$info = $req->post();
-	
+
 	$itm = get_item($id);
 	if($itm == null){
 		api_error(400, 'Invalid Stock Id');
 	}
-	
+
 	delete_item($id);
-	
+
 	$itm = get_item($info['stock_id']);
-	
+
 	if($itm != null){
 		api_error(500, 'Could Not Delete from Database');
 	}else {
@@ -222,16 +222,14 @@ function inventory_delete($id)
 
 function inventory_movementstype_all()
 {
-	
 	$movtypes = get_all_movement_type(false);
 	$ret = array();
-	while($mov = db_fetch($movtypes)){
-		
+	while ($mov = db_fetch($movtypes)) {
+
 		$ret[] = array(
 			'id' => $mov['id'],
 			'name' => $mov['name']
 		);
-		
 	}
 	api_success_response(json_encode($ret));
 }
@@ -253,77 +251,75 @@ function inventory_locations_all()
 			'email' => $loc['email'],
 			'contact' => $loc['contact']
 		);
-		
+
 	}
 	api_success_response(json_encode($ret));
-	
+
 }
 
 function stock_adjustment_add($info)
 {
-
 	$app = \Slim\Slim::getInstance('SASYS');
 	$req = $app->request();
 	$info = $req->post();
-	
+
 	// Example
-	//$ex = array('stock_id' => 'PLUMA', 'location' => 'DEF', 'date' => today(), 'type' => 1, 'reference' => '123qwe', 'quantity' => 555, 'standard_cost' => 10, 'increase' => 0, 'memo' => 'PRUEBA DESDE API 2');
-	//echo base64_encode(json_encode($ex));	
-	//print_r($info);
-	
+	// $ex = array('stock_id' => 'PLUMA', 'location' => 'DEF', 'date' => today(), 'type' => 1, 'reference' => '123qwe', 'quantity' => 555, 'standard_cost' => 10, 'increase' => 0, 'memo' => 'PRUEBA DESDE API 2');
+	// echo base64_encode(json_encode($ex));
+	// print_r($info);
+
 	// Validate Required Fields
-	if(!isset($info['stock_id'])){
+	if (! isset($info['stock_id'])) {
 		api_error(412, 'Stock Id is required');
 	}
-	if(!isset($info['location'])){
+	if (! isset($info['location'])) {
 		api_error(412, 'Location is required');
 	}
-	if(!isset($info['date'])){
+	if (! isset($info['date'])) {
 		api_error(412, 'Date is required');
 	}
-	if(!isset($info['type'])){
+	if (! isset($info['type'])) {
 		api_error(412, 'Movement Type is required');
 	}
-	if(!isset($info['reference'])){
+	if (! isset($info['reference'])) {
 		api_error(412, 'Reference is required');
 	}
-	if(!isset($info['quantity'])){
+	if (! isset($info['quantity'])) {
 		api_error(412, 'Quantity is required');
 	}
-	if(!isset($info['standard_cost'])){
+	if (! isset($info['standard_cost'])) {
 		$info['standard_cost'] = 0;
 	}
-	if(!isset($info['increase'])){
+	if (! isset($info['increase'])) {
 		api_error(412, 'Increase is required. (1 = true, 0 = false)');
 	}
-	if(!isset($info['memo'])){
+	if (! isset($info['memo'])) {
 		api_error(412, 'Memo is required');
 	}
-	
+
 	// Create Adjustment Order
-	unset ($_SESSION['adj_items']);
+	unset($_SESSION['adj_items']);
 	$_SESSION['adj_items'] = new items_cart(ST_INVADJUST);
 	$info['date'] = today();
-	if (!is_date_in_fiscalyear($info['date']))
+	if (! is_date_in_fiscalyear($info['date']))
 		$info['date'] = end_fiscalyear();
-	$_SESSION['adj_items']->tran_date = $info['date'];  
+
+	$_SESSION['adj_items']->tran_date = $info['date'];
 	// This should never happen
 	if ($_SESSION['adj_items']->find_cart_item($info['stock_id']))
-         api_error(500, 'Item Already Exists In Cart');
+		api_error(500, 'Item Already Exists In Cart');
 	else
-         $_SESSION['adj_items']->add_to_cart(count($_SESSION['adj_items']->line_items), $info['stock_id'], $info['quantity'], $info['standard_cost']);
+		$_SESSION['adj_items']->add_to_cart(count($_SESSION['adj_items']->line_items), $info['stock_id'], $info['quantity'], $info['standard_cost']);
 	
 	// Process Order
 	$trans_no = add_stock_adjustment($_SESSION['adj_items']->line_items,
 		$info['location'], $info['date'], $info['type'], $info['increase'],
 		$info['reference'], $info['memo']);
-		
+
 	new_doc_date($info['date']);
 	$_SESSION['adj_items']->clear_items();
 	unset($_SESSION['adj_items']);
-	
-	api_create_response("Stock Adjustment has been added");
-	
-}
 
+	api_create_response("Stock Adjustment has been added");
+}
 ?>

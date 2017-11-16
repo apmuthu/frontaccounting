@@ -34,7 +34,7 @@ function kill_login()
 function login_fail()
 {
 	global $path_to_root;
-	
+
 	header("HTTP/1.1 401 Authorization Required");
 	echo "<center><br><br><font size='5' color='red'><b>" . _("Incorrect Password") . "<b></font><br><br>";
 	echo "<b>" . _("The user and password combination is not valid for the system.") . "<b><br><br>";
@@ -52,20 +52,20 @@ function login_fail()
 function check_page_security($page_security)
 {
 	global $SysPrefs;
-	
+
 	$msg = '';
-	
+
 	if (!$_SESSION["wa_current_user"]->check_user_access())
 	{
 		// notification after upgrade from pre-2.2 version
 		$msg = $_SESSION["wa_current_user"]->old_db ?
 			 _("Security settings have not been defined for your user account.")
-				. "<br>" . _("Please contact your system administrator.")	
+				. "<br>" . _("Please contact your system administrator.")
 			: _("Please remove \$security_groups and \$security_headings arrays from config.php file!");
 	} elseif (!$_SESSION['SysPrefs']->db_ok && !$_SESSION["wa_current_user"]->can_access('SA_SOFTWAREUPGRADE')) {
 		$msg = _('Access to application has been blocked until database upgrade is completed by system administrator.');
 	}
-	
+
 	if ($msg){
 		display_error($msg);
 		end_page();
@@ -83,7 +83,7 @@ function check_page_security($page_security)
 		end_page();
 		exit;
 	}
-	if (!$_SESSION['SysPrefs']->db_ok 
+	if (!$_SESSION['SysPrefs']->db_ok
 		&& !in_array($page_security, array('SA_SOFTWAREUPGRADE', 'SA_OPEN', 'SA_BACKUP')))
 	{
 		display_error(_('System is blocked after source upgrade until database is updated on System/Software Upgrade page'));
@@ -93,7 +93,7 @@ function check_page_security($page_security)
 
 }
 /*
-	Helper function for setting page security level depeding on 
+	Helper function for setting page security level depeding on
 	GET start variable and/or some value stored in session variable.
 	Before the call $page_security should be set to default page_security value.
 */
@@ -223,7 +223,7 @@ include_once($path_to_root . "/includes/ajax.inc");
 include_once($path_to_root . "/includes/ui/ui_msgs.inc");
 include_once($path_to_root . "/includes/prefs/sysprefs.inc");
 
-//Added by tclim
+// Added by tclim
 include_once($path_to_root . "/modules/api/sync_db.inc");
 
 include_once($path_to_root . "/includes/hooks.inc");
@@ -250,7 +250,8 @@ hook_session_start(@$_POST["company_login_name"]);
 
 session_name('FA'.md5(dirname(__FILE__)));
 
-if (!session_id()) {session_start();}
+if (!session_id())
+	session_start();
 session_regenerate_id();
 
 // this is to fix the "back-do-you-want-to-refresh" issue - thanx PHPFreaks
@@ -260,7 +261,7 @@ include_once($path_to_root . "/config.php");
 get_text_init();
 
 // Page Initialisation
-if (!isset($_SESSION['language']) || !method_exists($_SESSION['language'], 'set_language')) 
+if (!isset($_SESSION['language']) || !method_exists($_SESSION['language'], 'set_language'))
 {
 	$l = array_search_value($dflt_lang, $installed_languages,  'code');
 	$_SESSION['language'] = new language($l['name'], $l['code'], $l['encoding'],
@@ -299,9 +300,10 @@ html_cleanup($_POST);
 html_cleanup($_REQUEST);
 html_cleanup($_SERVER);
 
-// logout.php is the only page we should have always 
+// logout.php is the only page we should have always
 // accessable regardless of access level and current login status.
-if (strstr($_SERVER['PHP_SELF'], 'logout.php') == false){
+if (strstr($_SERVER['PHP_SELF'], 'logout.php') == false) {
+	set_global_connection();
 
 	login_timeout();
 
@@ -317,7 +319,7 @@ if (strstr($_SERVER['PHP_SELF'], 'logout.php') == false){
 		{
 			// strip ajax marker from uri, to force synchronous page reload
 			$_SESSION['timeout'] = array( 'uri'=>preg_replace('/JsHttpRequest=(?:(\d+)-)?([^&]+)/s',
-					'', @htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, $_SESSION['language']->encoding)), 
+					'', @htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, $_SESSION['language']->encoding)),
 				'post' => $_POST);
 
 //			include($path_to_root . "/access/login.php");
@@ -339,8 +341,7 @@ if (strstr($_SERVER['PHP_SELF'], 'logout.php') == false){
 			$lang = &$_SESSION['language'];
 			$lang->set_language($_SESSION['language']->code);
 		}
-	} else
-		set_global_connection();
+	}
 
 	if (!isset($_SESSION["App"])) {
 		$_SESSION["App"] = new front_accounting();

@@ -8,11 +8,11 @@ Free software under GNU GPL
 function api_login(){
 	$app = \Slim\Slim::getInstance('SASYS');
 	$app->hook('slim.before', function () use ($app) {
-	    $req = $app->request();
-	    $company = $req->headers('X_company');
+		$req = $app->request();
+		$company = $req->headers('X_company');
 		$user = $req->headers('X_user');
 		$password = $req->headers('X_password');
-/*		
+/*
 		// TESTING
 		$company = 0;
 		$user = 'admin';
@@ -49,7 +49,7 @@ function api_create_response($body){
 function api_error($code, $msg){
 	$app = \Slim\Slim::getInstance('SASYS');
 	$app->halt($code, json_encode(array('success' => 0, 'msg' => $msg)));
-	
+
 }
 
 ?>

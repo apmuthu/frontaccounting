@@ -24,7 +24,7 @@ function assets_add()
 	$app = \Slim\Slim::getInstance('SASYS');
 	$req = $app->request();
 	$info = $req->post();
-	
+
 	// Validate Required Fields
 	if(!isset($info['asset_type_id'])){
 		api_error(412, 'Asset Type is required [asset_type_id]');
@@ -53,32 +53,32 @@ function assets_add()
 	if(!isset($info['asset_acquisition'])){
 		api_error(412, 'Asset Acquisition is required [asset_acquisition]');
 	}
-	
+
 	/*
 	$type, $name, $serial, $purchase_date, $purchase_value, $tag, $location, $condition, $acquisition
-	
-	asset_type_id,  asset_name,  asset_serial,  purchase_date,  purchase_value,  
+
+	asset_type_id,  asset_name,  asset_serial,  purchase_date,  purchase_value,
 			tag_number, asset_location, asset_condition, asset_acquisition
 	*/
-	add_asset($info['asset_type_id'], $info['asset_name'], 
+	add_asset($info['asset_type_id'], $info['asset_name'],
 		$info['asset_serial'],
-		$info['purchase_date'], 
+		$info['purchase_date'],
 		$info['purchase_value'],
 		$info['tag_number'],
 		$info['asset_location'],
 		$info['asset_condition'],
 		$info['asset_acquisition']
 		);
-	
+
 	$id = db_insert_id();
 	$asset = get_asset($id);
-	
+
 	if($asset != null){
 		api_create_response(json_encode($asset));
 	}else {
 		api_error(500, 'Could Not Save to Database');
 	}
-	
+
 }
 
 function assettypes_get()
@@ -98,7 +98,7 @@ function assettypes_get()
 			'disposal_account' => $atype['disposal_account'],
 			'asset_account' => $atype['asset_account']
 		);
-		
+
 	}
 	api_success_response(json_encode($ret));
 
