@@ -1,6 +1,6 @@
 /hooks.php: 1c10e29a16f4b057d0517dc07724e76c5e7f00f9
 /import_transactions.php: 30ff6aac2dde4d293b8c48f8d97418ce8d495700
-/includes/import_sales_cart_class.inc: 6abba0b4b39474f53c723683b0bedde07c7b4422
+/includes/import_sales_cart_class.inc: fe8711c95f3e8a829da9c6c23e08c994994a31a7
 /includes/import_sales_order_entry.inc: 313b0d5b2f70959eb50ae201fc6e13947a14a119
 /includes/import_sales_order_ui.inc: c488744c5f5bf82e86d985c3230cd266f4bef451
 /includes/import_transactions.inc: b58083c56c915b30cce76b3b574f908987b26c95

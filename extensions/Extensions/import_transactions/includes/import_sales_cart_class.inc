@@ -87,11 +87,9 @@ class import_sales_cart
 			$this->trans_type = ST_SALESORDER;
 		$this->dimension_id = 0;
 		$this->dimension2_id = 0;
-               
 		$this->pos = get_sales_point(user_pos());
 		$this->read($type, $trans_no, $prep_child);
 		$this->cart_id = uniqid('');
-                
 	}
 
 	/*
@@ -189,19 +187,19 @@ class import_sales_cart
 	// Reading document into cart
 	//
 	function read($type, $trans_no=0, $prep_child=false) {
-                
+
 		global $SysPrefs, $Refs;
-                $string3 = gettype($trans_no); //this should display an array 
-                if (!is_array($trans_no)) $trans_no = array($trans_no);
-                $string4 = gettype($trans_no); //this should display an array 
-                if ($trans_no[0]) { // read old transaction
-                        if ($type == ST_SALESORDER || $type == ST_SALESQUOTE) { // sales order || sales quotation
-                            	        read_sales_order($trans_no[0], $this, $type);
+		$string3 = gettype($trans_no); //this should display an array 
+		if (!is_array($trans_no)) $trans_no = array($trans_no);
+		$string4 = gettype($trans_no); //this should display an array 
+		if ($trans_no[0]) { // read old transaction
+			if ($type == ST_SALESORDER || $type == ST_SALESQUOTE) { // sales order || sales quotation
+				read_sales_order($trans_no[0], $this, $type);
 			} else {	// other type of sales transaction
 					read_sales_trans($type, $trans_no, $this); 
-                                        if ($this->order_no) { // free hand credit notes have no order_no 
-                                                //display_warning("Cart: Read");
-                                                $sodata = get_sales_order_header($this->order_no, ST_SALESORDER);
+					if ($this->order_no) { // free hand credit notes have no order_no
+					//display_warning("Cart: Read");
+						$sodata = get_sales_order_header($this->order_no, ST_SALESORDER);
 						$this->cust_ref = $sodata["customer_ref"];
 					// currently currency is hard linked to debtor account
 					//	$this->customer_currency = $sodata["curr_code"];
@@ -248,8 +246,8 @@ class import_sales_cart
 							else
 								$this->dimension2_id = $cust['dimension2_id'];
 						}		
-					}
-                                }	
+					}		
+				}	
 				if ($type == ST_SALESINVOICE) {
 					$this->due_date =
 						get_invoice_duedate($this->payment, $this->document_date);
@@ -278,12 +276,13 @@ class import_sales_cart
 			$due_date = $this->due_date;
 			$dimension_id = $this->dimension_id;
 			$dimension2_id = $this->dimension2_id;
-                        $this->trans_type = get_parent_type($this->trans_type);
-                        $this->reference = 'auto'; 
+			$this->trans_type = get_parent_type($this->trans_type);
+
+			$this->reference = 'auto'; 
 			$trans_no = $this->write(1); 
 
 			// re-read parent document converting it to child
-                        $this->read($this->trans_type, $trans_no, true); 
+			$this->read($this->trans_type, $trans_no, true); 
 			$this->document_date = $date;
 			$this->reference = $ref;
 			$this->due_date = $due_date;
@@ -298,13 +297,12 @@ class import_sales_cart
 		}
 		switch($this->trans_type) {
 			case ST_SALESINVOICE:
-                                $ret = write_sales_invoice($this); break;
+				$ret = write_sales_invoice($this); break;
 			case ST_CUSTCREDIT:
 				$ret = write_credit_note($this, $policy); break;
 			case ST_CUSTDELIVERY:
 				$ret = write_sales_delivery($this, $policy); break;
 			case ST_SALESORDER:
-                                
 			case ST_SALESQUOTE:
 				if ($this->trans_no==0)	// new document
 					$ret = add_sales_order($this);
@@ -570,6 +568,7 @@ class import_sales_cart
 				$qtys[$line_item->stock_id]['line'] = $line_no;
 			}
 		}
+
 		foreach($qtys as $stock_id => $sum)
 		{
 			if (check_negative_stock($stock_id, -$sum['qty'], $location ? $location : $this->Location, $date ? $date : $this->document_date))
@@ -667,5 +666,3 @@ class import_sales_line_details
 }
 
 ?>
-
-
