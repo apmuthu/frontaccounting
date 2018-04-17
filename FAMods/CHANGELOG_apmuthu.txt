@@ -1,3 +1,4 @@
+2018-04-17 Joe Hunt           Typo in report Customer Detail Listing
 2017-11-12 Ap.Muthu           Hindi (hi_IN) core translation fully done
 2017-11-10 Ap.Muthu           Tamil (ta_IN) core translation fully done
 2017-11-10 Ap.Muthu           Tamil (ta_IN) installer translation fully done
