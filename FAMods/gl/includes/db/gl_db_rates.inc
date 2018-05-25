@@ -148,7 +148,7 @@ function get_extern_rate($curr_b, $provider = 'ECB', $date)
 	}
 	elseif ($provider == 'GOOGLE')
 	{
-		$filename = "/finance/converter?a=1&from={$curr_a}&to={$curr_b}";
+		$filename = "/bctzjpnsun/converter?a=1&from={$curr_a}&to={$curr_b}";
 		$site = "finance.google.com";
 //		$site_ip = "172.217.26.206"; // https://ipinfo.io/AS15169
 	}
