@@ -1,5 +1,5 @@
 Package: nl_NL
-Version: 2.3.19-3
+Version: 2.3.19-4
 Description: Dutch translation
 Author: Erwin de Bruin <erwin@mpe-solutions.nl>
 Maintenance: Erwin de Bruin <erwin@mpe-solutions.nl>
@@ -10,5 +10,5 @@ RTLDir: no
 Type: language
 Name: Dutch
 InstallPath: lang/nl_NL
-Filename: nl_NL-2.3.19-3
+Filename: nl_NL-2.3.19-4
 
