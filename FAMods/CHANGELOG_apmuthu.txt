@@ -1,3 +1,4 @@
+2019-04-20 Ap.Muthu           Dutch (nl_NL) installer translation fixed
 2019-04-20 Stefan             Dutch (nl_NL) core and installer translation fully done
 2019-01-27 anoopmb            Unused function get_unit_descr sql fixed
 2019-01-27 Ap.Muthu           Imported file for fix

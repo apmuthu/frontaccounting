@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: FrontAccounting\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-07 20:46+0100\n"
-"PO-Revision-Date: 2019-04-20 14:37+0000\n"
+"PO-Revision-Date: 2019-04-21 15:37+0000\n"
 "Last-Translator: Stefan <phpfan@xs4all.nl>, 2019\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/gnuacademy/frontaccounting-1/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr "FrontAccounting ERP Installatiewizard"
 #: install/index.php:42
 #, php-format
 msgid "Step %d: %s"
-msgstr "Stap 1%d : 2 %s"
+msgstr "Stap %d: %s"
 
 #: install/index.php:49
 msgid "Chart of accounts"
